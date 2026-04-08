@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(python -c \"from knowledge.frameworks import get_frameworks_for_sector, format_frameworks_for_prompt; fws = get_frameworks_for_sector\\(''banking''\\); print\\(''Frameworks for banking:'', [f[''name''] for f in fws]\\); print\\(''OK''\\)\")",
+      "Bash(python -c \"from services.questionnaire_agent import QuestionnaireAgent; from services.scoring_agent import ScoringAgent; from services.recommendation_engine import RecommendationEngine; print\\(''All agents import OK''\\)\")",
+      "Bash(./mvnw compile:*)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill /PID 129908 /F)",
+      "Bash(cmd /c \"taskkill /PID 129908 /F\")",
+      "Bash(cmd /c \"netstat -ano | findstr :8080 | findstr LISTENING\")",
+      "Bash(cmd /c \"netstat -ano | findstr :8080\")",
+      "Bash(cmd /c \"taskkill /IM java.exe /F 2>nul\")",
+      "Bash(cmd /c \"taskkill /IM java.exe /F 2>nul & taskkill /IM mvn.cmd /F 2>nul & echo killed\")"
+    ]
+  }
+}
