@@ -5,12 +5,12 @@ import com.iabenchmark.dto.ChangePasswordRequest;
 import com.iabenchmark.dto.CompanyRegistrationRequest;
 import com.iabenchmark.dto.ForgotPasswordRequest;
 import com.iabenchmark.dto.LoginRequest;
+import com.iabenchmark.dto.RegisterConsultantRequest;
 import com.iabenchmark.dto.RegisterRequest;
 import com.iabenchmark.dto.ResetPasswordRequest;
 import com.iabenchmark.service.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +20,6 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "*")
 public class AuthController {
     private final AuthService authService;
 
@@ -36,6 +35,11 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<AuthResponse> register(@RequestBody RegisterRequest registerRequest) {
         return ResponseEntity.ok(authService.registerUser(registerRequest));
+    }
+
+    @PostMapping("/register-consultant")
+    public ResponseEntity<AuthResponse> registerConsultant(@Valid @RequestBody RegisterConsultantRequest request) {
+        return ResponseEntity.ok(authService.registerConsultant(request));
     }
 
     @PostMapping("/register-company")

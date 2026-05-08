@@ -1,6 +1,8 @@
 package com.iabenchmark.service;
 
-import com.iabenchmark.dto.AxisSynthesisResponse;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.iabenchmark.dto.BenchmarkResponse;
 import com.iabenchmark.dto.EvaluationResponse;
 import com.iabenchmark.dto.RecommendationResponse;
 import com.iabenchmark.model.Evaluation;
@@ -22,6 +24,7 @@ public class AiService {
 
     private final EvaluationRepository evaluationRepository;
     private final RestTemplate restTemplate;
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Value("${ai.service.url:http://localhost:8000}")
     private String aiServiceUrl;
@@ -33,7 +36,7 @@ public class AiService {
 
     public boolean isAiServiceAvailable() {
         try {
-            ResponseEntity<Map> response = restTemplate.getForEntity(aiServiceUrl + "/health", Map.class);
+            ResponseEntity<Map<String, Object>> response = restTemplate.getForEntity(aiServiceUrl + "/health", (Class<Map<String, Object>>)(Class<?>)Map.class);
             return response.getStatusCode().is2xxSuccessful();
         } catch (Exception e) {
             return false;
@@ -67,8 +70,8 @@ public class AiService {
             payload.put("frameworks_used", List.of());
             payload.put("answers", answers);
 
-            ResponseEntity<Map> response = restTemplate.postForEntity(
-                aiServiceUrl + "/api/ai/score", payload, Map.class);
+            ResponseEntity<Map<String, Object>> response = restTemplate.postForEntity(
+                aiServiceUrl + "/api/ai/score", payload, (Class<Map<String, Object>>)(Class<?>)Map.class);
 
             if (!response.getStatusCode().is2xxSuccessful() || response.getBody() == null) return;
 
@@ -111,7 +114,57 @@ public class AiService {
         }
     }
 
+    public void generateAndStoreAiData(Evaluation evaluation) {
+        try {
+            List<RecommendationResponse> recs = getAiRecommendations(evaluation.getId());
+            evaluation.setRecommendationsJson(objectMapper.writeValueAsString(recs));
+        } catch (Exception ignored) {}
+        try {
+            BenchmarkResponse benchmark = getBenchmark(evaluation.getId());
+            evaluation.setBenchmarkJson(objectMapper.writeValueAsString(benchmark));
+        } catch (Exception ignored) {}
+        evaluationRepository.save(evaluation);
+    }
+
+    @SuppressWarnings("unchecked")
+    public List<RecommendationResponse> getStoredRecommendations(Evaluation evaluation) {
+        if (evaluation.getRecommendationsJson() == null) return List.of();
+        try {
+            return objectMapper.readValue(evaluation.getRecommendationsJson(),
+                objectMapper.getTypeFactory().constructCollectionType(List.class, RecommendationResponse.class));
+        } catch (Exception e) { return List.of(); }
+    }
+
+    public BenchmarkResponse getStoredBenchmark(Evaluation evaluation) {
+        if (evaluation.getBenchmarkJson() == null) return null;
+        try {
+            return objectMapper.readValue(evaluation.getBenchmarkJson(), BenchmarkResponse.class);
+        } catch (Exception e) { return null; }
+    }
+
+    public void updateStoredRecommendations(Evaluation evaluation, List<RecommendationResponse> recs) {
+        try {
+            evaluation.setRecommendationsJson(objectMapper.writeValueAsString(recs));
+            evaluationRepository.save(evaluation);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException("Failed to serialize recommendations", e);
+        }
+    }
+
+    public void storeBenchmark(Evaluation evaluation, BenchmarkResponse benchmark) {
+        try {
+            evaluation.setBenchmarkJson(objectMapper.writeValueAsString(benchmark));
+            evaluationRepository.save(evaluation);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException("Failed to serialize benchmark", e);
+        }
+    }
+
     public List<RecommendationResponse> getAiRecommendations(Long evaluationId) {
+        return getAiRecommendations(evaluationId, null);
+    }
+
+    public List<RecommendationResponse> getAiRecommendations(Long evaluationId, String consultantPrompt) {
         Evaluation evaluation = evaluationRepository.findById(evaluationId)
                 .orElseThrow(() -> new EntityNotFoundException("Evaluation not found: " + evaluationId));
 
@@ -124,13 +177,20 @@ public class AiService {
         payload.put("business_score", evaluation.getBusinessScore());
         payload.put("process_score", evaluation.getProcessScore());
         payload.put("si_score", evaluation.getInformationSystemScore());
+        payload.put("canaux_score", evaluation.getCanauxDistributionScore());
+        payload.put("marketing_score", evaluation.getMarketingCommunicationScore());
+        payload.put("rh_score", evaluation.getRhCultureDigitaleScore());
+        payload.put("offres_score", evaluation.getOffresDigitalesScore());
         payload.put("maturity_level", evaluation.getMaturityLevel().name());
+        if (consultantPrompt != null && !consultantPrompt.isBlank()) {
+            payload.put("consultant_prompt", consultantPrompt);
+        }
 
         try {
-            ResponseEntity<Map> response = restTemplate.postForEntity(
-                aiServiceUrl + "/api/ai/generate-recommendations", payload, Map.class);
+            ResponseEntity<Map<String, Object>> response = restTemplate.postForEntity(
+                aiServiceUrl + "/api/ai/generate-recommendations", payload, (Class<Map<String, Object>>)(Class<?>)Map.class);
             if (response.getStatusCode().is2xxSuccessful() && response.getBody() != null) {
-                return parseRecommendations(response.getBody());
+                return parseRecommendations((Map<String, Object>) response.getBody());
             }
         } catch (Exception e) {
             throw new RuntimeException("AI service unavailable: " + e.getMessage());
@@ -139,6 +199,151 @@ public class AiService {
     }
 
     @SuppressWarnings("unchecked")
+    public BenchmarkResponse getBenchmark(Long evaluationId) {
+        return getBenchmark(evaluationId, null);
+    }
+
+    @SuppressWarnings("unchecked")
+    public BenchmarkResponse getBenchmark(Long evaluationId, String consultantPrompt) {
+        Evaluation evaluation = evaluationRepository.findById(evaluationId)
+                .orElseThrow(() -> new EntityNotFoundException("Evaluation not found: " + evaluationId));
+
+        Map<String, Object> payload = new HashMap<>();
+        payload.put("company_name",   evaluation.getCompany().getName());
+        payload.put("sector",         evaluation.getCompany().getSector() != null ? evaluation.getCompany().getSector() : "");
+        payload.put("country",        evaluation.getCompany().getCountry() != null ? evaluation.getCompany().getCountry() : "");
+        payload.put("company_size",   evaluation.getCompany().getSize() != null ? evaluation.getCompany().getSize() : "");
+        payload.put("global_score",   evaluation.getGlobalScore());
+        payload.put("business_score", evaluation.getBusinessScore());
+        payload.put("process_score",  evaluation.getProcessScore());
+        payload.put("si_score",       evaluation.getInformationSystemScore());
+        payload.put("canaux_score",   evaluation.getCanauxDistributionScore());
+        payload.put("marketing_score", evaluation.getMarketingCommunicationScore());
+        payload.put("rh_score",       evaluation.getRhCultureDigitaleScore());
+        payload.put("offres_score",   evaluation.getOffresDigitalesScore());
+        payload.put("maturity_level", evaluation.getMaturityLevel().name());
+        if (consultantPrompt != null && !consultantPrompt.isBlank()) {
+            payload.put("consultant_prompt", consultantPrompt);
+        }
+
+        try {
+            ResponseEntity<Map<String, Object>> response = restTemplate.postForEntity(
+                aiServiceUrl + "/api/ai/benchmark", payload, (Class<Map<String, Object>>)(Class<?>)Map.class);
+
+            if (!response.getStatusCode().is2xxSuccessful() || response.getBody() == null) {
+                throw new RuntimeException("AI service returned non-2xx response");
+            }
+            return parseBenchmarkResponse(response.getBody(), evaluation);
+        } catch (Exception e) {
+            throw new RuntimeException("AI benchmark service unavailable: " + e.getMessage());
+        }
+    }
+
+    @SuppressWarnings("unchecked")
+    private BenchmarkResponse parseBenchmarkResponse(Map<String, Object> body, Evaluation evaluation) {
+        BenchmarkResponse res = new BenchmarkResponse();
+        res.setCompanyName(str(body, "company_name"));
+        res.setSector(str(body, "sector"));
+        res.setCountry(str(body, "country"));
+        res.setGlobalScore(toDouble(body.get("global_score")));
+        res.setMaturityLevel(str(body, "maturity_level"));
+        res.setExecutiveSummary(str(body, "executive_summary"));
+        res.setKeyInsights(toStringList(body.get("key_insights")));
+
+        // Sector benchmark
+        Object sbObj = body.get("sector_benchmark");
+        if (sbObj instanceof Map<?, ?> sb) {
+            BenchmarkResponse.SectorBenchmark sectorBenchmark = new BenchmarkResponse.SectorBenchmark();
+            sectorBenchmark.setNationalAverage(toDouble(sb.get("national_average")));
+            sectorBenchmark.setInternationalAverage(toDouble(sb.get("international_average")));
+            sectorBenchmark.setTopQuartileScore(toDouble(sb.get("top_quartile_score")));
+            sectorBenchmark.setCompanyPercentile(toInt(sb.get("company_percentile")));
+            sectorBenchmark.setPositioningLabel(str((Map<?,?>)sb, "positioning_label"));
+            sectorBenchmark.setSource(str((Map<?,?>)sb, "source"));
+            res.setSectorBenchmark(sectorBenchmark);
+        }
+
+        // Axis benchmarks
+        Object abList = body.get("axis_benchmarks");
+        if (abList instanceof List<?> list) {
+            res.setAxisBenchmarks(list.stream().filter(i -> i instanceof Map).map(i -> {
+                Map<?,?> m = (Map<?,?>) i;
+                BenchmarkResponse.AxisBenchmark ab = new BenchmarkResponse.AxisBenchmark();
+                ab.setAxis(str(m, "axis"));
+                ab.setAxisLabel(str(m, "axis_label"));
+                ab.setCompanyScore(toDouble(m.get("company_score")));
+                ab.setSectorAverage(toDouble(m.get("sector_average")));
+                ab.setTopQuartile(toDouble(m.get("top_quartile")));
+                ab.setGapToAverage(toDouble(m.get("gap_to_average")));
+                ab.setGapToTop(toDouble(m.get("gap_to_top")));
+                return ab;
+            }).toList());
+        }
+
+        // Trends
+        Object tList = body.get("trends");
+        if (tList instanceof List<?> list) {
+            res.setTrends(list.stream().filter(i -> i instanceof Map).map(i -> {
+                Map<?,?> m = (Map<?,?>) i;
+                BenchmarkResponse.BenchmarkTrend t = new BenchmarkResponse.BenchmarkTrend();
+                t.setTitle(str(m, "title"));
+                t.setDescription(str(m, "description"));
+                t.setImpactLevel(str(m, "impact_level"));
+                t.setHorizon(str(m, "horizon"));
+                t.setAdoptionRate(str(m, "adoption_rate"));
+                t.setSource(str(m, "source"));
+                return t;
+            }).toList());
+        }
+
+        // Sector leaders
+        Object lList = body.get("sector_leaders");
+        if (lList instanceof List<?> list) {
+            res.setSectorLeaders(list.stream().filter(i -> i instanceof Map).map(i -> {
+                Map<?,?> m = (Map<?,?>) i;
+                BenchmarkResponse.SectorLeader l = new BenchmarkResponse.SectorLeader();
+                l.setCompany(str(m, "company"));
+                l.setCountry(str(m, "country"));
+                l.setEstimatedScore(toInt(m.get("estimated_score")));
+                l.setKeyPractice(str(m, "key_practice"));
+                l.setDifferentiator(str(m, "differentiator"));
+                l.setSource(str(m, "source"));
+                return l;
+            }).toList());
+        }
+
+        // Roadmap
+        Object rList = body.get("improvement_roadmap");
+        if (rList instanceof List<?> list) {
+            res.setImprovementRoadmap(list.stream().filter(i -> i instanceof Map).map(i -> {
+                Map<?,?> m = (Map<?,?>) i;
+                BenchmarkResponse.RoadmapPhase p = new BenchmarkResponse.RoadmapPhase();
+                p.setPhase(str(m, "phase"));
+                p.setObjective(str(m, "objective"));
+                p.setActions(toStringList(m.get("actions")));
+                p.setExpectedScoreGain(str(m, "expected_score_gain"));
+                p.setTargetLevel(str(m, "target_level"));
+                p.setInvestmentLevel(str(m, "investment_level"));
+                return p;
+            }).toList());
+        }
+
+        return res;
+    }
+
+    private Double toDouble(Object v) {
+        if (v == null) return 0.0;
+        if (v instanceof Number n) return n.doubleValue();
+        try { return Double.parseDouble(v.toString()); } catch (Exception e) { return 0.0; }
+    }
+
+    private Integer toInt(Object v) {
+        if (v == null) return 0;
+        if (v instanceof Number n) return n.intValue();
+        try { return Integer.parseInt(v.toString()); } catch (Exception e) { return 0; }
+    }
+
+    // ...existing code...
     private List<RecommendationResponse> parseRecommendations(Map<String, Object> body) {
         Object recs = body.get("recommendations");
         if (!(recs instanceof List<?> list)) return List.of();

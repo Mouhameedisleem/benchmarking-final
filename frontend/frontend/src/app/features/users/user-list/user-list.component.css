@@ -1,0 +1,39 @@
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+.table th {
+  font-weight: 600;
+  color: #495057;
+  border-top: none;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.badge {
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+}
+
+.page-link {
+  cursor: pointer;
+}
+
+.bg-opacity-50 {
+  opacity: 0.5;
+}
+
+.rounded-circle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

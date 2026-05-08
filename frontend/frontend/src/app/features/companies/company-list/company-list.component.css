@@ -1,0 +1,39 @@
+.cursor-pointer {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cursor-pointer:hover {
+  background-color: #f8f9fa;
+}
+
+.badge {
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+}
+
+.table th {
+  font-weight: 600;
+  color: #495057;
+  border-top: none;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+}
+
+.page-link {
+  cursor: pointer;
+}
+
+.card {
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}

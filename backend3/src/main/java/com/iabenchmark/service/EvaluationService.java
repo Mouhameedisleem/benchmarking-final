@@ -70,6 +70,7 @@ public class EvaluationService {
         evaluation.setSubmittedBy(submittedBy);
         evaluation.setQuestionnaire(questionnaire);
         evaluation.setStatus(EvaluationStatus.COMPLETED);
+        evaluation.setPendingReview(true);
 
         Map<QuestionAxis, Double> weightedScores = new EnumMap<>(QuestionAxis.class);
         Map<QuestionAxis, Integer> totalWeights = new EnumMap<>(QuestionAxis.class);
@@ -99,20 +100,29 @@ public class EvaluationService {
         double businessScore = computeAxisScore(weightedScores, totalWeights, QuestionAxis.BUSINESS);
         double processScore = computeAxisScore(weightedScores, totalWeights, QuestionAxis.PROCESS);
         double informationSystemScore = computeAxisScore(weightedScores, totalWeights, QuestionAxis.INFORMATION_SYSTEM);
+        double canauxScore = computeAxisScore(weightedScores, totalWeights, QuestionAxis.CANAUX_DISTRIBUTION);
+        double marketingScore = computeAxisScore(weightedScores, totalWeights, QuestionAxis.MARKETING_COMMUNICATION);
+        double rhScore = computeAxisScore(weightedScores, totalWeights, QuestionAxis.RH_CULTURE_DIGITALE);
+        double offresScore = computeAxisScore(weightedScores, totalWeights, QuestionAxis.OFFRES_DIGITALES);
         double globalScore = computeGlobalScore(weightedScores, totalWeights);
 
         evaluation.setBusinessScore(businessScore);
         evaluation.setProcessScore(processScore);
         evaluation.setInformationSystemScore(informationSystemScore);
+        evaluation.setCanauxDistributionScore(canauxScore);
+        evaluation.setMarketingCommunicationScore(marketingScore);
+        evaluation.setRhCultureDigitaleScore(rhScore);
+        evaluation.setOffresDigitalesScore(offresScore);
         evaluation.setGlobalScore(globalScore);
         evaluation.setMaturityLevel(determineMaturityLevel(globalScore));
 
         Evaluation saved = evaluationRepository.save(evaluation);
         EvaluationResponse response = toResponse(saved);
 
-        // Enrich with AI scoring (best-effort, non-blocking)
+        // Enrich with AI scoring and pre-generate recommendations + benchmark (best-effort)
         if (aiService.isAiServiceAvailable()) {
             aiService.enrichWithAiScoring(response, saved);
+            aiService.generateAndStoreAiData(saved);
         }
 
         return response;
@@ -196,6 +206,10 @@ public class EvaluationService {
             case BUSINESS -> "METIER";
             case PROCESS -> "PROCESSUS";
             case INFORMATION_SYSTEM -> "SI";
+            case CANAUX_DISTRIBUTION -> "CANAUX_DISTRIBUTION";
+            case MARKETING_COMMUNICATION -> "MARKETING_COMMUNICATION";
+            case RH_CULTURE_DIGITALE -> "RH_CULTURE_DIGITALE";
+            case OFFRES_DIGITALES -> "OFFRES_DIGITALES";
         };
     }
 
@@ -203,7 +217,11 @@ public class EvaluationService {
         List<AxisScoreResponse> scoresByAxis = List.of(
                 new AxisScoreResponse("METIER", evaluation.getBusinessScore()),
                 new AxisScoreResponse("PROCESSUS", evaluation.getProcessScore()),
-                new AxisScoreResponse("SI", evaluation.getInformationSystemScore())
+                new AxisScoreResponse("SI", evaluation.getInformationSystemScore()),
+                new AxisScoreResponse("CANAUX_DISTRIBUTION", evaluation.getCanauxDistributionScore()),
+                new AxisScoreResponse("MARKETING_COMMUNICATION", evaluation.getMarketingCommunicationScore()),
+                new AxisScoreResponse("RH_CULTURE_DIGITALE", evaluation.getRhCultureDigitaleScore()),
+                new AxisScoreResponse("OFFRES_DIGITALES", evaluation.getOffresDigitalesScore())
         );
 
         List<EvaluationAnswer> sortedResponses = evaluation.getResponses().stream()

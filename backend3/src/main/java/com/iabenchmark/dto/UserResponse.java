@@ -1,5 +1,6 @@
 package com.iabenchmark.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDateTime;
 
 public class UserResponse {
@@ -12,6 +13,7 @@ public class UserResponse {
     private Long companyId;
     private String companyName;
     private String phone;
+    @JsonProperty("isActive")
     private boolean isActive;
     private LocalDateTime lastLogin;
     private LocalDateTime createdAt;

@@ -1,0 +1,247 @@
+<!-- Barre de navigation principale -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+  <div class="container-fluid">
+    <!-- Logo et marque -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="/" (click)="closeMenu()">
+      <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center me-2" 
+           style="width: 35px; height: 35px;">
+        <i class="fas fa-robot fa-lg"></i>
+      </div>
+      <span class="fw-bold fs-5">IA Benchmark</span>
+    </a>
+    
+    <!-- Bouton toggle pour mobile -->
+    <button class="navbar-toggler border-0" type="button" (click)="toggleMenu()" 
+            [attr.aria-expanded]="isMenuOpen" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Menu principal (visible si authentifié) -->
+    <div class="collapse navbar-collapse" [class.show]="isMenuOpen" *ngIf="isAuthenticated()">
+      
+      <!-- ==================== MENU ADMIN ==================== -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngIf="hasRole('ADMIN')">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/dashboard" routerLinkActive="active" 
+             [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">
+            <i class="fas fa-home me-1"></i>Dashboard
+          </a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
+             [class.active]="isLinkActive('/companies')">
+            <i class="fas fa-building me-1"></i>Entreprises
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/companies" (click)="closeMenu()">
+              <i class="fas fa-list me-2"></i>Liste des entreprises
+            </a></li>
+            <li><a class="dropdown-item" routerLink="/companies/new" (click)="closeMenu()">
+              <i class="fas fa-plus-circle me-2 text-success"></i>Nouvelle entreprise
+            </a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+             [class.active]="isLinkActive('/users')">
+            <i class="fas fa-users me-1"></i>Utilisateurs
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/users" (click)="closeMenu()">
+              <i class="fas fa-list me-2"></i>Liste des utilisateurs
+            </a></li>
+            <li><a class="dropdown-item" routerLink="/users/new" (click)="closeMenu()">
+              <i class="fas fa-user-plus me-2 text-success"></i>Nouvel utilisateur
+            </a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <!-- ==================== MENU CONSULTANT ==================== -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngIf="hasRole('CONSULTANT')">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/consultant/dashboard" routerLinkActive="active" 
+             [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">
+            <i class="fas fa-home me-1"></i>Dashboard
+          </a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+             [class.active]="isLinkActive('/companies')">
+            <i class="fas fa-building me-1"></i>Entreprises
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/companies" (click)="closeMenu()">
+              <i class="fas fa-list me-2"></i>Liste des entreprises
+            </a></li>
+            <li><a class="dropdown-item" routerLink="/companies/new" (click)="closeMenu()">
+              <i class="fas fa-plus-circle me-2 text-success"></i>Nouvelle entreprise
+            </a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/consultant/analysis" routerLinkActive="active" (click)="closeMenu()">
+            <i class="fas fa-chart-line me-1"></i>Résultats & Analyses
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/consultant/frameworks" routerLinkActive="active" (click)="closeMenu()">
+            <i class="fas fa-brain me-1"></i>Référentiels IA
+          </a>
+        </li>
+      </ul>
+
+      <!-- ==================== MENU CLIENT ==================== -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngIf="hasRole('CLIENT')">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/client/dashboard" routerLinkActive="active" 
+             [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">
+            <i class="fas fa-home me-1"></i>Dashboard
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" [class.disabled]="questionnaireCompleted"
+             [style.pointer-events]="questionnaireCompleted ? 'none' : 'auto'"
+             [style.opacity]="questionnaireCompleted ? '0.5' : '1'"
+             routerLink="/client/questionnaire" routerLinkActive="active" (click)="closeMenu()">
+            <i class="fas fa-edit me-1"></i>Questionnaire
+          </a>
+        </li>
+        
+        
+        <li class="nav-item" *ngIf="hasCompany()">
+          <a class="nav-link" [routerLink]="['/companies', getCompanyId()]" routerLinkActive="active" (click)="closeMenu()">
+            <i class="fas fa-info-circle me-1"></i>Mon Entreprise
+          </a>
+        </li>
+      </ul>
+      
+      <!-- ==================== MENU UTILISATEUR (partie droite) ==================== -->
+      <ul class="navbar-nav">
+        <!-- Notifications (pour Admin et Consultant) -->
+        <li class="nav-item dropdown" *ngIf="hasRole(['ADMIN', 'CONSULTANT'])">
+          <a class="nav-link position-relative" href="#" role="button" data-bs-toggle="dropdown">
+            <i class="fas fa-bell"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  *ngIf="notifications.length > 0">
+              {{ notifications.length }}
+              <span class="visually-hidden">notifications</span>
+            </span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" style="min-width: 320px;">
+            <li>
+              <div class="d-flex justify-content-between align-items-center px-3 py-2 bg-light border-bottom">
+                <h6 class="mb-0 fw-bold">Notifications</h6>
+                <span class="badge bg-primary">{{ notifications.length }}</span>
+              </div>
+            </li>
+            <li *ngFor="let notif of notifications">
+              <a class="dropdown-item py-2" href="#">
+                <div class="d-flex align-items-start">
+                  <div class="rounded-circle p-2 me-2 flex-shrink-0"
+                       [ngClass]="notif.iconBg">
+                    <i [class]="notif.icon"></i>
+                  </div>
+                  <div>
+                    <div class="fw-semibold small">{{ notif.title }}</div>
+                    <small class="text-muted">{{ notif.subtitle }}</small>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider my-1"></li>
+            <li>
+              <a class="dropdown-item text-center text-primary small py-2" routerLink="/users" (click)="closeMenu()">
+                <i class="fas fa-external-link-alt me-1"></i>Gérer les utilisateurs
+              </a>
+            </li>
+          </ul>
+        </li>
+        
+        <!-- Profil utilisateur -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+            <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center me-2" 
+                 style="width: 32px; height: 32px;">
+              <span class="fw-bold small">{{ getUserInitials() }}</span>
+            </div>
+            <span class="d-none d-lg-inline">{{ getFullName() }}</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <div class="dropdown-header text-wrap bg-light" style="max-width: 250px;">
+                <div class="d-flex align-items-center">
+                  <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-2" 
+                       style="width: 40px; height: 40px;">
+                    <span class="fw-bold">{{ getUserInitials() }}</span>
+                  </div>
+                  <div>
+                    <strong>{{ currentUser?.firstName }} {{ currentUser?.lastName }}</strong><br>
+                    <small class="text-muted">{{ currentUser?.email }}</small>
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <span class="badge" [ngClass]="getRoleBadgeClass()">{{ getRoleLabel() }}</span>
+                </div>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" routerLink="/profile" (click)="closeMenu()">
+              <i class="fas fa-user me-2 text-primary"></i>Mon Profil
+            </a></li>
+            <li><a class="dropdown-item" routerLink="/settings" (click)="closeMenu()">
+              <i class="fas fa-cog me-2 text-secondary"></i>Paramètres
+            </a></li>
+            <li><a class="dropdown-item" routerLink="/help" (click)="closeMenu()">
+              <i class="fas fa-question-circle me-2 text-info"></i>Aide
+            </a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="#" (click)="logout($event)">
+              <i class="fas fa-sign-out-alt me-2"></i>Déconnexion
+            </a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Menu pour utilisateur non connecté -->
+    <div class="collapse navbar-collapse" [class.show]="isMenuOpen" *ngIf="!isAuthenticated()">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login" (click)="closeMenu()">
+            <i class="fas fa-sign-in-alt me-1"></i>Connexion
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register" (click)="closeMenu()">
+            <i class="fas fa-user-plus me-1"></i>Inscription
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Fil d'Ariane (breadcrumb) -->
+<div class="bg-light border-bottom py-2 px-3" *ngIf="isAuthenticated()">
+  <div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item" *ngFor="let crumb of breadcrumbs; let last = last">
+            <a *ngIf="!last" [routerLink]="crumb.url" class="text-decoration-none">{{ crumb.label }}</a>
+            <span *ngIf="last" class="text-muted">{{ crumb.label }}</span>
+          </li>
+        </ol>
+      </nav>
+      <div class="text-muted small">
+        <i class="far fa-calendar-alt me-1"></i>{{ currentDate | date:'EEEE dd MMMM yyyy' }}
+      </div>
+    </div>
+  </div>
+</div>

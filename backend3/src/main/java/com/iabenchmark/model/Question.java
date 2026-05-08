@@ -23,7 +23,7 @@ public class Question {
     private String text;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = false, length = 30)
     private QuestionAxis axis;
 
     @Column(nullable = false)
@@ -34,6 +34,9 @@ public class Question {
 
     @Column(nullable = false)
     private Integer displayOrder;
+
+    @Column(columnDefinition = "TEXT")
+    private String optionsJson;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "questionnaire_id", nullable = false)
@@ -51,6 +54,8 @@ public class Question {
     public void setWeight(Integer weight) { this.weight = weight; }
     public Integer getDisplayOrder() { return displayOrder; }
     public void setDisplayOrder(Integer displayOrder) { this.displayOrder = displayOrder; }
+    public String getOptionsJson() { return optionsJson; }
+    public void setOptionsJson(String optionsJson) { this.optionsJson = optionsJson; }
     public Questionnaire getQuestionnaire() { return questionnaire; }
     public void setQuestionnaire(Questionnaire questionnaire) { this.questionnaire = questionnaire; }
 }

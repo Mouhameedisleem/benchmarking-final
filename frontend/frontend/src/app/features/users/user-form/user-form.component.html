@@ -1,0 +1,227 @@
+<div class="container-fluid py-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-7">
+      <!-- En-tête -->
+      <div class="d-flex align-items-center mb-4">
+        <a routerLink="/users" class="btn btn-link text-decoration-none text-muted me-3">
+          <i class="fas fa-arrow-left fa-lg"></i>
+        </a>
+        <div>
+          <h2 class="mb-1">
+            <i class="fas fa-user-cog me-2 text-primary"></i>
+            {{ isEditMode ? 'Modifier' : 'Nouvel' }} utilisateur
+          </h2>
+          <p class="text-muted mb-0">
+            {{ isEditMode ? 'Modifiez les informations de l\'utilisateur' : 'Ajoutez un nouvel utilisateur au système' }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="card shadow-sm border-0">
+        <div class="card-body p-4">
+          <!-- Loading -->
+          <div class="text-center py-5" *ngIf="isLoading">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Chargement...</span>
+            </div>
+            <p class="mt-2 text-muted">Chargement...</p>
+          </div>
+
+          <!-- Formulaire -->
+          <form *ngIf="!isLoading" (ngSubmit)="onSubmit()" #userForm="ngForm">
+            <!-- Message d'erreur -->
+            <div class="alert alert-danger" *ngIf="errorMessage">
+              <i class="fas fa-exclamation-circle me-2"></i>{{ errorMessage }}
+            </div>
+
+            <!-- Identifiants -->
+            <h5 class="text-primary mb-3">
+              <i class="fas fa-id-card me-2"></i>Identifiants
+            </h5>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-semibold">
+                  <i class="fas fa-user text-primary me-2"></i>Nom d'utilisateur *
+                </label>
+                <input type="text" 
+                       class="form-control" 
+                       [(ngModel)]="user.username" 
+                       name="username" 
+                       required
+                       #username="ngModel"
+                       [class.is-invalid]="username.invalid && username.touched">
+                <div class="invalid-feedback" *ngIf="username.invalid && username.touched">
+                  Nom d'utilisateur requis
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-semibold">
+                  <i class="fas fa-envelope text-primary me-2"></i>Email *
+                </label>
+                <input type="email" 
+                       class="form-control" 
+                       [(ngModel)]="user.email" 
+                       name="email" 
+                       required
+                       email
+                       #email="ngModel"
+                       [class.is-invalid]="email.invalid && email.touched">
+                <div class="invalid-feedback" *ngIf="email.invalid && email.touched">
+                  Email valide requis
+                </div>
+              </div>
+            </div>
+
+            <!-- Mot de passe (uniquement en création) -->
+            <div class="row" *ngIf="!isEditMode">
+              <div class="col-md-12 mb-3">
+                <label class="form-label fw-semibold">
+                  <i class="fas fa-lock text-primary me-2"></i>Mot de passe *
+                </label>
+                <div class="input-group">
+                  <input [type]="showPassword ? 'text' : 'password'" 
+                         class="form-control" 
+                         [(ngModel)]="user.password" 
+                         name="password" 
+                         required
+                         minlength="6"
+                         #password="ngModel"
+                         [class.is-invalid]="password.invalid && password.touched">
+                  <button class="btn btn-outline-secondary" type="button" 
+                          (click)="togglePasswordVisibility()">
+                    <i [class]="showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
+                  </button>
+                  <div class="invalid-feedback" *ngIf="password.invalid && password.touched">
+                    Mot de passe requis (min 6 caractères)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Informations personnelles -->
+            <h5 class="text-primary mb-3 mt-4">
+              <i class="fas fa-address-card me-2"></i>Informations personnelles
+            </h5>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-semibold">
+                  <i class="fas fa-user text-primary me-2"></i>Prénom *
+                </label>
+                <input type="text" 
+                       class="form-control" 
+                       [(ngModel)]="user.firstName" 
+                       name="firstName" 
+                       required
+                       #firstName="ngModel"
+                       [class.is-invalid]="firstName.invalid && firstName.touched">
+                <div class="invalid-feedback" *ngIf="firstName.invalid && firstName.touched">
+                  Prénom requis
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-semibold">
+                  <i class="fas fa-user text-primary me-2"></i>Nom *
+                </label>
+                <input type="text" 
+                       class="form-control" 
+                       [(ngModel)]="user.lastName" 
+                       name="lastName" 
+                       required
+                       #lastName="ngModel"
+                       [class.is-invalid]="lastName.invalid && lastName.touched">
+                <div class="invalid-feedback" *ngIf="lastName.invalid && lastName.touched">
+                  Nom requis
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-semibold">
+                  <i class="fas fa-phone text-primary me-2"></i>Téléphone
+                </label>
+                <input type="tel" 
+                       class="form-control" 
+                       [(ngModel)]="user.phone" 
+                       name="phone">
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-semibold">
+                  <i class="fas fa-tag text-primary me-2"></i>Rôle *
+                </label>
+                <select class="form-select" 
+                        [(ngModel)]="user.role" 
+                        name="role" 
+                        required
+                        #role="ngModel"
+                        [class.is-invalid]="role.invalid && role.touched">
+                  <option value="">Sélectionnez un rôle</option>
+                  <option *ngFor="let r of roles" [value]="r.value">
+                    {{ r.label }} - {{ r.description }}
+                  </option>
+                </select>
+                <div class="invalid-feedback" *ngIf="role.invalid && role.touched">
+                  Rôle requis
+                </div>
+              </div>
+            </div>
+
+            <!-- Entreprise (uniquement pour les clients) -->
+            <div class="mb-3" *ngIf="requiresCompany">
+              <label class="form-label fw-semibold">
+                <i class="fas fa-building text-primary me-2"></i>Entreprise associée *
+              </label>
+              <select class="form-select" 
+                      [(ngModel)]="user.companyId" 
+                      name="companyId" 
+                      required
+                      #companyId="ngModel"
+                      [class.is-invalid]="companyId.invalid && companyId.touched">
+                <option value="">Sélectionnez une entreprise</option>
+                <option *ngFor="let company of companies" [value]="company.id">
+                  {{ company.name }}
+                </option>
+              </select>
+              <div class="invalid-feedback" *ngIf="companyId.invalid && companyId.touched">
+                Entreprise requise pour les clients
+              </div>
+            </div>
+
+            <!-- Statut (uniquement en mode édition) -->
+            <div class="mb-3" *ngIf="isEditMode">
+              <div class="form-check form-switch">
+                <input class="form-check-input" 
+                       type="checkbox" 
+                       id="isActive"
+                       [(ngModel)]="user.isActive" 
+                       name="isActive">
+                <label class="form-check-label" for="isActive">
+                  Compte {{ user.isActive ? 'actif' : 'inactif' }}
+                </label>
+              </div>
+            </div>
+
+            <!-- Boutons -->
+            <div class="d-flex justify-content-end gap-2 mt-4">
+              <button type="button" class="btn btn-outline-secondary px-4" (click)="cancel()">
+                Annuler
+              </button>
+              <button type="submit" 
+                      class="btn btn-primary px-4" 
+                      [disabled]="userForm.invalid">
+                <i class="fas fa-save me-2"></i>
+                {{ isEditMode ? 'Mettre à jour' : 'Créer' }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

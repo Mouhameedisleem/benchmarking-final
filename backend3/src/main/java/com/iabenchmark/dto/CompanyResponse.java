@@ -15,10 +15,13 @@ public class CompanyResponse {
     private String address;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+    private Long consultantId;
+    private String consultantName;
 
     public CompanyResponse(Long id, String name, String sector, String country, String size,
                            String businessDomain, String website, String phone, String email,
-                           String address, LocalDateTime createdAt, LocalDateTime updatedAt) {
+                           String address, LocalDateTime createdAt, LocalDateTime updatedAt,
+                           Long consultantId, String consultantName) {
         this.id = id;
         this.name = name;
         this.sector = sector;
@@ -31,6 +34,8 @@ public class CompanyResponse {
         this.address = address;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
+        this.consultantId = consultantId;
+        this.consultantName = consultantName;
     }
 
     public Long getId() { return id; }
@@ -45,4 +50,6 @@ public class CompanyResponse {
     public String getAddress() { return address; }
     public LocalDateTime getCreatedAt() { return createdAt; }
     public LocalDateTime getUpdatedAt() { return updatedAt; }
+    public Long getConsultantId() { return consultantId; }
+    public String getConsultantName() { return consultantName; }
 }

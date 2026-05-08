@@ -1,0 +1,240 @@
+<div class="container-fluid py-4">
+  <!-- En-tête -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+      <h2 class="mb-1">
+        <i class="fas fa-users me-2 text-primary"></i>
+        Gestion des utilisateurs
+      </h2>
+      <p class="text-muted mb-0">Gérez les comptes administrateurs, consultants et clients</p>
+    </div>
+    <div>
+      <button class="btn btn-outline-secondary me-2" (click)="exportToCSV()">
+        <i class="fas fa-download me-2"></i>Exporter
+      </button>
+      <a routerLink="/users/new" class="btn btn-primary">
+        <i class="fas fa-user-plus me-2"></i>Nouvel utilisateur
+      </a>
+    </div>
+  </div>
+
+  <!-- Stats Cards -->
+  <div class="row g-3 mb-4">
+    <div class="col-md-3">
+      <div class="card bg-primary text-white">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <h6 class="text-white-50 mb-1">Total</h6>
+              <h3 class="mb-0">{{ userStats.total }}</h3>
+            </div>
+            <i class="fas fa-users fa-3x opacity-50"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-success text-white">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <h6 class="text-white-50 mb-1">Actifs</h6>
+              <h3 class="mb-0">{{ userStats.active }}</h3>
+            </div>
+            <i class="fas fa-check-circle fa-3x opacity-50"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-warning text-white">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <h6 class="text-white-50 mb-1">Inactifs</h6>
+              <h3 class="mb-0">{{ userStats.inactive }}</h3>
+            </div>
+            <i class="fas fa-ban fa-3x opacity-50"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-info text-white">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <h6 class="text-white-50 mb-1">Clients</h6>
+              <h3 class="mb-0">{{ userStats.byRole?.CLIENT || 0 }}</h3>
+            </div>
+            <i class="fas fa-building fa-3x opacity-50"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filtres -->
+  <div class="card shadow-sm border-0 mb-4">
+    <div class="card-body">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="input-group">
+            <span class="input-group-text bg-light border-end-0">
+              <i class="fas fa-search text-primary"></i>
+            </span>
+            <input type="text" 
+                   class="form-control bg-light border-start-0" 
+                   placeholder="Rechercher par nom, prénom, email..."
+                   [(ngModel)]="searchTerm"
+                   (ngModelChange)="applyFilters()">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <select class="form-select bg-light" [(ngModel)]="selectedRole" (ngModelChange)="applyFilters()">
+            <option value="">Tous rôles</option>
+            <option *ngFor="let role of roles" [value]="role.value">{{ role.label }}</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <select class="form-select bg-light" [(ngModel)]="selectedStatus" (ngModelChange)="applyFilters()">
+            <option value="">Tous statuts</option>
+            <option value="active">Actifs</option>
+            <option value="inactive">Inactifs</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <select class="form-select bg-light" [(ngModel)]="selectedCompany" (ngModelChange)="applyFilters()">
+            <option value="">Toutes entreprises</option>
+            <option *ngFor="let company of companies" [value]="company.id">
+              {{ company.name }}
+            </option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-outline-secondary w-100" (click)="resetFilters()">
+            <i class="fas fa-undo me-2"></i>Réinitialiser
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading -->
+  <div class="text-center py-5" *ngIf="isLoading">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Chargement...</span>
+    </div>
+    <p class="mt-2 text-muted">Chargement des utilisateurs...</p>
+  </div>
+
+  <!-- Tableau des utilisateurs -->
+  <div class="card shadow-sm border-0" *ngIf="!isLoading">
+    <div class="card-body p-0">
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="bg-light">
+            <tr>
+              <th class="ps-4">Utilisateur</th>
+              <th>Email</th>
+              <th>Rôle</th>
+              <th>Entreprise</th>
+              <th>Statut</th>
+              <th>Dernière connexion</th>
+              <th class="text-end pe-4">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of getPaginatedUsers()">
+              <td class="ps-4">
+                <div class="d-flex align-items-center">
+                  <div class="bg-light rounded-circle p-2 me-3">
+                    <i class="fas fa-user-circle fa-2x text-primary"></i>
+                  </div>
+                  <div>
+                    <div class="fw-semibold">{{ user.firstName }} {{ user.lastName }}</div>
+                    <small class="text-muted">&#64;{{ user.username }}</small>
+                  </div>
+                </div>
+              </td>
+              <td>{{ user.email }}</td>
+              <td>
+                <span class="badge" [ngClass]="getRoleBadgeClass(user.role)">
+                  {{ getRoleLabel(user.role) }}
+                </span>
+              </td>
+              <td>{{ getCompanyName(user.companyId) }}</td>
+              <td>
+                <span class="badge" [ngClass]="user.isActive ? 'bg-success' : 'bg-secondary'">
+                  {{ user.isActive ? 'Actif' : 'Inactif' }}
+                </span>
+              </td>
+              <td>
+                <small>{{ user.lastLogin ? (user.lastLogin | date:'dd/MM/yyyy HH:mm') : '-' }}</small>
+              </td>
+              <td class="text-end pe-4">
+                <button class="btn btn-sm btn-outline-success me-2" 
+                        *ngIf="!user.isActive"
+                        (click)="toggleUserStatus(user)">
+                  <i class="fas fa-check-circle"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-warning me-2" 
+                        *ngIf="user.isActive"
+                        (click)="toggleUserStatus(user)">
+                  <i class="fas fa-ban"></i>
+                </button>
+                <a [routerLink]="['/users', user.id]" 
+                   class="btn btn-sm btn-outline-info me-2">
+                  <i class="fas fa-eye"></i>
+                </a>
+                <a [routerLink]="['/users', user.id, 'edit']" 
+                   class="btn btn-sm btn-outline-primary me-2">
+                  <i class="fas fa-edit"></i>
+                </a>
+                <button class="btn btn-sm btn-outline-danger" 
+                        (click)="deleteUser(user.id!)">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr *ngIf="getPaginatedUsers().length === 0">
+              <td colspan="7" class="text-center py-5">
+                <i class="fas fa-users-slash fa-3x text-muted mb-3"></i>
+                <p class="text-muted mb-2">Aucun utilisateur trouvé</p>
+                <a routerLink="/users/new" class="btn btn-primary">
+                  <i class="fas fa-user-plus me-2"></i>Ajouter un utilisateur
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <div class="d-flex justify-content-between align-items-center p-3 border-top" *ngIf="totalPages > 1">
+        <div class="text-muted small">
+          Affichage {{ (currentPage - 1) * itemsPerPage + 1 }} - 
+          {{ Math.min(currentPage * itemsPerPage, filteredUsers.length) }} 
+          sur {{ filteredUsers.length }} utilisateurs
+        </div>
+        <nav>
+          <ul class="pagination mb-0">
+            <li class="page-item" [class.disabled]="currentPage === 1">
+              <a class="page-link" (click)="changePage(currentPage - 1)">
+                <i class="fas fa-chevron-left"></i>
+              </a>
+            </li>
+            <li class="page-item" *ngFor="let page of pages" [class.active]="page === currentPage">
+              <a class="page-link" (click)="changePage(page)">{{ page }}</a>
+            </li>
+            <li class="page-item" [class.disabled]="currentPage === totalPages">
+              <a class="page-link" (click)="changePage(currentPage + 1)">
+                <i class="fas fa-chevron-right"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

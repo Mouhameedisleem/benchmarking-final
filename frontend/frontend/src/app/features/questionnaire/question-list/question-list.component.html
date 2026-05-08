@@ -1,0 +1,189 @@
+<div class="container-fluid py-4">
+  <!-- En-tête -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+      <h2 class="mb-1">
+        <i class="fas fa-question-circle me-2 text-primary"></i>
+        Gestion du questionnaire
+      </h2>
+      <p class="text-muted mb-0">Créez et modifiez les questions du questionnaire</p>
+    </div>
+    <a routerLink="/questions/new" class="btn btn-primary">
+      <i class="fas fa-plus-circle me-2"></i>Nouvelle question
+    </a>
+  </div>
+
+  <!-- Filtres -->
+  <div class="card shadow-sm border-0 mb-4">
+    <div class="card-body">
+      <div class="row g-3">
+        <div class="col-md-3">
+          <div class="input-group">
+            <span class="input-group-text bg-light border-end-0">
+              <i class="fas fa-search text-primary"></i>
+            </span>
+            <input type="text" 
+                   class="form-control bg-light border-start-0" 
+                   placeholder="Rechercher..."
+                   [(ngModel)]="searchTerm"
+                   (ngModelChange)="applyFilters()">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <select class="form-select bg-light" [(ngModel)]="selectedAxis" (ngModelChange)="onAxisChange()">
+            <option value="">Tous axes</option>
+            <option *ngFor="let opt of axisOptions" [value]="opt.value">
+              {{opt.label}}
+            </option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <select class="form-select bg-light" [(ngModel)]="selectedSubAxis" (ngModelChange)="applyFilters()">
+            <option value="">Tous sous-axes</option>
+            <option *ngFor="let sub of subAxes" [value]="sub.id">
+              {{sub.name}}
+            </option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <select class="form-select bg-light" [(ngModel)]="selectedSector" (ngModelChange)="applyFilters()">
+            <option value="">Tous secteurs</option>
+            <option *ngFor="let sector of sectors" [value]="sector.id">
+              {{sector.icon}} {{sector.name}}
+            </option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex gap-2">
+            <div class="form-check form-switch align-self-center">
+              <input class="form-check-input" type="checkbox" 
+                     [(ngModel)]="showInactive" 
+                     (ngModelChange)="applyFilters()"
+                     id="showInactive">
+              <label class="form-check-label small" for="showInactive">
+                Voir inactives
+              </label>
+            </div>
+            <button class="btn btn-outline-secondary ms-auto" (click)="resetFilters()">
+              <i class="fas fa-undo me-2"></i>Réinitialiser
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading -->
+  <div class="text-center py-5" *ngIf="isLoading">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Chargement...</span>
+    </div>
+    <p class="mt-2 text-muted">Chargement des questions...</p>
+  </div>
+
+  <!-- Tableau des questions -->
+  <div class="card shadow-sm border-0" *ngIf="!isLoading">
+    <div class="card-body p-0">
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="bg-light">
+            <tr>
+              <th class="ps-4">Question</th>
+              <th>Axe</th>
+              <th>Sous-axe</th>
+              <th>Secteur</th>
+              <th>Ordre</th>
+              <th>Statut</th>
+              <th class="text-end pe-4">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let question of getPaginatedItems()">
+              <td class="ps-4">
+                <div class="fw-semibold">{{ question.content }}</div>
+                <small class="text-muted">ID: {{ question.id }}</small>
+              </td>
+              <td>
+                <span class="badge" [ngClass]="{
+                  'bg-primary': question.axis === 'METIER',
+                  'bg-success': question.axis === 'PROCESSUS',
+                  'bg-info': question.axis === 'SI'
+                }">
+                  {{ getAxisLabel(question.axis) }}
+                </span>
+              </td>
+              <td>{{ getSubAxisName(question.subAxis) }}</td>
+              <td>
+                <span *ngIf="question.sector" class="badge bg-light text-dark">
+                  {{ getSectorName(question.sector) }}
+                </span>
+                <span *ngIf="!question.sector" class="text-muted">Tous</span>
+              </td>
+              <td>{{ question.order }}</td>
+              <td>
+                <span class="badge" [ngClass]="question.isActive ? 'bg-success' : 'bg-secondary'">
+                  {{ question.isActive ? 'Active' : 'Inactive' }}
+                </span>
+              </td>
+              <td class="text-end pe-4">
+                <button class="btn btn-sm btn-outline-success me-2" 
+                        *ngIf="!question.isActive"
+                        (click)="toggleQuestionStatus(question)">
+                  <i class="fas fa-check-circle"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-warning me-2" 
+                        *ngIf="question.isActive"
+                        (click)="toggleQuestionStatus(question)">
+                  <i class="fas fa-ban"></i>
+                </button>
+                <a [routerLink]="['/questions', question.id, 'edit']" 
+                   class="btn btn-sm btn-outline-primary me-2">
+                  <i class="fas fa-edit"></i>
+                </a>
+                <button class="btn btn-sm btn-outline-danger" 
+                        (click)="deleteQuestion(question.id!)">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr *ngIf="getPaginatedItems().length === 0">
+              <td colspan="7" class="text-center py-5">
+                <i class="fas fa-question-circle fa-3x text-muted mb-3"></i>
+                <p class="text-muted mb-2">Aucune question trouvée</p>
+                <a routerLink="/questions/new" class="btn btn-primary">
+                  <i class="fas fa-plus-circle me-2"></i>Ajouter une question
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <div class="d-flex justify-content-between align-items-center p-3 border-top" *ngIf="totalPages > 1">
+        <div class="text-muted small">
+          Affichage {{ (currentPage - 1) * itemsPerPage + 1 }} - 
+          {{ Math.min(currentPage * itemsPerPage, filteredQuestions.length) }} 
+          sur {{ filteredQuestions.length }} questions
+        </div>
+        <nav>
+          <ul class="pagination mb-0">
+            <li class="page-item" [class.disabled]="currentPage === 1">
+              <a class="page-link" (click)="changePage(currentPage - 1)">
+                <i class="fas fa-chevron-left"></i>
+              </a>
+            </li>
+            <li class="page-item" *ngFor="let page of pages" [class.active]="page === currentPage">
+              <a class="page-link" (click)="changePage(page)">{{ page }}</a>
+            </li>
+            <li class="page-item" [class.disabled]="currentPage === totalPages">
+              <a class="page-link" (click)="changePage(currentPage + 1)">
+                <i class="fas fa-chevron-right"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,9 +2,12 @@ package com.iabenchmark.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
@@ -16,6 +19,10 @@ public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "consultant_id")
+    private User consultant;
 
     @Column(nullable = false, unique = true)
     private String name;
@@ -73,4 +80,6 @@ public class Company {
     public void setAddress(String address) { this.address = address; }
     public LocalDateTime getCreatedAt() { return createdAt; }
     public LocalDateTime getUpdatedAt() { return updatedAt; }
+    public User getConsultant() { return consultant; }
+    public void setConsultant(User consultant) { this.consultant = consultant; }
 }

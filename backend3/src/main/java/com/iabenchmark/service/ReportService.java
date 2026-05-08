@@ -1,5 +1,6 @@
 package com.iabenchmark.service;
 
+import com.iabenchmark.dto.BenchmarkResponse;
 import com.iabenchmark.model.Evaluation;
 import com.iabenchmark.model.EvaluationAnswer;
 import com.iabenchmark.repository.EvaluationRepository;
@@ -15,7 +16,6 @@ import com.itextpdf.layout.Document;
 import com.itextpdf.layout.borders.Border;
 import com.itextpdf.layout.borders.SolidBorder;
 import com.itextpdf.layout.element.Cell;
-import com.itextpdf.layout.element.Div;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
 import com.itextpdf.layout.element.Text;
@@ -189,6 +189,14 @@ public class ReportService {
                 doc.add(spacer(4));
             }
 
+            // ── Benchmarking Sectoriel ────────────────────────────────────────
+            if (aiService.isAiServiceAvailable()) {
+                try {
+                    BenchmarkResponse benchmark = aiService.getBenchmark(evaluationId);
+                    addBenchmarkSection(doc, benchmark, bold, regular, italic);
+                } catch (Exception ignored) {}
+            }
+
             // ── Footer ────────────────────────────────────────────────────────
             doc.add(spacer(20));
             doc.add(new Paragraph("Rapport généré par IA Benchmark — Fondé sur Gartner, McKinsey, ISO 27001, CMMI, COBIT, WEF DTI")
@@ -199,6 +207,173 @@ public class ReportService {
 
         } catch (Exception e) {
             throw new RuntimeException("Erreur lors de la génération du rapport PDF: " + e.getMessage(), e);
+        }
+    }
+
+    private void addBenchmarkSection(Document doc, BenchmarkResponse bm,
+            PdfFont bold, PdfFont regular, PdfFont italic) throws Exception {
+
+        doc.add(spacer(16));
+        doc.add(sectionTitle("Benchmarking Sectoriel", bold));
+
+        // Executive summary
+        if (bm.getExecutiveSummary() != null && !bm.getExecutiveSummary().isBlank()) {
+            doc.add(new Paragraph(bm.getExecutiveSummary())
+                .setFont(regular).setFontSize(10).setFontColor(DARK)
+                .setBackgroundColor(LIGHT_BG)
+                .setBorder(new SolidBorder(BORDER, 1))
+                .setPadding(10).setMarginBottom(12));
+        }
+
+        // Sector positioning KPI table
+        if (bm.getSectorBenchmark() != null) {
+            doc.add(new Paragraph("Positionnement Sectoriel")
+                .setFont(bold).setFontSize(11).setFontColor(DARK).setMarginBottom(6));
+            BenchmarkResponse.SectorBenchmark sb = bm.getSectorBenchmark();
+            Table kpiTable = new Table(UnitValue.createPercentArray(new float[]{1,1,1,1})).useAllAvailableWidth();
+            kpiTable.addCell(scoreCell("Score Entreprise", fmt(bm.getGlobalScore()) + "/100", PRIMARY, bold, regular));
+            kpiTable.addCell(scoreCell("Moyenne Nationale", fmt(sb.getNationalAverage()) + "/100", GRAY, bold, regular));
+            kpiTable.addCell(scoreCell("Moyenne Internationale", fmt(sb.getInternationalAverage()) + "/100", new DeviceRgb(14, 165, 233), bold, regular));
+            kpiTable.addCell(scoreCell("Top Quartile", fmt(sb.getTopQuartileScore()) + "/100", SUCCESS, bold, regular));
+            doc.add(kpiTable);
+            doc.add(spacer(6));
+            String info = "Percentile : " + sb.getCompanyPercentile() + "ème"
+                + (sb.getPositioningLabel() != null && !sb.getPositioningLabel().isBlank() ? "  |  " + sb.getPositioningLabel() : "")
+                + (sb.getSource() != null && !sb.getSource().isBlank() ? "  |  Source : " + sb.getSource() : "");
+            doc.add(new Paragraph(info).setFont(italic).setFontSize(9).setFontColor(GRAY).setMarginBottom(12));
+        }
+
+        // Axis benchmarks table
+        if (bm.getAxisBenchmarks() != null && !bm.getAxisBenchmarks().isEmpty()) {
+            doc.add(new Paragraph("Benchmarking par Axe")
+                .setFont(bold).setFontSize(11).setFontColor(DARK).setMarginBottom(6));
+            Table axisTable = new Table(UnitValue.createPercentArray(new float[]{2,1,1,1,1,1})).useAllAvailableWidth();
+            for (String h : new String[]{"Axe", "Score", "Moy. Secteur", "Top Quartile", "Écart/Moy.", "Écart/Top"}) {
+                axisTable.addHeaderCell(new Cell().setBackgroundColor(DARK).setPadding(6)
+                    .add(new Paragraph(h).setFont(bold).setFontSize(9).setFontColor(ColorConstants.WHITE)));
+            }
+            boolean alt = false;
+            for (BenchmarkResponse.AxisBenchmark ab : bm.getAxisBenchmarks()) {
+                DeviceRgb rowBg = alt ? LIGHT_BG : new DeviceRgb(255,255,255);
+                String label = ab.getAxisLabel() != null && !ab.getAxisLabel().isBlank() ? ab.getAxisLabel() : ab.getAxis();
+                axisTable.addCell(new Cell().setBackgroundColor(rowBg).setPadding(6)
+                    .add(new Paragraph(label).setFont(bold).setFontSize(9).setFontColor(DARK)));
+                axisTable.addCell(new Cell().setBackgroundColor(rowBg).setPadding(6).setTextAlignment(TextAlignment.CENTER)
+                    .add(new Paragraph(fmt(ab.getCompanyScore())).setFont(bold).setFontSize(9).setFontColor(PRIMARY)));
+                axisTable.addCell(new Cell().setBackgroundColor(rowBg).setPadding(6).setTextAlignment(TextAlignment.CENTER)
+                    .add(new Paragraph(fmt(ab.getSectorAverage())).setFont(regular).setFontSize(9)));
+                axisTable.addCell(new Cell().setBackgroundColor(rowBg).setPadding(6).setTextAlignment(TextAlignment.CENTER)
+                    .add(new Paragraph(fmt(ab.getTopQuartile())).setFont(regular).setFontSize(9).setFontColor(SUCCESS)));
+                double gapAvg = ab.getGapToAverage() != null ? ab.getGapToAverage() : 0.0;
+                double gapTop = ab.getGapToTop() != null ? ab.getGapToTop() : 0.0;
+                axisTable.addCell(new Cell().setBackgroundColor(rowBg).setPadding(6).setTextAlignment(TextAlignment.CENTER)
+                    .add(new Paragraph((gapAvg >= 0 ? "+" : "") + fmt(gapAvg))
+                        .setFont(bold).setFontSize(9).setFontColor(gapAvg >= 0 ? SUCCESS : DANGER)));
+                axisTable.addCell(new Cell().setBackgroundColor(rowBg).setPadding(6).setTextAlignment(TextAlignment.CENTER)
+                    .add(new Paragraph((gapTop >= 0 ? "+" : "") + fmt(gapTop))
+                        .setFont(bold).setFontSize(9).setFontColor(gapTop >= 0 ? SUCCESS : WARNING)));
+                alt = !alt;
+            }
+            doc.add(axisTable);
+            doc.add(spacer(12));
+        }
+
+        // Trends
+        if (bm.getTrends() != null && !bm.getTrends().isEmpty()) {
+            doc.add(new Paragraph("Tendances Sectorielles")
+                .setFont(bold).setFontSize(11).setFontColor(DARK).setMarginBottom(6));
+            for (BenchmarkResponse.BenchmarkTrend t : bm.getTrends()) {
+                String impact = t.getImpactLevel() != null ? t.getImpactLevel().toUpperCase() : "";
+                DeviceRgb impColor = impact.contains("HIGH") || impact.contains("ELEV") ? DANGER
+                    : impact.contains("MED") || impact.contains("MOY") ? WARNING : SUCCESS;
+                Table tTable = new Table(UnitValue.createPercentArray(new float[]{1})).useAllAvailableWidth();
+                Cell tCell = new Cell().setBorder(Border.NO_BORDER).setBorderLeft(new SolidBorder(impColor, 4))
+                    .setBackgroundColor(LIGHT_BG).setPadding(10).setMarginBottom(6);
+                tCell.add(new Paragraph()
+                    .add(new Text(t.getTitle() != null ? t.getTitle() : "").setFont(bold).setFontSize(10).setFontColor(DARK))
+                    .add(new Text("  [" + impact + " — " + (t.getHorizon() != null ? t.getHorizon() : "") + "]")
+                        .setFont(italic).setFontSize(8).setFontColor(GRAY)));
+                if (t.getDescription() != null && !t.getDescription().isBlank()) {
+                    tCell.add(new Paragraph(t.getDescription()).setFont(regular).setFontSize(9).setFontColor(GRAY).setMarginTop(4));
+                }
+                if (t.getAdoptionRate() != null && !t.getAdoptionRate().isBlank()) {
+                    tCell.add(new Paragraph("Taux d'adoption : " + t.getAdoptionRate())
+                        .setFont(italic).setFontSize(8).setFontColor(GRAY).setMarginTop(2));
+                }
+                tTable.addCell(tCell);
+                doc.add(tTable);
+                doc.add(spacer(4));
+            }
+            doc.add(spacer(8));
+        }
+
+        // Sector leaders
+        if (bm.getSectorLeaders() != null && !bm.getSectorLeaders().isEmpty()) {
+            doc.add(new Paragraph("Leaders du Secteur")
+                .setFont(bold).setFontSize(11).setFontColor(DARK).setMarginBottom(6));
+            Table lTable = new Table(UnitValue.createPercentArray(new float[]{2,1,1,2,2})).useAllAvailableWidth();
+            for (String h : new String[]{"Entreprise", "Pays", "Score Est.", "Pratique Clé", "Différenciateur"}) {
+                lTable.addHeaderCell(new Cell().setBackgroundColor(DARK).setPadding(6)
+                    .add(new Paragraph(h).setFont(bold).setFontSize(9).setFontColor(ColorConstants.WHITE)));
+            }
+            boolean alt = false;
+            for (BenchmarkResponse.SectorLeader l : bm.getSectorLeaders()) {
+                DeviceRgb rowBg = alt ? LIGHT_BG : new DeviceRgb(255,255,255);
+                lTable.addCell(new Cell().setBackgroundColor(rowBg).setPadding(6)
+                    .add(new Paragraph(l.getCompany() != null ? l.getCompany() : "").setFont(bold).setFontSize(9).setFontColor(DARK)));
+                lTable.addCell(new Cell().setBackgroundColor(rowBg).setPadding(6)
+                    .add(new Paragraph(l.getCountry() != null ? l.getCountry() : "").setFont(regular).setFontSize(9)));
+                lTable.addCell(new Cell().setBackgroundColor(rowBg).setPadding(6).setTextAlignment(TextAlignment.CENTER)
+                    .add(new Paragraph((l.getEstimatedScore() != null ? l.getEstimatedScore() : 0) + "/100")
+                        .setFont(bold).setFontSize(9).setFontColor(SUCCESS)));
+                lTable.addCell(new Cell().setBackgroundColor(rowBg).setPadding(6)
+                    .add(new Paragraph(l.getKeyPractice() != null ? l.getKeyPractice() : "").setFont(regular).setFontSize(8)));
+                lTable.addCell(new Cell().setBackgroundColor(rowBg).setPadding(6)
+                    .add(new Paragraph(l.getDifferentiator() != null ? l.getDifferentiator() : "").setFont(italic).setFontSize(8).setFontColor(GRAY)));
+                alt = !alt;
+            }
+            doc.add(lTable);
+            doc.add(spacer(12));
+        }
+
+        // Improvement roadmap
+        if (bm.getImprovementRoadmap() != null && !bm.getImprovementRoadmap().isEmpty()) {
+            doc.add(new Paragraph("Feuille de Route d'Amélioration")
+                .setFont(bold).setFontSize(11).setFontColor(DARK).setMarginBottom(6));
+            DeviceRgb[] phaseColors = {DANGER, PRIMARY, SUCCESS};
+            int idx = 0;
+            for (BenchmarkResponse.RoadmapPhase phase : bm.getImprovementRoadmap()) {
+                DeviceRgb color = phaseColors[idx % phaseColors.length];
+                Table pTable = new Table(UnitValue.createPercentArray(new float[]{1})).useAllAvailableWidth();
+                Cell pCell = new Cell().setBorder(Border.NO_BORDER).setBorderLeft(new SolidBorder(color, 5)).setPadding(12).setMarginBottom(8);
+                pCell.add(new Paragraph()
+                    .add(new Text((phase.getPhase() != null ? phase.getPhase() : "") + " : ").setFont(bold).setFontSize(11).setFontColor(color))
+                    .add(new Text(phase.getObjective() != null ? phase.getObjective() : "").setFont(bold).setFontSize(11).setFontColor(DARK)));
+                String meta = "Investissement : " + (phase.getInvestmentLevel() != null ? phase.getInvestmentLevel() : "")
+                    + "  |  Gain attendu : " + (phase.getExpectedScoreGain() != null ? phase.getExpectedScoreGain() : "")
+                    + "  →  Niveau cible : " + (phase.getTargetLevel() != null ? phase.getTargetLevel() : "");
+                pCell.add(new Paragraph(meta).setFont(italic).setFontSize(9).setFontColor(GRAY).setMarginTop(4).setMarginBottom(6));
+                if (phase.getActions() != null) {
+                    for (String action : phase.getActions()) {
+                        pCell.add(new Paragraph("• " + action).setFont(regular).setFontSize(9).setFontColor(DARK).setMarginLeft(10));
+                    }
+                }
+                pTable.addCell(pCell);
+                doc.add(pTable);
+                doc.add(spacer(4));
+                idx++;
+            }
+            doc.add(spacer(8));
+        }
+
+        // Key insights
+        if (bm.getKeyInsights() != null && !bm.getKeyInsights().isEmpty()) {
+            doc.add(new Paragraph("Points Clés")
+                .setFont(bold).setFontSize(11).setFontColor(DARK).setMarginBottom(6));
+            for (String insight : bm.getKeyInsights()) {
+                doc.add(new Paragraph("→ " + insight)
+                    .setFont(regular).setFontSize(10).setFontColor(DARK).setMarginLeft(10).setMarginBottom(4));
+            }
         }
     }
 

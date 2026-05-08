@@ -42,6 +42,9 @@ public class Questionnaire {
     @Column(nullable = false)
     private boolean active = true;
 
+    @Column(name = "company_id")
+    private Long companyId;
+
     @OneToMany(mappedBy = "questionnaire", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Question> questions = new ArrayList<>();
 
@@ -86,6 +89,8 @@ public class Questionnaire {
     public boolean isActive() { return active; }
     public void setActive(boolean active) { this.active = active; }
     public List<Question> getQuestions() { return questions; }
+    public Long getCompanyId() { return companyId; }
+    public void setCompanyId(Long companyId) { this.companyId = companyId; }
     public LocalDateTime getCreatedAt() { return createdAt; }
     public LocalDateTime getUpdatedAt() { return updatedAt; }
 }

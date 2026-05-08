@@ -1,4 +1,5 @@
 {
     "java.configuration.updateBuildConfiguration": "interactive",
-    "claudeCode.disableLoginPrompt": true
+    "claudeCode.disableLoginPrompt": true,
+    "java.compile.nullAnalysis.mode": "automatic"
 }

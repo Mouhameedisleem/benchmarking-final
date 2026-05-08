@@ -28,6 +28,10 @@ public class RecommendationService {
         double businessScore = evaluation.getBusinessScore();
         double processScore = evaluation.getProcessScore();
         double siScore = evaluation.getInformationSystemScore();
+        double canauxScore = evaluation.getCanauxDistributionScore();
+        double marketingScore = evaluation.getMarketingCommunicationScore();
+        double rhScore = evaluation.getRhCultureDigitaleScore();
+        double offresScore = evaluation.getOffresDigitalesScore();
         MaturityLevel maturity = evaluation.getMaturityLevel();
 
         List<RecommendationResponse> recommendations = new ArrayList<>();
@@ -35,6 +39,10 @@ public class RecommendationService {
         recommendations.addAll(generateMetierRecommendations(businessScore, sector, country, maturity));
         recommendations.addAll(generateProcessusRecommendations(processScore, sector, country, maturity));
         recommendations.addAll(generateSIRecommendations(siScore, sector, country, maturity));
+        if (canauxScore > 0) recommendations.addAll(generateCanauxRecommendations(canauxScore, sector, maturity));
+        if (marketingScore > 0) recommendations.addAll(generateMarketingRecommendations(marketingScore, sector, maturity));
+        if (rhScore > 0) recommendations.addAll(generateRhRecommendations(rhScore, maturity));
+        if (offresScore > 0) recommendations.addAll(generateOffresRecommendations(offresScore, sector, maturity));
 
         return recommendations;
     }
@@ -196,6 +204,172 @@ public class RecommendationService {
             recs.add(buildCountrySIRec(country, score));
         }
 
+        return recs;
+    }
+
+    private List<RecommendationResponse> generateCanauxRecommendations(
+            double score, String sector, MaturityLevel maturity) {
+
+        List<RecommendationResponse> recs = new ArrayList<>();
+
+        if (score < 40) {
+            recs.add(new RecommendationResponse(
+                    "CANAUX_DISTRIBUTION", "HAUTE",
+                    "Lancer une application mobile et activer le SMS/USSD Banking",
+                    "L'entreprise n'offre pas encore de canaux digitaux de distribution. Le mobile est le canal prioritaire pour toucher la clientèle dans le contexte africain.",
+                    "Selon le rapport GSMA State of Mobile Money 2024, plus de 60% des transactions financières en Afrique de l'Ouest passent désormais par le mobile. L'absence de canal mobile représente une perte de compétitivité majeure."
+            ));
+            recs.add(new RecommendationResponse(
+                    "CANAUX_DISTRIBUTION", "HAUTE",
+                    "Digitaliser le parcours d'ouverture de compte (e-KYC)",
+                    "Le processus d'onboarding client est entièrement manuel, ce qui limite la croissance et augmente les coûts d'acquisition client.",
+                    "Les solutions e-KYC adaptées au contexte africain (Smile ID, Onfido) permettent de réduire le délai d'ouverture de compte de plusieurs jours à moins de 24h, avec un taux d'abandon du parcours réduit de 40%."
+            ));
+        } else if (score < 60) {
+            recs.add(new RecommendationResponse(
+                    "CANAUX_DISTRIBUTION", "MOYENNE",
+                    "Déployer un réseau d'agents bancaires (Agency Banking)",
+                    "Les canaux digitaux existent mais la couverture géographique reste insuffisante, notamment en zones rurales et périurbaines.",
+                    "D'après la BCEAO, le réseau d'agents bancaires est le levier le plus efficace pour étendre la bancarisation en zones non couvertes. Les banques leaders de l'UEMOA ont multiplié leur base clients de 3x grâce à l'agency banking."
+            ));
+        } else if (score < 80) {
+            recs.add(new RecommendationResponse(
+                    "CANAUX_DISTRIBUTION", "MOYENNE",
+                    "Assurer une expérience client omnicanale sans rupture",
+                    "Les canaux digitaux sont actifs mais ne communiquent pas entre eux. Un client qui commence une opération sur mobile doit pouvoir la finaliser en agence sans ressaisie.",
+                    "McKinsey Digital Banking Transformation 2024 indique que les banques offrant une expérience omnicanale cohérente atteignent un NPS supérieur de 25 points et un taux de rétention client plus élevé de 18%."
+            ));
+        } else {
+            recs.add(new RecommendationResponse(
+                    "CANAUX_DISTRIBUTION", "BASSE",
+                    "Intégrer les super-apps et les APIs partenaires pour étendre la portée",
+                    "L'excellence multicanale atteinte permet d'exposer les services bancaires dans des super-apps tierces et de proposer une expérience Banking-as-a-Service.",
+                    "Les banques leaders en Afrique de l'Ouest intègrent leurs services dans des plateformes comme Wave, Orange Money ou des super-apps locales pour atteindre les clients là où ils se trouvent déjà."
+            ));
+        }
+        return recs;
+    }
+
+    private List<RecommendationResponse> generateMarketingRecommendations(
+            double score, String sector, MaturityLevel maturity) {
+
+        List<RecommendationResponse> recs = new ArrayList<>();
+
+        if (score < 40) {
+            recs.add(new RecommendationResponse(
+                    "MARKETING_COMMUNICATION", "HAUTE",
+                    "Établir une présence digitale active sur les réseaux sociaux",
+                    "L'entreprise n'a pas encore de stratégie de communication digitale structurée, ce qui limite sa visibilité et sa capacité à acquérir de nouveaux clients en ligne.",
+                    "HubSpot State of Marketing 2024 montre que les entreprises avec une présence active sur les réseaux sociaux génèrent 3x plus de leads qualifiés que celles qui s'appuient uniquement sur les canaux traditionnels."
+            ));
+        } else if (score < 60) {
+            recs.add(new RecommendationResponse(
+                    "MARKETING_COMMUNICATION", "MOYENNE",
+                    "Déployer une stratégie de marketing digital avec mesure du ROI",
+                    "Les actions de communication digitale sont ponctuelles et leur impact n'est pas mesuré. Une approche structurée avec des KPI clairs est nécessaire.",
+                    "Google et Meta recommandent une approche test & learn avec des budgets publicitaires trackés par canal. Les entreprises qui mesurent précisément leur ROI digital optimisent leur budget marketing de 30% en moyenne."
+            ));
+        } else if (score < 80) {
+            recs.add(new RecommendationResponse(
+                    "MARKETING_COMMUNICATION", "MOYENNE",
+                    "Personnaliser la communication par la segmentation data",
+                    "Le marketing digital est actif mais générique. La personnalisation des messages selon le profil et le comportement client est la prochaine étape de maturité.",
+                    "Accenture Personalization Report 2024 indique que 91% des consommateurs sont plus susceptibles d'acheter auprès de marques qui reconnaissent leurs préférences. La personnalisation augmente le taux de conversion de 5 à 8x."
+            ));
+        } else {
+            recs.add(new RecommendationResponse(
+                    "MARKETING_COMMUNICATION", "BASSE",
+                    "Activer le marketing prédictif par l'IA pour l'hyperpersonnalisation",
+                    "L'excellence marketing atteinte permet de passer à l'hyperpersonnalisation par l'IA, avec des offres générées en temps réel selon le contexte client.",
+                    "McKinsey Next in Personalization 2024 estime que les leaders de la personnalisation génèrent 40% de revenus supplémentaires par rapport à leurs pairs. L'IA prédictive est le levier différenciant du niveau OPTIMISÉ."
+            ));
+        }
+        return recs;
+    }
+
+    private List<RecommendationResponse> generateRhRecommendations(
+            double score, MaturityLevel maturity) {
+
+        List<RecommendationResponse> recs = new ArrayList<>();
+
+        if (score < 40) {
+            recs.add(new RecommendationResponse(
+                    "RH_CULTURE_DIGITALE", "HAUTE",
+                    "Lancer un programme de sensibilisation et de formation digitale",
+                    "Les compétences digitales des collaborateurs sont insuffisantes pour soutenir la transformation. Un programme structuré de montée en compétences est indispensable.",
+                    "McKinsey Global Institute (2023) estime que 375 millions de travailleurs devront changer de métier ou acquérir de nouvelles compétences d'ici 2030. Les entreprises qui investissent tôt dans le reskilling réduisent leur coût de recrutement de 50%."
+            ));
+            recs.add(new RecommendationResponse(
+                    "RH_CULTURE_DIGITALE", "HAUTE",
+                    "Digitaliser les processus RH (SIRH, fiches de paie, recrutement)",
+                    "Les processus RH sont encore manuels et papier, ce qui génère des erreurs, des délais et une mauvaise expérience collaborateur.",
+                    "Gartner HR Technology 2024 indique que la digitalisation des processus RH réduit le temps consacré aux tâches administratives de 40% et améliore la satisfaction des collaborateurs de 22%."
+            ));
+        } else if (score < 60) {
+            recs.add(new RecommendationResponse(
+                    "RH_CULTURE_DIGITALE", "MOYENNE",
+                    "Créer un référentiel de compétences digitales et certifier les équipes",
+                    "Les formations digitales existent mais ne sont pas structurées autour d'un référentiel clair. Les collaborateurs manquent de visibilité sur les compétences attendues.",
+                    "LinkedIn Workplace Learning Report 2024 montre que les entreprises dotées d'un référentiel de compétences clairement défini ont un taux de rétention des talents 30% plus élevé que la moyenne du secteur."
+            ));
+        } else if (score < 80) {
+            recs.add(new RecommendationResponse(
+                    "RH_CULTURE_DIGITALE", "MOYENNE",
+                    "Instaurer une culture agile et des rituels d'innovation",
+                    "La culture digitale est en développement mais les pratiques agiles et l'innovation ne sont pas encore ancrées dans le quotidien des équipes.",
+                    "Le rapport Deloitte Human Capital Trends 2024 indique que les organisations qui pratiquent l'innovation collaborative (hackathons, design sprints) développent de nouveaux produits 60% plus vite que leurs concurrents."
+            ));
+        } else {
+            recs.add(new RecommendationResponse(
+                    "RH_CULTURE_DIGITALE", "BASSE",
+                    "Devenir un employeur de référence pour les talents digitaux",
+                    "L'excellence RH digitale atteinte permet d'attirer les meilleurs profils technologiques en développant une marque employeur différenciante.",
+                    "Korn Ferry Future of Work 2024 estime que la pénurie mondiale de talents technologiques atteindra 85 millions de personnes d'ici 2030. Les entreprises qui investissent dans leur marque employeur digitale aujourd'hui sécurisent leurs capacités de transformation futures."
+            ));
+        }
+        return recs;
+    }
+
+    private List<RecommendationResponse> generateOffresRecommendations(
+            double score, String sector, MaturityLevel maturity) {
+
+        List<RecommendationResponse> recs = new ArrayList<>();
+
+        if (score < 40) {
+            recs.add(new RecommendationResponse(
+                    "OFFRES_DIGITALES", "HAUTE",
+                    "Digitaliser les produits et services existants",
+                    "Les produits et services sont uniquement disponibles via des canaux physiques. La digitalisation de l'offre est un prérequis pour rester compétitif.",
+                    "Hsys Digital Benchmark 2026 montre que les entreprises de la zone UEMOA dont moins de 20% des souscriptions se font en ligne perdent en moyenne 15% de parts de marché par an au profit d'acteurs nativement digitaux."
+            ));
+            recs.add(new RecommendationResponse(
+                    "OFFRES_DIGITALES", "HAUTE",
+                    "Lancer des produits nativement digitaux (mobile money, micro-crédit digital)",
+                    "Le marché attend des offres digitales accessibles, rapides et sans contrainte de déplacement. Le mobile money et le micro-crédit digital sont les segments à fort potentiel dans le contexte UEMOA.",
+                    "GSMA State of Mobile Money Africa 2024 indique que le volume de transactions mobile money en Afrique de l'Ouest a dépassé 500 milliards USD en 2023. Les acteurs sans offre mobile money risquent une désintermédiation rapide."
+            ));
+        } else if (score < 60) {
+            recs.add(new RecommendationResponse(
+                    "OFFRES_DIGITALES", "MOYENNE",
+                    "Développer des partenariats Open Banking et exposer des APIs",
+                    "L'offre digitale existe mais reste fermée. L'ouverture via des APIs partenaires permettrait d'intégrer les services dans des écosystèmes tiers et de multiplier les points de contact client.",
+                    "McKinsey Open Banking Maturity Report 2024 indique que les banques ayant exposé des APIs partenaires génèrent en moyenne 20% de revenus supplémentaires grâce aux commissions de l'écosystème dans les 3 ans suivant l'ouverture."
+            ));
+        } else if (score < 80) {
+            recs.add(new RecommendationResponse(
+                    "OFFRES_DIGITALES", "MOYENNE",
+                    "Construire un écosystème de services financiers intégrés",
+                    "Le catalogue digital est mature. L'étape suivante est d'intégrer des services non-financiers (assurance, commerce, santé) pour devenir une super-app de référence.",
+                    "WEF Digital Finance 2024 montre que les super-apps financières asiatiques (WeChat Pay, Grab Financial) ont multiplié par 5 leur valeur client en intégrant des services non-financiers. Ce modèle est en cours de déploiement en Afrique (M-Pesa, Wave)."
+            ));
+        } else {
+            recs.add(new RecommendationResponse(
+                    "OFFRES_DIGITALES", "BASSE",
+                    "Exporter les solutions digitales dans d'autres marchés CEDEAO",
+                    "L'excellence en offres digitales locales ouvre des opportunités d'expansion régionale. Les solutions éprouvées localement peuvent être déployées dans d'autres pays de la CEDEAO.",
+                    "Gartner Digital Business Models 2024 et McKinsey Africa Banking Report indiquent que les banques panafricaines leaders valorisent leur expertise digitale comme actif exportable, générant des revenus récurrents via des licences de plateforme dans d'autres marchés."
+            ));
+        }
         return recs;
     }
 

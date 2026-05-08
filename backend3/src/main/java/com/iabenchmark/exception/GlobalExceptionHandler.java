@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.client.ResourceAccessException;
 import jakarta.persistence.EntityNotFoundException;
 import java.time.LocalDateTime;
 import java.util.HashMap;
@@ -53,12 +54,21 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(response, HttpStatus.FORBIDDEN);
     }
 
+    @ExceptionHandler(ResourceAccessException.class)
+    public ResponseEntity<Map<String, Object>> handleResourceAccessException(ResourceAccessException ex) {
+        Map<String, Object> response = new HashMap<>();
+        response.put("message", "Le service IA est indisponible ou a mis trop de temps à répondre. Veuillez réessayer.");
+        response.put("timestamp", LocalDateTime.now());
+        response.put("status", HttpStatus.SERVICE_UNAVAILABLE.value());
+        return new ResponseEntity<>(response, HttpStatus.SERVICE_UNAVAILABLE);
+    }
+
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<Map<String, Object>> handleRuntimeException(RuntimeException ex) {
         Map<String, Object> response = new HashMap<>();
         response.put("message", ex.getMessage());
         response.put("timestamp", LocalDateTime.now());
-        response.put("status", HttpStatus.BAD_REQUEST.value());
-        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+        response.put("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
+        return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

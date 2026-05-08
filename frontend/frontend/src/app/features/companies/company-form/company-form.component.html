@@ -1,0 +1,229 @@
+<div class="container-fluid py-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-7">
+      <!-- En-tête -->
+      <div class="d-flex align-items-center mb-4">
+        <a routerLink="/companies" class="btn btn-link text-decoration-none text-muted me-3">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <div>
+          <h2 class="mb-1">
+            <i class="fas fa-building me-2 text-primary"></i>
+            {{ isEditMode ? 'Modifier' : 'Nouvelle' }} entreprise
+          </h2>
+          <p class="text-muted mb-0">
+            {{ isEditMode ? 'Modifiez les informations de l\'entreprise' : 'Ajoutez une nouvelle entreprise' }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="card shadow-sm border-0">
+        <div class="card-body p-4">
+          <!-- Loading -->
+          <div class="text-center py-5" *ngIf="isLoading">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Chargement...</span>
+            </div>
+          </div>
+
+          <!-- Formulaire -->
+          <form *ngIf="!isLoading" (ngSubmit)="onSubmit()" #companyForm="ngForm">
+            <!-- Message d'erreur -->
+            <div class="alert alert-danger" *ngIf="errorMessage">
+              <i class="fas fa-exclamation-circle me-2"></i>{{ errorMessage }}
+            </div>
+
+            <!-- Section Informations générales -->
+            <h5 class="text-primary mb-3">
+              <i class="fas fa-info-circle me-2"></i>Informations générales
+            </h5>
+
+            <!-- Consultant assignment (Admin only) -->
+            <div class="mb-3" *ngIf="isAdmin">
+              <label class="form-label fw-semibold">
+                <i class="fas fa-user-tie text-primary me-2"></i>Consultant responsable
+              </label>
+              <select class="form-select" [(ngModel)]="company.consultantId" name="consultantId">
+                <option [ngValue]="undefined">— Aucun consultant assigné —</option>
+                <option *ngFor="let c of consultants" [ngValue]="c.id">
+                  {{ c.firstName }} {{ c.lastName }} ({{ c.email }})
+                </option>
+              </select>
+              <div class="form-text text-muted">
+                <i class="fas fa-info-circle me-1"></i>
+                Le consultant pourra gérer le questionnaire et les évaluations de cette entreprise.
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-semibold">
+                  <i class="fas fa-tag text-primary me-2"></i>Nom de l'entreprise *
+                </label>
+                <input type="text" 
+                       class="form-control" 
+                       [(ngModel)]="company.name" 
+                       name="name" 
+                       required
+                       #name="ngModel"
+                       [class.is-invalid]="name.invalid && name.touched">
+                <div class="invalid-feedback" *ngIf="name.invalid && name.touched">
+                  Le nom est requis
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-semibold">
+                  <i class="fas fa-chart-pie text-primary me-2"></i>Secteur *
+                </label>
+                <select class="form-select" 
+                        [(ngModel)]="company.sector" 
+                        name="sector" 
+                        required
+                        #sector="ngModel"
+                        [class.is-invalid]="sector.invalid && sector.touched">
+                  <option value="">Sélectionnez</option>
+                  <option *ngFor="let sector of sectors" [value]="sector.id">
+                    {{sector.icon}} {{sector.name}}
+                  </option>
+                </select>
+                <div class="invalid-feedback" *ngIf="sector.invalid && sector.touched">
+                  Le secteur est requis
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-semibold">
+                  <i class="fas fa-globe text-primary me-2"></i>Pays *
+                </label>
+                <select class="form-select" 
+                        [(ngModel)]="company.country" 
+                        name="country" 
+                        required
+                        #country="ngModel"
+                        [class.is-invalid]="country.invalid && country.touched">
+                  <option value="">Sélectionnez</option>
+                  <option *ngFor="let country of countries" [value]="country.code">
+                    {{country.flag}} {{country.name}}
+                  </option>
+                </select>
+                <div class="invalid-feedback" *ngIf="country.invalid && country.touched">
+                  Le pays est requis
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-semibold">
+                  <i class="fas fa-chart-line text-primary me-2"></i>Taille *
+                </label>
+                <select class="form-select" 
+                        [(ngModel)]="company.size" 
+                        name="size" 
+                        required
+                        #size="ngModel"
+                        [class.is-invalid]="size.invalid && size.touched">
+                  <option value="">Sélectionnez</option>
+                  <option *ngFor="let opt of sizeOptions" [value]="opt.value">
+                    {{opt.label}} - {{opt.description}}
+                  </option>
+                </select>
+                <div class="invalid-feedback" *ngIf="size.invalid && size.touched">
+                  La taille est requise
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-semibold">
+                <i class="fas fa-briefcase text-primary me-2"></i>Domaine d'activité *
+              </label>
+              <input type="text" 
+                     class="form-control" 
+                     [(ngModel)]="company.activityDomain" 
+                     name="activityDomain" 
+                     required
+                     #activityDomain="ngModel"
+                     [class.is-invalid]="activityDomain.invalid && activityDomain.touched">
+              <div class="invalid-feedback" *ngIf="activityDomain.invalid && activityDomain.touched">
+                Le domaine d'activité est requis
+              </div>
+            </div>
+
+            <!-- Section Coordonnées -->
+            <h5 class="text-primary mb-3 mt-4">
+              <i class="fas fa-address-card me-2"></i>Coordonnées
+            </h5>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">
+                  <i class="fas fa-envelope text-muted me-2"></i>Email
+                </label>
+                <input type="email" 
+                       class="form-control" 
+                       [(ngModel)]="company.email" 
+                       name="email"
+                       #email="ngModel"
+                       [class.is-invalid]="email.invalid && email.touched">
+                <div class="invalid-feedback" *ngIf="email.invalid && email.touched">
+                  Email invalide
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label class="form-label">
+                  <i class="fas fa-phone text-muted me-2"></i>Téléphone
+                </label>
+                <input type="tel" 
+                       class="form-control" 
+                       [(ngModel)]="company.phone" 
+                       name="phone">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">
+                <i class="fas fa-globe text-muted me-2"></i>Site web
+              </label>
+              <input type="url" 
+                     class="form-control" 
+                     [(ngModel)]="company.website" 
+                     name="website"
+                     #website="ngModel"
+                     [class.is-invalid]="website.invalid && website.touched">
+              <div class="invalid-feedback" *ngIf="website.invalid && website.touched">
+                URL invalide
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">
+                <i class="fas fa-map-marker-alt text-muted me-2"></i>Adresse
+              </label>
+              <textarea class="form-control" 
+                        [(ngModel)]="company.address" 
+                        name="address"
+                        rows="2"></textarea>
+            </div>
+
+            <!-- Boutons -->
+            <div class="d-flex justify-content-end gap-2 mt-4">
+              <button type="button" class="btn btn-outline-secondary px-4" (click)="cancel()">
+                Annuler
+              </button>
+              <button type="submit" 
+                      class="btn btn-primary px-4" 
+                      [disabled]="companyForm.invalid">
+                <i class="fas fa-save me-2"></i>
+                {{ isEditMode ? 'Mettre à jour' : 'Créer' }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

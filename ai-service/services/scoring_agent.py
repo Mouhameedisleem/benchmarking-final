@@ -5,14 +5,15 @@ Produces: global score, axis scores, sub-axis scores, maturity level, and explan
 """
 import json
 import os
-from groq import AsyncGroq
 from knowledge.frameworks import get_frameworks_for_sector, FRAMEWORKS
+from knowledge.sector_benchmarks import format_benchmark_for_prompt
+from knowledge.regulations import format_regulations_for_prompt
+from services.mistral_client import call_mistral, extract_json
 
 
 class ScoringAgent:
     def __init__(self):
-        self.client = AsyncGroq(api_key=os.getenv("GROQ_API_KEY"))
-        self.model = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+        self.model = os.getenv("MISTRAL_MODEL", "mistral-large-latest")
 
     async def score(self, request: dict) -> dict:
         """
@@ -25,20 +26,25 @@ class ScoringAgent:
         # Build a weighted score baseline (rule-based, fast)
         baseline = self._compute_baseline(request["answers"])
 
-        # Use AI to produce richer scoring with explanations
-        prompt = self._build_prompt(request, baseline)
-        response = await self.client.chat.completions.create(
-            model=self.model,
-            messages=[
-                {"role": "system", "content": self._system_prompt()},
-                {"role": "user", "content": prompt}
-            ],
-            response_format={"type": "json_object"},
-            temperature=0.2  # Very low — scoring must be consistent
+        # Enrich context with knowledge bases
+        benchmark_context = format_benchmark_for_prompt(
+            request.get("sector", ""), request.get("country", ""), baseline["global_score"]
+        )
+        regulations_context = format_regulations_for_prompt(
+            request.get("sector", ""), request.get("country", "")
         )
 
-        raw = response.choices[0].message.content
-        data = json.loads(raw)
+        # Use AI to produce richer scoring with explanations
+        prompt = self._build_prompt(request, baseline, benchmark_context, regulations_context)
+        raw = await call_mistral(
+            messages=[
+                {"role": "system", "content": self._system_prompt()},
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0.2,
+            model=self.model,
+        )
+        data = extract_json(raw)
         return self._normalize(data, baseline, request)
 
     def _system_prompt(self) -> str:
@@ -61,11 +67,14 @@ RÈGLES DE SCORING :
   41-60 → INTERMEDIAIRE
   61-80 → AVANCE
   81-100 → OPTIMISE
-- La synthèse doit citer les frameworks pertinents et nommer les gaps précis
+- Utilise le benchmark sectoriel fourni pour contextualiser le score (au-dessus/en dessous de la moyenne)
+- Signale les non-conformités réglementaires potentielles dans les gaps critiques
+- La synthèse doit citer les frameworks pertinents, le positionnement sectoriel et nommer les gaps précis
 - Réponds UNIQUEMENT en JSON valide.
 """
 
-    def _build_prompt(self, req: dict, baseline: dict) -> str:
+    def _build_prompt(self, req: dict, baseline: dict,
+                      benchmark_context: str = "", regulations_context: str = "") -> str:
         answers_summary = self._format_answers(req["answers"])
         frameworks = req.get("frameworks_used", ["Gartner DMM", "McKinsey DQ"])
 
@@ -82,6 +91,12 @@ SCORES DE RÉFÉRENCE (calcul pondéré automatique) :
 - Score BUSINESS : {baseline['business_score']:.1f}/100
 - Score PROCESS : {baseline['process_score']:.1f}/100
 - Score INFORMATION_SYSTEM : {baseline['si_score']:.1f}/100
+- Score CANAUX_DISTRIBUTION : {baseline['canaux_score']:.1f}/100
+- Score MARKETING_COMMUNICATION : {baseline['marketing_score']:.1f}/100
+- Score RH_CULTURE_DIGITALE : {baseline['rh_score']:.1f}/100
+- Score OFFRES_DIGITALES : {baseline['offres_score']:.1f}/100
+{benchmark_context}
+{regulations_context}
 
 RÉPONSES AU QUESTIONNAIRE :
 {answers_summary}
@@ -92,13 +107,17 @@ Génère une évaluation complète au format JSON :
   "business_score": <float 0-100>,
   "process_score": <float 0-100>,
   "si_score": <float 0-100>,
+  "canaux_score": <float 0-100>,
+  "marketing_score": <float 0-100>,
+  "rh_score": <float 0-100>,
+  "offres_score": <float 0-100>,
   "maturity_level": "INITIAL|BASIQUE|INTERMEDIAIRE|AVANCE|OPTIMISE",
   "sub_axis_scores": [
-    {{"sub_axis": "...", "axis": "BUSINESS|PROCESS|INFORMATION_SYSTEM", "score": <float>, "question_count": <int>}}
+    {{"sub_axis": "...", "axis": "BUSINESS|PROCESS|INFORMATION_SYSTEM|CANAUX_DISTRIBUTION|MARKETING_COMMUNICATION|RH_CULTURE_DIGITALE|OFFRES_DIGITALES", "score": <float>, "question_count": <int>}}
   ],
   "axis_syntheses": [
     {{
-      "axis": "BUSINESS|PROCESS|INFORMATION_SYSTEM",
+      "axis": "BUSINESS|PROCESS|INFORMATION_SYSTEM|CANAUX_DISTRIBUTION|MARKETING_COMMUNICATION|RH_CULTURE_DIGITALE|OFFRES_DIGITALES",
       "score": <float>,
       "summary": "Synthèse narrative 2-3 phrases avec points forts et gaps identifiés, référençant les frameworks.",
       "strengths": ["point fort 1", "point fort 2"],
@@ -129,7 +148,11 @@ Génère une évaluation complète au format JSON :
 
     def _compute_baseline(self, answers: list) -> dict:
         """Fast weighted average per axis — used as reference for the AI."""
-        axis_data = {"BUSINESS": [], "PROCESS": [], "INFORMATION_SYSTEM": []}
+        axis_data = {
+            "BUSINESS": [], "PROCESS": [], "INFORMATION_SYSTEM": [],
+            "CANAUX_DISTRIBUTION": [], "MARKETING_COMMUNICATION": [],
+            "RH_CULTURE_DIGITALE": [], "OFFRES_DIGITALES": [],
+        }
         all_values = []
 
         for a in answers:
@@ -151,10 +174,14 @@ Génère une évaluation complète au format JSON :
             return sum(v * w for v, w in items) / total_weight
 
         return {
-            "global_score": weighted_avg(all_values),
+            "global_score":   weighted_avg(all_values),
             "business_score": weighted_avg(axis_data["BUSINESS"]),
-            "process_score": weighted_avg(axis_data["PROCESS"]),
-            "si_score": weighted_avg(axis_data["INFORMATION_SYSTEM"])
+            "process_score":  weighted_avg(axis_data["PROCESS"]),
+            "si_score":       weighted_avg(axis_data["INFORMATION_SYSTEM"]),
+            "canaux_score":   weighted_avg(axis_data["CANAUX_DISTRIBUTION"]),
+            "marketing_score": weighted_avg(axis_data["MARKETING_COMMUNICATION"]),
+            "rh_score":       weighted_avg(axis_data["RH_CULTURE_DIGITALE"]),
+            "offres_score":   weighted_avg(axis_data["OFFRES_DIGITALES"]),
         }
 
     def _normalize(self, data: dict, baseline: dict, req: dict) -> dict:

@@ -55,12 +55,36 @@ public class Evaluation {
     @Column(nullable = false)
     private Double informationSystemScore = 0.0;
 
+    @Column(nullable = false)
+    private Double canauxDistributionScore = 0.0;
+
+    @Column(nullable = false)
+    private Double marketingCommunicationScore = 0.0;
+
+    @Column(nullable = false)
+    private Double rhCultureDigitaleScore = 0.0;
+
+    @Column(nullable = false)
+    private Double offresDigitalesScore = 0.0;
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private MaturityLevel maturityLevel = MaturityLevel.INITIAL;
 
     @OneToMany(mappedBy = "evaluation", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<EvaluationAnswer> responses = new ArrayList<>();
+
+    @Column(nullable = false)
+    private boolean pendingReview = true;
+
+    @Column(nullable = false)
+    private boolean validated = false;
+
+    @Column(columnDefinition = "TEXT")
+    private String recommendationsJson;
+
+    @Column(columnDefinition = "TEXT")
+    private String benchmarkJson;
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
@@ -75,6 +99,15 @@ public class Evaluation {
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();
     }
+
+    public boolean isPendingReview() { return pendingReview; }
+    public void setPendingReview(boolean pendingReview) { this.pendingReview = pendingReview; }
+    public boolean isValidated() { return validated; }
+    public void setValidated(boolean validated) { this.validated = validated; }
+    public String getRecommendationsJson() { return recommendationsJson; }
+    public void setRecommendationsJson(String recommendationsJson) { this.recommendationsJson = recommendationsJson; }
+    public String getBenchmarkJson() { return benchmarkJson; }
+    public void setBenchmarkJson(String benchmarkJson) { this.benchmarkJson = benchmarkJson; }
 
     public void addResponse(EvaluationAnswer response) {
         responses.add(response);
@@ -105,6 +138,14 @@ public class Evaluation {
     public void setProcessScore(Double processScore) { this.processScore = processScore; }
     public Double getInformationSystemScore() { return informationSystemScore; }
     public void setInformationSystemScore(Double informationSystemScore) { this.informationSystemScore = informationSystemScore; }
+    public Double getCanauxDistributionScore() { return canauxDistributionScore; }
+    public void setCanauxDistributionScore(Double s) { this.canauxDistributionScore = s; }
+    public Double getMarketingCommunicationScore() { return marketingCommunicationScore; }
+    public void setMarketingCommunicationScore(Double s) { this.marketingCommunicationScore = s; }
+    public Double getRhCultureDigitaleScore() { return rhCultureDigitaleScore; }
+    public void setRhCultureDigitaleScore(Double s) { this.rhCultureDigitaleScore = s; }
+    public Double getOffresDigitalesScore() { return offresDigitalesScore; }
+    public void setOffresDigitalesScore(Double s) { this.offresDigitalesScore = s; }
     public MaturityLevel getMaturityLevel() { return maturityLevel; }
     public void setMaturityLevel(MaturityLevel maturityLevel) { this.maturityLevel = maturityLevel; }
     public List<EvaluationAnswer> getResponses() { return responses; }

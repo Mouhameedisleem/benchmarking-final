@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/test")
-@CrossOrigin(origins = "*")
 public class TestController {
     @GetMapping("/all")
     public String allAccess() { return "Public Content."; }

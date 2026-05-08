@@ -5,6 +5,7 @@ import com.iabenchmark.dto.ChangePasswordRequest;
 import com.iabenchmark.dto.CompanyRegistrationRequest;
 import com.iabenchmark.dto.ForgotPasswordRequest;
 import com.iabenchmark.dto.LoginRequest;
+import com.iabenchmark.dto.RegisterConsultantRequest;
 import com.iabenchmark.dto.RegisterRequest;
 import com.iabenchmark.dto.ResetPasswordRequest;
 import com.iabenchmark.model.Company;
@@ -94,6 +95,28 @@ public class AuthService {
         return authenticateUser(loginRequest);
     }
 
+    public AuthResponse registerConsultant(RegisterConsultantRequest request) {
+        if (userRepository.existsByEmail(request.getEmail())) {
+            throw new RuntimeException("Email déjà utilisé");
+        }
+        User user = new User(
+                request.getEmail(),
+                request.getEmail(),
+                passwordEncoder.encode(request.getPassword()),
+                request.getFirstName(),
+                request.getLastName(),
+                Role.CONSULTANT
+        );
+        user.setPhone(request.getPhone());
+        user.setActive(true);
+        userRepository.save(user);
+
+        LoginRequest loginRequest = new LoginRequest();
+        loginRequest.setEmail(request.getEmail());
+        loginRequest.setPassword(request.getPassword());
+        return authenticateUser(loginRequest);
+    }
+
     public AuthResponse registerCompanyClient(CompanyRegistrationRequest request) {
         if (userRepository.existsByEmail(request.getEmail())) {
             throw new RuntimeException("Email dÃ©jÃ  utilisÃ©");
@@ -145,8 +168,8 @@ public class AuthService {
 
     // ── Forgot password ──────────────────────────────────────────────────────────
     public String requestPasswordReset(ForgotPasswordRequest request) {
-        User user = userRepository.findByEmail(request.getEmail())
-                .orElseThrow(() -> new EntityNotFoundException("Aucun compte trouvé avec cet email."));
+        userRepository.findByEmail(request.getEmail())
+            .orElseThrow(() -> new EntityNotFoundException("Aucun compte trouvé avec cet email."));
 
         String code = String.format("%06d", new Random().nextInt(999999));
         resetCodes.put(request.getEmail(), new Object[]{code, LocalDateTime.now().plusMinutes(15)});
@@ -172,7 +195,7 @@ public class AuthService {
         }
 
         User user = userRepository.findByEmail(request.getEmail())
-                .orElseThrow(() -> new EntityNotFoundException("Utilisateur introuvable."));
+            .orElseThrow(() -> new EntityNotFoundException("Utilisateur introuvable."));
         user.setPassword(passwordEncoder.encode(request.getNewPassword()));
         userRepository.save(user);
         resetCodes.remove(request.getEmail());

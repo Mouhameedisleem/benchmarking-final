@@ -5,6 +5,7 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import java.util.List;
 
 public class QuestionRequest {
     @NotBlank(message = "Question text is required")
@@ -25,6 +26,8 @@ public class QuestionRequest {
     @Min(value = 1, message = "Question display order must be at least 1")
     private Integer displayOrder;
 
+    private List<String> options;
+
     public String getText() { return text; }
     public void setText(String text) { this.text = text; }
     public QuestionAxis getAxis() { return axis; }
@@ -35,4 +38,6 @@ public class QuestionRequest {
     public void setWeight(Integer weight) { this.weight = weight; }
     public Integer getDisplayOrder() { return displayOrder; }
     public void setDisplayOrder(Integer displayOrder) { this.displayOrder = displayOrder; }
+    public List<String> getOptions() { return options; }
+    public void setOptions(List<String> options) { this.options = options; }
 }

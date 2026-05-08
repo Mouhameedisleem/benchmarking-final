@@ -8,7 +8,6 @@ import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,7 +24,6 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/questionnaires")
-@CrossOrigin(origins = "*")
 public class QuestionnaireController {
     private final QuestionnaireService questionnaireService;
     private final ExcelImportService excelImportService;
@@ -37,7 +35,11 @@ public class QuestionnaireController {
     }
 
     @GetMapping
-    public ResponseEntity<List<QuestionnaireResponse>> getAllQuestionnaires() {
+    public ResponseEntity<List<QuestionnaireResponse>> getAllQuestionnaires(
+            @RequestParam(required = false) Long companyId) {
+        if (companyId != null) {
+            return ResponseEntity.ok(questionnaireService.getQuestionnairesByCompany(companyId));
+        }
         return ResponseEntity.ok(questionnaireService.getAllQuestionnaires());
     }
 
@@ -64,6 +66,13 @@ public class QuestionnaireController {
     public ResponseEntity<Void> deleteQuestionnaire(@PathVariable Long id) {
         questionnaireService.deleteQuestionnaire(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/{id}/regenerate-options")
+    @PreAuthorize("hasAnyRole('ADMIN', 'CONSULTANT')")
+    public ResponseEntity<Map<String, String>> regenerateOptions(@PathVariable Long id) {
+        questionnaireService.regenerateOptions(id);
+        return ResponseEntity.ok(Map.of("message", "Options régénérées avec succès"));
     }
 
     @PostMapping("/import")

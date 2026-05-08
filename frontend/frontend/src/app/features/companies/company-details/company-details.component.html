@@ -1,0 +1,177 @@
+<div class="container-fluid py-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-7">
+      <!-- En-tête avec navigation -->
+      <div class="d-flex align-items-center mb-4">
+        <button class="btn btn-link text-decoration-none text-muted me-3" (click)="goBack()">
+          <i class="fas fa-arrow-left fa-lg"></i>
+        </button>
+        <div>
+          <h2 class="mb-1">
+            <i class="fas fa-building me-2 text-primary"></i>
+            Détails de l'entreprise
+          </h2>
+          <p class="text-muted mb-0">Informations complètes et actions disponibles</p>
+        </div>
+      </div>
+
+      <!-- Loading -->
+      <div class="text-center py-5" *ngIf="isLoading">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Chargement...</span>
+        </div>
+        <p class="mt-2 text-muted">Chargement des informations...</p>
+      </div>
+
+      <!-- Error -->
+      <div class="alert alert-danger" *ngIf="errorMessage && !isLoading">
+        <i class="fas fa-exclamation-circle me-2"></i>{{ errorMessage }}
+        <div class="mt-2">
+          <button class="btn btn-outline-danger btn-sm" (click)="goBack()">
+            <i class="fas fa-arrow-left me-2"></i>Retour à la liste
+          </button>
+        </div>
+      </div>
+
+      <!-- Détails de l'entreprise -->
+      <div class="card shadow-sm border-0" *ngIf="company && !isLoading">
+        <!-- En-tête de la carte -->
+        <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+          <h4 class="mb-0 fw-bold">{{ company.name }}</h4>
+          <span class="badge" [ngClass]="getSizeClass(company.size)">
+            {{ company.size }}
+          </span>
+        </div>
+
+        <div class="card-body p-4">
+          <!-- Grille d'informations -->
+          <div class="row">
+            <!-- Colonne gauche -->
+            <div class="col-md-6">
+              <h6 class="text-primary mb-3">
+                <i class="fas fa-info-circle me-2"></i>Informations générales
+              </h6>
+              
+              <div class="mb-3">
+                <label class="text-muted small mb-1">Secteur d'activité</label>
+                <p class="fw-semibold mb-0">{{ getSectorName(company.sector) }}</p>
+              </div>
+
+              <div class="mb-3">
+                <label class="text-muted small mb-1">Pays</label>
+                <p class="fw-semibold mb-0">
+                  {{ getCountryFlag(company.country) }} {{ getCountryName(company.country) }}
+                </p>
+              </div>
+
+              <div class="mb-3">
+                <label class="text-muted small mb-1">Taille</label>
+                <p class="fw-semibold mb-0">{{ company.size }} - {{ getSizeDescription(company.size) }}</p>
+              </div>
+
+              <div class="mb-3">
+                <label class="text-muted small mb-1">Domaine d'activité</label>
+                <p class="fw-semibold mb-0">{{ company.activityDomain }}</p>
+              </div>
+            </div>
+
+            <!-- Colonne droite -->
+            <div class="col-md-6">
+              <h6 class="text-primary mb-3">
+                <i class="fas fa-address-card me-2"></i>Coordonnées
+              </h6>
+              
+              <div class="mb-3" *ngIf="company.email">
+                <label class="text-muted small mb-1">Email</label>
+                <p class="fw-semibold mb-0">
+                  <i class="fas fa-envelope text-primary me-2"></i>
+                  <a href="mailto:{{ company.email }}" class="text-decoration-none">{{ company.email }}</a>
+                </p>
+              </div>
+
+              <div class="mb-3" *ngIf="company.phone">
+                <label class="text-muted small mb-1">Téléphone</label>
+                <p class="fw-semibold mb-0">
+                  <i class="fas fa-phone text-primary me-2"></i>
+                  {{ company.phone }}
+                </p>
+              </div>
+
+              <div class="mb-3" *ngIf="company.website">
+                <label class="text-muted small mb-1">Site web</label>
+                <p class="fw-semibold mb-0">
+                  <i class="fas fa-globe text-primary me-2"></i>
+                  <a href="{{ company.website }}" target="_blank" class="text-decoration-none">
+                    {{ company.website }}
+                  </a>
+                </p>
+              </div>
+
+              <div class="mb-3" *ngIf="company.address">
+                <label class="text-muted small mb-1">Adresse</label>
+                <p class="fw-semibold mb-0">
+                  <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                  {{ company.address }}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dates -->
+          <div class="row mt-3">
+            <div class="col-12">
+              <hr>
+              <div class="d-flex gap-4 small text-muted">
+                <span *ngIf="company.createdAt">
+                  <i class="far fa-calendar-alt me-1"></i>
+                  Créé le: {{ company.createdAt | date:'dd/MM/yyyy' }}
+                </span>
+                <span *ngIf="company.updatedAt && company.updatedAt !== company.createdAt">
+                  <i class="far fa-calendar-check me-1"></i>
+                  Modifié le: {{ company.updatedAt | date:'dd/MM/yyyy' }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Régénération des options IA -->
+        <div class="card-body border-top pt-3 pb-0" *ngIf="questionnaireId && isConsultantOrAdmin">
+          <div class="d-flex align-items-center gap-3 flex-wrap">
+            <button class="btn btn-outline-primary btn-sm" (click)="regenerateOptions()" [disabled]="regenerating">
+              <span *ngIf="regenerating" class="spinner-border spinner-border-sm me-2" role="status"></span>
+              <i *ngIf="!regenerating" class="fas fa-magic me-2"></i>
+              {{ regenerating ? 'Génération en cours...' : 'Régénérer les options IA' }}
+            </button>
+            <span class="text-success small" *ngIf="regenerateSuccess">
+              <i class="fas fa-check-circle me-1"></i>{{ regenerateSuccess }}
+            </span>
+            <span class="text-danger small" *ngIf="regenerateError">
+              <i class="fas fa-exclamation-circle me-1"></i>{{ regenerateError }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Footer avec actions -->
+        <div class="card-footer bg-white py-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-outline-secondary" (click)="goBack()">
+              <i class="fas fa-arrow-left me-2"></i>Retour
+            </button>
+            <div>
+              <button class="btn btn-success me-2" (click)="startEvaluation()">
+                <i class="fas fa-play me-2"></i>Lancer évaluation
+              </button>
+              <button class="btn btn-primary me-2" (click)="editCompany()">
+                <i class="fas fa-edit me-2"></i>Modifier
+              </button>
+              <button class="btn btn-danger" (click)="deleteCompany()">
+                <i class="fas fa-trash me-2"></i>Supprimer
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

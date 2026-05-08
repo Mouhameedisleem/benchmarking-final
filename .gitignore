@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.env
+*.env.local
+
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+*.log
+
+# Spring live logs
+spring-live.*.log
+
+# Node / Angular
+node_modules/
+dist/
+.angular/
+*.js.map
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db

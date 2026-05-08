@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from services.questionnaire_agent import QuestionnaireAgent
 from services.recommendation_engine import RecommendationEngine
 from services.scoring_agent import ScoringAgent
+from services.benchmarking_engine import BenchmarkingEngine
 from knowledge.frameworks import get_frameworks_for_sector, FRAMEWORKS
 
 load_dotenv()
@@ -28,6 +29,7 @@ app.add_middleware(
 questionnaire_agent = QuestionnaireAgent()
 recommendation_engine = RecommendationEngine()
 scoring_agent = ScoringAgent()
+benchmarking_engine = BenchmarkingEngine()
 
 
 # ── Request / Response models ─────────────────────────────────────────────────
@@ -66,8 +68,13 @@ class RecommendationRequest(BaseModel):
     business_score: float
     process_score: float
     si_score: float
+    canaux_score: float = 0.0
+    marketing_score: float = 0.0
+    rh_score: float = 0.0
+    offres_score: float = 0.0
     maturity_level: str
     sub_axis_scores: Optional[list[dict]] = []
+    consultant_prompt: Optional[str] = None
 
 class RecommendationItem(BaseModel):
     axis: str
@@ -120,6 +127,80 @@ class ScoringResponse(BaseModel):
     axis_syntheses: list[AxisSynthesis] = []
     critical_gaps: list[str] = []
     maturity_explanation: str = ""
+
+
+# ── Benchmarking models ───────────────────────────────────────────────────────
+
+class BenchmarkRequest(BaseModel):
+    company_name: str
+    sector: str
+    country: str
+    company_size: Optional[str] = None
+    global_score: float
+    business_score: float
+    process_score: float
+    si_score: float
+    canaux_score: float = 0.0
+    marketing_score: float = 0.0
+    rh_score: float = 0.0
+    offres_score: float = 0.0
+    maturity_level: str
+    consultant_prompt: Optional[str] = None
+
+class SectorBenchmark(BaseModel):
+    national_average: float
+    international_average: float
+    top_quartile_score: float
+    company_percentile: int
+    positioning_label: str
+    source: str
+
+class AxisBenchmark(BaseModel):
+    axis: str
+    axis_label: str
+    company_score: float
+    sector_average: float
+    top_quartile: float
+    gap_to_average: float
+    gap_to_top: float
+
+class BenchmarkTrend(BaseModel):
+    title: str
+    description: str
+    impact_level: str
+    horizon: str
+    adoption_rate: str = ""
+    source: str = ""
+
+class SectorLeader(BaseModel):
+    company: str
+    country: str
+    estimated_score: int
+    key_practice: str
+    differentiator: str
+    source: str = ""
+
+class RoadmapPhase(BaseModel):
+    phase: str
+    objective: str
+    actions: list[str]
+    expected_score_gain: str
+    target_level: str
+    investment_level: str
+
+class BenchmarkResponse(BaseModel):
+    company_name: str
+    sector: str
+    country: str
+    global_score: float
+    maturity_level: str
+    executive_summary: str
+    sector_benchmark: SectorBenchmark
+    axis_benchmarks: list[AxisBenchmark] = []
+    trends: list[BenchmarkTrend] = []
+    sector_leaders: list[SectorLeader] = []
+    improvement_roadmap: list[RoadmapPhase] = []
+    key_insights: list[str] = []
 
 
 # ── Endpoints ─────────────────────────────────────────────────────────────────
@@ -208,6 +289,42 @@ async def generate_recommendations(request: RecommendationRequest):
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erreur de génération: {str(e)}")
+
+
+@app.post("/api/ai/benchmark", response_model=BenchmarkResponse)
+async def generate_benchmark(request: BenchmarkRequest):
+    """
+    Génère une analyse de benchmarking sectoriel complète :
+    positionnement national/international, tendances, leaders du secteur,
+    et feuille de route d'amélioration. Fait partie du livrable rapport.
+    """
+    try:
+        result = await benchmarking_engine.benchmark(request)
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Erreur de benchmarking: {str(e)}")
+
+
+class OptionsRegenerationRequest(BaseModel):
+    questions: list[dict]  # [{text, axis, sub_axis}, ...]
+
+
+@app.post("/api/ai/generate-options")
+async def generate_contextual_options(request: OptionsRegenerationRequest):
+    """
+    Generates or regenerates contextual options for a list of existing questions.
+    Each question must have at minimum: text, axis, sub_axis.
+    Returns the same questions list with an 'options' array added/replaced on each.
+    """
+    try:
+        data = {"questions": [dict(q) for q in request.questions]}
+        # Force all questions to be treated as needing options
+        for q in data["questions"]:
+            q.pop("options", None)  # Remove existing options so _is_generic_options returns True
+        data = await questionnaire_agent._fix_generic_options(data)
+        return {"questions": data["questions"]}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Erreur de génération d'options: {str(e)}")
 
 
 if __name__ == "__main__":

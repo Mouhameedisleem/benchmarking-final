@@ -1,0 +1,205 @@
+<div class="container-fluid py-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-7">
+      <!-- En-tête -->
+      <div class="d-flex align-items-center mb-4">
+        <a routerLink="/questions" class="btn btn-link text-decoration-none text-muted me-3">
+          <i class="fas fa-arrow-left fa-lg"></i>
+        </a>
+        <div>
+          <h2 class="mb-1">
+            <i class="fas fa-question-circle me-2 text-primary"></i>
+            {{ isEditMode ? 'Modifier' : 'Nouvelle' }} question
+          </h2>
+          <p class="text-muted mb-0">
+            {{ isEditMode ? 'Modifiez la question existante' : 'Ajoutez une nouvelle question au questionnaire' }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="card shadow-sm border-0">
+        <div class="card-body p-4">
+          <!-- Loading -->
+          <div class="text-center py-5" *ngIf="isLoading">
+            <div clas="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Chargement...</span>
+            </div>
+            <p class="mt-2 text-muted">Chargement...</p>
+          </div>
+
+          <!-- Formulaire -->
+          <form *ngIf="!isLoading" (ngSubmit)="onSubmit()" #questionForm="ngForm">
+            <!-- Message d'erreur -->
+            <div class="alert alert-danger" *ngIf="errorMessage">
+              <i class="fas fa-exclamation-circle me-2"></i>{{ errorMessage }}
+            </div>
+
+            <!-- Contenu de la question -->
+            <div class="mb-4">
+              <label class="form-label fw-semibold">
+                <i class="fas fa-question-circle text-primary me-2"></i>Contenu de la question *
+              </label>
+              <textarea class="form-control" 
+                        rows="3"
+                        [(ngModel)]="question.content" 
+                        name="content" 
+                        required
+                        #content="ngModel"
+                        [class.is-invalid]="content.invalid && content.touched"
+                        placeholder="Saisissez le texte de la question..."></textarea>
+              <div class="invalid-feedback" *ngIf="content.invalid && content.touched">
+                Le contenu est requis
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- Axe -->
+              <div class="col-md-4 mb-3">
+                <label class="form-label fw-semibold">
+                  <i class="fas fa-sitemap text-primary me-2"></i>Axe *
+                </label>
+                <select class="form-select" 
+                        [(ngModel)]="question.axis" 
+                        name="axis" 
+                        required
+                        (ngModelChange)="onAxisChange()"
+                        #axis="ngModel"
+                        [class.is-invalid]="axis.invalid && axis.touched">
+                  <option value="">Sélectionnez un axe</option>
+                  <option *ngFor="let opt of axisOptions" [value]="opt.value">
+                    {{ opt.label }}
+                  </option>
+                </select>
+                <div class="invalid-feedback" *ngIf="axis.invalid && axis.touched">
+                  L'axe est requis
+                </div>
+              </div>
+
+              <!-- Catégorie -->
+              <div class="col-md-4 mb-3">
+                <label class="form-label fw-semibold">
+                  <i class="fas fa-folder text-primary me-2"></i>Catégorie *
+                </label>
+                <select class="form-select" 
+                        [(ngModel)]="question.category" 
+                        name="category" 
+                        required
+                        (ngModelChange)="onCategoryChange()"
+                        #category="ngModel"
+                        [class.is-invalid]="category.invalid && category.touched">
+                  <option value="">Sélectionnez une catégorie</option>
+                  <option *ngFor="let cat of categories" [value]="cat.id">
+                    {{ cat.name }}
+                  </option>
+                </select>
+                <div class="invalid-feedback" *ngIf="category.invalid && category.touched">
+                  La catégorie est requise
+                </div>
+              </div>
+
+              <!-- Sous-axe -->
+              <div class="col-md-4 mb-3">
+                <label class="form-label fw-semibold">
+                  <i class="fas fa-tag text-primary me-2"></i>Sous-axe *
+                </label>
+                <select class="form-select" 
+                        [(ngModel)]="question.subAxis" 
+                        name="subAxis" 
+                        required
+                        #subAxis="ngModel"
+                        [class.is-invalid]="subAxis.invalid && subAxis.touched">
+                  <option value="">Sélectionnez un sous-axe</option>
+                  <option *ngFor="let sub of filteredSubAxes" [value]="sub.id">
+                    {{ sub.name }}
+                  </option>
+                </select>
+                <div class="invalid-feedback" *ngIf="subAxis.invalid && subAxis.touched">
+                  Le sous-axe est requis
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- Ordre -->
+              <div class="col-md-3 mb-3">
+                <label class="form-label fw-semibold">
+                  <i class="fas fa-sort-numeric-down text-primary me-2"></i>Ordre *
+                </label>
+                <input type="number" 
+                       class="form-control" 
+                       [(ngModel)]="question.order" 
+                       name="order" 
+                       required
+                       min="1"
+                       #order="ngModel"
+                       [class.is-invalid]="order.invalid && order.touched">
+                <div class="invalid-feedback" *ngIf="order.invalid && order.touched">
+                  Ordre requis (min 1)
+                </div>
+              </div>
+
+              <!-- Statut -->
+              <div class="col-md-3 mb-3">
+                <label class="form-label fw-semibold">Statut</label>
+                <div class="form-check form-switch mt-2">
+                  <input class="form-check-input" 
+                         type="checkbox" 
+                         id="isActive"
+                         [(ngModel)]="question.isActive" 
+                         name="isActive">
+                  <label class="form-check-label" for="isActive">
+                    {{ question.isActive ? 'Active' : 'Inactive' }}
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- Secteur (optionnel) -->
+              <div class="col-md-6 mb-3">
+                <label class="form-label">
+                  <i class="fas fa-chart-pie text-muted me-2"></i>Secteur spécifique
+                </label>
+                <select class="form-select" [(ngModel)]="question.sector" name="sector">
+                  <option value="">Tous secteurs</option>
+                  <option *ngFor="let sector of sectors" [value]="sector.id">
+                    {{ sector.icon }} {{ sector.name }}
+                  </option>
+                </select>
+                <small class="text-muted">Laissez vide pour tous les secteurs</small>
+              </div>
+
+              <!-- Pays (optionnel) -->
+              <div class="col-md-6 mb-3">
+                <label class="form-label">
+                  <i class="fas fa-globe text-muted me-2"></i>Pays spécifique
+                </label>
+                <select class="form-select" [(ngModel)]="question.country" name="country">
+                  <option value="">Tous pays</option>
+                  <option *ngFor="let country of countries" [value]="country.code">
+                    {{ country.flag }} {{ country.name }}
+                  </option>
+                </select>
+                <small class="text-muted">Laissez vide pour tous les pays</small>
+              </div>
+            </div>
+
+            <!-- Boutons -->
+            <div class="d-flex justify-content-end gap-2 mt-4">
+              <button type="button" class="btn btn-outline-secondary px-4" (click)="cancel()">
+                Annuler
+              </button>
+              <button type="submit" 
+                      class="btn btn-primary px-4" 
+                      [disabled]="questionForm.invalid">
+                <i class="fas fa-save me-2"></i>
+                {{ isEditMode ? 'Mettre à jour' : 'Créer' }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

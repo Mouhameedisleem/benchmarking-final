@@ -7,6 +7,8 @@ public class RecommendationResponse {
     private String description;
     private String bestPractice;
 
+    public RecommendationResponse() {}
+
     public RecommendationResponse(String axis, String priority, String title,
                                   String description, String bestPractice) {
         this.axis = axis;
@@ -17,8 +19,13 @@ public class RecommendationResponse {
     }
 
     public String getAxis() { return axis; }
+    public void setAxis(String axis) { this.axis = axis; }
     public String getPriority() { return priority; }
+    public void setPriority(String priority) { this.priority = priority; }
     public String getTitle() { return title; }
+    public void setTitle(String title) { this.title = title; }
     public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
     public String getBestPractice() { return bestPractice; }
+    public void setBestPractice(String bestPractice) { this.bestPractice = bestPractice; }
 }

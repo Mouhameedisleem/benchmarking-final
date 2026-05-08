@@ -101,9 +101,13 @@ public class ExcelImportService {
     private QuestionAxis parseAxis(String value) {
         if (value == null) return QuestionAxis.BUSINESS;
         return switch (value.trim().toUpperCase()) {
-            case "PROCESS", "PROCESSUS"           -> QuestionAxis.PROCESS;
-            case "INFORMATION_SYSTEM", "SI", "IS" -> QuestionAxis.INFORMATION_SYSTEM;
-            default                               -> QuestionAxis.BUSINESS;
+            case "PROCESS", "PROCESSUS"                        -> QuestionAxis.PROCESS;
+            case "INFORMATION_SYSTEM", "SI", "IS"              -> QuestionAxis.INFORMATION_SYSTEM;
+            case "CANAUX_DISTRIBUTION", "CANAUX", "UX"         -> QuestionAxis.CANAUX_DISTRIBUTION;
+            case "MARKETING_COMMUNICATION", "MARKETING"        -> QuestionAxis.MARKETING_COMMUNICATION;
+            case "RH_CULTURE_DIGITALE", "RH", "CULTURE"        -> QuestionAxis.RH_CULTURE_DIGITALE;
+            case "OFFRES_DIGITALES", "OFFRES", "DIGITAL_OFFERS" -> QuestionAxis.OFFRES_DIGITALES;
+            default                                            -> QuestionAxis.BUSINESS;
         };
     }
 
