@@ -1,0 +1,310 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "PROCESS",
+    "sous_axe": "cartographie_processus",
+    "version": "1.0",
+    "langue": "fr",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "Le secteur BTP en Côte d'Ivoire est caractérisé par une forte dépendance aux processus papier et informels : dossiers d'appels d'offres physiques, carnets de chantier manuscrits, PV de réception sur formulaires imprimés, ordres de service transmis par coursier. La plateforme SIGMAP DGMP CI impose progressivement la dématérialisation des marchés publics (45% en 2024, objectif 80% en 2026), créant une pression réglementaire pour cartographier et formaliser les processus BTP. Les 2 800 entreprises agréées CNBTP CI (dont 85% PME de classe D-E) manquent de méthodes et d'outils pour modéliser leurs processus opérationnels.",
+    "chiffres_cles": [
+      "85% entreprises BTP CI : processus non formalisés / documentés",
+      "45% marchés publics BTP dématérialisés via SIGMAP DGMP CI (2024)",
+      "Objectif DGMP CI : 80% dématérialisation marchés publics d'ici 2026",
+      "< 5% des chantiers CI utilisent un logiciel de gestion chantier intégré",
+      "PND CI 2021-2025 : 50 000 Mds FCFA d'investissements infrastructure nécessitant des processus rigoureux"
+    ],
+    "specificites_locales": [
+      "SIGMAP DGMP CI : obligation soumission AO dématérialisée pour marchés > 50 M FCFA",
+      "CCAG CI : cahier des clauses générales définissant les processus contractuels BTP",
+      "Loi CI 2017-771 : valeur juridique des PV de réception et ordres de service électroniques",
+      "CNBTP CI : conditions d'agrément incluent capacités organisationnelles et processus qualité",
+      "BNETD CI : référentiel processus MOA pour les projets d'infrastructure de l'État CI"
+    ]
+  },
+  "definition_axe": {
+    "titre": "Cartographie et dématérialisation des processus BTP",
+    "description": "Capacité de l'entreprise BTP à identifier, modéliser, documenter et dématérialiser ses processus opérationnels clés : processus d'appel d'offres (SIGMAP), gestion de chantier (planification, suivi, reporting), réception de travaux, facturation et recouvrement, gestion des sous-traitants et fournisseurs. La cartographie permet d'identifier les goulots d'étranglement, les non-conformités et les opportunités d'automatisation.",
+    "perimetre": [
+      "Processus commerciaux : réponse AO, devis, négociation contrat",
+      "Processus chantier : planification, suivi avancement, gestion incidents, reporting",
+      "Processus qualité : contrôles, non-conformités, réception provisoire/définitive",
+      "Processus administratifs : ordres de service, attachements, situations de travaux",
+      "Processus financiers : facturation sous-traitants, situations mensuelles, recouvrement"
+    ],
+    "technologies_cles": [
+      "SIGMAP DGMP CI — plateforme dématérialisation AO marchés publics CI",
+      "Procore / PlanGrid — gestion chantier cloud (plans, RFI, punch lists)",
+      "BatiScript CI — logiciel réception et levée de réserves (adapté normes CI)",
+      "Revit BIM — modélisation processus construction (BIM 4D planning, 5D coûts)",
+      "MS Visio / Lucidchart — modélisation BPMN processus BTP",
+      "DocuSign / SignNow — signatures électroniques PV réception, ordres de service"
+    ]
+  },
+  "enjeux_specifiques": {
+    "enjeux": [
+      {
+        "titre": "Conformité SIGMAP et dématérialisation AO",
+        "description": "Obligation légale de soumission dématérialisée sur SIGMAP DGMP CI pour les marchés publics supérieurs à 50 M FCFA. Les entreprises doivent cartographier et adapter leur processus de réponse AO (constitution dossier technique, dossier financier, signatures) au format numérique SIGMAP.",
+        "impact": "Exclusion des marchés publics pour les entreprises non conformes SIGMAP"
+      },
+      {
+        "titre": "Traçabilité chantier et gestion des litiges",
+        "description": "Les litiges BTP (malfaçons, retards, mauvaises mesures) sont fréquents en CI et nécessitent des preuves documentaires. La dématérialisation des carnets de chantier, attachements et PV de réception (Loi CI 2017-771) constitue une preuve juridique opposable.",
+        "impact": "Réduction des litiges et coûts juridiques ; conformité Loi CI 2017-771"
+      },
+      {
+        "titre": "Coordination multi-acteurs et sous-traitance",
+        "description": "Un chantier BTP CI mobilise en moyenne 8 à 15 sous-traitants et fournisseurs. L'absence de processus formalisés crée des désordres (retards approvisionnement, conflicts d'interface, décomptes erronés). La cartographie processus permet de définir les interfaces et responsabilités.",
+        "impact": "Réduction des dépassements de coûts et délais, souvent 20-40% sur chantiers CI"
+      }
+    ]
+  },
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Inexistant",
+      "description": "Processus BTP entièrement informels et non documentés. Carnets de chantier manuscrits, dossiers AO papier, PV de réception sur formulaires imprimés. Soumission SIGMAP non maîtrisée ou sous-traitée à un tiers. Aucune modélisation des processus.",
+      "signes_distinctifs": [
+        "Dossiers AO constitués manuellement, aucune bibliothèque de documents type",
+        "Carnets de chantier manuscrits, perdus ou illisibles lors des litiges",
+        "PV de réception papier, archivage physique non structuré",
+        "Transmission ordres de service par coursier ou SMS",
+        "Aucune connaissance des outils SIGMAP DGMP CI"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Début de formalisation des processus principaux en documents Word/Excel. Utilisation de SIGMAP DGMP CI pour les AO obligatoires mais sans maîtrise. Quelques modèles de documents standardisés. Processus documentés mais non partagés ni appliqués de manière consistante.",
+      "signes_distinctifs": [
+        "Bibliothèque de modèles documents AO (Word/Excel) partiellement utilisée",
+        "Compte SIGMAP DGMP CI créé, soumissions effectuées avec difficultés",
+        "Tableaux de bord chantier Excel mis à jour manuellement",
+        "Processus de réception documenté mais non systématiquement suivi",
+        "Partage de documents par email/WhatsApp sans versionning"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Processus BTP clés cartographiés en BPMN et dématérialisés. Utilisation d'un logiciel de gestion chantier (Procore, PlanGrid ou équivalent) pour le suivi. SIGMAP maîtrisé avec bibliothèque AO à jour. PV de réception et ordres de service électroniques conformes Loi CI 2017-771.",
+      "signes_distinctifs": [
+        "Cartographie BPMN des 5 processus clés (AO, chantier, réception, facturation, SAV)",
+        "Logiciel gestion chantier déployé sur les chantiers > 100 M FCFA",
+        "SIGMAP DGMP CI maîtrisé, taux de réussite AO amélioré",
+        "PV de réception électroniques avec signatures numériques légales",
+        "Reporting chantier dématérialisé, partagé avec maître d'ouvrage"
+      ]
+    },
+    "niveau_4": {
+      "label": "Optimisé",
+      "description": "Processus BTP intégrés dans un ERP chantier (SAP S/4HANA Construction, Oracle Primavera) avec flux automatisés. BIM 4D/5D relié aux processus de planification et de contrôle des coûts. Indicateurs temps réel. Processus de réception géolocalisés avec photos horodatées.",
+      "signes_distinctifs": [
+        "ERP chantier intégré : planification, ressources, coûts, facturation en flux unique",
+        "BIM 4D : planning 3D relié au modèle Revit pour suivi avancement visuel",
+        "Attachements et situations de travaux générés automatiquement depuis ERP",
+        "Dashboard temps réel maître d'ouvrage : avancement, coûts, incidents",
+        "Processus qualité : non-conformités tracées, levée réserves photographiée géolocalisée"
+      ]
+    },
+    "niveau_5": {
+      "label": "Différenciant",
+      "description": "Processus BTP entièrement digitaux, prédictifs et interconnectés. Le jumeau numérique (BIM + IoT chantier) alimente les processus en temps réel. IA prédictive sur les retards et dépassements budgétaires. Certification ISO 9001 ou équivalent. Partage processus avec sous-traitants via plateforme collaborative.",
+      "signes_distinctifs": [
+        "Jumeau numérique chantier : BIM + IoT capteurs relié aux processus opérationnels",
+        "IA prédictive : détection précoce risques dépassement délais/coûts",
+        "Écosystème collaboratif : sous-traitants, fournisseurs, MO sur plateforme commune",
+        "Certification qualité processus (ISO 9001 ou OHSAS 18001 CI)",
+        "Génération automatique rapports DGMP CI, CNBTP CI, BNETD CI depuis ERP"
+      ]
+    }
+  },
+  "indicateurs_cles": {
+    "indicateurs": [
+      {
+        "nom": "Taux de processus BTP formalisés et documentés",
+        "definition": "Pourcentage des processus clés (AO, chantier, réception, facturation) cartographiés en BPMN ou équivalent",
+        "unite": "%",
+        "cible_sectorielle": "> 80% des processus clés documentés",
+        "frequence_mesure": "Semestrielle"
+      },
+      {
+        "nom": "Taux de dématérialisation AO SIGMAP",
+        "definition": "Part des appels d'offres soumis via SIGMAP DGMP CI sur total AO déposés",
+        "unite": "%",
+        "cible_sectorielle": "100% des AO marchés publics > 50 M FCFA via SIGMAP",
+        "frequence_mesure": "Par AO"
+      },
+      {
+        "nom": "Délai moyen constitution dossier AO",
+        "definition": "Temps moyen entre réception cahier des charges et dépôt dossier complet SIGMAP",
+        "unite": "jours",
+        "cible_sectorielle": "< 10 jours (vs 18-25 jours processus papier)",
+        "frequence_mesure": "Par AO"
+      },
+      {
+        "nom": "Taux PV de réception électroniques",
+        "definition": "Part des procès-verbaux de réception (provisoire et définitive) signés électroniquement",
+        "unite": "%",
+        "cible_sectorielle": "> 90% des PV électroniques (conformité Loi CI 2017-771)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Délai traitement situations de travaux",
+        "definition": "Temps moyen entre dépôt situation mensuelle et paiement par maître d'ouvrage",
+        "unite": "jours",
+        "cible_sectorielle": "< 30 jours (vs 45-90 jours processus papier CI)",
+        "frequence_mesure": "Mensuelle"
+      }
+    ]
+  },
+  "bonnes_pratiques": {
+    "pratiques": [
+      {
+        "titre": "Cartographie BPMN des 5 processus clés en priorité",
+        "description": "Identifier et modéliser en BPMN les 5 processus générateurs de valeur et de risque : réponse AO (SIGMAP), gestion chantier, réception travaux, facturation sous-traitants, gestion non-conformités. Impliquer les chefs de chantier dans la modélisation pour garantir l'adoption.",
+        "benefice": "Vision claire des goulots d'étranglement, base pour dématérialisation ciblée"
+      },
+      {
+        "titre": "Intégration SIGMAP dès le processus de veille AO",
+        "description": "Mettre en place une veille automatisée sur SIGMAP DGMP CI (alertes nouvelles consultations par secteur géographique et type de travaux). Former l'équipe commerciale à la constitution de dossiers numériques conformes aux exigences SIGMAP (attestations fiscales DGTCP CI, certificats CNSS CI, agrément CNBTP CI).",
+        "benefice": "Amélioration du taux de succès AO, réduction délai constitution dossier"
+      },
+      {
+        "titre": "Carnet de chantier numérique avec géolocalisation",
+        "description": "Adopter une application mobile de carnet de chantier (Fieldwire, Procore Field, ou BatiScript CI) permettant la saisie terrain avec photos géolocalisées et horodatées. Synchronisation automatique avec le bureau et le maître d'ouvrage. Conforme Loi CI 2017-771 pour preuve juridique.",
+        "benefice": "Traçabilité chantier en temps réel, protection juridique en cas de litige"
+      },
+      {
+        "titre": "Dématérialisation des ordres de service et attachements",
+        "description": "Remplacer la transmission papier des ordres de service (OS) et attachements par une plateforme collaborative (Procore, LetsBuild). Signature électronique DocuSign ou équivalent, valeur juridique Loi CI 2017-771. Archivage automatique dans le dossier chantier numérique.",
+        "benefice": "Réduction délai OS 5 jours → 2 heures, traçabilité complète en cas de litige"
+      },
+      {
+        "titre": "Indicateurs de processus intégrés au reporting maître d'ouvrage",
+        "description": "Produire automatiquement depuis l'ERP ou le logiciel chantier le rapport mensuel maître d'ouvrage (avancement physique, financier, alertes). Format standardisé BNETD CI pour les projets publics. Partage direct via portail client ou email sécurisé.",
+        "benefice": "Amélioration relation maître d'ouvrage, réduction réunions de chantier physiques"
+      }
+    ]
+  },
+  "ecueils_frequents": {
+    "ecueils": [
+      {
+        "titre": "Cartographier sans impliquer le terrain",
+        "description": "Les processus BTP sont modélisés par le bureau sans consulter les chefs de chantier et conducteurs de travaux, produisant des BPMN théoriques déconnectés de la réalité terrain. Résultat : les processus documentés ne sont pas appliqués.",
+        "solution": "Ateliers de cartographie participatifs avec chefs de chantier ; validation sur chantier pilote avant déploiement"
+      },
+      {
+        "titre": "Confondre SIGMAP et dématérialisation complète",
+        "description": "Certaines entreprises pensent que soumissionner sur SIGMAP DGMP CI suffit à « se digitaliser ». SIGMAP ne couvre que le dépôt AO ; les processus internes (chantier, réception, facturation) restent papier.",
+        "solution": "Cartographier l'ensemble des processus, pas seulement le processus AO"
+      },
+      {
+        "titre": "Négliger la conformité APDP CI pour les données chantier",
+        "description": "Les applications de gestion chantier collectent des données biométriques (pointage empreintes), de géolocalisation (travailleurs, engins) et photos (ouvriers identifiables). Sans déclaration APDP CI, l'entreprise est exposée à des sanctions.",
+        "solution": "Vérifier la conformité APDP CI (Loi 2013-450) avant déploiement de tout outil de collecte données chantier"
+      },
+      {
+        "titre": "Outil trop complexe pour les PME BTP",
+        "description": "Les PME BTP CI (85% du secteur) adoptent des ERP surdimensionnés (SAP, Oracle Primavera) qu'elles ne peuvent pas maintenir faute de compétences internes. Abandonnés après 6-12 mois.",
+        "solution": "Commencer par des outils simples adaptés aux PME (Fieldwire, Trello chantier, Excel structuré) avant d'évoluer vers un ERP complet"
+      }
+    ]
+  },
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau de cartographie et dématérialisation des processus BTP entre organisations représentatives",
+    "lignes": [
+      {
+        "organisation": "BNETD CI (Bureau National d'Études Techniques)",
+        "profil": "MOA délégué État CI, référentiel processus infrastructure publique",
+        "niveau_maturite": 4,
+        "points_forts": "Cartographie complète processus MOA publics, reporting DGMP CI automatisé, BIM imposé sur projets > 500 M FCFA",
+        "points_faibles": "Processus complexes inadaptés aux PME sous-traitantes, faible agilité face aux avenants",
+        "initiatives_notables": "Plateforme GEOPROJET CI : suivi géoréférencé des projets d'infrastructure de l'État"
+      },
+      {
+        "organisation": "AGEROUTE CI (Agence de Gestion des Routes)",
+        "profil": "Agence étatique gestion routes CI, appels d'offres entretien routier",
+        "niveau_maturite": 3,
+        "points_forts": "100% AO routiers via SIGMAP DGMP CI, suivi chantier par inspecteurs avec tablettes",
+        "points_faibles": "Processus internes encore partiellement papier, ERP non intégré",
+        "initiatives_notables": "Application mobile inspection routes : photos géolocalisées, rapports automatiques"
+      },
+      {
+        "organisation": "COLAS CI (filiale Bouygues Construction)",
+        "profil": "Leader BTP CI, grands travaux routiers et infrastructure",
+        "niveau_maturite": 4,
+        "points_forts": "ERP SAP S/4HANA intégré, BIM 4D sur grands projets, processus certifiés ISO 9001",
+        "points_faibles": "Processus groupe parfois inadaptés au contexte CI (complexité SIGMAP CI vs. processus groupe)",
+        "initiatives_notables": "Portail sous-traitants : commandes, PV et paiements dématérialisés pour 120 sous-traitants CI"
+      },
+      {
+        "organisation": "PME BTP CI classe C (50-200 employés)",
+        "profil": "Entreprise BTP locale de taille intermédiaire, marchés mixtes public/privé",
+        "niveau_maturite": 2,
+        "points_forts": "SIGMAP maîtrisé pour l'essentiel, quelques modèles documents standardisés",
+        "points_faibles": "Carnet de chantier papier, PV de réception physiques, aucun ERP, partage par email/WhatsApp",
+        "initiatives_notables": "Début d'utilisation de Fieldwire ou Procore sur quelques chantiers pilotes"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "BNETD CI — Dématérialisation du processus de réception des travaux publics",
+    "contexte": "Le BNETD CI assure la maîtrise d'ouvrage déléguée de nombreux projets d'infrastructure de l'État CI (routes, bâtiments administratifs, infrastructures hydrauliques). Le processus de réception des travaux (provisoire et définitive) impliquait des déplacements physiques de commissions pluridisciplinaires, des PV papier signés manuellement et un archivage physique désorganisé. En 2022, le BNETD CI a lancé la dématérialisation complète du processus de réception en s'appuyant sur la Loi CI 2017-771.",
+    "probleme": "Délai moyen de réception provisoire : 45 jours après achèvement des travaux. Litiges fréquents sur la date de réception (déclenchement des garanties). PV papier perdus ou altérés. Commission de réception difficile à coordonner (6-8 membres : BNETD, ministère technique, mairie, entreprise). Dépassement des délais contractuels de réception : 68% des chantiers.",
+    "solution_deployee": "Application mobile BNETD CI de réception : liste de points de contrôle géolocalisés, photos horodatées intégrées au PV numérique, signatures électroniques des membres de la commission sur tablette, génération automatique PV au format PDF signé (valeur légale Loi CI 2017-771), archivage cloud sécurisé. Formation de 45 contrôleurs de travaux BNETD CI. Déploiement sur 38 chantiers pilotes en 2023.",
+    "resultats": {
+      "delai_reception": "45 jours → 8 jours (-82% délai de réception après achèvement)",
+      "taux_conformite_delai": "32% → 87% des réceptions dans les délais contractuels",
+      "litiges_date_reception": "-74% (date opposable grâce aux métadonnées horodatées)",
+      "archivage": "100% des PV archivés numériquement (vs 45% papier retrouvables)",
+      "deplacement_commission": "Réunions physiques commission 6 membres → coordination asynchrone, 1 réunion finale",
+      "satisfaction_entreprises": "NPS entreprises BTP partenaires BNETD : 22 → 58/100 sur le processus de réception"
+    },
+    "enseignements": "La Loi CI 2017-771 offre un cadre juridique robuste pour les PV de réception électroniques, mais nécessite une formation des parties prenantes (entreprises BTP, ministères) sur la valeur légale. L'adoption par les entreprises PME a nécessité un accompagnement terrain de 3 mois."
+  },
+  "ai_context": {
+    "scoring_rubric": {
+      "score_1_to_20": "Processus BTP entièrement informels et papier. Aucune cartographie. SIGMAP non utilisé ou sous-traité sans maîtrise. Carnets de chantier manuscrits. Aucune vision des processus clés.",
+      "score_21_to_40": "Quelques processus documentés en Word/Excel. SIGMAP utilisé pour les AO obligatoires mais avec difficultés. Pas de logiciel chantier. Partage documents par email/WhatsApp. Processus non standardisés.",
+      "score_41_to_60": "Processus clés cartographiés (BPMN ou équivalent). Logiciel gestion chantier déployé sur principaux chantiers. SIGMAP maîtrisé. PV de réception électroniques utilisés. Reporting dématérialisé vers maître d'ouvrage.",
+      "score_61_to_80": "ERP chantier intégré (SAP, Oracle Primavera ou équivalent). BIM 4D relié aux processus planning. Flux automatisés : situations de travaux, ordres de service, réceptions. Indicateurs temps réel. Sous-traitants connectés à la plateforme.",
+      "score_81_to_100": "Processus entièrement digitaux et prédictifs. Jumeau numérique chantier alimentant les processus en temps réel. IA prédictive sur risques de dérive. Certification qualité processus. Écosystème collaboratif multi-acteurs (MO, sous-traitants, fournisseurs, contrôleurs)."
+    },
+    "questions_cles_diagnostic": [
+      "Comment constituez-vous vos dossiers d'appel d'offres pour SIGMAP DGMP CI ?",
+      "Utilisez-vous un logiciel de gestion de chantier pour le suivi quotidien ?",
+      "Vos PV de réception (provisoire et définitive) sont-ils électroniques ou papier ?",
+      "Comment transmettez-vous les ordres de service et attachements à vos sous-traitants ?",
+      "Avez-vous cartographié et documenté vos principaux processus opérationnels ?"
+    ],
+    "pieges_evaluation": [
+      "Ne pas confondre utilisation de SIGMAP pour les AO et dématérialisation complète des processus internes",
+      "Vérifier que les 'processus documentés' sont réellement utilisés sur le terrain et pas seulement dans des dossiers ISO",
+      "Distinguer les grandes entreprises filiales de groupes internationaux (niveau élevé) des PME BTP locales (niveau souvent 1-2)"
+    ]
+  },
+  "ressources": {
+    "references_reglementaires": [
+      "SIGMAP DGMP CI — Portail dématérialisation marchés publics (sigmap.gouv.ci)",
+      "Loi CI 2017-771 — Valeur juridique des actes et documents électroniques",
+      "CCAG CI — Cahier des Clauses Administratives Générales marchés publics BTP",
+      "CNBTP CI — Conditions d'agrément et obligations processus qualité",
+      "APDP CI Loi 2013-450 — Données personnelles collectées sur les chantiers"
+    ],
+    "outils_recommandes": [
+      "SIGMAP DGMP CI — dématérialisation AO marchés publics",
+      "Procore / Fieldwire — gestion chantier cloud (plans, RFI, punch lists)",
+      "BatiScript CI — réception et levée de réserves adapté contexte CI",
+      "Autodesk BIM 360 / Revit — BIM 4D processus chantier",
+      "DocuSign / SignNow — signatures électroniques PV et OS (valeur Loi CI 2017-771)",
+      "MS Visio / Lucidchart — modélisation BPMN processus BTP"
+    ],
+    "formations_certifications": [
+      "Formation DGMP CI — Utilisation SIGMAP pour soumissionnaires",
+      "Certification BIM (Autodesk Certified Professional Revit) — CNBTP CI partenariat",
+      "Formation Procore Certification — gestion chantier numérique",
+      "CNBTP CI — Formation qualité processus BTP (ISO 9001 construction)"
+    ]
+  }
+}

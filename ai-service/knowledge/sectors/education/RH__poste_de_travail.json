@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "axis": "RH",
+    "sub_axis": "poste_de_travail",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Équipement numérique des enseignants et apprenants CI (tablettes, Chromebooks, laptops)",
+      "description": "L'équipement en matériel numérique des acteurs éducatifs CI est un prérequis à la transformation digitale : tablettes pour les lycéens (programme MENA CI : 200 000 tablettes distribuées 2022-2025), Chromebooks pour les enseignants (programme Google for Education CI), laptops pour les étudiants universitaires (prêts de matériel BAD/BM). En Côte d'Ivoire, 48% des lycéens ci-blés par le MENA ont reçu une tablette d'ici 2024. L'UVCI propose un accès aux laptops dans ses 6 Campus AUF (200 postes de travail partagés) pour les étudiants sans matériel personnel.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "40%",
+      "source": "MENA CI PNDE / Google for Education CI 2024",
+      "year": 2024
+    },
+    {
+      "title": "Poste de travail enseignant hybride : salle de cours physique + classe virtuelle intégrée",
+      "description": "Les salles de cours évoluent vers des espaces hybrides permettant simultanément un enseignement présentiel (étudiants en salle) et distanciel (étudiants en ligne) : caméra motorisée suivant l'enseignant, micro omnidirectionnel, double affichage (tableau noir + écran projection LMS), et système de gestion centralisée (panneau de contrôle unique). En Côte d'Ivoire, l'INPHB a équipé 12 salles de cours hybrides en 2023-2024, permettant d'accueillir simultanément des étudiants à Yamoussoukro et d'autres connectés depuis Abidjan ou la diaspora.",
+      "impact_level": "medium",
+      "horizon": "short_term",
+      "adoption_rate": "15%",
+      "source": "INPHB / MESRS CI Rapport Infrastructure 2024",
+      "year": 2024
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "Tablette et Chromebook éducatifs avec MDM (Mobile Device Management)",
+      "category": "Matériel / Poste de travail",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "MENA CI (200K tablettes Android programme lycées), Google Chromebooks (enseignants 35 lycées pilotes CI), UVCI (laptops partagés AUF), 40% lycées publics CI équipés partiellement",
+      "leading_vendors": ["Google Chromebook (Education)", "Samsung Galaxy Tab A (tablette lycée CI)", "Apple iPad Education", "Lenovo ThinkPad Education", "HP ProBook Education"]
+    },
+    {
+      "name": "Salle de cours hybride (caméra motorisée, micro omnidirectionnel, système de visioconférence)",
+      "category": "Infrastructure Physique / EdTech",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "INPHB (12 salles hybrides 2024), Pigier CI (5 salles hybrides), UVCI (3 salles AUF Abidjan équipées), 8% établissements CI",
+      "leading_vendors": ["Cisco Webex Room Kit (salle hybride)", "Logitech Rally Bar (visioconférence)", "Microsoft Teams Rooms", "Neat Board (visioconférence Zoom)", "DTEN Board (Teams Rooms)"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "INPHB (Institut National Polytechnique Houphouët-Boigny)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Infrastructure poste de travail avancée : 12 salles hybrides (Logitech Rally Bar + écran interactif 86'' + Microsoft Teams Rooms, caméra panoramique motorisée), 350 postes informatiques Fab Lab (Windows + Linux dual boot, équipements robotique/électronique), tablettes Microsoft Surface Pro pour 85 enseignants (programme Microsoft Education), réseau Wi-Fi 6 campus (1 Gbps partagé, 4 500 utilisateurs simultanés), MDM Intune pour 350 postes Fab Lab",
+        "differentiator": "Infrastructure poste de travail la plus complète des établissements supérieurs CI — 12 salles hybrides Teams Rooms permettant des cours simultanément à Yamoussoukro (campus physique) et en ligne (Abidjan, diaspora), MDM Intune sur 350 postes Fab Lab (gestion centralisée, mises à jour automatiques, politique de sécurité uniforme)",
+        "source": "INPHB Rapport Infrastructure 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Strathmore University — Digital Campus Nairobi",
+        "country": "Kenya",
+        "key_practice": "Campus numérique intégral : Wi-Fi 6 campus entier (6 000 utilisateurs simultanés), salles de cours hybrides Cisco Webex (28 salles), laptops loués/vente à crédit pour étudiants (partenariat HP Kenya), MDM Jamf (Mac) + Intune (Windows) pour 1 200 postes campus, printing digital (quota par étudiant, impression depuis app mobile), lab VR (20 casques Meta Quest pour cours santé/engineering)",
+        "differentiator": "Campus numérique le plus intégré d'Afrique de l'Est — 28 salles hybrides Webex (100% coverage), MDM centralisé sur tous les postes, Wi-Fi 6 campus complet, 12 000 étudiants avec poste de travail digital garanti (own device + campus labs)",
+        "source": "Strathmore University Annual Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Stanford University — Center for Teaching and Learning (CTL)",
+        "country": "États-Unis",
+        "k_practice": "Postes de travail enseignants ultra-équipés (MacBook Pro M3, iPad Pro + Apple Pencil, AirPlay vers 4K display), salles de cours hybrides (80 salles Stanford Active Learning Classrooms avec tables modulaires, écrans multiples, caméras PTZ IA — tracking automatique de l'enseignant), licences software complètes (Adobe Creative Cloud, MATLAB, SolidWorks, logiciels spécialisés par discipline), support IT dédié 1 technicien/120 enseignants",
+        "key_practice": "Postes de travail enseignants ultra-équipés (MacBook Pro M3, iPad Pro + Apple Pencil, AirPlay vers 4K display), 80 salles Stanford Active Learning Classrooms (tables modulables, 4 écrans par salle, caméras PTZ tracking auto), licences software complètes (Adobe CC, MATLAB, SolidWorks), support IT 1 technicien/120 enseignants",
+        "differentiator": "Infrastructure poste de travail académique de référence mondiale — 80 Active Learning Classrooms avec tables modulables permettant 6 configurations différentes en < 2 minutes, suivi automatique IA de l'enseignant sans opérateur, CTL propose 350h de coaching pédagogique basé sur les analytics de salle",
+        "source": "Stanford CTL / Stanford IT Annual Report 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Tableau noir + craie, aucun équipement numérique, Internet inexistant ou défaillant, salle de cours figée (rangées de pupitres), aucun vidéoprojecteur.",
+    "level_2_developing": "Vidéoprojecteur dans 30-50% des salles, quelques ordinateurs en salle informatique partagée, Wi-Fi partiel (2 points d'accès pour tout le bâtiment), tablettes/laptops personnels enseignants sans politique.",
+    "level_3_defined": "Vidéoprojecteur 80%+ des salles, Wi-Fi campus suffisant (> 100 Mbps partagé), Chromebook/tablette pour les enseignants formés TICE, MDM basique, 1-2 salles hybrides pilotes.",
+    "level_4_managed": "Wi-Fi 6 campus complet (> 500 Mbps), 5+ salles hybrides équipées (visioconférence intégrée), tablette/Chromebook pour 80%+ des enseignants, MDM géré (Intune/Jamf), écrans interactifs dans les salles principales.",
+    "level_5_optimizing": "Infrastructure complète : Wi-Fi 6 (> 1 Gbps), 100% salles hybrides, tablette/laptop pour tous les enseignants ET apprenants (own device + labs), MDM centralisé, écrans interactifs 86'', salles Active Learning (modulables), support IT dédié."
+  },
+  "regulations": [
+    {
+      "name": "MENA CI — Standards de dotation en matériel numérique (PNDE CI 2022-2025)",
+      "authority": "MENA (Ministère de l'Éducation Nationale et de l'Alphabétisation)",
+      "description": "Le PNDE CI 2022-2025 définit des standards minimaux d'équipement numérique pour les lycées publics CI : 1 tablette pour 3 élèves (objectif final : 1 tablette/élève), 1 ordinateur enseignant pour 2 enseignants formés TICE, 1 vidéoprojecteur par salle de cours, 1 point d'accès Wi-Fi pour 50 élèves. Les lycées privés conventionnés sont encouragés (sans obligation formelle) à respecter ces standards pour maintenir leur conventionnement. Les tablettes distribuées par le MENA CI sont pré-configurées avec les contenus pédagogiques officiels (sans accès internet non contrôlé pour les mineurs).",
+      "compliance_deadline": "2025 (objectifs PNDE CI)",
+      "impact_on_sector": "Les établissements privés conventionnés qui dépas-sent les standards MENA CI bénéficient d'un avantage lors des inspections et renouvellements — les tablettes et Chromebooks subventionnés (via Google for Education et BAD) sont accessibles aux lycées CI participant au programme MENA"
+    },
+    {
+      "name": "ARTCI — Réglementation des réseaux Wi-Fi dans les établissements éducatifs",
+      "authority": "ARTCI (Autorité de Régulation des Télécommunications / TIC de Côte d'Ivoire)",
+      "description": "Les établissements éducatifs CI déployant des réseaux Wi-Fi ouverts aux élèves et étudiants doivent respecter la réglementation ARTCI sur les accès internet publics : obligation de filtrage de contenus (protection des mineurs — filtrage des sites pornographiques, violents, ou de jeux d'argent), journalisation des accès (logs conservés 12 mois pour les réseaux accédés par des mineurs), et déclaration ARTCI pour les réseaux Wi-Fi dans les établissements accueillant des mineurs (déclaration opérateur de réseau de communications électroniques).",
+      "compliance_deadline": "En vigueur",
+      "impact_on_sector": "Les lycées et collèges CI déployant du Wi-Fi pour les élèves mineurs doivent installer un système de filtrage ARTCI-conforme (ex. Cisco Umbrella, Fortinet WebFilter, ou solution open source pfSense avec liste noire MENA CI) et conserver les logs 12 mois"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Vol, dégradation et maintenance des tablettes dans les lycées publics CI",
+      "description": "Le programme MENA CI de distribution de tablettes (200 000 tablettes) fait face à des défis opérationnels sérieux en CI : taux de vol estimé à 12% des tablettes dans les lycées publics non sécurisés, 18% de pannes dans les 12 premiers mois (chutes, humidité en saison des pluies, chargeurs cassés), et absence de contrat de maintenance centralisé (les établissements ne savent pas où envoyer les tablettes en panne). En 2024, 35 000 tablettes MENA CI (17,5% du parc distribué) sont 'hors service' sans perspective de réparation rapide.",
+      "severity": "high",
+      "likelihood": "high",
+      "mitigation": "Déployer un MDM MENA CI centralisé (geofencing pour tablettes volées, blocage à distance, inventaire temps réel), signer des contrats de maintenance centralisés avec Samsung/Huawei (réparateurs agréés dans chaque région CI), imposer des coques de protection et lanyards (réduction chutes), et instaurer une caution symbolique parent (5 000 FCFA remboursable à la restitution) pour responsabiliser — MENA CI expérimente un contrat de maintenance centralisé Samsung CI depuis S2 2024"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Salle hybride mutualisée inter-universités CI via le réseau AUF",
+      "description": "Les 6 Campus Numériques AUF en Côte d'Ivoire (Abidjan x3, Bouaké, Yamoussoukro, San-Pédro) peuvent devenir des 'hubs de cours hybrides partagés' accessibles à l'UFHB, l'INPHB, l'UAO et d'autres universités CI. Un enseignant basé à Yamoussoukro (INPHB) peut animer un cours depuis la salle hybride AUF Yamoussoukro, accessible aux étudiants physiques INPHB ET aux étudiants distants (Abidjan, San-Pédro, diaspora). Ce modèle mutualisé évite à chaque université d'investir seule dans des salles hybrides coûteuses (250M FCFA pour 12 salles INPHB).",
+      "impact_level": "high",
+      "time_to_value": "1-2 ans",
+      "prerequisite_maturity": "Niveau 3 — Wi-Fi suffisant sur le campus + enseignants formés TICE + partenariat AUF actif"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "MENA CI + Samsung CI — Programme tablettes lycées publics (200 000 tablettes)",
+      "montant": "28 Mds FCFA (financement État CI + BEI + BAD)",
+      "investisseurs": ["État de Côte d'Ivoire (Trésor public)", "BEI (Banque Européenne d'Investissement)", "BAD (Banque Africaine de Développement)"],
+      "annee": 2022,
+      "description": "Le MENA CI a lancé en 2022 le programme de distribution de 200 000 tablettes Samsung Galaxy Tab A (8', Android, 64 Go) aux lycéens CI (classes de Seconde prioritaires). Chaque tablette est pré-chargée avec les manuels scolaires MENA CI numériques (accès offline), des exercices auto-corrigés par matière (maths, français, anglais, sciences) et filtrée ARTCI (accès internet limité aux sites éducatifs validés). Le MDM Samsung Knox est activé pour permettre la gestion à distance par les proviseurs. 96 000 tablettes distribuées à fin 2024 (48% de l'objectif). Un contrat de maintenance Samsung CI (réparation sous 7 jours, 3 centres de réparation CI) est inclus sur 3 ans."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "INPHB (Institut National Polytechnique Houphouët-Boigny)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "12 salles hybrides Microsoft Teams Rooms + tablettes Surface Pro enseignants + MDM Intune",
+    "description": "En 2023-2024, l'INPHB a modernisé son infrastructure de poste de travail avec 3 initiatives : (1) 12 salles de cours hybrides Microsoft Teams Rooms (Logitech Rally Bar Pro, écran interactif 86'' Samsung Flip, caméra panoramique tracking automatique enseignant, micro omnidirectionnel, salle configurable en 2 modes : conférence / cours interactif) — permettant simultanément 40 étudiants en salle + 150 étudiants en ligne depuis Abidjan, San-Pédro et la diaspora ; (2) 85 tablettes Microsoft Surface Pro 9 pour les enseignants permanents (Word, Excel, PowerPoint, OneNote Cours pour annotations, Teams pour cours synchrones, accès Moodle) gérées par MDM Intune (politique sécurité, mises à jour centralisées, inventaire temps réel) ; (3) Mise à niveau Wi-Fi campus Yamoussoukro vers Wi-Fi 6 (Cisco Catalyst 9130, 18 points d'accès en intérieur, capacité 4 500 utilisateurs simultanés, débit 1 Gbps partagé).",
+    "resultats": "Cours hybrides lancés sur les 12 salles : 180 cours/semaine (dont 45% incluent des étudiants distants). Satisfaction étudiants distants (cours hybride) : 73/100 (vs. 58/100 avant salles hybrides — limitation Zoom sans caméra tracking). Étudiants de la diaspora (France, Canada) ayant suivi des cours INPHB en hybride : 85 en 2024 (première cohorte diaspora INPHB). Incidents IT Surface Pro : 4% (MDM Intune permet résolution à distance 80% des incidents sans déplacement technicien). Wi-Fi 6 : couverture 100% campus, débit moyen par étudiant x4 (vs. Wi-Fi 5 précédent), incidents connectivité cours : -75%.",
+    "source": "INPHB Rapport Infrastructure Numérique 2024 / Microsoft Education CI",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif poste de travail numérique — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "Équipement enseignants", "Salles hybrides", "Wi-Fi campus", "MDM / gestion parc"],
+    "lignes": [
+      {
+        "organisation": "INPHB Yamoussoukro",
+        "valeurs": ["85 Surface Pro (MDM Intune)", "12 salles Teams Rooms", "Wi-Fi 6 (1 Gbps, 100% campus)", "Intune (350 postes Fab Lab)"]
+      },
+      {
+        "organisation": "UVCI CI",
+        "valeurs": ["Laptop perso enseignants (pas de parc propre)", "3 salles AUF Abidjan équipées", "Wi-Fi AUF Abidjan (3 centres)", "Non (cloud natif, pas de parc matériel)"]
+      },
+      {
+        "organisation": "Lycées publics CI",
+        "valeurs": ["Quelques PC salle info partagée", "Non (aucune salle hybride)", "18% lycées connectés ARTCI", "MDM Samsung Knox (tablettes MENA)"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue l'équipement en poste de travail numérique dans le secteur éducation CI : équipement des enseignants (tablette/laptop avec MDM), salles hybrides (caméra tracking, visioconférence intégrée), qualité du Wi-Fi campus, MDM centralisé pour la gestion du parc, et conformité ARTCI pour les réseaux Wi-Fi accueillant des mineurs (filtrage, logs).",
+    "maturity_max_description": "Établissement éducatif CI avec infrastructure poste de travail complète : tous les enseignants équipés (tablette/laptop sous MDM), 100% salles hybrides (caméra tracking, visioconférence), Wi-Fi 6 campus complet (> 500 Mbps), MDM centralisé (Intune/Jamf), salles Active Learning modulables, filtrage ARTCI conforme pour les mineurs — étudiants avec accès garanti (campus labs + BYOD).",
+    "scoring_rubric": {
+      "score_1_to_20": "Tableau noir + craie, aucun équipement numérique, pas de Wi-Fi, salle fixe, aucun vidéoprojecteur.",
+      "score_21_to_40": "Vidéoprojecteur dans 30-50% des salles, quelques ordinateurs partagés, Wi-Fi partiel insuffisant, aucun MDM.",
+      "score_41_to_60": "Vidéoprojecteur 80% salles, Wi-Fi suffisant (> 100 Mbps), Chromebook/tablette enseignants formés TICE, MDM basique, 1-2 salles hybrides pilotes.",
+      "score_61_to_80": "Wi-Fi 6 partiel (> 500 Mbps), 5+ salles hybrides, tablette/Chromebook 80% enseignants, MDM géré (Intune/Jamf), écrans interactifs salles principales.",
+      "score_81_to_100": "Wi-Fi 6 complet (> 1 Gbps), 100% salles hybrides, équipement tous enseignants + apprenants sous MDM, Active Learning salles modulables, filtrage ARTCI conforme mineurs."
+    },
+    "prompt_injection_context": "Secteur éducation CI : MENA CI distribue 200 000 tablettes Samsung (MDM Knox, filtrage ARTCI) aux lycéens publics (96 000 distribuées fin 2024). ARTCI impose le filtrage de contenu et la journalisation (12 mois) pour les Wi-Fi accédés par des mineurs. INPHB est le leader infrastructure poste de travail CI (12 salles Teams Rooms + Wi-Fi 6 + MDM Intune). Les salles hybrides AUF (6 centres CI) peuvent être mutualisées entre universités.",
+    "key_questions_for_llm": [
+      "Vos enseignants sont-ils équipés de tablettes ou laptops dédiés à leur activité pédagogique ? Sont-ils gérés par un MDM centralisé (Intune, Jamf, Samsung Knox) ?",
+      "Disposez-vous de salles de cours hybrides permettant d'accueillir simultanément des étudiants en présentiel et en distanciel (caméra tracking, micro omnidirectionnel, visioconférence intégrée) ?",
+      "Quelle est la qualité de votre Wi-Fi campus (débit disponible par utilisateur, couverture) ? Est-il conforme aux exigences ARTCI pour les réseaux accédant à des mineurs (filtrage, logs 12 mois) ?",
+      "Avez-vous bénéficié du programme MENA CI de distribution de tablettes ? Comment gérez-vous la maintenance et la sécurité de ce parc de tablettes (MDM, contrat de réparation) ?",
+      "Envisagez-vous d'utiliser les salles hybrides des Campus Numériques AUF en Côte d'Ivoire pour vos cours distanciels, afin d'éviter un investissement propre en infrastructure hybride ?"
+    ]
+  }
+}

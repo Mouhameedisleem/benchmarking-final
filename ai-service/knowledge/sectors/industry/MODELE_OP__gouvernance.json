@@ -1,0 +1,235 @@
+{
+  "axe": "MODELE_OP",
+  "sous_axe": "Gouvernance",
+  "secteur": "industrie",
+  "description": "Gouvernance IT et digitale dans l'industrie ivoirienne : pilotage de la transformation Industrie 4.0, gestion des risques cyber OT/IT, conformité réglementaire (APDP CI, ARTCI CI), politique de gestion des données industrielles et gouvernance des fournisseurs IT.",
+  "maturite_niveaux": {
+    "initial": "Absence totale de gouvernance IT. Décisions informatiques ad hoc par la direction générale. Aucune politique de sécurité. Pas de budget IT formalisé. Fournisseurs IT choisis sans processus.",
+    "en_developpement": "Quelques règles informelles sur l'utilisation des systèmes. Budget IT intégré au budget général. Un responsable IT désigné informellement. Pas de politique de données ni de sécurité documentée.",
+    "structure": "Responsable IT formellement nommé. Budget IT annuel dédié. Politique de sécurité basique documentée. Contrats de maintenance signés avec les fournisseurs IT. Inventaire des actifs informatiques tenu.",
+    "avance": "DSI ou Directeur IT avec rattachement DG. Comité de gouvernance IT (DG + DAF + DSI). Politique de sécurité OT/IT IEC 62443 partiellement implémentée. Conformité APDP CI active. Plan de continuité informatique.",
+    "optimise": "Gouvernance digitale mature. Comité stratégique digital. Politique de données industrielles (propriété, qualité, cycle de vie). Audits de conformité annuels. Programme cybersécurité OT certifié IEC 62443. Reporting régulier à la direction sur les KPIs digitaux."
+  },
+  "questions_diagnostic": [
+    {
+      "id": "MODELE_OP_gouvernance_Q1",
+      "question": "Votre entreprise dispose-t-elle d'un responsable IT/digital formellement nommé (DSI, Directeur IT, Responsable Informatique) avec des missions définies ?",
+      "type": "choix_unique",
+      "options": ["Non, IT géré informellement par un technicien ou sous-traité entièrement", "Responsable IT informel (cumul de fonctions)", "Responsable IT nommé avec fiche de poste mais sans budget propre", "DSI ou Directeur IT avec budget dédié et accès au CODIR", "DSI avec équipe structurée, membre du CODIR, reporting mensuel DG"],
+      "poids": 20
+    },
+    {
+      "id": "MODELE_OP_gouvernance_Q2",
+      "question": "Votre entreprise a-t-elle déclaré ses traitements de données personnelles à l'APDP CI (Autorité de Protection des Données Personnelles de Côte d'Ivoire) ?",
+      "type": "choix_unique",
+      "options": ["Non, méconnaissance de l'APDP CI", "Non, mais en cours d'identification des traitements", "Déclaration partielle (quelques traitements)", "Déclaration complète des traitements à l'APDP CI", "Déclaration complète + DPO (Data Protection Officer) désigné + politique RGPD-compatible"],
+      "poids": 20
+    },
+    {
+      "id": "MODELE_OP_gouvernance_Q3",
+      "question": "Disposez-vous d'un Plan de Continuité Informatique (PCI) ou de Reprise d'Activité (PRA) documenté et testé pour les systèmes critiques de production (SCADA, MES, ERP) ?",
+      "type": "choix_unique",
+      "options": ["Non", "Sauvegardes ponctuelles sans procédure formelle", "PCI documenté mais jamais testé", "PCI documenté et testé annuellement", "PCI/PRA documenté, testé semestriellement, avec RTO <4h et RPO <1h pour les systèmes critiques"],
+      "poids": 20
+    },
+    {
+      "id": "MODELE_OP_gouvernance_Q4",
+      "question": "Votre budget IT est-il dimensionné en pourcentage du CA et couvre-t-il les investissements, la maintenance et la cybersécurité ?",
+      "type": "choix_unique",
+      "options": ["Pas de budget IT formalisé", "Budget IT intégré au budget général sans ligne dédiée", "Budget IT dédié mais sous-dimensionné (<1% CA, maintenance uniquement)", "Budget IT 1-3% CA couvrant investissements et maintenance", "Budget IT >3% CA avec ligne dédiée cybersécurité et innovation Industrie 4.0"],
+      "poids": 20
+    },
+    {
+      "id": "MODELE_OP_gouvernance_Q5",
+      "question": "Disposez-vous d'une politique de gouvernance des données industrielles (propriété des données, qualité, cycle de vie, partage avec partenaires) ?",
+      "type": "choix_unique",
+      "options": ["Non", "Règles informelles non documentées", "Politique de base documentée (qui accède à quoi)", "Politique de données complète : classification, propriété, qualité, partage", "Politique de données certifiée (ISO 27001 ou équivalent) avec data stewards désignés par domaine"],
+      "poids": 20
+    }
+  ],
+  "pratiques_recommandees": [
+    {
+      "titre": "Formaliser le rôle DSI avec rattachement DG",
+      "description": "Nommer formellement un Directeur des Systèmes d'Information (DSI) ou Responsable IT avec : fiche de poste claire, budget IT dédié (1,5-3% du CA pour une industrie en transformation), accès aux réunions de CODIR pour les sujets digitaux, reporting mensuel sur les KPIs IT (disponibilité systèmes, incidents, projets). Dans les PME CI, ce rôle peut être combiné avec la fonction DAF ou DPO. Recours à un CTO/DSI à temps partiel via cabinet local CI si budget contraint.",
+      "priorite": "haute",
+      "effort": "faible",
+      "impact": "fort"
+    },
+    {
+      "titre": "Déclaration APDP CI des traitements de données",
+      "description": "Réaliser le registre des traitements de données personnelles de l'entreprise (employés, fournisseurs, clients) et les déclarer à l'APDP CI (Autorité de Protection des Données Personnelles CI, Loi 2013-450). Traitement industriels typiques à déclarer : SIRH (données employés), fichier clients B2B, vidéosurveillance usine (si présente), données MES traçables à des individus. Accompagnement : cabinets juridiques CI spécialisés (Cabinet SORO & Partners CI, etc.).",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Plan de Continuité Informatique industriel (PCI)",
+      "description": "Documenter et tester un PCI pour les systèmes critiques de production : SCADA (RTO <4h, RPO <1h), ERP (RTO <8h, RPO <4h), CMMS (RTO <24h). Le PCI industriel CI doit inclure : procédures de délestage CIE CI (autonomie groupe électrogène, basculement UPS), sauvegardes hors-site (redondance Azure CI ou site backup Abidjan 2ème site), contacts d'astreinte SCADA fournisseurs (Siemens CI, Schneider CI). Tests annuels documentés.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "très fort"
+    },
+    {
+      "titre": "Politique de sécurité OT/IT segmentée (IEC 62443)",
+      "description": "Définir et appliquer une politique de sécurité qui distingue le réseau OT (automates, SCADA) du réseau IT (ERP, bureautique, email). Règles minimales : pare-feu/DMZ entre zones OT et IT, interdiction des clés USB sur les automates, mises à jour SCADA planifiées hors production, accès distants OT via VPN avec authentification forte. Référencer la norme IEC 62443 comme cadre.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Comité de pilotage digital trimestriel",
+      "description": "Instaurer un comité de pilotage digital trimestriel : DG + DAF + DSI + Directeur Production + Directeur Qualité. Ordre du jour type : avancement des projets Industrie 4.0, KPIs digitaux (OEE lié au MES, taux de disponibilité IT, incidents cyber), décisions de budget IT, arbitrages entre projets. Ce comité donne la légitimité nécessaire à la transformation digitale.",
+      "priorite": "haute",
+      "effort": "faible",
+      "impact": "fort"
+    }
+  ],
+  "outils_solutions": [
+    {
+      "categorie": "Gestion IT et gouvernance",
+      "solutions": [
+        {
+          "nom": "GLPI (Gestion Libre de Parc Informatique)",
+          "description": "Outil open-source de gestion du parc IT (inventaire, helpdesk, CMDB). Très répandu en Afrique francophone. Gratuit, hébergeable localement. Permet la tenue de l'inventaire des actifs IT requis par la gouvernance.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Open-source (coût installation/configuration : 200 000-500 000 FCFA)"
+        },
+        {
+          "nom": "Microsoft Entra ID (Azure AD)",
+          "description": "Gestion des identités et des accès (IAM) pour contrôler qui accède à quoi dans les systèmes industriels. Intégré à Microsoft 365. Politique de mots de passe, MFA, rôles et permissions.",
+          "pertinence_locale": "haute",
+          "cout_estime": "Inclus dans Microsoft 365 Business"
+        }
+      ]
+    },
+    {
+      "categorie": "Conformité et DPO",
+      "solutions": [
+        {
+          "nom": "Didomi / OneTrust (RGPD/APDP CI)",
+          "description": "Plateformes de gestion de la conformité données personnelles. Registre des traitements, gestion des consentements, documentation APDP CI. Adaptables au cadre CI.",
+          "pertinence_locale": "moyenne",
+          "cout_estime": "500 - 2 000 €/mois"
+        },
+        {
+          "nom": "Registre APDP CI (Excel structuré)",
+          "description": "Pour les PME CI avec ressources limitées, un registre structuré sur Excel avec les champs requis par l'APDP CI est une première étape valide. Modèle disponible auprès des cabinets juridiques CI.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Gratuit (modèle) + honoraires juridique CI 500 000-1 M FCFA"
+        }
+      ]
+    }
+  ],
+  "indicateurs_cles": [
+    {
+      "nom": "Budget IT en % du CA",
+      "description": "Part du chiffre d'affaires allouée aux investissements et dépenses IT",
+      "unite": "% CA",
+      "cible_sectorielle": "1,5-3% pour industrie en transformation (vs. 0,5% industrie traditionnelle)"
+    },
+    {
+      "nom": "Taux de disponibilité des systèmes critiques",
+      "description": "Disponibilité des systèmes SCADA, ERP et MES (SLA interne)",
+      "unite": "%",
+      "cible_sectorielle": ">99,5% pour SCADA, >99% pour ERP"
+    },
+    {
+      "nom": "Conformité APDP CI",
+      "description": "Statut de la déclaration des traitements à l'APDP CI",
+      "unite": "Statut (Oui/En cours/Non)",
+      "cible_sectorielle": "Déclaration complète"
+    },
+    {
+      "nom": "Nombre d'incidents IT critiques par an",
+      "description": "Incidents ayant causé un arrêt de production ou une perte de données significative",
+      "unite": "incidents/an",
+      "cible_sectorielle": "0 incident critique / <5 incidents mineurs"
+    }
+  ],
+  "reglementations_normes": [
+    {
+      "nom": "APDP CI Loi 2013-450",
+      "description": "Autorité de Protection des Données Personnelles CI. Obligation de déclaration des traitements de données personnelles. Sanctions jusqu'à 100 M FCFA pour non-conformité. Audit possible à tout moment.",
+      "organisme": "APDP CI",
+      "obligatoire": true
+    },
+    {
+      "nom": "ARTCI CI — sécurité des systèmes d'information",
+      "description": "L'ARTCI CI (Autorité de Régulation des Télécommunications CI) est l'autorité compétente pour la cybersécurité des systèmes industriels critiques CI. Elle peut imposer des audits de sécurité aux opérateurs d'importance vitale.",
+      "organisme": "ARTCI CI",
+      "obligatoire": true
+    },
+    {
+      "nom": "IEC 62443 — cybersécurité OT",
+      "description": "Standard international pour la cybersécurité des systèmes de contrôle industriel (SCADA, automates). Référence pour la gouvernance de sécurité OT dans les industries CI. Non obligatoire mais recommandé et exigé par certains clients industriels internationaux.",
+      "organisme": "IEC",
+      "obligatoire": false
+    },
+    {
+      "nom": "OHADA — tenue des registres",
+      "description": "L'Acte uniforme OHADA sur les sociétés commerciales exige la tenue de registres précis (assemblées, décisions, contrats). Les systèmes d'information doivent assurer l'archivage légal de ces documents.",
+      "organisme": "OHADA",
+      "obligatoire": true
+    }
+  ],
+  "comparatif_organisations": {
+    "description": "Comparaison de la gouvernance IT/digitale dans les industries ivoiriennes",
+    "lignes": [
+      {
+        "organisation": "SUCAF CI (~2 000 emp.)",
+        "dsi": "DSI groupe + DSI local",
+        "apdp_ci": "Conforme + DPO désigné",
+        "pci": "PCI testé trimestriellement",
+        "budget_it": "3,5% CA",
+        "niveau_global": "Avancé"
+      },
+      {
+        "organisation": "TRITURAF CI (~450 emp.)",
+        "dsi": "Responsable IT avec budget dédié",
+        "apdp_ci": "Déclaration partielle en cours",
+        "pci": "Documenté, test annuel",
+        "budget_it": "2,1% CA",
+        "niveau_global": "Structuré"
+      },
+      {
+        "organisation": "PME emballages (~80 emp.)",
+        "dsi": "Aucun (sous-traitance totale)",
+        "apdp_ci": "Non",
+        "pci": "Non",
+        "budget_it": "<0,5% CA",
+        "niveau_global": "Initial"
+      },
+      {
+        "organisation": "SATCI CI (~280 emp.)",
+        "dsi": "DSI + DAF cumul partiel",
+        "apdp_ci": "Conforme (déclaration complète)",
+        "pci": "PCI documenté et testé",
+        "budget_it": "2,8% CA",
+        "niveau_global": "Avancé"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "SATCI CI — Gouvernance digitale 280 employés : conformité APDP CI et réduction coût IT de 22%",
+    "contexte": "SATCI CI (Société Africaine de Transformation Chimique et Industrielle), Port-Bouët — Abidjan, 280 employés, production de produits chimiques industriels. En 2021, SATCI n'avait pas de Responsable IT formalisé (géré par le DAF à 20% du temps), aucune politique IT documentée, pas de déclaration APDP CI, et des dépenses IT anarchiques (achats d'équipements et logiciels au cas par cas sans appel d'offres).",
+    "probleme": "Absence de gouvernance : 3 logiciels de paie différents utilisés en parallèle par l'équipe RH, achats d'équipements IT à la demande sans inventaire, 0 contrat de maintenance pour les serveurs critiques. Coût IT estimé : 4,8% du CA mais sans ROI mesurable. Deux incidents de perte de données en 2021 (panne serveur sans backup récent).",
+    "solution": "Mise en place d'une gouvernance IT en 6 mois : (1) Nomination d'un Responsable IT avec fiche de poste, budget annuel 2,5% CA (~120 M FCFA), rattachement DAF ; (2) Inventaire GLPI de tous les actifs IT (98 équipements, 23 logiciels) ; (3) Appel d'offres IT standardisé pour les contrats >5 M FCFA ; (4) Déclaration APDP CI des 5 traitements principaux (SIRH, vidéosurveillance, fichier clients) ; (5) PCI documenté et testé : backup quotidien hors-site + procédure de reprise SCADA en <4h.",
+    "resultats": "Coût IT : 4,8% CA → 2,2% CA (économie 126 M FCFA/an par consolidation des contrats et élimination des doublons). Disponibilité systèmes critiques : non mesurée → 99,7%. Incidents de perte de données : 2/an → 0 depuis 18 mois. Conformité APDP CI : 0 déclaration → 5 déclarations complètes, audit de contrôle passé en décembre 2023. Score gouvernance lors de l'audit client (Solvay CI) : 62/100 → 84/100."
+  },
+  "ai_context": {
+    "focus_llm": "Évaluer la maturité de la gouvernance IT/digitale dans l'industrie ivoirienne. Insister sur deux points critiques spécifiques à la CI : (1) la conformité APDP CI est obligatoire et les sanctions peuvent être sévères, les industries la méconnaissent souvent ; (2) dans l'environnement industriel CI, la gouvernance des systèmes OT (SCADA, automates) est aussi critique que la gouvernance IT — une panne SCADA non gérée peut arrêter la production plusieurs jours.",
+    "pieges_a_eviter": [
+      "Ne pas sous-estimer l'importance de l'APDP CI : la méconnaissance de cette loi ne constitue pas une excuse et les amendes peuvent atteindre 100 M FCFA",
+      "Ne pas recommander uniquement des outils techniques de gouvernance sans aborder l'organisation humaine (DSI, comités, budgets)",
+      "Éviter de proposer des frameworks de gouvernance complexes (COBIT, ITIL complet) sans séquencer l'approche — dans une PME CI, un Responsable IT avec budget et une politique basique est déjà une immense avancée",
+      "Ne pas oublier la spécificité OT/IT dans les industries CI : la gouvernance doit couvrir les deux domaines (réseau IT bureautique ET réseau OT automates/SCADA)"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune gouvernance IT. IT géré informellement. Aucune politique de sécurité. Pas de budget dédié. APDP CI inconnue. Aucun PCI.",
+      "score_21_to_40": "Responsable IT informel désigné. Budget IT intégré au général. Quelques règles de sécurité informelles. APDP CI connue mais pas de déclaration.",
+      "score_41_to_60": "Responsable IT formalisé avec budget. Politique de sécurité documentée. PCI basique. Déclaration APDP CI initiée. Contrats de maintenance signés.",
+      "score_61_to_80": "DSI avec rattachement DG. Comité de pilotage digital trimestriel. PCI testé annuellement. Conformité APDP CI complète. Politique OT/IT segmentée. Budget IT 1,5-3% CA.",
+      "score_81_to_100": "Gouvernance digitale mature. Comité stratégique digital. Politique de données industrielles complète. Audits cybersécurité OT annuels. Conformité IEC 62443 partielle. Reporting KPIs digitaux au CODIR mensuel."
+    }
+  }
+}

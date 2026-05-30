@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "MARKETING",
+    "sub_axis": "marketing_digital",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Marketing digital pour le recrutement étudiant et l'inbound éducatif",
+      "description": "Les établissements éducatifs CI adoptent des stratégies inbound : SEO (référencement sur 'Meilleures écoles de commerce Abidjan', 'Master informatique CI'), content marketing (guides métiers, témoignages alumni en vidéo), et performance marketing (Meta Ads, Google Ads ciblés sur les 18-25 ans CI). ALX Africa CI a acquis 45% de ses inscrits 2024 via TikTok et Instagram — un changement radical vs. le marketing traditionnel (salons, affiches). Le coût d'acquisition (CPA) d'un étudiant via digital est estimé 65% inférieur au marketing traditionnel CI.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "40%",
+      "source": "Afrique EdTech Marketing Survey / ALX Africa 2025",
+      "year": 2025
+    },
+    {
+      "title": "Vidéo courte TikTok/Instagram Reels comme canal de recrutement étudiant dominant",
+      "description": "TikTok et Instagram Reels sont devenus les canaux de découverte des établissements éducatifs pour les 18-25 ans CI : 78% des lycéens CI déclarent avoir découvert au moins un établissement post-bac via TikTok ou Instagram (ARTCI 2024). Les contenus qui performent : témoignages authentiques d'étudiants (pas de pub lissée), 'journée type à l'INPHB', 'mon stage chez Orange CI', 'j'ai été admis à ALX', quiz sur les métiers du numérique. Les établissements avec une présence TikTok active ont un taux de conversion candidat → inscrit 2,8x supérieur aux établissements sans TikTok.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "35%",
+      "source": "ARTCI Digital Youth CI / Pigier CI Marketing 2024",
+      "year": 2024
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "CRM Marketing éducatif (lead nurturing candidats → inscrits)",
+      "category": "CRM / Marketing Automation",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "Pigier CI (Salesforce Marketing Cloud), GTIM (HubSpot), ALX Africa CI (ActiveCampaign), 20% établissements privés CI",
+      "leading_vendors": ["Salesforce Marketing Cloud (Education)", "HubSpot for Education", "ActiveCampaign", "Mailchimp (PME éducation)", "Brevo (ex-Sendinblue, populaire CI)"]
+    },
+    {
+      "name": "Publicité digitale ciblée (Meta Ads, Google Ads, TikTok Ads)",
+      "category": "Performance Marketing / Acquisition",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "80% des établissements privés CI présents sur Meta Ads (Facebook/Instagram), 45% sur Google Ads, 25% sur TikTok Ads",
+      "leading_vendors": ["Meta Ads (Facebook + Instagram + WhatsApp)", "Google Ads (Search + YouTube)", "TikTok for Business (Ads)", "LinkedIn Ads (formation professionnelle)", "Snapchat Ads"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "ALX Africa CI (hub Abidjan)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Marketing digital 100% : TikTok (@alxafricaci, 120K abonnés, contenu UGC — apprenants racontent leur parcours), Instagram Reels (témoignages 60s 'J'ai décroché mon premier emploi tech grâce à ALX'), Meta Ads (ciblage lycéens CI 17-22 ans intéressés tech), SEO content ('formation développeur CI gratuite'), CRM ActiveCampaign (séquence 12 emails nurturing candidat → décision inscription), webinars gratuits mensuels (50-150 prospects par session)",
+        "differentiator": "45% des inscriptions CI via TikTok et Instagram Reels (unique en CI éducation) — coût d'acquisition étudiant ALX CI : 35 000 FCFA (vs. 180 000 FCFA salons éducatifs traditionnels), 120K abonnés TikTok ALX Africa CI en 18 mois sans budget pub (UGC authentique)",
+        "source": "ALX Africa CI Marketing Report 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ashesi University Ghana",
+        "country": "Ghana",
+        "key_practice": "Stratégie inbound + ambassador program : 50 étudiants 'Brand Ambassadors' formés au contenu digital (TikTok, LinkedIn, Instagram — témoignages authentiques), SEO 'best university Ghana' (#1 Google), CRM HubSpot (lead scoring candidats, nurturing 90 jours), Open Day virtuel annuel (2 500 prospects participent en ligne depuis 25 pays Afrique), taux de conversion prospect → inscrit 38% (benchmark secteur : 15%)",
+        "differentiator": "Taux de conversion digital le plus élevé d'Afrique subsaharienne (38% vs. 15% benchmark) grâce au programme ambassadeurs + SEO + CRM — 65% des candidats proviennent du digital (vs. 20% en 2019), coût d'acquisition 4x inférieur aux établissements sans stratégie inbound",
+        "source": "Ashesi Annual Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Coursera — Marketing digital EdTech à grande échelle",
+        "country": "États-Unis",
+        "key_practice": "SEO massif (2,8M de mots clés indexés Google, 45M visites organiques/mois), YouTube (10M abonnés, cours preview gratuits = lead magnet), email nurturing (18 séquences personnalisées selon le profil de compétences ciblé), partenariats entreprises (logos Google/IBM/Meta = social proof majeur), freemium (auditeur gratuit → certificat payant — taux conversion 8%), programme d'affiliation (institutions éducatives CI partenaires recommandent Coursera)",
+        "differentiator": "Leader mondial SEO EdTech — 45M visites organiques/mois sans dépense pub (SEO + contenu), freemium 8% conversion (benchmark EdTech : 3-5%), modèle réplicable : un certificat gratuit consulté = 8 chances sur 100 d'un achat payant dans les 90 jours",
+        "source": "Coursera Marketing Annual Report 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Marketing 100% traditionnel : affiches, bouche à oreille, salons éducatifs, radio locale — aucune présence digitale, aucun site web ou Facebook non géré.",
+    "level_2_developing": "Site web basique (non mis à jour), page Facebook avec publications irrégulières, aucun CRM, Google Ads budget infime, pas de stratégie contenu.",
+    "level_3_defined": "Présence active Facebook + Instagram, Google Ads géré, site web avec formulaire de candidature en ligne, emailings ponctuels aux prospects, quelques vidéos témoignages.",
+    "level_4_managed": "Stratégie multi-canal (Facebook + Instagram + TikTok + Google Ads), CRM avec lead nurturing (séquence emails automatisée), ambassadeurs étudiants pour contenu authentique, analytics marketing (CPA par canal), SEO basique.",
+    "level_5_optimizing": "Inbound complet (SEO + contenu éducatif + TikTok UGC + CRM avancé avec lead scoring ML), CAC < 50 000 FCFA, taux de conversion > 30%, ambassadeurs programme structuré, retargeting avancé, NPS marketing mesuré (rapport entre promesse marketing et réalité vécue)."
+  },
+  "regulations": [
+    {
+      "name": "ARTCI — Réglementation publicité en ligne et protection des mineurs CI",
+      "authority": "ARTCI (Autorité de Régulation des Télécommunications / TIC de Côte d'Ivoire)",
+      "description": "L'ARTCI réglemente la publicité en ligne ciblant les mineurs CI (< 18 ans) : interdiction du ciblage comportemental des mineurs sur les réseaux sociaux à des fins commerciales (en conformité avec les règles Meta et TikTok Ads sur les mineurs — interdiction du ciblage par intérêt pour les 13-17 ans), obligation de mention 'publicité' sur les contenus sponsorisés. Pour les établissements éducatifs qui ciblent des lycéens (17-18 ans) pour les inscriptions post-bac, les règles Meta CI permettent le ciblage par âge (18+) et lieu (CI), mais interdisent le ciblage par comportement pour les moins de 18 ans.",
+      "compliance_deadline": "En vigueur",
+      "impact_on_sector": "Les établissements ciblant les lycéens CI pour leur recrutement doivent viser les 18+ sur Meta Ads (pas les 17-) et utiliser des contenus organiques (TikTok UGC non sponsorisé) pour toucher les -18 ans. Les influenceurs mineurs ne peuvent pas être rémunérés pour promouvoir des formations."
+    },
+    {
+      "name": "APDP CI — Traitement des données des candidats (prospects) dans le CRM éducatif",
+      "authority": "APDP (Autorité de Protection des Données Personnelles de Côte d'Ivoire)",
+      "description": "Les données collectées via les formulaires de candidature (nom, email, téléphone, niveau d'étude, filière d'intérêt) constituent des données personnelles soumises à la Loi APDP CI 2013-450. Les établissements doivent : mentionner la finalité du traitement dans le formulaire (ex. 'traitement de votre candidature et envoi d'informations sur nos formations'), limiter la conservation (prospect non converti : 24 mois maximum), obtenir le consentement pour les emailings marketing (case à cocher explicite), et permettre la désinscription facile. Les CRM marketing doivent être déclarés à l'APDP.",
+      "compliance_deadline": "En vigueur",
+      "impact_on_sector": "Les CRM éducatifs CI (Salesforce, HubSpot) doivent être configurés avec des workflows APDP CI : suppression automatique des prospects inactifs > 24 mois, gestion des opt-outs, et déclaration du traitement à l'APDP"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Décalage entre promesse marketing et réalité de l'expérience apprenant (brand trust CI)",
+      "description": "En Côte d'Ivoire, plusieurs établissements privés ont adopté des communications marketing très attractives (taux d'insertion '95%', 'formations reconnues internationalement', 'campus moderne') sans que la réalité vécue par les apprenants ne corresponde. Ce décalage alimente des avis négatifs sur Google Maps, Facebook et TikTok ('arnaque', 'diplôme non reconnu') — avec une propagation virale rapide dans les groupes WhatsApp de lycéens CI. En 2024, 3 établissements CI ont perdu 25-40% de leurs inscriptions après une campagne de reviews négatives TikTok coordonnées par d'anciens étudiants mécontents.",
+      "severity": "high",
+      "likelihood": "high",
+      "mitigation": "Aligner la promesse marketing sur la réalité vécue (audit NPS post-inscription, révision des messages marketing si NPS < 65), déployer une stratégie de gestion des reviews (réponses systématiques aux avis Google Maps, équipe dédiée aux mentions TikTok/Instagram), mettre en avant des témoignages authentiques non sélectionnés (ambassadeurs UGC programme avec liberté de parole) plutôt que des témoignages corporate lissés"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "SEO local 'Formations en Côte d'Ivoire' et domination du recrutement organique CI",
+      "description": "La plupart des établissements CI n'ont pas de stratégie SEO formalisée : moins de 5% des établissements CI ont une stratégie de contenu SEO (guides métiers, articles 'Comment devenir ingénieur réseau en CI', 'Meilleures licences pro informatique Abidjan'). Un établissement investissant 6-12 mois dans une stratégie SEO peut devenir #1 Google CI sur les requêtes clés de son secteur — générant des centaines de candidatures organiques gratuites chaque mois. L'INPHB, par exemple, pourrait capturer la requête 'meilleure école ingénieur Côte d'Ivoire' (1 200 recherches/mois, zéro résultat optimisé en 2024).",
+      "impact_level": "high",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 2 — site web avec CMS + équipe communication capable de produire du contenu"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "ALX Africa CI — Partenariat TikTok for Business (programme NGO/Éducation)",
+      "montant": "Programme subventionné TikTok (crédits pub valeur 120M FCFA)",
+      "investisseurs": ["TikTok for Good / ByteDance Foundation"],
+      "annee": 2024,
+      "description": "TikTok for Good a accordé à ALX Africa CI (et 4 autres organisations éducatives africaines) des crédits publicitaires TikTok Ads pour la promotion de formations techniques gratuites ou abordables. ALX Africa CI a utilisé ces crédits pour lancer 8 campagnes de recrutement TikTok (ciblage 18-25 ans CI, intérêts tech et entrepreneuriat), générant 45% de ses inscriptions 2024 via le canal TikTok/Instagram. La stratégie UGC authentique (apprenants filment leur parcours) a généré 8M de vues organiques cumulées en 12 mois."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "Pigier Côte d'Ivoire",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Stratégie de marketing digital intégré — Meta Ads + SEO + CRM Salesforce + Ambassadeurs TikTok",
+    "description": "Pigier CI a refondé en 2023 sa stratégie marketing en abandonant presque entièrement les salons éducatifs et la publicité radio au profit d'un marketing 100% digital structuré en 4 piliers : (1) Meta Ads (Facebook + Instagram) : budget 12M FCFA/an, ciblage 18-25 ans CI (Abidjan + grandes villes), lookalike audiences basées sur les profils des inscrits 2022 — CPA 45 000 FCFA ; (2) TikTok ambassadeurs : 15 étudiants Pigier CI formés (1 jour) à la création de contenu authentique (pas de script imposé — liberté totale), 2-3 TikToks/semaine, 85K abonnés organiques en 12 mois ; (3) SEO : 45 articles blog (guides métiers CI, comparatif formations, témoignages alumni) positionnés sur les requêtes clés — 12 000 visites organiques/mois ; (4) CRM Salesforce Marketing Cloud : séquence 8 emails nurturing (J0 à J+45) après demande d'information, lead scoring (ouvertures emails + pages visitées + événements) pour prioriser les relances téléphoniques.",
+    "resultats": "Inscriptions issues du digital : 28% (2022) → 65% (2024). Coût moyen d'acquisition étudiant : 180 000 FCFA (salons/radio 2022) → 52 000 FCFA (digital 2024, -71%). Taux de conversion lead → inscrit : 12% (2022) → 28% (2024, CRM nurturing). Abonnés TikTok : 0 (2022) → 85 000 (2024, UGC ambassadeurs). NPS entre promesse marketing et expérience vécue : 71/100 (enquête post-inscription — cohérence marketing-réalité validée). Part des inscriptions via TikTok ambassador : 19%.",
+    "source": "Pigier CI Rapport Marketing Digital 2024",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif marketing digital — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "Canaux marketing actifs", "TikTok / Ambassadeurs", "CRM lead nurturing", "Coût acquisition étudiant"],
+    "lignes": [
+      {
+        "organisation": "Pigier CI",
+        "valeurs": ["Meta Ads + SEO + TikTok + CRM", "85K abonnés TikTok (UGC)", "Salesforce Marketing Cloud (8 emails)", "52 000 FCFA (digital 2024)"]
+      },
+      {
+        "organisation": "ALX Africa CI",
+        "valeurs": ["TikTok + Instagram + Meta Ads + SEO", "120K abonnés TikTok + Reels", "ActiveCampaign (séquence 12 emails)", "35 000 FCFA (digital ciblé)"]
+      },
+      {
+        "organisation": "UFHB Abidjan",
+        "valeurs": ["Site web + Facebook non géré", "Non (public, pas de budget marketing)", "Non", "Non mesuré (public gratuit)"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue la maturité du marketing digital dans le secteur éducation CI : canaux actifs (Meta Ads, TikTok, Google Ads, SEO, CRM), présence d'un programme ambassadeurs UGC, CRM avec lead nurturing automatisé, coût d'acquisition mesuré (CPA), cohérence entre promesse marketing et NPS post-inscription, et conformité ARTCI/APDP CI.",
+    "maturity_max_description": "Établissement éducatif CI avec marketing digital complet : stratégie multi-canal (Meta Ads + TikTok + SEO + CRM), programme ambassadeurs UGC actif (> 50K abonnés organiques), CRM marketing (lead scoring + nurturing 8+ emails), CAC < 50 000 FCFA, taux de conversion > 25%, NPS marketing-réalité > 70, conformité ARTCI/APDP CI (opt-in, suppressions automatiques).",
+    "scoring_rubric": {
+      "score_1_to_20": "Marketing 100% traditionnel (salons, affiches, radio), aucune présence digitale, aucun site web fonctionnel, aucun CRM.",
+      "score_21_to_40": "Site web + page Facebook (publications irrégulières), aucun CRM, Google Ads budget infime, pas de stratégie contenu, aucun TikTok.",
+      "score_41_to_60": "Meta Ads géré, site avec formulaire candidature en ligne, emailing ponctuel prospects, quelques vidéos témoignages, aucun lead scoring.",
+      "score_61_to_80": "Stratégie multi-canal (Facebook + Instagram + TikTok + Google Ads), CRM avec nurturing automatisé, ambassadeurs programme débutant, SEO basique, CAC mesuré.",
+      "score_81_to_100": "Inbound complet, TikTok UGC >50K abonnés, CRM ML lead scoring, CAC < 50K FCFA, conversion > 25%, NPS marketing-réalité > 70, conformité ARTCI/APDP CI."
+    },
+    "prompt_injection_context": "Secteur éducation CI : TikTok est le canal dominant pour les 18-25 ans CI (78% utilisateurs quotidiens, ARTCI 2024). ARTCI interdit le ciblage comportemental des mineurs sur les ads. APDP CI impose l'opt-in pour les emailings marketing prospects et la suppression après 24 mois d'inactivité. ALX Africa CI est le modèle TikTok éducatif (45% inscriptions via TikTok, 120K abonnés). Pigier CI est le modèle CRM + performance marketing (CAC 52K FCFA, conversion 28%).",
+    "key_questions_for_llm": [
+      "Quels canaux digitaux utilisez-vous pour recruter vos apprenants (Meta Ads, TikTok, Google Ads, SEO, CRM) ? Mesurez-vous le coût d'acquisition par canal (CAC) ?",
+      "Avez-vous un programme d'ambassadeurs étudiants pour créer du contenu authentique sur TikTok ou Instagram (UGC) ? Quel est votre taux d'abonnés organiques ?",
+      "Disposez-vous d'un CRM marketing avec des séquences de lead nurturing automatisées pour les prospects (candidats potentiels) entre leur première demande d'information et leur décision d'inscription ?",
+      "Vos campagnes Meta Ads et TikTok Ads respectent-elles les règles ARTCI et Meta sur la protection des mineurs CI (pas de ciblage comportemental pour les -18 ans) ?",
+      "Mesurez-vous la cohérence entre votre promesse marketing et l'expérience réellement vécue par vos apprenants (NPS post-inscription) ?"
+    ]
+  }
+}

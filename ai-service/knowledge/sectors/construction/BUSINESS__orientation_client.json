@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "BUSINESS",
+    "sous_axe": "orientation_client",
+    "titre": "Orientation client dans le BTP en Côte d'Ivoire",
+    "description": "Gestion numérique de la relation client dans le secteur BTP CI : CRM pour la gestion des maîtres d'ouvrage (B2B), portail client pour les acheteurs de logements (B2C), suivi d'avancement chantier digital, gestion des réclamations en ligne, mesure de la satisfaction NPS et garanties post-livraison dématérialisées.",
+    "version": "1.0",
+    "date_mise_a_jour": "2025-01-01",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "Le secteur BTP CI comporte deux types de relations client distincts : (1) B2B — les entreprises de travaux publics et génie civil (COLAS CI, BNETD CI) gèrent des maîtres d'ouvrage institutionnels (État CI, collectivités, entreprises industrielles) avec des cycles de vente longs et des exigences contractuelles strictes (CCAG) ; (2) B2C — les promoteurs immobiliers (SATCI CI, SICOGI CI) gèrent des particuliers achetant un logement sur plan (VEFA) avec des attentes élevées de communication sur l'avancement des travaux. Dans les deux cas, la relation client reste largement non numérisée : les clients BTP CI apprennent l'avancement de leur chantier par visites physiques ou appels téléphoniques, les réclamations sont traitées par courrier postal, et le NPS n'est mesuré par aucune entreprise BTP CI du top 20.",
+    "chiffres_cles": [
+      "Déficit logement CI : 600 000 unités — 30 000 logements construits/an vs. 150 000 besoins (Banque Mondiale 2024)",
+      "Délai moyen livraison logement VEFA CI : +28% de dépassement vs. date contractuelle (CNBTP CI 2023)",
+      "Taux de litige post-livraison BTP CI : 22% des chantiers (réclamations malfaçons, retards, désordres)",
+      "BHCI (Banque de l'Habitat CI) : 45 000 dossiers financement logement traités/an, 68% financement promoteurs agréés",
+      "NPS secteur BTP CI : non mesuré par 95% des entreprises (benchmark CNBTP CI 2024)",
+      "VEFA CI : Loi n°2018-570 protégeant les acheteurs sur plan (garantie d'achèvement, assurance dommages-ouvrage)"
+    ],
+    "acteurs_cles": [
+      "BHCI (Banque de l'Habitat de Côte d'Ivoire) — financement logements et contrôle promoteurs agréés",
+      "SICOGI CI (Société Ivoirienne de Construction et de Gestion Immobilière) — promoteur public logements sociaux",
+      "SATCI CI — promoteur immobilier résidentiel privé, programmes Abidjan et villes secondaires",
+      "BNETD CI — maître d'ouvrage délégué pour grands projets État CI",
+      "CNBTP CI — arbitrage des litiges contractuels BTP inter-entreprises",
+      "APDP CI — protection données personnelles acheteurs (contrats, données financières)"
+    ]
+  },
+  "enjeux_cles": [
+    {
+      "enjeu": "Offrir un portail client de suivi d'avancement en temps réel",
+      "description": "Les acheteurs de logements en VEFA CI ou les maîtres d'ouvrage de travaux ne savent souvent pas où en est leur chantier entre deux réunions. Un portail web ou application mobile avec photos hebdomadaires, pourcentage d'avancement et jalons clés réduit drastiquement les appels entrants et améliore la confiance.",
+      "impact": "Réduction de 50-70% des appels de suivi entrants et amélioration du NPS de 15-25 points"
+    },
+    {
+      "enjeu": "Digitaliser la gestion des réclamations (malfaçons, garanties)",
+      "description": "La garantie décennale (10 ans) et la garantie biennale (2 ans) CI génèrent des réclamations post-livraison. Un système de ticketing en ligne (formulaire + photos + suivi de statut) remplace les courriers recommandés et les appels téléphoniques, et trace toutes les réclamations pour la gestion des assurances.",
+      "impact": "Réduction du délai de traitement des réclamations de 45 jours à 10 jours et meilleure traçabilité assurance"
+    },
+    {
+      "enjeu": "Déployer un CRM pour gérer les maîtres d'ouvrage B2B",
+      "description": "Les entreprises BTP CI gèrent leurs relations avec les maîtres d'ouvrage (BNETD CI, AGEROUTE CI, collectivités, industriels) via des carnets d'adresses personnels et des emails non tracés. Un CRM (Salesforce, HubSpot, ou Zoho) centralise les contacts, l'historique des appels d'offres remportés/perdus, les opportunités et les indicateurs de satisfaction par maître d'ouvrage.",
+      "impact": "Augmentation du taux de transformation sur appels d'offres de 8-15% grâce au suivi structuré"
+    },
+    {
+      "enjeu": "Mesurer et améliorer la satisfaction client post-livraison (NPS)",
+      "description": "Aucune entreprise BTP CI du top 20 ne mesure le NPS systématiquement. Un questionnaire de satisfaction post-livraison (envoyé par SMS 30 jours après réception) donne un signal clair sur les points d'amélioration et peut être utilisé comme argument commercial (témoignages clients, taux de recommandation).",
+      "impact": "Identification des axes d'amélioration et différenciation commerciale par la satisfaction client mesurée"
+    },
+    {
+      "enjeu": "Gérer les documents contractuels numériquement (Loi CI 2017-771)",
+      "description": "Les contrats BTP (CCAP, CCAG, PV de réception, décomptes) sont encore majoritairement papier et signés physiquement. La Loi CI 2017-771 reconnaît la valeur juridique des documents électroniques — les devis, contrats et procès-verbaux de réception signés électroniquement (DocuSign, Yousign) ont la même valeur légale qu'en papier.",
+      "impact": "Réduction du délai de signature des contrats de 21 jours à 2 jours et traçabilité complète"
+    }
+  ],
+  "niveau_maturite": {
+    "description": "Échelle de maturité orientation client pour les entreprises BTP CI",
+    "niveaux": [
+      {
+        "niveau": 1,
+        "label": "Relationnelle",
+        "description": "Relation client 100% informelle : contacts personnels des commerciaux, visites physiques pour le suivi, contrats papier, réclamations par courrier, NPS non mesuré, aucun CRM, aucune base de données clients centralisée."
+      },
+      {
+        "niveau": 2,
+        "label": "Basique",
+        "description": "Fichier clients Excel, email pour la communication projet, quelques photos WhatsApp de l'avancement, contrats Word/PDF envoyés par email, site web avec formulaire de contact, réclamations par email non tracées."
+      },
+      {
+        "niveau": 3,
+        "label": "Structuré",
+        "description": "CRM basique (HubSpot Free ou Zoho CRM) pour les prospects et clients actifs, compte-rendu de réunion de chantier envoyé par email systématiquement, enquête satisfaction post-livraison (Google Forms), signature électronique des contrats basique."
+      },
+      {
+        "niveau": 4,
+        "label": "Digital orienté client",
+        "description": "Portail client web avec suivi d'avancement hebdomadaire (photos drone, % avancement, jalons), CRM intégré avec historique complet MOA, ticketing réclamations en ligne, NPS mesuré systématiquement (SMS post-livraison), contrats signés électroniquement (DocuSign ou Yousign — Loi CI 2017-771)."
+      },
+      {
+        "niveau": 5,
+        "label": "Excellence",
+        "description": "Application mobile client avec visite virtuelle 3D BIM du chantier, chatbot réclamations 24/7, NPS > 65/100 secteur BTP, CRM prédictif (probabilité de renouvellement marché MOA), jumeau numérique livré avec le bâtiment (manuel d'exploitation digital), signature électronique avec valeur juridique OHADA."
+      }
+    ]
+  },
+  "indicateurs_cles": [
+    {
+      "kpi": "NPS (Net Promoter Score) post-livraison",
+      "definition": "Score de recommandation mesuré 30 jours après la livraison du chantier (question : 'Sur une échelle de 0 à 10, recommanderiez-vous notre entreprise à un maître d'ouvrage ou un proche ?')",
+      "unite": "score -100 à +100",
+      "benchmark_ci": "Secteur BTP CI : non mesuré (95% entreprises) — SATCI CI (pilote 2024) : NPS 42/100 — France BTP : NPS moyen 35/100",
+      "cible_sectorielle": "> 45/100 (secteur construction globalement inférieur aux services)",
+      "source": "CNBTP CI + pilote SATCI CI 2024 + benchmark Bain & Company Construction"
+    },
+    {
+      "kpi": "Délai moyen de traitement des réclamations post-livraison",
+      "definition": "Nombre de jours entre la soumission d'une réclamation (malfaçon, désordre, garantie) par le client et la réponse officielle motivée de l'entreprise BTP (engagement de reprise ou refus motivé)",
+      "unite": "jours",
+      "benchmark_ci": "Secteur BTP CI sans système : 45-90 jours — SATCI CI (ticketing en ligne) : 12 jours",
+      "cible_sectorielle": "< 15 jours (aligné sur Code de la Construction CI : obligation de réponse dans les délais contractuels)",
+      "source": "BHCI médiation litiges promoteurs CI 2023 + benchmark SATCI CI"
+    },
+    {
+      "kpi": "Taux de litiges clients escaladés (CNBTP CI ou tribunal)",
+      "definition": "Part des chantiers livrés ayant généré un litige formel (arbitrage CNBTP CI, procédure judiciaire) sur le total des livraisons de l'année",
+      "unite": "%",
+      "benchmark_ci": "Secteur BTP CI : 22% des livraisons génèrent une réclamation formelle (CNBTP CI 2023) — entreprises avec portail client : 8%",
+      "cible_sectorielle": "< 8%",
+      "source": "CNBTP CI rapport litiges BTP CI 2023"
+    },
+    {
+      "kpi": "Taux d'adoption du portail client",
+      "definition": "Part des clients actifs (MOA ou acheteurs VEFA) utilisant le portail digital de suivi d'avancement au moins une fois par mois",
+      "unite": "%",
+      "benchmark_ci": "SATCI CI (portail lancé 2023) : 68% des acheteurs VEFA actifs — secteur BTP CI : < 5%",
+      "cible_sectorielle": "> 60% (portail comme canal principal de communication chantier)",
+      "source": "Rapport SATCI CI satisfaction client 2024"
+    },
+    {
+      "kpi": "Délai moyen de signature des contrats BTP",
+      "definition": "Nombre de jours entre la notification du marché (ou l'accord de principe) et la signature du contrat BTP par toutes les parties",
+      "unite": "jours",
+      "benchmark_ci": "BTP CI contrats papier : 21-35 jours — signature électronique (Loi CI 2017-771) : 2-3 jours",
+      "cible_sectorielle": "< 5 jours (signature électronique)",
+      "source": "DGMP CI délai contractualisation 2024 + benchmark DocuSign BTP"
+    }
+  ],
+  "zoom_sur": {
+    "organisation": "SATCI CI (Société Africaine de Travaux et de Construction Immobilière)",
+    "titre": "Portail Client SATCI CI : acheteurs VEFA informés en temps réel, NPS +24 points en 18 mois",
+    "contexte": "En 2022, SATCI CI gérait 3 programmes immobiliers à Abidjan (Cocody, Bingerville, Port-Bouët — 420 logements en chantier) avec une relation client entièrement informelle : les acheteurs VEFA appelaient la hotline (150-200 appels/mois) pour avoir des nouvelles de l'avancement, les retards étaient annoncés par lettre courrier ou SMS tardif, et les réclamations post-livraison gérées par le directeur technique en personne. Le NPS n'était pas mesuré.",
+    "solution": "Déploiement d'un portail client web 'Mon Projet SATCI CI' en 9 mois : (1) espace personnel sécurisé (code client + OTP SMS Orange CI) pour chaque acheteur ; (2) publication hebdomadaire de 10-15 photos de chantier par programme (triées par appartement/lot) avec commentaire du chef de chantier ; (3) indicateur d'avancement en % (mis à jour à chaque réunion de chantier quinzainale) ; (4) timeline des jalons contractuels avec statut vert/orange/rouge ; (5) formulaire de réclamation en ligne avec numéro de ticket et suivi de statut (SLA : réponse sous 10 jours ouvrés) ; (6) documents dématérialisés (contrat VEFA, PV de réception, notices techniques) téléchargeables via le portail.",
+    "resultats": {
+      "avant": "150-200 appels/mois à la hotline pour suivi d'avancement, NPS non mesuré (estimation interne : 28/100), 38 litiges formels sur 420 logements (9%), délai traitement réclamation 45 jours, contrats VEFA signés physiquement (délai 28 jours), aucune dématérialisation des documents contractuels",
+      "apres": "Appels suivi d'avancement -72% (150 → 42/mois), NPS 28 → 52/100 (+24 points en 18 mois), litiges formels 9% → 4,2% (-53%), délai traitement réclamation 45j → 12j (-73%), portail adopté par 68% des acheteurs actifs, contrats VEFA signés électroniquement (DocuSign — Loi CI 2017-771) en 2,5 jours vs. 28 jours, économie 1 ETP service client absorbée sur la croissance de 45% du portefeuille"
+    },
+    "lessons_learned": "La résistance des acheteurs CI âgés (> 50 ans) à utiliser le portail web a nécessité une interface mobile-first simple (compatibilité WhatsApp Web) et une hotline de support pour l'onboarding. 24% des acheteurs ont été onboardés par un conseiller SATCI CI en agence lors d'un rendez-vous de 30 minutes. Le ROI le plus visible a été la réduction des litiges formels — chaque litige CNBTP CI coûtait en moyenne 850 000 FCFA en frais d'avocat et de procédure.",
+    "contact_reference": "Direction Commerciale SATCI CI — Abidjan Plateau"
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif orientation client — entreprises BTP CI et références",
+    "lignes": [
+      {
+        "organisation": "SATCI CI",
+        "type": "National — leader promoteur immobilier",
+        "portail_client": "Oui ('Mon Projet SATCI CI' — 68% adoption)",
+        "crm": "Zoho CRM (prospects + MOA + acheteurs VEFA)",
+        "nps": "52/100 (mesuré trimestriellement post-livraison)",
+        "reclamations": "Ticketing en ligne (délai 12 jours)",
+        "signature_electronique": "DocuSign (contrats VEFA — Loi CI 2017-771)",
+        "score_estime": "71/100"
+      },
+      {
+        "organisation": "SICOGI CI",
+        "type": "National — promoteur public logements sociaux",
+        "portail_client": "Non (information par affichage agences SICOGI)",
+        "crm": "Aucun (fichiers Excel par programme)",
+        "nps": "Non mesuré",
+        "reclamations": "Courrier physique (délai 60-90 jours)",
+        "signature_electronique": "Non (contrats papier)",
+        "score_estime": "14/100"
+      },
+      {
+        "organisation": "COLAS CI",
+        "type": "National — travaux publics B2B",
+        "portail_client": "Extranet MOA (partagé avec BNETD CI sur projets > 5 Mds FCFA)",
+        "crm": "Salesforce (groupe Bouygues — déployé partiellement CI)",
+        "nps": "Non mesuré formellement (satisfaction MOA évaluée en fin de projet)",
+        "reclamations": "Email structuré + réunion mensuelle MOA (délai 15 jours)",
+        "signature_electronique": "Partielle (PV de réunion électroniques, contrats encore papier)",
+        "score_estime": "52/100"
+      },
+      {
+        "organisation": "VINCI Immobilier Maroc",
+        "type": "Régional — référence Afrique francophone",
+        "portail_client": "Oui ('Mon VINCI' — 82% adoption, visite 3D BIM incluse)",
+        "crm": "Salesforce (groupe VINCI — déployé Maroc/Afrique)",
+        "nps": "NPS 61/100 (objectif groupe VINCI : 65/100)",
+        "reclamations": "Chatbot + ticketing (délai SLA 5 jours)",
+        "signature_electronique": "Oui (100% contrats VEFA, valeur juridique Maroc)",
+        "score_estime": "82/100"
+      },
+      {
+        "organisation": "Skanska (Suède)",
+        "type": "International — référence mondiale",
+        "portail_client": "Oui (Skanska Home — visite virtuelle appartement BIM + suivi drone)",
+        "crm": "Salesforce global + CRM propriétaire intégré ERP",
+        "nps": "NPS 71/100 (Best-in-class construction mondiale)",
+        "reclamations": "App mobile dédiée (délai SLA 48h, chatbot IA 24/7)",
+        "signature_electronique": "100% contrats (eIDAS + valeur juridique 15 pays UE)",
+        "score_estime": "95/100"
+      }
+    ]
+  },
+  "bonnes_pratiques": [
+    {
+      "pratique": "Créer un portail client simple avec photos hebdomadaires et % d'avancement",
+      "description": "Le besoin numéro 1 des acheteurs de logements CI est de savoir où en est leur appartement. Un portail web simple (WordPress + plugin galerie + barre de progression) suffit pour 80% des besoins. Coût : 2-5 M FCFA de développement. ROI : réduction de 50-70% des appels de suivi entrants.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Mesurer le NPS 30 jours après chaque livraison",
+      "description": "Un SMS automatique avec un lien vers un formulaire de 3 questions (NPS + 2 questions ouvertes) envoyé 30 jours après la remise des clés prend 2 minutes au client et donne un signal précieux. Outil gratuit : Google Forms ou Typeform Free. L'analyse mensuelle des résultats doit être présentée en CODIR.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Déployer la signature électronique pour les contrats BTP (Loi CI 2017-771)",
+      "description": "DocuSign ou Yousign permettent de signer des contrats BTP en 2-3 jours vs. 21-35 jours en papier. La Loi CI 2017-771 reconnaît leur valeur juridique. Coût : 180 000-450 000 FCFA/an selon le volume de contrats. ROI immédiat : réduction du working capital lié aux délais de démarrage des marchés.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Former l'équipe commerciale à un CRM avant d'acheter un outil sophistiqué",
+      "description": "Un CRM non utilisé n'a aucune valeur. Commencer par HubSpot CRM (gratuit jusqu'à 1 million de contacts) ou Zoho CRM (à partir de 45 000 FCFA/utilisateur/mois) et former 100% de l'équipe commerciale en 1 journée. La discipline de saisie (compte-rendu de visite, résultat d'appel d'offres) est plus importante que la sophistication de l'outil.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Intégrer le WhatsApp Business comme canal de communication chantier",
+      "description": "85% des clients BTP CI préfèrent WhatsApp au portail web ou à l'email. WhatsApp Business API permet d'envoyer des notifications automatiques (jalon atteint, retard annoncé, photo du jour) à tous les clients d'un programme depuis une liste. Coût : 150-300 FCFA par notification selon le volume.",
+      "priorite": "Haute"
+    }
+  ],
+  "pieges_a_eviter": [
+    {
+      "piege": "Annoncer les retards de livraison par surprise à la date prévue",
+      "consequence": "Un retard annoncé 2 jours avant la date de livraison déclenche une crise de confiance irrémédiable et souvent un litige CNBTP CI. Les acheteurs de logements CI qui ont pris un crédit BHCI et organisé leur déménagement sont particulièrement vulnérables.",
+      "recommandation": "Annoncer tout retard probable 45-60 jours avant la date contractuelle via le portail client et un SMS personnalisé, avec la nouvelle date projetée et les raisons (météo, approvisionnement, etc.)"
+    },
+    {
+      "piege": "Publier des photos de chantier sans vérifier qu'elles ne montrent pas les voisins ou travailleurs identifiables",
+      "consequence": "La publication de photos de chantier sur un portail client ou les réseaux sociaux sans floutage des visages des travailleurs et sans consentement des riverains visibles viole l'APDP CI (Loi 2013-450) et peut générer des plaintes.",
+      "recommandation": "Politique interne de floutage automatique des visages sur les photos chantier publiées (outil gratuit : DeepAI ou plugin Lightroom). Vérifier que les photos ne montrent pas d'informations sensibles (plans détaillés, codes d'accès)"
+    },
+    {
+      "piege": "Externaliser entièrement la relation client à un call center sans formation BTP",
+      "consequence": "Un agent de call center ne connaissant pas les termes techniques BTP (gros œuvre, second œuvre, DOE, PV de réception) est incapable de répondre aux questions des clients et génère plus de frustration que de satisfaction. Taux de satisfaction post-call : < 40% selon CNBTP CI.",
+      "recommandation": "Former les agents call center aux termes BTP essentiels (demi-journée) et définir une liste de questions escaladées immédiatement au conducteur de travaux (questions techniques sur les délais ou les malfaçons)"
+    },
+    {
+      "piege": "Stocker les données clients (contrats, données bancaires pour BHCI) sur WhatsApp ou Google Drive personnel",
+      "consequence": "Violation APDP CI Loi 2013-450 sur les données personnelles et financières. Les données contractuelles VEFA (nom, revenus, coordonnées bancaires pour le crédit BHCI) sont des données sensibles exigeant un stockage sécurisé avec accès contrôlé.",
+      "recommandation": "CRM avec chiffrement des données (Salesforce, Zoho) ou GED sécurisée (SharePoint Microsoft) avec authentification MFA. Jamais de données clients sur des outils personnels non professionnels"
+    }
+  ],
+  "roadmap": {
+    "titre": "Roadmap orientation client — entreprise BTP CI",
+    "phases": [
+      {
+        "phase": "Phase 1 — Communication structurée (Mois 1-3)",
+        "actions": [
+          "Déploiement WhatsApp Business API pour notifications automatiques chantier (jalons, photos)",
+          "Mise en place d'un compte-rendu de réunion de chantier standardisé envoyé par email J+1",
+          "Création d'un formulaire de satisfaction post-livraison (Google Forms — NPS + commentaires)",
+          "Base de données clients centralisée (HubSpot CRM Free ou Zoho CRM)"
+        ],
+        "budget_indicatif": "500 000 - 2 M FCFA (WhatsApp Business API + CRM + formation)"
+      },
+      {
+        "phase": "Phase 2 — Portail client et ticketing (Mois 4-10)",
+        "actions": [
+          "Développement portail client web (espace personnel, photos hebdo, % avancement, jalons)",
+          "Système de ticketing réclamations en ligne (Freshdesk ou Zoho Desk — SLA 10 jours)",
+          "Déploiement signature électronique (DocuSign ou Yousign — contrats VEFA et marchés BTP)",
+          "Formation équipe commerciale et conducteurs de travaux au portail et au CRM"
+        ],
+        "budget_indicatif": "4 - 12 M FCFA (développement portail + licences ticketing + e-signature)"
+      },
+      {
+        "phase": "Phase 3 — Excellence client (Mois 11-24)",
+        "actions": [
+          "Application mobile client (portail mobile + visite 3D BIM du logement sur tablette)",
+          "Intégration CRM avec ERP chantier (données avancement en temps réel → portail client automatique)",
+          "Chatbot WhatsApp pour questions fréquentes (délais, visites, documents contractuels)",
+          "Tableau de bord NPS trimestriel présenté en CODIR avec plan d'action associé"
+        ],
+        "budget_indicatif": "8 - 20 M FCFA (app mobile + intégrations + chatbot)"
+      }
+    ]
+  },
+  "ressources": {
+    "formations": [
+      "CNBTP CI — formation relation client et gestion des litiges BTP (Abidjan)",
+      "FDFP CI — financement formation CRM et outils numériques relation client BTP",
+      "Zoho Academy ou HubSpot Academy — formations CRM gratuites en ligne (certifications)",
+      "BHCI — formation promoteurs immobiliers agréés sur les droits des acheteurs VEFA CI"
+    ],
+    "outils_recommandes": [
+      "WhatsApp Business API — notifications chantier automatiques (opérateurs CI Orange, MTN, Wave)",
+      "Zoho CRM ou HubSpot CRM — gestion relation client BTP (version Free suffisante pour PME CI)",
+      "Freshdesk — ticketing réclamations clients (plan gratuit jusqu'à 10 agents)",
+      "DocuSign ou Yousign — signature électronique contrats BTP (Loi CI 2017-771)",
+      "Google Forms + Google Data Studio — enquête NPS et tableau de bord satisfaction (gratuit)"
+    ],
+    "references_reglementaires": [
+      "Loi CI n°2018-570 — protection acheteurs VEFA (garantie d'achèvement, assurance dommages-ouvrage)",
+      "Loi CI 2017-771 — valeur juridique des documents électroniques (contrats, PV de réception)",
+      "CCAG BTP CI — Cahier des Clauses Administratives Générales (délais de réponse réclamations)",
+      "APDP CI — Loi 2013-450 (données personnelles acheteurs, photos chantier, stockage contrats)",
+      "BHCI — cahier des charges promoteurs immobiliers agréés (communication client, délais livraison)"
+    ]
+  },
+  "ai_context": {
+    "scoring_dimension": "Maturité de l'orientation client dans les entreprises BTP",
+    "scoring_rubric": {
+      "score_1_to_20": "Relation client 100% informelle : aucun CRM, aucun portail, réclamations par courrier papier, NPS non mesuré, contrats signés physiquement en 3-4 semaines, appels téléphoniques comme seul canal de suivi.",
+      "score_21_to_40": "Fichier clients Excel, email pour la communication projet, quelques photos WhatsApp de l'avancement, contrats PDF par email, site web avec formulaire de contact, réclamations par email non tracées.",
+      "score_41_to_60": "CRM basique, compte-rendu de réunion de chantier systématique par email, enquête satisfaction post-livraison (Google Forms), signature électronique basique, WhatsApp Business pour notifications.",
+      "score_61_to_80": "Portail client avec suivi hebdomadaire (photos, % avancement, jalons), CRM intégré, ticketing réclamations en ligne (SLA 15 jours), NPS mesuré systématiquement (> 45/100), e-signature (Loi CI 2017-771).",
+      "score_81_to_100": "App mobile client avec visite 3D BIM, chatbot réclamations 24/7, NPS > 65/100, CRM prédictif, jumeau numérique livré avec le bâtiment, signature électronique OHADA reconnue, intégration CRM-ERP chantier temps réel."
+    },
+    "questions_discriminantes": [
+      "Disposez-vous d'un portail ou d'une application permettant à vos clients de suivre l'avancement de leur chantier en temps réel (photos, % avancement, jalons) ?",
+      "Mesurez-vous le NPS (Net Promoter Score) de vos clients après chaque livraison de chantier ?",
+      "Avez-vous un système de ticketing en ligne pour que vos clients soumettent leurs réclamations (malfaçons, garanties) avec suivi de statut ?",
+      "Vos contrats BTP sont-ils signés électroniquement conformément à la Loi CI 2017-771 ?",
+      "Utilisez-vous un CRM pour centraliser l'historique de vos clients, maîtres d'ouvrage et opportunités commerciales ?"
+    ],
+    "signaux_avances": [
+      "Portail client avec visite virtuelle 3D BIM du logement ou de l'ouvrage en cours de construction",
+      "NPS post-livraison mesuré systématiquement et supérieur à 55/100 sur l'ensemble des livraisons",
+      "Délai de traitement des réclamations post-livraison inférieur à 10 jours grâce à un système de ticketing intégré",
+      "CRM connecté en temps réel à l'ERP chantier pour mettre à jour automatiquement le portail client",
+      "Contrats VEFA et marchés BTP signés électroniquement en moins de 3 jours (valeur juridique Loi CI 2017-771)"
+    ]
+  }
+}

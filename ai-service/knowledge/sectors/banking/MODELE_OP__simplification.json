@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "axis": "MODELE_OP",
+    "sub_axis": "Simplification",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Rationalisation du portefeuille produits bancaires — moins de produits, mieux ciblés",
+      "description": "Les banques UEMOA proposent en moyenne 80-120 produits (comptes, crédits, épargne, assurances) dont 60-70 % génèrent moins de 5 % des revenus. La simplification du portefeuille réduit la complexité opérationnelle et permet de concentrer les investissements digitaux sur les produits à fort impact.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "20 % des grandes banques africaines ont réalisé une rationalisation produits documentée (McKinsey Africa 2024)",
+      "source": "McKinsey Africa Banking Simplification 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Zéro papier en agence — dématérialisation totale des opérations courantes",
+      "description": "Les agences bancaires UEMOA consomment en moyenne 50 ramettes de papier/mois par agence pour les formulaires, relevés et contrats. La dématérialisation complète réduit ce coût de 90 %, accélère les traitements et élimine les erreurs de saisie.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "15 % des banques africaines ont une agence zéro papier opérationnelle (Fintech Africa 2024)",
+      "source": "Fintech Africa Paperless Banking 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Lean management bancaire — élimination des étapes sans valeur ajoutée",
+      "description": "L'application du Lean Management aux processus bancaires UEMOA révèle que 40-60 % des étapes dans le traitement d'un crédit ou d'une ouverture de compte sont des étapes d'attente ou de contrôle redondant sans valeur ajoutée client.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "18 % des grandes banques africaines ont un programme Lean formalisé (EY Africa 2024)",
+      "source": "EY Africa Banking Lean Transformation 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Consolidation des core banking — de 3-5 systèmes à 1 plateforme unifiée",
+      "description": "Les banques UEMOA issues de fusions ou avec des acquisitions historiques opèrent souvent avec plusieurs core banking simultanément (Temenos T24 + FLEXCUBE + développement maison). La consolidation sur une plateforme unique réduit les coûts d'infrastructure de 30-40 %.",
+      "impact_level": "Très élevé",
+      "horizon": "36-60 mois",
+      "adoption_rate": "10 % des banques africaines multi-core ont initié une consolidation (Gartner Africa 2024)",
+      "source": "Gartner Core Banking Consolidation Africa 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Signature électronique et dématérialisation",
+      "category": "Élimination du papier en agence",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["DocuSign for Banking", "Adobe Acrobat Sign", "OneSpan", "Yousign", "CERTIFIX (Afrique)"]
+    },
+    {
+      "name": "Process Mining pour la simplification",
+      "category": "Identification des gaspillages opérationnels",
+      "maturity_stage": "Émergence en Afrique",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["Celonis Financial Services", "UiPath Process Mining", "SAP Signavio", "IBM Process Mining", "Appian Process Mining"]
+    },
+    {
+      "name": "Plateforme de consolidation core banking",
+      "category": "Rationalisation SI bancaire",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible (projets longs et coûteux)",
+      "leading_vendors": ["Temenos T24 / Infinity", "Oracle FLEXCUBE Universal", "Finastra Fusion Essence", "Mambu", "Thought Machine Vault"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Bridge Bank Group CI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Portefeuille produits simplifié (35 produits vs 80+ pour les grandes banques), processus agence dématérialisés sur les 5 opérations les plus fréquentes, délai traitement crédit réduit de 12 à 5 jours",
+        "differentiator": "Banque construite ex nihilo avec un modèle lean dès le départ — avantage structurel sur les banques historiques qui portent 30 ans de complexité accumulée",
+        "source": "Bridge Bank Group Rapport Annuel 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Programme de rationalisation produits 2022 : passage de 130 à 70 produits actifs, formulaires standardisés dans 33 filiales, consolidation core banking Temenos en cours",
+        "differentiator": "Ecobank a réduit son portefeuille produits de 130 à 70 en 2022 — les 60 produits supprimés représentaient < 3 % des revenus mais 25 % de la complexité opérationnelle",
+        "source": "Ecobank Annual Report 2023 / Ecobank Simplification Program Report"
+      },
+      {
+        "organisation": "KCB Group Kenya",
+        "country": "Kenya / Afrique de l'Est",
+        "key_practice": "Programme Lean Banking : 120 processus simplifiés, délai crédit PME de 21 à 5 jours, agences zéro papier déployées dans 30 succursales pilotes",
+        "differentiator": "Programme Lean KCB : économies de 15 M$/an identifiées en 18 mois, délai crédit réduit de 4× — référence en efficacité opérationnelle bancaire est-africaine",
+        "source": "KCB Group Annual Report 2023 / Lean Banking Kenya Case Study"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "JPMorgan Chase",
+        "country": "USA",
+        "key_practice": "COIN IA : simplification de l'analyse de 12 000 contrats/an, réduction de 360 000 heures de travail manuel, consolidation progressive vers 3 core banking vs 7 historiques",
+        "differentiator": "JPMorgan réalise 1,5 Mds$/an d'économies via la simplification — preuve que la simplification opérationnelle est un programme de ROI direct, pas seulement d'efficacité",
+        "source": "JPMorgan Annual Report 2023"
+      },
+      {
+        "organisation": "ING Bank",
+        "country": "Pays-Bas",
+        "key_practice": "Réduction de 30 % du portefeuille produits, standardisation mondiale des processus via le modèle agile, consolidation vers 1 core banking mondial (Temenos T24 Cloud)",
+        "differentiator": "ING a réduit son nombre de produits de 900 à 600 en 5 ans tout en augmentant son NPS de 22 à 71 — prouve que moins de produits = meilleure expérience client",
+        "source": "ING Annual Report 2023 / McKinsey ING Simplification Case Study"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Portefeuille produits pléthorique (100+). Processus complexes accumulés. Plusieurs core banking en parallèle. Agences 100 % papier. Pas de programme de simplification. Complexité organisationnelle élevée.",
+    "level_2_developing": "Quelques initiatives de simplification ad hoc. Dématérialisation partielle pour 1-2 processus. Pas de programme Lean formalisé. Portefeuille produits non rationalisé. Quelques formulaires numériques.",
+    "level_3_defined": "Programme de simplification initié. Cartographie des processus réalisée. Dématérialisation des 5 opérations les plus fréquentes. Rationalisation produits lancée (objectif -20 %). Lean pilote sur 1-2 processus.",
+    "level_4_managed": "Programme Lean actif sur 10+ processus. Dématérialisation > 70 % des opérations agence. Rationalisation produits -30 % réalisée. Core banking consolidé ou en cours. Délai crédit réduit de 50 %.",
+    "level_5_optimizing": "Zéro papier agences. Portefeuille produits rationalisé (< 50 produits actifs). Programme Lean continu. Core banking unique. Délai traitement < 24h pour 80 % des demandes. Lean management institutionnalisé."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction BCEAO sur la conservation des documents bancaires",
+      "issuing_body": "BCEAO",
+      "scope": "Toutes les banques UEMOA",
+      "key_requirement": "Conservation des documents bancaires (contrats, relevés, KYC) pendant 10 ans — la dématérialisation est autorisée si l'intégrité et l'authenticité des documents sont garanties",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Simplification trop radicale — suppression de produits utilisés par des segments clés",
+      "description": "Une rationalisation mal analysée peut supprimer des produits de niche qui représentent une part importante des revenus d'un segment spécifique (ex : livret d'épargne agricole supprimé mais critique pour les clients ruraux).",
+      "severity": "Élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Analyser la rentabilité par produit ET par segment de clients avant toute suppression, identifier les produits à faible revenu global mais à fort impact sur un segment stratégique, communiquer en amont les substitutions disponibles."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Zéro papier agences — économies de 50 M FCFA/an pour un réseau de 50 agences",
+      "description": "Un réseau de 50 agences consomme environ 2 500 ramettes/mois (125 M FCFA/an) en papier, toner et archivage. La dématérialisation complète des formulaires et relevés réduit ce coût de 90 % tout en accélérant les traitements et réduisant les erreurs.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [],
+
+  "zoom_case_study": {
+    "entreprise": "JP Morgan Chase — Programme COIN et simplification opérationnelle",
+    "pays": "USA",
+    "technologie": "IA et Lean Management — 1,5 Mds$/an d'économies par la simplification",
+    "description": "JPMorgan Chase a lancé en 2016 un programme de simplification opérationnelle combinant IA (COIN pour l'analyse de contrats), RPA (300+ robots) et Lean Management. En parallèle, le groupe a rationalisé son portefeuille de produits de 1 200 à 800 produits actifs et consolidé ses systèmes de 12 core banking à 3. Résultats en 2023 : économies de 1,5 Mds$/an, délai de traitement des crédits corporate réduit de 60 %, satisfaction des collaborateurs améliorée (moins de tâches répétitives), disponibilité des systèmes augmentée (moins de systèmes = moins de points de défaillance). JPMorgan est la référence mondiale en simplification opérationnelle bancaire à grande échelle.",
+    "resultats": "1,5 Mds$/an économisés · Délai crédit corporate -60 % · Core banking 12 → 3 · Produits 1200 → 800 · 300+ robots · Référence mondiale",
+    "source": "JPMorgan Annual Report 2023 / Harvard Business Review JPMorgan Simplification / McKinsey JPMorgan Operations",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité simplification — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "Rationalisation produits (-20 %+)", "Programme Lean actif sur processus", "Dématérialisation > 50 % opérations agence", "Core banking consolidé (1 ou 2 max)", "Délai traitement crédit réduit de 50 %+"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✗", "Partiel", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La simplification bancaire en UEMOA est souvent négligée au profit de projets digitaux visibles (apps, chatbots). Pourtant, la complexité interne (trop de produits, processus redondants, papier en agence) est le frein silencieux de toute transformation. Une banque avec 120 produits dont 80 à faible revenu consacre 40 % de ses ressources à les maintenir — autant de ressources non disponibles pour l'innovation digitale.",
+    "maturity_max_description": "Portefeuille produits rationalisé à < 50 produits actifs représentant 95 %+ des revenus. Programme Lean actif sur 20+ processus avec amélioration continue. Zéro papier dans toutes les agences. Core banking unique ou maximum 2 systèmes. Délai de traitement crédit < 24h pour 80 % des demandes. Lean management institutionnalisé avec KPIs mensuels.",
+    "scoring_rubric": {
+      "score_1_to_20": "Portefeuille pléthorique 100+. Processus complexes. Multi-core banking. Agences 100 % papier. Pas de programme.",
+      "score_21_to_40": "Initiatives de simplification ad hoc. Dématérialisation partielle 1-2 processus. Pas de Lean formalisé.",
+      "score_41_to_60": "Programme simplification initié. Dématérialisation 5 opérations clés. Rationalisation produits -20 %. Lean pilote.",
+      "score_61_to_80": "Lean actif 10+ processus. Dématérialisation 70 % agences. Produits rationalisés -30 %. Core en consolidation.",
+      "score_81_to_100": "Zéro papier. < 50 produits. Lean continu. Core banking unique. < 24h traitement 80 % demandes."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur sa maturité en simplification opérationnelle dans le contexte bancaire UEMOA. Analyse la rationalisation du portefeuille produits, l'avancement de la dématérialisation des agences, l'existence d'un programme Lean et la consolidation des systèmes core banking.",
+    "key_questions_for_llm": [
+      "Le portefeuille de produits bancaires a-t-il été rationalisé pour éliminer les produits à faible usage et se concentrer sur les produits générateurs de revenus significatifs ?",
+      "Un programme de dématérialisation est-il en cours pour éliminer le papier dans les agences, avec des formulaires numériques et la signature électronique pour les opérations courantes ?",
+      "Un programme Lean ou d'excellence opérationnelle est-il actif pour identifier et éliminer les étapes sans valeur ajoutée dans les processus de crédit, KYC et traitement des réclamations ?",
+      "Le nombre de systèmes core banking est-il rationalisé, ou un programme de consolidation vers un système unique est-il planifié ?",
+      "Le délai moyen de traitement des demandes de crédit et d'ouverture de compte a-t-il été réduit de manière significative grâce aux efforts de simplification ?"
+    ]
+  }
+}

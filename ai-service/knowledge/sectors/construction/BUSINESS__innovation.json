@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "BUSINESS",
+    "sous_axe": "innovation",
+    "titre": "Innovation dans le BTP en Côte d'Ivoire",
+    "description": "Dynamiques d'innovation dans le secteur BTP CI : matériaux de construction locaux améliorés (latérite stabilisée, géopolymères), procédés constructifs innovants (préfabrication, construction modulaire), technologies numériques de chantier (IoT, drones, jumeaux numériques), construction verte et partenariats recherche-industrie avec le LBTP CI et l'INPHB.",
+    "version": "1.0",
+    "date_mise_a_jour": "2025-01-01",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "Le secteur BTP ivoirien fait face à une double pression pour innover : d'un côté, le défi du logement abordable (déficit 600 000 unités, coût construction standard hors de portée des ménages modestes — 35-50 M FCFA pour une villa simple) ; de l'autre, les exigences des grands bailleurs internationaux (BAD, Banque Mondiale, AFD) qui conditionnent leurs financements à des standards de durabilité et de performance énergétique. Les innovations pertinentes en CI privilégient les matériaux locaux (latérite abondante, fibres végétales), les procédés de construction rapide (logements sociaux) et les technologies numériques de pilotage de chantier. Le LBTP CI (Laboratoire du Bâtiment et des Travaux Publics) est l'acteur institutionnel central de la R&D BTP en CI.",
+    "chiffres_cles": [
+      "Déficit logement CI : 600 000 unités, coût construction standard : 35-50 M FCFA/villa (inaccessible à 70% des ménages)",
+      "LBTP CI : seul laboratoire national de R&D BTP CI, 120 chercheurs et techniciens, budget 2,8 Mds FCFA/an",
+      "Latérite CI : matériau disponible à 95% du territoire CI, coût extraction 3-8 fois inférieur au ciment importé",
+      "Béton de chanvre ou géopolymère CI : prototypes en test LBTP CI depuis 2022 (empreinte carbone -55%)",
+      "Construction modulaire/préfabriquée CI : < 2% du marché (vs. 12% France, 8% Maroc)",
+      "Certification HQE (Haute Qualité Environnementale) CI : 3 bâtiments certifiés à Abidjan (2024)"
+    ],
+    "acteurs_cles": [
+      "LBTP CI (Laboratoire du Bâtiment et des Travaux Publics) — R&D matériaux et procédés constructifs CI",
+      "INPHB Yamoussoukro — formation ingénieurs BTP et recherche appliquée génie civil",
+      "BNETD CI — études techniques et cahiers des charges grands projets (intégration normes nouvelles)",
+      "CNBTP CI — diffusion des bonnes pratiques et certifications entreprises BTP CI",
+      "AFD / BAD / IFC — financeurs conditionnels (Green Building, performance énergétique, innovation locale)",
+      "OAPI — protection des innovations BTP (brevets matériaux, procédés constructifs CI)"
+    ]
+  },
+  "enjeux_cles": [
+    {
+      "enjeu": "Développer les matériaux de construction locaux pour réduire les coûts",
+      "description": "80% des matériaux de construction CI sont importés (ciment, acier, carrelage, PVC) — une dépendance qui renchérit les coûts, fragilise la balance commerciale CI et expose le secteur aux fluctuations du FCFA/EUR. La latérite stabilisée, les géopolymères, les blocs de terre comprimée (BTC) et les fibres végétales (coco, sisal) sont des alternatives validées par le LBTP CI avec des coûts 30-50% inférieurs.",
+      "impact": "Réduction du coût de construction d'un logement social de 35-50% et développement d'une filière industrielle locale"
+    },
+    {
+      "enjeu": "Adopter la préfabrication pour accélérer la construction de logements sociaux",
+      "description": "La préfabrication (éléments de structure fabriqués en usine, assemblés sur site) réduit le temps de chantier de 40-60% et les déchets de construction de 30%. Elle est particulièrement adaptée aux programmes répétitifs de logements sociaux CI (150 000 unités cible PND 2021-2025). Barrière principale CI : absence d'usines de préfabrication locales.",
+      "impact": "Réduction du délai de construction de 18 mois à 8 mois pour les logements sociaux"
+    },
+    {
+      "enjeu": "Déployer des capteurs IoT pour le contrôle qualité en temps réel",
+      "description": "La qualité du béton (dosage eau-ciment, vibration, cure) est le premier facteur de sinistres structurels en CI. Les capteurs IoT embarqués dans les éléments de structure (capteurs de température, d'humidité, de résistance) permettent un contrôle qualité en temps réel et une traçabilité complète de chaque coulée de béton.",
+      "impact": "Réduction de 60-80% des sinistres structurels et amélioration de la durabilité des ouvrages CI"
+    },
+    {
+      "enjeu": "Adopter les standards de construction durable (HQE, EDGE, Green Star)",
+      "description": "Les bailleurs internationaux (BAD, Banque Mondiale, IFC) et les grandes entreprises multinationales implantées en CI exigent de plus en plus des bâtiments certifiés (HQE, EDGE, LEED) pour leurs sièges et usines. La certification EDGE (Excellence in Design for Greater Efficiencies) est la plus adaptée au contexte CI (focus énergie et eau — enjeux majeurs CI).",
+      "impact": "Accès à un marché de bureaux et d'usines certifiés Green en CI estimé à 450 Mds FCFA/an"
+    },
+    {
+      "enjeu": "Transférer les innovations du LBTP CI vers le marché",
+      "description": "Le LBTP CI développe des innovations BTP pertinentes (BLS, géopolymères, procédés constructifs locaux) qui restent souvent dans les laboratoires faute de mécanismes de transfert vers les entreprises BTP CI. La création de partenariats de licence (OAPI) et de démonstrateurs à grande échelle est le chaînon manquant.",
+      "impact": "Commercialisation de 5+ innovations LBTP CI dans le marché BTP CI d'ici 2027"
+    }
+  ],
+  "niveau_maturite": {
+    "description": "Échelle de maturité innovation pour les entreprises et acteurs du BTP CI",
+    "niveaux": [
+      {
+        "niveau": 1,
+        "label": "Traditionnelle",
+        "description": "Construction 100% avec matériaux importés standard (ciment Portland, acier HA), procédés artisanaux (maçonnerie traditionnelle), aucune technologie numérique de chantier, aucune démarche de certification environnementale, aucune R&D."
+      },
+      {
+        "niveau": 2,
+        "label": "Adaptation",
+        "description": "Quelques matériaux locaux utilisés ponctuellement (latérite non stabilisée pour remblais), expérimentation informelle de procédés alternatifs, AutoCAD 2D pour les plans, intérêt pour les innovations mais sans budget R&D ni partenariat LBTP CI."
+      },
+      {
+        "niveau": 3,
+        "label": "Innovation pilote",
+        "description": "Projet pilote matériaux locaux (BLS, BTC) sur 1-2 chantiers de logements sociaux, partenariat LBTP CI pour tests et validation, 1 drone de surveillance opérationnel, sensibilisation aux certifications EDGE, participation aux programmes FDFP CI innovation BTP."
+      },
+      {
+        "niveau": 4,
+        "label": "Innovation intégrée",
+        "description": "Matériaux locaux CI systématisés sur les programmes de logements sociaux (> 30% des projets), préfabrication sur 2+ programmes, IoT capteurs béton déployés, 1er bâtiment certifié EDGE CI livré, brevets OAPI déposés, partenariat LBTP CI / INPHB formalisé."
+      },
+      {
+        "niveau": 5,
+        "label": "Hub d'innovation BTP CI",
+        "description": "Centre de R&D BTP privé ou joint-venture (LBTP CI + entreprise), filière de préfabrication opérationnelle (usine CI), 5+ certifications EDGE livres, jumeaux numériques sur tous les grands projets, transfert technologique reconnu OAPI (5+ brevets actifs), rayonnement UEMOA (formation BTP durable)."
+      }
+    ]
+  },
+  "indicateurs_cles": [
+    {
+      "kpi": "Part des matériaux locaux CI dans le coût de construction",
+      "definition": "Pourcentage du coût total des matériaux de construction d'un programme provenant de sources locales CI (extraction, fabrication ou transformation en CI, sans importation directe)",
+      "unite": "%",
+      "benchmark_ci": "Secteur BTP CI standard : 18-22% matériaux locaux — projets BLS/BTC LBTP CI : 45-60%",
+      "cible_sectorielle": "> 40% (objectif Plan Émergence CI filière matériaux locaux BTP)",
+      "source": "LBTP CI rapport matériaux locaux 2024 + BNETD CI"
+    },
+    {
+      "kpi": "Nombre de bâtiments certifiés EDGE ou HQE en CI",
+      "definition": "Nombre total de bâtiments neufs livrés en CI disposant d'une certification de construction durable reconnue internationalement (EDGE IFC, HQE, LEED, Green Star)",
+      "unite": "bâtiments certifiés",
+      "benchmark_ci": "CI : 3 certifications EDGE (2024) — Maroc : 48 certifications EDGE (référence Afrique francophone)",
+      "cible_sectorielle": "> 15 certifications EDGE en CI d'ici 2027 (objectif BNETD CI Green Building)",
+      "source": "IFC EDGE database Africa + BNETD CI 2024"
+    },
+    {
+      "kpi": "Taux de réduction du délai de construction par la préfabrication",
+      "definition": "Réduction en pourcentage du délai de construction d'un programme de logements (date de démarrage gros œuvre à date de livraison) comparé à une construction traditionnelle maçonnerie de même surface",
+      "unite": "% de réduction",
+      "benchmark_ci": "LBTP CI expérimentation préfabrication légère : -35 à -45% de délai sur logements sociaux CI",
+      "cible_sectorielle": "> -30% de réduction de délai",
+      "source": "Rapport LBTP CI préfabrication 2023"
+    },
+    {
+      "kpi": "Nombre de brevets OAPI déposés par les acteurs BTP CI",
+      "definition": "Nombre de demandes de brevet déposées à l'OAPI (Organisation Africaine de la Propriété Intellectuelle) par des entités CI (entreprises BTP, LBTP CI, INPHB) pour des innovations de matériaux ou de procédés constructifs",
+      "unite": "brevets",
+      "benchmark_ci": "CI : 2 brevets OAPI BTP actifs (LBTP CI — BLS et géopolymère 2022-2024) — Maroc : 18 brevets BTP actifs",
+      "cible_sectorielle": "> 8 brevets OAPI BTP CI d'ici 2027",
+      "source": "OAPI registre brevets BTP Afrique francophone 2024"
+    },
+    {
+      "kpi": "Taux d'adoption des capteurs IoT qualité béton sur les chantiers critiques",
+      "definition": "Part des chantiers CI de génie civil (ponts, barrages, ouvrages d'art) > 2 Mds FCFA utilisant des capteurs IoT embarqués pour le contrôle de la qualité du béton en temps réel",
+      "unite": "%",
+      "benchmark_ci": "CI : < 3% des chantiers éligibles — France : 28% — UK : 45%",
+      "cible_sectorielle": "> 20% des chantiers > 2 Mds FCFA avec IoT béton d'ici 2027",
+      "source": "BNETD CI audit qualité ouvrages 2024 + benchmark European Construction"
+    }
+  ],
+  "zoom_sur": {
+    "organisation": "LBTP CI (Laboratoire du Bâtiment et des Travaux Publics de Côte d'Ivoire)",
+    "titre": "Briques de Latérite Stabilisée (BLS) : 500 logements sociaux à -35% de coût, -42% carbone",
+    "contexte": "Le LBTP CI a lancé en 2022 un programme de recherche appliquée sur la Brique de Latérite Stabilisée (BLS) — une brique fabriquée à partir de latérite locale CI (abondante à 95% du territoire) stabilisée avec 8% de ciment Portland, compressée mécaniquement et séchée à l'air libre. L'objectif : proposer une alternative au parpaing de ciment gris (importé à 40%, coût 450-600 FCFA/unité) pour les programmes de logements sociaux CI (objectif PND : 150 000 logements). Un programme pilote de 500 logements à Bouaké (commune de Koko) a été lancé en partenariat avec SICOGI CI et financement AFD.",
+    "solution": "Déploiement du programme BLS Bouaké en 3 composantes : (1) création d'une unité de production BLS sur site (presse hydraulique CINVA-RAM motorisée, 500 briques/heure, investissement 18 M FCFA) ; (2) formation de 48 artisans-maçons CI de la région Bouaké (5 jours, techniques de pose BLS, contrôle qualité dimensions et résistance) ; (3) suivi technique LBTP CI : contrôle résistance à la compression chaque semaine (objectif > 2,5 MPa), tests hygrométrie et tenue aux pluies tropicales CI (pluviométrie Bouaké : 1 100 mm/an). Partenariat BNETD CI pour intégration des BLS dans les cahiers des charges officiels des logements sociaux.",
+    "resultats": {
+      "avant": "Logements sociaux CI standard : coût construction 22 M FCFA/logement (parpaing ciment gris importé 45%, acier HA importé 30%), délai construction 14 mois/logement standard, empreinte carbone 48 tCO2/logement, artisans locaux maîtrisant uniquement maçonnerie traditionnelle",
+      "apres": "BLS programme Bouaké 500 logements : coût construction 14,3 M FCFA/logement (-35%), délai construction 10,5 mois (-25%), empreinte carbone 27,8 tCO2/logement (-42%), approvisionnement latérite 100% local (rayon 12 km), 48 artisans CI formés et certifiés BLS, résistance à la compression BLS : 3,1 MPa (> 2,5 MPa seuil LBTP CI), taux de déchet construction 8% vs. 18% parpaing, brevet OAPI déposé (procédé BLS dosage optimal ciment-latérite CI)"
+    },
+    "lessons_learned": "La principale résistance des bénéficiaires était d'ordre perceptif : la brique de terre, même stabilisée, est associée à l'habitat précaire en CI. Le programme a intégré un volet communication (photos avant/après, visite des logements livrés avec le maire de Bouaké) qui a transformé la perception. La clé technique a été le dosage optimal ciment-latérite : en dessous de 6%, la résistance aux pluies est insuffisante ; au-dessus de 10%, le coût rejoint le parpaing sans avantage carbone.",
+    "contact_reference": "Direction de la Recherche LBTP CI — Abidjan, Boulevard de Marseille"
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif innovation BTP — acteurs CI et références",
+    "lignes": [
+      {
+        "organisation": "LBTP CI",
+        "type": "National — leader R&D BTP",
+        "innovation_materiaux": "BLS, géopolymères, béton local (2 brevets OAPI actifs)",
+        "construction_durable": "Référentiel technique HQE tropical CI (2024)",
+        "prefabrication": "Prototypes logements préfabriqués légers (pilote 50 unités 2023)",
+        "iot_chantier": "Capteurs béton pilotes sur 3 chantiers BNETD CI",
+        "budget_rd": "2,8 Mds FCFA/an (budget public)",
+        "score_estime": "68/100"
+      },
+      {
+        "organisation": "COLAS CI",
+        "type": "National — leader travaux publics",
+        "innovation_materiaux": "Enrobés tièdes (émulsion bitume froid, -25% CO2 routes CI)",
+        "construction_durable": "Objectif groupe Colas : -50% CO2 2030 (déployé partiellement CI)",
+        "prefabrication": "Préfabrication éléments ouvrages d'art (ponts standards)",
+        "iot_chantier": "8 chantiers avec drones + 3 avec capteurs IoT enrobé",
+        "budget_rd": "1,2% du CA CI investi en innovation (vs. 3,5% groupe Colas global)",
+        "score_estime": "62/100"
+      },
+      {
+        "organisation": "BNETD CI",
+        "type": "National — maîtrise d'ouvrage publique",
+        "innovation_materiaux": "Intégration BLS et matériaux locaux dans nouveaux cahiers des charges (2024)",
+        "construction_durable": "Plan Green Building CI 2024-2027 (15 certifications EDGE cible)",
+        "prefabrication": "Normes préfabrication en cours de révision (intégration LBTP CI)",
+        "iot_chantier": "3 projets pilotes IoT supervisés par BNETD CI",
+        "budget_rd": "Budget études : 0,3% investissements supervisés",
+        "score_estime": "55/100"
+      },
+      {
+        "organisation": "CSTB Maroc (Centre Scientifique et Technique du Bâtiment)",
+        "type": "Régional — référence Afrique francophone",
+        "innovation_materiaux": "Géopolymères maroc, béton de chanvre, terre crue comprimée (15 brevets)",
+        "construction_durable": "48 certifications EDGE Maroc (leader Afrique francophone)",
+        "prefabrication": "Filière préfabrication lourde mature (8% marché marocain)",
+        "iot_chantier": "IoT chantier sur 35% des projets > 100 M MAD",
+        "budget_rd": "65 M MAD/an (budget Maroc R&D BTP)",
+        "score_estime": "82/100"
+      },
+      {
+        "organisation": "Skanska Innovation Lab (Suède/USA)",
+        "type": "International — référence mondiale",
+        "innovation_materiaux": "Béton bas carbone (GeopolymerConcrete), bois massif CLT, bioplastiques",
+        "construction_durable": "100% projets certifiés (LEED Platinum, BREEAM Outstanding)",
+        "prefabrication": "Préfabrication digitale (BIM + usine + assemblage robotisé — 25% projets)",
+        "iot_chantier": "IoT 100% chantiers (smart site Skanska), IA prédiction qualité béton",
+        "budget_rd": "3,5% du CA (programme Deep Green Construction 2030)",
+        "score_estime": "97/100"
+      }
+    ]
+  },
+  "bonnes_pratiques": [
+    {
+      "pratique": "S'appuyer sur le LBTP CI pour valider les matériaux locaux avant déploiement",
+      "description": "Le LBTP CI propose des services de test et certification de matériaux pour les entreprises BTP CI (tests de résistance, hygrométrie, durabilité). Un matériau validé LBTP CI est accepté dans les marchés publics BNETD CI. Coût des tests : 500 000 - 2 M FCFA selon le type de matériau.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Cibler la certification EDGE (IFC) pour les projets de bureaux et usines en CI",
+      "description": "EDGE (Excellence in Design for Greater Efficiencies) est la certification Green Building la plus adaptée au contexte CI : elle se concentre sur l'efficacité énergétique et hydrique (enjeux majeurs en CI — coût CIE et SODECI élevé). La certification EDGE coûte 25-50 M FCFA pour un bâtiment de 5 000 m² mais ouvre l'accès aux marchés des multinationales et bailleurs internationaux.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Intégrer les capteurs IoT béton sur les ouvrages d'art dès la conception",
+      "description": "Les capteurs de maturité béton (SmartRock, ConcreteEye) permettent de suivre la résistance en temps réel et d'optimiser les délais de décoffrage (potentiel de gain de 3-7 jours par coulée sur les ponts et barrages CI). Coût unitaire : 150-300 USD/capteur, amortis sur 2-3 chantiers.",
+      "priorite": "Moyenne"
+    },
+    {
+      "pratique": "Protéger les innovations BTP CI par un dépôt OAPI dès la validation",
+      "description": "Un brevet OAPI coûte 300 000-800 000 FCFA et protège l'innovation dans les 17 pays membres pour 20 ans. Les entreprises BTP CI qui innovent sans brevet voient leurs procédés copiés par des concurrents (notamment les filiales d'entreprises internationales qui peuvent déposer le brevet à leur tour en CI).",
+      "priorite": "Moyenne"
+    },
+    {
+      "pratique": "Nouer un partenariat de recherche avec l'INPHB pour l'accès aux ressources R&D",
+      "description": "L'INPHP Yamoussoukro dispose d'un laboratoire de génie civil et de 300 étudiants ingénieurs en BTP par an — une ressource R&D accessible aux entreprises via des conventions de stage ou de recherche appliquée. Coût d'un projet de recherche INPHB-entreprise : 3-8 M FCFA/an (vs. 30-80 M FCFA pour un bureau d'études international).",
+      "priorite": "Moyenne"
+    }
+  ],
+  "pieges_a_eviter": [
+    {
+      "piege": "Utiliser des matériaux locaux non testés sans validation LBTP CI",
+      "consequence": "Des matériaux non testés (latérite non stabilisée comme mur porteur, béton sable de mer) peuvent céder après 2-3 saisons de pluies tropicales CI, entraînant des sinistres graves (effondrement, infiltrations) et des litiges judiciaires. La garantie décennale CI engage le constructeur sur 10 ans.",
+      "recommandation": "Toujours obtenir le rapport de validation LBTP CI avant d'utiliser un nouveau matériau en structure. Prévoir 3-6 mois de délai pour les tests"
+    },
+    {
+      "piege": "Importer une technologie de construction sans adaptation au climat tropical CI",
+      "consequence": "Des solutions conçues pour le climat tempéré (isolation thermique européenne, bardage bois non traité, panneaux sandwich non tropicalisés) se dégradent rapidement dans le climat chaud et humide CI (Abidjan : 85% humidité moyenne, 26°C). Coûts de maintenance multipliés par 3-5 vs. matériaux locaux adaptés.",
+      "recommandation": "Toujours spécifier les performances requises pour le climat CI (résistance à l'humidité, aux UV tropicaux, aux termites, aux pluies > 100 mm/heure) lors de la sélection des matériaux innovants"
+    },
+    {
+      "piege": "Lancer un programme de logements avec matériaux innovants sans formation des artisans",
+      "description": "La brique BLS, le BTC ou les panneaux préfabriqués requièrent des techniques de pose spécifiques. Des artisans formés uniquement à la maçonnerie traditionnelle commettent des erreurs de pose qui annulent les bénéfices du matériau (fissures, problèmes d'étanchéité).",
+      "recommandation": "Prévoir systématiquement 5 jours de formation des artisans CI avant tout nouveau matériau, en partenariat avec le LBTP CI et le FDFP CI (financement 50-80%)"
+    },
+    {
+      "piege": "Viser la certification HQE/LEED sans étude de faisabilité préalable",
+      "consequence": "La certification LEED (très répandue en USA/Europe) est peu reconnue par les MOA CI et coûte 80-150 M FCFA pour un bâtiment moyen. La certification EDGE (IFC, adaptée Afrique) est plus pertinente, moins coûteuse (25-50 M FCFA) et mieux reconnue par les bailleurs en CI. Erreur classique : investir dans LEED pour un projet dont le MOA n'en voit pas la valeur.",
+      "recommandation": "Valider d'abord l'intérêt du MOA pour la certification et son impact sur la valorisation du projet avant d'engager les frais de certification"
+    }
+  ],
+  "roadmap": {
+    "titre": "Roadmap innovation BTP — acteur CI (entreprise ou promoteur)",
+    "phases": [
+      {
+        "phase": "Phase 1 — Pilote local (Mois 1-12)",
+        "actions": [
+          "Partenariat LBTP CI : test et validation d'un matériau local sur 1 programme pilote (BLS ou BTC)",
+          "Formation 20-50 artisans CI au nouveau procédé constructif (FDFP CI — 5 jours/artisan)",
+          "Acquisition drone DJI (autorisation ARTCI) pour surveillance du projet pilote",
+          "Dépôt OAPI si procédé innovant développé en interne (délai 6-12 mois)"
+        ],
+        "budget_indicatif": "8 - 25 M FCFA (tests LBTP CI + formation + drone + OAPI)"
+      },
+      {
+        "phase": "Phase 2 — Certification et déploiement (Mois 13-30)",
+        "actions": [
+          "Certification EDGE IFC sur 1 bâtiment de bureaux ou logements (25-50 M FCFA)",
+          "Déploiement matériaux locaux sur 30%+ des programmes logements sociaux",
+          "Partenariat INPHB pour 2-3 projets de recherche appliquée (stagiaires ingénieurs CI)",
+          "IoT capteurs béton sur tous les ouvrages d'art > 2 Mds FCFA"
+        ],
+        "budget_indicatif": "25 - 70 M FCFA (certification EDGE + déploiement matériaux + IoT)"
+      },
+      {
+        "phase": "Phase 3 — Leadership innovation (Mois 31-60)",
+        "actions": [
+          "Unité de préfabrication légère CI (investissement 80-200 M FCFA selon capacité)",
+          "5+ brevets OAPI BTP actifs (matériaux + procédés + outils numériques)",
+          "3+ certifications EDGE livrées — reconnaissance BNETD CI comme référence Green Building",
+          "Programme de formation BTP innovant (FDFP CI agréé) pour diffusion à l'échelle CI"
+        ],
+        "budget_indicatif": "100 - 300 M FCFA (usine préfabrication + brevets + programme formation)"
+      }
+    ]
+  },
+  "ressources": {
+    "formations": [
+      "LBTP CI — formation matériaux locaux BTP et procédés constructifs innovants (Abidjan)",
+      "FDFP CI — financement formation artisans et techniciens BTP aux nouveaux procédés (50-80%)",
+      "IFC EDGE — formation certification Green Building contexte Afrique (en ligne + Abidjan sessions)",
+      "INPHB Yamoussoukro — masters génie civil avec spécialisation matériaux locaux"
+    ],
+    "outils_recommandes": [
+      "SmartRock (Maturix) ou ConcreteEye — capteurs IoT maturité béton en temps réel",
+      "CINVA-RAM motorisée — presse à briques (BLS, BTC) accessible PME CI (18-25 M FCFA)",
+      "IFC EDGE App — outil d'auto-évaluation Green Building pour projets CI (gratuit)",
+      "OAPI e-depot — dépôt de brevets en ligne pour innovations BTP CI (oapi.int)"
+    ],
+    "references_reglementaires": [
+      "LBTP CI — référentiel matériaux de construction CI (normes, tests, certifications)",
+      "OAPI — guide dépôt brevets matériaux et procédés BTP (oapi.int)",
+      "IFC EDGE — standard international Green Building adapté Afrique subsaharienne",
+      "BNETD CI — cahiers des charges techniques grands projets CI (inclusion matériaux locaux 2024)",
+      "APDP CI — Loi 2013-450 (données IoT chantier, géolocalisation engins, biométrie travailleurs)"
+    ]
+  },
+  "ai_context": {
+    "scoring_dimension": "Maturité des pratiques d'innovation dans le secteur BTP",
+    "scoring_rubric": {
+      "score_1_to_20": "Construction 100% matériaux importés standard, aucune R&D, aucun partenariat LBTP CI ou INPHP, aucune certification environnementale, aucun IoT chantier, aucun brevet OAPI BTP.",
+      "score_21_to_40": "Quelques matériaux locaux utilisés ponctuellement (latérite non stabilisée pour remblais), expérimentation informelle sans validation LBTP CI, intérêt pour l'innovation sans budget ni partenariat.",
+      "score_41_to_60": "Projet pilote matériaux locaux validé LBTP CI sur 1-2 chantiers, partenariat LBTP CI ou INPHB formalisé, 1 drone opérationnel, sensibilisation aux certifications EDGE, participation FDFP CI innovation BTP.",
+      "score_61_to_80": "Matériaux locaux systématisés sur > 30% des projets, préfabrication sur 2+ programmes, IoT capteurs béton sur ouvrages critiques, 1+ certification EDGE livrée, 1-2 brevets OAPI actifs, diffusion formation FDFP CI.",
+      "score_81_to_100": "Hub d'innovation BTP CI : filière préfabrication locale, 5+ brevets OAPI, 3+ certifications EDGE, digital twin sur tous grands projets, R&D budget > 2% CA, rayonnement UEMOA et reconnaissance BNETD CI référence."
+    },
+    "questions_discriminantes": [
+      "Utilisez-vous des matériaux de construction locaux CI (briques de latérite stabilisée, BTC, géopolymères) sur au moins 30% de vos projets de logements ?",
+      "Avez-vous un partenariat formalisé avec le LBTP CI ou l'INPHB pour valider vos innovations de matériaux ou de procédés constructifs ?",
+      "Avez-vous livré au moins un bâtiment certifié EDGE (IFC) ou HQE en Côte d'Ivoire ?",
+      "Utilisez-vous des capteurs IoT pour le contrôle de la qualité du béton en temps réel sur vos chantiers d'ouvrages d'art ?",
+      "Avez-vous déposé un brevet OAPI pour une innovation de matériau ou de procédé constructif développée par votre entreprise ?"
+    ],
+    "signaux_avances": [
+      "Filière de préfabrication légère opérationnelle en CI réduisant les délais de construction de 30% minimum",
+      "3+ bâtiments certifiés EDGE ou HQE livrés, positionnant l'entreprise comme référence Green Building en CI",
+      "Brevets OAPI actifs protégeant des innovations de matériaux ou procédés développées en CI",
+      "Capteurs IoT béton sur 100% des ouvrages d'art > 2 Mds FCFA avec traçabilité complète des coulées",
+      "Reconnaissance BNETD CI comme entreprise de référence pour l'intégration de matériaux locaux dans les cahiers des charges"
+    ]
+  }
+}

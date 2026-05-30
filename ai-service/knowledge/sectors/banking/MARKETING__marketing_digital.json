@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "axis": "MARKETING",
+    "sub_axis": "Marketing digital",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Marketing digital bancaire sur mobile — cibler les Millennials et Gen Z africains",
+      "description": "70 % de la population ivoirienne a moins de 35 ans. Les canaux de marketing traditionnels (radio, presse) touchent peu cette cible. Les banques leaders investissent dans le marketing digital (Facebook, Instagram, TikTok, WhatsApp Business) pour acquérir et fidéliser les jeunes bancarisés.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "50 % des banques africaines ont un budget marketing digital alloué (Médiamétrie Afrique 2024)",
+      "source": "Médiamétrie Africa Digital Marketing Banking 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Marketing basé sur les données transactionnelles — offres hyper-personnalisées",
+      "description": "Les banques qui exploitent les données de transactions pour segmenter leurs clients et leur envoyer des offres pertinentes (crédit pré-approuvé le jour du salaire, assurance auto après achat d'une voiture) multiplient par 3-5 leur taux de conversion.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "25 % des banques africaines font du marketing data-driven (Deloitte Africa 2024)",
+      "source": "Deloitte Africa Digital Banking Marketing 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Content Banking — éducation financière comme outil de fidélisation",
+      "description": "Les fintechs africaines utilisent le contenu éducatif (vidéos YouTube, posts Instagram sur l'épargne, les crédits) pour attirer des clients avant même qu'ils n'aient un compte. Les banques qui produisent du contenu utile créent de la confiance et de la fidélité sans coût publicitaire élevé.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "35 % des banques africaines ont une stratégie de content marketing actif (HootSuite Africa 2024)",
+      "source": "HootSuite Digital Trends Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Marketing automation bancaire — nurturing et relance automatisés",
+      "description": "Les plateformes de marketing automation (HubSpot, Salesforce Marketing Cloud) permettent aux banques d'envoyer automatiquement des communications pertinentes au bon moment : relance des prospects non-convertis, félicitations anniversaire, offre crédit au bon moment.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "18 % des banques africaines utilisent une plateforme de marketing automation (IDC Africa 2024)",
+      "source": "IDC Africa Marketing Technology Banking 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "CRM Marketing / Marketing Automation",
+      "category": "Acquisition et fidélisation clients",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Salesforce Marketing Cloud Banking", "HubSpot for Financial Services", "Adobe Marketo Engage", "Oracle Eloqua Banking", "Braze (mobile-first CRM)"]
+    },
+    {
+      "name": "Social Media Management",
+      "category": "Présence et communauté sur les réseaux sociaux",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne en CI",
+      "leading_vendors": ["Hootsuite for Banking", "Sprout Social", "Buffer", "Khoros (ex-Spredfast)", "Brandwatch (social listening)"]
+    },
+    {
+      "name": "SEO / SEM Bancaire",
+      "category": "Acquisition organique et payante",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Google Ads (Search + Display)", "Meta Ads (Facebook/Instagram)", "TikTok Ads Africa", "Semrush", "Moz for Banking"]
+    },
+    {
+      "name": "CDP — Customer Data Platform",
+      "category": "Unification des données clients pour le marketing",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Salesforce Data Cloud", "Adobe Real-Time CDP", "Segment (Twilio)", "Bloomreach", "Tealium"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "UBA Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Campagnes Facebook/Instagram ciblées par segment (jeunes, diaspora, PME), content marketing éducation financière sur YouTube CI, présence TikTok active",
+        "differentiator": "Banque nigériane avec la présence digitale la plus active en CI — 150 000 abonnés Facebook CI, 20 publications/semaine, taux d'engagement 3× la moyenne bancaire",
+        "source": "UBA CI Digital Marketing Report 2023 / APBEF-CI Social Media Banking Awards"
+      },
+      {
+        "organisation": "Ecobank Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Programme Ecobank Xpress Account : acquisition digitale via Facebook Ads, landing pages optimisées, email nurturing des prospects onboarding",
+        "differentiator": "60 % des nouvelles ouvertures de compte Xpress Account acquises via canaux digitaux en 2023 — modèle d'acquisition digitale bancaire le plus performant en CI",
+        "source": "Ecobank CI Marketing Report 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Attijariwafa Bank",
+        "country": "Maroc / Afrique de l'Ouest",
+        "key_practice": "Marketing data-driven sur 24 filiales : segmentation par données transactionnelles, scoring propension achat, campagnes personnalisées par segment",
+        "differentiator": "Premier groupe bancaire africain francophone à déployer une CDP (Customer Data Platform) unifiant les données clients de 24 filiales pour le marketing personnalisé",
+        "source": "Attijariwafa Bank Digital Report 2023"
+      },
+      {
+        "organisation": "Equity Bank",
+        "country": "Kenya / Afrique de l'Est",
+        "key_practice": "Content banking : 500+ vidéos éducatives YouTube (épargne, crédit, business pour PME), communauté Facebook 1,2M abonnés, WhatsApp marketing automatisé",
+        "differentiator": "Equity Bank a construit la plus grande communauté financière éducative d'Afrique de l'Est — 1,2M abonnés Facebook avec 40 % d'engagement client",
+        "source": "Equity Bank Marketing Report 2023 / Social Bakers Africa Banking 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Nubank",
+        "country": "Brésil",
+        "key_practice": "Coût d'acquisition client 5$ (vs 250$ pour banques traditionnelles) via bouche-à-oreille digital, NPS 87 génère 40 % de croissance organique, zéro publicité TV",
+        "differentiator": "Nubank a prouvé qu'un NPS de 87 remplace la publicité : 40 % des nouveaux clients viennent de recommandations — le produit lui-même est le canal marketing",
+        "source": "Nubank Annual Report 2023 / McKinsey Nubank Growth Model"
+      },
+      {
+        "organisation": "Revolut",
+        "country": "Royaume-Uni",
+        "key_practice": "Marketing viral : programme de parrainage (10 £ offerts pour chaque filleul), influenceurs financiers, contenu TikTok 50M vues/trimestre",
+        "differentiator": "Programme de parrainage Revolut : 30 % de la croissance clients générée par les membres existants — marketing viral à coût d'acquisition quasi nul",
+        "source": "Revolut Annual Report 2023 / Forbes Revolut Growth Strategy"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Marketing 100 % traditionnel (radio, affichage, presse). Pas de présence sur les réseaux sociaux. Pas de site web performant. Pas de budget marketing digital. Pas de tracking des conversions.",
+    "level_2_developing": "Page Facebook et site web basiques. Quelques posts irréguliers. Campagnes SMS non segmentées. Pas de marketing automation. Pas de tracking ROI marketing digital.",
+    "level_3_defined": "Présence active sur les réseaux sociaux (Facebook, Instagram). Campagnes Google Ads et Facebook Ads basiques. Email marketing segmenté. Tracking des conversions en place. Budget marketing digital identifié.",
+    "level_4_managed": "Marketing data-driven basé sur les données transactionnelles. Segmentation client fine. Campagnes personnalisées par segment. Marketing automation partiel. ROI marketing digital mesuré. Content banking actif.",
+    "level_5_optimizing": "CDP déployée unifiant toutes les données clients. Hyper-personnalisation IA. Propension scoring pour chaque offre. Marketing automation complet. NPS > 50 générant croissance organique. CAC < 3 000 FCFA."
+  },
+
+  "regulations": [
+    {
+      "name": "Loi sur la protection des données personnelles CI (Loi n°2013-450)",
+      "issuing_body": "République de Côte d'Ivoire / ARTCI",
+      "scope": "Toutes les organisations collectant des données personnelles de clients ivoiriens",
+      "key_requirement": "Consentement préalable pour l'utilisation des données à des fins marketing, droit d'opposition, déclaration à l'ARTCI des traitements de données",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.artci.ci"
+    },
+    {
+      "name": "Réglementation BCEAO sur la publicité des produits financiers",
+      "issuing_body": "BCEAO",
+      "scope": "Banques et établissements financiers UEMOA",
+      "key_requirement": "Toute publicité pour un produit financier (crédit, épargne) doit afficher clairement les conditions réelles (taux, frais) et ne peut être trompeuse",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Campagne marketing sur données clients sans consentement — violation loi CI",
+      "description": "Utiliser les données transactionnelles clients pour des campagnes marketing sans consentement préalable documenté viole la loi ivoirienne sur la protection des données (Loi 2013-450) et expose à des sanctions ARTCI.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Mettre en place un système de gestion des préférences marketing (opt-in/opt-out) documenté dans le CRM, réviser les CGU pour inclure le consentement marketing explicite."
+    },
+    {
+      "title": "E-réputation négative sur les réseaux sociaux — crise virale",
+      "description": "En Côte d'Ivoire, les retours négatifs d'un client mécontent sur Facebook peuvent devenir viraux en quelques heures (exemple : fraude non résolue, frais perçus comme abusifs). Une crise e-réputation mal gérée peut générer des sorties massives de dépôts.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Déployer un système de social listening en temps réel, une procédure de réponse de crise activable en < 2h, et former une équipe dédiée à la gestion de communauté digitale."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Marketing de parrainage bancaire — 30 % de croissance organique en 12 mois",
+      "description": "Un programme de parrainage client (ex : 5 000 FCFA pour le parrain et le filleul à l'ouverture de compte) est le levier d'acquisition le plus rentable pour les banques africaines. Coût d'acquisition < 10 000 FCFA vs 40-80 000 FCFA pour la publicité traditionnelle.",
+      "impact_level": "Très élevé",
+      "time_to_value": "3-6 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Content banking éducation financière — notoriété et SEO à coût minimal",
+      "description": "Publier 2 vidéos/semaine sur YouTube et Instagram sur des sujets financiers pratiques (comment épargner, comment obtenir un crédit PME) génère une notoriété organique durable et positionne la banque comme conseiller financier de confiance auprès des jeunes adultes ivoiriens.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Investissement marketing digital",
+      "acquirer_or_investor": "Ecobank Group",
+      "target": "Programme marketing digital panafricain — Salesforce Marketing Cloud",
+      "amount": "Programme pluriannuel (multi-M$)",
+      "date": "2022-2024",
+      "strategic_rationale": "Déployer Salesforce Marketing Cloud dans 20 filiales africaines pour centraliser les campagnes digitales et mesurer le ROI par segment de clients sur 33 marchés",
+      "source": "Ecobank Annual Report 2023 / Salesforce Banking Case Study"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Equity Bank Kenya",
+    "pays": "Kenya / Afrique de l'Est",
+    "technologie": "Content Banking — communauté financière éducative 1,2M abonnés",
+    "description": "Equity Bank a lancé en 2018 une stratégie de content banking systématique : 3-5 publications/semaine sur Facebook, YouTube et Twitter sur des thèmes d'éducation financière (épargne, crédit PME, investissement). En 2023, la communauté Facebook Equity Bank compte 1,2 million d'abonnés avec 40 % d'engagement — 5× la moyenne bancaire africaine. Les vidéos YouTube 'Comment financer votre PME avec Equity Bank' génèrent 50 000 vues/vidéo. 25 % des nouveaux clients Equity Bank citent les réseaux sociaux comme premier point de contact. Le coût d'acquisition via content banking est estimé à 10× inférieur aux canaux publicitaires traditionnels.",
+    "resultats": "1,2M abonnés Facebook · 40 % engagement · 25 % nouveaux clients via social · CAC 10× inférieur · 500+ vidéos éducatives produites",
+    "source": "Equity Bank Marketing Report 2023 / Social Bakers Africa Banking Awards 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité marketing digital — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "Budget marketing digital identifié", "Campagnes Facebook/Instagram actives", "Marketing data-driven (segmentation)", "Marketing automation déployé", "Social listening / gestion e-réputation"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✓", "✗", "✗", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Le marketing digital bancaire en UEMOA est sous-développé mais en forte croissance. 70 % de la population a moins de 35 ans et n'est accessible que via le digital. Les banques qui maîtrisent Facebook Ads, le content banking et le marketing data-driven capturent les jeunes bancarisés avant les fintechs. La conformité ARTCI sur le consentement des données est un prérequis non négociable.",
+    "maturity_max_description": "Budget marketing digital > 30 % du budget marketing total. Présence active sur Facebook, Instagram et WhatsApp avec communauté > 50 000 abonnés. Marketing data-driven avec segmentation fine basée sur les données transactionnelles. Marketing automation avec parcours client personnalisés. CDP déployée. Social listening en temps réel. CAC digital < 5 000 FCFA.",
+    "scoring_rubric": {
+      "score_1_to_20": "Marketing 100 % traditionnel. Pas de présence sociale. Pas de budget digital. Pas de tracking.",
+      "score_21_to_40": "Page Facebook basique. Posts irréguliers. SMS non segmentés. Pas de tracking ROI. Pas d'automation.",
+      "score_41_to_60": "Présence sociale active. Campagnes Google/Facebook basiques. Email segmenté. Budget digital identifié.",
+      "score_61_to_80": "Marketing data-driven. Campagnes personnalisées par segment. Automation partielle. ROI digital mesuré. Content banking.",
+      "score_81_to_100": "CDP déployée. Hyper-personnalisation IA. Automation complète. NPS génère croissance organique. CAC < 5 000 FCFA."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur sa maturité en marketing digital dans le contexte bancaire UEMOA. Analyse l'existence d'un budget marketing digital alloué, la présence active sur les réseaux sociaux africains (Facebook, Instagram, WhatsApp), l'utilisation des données transactionnelles pour des campagnes personnalisées et la mesure du ROI marketing.",
+    "key_questions_for_llm": [
+      "Un budget marketing digital spécifique est-il alloué annuellement, et représente-t-il une part croissante du budget marketing total ?",
+      "Des campagnes publicitaires actives sont-elles menées sur les réseaux sociaux africains (Facebook, Instagram, WhatsApp) avec un ciblage segmenté par profil client ?",
+      "Les données transactionnelles des clients sont-elles utilisées pour personnaliser les offres marketing (crédit pré-approuvé, épargne contextuelle) ?",
+      "Une plateforme de marketing automation est-elle déployée pour automatiser les campagnes de nurturing, de relance et de fidélisation client ?",
+      "Un système de social listening surveille-t-il en temps réel la réputation de la banque sur les réseaux sociaux pour détecter et gérer les crises e-réputation ?"
+    ]
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "axis": "PROCESS",
+    "sub_axis": "Performance opérationnelle",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Cost-to-Income ratio — pression sur l'efficacité opérationnelle bancaire UEMOA",
+      "description": "Le ratio coûts/revenus (Cost-to-Income) des banques UEMOA est en moyenne de 60-70 %, contre 45-55 % pour les banques africaines leaders. Cette inefficacité relative réduit la capacité d'investissement dans la transformation digitale et expose à la concurrence des fintechs à coût opérationnel nul.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "C/I moyen banques UEMOA : 62 % (BCEAO Rapport Annuel 2024)",
+      "source": "BCEAO Rapport Annuel sur la Situation des Banques de l'UEMOA 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Digitalisation des agences — transformation du réseau physique en hub conseil",
+      "description": "Face à la baisse de fréquentation des agences (–30 % en 3 ans au profit du digital), les banques UEMOA transforment leurs agences en espaces de conseil à haute valeur ajoutée, transférant les transactions courantes vers les canaux digitaux.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "45 % des transactions bancaires africaines passent déjà par le digital (GSMA 2024)",
+      "source": "GSMA Mobile Money Report Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Lean banking — élimination systématique des gaspillages opérationnels",
+      "description": "Les banques leaders appliquent les principes Lean (Toyota Production System adapté) à leurs processus bancaires : élimination des étapes sans valeur ajoutée dans le traitement du crédit, des réclamations, et du back-office.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "22 % des grandes banques africaines ont un programme Lean formalisé (EY Africa 2024)",
+      "source": "EY Africa Banking Operational Excellence 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Tableau de bord KPI temps réel — COMEX bancaire data-driven",
+      "description": "Les banques africaines leaders mettent en place des tableaux de bord exécutifs temps réel (dépôts, crédits, fraudes, incidents, NPS) permettant une prise de décision basée sur les données plutôt que sur les rapports mensuels décalés.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "35 % des grandes banques africaines ont un dashboard exécutif temps réel (IDC Africa 2024)",
+      "source": "IDC Africa Banking Executive Intelligence 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Business Intelligence / Executive Dashboard",
+      "category": "Pilotage de la performance bancaire",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne en UEMOA",
+      "leading_vendors": ["Power BI for Banking", "Tableau CRM (Salesforce)", "MicroStrategy Banking", "Qlik Financial Services", "SAP Analytics Cloud Banking"]
+    },
+    {
+      "name": "Gestion de la performance bancaire (BPM/EPM)",
+      "category": "Planification et reporting financier",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Oracle Hyperion / EPBCS Banking", "SAP BPC", "IBM Planning Analytics", "Anaplan for Banking", "Workday Adaptive Planning"]
+    },
+    {
+      "name": "CRM Bancaire + Analytics",
+      "category": "Performance commerciale",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne en CI",
+      "leading_vendors": ["Salesforce Financial Services Cloud", "Microsoft Dynamics 365 Banking", "Oracle CX Banking", "Temenos CRM", "Backbase Engagement Banking"]
+    },
+    {
+      "name": "Workforce Management Bancaire",
+      "category": "Optimisation des effectifs agences",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Verint Workforce Management", "NICE Workforce Management", "Aspect Workforce", "Blue Pampas (Afrique)", "Kronos (UKG)"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Société Générale Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Tableau de bord exécutif mensuel standardisé groupe (C/I ratio, ROE, NPS, incidents SI), programme Lean sur les processus agence, digitalisation 60 % des transactions",
+        "differentiator": "Standards KPI Société Générale Groupe applicables — benchmark semestriel SGCI vs 60 filiales SG Afrique permet une identification rapide des gaps",
+        "source": "SGCI Rapport Annuel 2023 / SG Africa Performance Report"
+      },
+      {
+        "organisation": "Banque Nationale d'Investissement (BNI CI)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Programme de transformation opérationnelle 2022-2025, réduction C/I de 72 % à 65 % visée, digitalisation des back-offices prioritaires",
+        "differentiator": "Seule banque publique ivoirienne ayant publié un objectif chiffré de réduction du Cost-to-Income dans son plan stratégique",
+        "source": "BNI CI Plan Stratégique 2022-2025 / APBEF-CI"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Ecobank Performance Management System : KPIs standardisés sur 33 filiales, revue mensuelle COMEX, C/I ratio < 55 % en 2023",
+        "differentiator": "Seule banque africaine avec un C/I ratio < 55 % sur 33 marchés simultanément — efficacité opérationnelle supérieure à la moyenne UEMOA de 15 points",
+        "source": "Ecobank Annual Report 2023 — C/I 54,8 %"
+      },
+      {
+        "organisation": "Standard Bank",
+        "country": "Afrique du Sud / Afrique de l'Ouest",
+        "key_practice": "C/I ratio < 50 %, 100 % des processus clés sous KPIs temps réel, programme Lean lancé en 2019 avec 300 M$ d'économies réalisées",
+        "differentiator": "Standard Bank Lean Programme : référence en efficacité opérationnelle africaine avec ROE de 19,5 % (2023) — meilleur du secteur bancaire africain",
+        "source": "Standard Bank Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "DBS Bank",
+        "country": "Singapour",
+        "key_practice": "C/I ratio de 40 % (meilleur Asie), ROE de 18 %, 60 % des revenus générés digitalement, coût par transaction digital 10× inférieur à l'agence",
+        "differentiator": "DBS Business Model : la transformation digitale a permis de réduire le C/I de 67 % (2013) à 40 % (2023) en 10 ans — référence mondiale de l'efficacité bancaire digitale",
+        "source": "DBS Annual Report 2023"
+      },
+      {
+        "organisation": "Nubank",
+        "country": "Brésil",
+        "key_practice": "Coût d'acquisition client : 5$ vs 250$ pour les banques traditionnelles brésiliennes, C/I ratio de 33 % (meilleur mondial neobanque)",
+        "differentiator": "Modèle opérationnel zéro agence permettant un C/I de 33 % — prouve qu'une banque ultra-lean peut servir 100 millions de clients profitablement",
+        "source": "Nubank Annual Report 2023 / McKinsey Digital Banking Brazil 2024"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Pas de tableau de bord exécutif. C/I ratio non mesuré ou > 75 %. KPIs produits mensuellement en Excel. Pas de programme d'amélioration opérationnelle. Décisions basées sur l'intuition.",
+    "level_2_developing": "Rapports financiers mensuels en retard (J+30). C/I mesuré mais non piloté. Quelques KPIs opérationnels. Pas de programme Lean. Digital < 20 % des transactions.",
+    "level_3_defined": "Dashboard KPI mensuel disponible < J+10. C/I < 70 %. Programme d'amélioration opérationnelle initié. Digital > 30 % des transactions. Revue de performance mensuelle COMEX.",
+    "level_4_managed": "Dashboard KPI hebdomadaire ou temps réel. C/I < 65 %. Programme Lean formalisé. Digital > 50 % des transactions. Benchmark vs pairs. OKR ou BSC alignant les équipes.",
+    "level_5_optimizing": "Dashboard KPI temps réel COMEX. C/I < 55 %. Lean continu. Digital > 70 % transactions. C/I par segment mesuré. Efficacité comparable aux standards régionaux leaders."
+  },
+
+  "regulations": [
+    {
+      "name": "Ratios prudentiels BCEAO — solvabilité, liquidité, rentabilité",
+      "issuing_body": "BCEAO",
+      "scope": "Toutes les banques UEMOA",
+      "key_requirement": "Respect des ratios de solvabilité (Bâle III, > 11,5 %), liquidité (LCR > 100 %), grands risques, et reporting mensuel au DRIF BCEAO",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Publication des comptes annuels — transparence financière OHADA",
+      "issuing_body": "OHADA / COBAC / BCEAO",
+      "scope": "Toutes les banques UEMOA",
+      "key_requirement": "Publication des états financiers annuels certifiés dans le Journal Officiel dans les 6 mois suivant la clôture",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.ohada.org"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Cost-to-Income > 70 % — incapacité à financer la transformation digitale",
+      "description": "Un C/I ratio supérieur à 70 % laisse moins de 30 % des revenus disponibles pour les investissements, le dividende et la transformation digitale. Les banques avec un C/I élevé ne peuvent pas financer les investissements digitaux nécessaires pour rester compétitives face aux fintechs.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée en UEMOA",
+      "mitigation": "Lancer immédiatement un programme d'efficacité opérationnelle ciblant les 5 processus à plus haute proportion de coûts sans valeur ajoutée (back-office, réconciliation, gestion réclamations) pour libérer 5-10 points de C/I."
+    },
+    {
+      "title": "Décisions stratégiques sans données temps réel — réactivité insuffisante",
+      "description": "Les banques sans dashboard temps réel prennent leurs décisions sur des rapports vieux de 3-4 semaines. Dans un environnement où Wave peut changer ses tarifs en 24h, une banque qui réagit en 6 semaines perd des parts de marché.",
+      "severity": "Élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Déployer un dashboard exécutif temps réel couvrant au minimum : soldes et flux du jour, incidents SI, alertes fraudes, et KPIs commerciaux (ouvertures compte, crédits accordés)."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Réduction C/I de 70 % à 60 % — libérer 15-20 M FCFA/an pour l'investissement digital",
+      "description": "Chaque point de C/I économisé dans une banque moyenne UEMOA (5 Mds FCFA de revenus) libère 50 M FCFA/an. Un programme Lean visant -10 points de C/I génère 500 M FCFA/an réinvestissables dans la transformation digitale.",
+      "impact_level": "Très élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Digitalisation agences — transfert 50 % transactions vers digital pour réduire file d'attente",
+      "description": "Transférer 50 % des transactions courantes (consultation solde, mini-relevé, virement simple) vers l'app mobile et les DAB réduit le temps d'attente en agence de 35 %, améliore le NPS de 15 points et libère les conseillers pour les ventes.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Programme de transformation",
+      "acquirer_or_investor": "Standard Bank Africa",
+      "target": "Programme Lean Banking — McKinsey & Company",
+      "amount": "300 M$ d'économies réalisées sur 4 ans",
+      "date": "2019-2023",
+      "strategic_rationale": "Réduire le C/I ratio de 58 % à 50 % en 4 ans via une application systématique des principes Lean sur 20 marchés africains, libérant des ressources pour l'investissement digital",
+      "source": "Standard Bank Annual Report 2023 / McKinsey Lean Banking Africa Case Study"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "DBS Bank",
+    "pays": "Singapour",
+    "technologie": "Transformation de la performance opérationnelle — C/I de 67 % à 40 % en 10 ans",
+    "description": "En 2013, DBS avait un C/I ratio de 67 %, comparable à la moyenne UEMOA actuelle. En 10 ans de transformation digitale (2013-2023), DBS a réduit son C/I à 40 % en : (1) transférant 93 % des transactions vers le digital, (2) automatisant 350+ processus, (3) réduisant de 30 % son réseau d'agences tout en améliorant la satisfaction client, (4) utilisant le ML pour optimiser le staff des agences en temps réel. ROE passé de 10 % à 18 %. Dividendes doublés. DBS est désormais classée meilleure banque mondiale (Global Finance, Euromoney) pour la 4ème année consécutive.",
+    "resultats": "C/I 67 % → 40 % · ROE 10 % → 18 % · 93 % transactions digitales · 350+ processus automatisés · Meilleure banque mondiale 4 ans de suite",
+    "source": "DBS Annual Report 2023 / DBS Investor Day 2023 / Global Finance Best Bank Awards 2024",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité performance opérationnelle — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "C/I ratio < 65 %", "Dashboard KPI < hebdomadaire", "Digital > 50 % transactions", "Programme Lean actif", "Benchmark vs pairs UEMOA"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "✗", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Le Cost-to-Income ratio est le thermomètre de la santé opérationnelle d'une banque UEMOA. La moyenne de 62 % laisse peu de marge pour l'investissement digital face à des fintechs qui opèrent à 30-40 %. La digitalisation des transactions est le levier le plus rapide : chaque transaction digitale coûte 10× moins qu'une transaction en agence. Un programme Lean bien conduit peut libérer 5-10 points de C/I en 18 mois.",
+    "maturity_max_description": "C/I ratio < 55 % grâce à la digitalisation des transactions (> 70 %), l'automatisation du back-office et l'optimisation du réseau d'agences. Dashboard KPI temps réel alimentant le COMEX. Programme Lean continu avec amélioration mesurée trimestriellement. Benchmark régulier vs les pairs UEMOA et régionaux. ROE > 15 %.",
+    "scoring_rubric": {
+      "score_1_to_20": "Pas de dashboard. C/I > 75 % ou non mesuré. Pas de programme amélioration. Digital < 10 % transactions.",
+      "score_21_to_40": "Rapports financiers J+30. C/I mesuré non piloté. Pas de Lean. Digital 10-30 % transactions.",
+      "score_41_to_60": "Dashboard mensuel < J+10. C/I < 70 %. Programme améliorations initié. Digital 30-50 % transactions.",
+      "score_61_to_80": "Dashboard hebdomadaire ou temps réel. C/I < 65 %. Programme Lean. Digital > 50 %. Benchmark pairs.",
+      "score_81_to_100": "C/I < 55 %. Tableau de bord temps réel. Digital > 70 %. Lean continu. ROE > 15 %."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur sa maturité en performance opérationnelle dans le contexte bancaire UEMOA. Analyse le Cost-to-Income ratio, la disponibilité d'un tableau de bord KPI temps réel pour le COMEX, la proportion de transactions digitales et l'existence d'un programme d'amélioration opérationnelle formalisé.",
+    "key_questions_for_llm": [
+      "Quel est le ratio Coûts/Revenus (Cost-to-Income) de la banque et est-il suivi et amélioré annuellement ?",
+      "Un tableau de bord KPI exécutif est-il disponible au moins hebdomadairement pour le COMEX avec les indicateurs clés (C/I, ROE, NPS, incidents, fraudes) ?",
+      "Quelle proportion des transactions bancaires est réalisée via les canaux digitaux (application mobile, internet banking, DAB) vs en agence ?",
+      "Un programme d'amélioration opérationnelle (Lean, Six Sigma, RPA) est-il actif avec des objectifs chiffrés et des résultats mesurés ?",
+      "La performance opérationnelle de la banque est-elle régulièrement benchmarkée par rapport aux pairs de l'UEMOA et aux standards régionaux africains ?"
+    ]
+  }
+}

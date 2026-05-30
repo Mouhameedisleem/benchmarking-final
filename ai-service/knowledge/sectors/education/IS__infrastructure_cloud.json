@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "IS",
+    "sub_axis": "infrastructure_cloud",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Cloud éducatif SaaS et abandon des serveurs on-premise dans les établissements CI",
+      "description": "Les établissements d'enseignement migrent vers des solutions cloud SaaS : Google Workspace for Education (Gmail, Drive, Classroom, Meet), Microsoft 365 Education (Teams, OneDrive, Intune), et LMS cloud (Canvas Cloud, Moodle hébergé). En Côte d'Ivoire, 70% des établissements privés ont migré vers Google Workspace ou Microsoft 365 depuis 2020, abandonnant leurs serveurs email on-premise. Le MENA CI a signé un accord cadre Microsoft pour 350 000 licences Microsoft 365 Education pour les lycées publics (2024).",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "55%",
+      "source": "MENA CI / Microsoft Africa Education 2025",
+      "year": 2025
+    },
+    {
+      "title": "Connectivité haut débit pour établissements scolaires et campus intelligents",
+      "description": "La connectivité des écoles CI est un enjeu critique : seulement 18% des écoles primaires CI ont accès à internet (UNESCO 2024), et 45% des universités disposent d'une connexion haut débit insuffisante (< 100 Mbps partagée sur tout le campus). Des initiatives émergent : fibre ARTCI 'Écoles Connectées' (1 000 lycées publics à connecter en fibre d'ici 2026), programmes Wi-Fi campus des universités (BEI financement), et solutions satellitaires (Starlink Education — 3 universités CI pilotes 2024).",
+      "impact_level": "high",
+      "horizon": "short_term",
+      "adoption_rate": "28%",
+      "source": "ARTCI / UNESCO Connectivité Écoles CI 2025",
+      "year": 2025
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "Google Workspace for Education / Microsoft 365 Education",
+      "category": "Cloud SaaS / Collaboration Éducative",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "MENA CI (350K licences Microsoft 365), UFHB (Google Workspace for Education), UVCI (Microsoft 365 + Moodle cloud), 65% établissements CI",
+      "leading_vendors": ["Google Workspace for Education", "Microsoft 365 Education (Teams)", "Zoom for Education", "Cisco Webex Education", "Canva for Education"]
+    },
+    {
+      "name": "CDN et optimisation de la diffusion de contenu e-learning à faible bande passante",
+      "category": "Infrastructure / Réseau",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "UVCI CI (Cloudflare CDN + vidéos compressées H.265), AUF (serveur cache régional Abidjan), 20% plateformes EdTech CI",
+      "leading_vendors": ["Cloudflare (CDN gratuit ONG)", "AWS CloudFront", "Akamai", "bunny.net (EdTech)", "Peach CDN (Afrique subsaharienne)"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Infrastructure cloud hybride : Moodle hébergé sur serveurs AUF (Montréal + miroir Abidjan), CDN Cloudflare pour la diffusion des vidéos pédagogiques (compression H.265, débit minimum 150 Kbps par étudiant), Microsoft 365 Education pour la collaboration (Teams cours synchrones), app mobile UVCI avec mode offline (contenus synchronisés Wi-Fi, lisibles sans internet 30 jours), Starlink pilote sur campus Abidjan (2024)",
+        "differentiator": "Infrastructure optimisée pour la faible connectivité CI — vidéos UVCI compressées H.265 à 150 Kbps (vs. standard YouTube 1,5 Mbps), mode offline 30 jours permettant l'accès aux cours sans internet, taux d'accès cours maintenu > 95% même avec connexion 3G basique",
+        "source": "UVCI DSI / AUF Infrastructure 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "AUF (Agence Universitaire de la Francophonie) — Campus Numérique",
+        "country": "France / Afrique (Abidjan, Dakar, Lomé, Bamako)",
+        "key_practice": "Réseau de Campus Numériques Francophones (CNF) : salle informatique haute disponibilité (internet haut débit, sécurisée), serveur miroir local (cache des plateformes LMS pour réduire la latence), visioconférence subventionnée pour les cours en direct entre universités UEMOA, Moodle AUF hébergé en Europe avec CDN régional Afrique (Abidjan CNF comme nœud)",
+        "differentiator": "Réseau d'infrastructure partagée le plus étendu d'Afrique francophone — 83 Campus Numériques dans 48 pays dont 6 CI (Abidjan x3, Bouaké, Yamoussoukro, San-Pédro), cache local réduisant la latence Moodle de 8s à 1,2s pour les étudiants CI connectés via CNF",
+        "source": "AUF Rapport Campus Numériques 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Coursera / edX — Infrastructure cloud éducative mondiale",
+        "country": "États-Unis",
+        "key_practice": "Infrastructure AWS multi-région (US-East, EU-West, AP-Southeast) avec CDN CloudFront, vidéos adaptatives (auto-qualité selon bande passante : de 144p à 1080p), mode offline app mobile (cours téléchargeables pour 72h sans connexion), 142M utilisateurs simultanément servis, PRA RTO < 4 minutes (99,99% disponibilité SLA)",
+        "differentiator": "Infrastructure EdTech la plus scalable au monde — 142M utilisateurs actifs, 99,99% disponibilité SLA, adaptive bitrate (vidéo fluide même à 128 Kbps), mode offline 72h pour les zones à faible connectivité (Africa-ready by design depuis 2022)",
+        "source": "Coursera AWS Architecture / re:Invent 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Infrastructure 100% on-premise (serveurs physiques vieillissants, email local, aucune redondance), connectivité ADSL partagée insuffisante, pas de cloud, pas de mode offline.",
+    "level_2_developing": "Adoption partielle cloud (email Google/Microsoft, quelques fichiers Drive), Wi-Fi partiel campus, LMS hébergé on-premise avec pannes régulières, aucun CDN, vidéos non optimisées.",
+    "level_3_defined": "Google Workspace for Education ou Microsoft 365 Education généralisé, LMS cloud hébergé (AWS/AUF), Wi-Fi campus avec couverture > 70%, CDN basique, disponibilité LMS > 95%.",
+    "level_4_managed": "Infrastructure cloud-first (SaaS > 80%, on-premise résiduel), CDN optimisé (latence < 2s CI), mode offline application mobile, Starlink ou fibre ARTCI sur campus, disponibilité > 99%, monitoring infrastructure temps réel.",
+    "level_5_optimizing": "Infrastructure cloud native sécurisée, CDN global avec nœud régional CI, mode offline 30 jours, connectivité redondante (fibre + 4G + Starlink backup), disponibilité 99,9%+ SLA, PRA testé (RTO < 4h), conformité APDP CI hébergement données."
+  },
+  "regulations": [
+    {
+      "name": "ARTCI — Programme 'Écoles Connectées' (1 000 lycées publics fibrés d'ici 2026)",
+      "authority": "ARTCI (Autorité de Régulation des Télécommunications / TIC de Côte d'Ivoire)",
+      "description": "L'ARTCI a lancé le programme 'Écoles Connectées' dans le cadre de la stratégie nationale de connectivité CI 2020-2025 : raccordement en fibre optique de 1 000 lycées publics prioritaires (sur 1 847 lycées publics CI), débit garanti 100 Mbps/lycée, tarif subventionné ARTCI (réduction 70% vs. tarif commercial). Les lycées privés conventionnés peuvent bénéficier du programme si dans les zones fibrées. L'ARTCI impose aux opérateurs télécom CI (Orange, MTN, WISS) des obligations de service universel incluant la connectivité des établissements scolaires.",
+      "compliance_deadline": "2026 (objectif 1 000 lycées)",
+      "impact_on_sector": "Les établissements scolaires connectés ARTCI bénéficient d'un tarif fibre subventionné — levier clé pour le déploiement des LMS et des outils cloud dans les lycées publics CI auparavant exclus par le coût"
+    },
+    {
+      "name": "APDP CI — Hébergement des données apprenants et localisation des données",
+      "authority": "APDP (Autorité de Protection des Données Personnelles de Côte d'Ivoire)",
+      "description": "La Loi APDP CI 2013-450 impose des règles sur le transfert des données personnelles hors du territoire CI : tout transfert de données apprenants (résultats scolaires, comportements LMS, données personnelles) vers des serveurs hors CEDEAO/UEMOA nécessite une autorisation APDP préalable ou la signature de clauses contractuelles types (CCT). Les solutions cloud internationales (AWS, Google, Microsoft) doivent signer un Data Processing Agreement (DPA) conforme APDP CI. Les données sensibles de mineurs (< 18 ans) sont soumises à des règles plus strictes.",
+      "compliance_deadline": "En vigueur",
+      "impact_on_sector": "Conditionne le choix des solutions cloud éducatives — les établissements doivent vérifier que leurs fournisseurs SaaS (Google, Microsoft, Moodle hébergé) ont signé un DPA APDP CI, et idéalement choisir des hébergeurs avec data center en Afrique (AWS Cape Town, Microsoft Johannesburg, ou AUF Abidjan)"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Dépendance à la connectivité internet et interruptions pédagogiques lors des coupures",
+      "description": "En Côte d'Ivoire, les coupures internet sont fréquentes (estimées à 4-8 heures/semaine en moyenne selon ARTCI 2024) et affectent particulièrement les zones périurbaines et rurales. Pour un établissement 100% dépendant du cloud pour ses cours (LMS en ligne, vidéos streaming, visioconférence), une coupure de 2 heures peut interrompre 3 classes simultanément. L'UVCI a subi 12 interruptions de cours > 30 minutes en 2023, représentant 1 850 heures de formation perdues.",
+      "severity": "high",
+      "likelihood": "high",
+      "mitigation": "Architecture 'offline-first' : contenus pédagogiques synchronisés localement (app mobile offline, LMS avec cache service worker), redondance connectivité (fibre principale + 4G backup automatique + Starlink tertaire pour zones rurales), vidéos pré-téléchargeables avant les cours — UVCI a réduit ses interruptions de 12 à 2 en 2024 grâce à l'app offline + CDN Cloudflare"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Starlink Education pour les campus universitaires en zones périurbaines CI",
+      "description": "SpaceX a lancé un programme Starlink Education en 2024 proposant une connectivité satellitaire haut débit (200-400 Mbps) à tarif préférentiel pour les établissements éducatifs des zones rurales et périurbaines. En Côte d'Ivoire, les campus de Bouaké (UAO — Université Alassane Ouattara) et de Daloa souffrent d'une connectivité insuffisante (< 20 Mbps partagés). Un déploiement Starlink (kit 500 USD, abonnement 75 USD/mois éducation) permettrait d'ouvrir des formations hybrides et en ligne dans des zones actuellement exclues.",
+      "impact_level": "high",
+      "time_to_value": "< 1 an",
+      "prerequisite_maturity": "Niveau 2 — LMS disponible + énergie électrique stable sur le campus"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "Google.org — Google for Education Afrique subsaharienne",
+      "montant": "50M USD (programme global Africa, dont 8M USD CI + UEMOA)",
+      "investisseurs": ["Google.org (philanthropie Google)", "IFC", "BEI"],
+      "annee": 2024,
+      "description": "Google.org a lancé en 2024 un programme d'extension de Google Workspace for Education dans les établissements scolaires et universitaires d'Afrique subsaharienne. En Côte d'Ivoire, le programme couvre : accès gratuit Google Workspace for Education Plus pour 250 000 enseignants et 1,2M d'élèves (lycées conventionnés MENA CI), formation 5 000 enseignants CI aux outils Google Classroom, Chromebooks subventionnés pour 50 000 élèves de lycées publics connectés ARTCI. Partenariat de coordination avec MENA CI et ARTCI."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Infrastructure cloud hybride AUF + CDN Cloudflare + app mobile offline — Accessibilité maximale pour étudiants CI à faible connectivité",
+    "description": "L'UVCI a conçu dès sa création une infrastructure cloud optimisée pour les contraintes de connectivité ivoiriennes : (1) Moodle hébergé sur serveurs AUF (miroir Abidjan CNF + serveur principal Montréal) avec latence réduite grâce au nœud AUF Abidjan ; (2) CDN Cloudflare gratuit (ONG) pour les vidéos pédagogiques (compression H.265, streaming adaptatif 150 Kbps minimum) ; (3) App mobile UVCI (iOS + Android) avec mode offline complet : synchronisation des cours en Wi-Fi, disponibles sans connexion pendant 30 jours ; (4) Microsoft 365 Education pour les cours synchrones (Teams, calendrier, OneDrive) ; (5) Pilote Starlink sur 2 antennes campus Abidjan (400 Mbps — backup lors des coupures fibre Orange).",
+    "resultats": "Taux d'accès aux cours (étudiants réussissant à se connecter et compléter un module par semaine) : 94% (vs. 78% avant CDN Cloudflare et app offline en 2022). Interruptions cours > 30 min liées à la connectivité : 12 (2023) → 2 (2024, grâce au Starlink backup + CDN). Consommation data par étudiant pour 1 heure de cours vidéo UVCI : 110 MB (vs. 350 MB YouTube non optimisé = accès possible sur forfait 1 Go/semaine). Satisfaction infrastructure numérique des étudiants : 71% 'satisfaits ou très satisfaits' (vs. 48% en 2022). Hébergement conforme APDP CI : DPA signé avec AUF + Microsoft (clauses contractuelles types APDP).",
+    "source": "UVCI DSI Rapport Infrastructure 2024 / AUF Campus Numériques",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif infrastructure cloud — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "Cloud SaaS adopté", "LMS hébergement", "Mode offline disponible", "Connectivité campus"],
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "valeurs": ["Microsoft 365 Education + Cloudflare", "AUF (miroir Abidjan + Montréal)", "Oui (app mobile offline 30j)", "Fibre + Starlink backup (2024)"]
+      },
+      {
+        "organisation": "UFHB Abidjan",
+        "valeurs": ["Google Workspace Education", "Moodle partiel (on-premise + cloud)", "Non", "Fibre (campus Cocody, insuffisante)"]
+      },
+      {
+        "organisation": "Lycées publics CI",
+        "valeurs": ["Microsoft 365 (350K licences MENA)", "Pas de LMS (2024)", "Non", "18% lycées connectés fibre ARTCI"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue l'infrastructure cloud dans le secteur éducation CI : adoption de solutions SaaS éducatives (Google Workspace / Microsoft 365), hébergement LMS (cloud vs. on-premise), mode offline pour les zones à faible connectivité, conformité APDP CI pour l'hébergement des données apprenants, et qualité de la connectivité campus (ARTCI programme Écoles Connectées).",
+    "maturity_max_description": "Établissement éducatif CI avec infrastructure cloud native : Google Workspace / Microsoft 365 Education généralisé, LMS cloud hébergé (conformité DPA APDP CI signé), CDN optimisé pour faible bande passante (H.265, 150 Kbps), mode offline 30 jours app mobile, connectivité redondante (fibre + 4G + Starlink), disponibilité > 99,5%, PRA testé.",
+    "scoring_rubric": {
+      "score_1_to_20": "Infrastructure 100% on-premise vieillissante, email local, aucun cloud, connectivité ADSL insuffisante, pas de mode offline, aucune redondance.",
+      "score_21_to_40": "Email cloud (Google/Microsoft), Wi-Fi partiel campus, LMS on-premise avec pannes, aucun CDN, connectivité insuffisante pour le streaming vidéo.",
+      "score_41_to_60": "Google Workspace / Microsoft 365 généralisé, LMS cloud hébergé, Wi-Fi campus > 70%, CDN basique, disponibilité > 95%, DPA APDP CI en cours.",
+      "score_61_to_80": "Infrastructure cloud-first, CDN optimisé (latence < 2s), mode offline partiel, connectivité fibre ARTCI, disponibilité > 99%, monitoring infrastructure temps réel.",
+      "score_81_to_100": "Cloud native, CDN H.265 (150 Kbps), mode offline 30j, connectivité redondante (fibre + Starlink), disponibilité 99,9%+, DPA APDP CI signé, PRA testé RTO < 4h."
+    },
+    "prompt_injection_context": "Secteur éducation CI : ARTCI programme Écoles Connectées (1 000 lycées fibrés d'ici 2026 à tarif subventionné). MENA CI a signé un accord cadre Microsoft 365 Education (350K licences lycées publics). APDP CI impose des DPA pour les fournisseurs cloud hébergeant des données apprenants CI. La faible connectivité rurale (12% des zones rurales CI avec internet) impose une architecture offline-first. Starlink Education est disponible en CI (pilote UVCI 2024).",
+    "key_questions_for_llm": [
+      "Avez-vous migré vers des solutions cloud SaaS éducatives (Google Workspace for Education ou Microsoft 365 Education) ? Quel est votre niveau de dépendance on-premise résiduelle ?",
+      "Votre LMS est-il hébergé dans le cloud ? Avez-vous signé un Data Processing Agreement (DPA) conforme APDP CI avec votre fournisseur cloud ?",
+      "Votre plateforme éducative est-elle accessible en mode offline (app mobile) pour les étudiants en zones rurales ou à faible connectivité CI ?",
+      "Quelle est la qualité de votre connectivité campus (débit, redondance) ? Avez-vous bénéficié ou candidaté au programme ARTCI 'Écoles Connectées' ?",
+      "Disposez-vous d'un CDN pour optimiser la diffusion de vos contenus vidéos pédagogiques à faible bande passante (< 300 Kbps) pour les étudiants CI ?"
+    ]
+  }
+}

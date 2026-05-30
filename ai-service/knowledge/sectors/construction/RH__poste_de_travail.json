@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "RH",
+    "sous_axe": "poste_de_travail",
+    "version": "1.0",
+    "langue": "fr",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "Le poste de travail numérique dans le BTP CI est très hétérogène : les ingénieurs de bureau ont souvent un PC (parfois vieux de 7-10 ans), les chefs de chantier travaillent sur smartphone personnel, et les compagnons n'ont aucun outil numérique. La modernisation des postes de travail BTP CI est freinée par les coûts (PC durci IP65 pour le chantier : 600 000-1,5 M FCFA), la connectivité insuffisante sur les chantiers, et les pannes électriques CIE CI qui abîment le matériel. Un poste de travail numérique adapté au BTP CI doit être mobile (tablette durcie), résilient (batterie longue durée), fonctionnel en mode offline et protégé contre la poussière et la pluie.",
+    "chiffres_cles": [
+      "Age moyen des PC bureau dans les entreprises BTP CI : 6-8 ans (dépassé pour Revit/BIM)",
+      "Coût tablette durcie IP65 BTP CI : 600 000-1 500 000 FCFA (Panasonic FZ-G2, Dell Latitude Rugged)",
+      "Taux d'équipement tablette chantier BTP CI : < 8% des entreprises",
+      "Coupures électriques CIE CI : en moyenne 2-4 heures/jour dans certaines zones (impact matériel IT)",
+      "Performances Revit 2024 : nécessite minimum 32 Go RAM et GPU dédiée (PC de 5 ans souvent insuffisants)"
+    ],
+    "specificites_locales": [
+      "CIE CI : instabilité électrique justifiant des onduleurs sur tous les postes BTP CI critiques",
+      "ARTCI CI : certifications matériel réseau CI (routeurs 4G, modems ADSL/fibre)",
+      "Chaleur CI (28-38°C) : matériel IT doit être certifié pour températures élevées (tablettes durciées)",
+      "Connectivité chantier CI : 4G Orange CI ou MTN CI (variable), fibre optique absente sur chantiers",
+      "APDP CI : les postes de travail traitant des données personnelles doivent être sécurisés (MDM)"
+    ]
+  },
+  "definition_axe": {
+    "titre": "Poste de travail numérique adapté au BTP CI",
+    "description": "Capacité de l'entreprise BTP à doter ses collaborateurs (ingénieurs bureau, chefs de chantier, conducteurs de travaux, compagnons) de postes de travail numériques adaptés à leurs missions et à l'environnement BTP CI. Le poste de travail BTP CI couvre les PC de bureau pour la conception BIM (Revit, AutoCAD), les tablettes durciées pour les chefs de chantier (application chantier, plans), les smartphones pour la communication terrain, et la gestion centralisée de ces équipements (MDM, mise à jour, sécurité).",
+    "perimetre": [
+      "PC bureau ingénieurs : performance BIM (RAM, GPU, stockage SSD), stabilité alimentation électrique (onduleur)",
+      "Tablettes durciées chantier : IP65 (poussière + pluie), batterie longue durée, mode offline",
+      "Smartphones terrain : Android entrée/milieu de gamme, WhatsApp Business, applications terrain simples",
+      "MDM (Mobile Device Management) : gestion centralisée tablettes et smartphones chantier",
+      "Connectivité postes : routeur 4G multi-SIM chantier, Wi-Fi bureau, VPN pour accès cloud",
+      "Alimentation électrique sécurisée : onduleurs bureau, groupes électrogènes chantier"
+    ],
+    "technologies_cles": [
+      "PC BIM : Dell Precision / HP Z-Book — Station de travail pour Revit CI (32 Go RAM, GPU RTX)",
+      "Tablettes durciées chantier : Panasonic FZ-G2, Dell Latitude 7230 Rugged — IP65, -20°C à +60°C",
+      "Smartphones BTP CI : Samsung Galaxy A-series (milieu de gamme robuste) ou Doogee S98 (ultra-rugged)",
+      "Microsoft Intune (MDM) — Gestion centralisée tablettes et smartphones chantier CI",
+      "Onduleurs APC / Eaton CI — Protection alimentation PC bureau contre coupures CIE CI",
+      "Peplink Balance / Cisco Meraki — Routeur 4G multi-SIM pour connectivité chantier"
+    ]
+  },
+  "enjeux_specifiques": {
+    "enjeux": [
+      {
+        "titre": "PC bureau obsolètes bloquant l'adoption du BIM",
+        "description": "Revit 2024 (BIM) nécessite au minimum 32 Go de RAM et une GPU dédiée NVIDIA. La plupart des PC bureau des entreprises BTP CI ont 8-16 Go RAM et pas de GPU dédiée, rendant Revit inutilisable en conditions réelles. L'investissement en stations de travail BIM-ready est un prérequis non négociable pour l'adoption du BIM CI.",
+        "impact": "Blocage de l'adoption BIM CI, perte de compétitivité sur les marchés qui l'exigent (BNETD CI 2026)"
+      },
+      {
+        "titre": "Tablettes durciées vs. tablettes grand public sur les chantiers CI",
+        "description": "Les tablettes grand public (iPad Air, Samsung Galaxy Tab) ne survivent pas aux conditions des chantiers CI : poussière latéritique, pluies tropicales, chocs, chaleur extrême (38°C+). Les tablettes non durciées sont réparées ou remplacées en moyenne 2-3 fois par an sur un chantier CI, effaçant l'économie initiale. Les tablettes durciées IP65 durent 3-5 ans dans les mêmes conditions.",
+        "impact": "TCO (Coût Total de Possession) tablette durcie < tablette grand public sur 3 ans de chantier CI"
+      },
+      {
+        "titre": "Continuité du travail numérique malgré les coupures électriques CIE CI",
+        "description": "Les coupures électriques CIE CI (délestage) peuvent durer 2-6 heures et surviennent sans préavis. Sans onduleurs, les PC bureau perdent les données non sauvegardées (Revit crash = 1-2 heures de travail perdues), les routeurs s'éteignent (perte de connexion chantier), et les systèmes de pointage biométrique s'arrêtent.",
+        "impact": "Continuité de travail assurée, protection des données, disponibilité des applications cloud"
+      }
+    ]
+  },
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Inexistant",
+      "description": "PC bureau vieux (> 7 ans), partagés entre plusieurs collaborateurs. Aucune tablette chantier. Chefs de chantier utilisent leur smartphone personnel. Aucune gestion centralisée des équipements. Aucun onduleur, données perdues lors des coupures CIE CI.",
+      "signes_distinctifs": [
+        "PC bureau > 7 ans, 8 Go RAM max, pas de GPU — Revit/BIM impraticable",
+        "Chefs de chantier : smartphone personnel Android (pas de politique BYOD, pas de MDM)",
+        "Plans chantier imprimés sur papier ou PDF sur le téléphone personnel",
+        "Coupures CIE CI causent des pertes de données régulières (pas d'onduleur)",
+        "Aucune gestion centralisée des équipements IT"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "PC bureau plus récents pour les ingénieurs clés. Quelques tablettes grand public (Samsung Tab, iPad) distribuées aux chefs de chantier. Onduleurs sur quelques PC critiques. Pas encore de MDM ni de tablettes durciées. Politique BYOD informelle.",
+      "signes_distinctifs": [
+        "PC bureau 16-32 Go RAM pour les ingénieurs BIM (achat récent), PC partagés pour les autres",
+        "Tablettes Samsung Tab A / iPad pour 2-3 chefs de chantier (déjà abîmées sur le chantier)",
+        "Onduleurs APC sur les PC des ingénieurs BIM et du directeur technique",
+        "Politique BYOD non formalisée : smartphone personnel pour la communication terrain",
+        "Plans chantier en PDF sur tablette (non synchronisés, version non contrôlée)"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "PC BIM-ready pour tous les ingénieurs. Tablettes durciées IP65 pour les chefs de chantier avec MDM. Routeur 4G multi-SIM sur les chantiers principaux. Onduleurs généralisés. Applications entreprise déployées centralement via MDM. Politique de gestion des équipements formalisée.",
+      "signes_distinctifs": [
+        "PC HP/Dell 32 Go RAM + GPU NVIDIA pour tous les ingénieurs BIM (Revit fonctionnel)",
+        "Tablettes durciées Durabook / Panasonic pour les chefs de chantier (IP65, batterie 8h+)",
+        "MDM Microsoft Intune : applications d'entreprise déployées centralement, effacement distant",
+        "Routeur 4G Peplink multi-SIM (Orange CI + MTN CI) sur les chantiers > 100 M FCFA",
+        "Onduleurs généralisés bureau siège + groupes électrogènes chantier bureaux"
+      ]
+    },
+    "niveau_4": {
+      "label": "Optimisé",
+      "description": "Poste de travail numérique complet et sécurisé pour tous les profils BTP CI. Cloud PC (Windows 365) pour les ingénieurs mobiles. Tablettes durciées avec mode offline garanti. Réseau chantier fiable (4G + satellite backup). Zero Trust sécurité pour tous les équipements. Conformité APDP CI.",
+      "signes_distinctifs": [
+        "Windows 365 Cloud PC pour les ingénieurs itinérants : puissance BIM dans le cloud, sans PC lourd",
+        "Tablettes durciées avec mode offline complet (Procore offline, plans BIM en cache local)",
+        "Réseau chantier redondant : 4G + Starlink backup pour les zones sans couverture Orange/MTN CI",
+        "Zero Trust : tous les équipements (PC, tablettes, smartphones) gérés sous MDM avec conformité vérifiée",
+        "Chiffrement des données sur tous les appareils (BitLocker, Intune Device Compliance)"
+      ]
+    },
+    "niveau_5": {
+      "label": "Différenciant",
+      "description": "Poste de travail augmenté par l'IA et la réalité mixte. Casques de réalité augmentée (Microsoft HoloLens 2 ou Trimble XR10) pour la superposition des plans BIM sur le chantier réel. Wearables de sécurité pour les compagnons. Poste de travail virtuel entièrement dans le cloud.",
+      "signes_distinctifs": [
+        "Réalité augmentée BIM sur chantier : plans Revit superposés au chantier réel via casque AR",
+        "Wearables sécurité compagnons : badges RFID + capteurs chute pour la sécurité en temps réel",
+        "Poste de travail 100% virtuel (VDI/Cloud PC) : aucun PC physique au siège",
+        "Drones inspection automatisée avec analyse IA des images (sans pilote humain)",
+        "BIM sur lunettes AR : conducteur de travaux visualise les plans directement sur le chantier"
+      ]
+    }
+  },
+  "indicateurs_cles": {
+    "indicateurs": [
+      {
+        "nom": "Taux d'équipement des chefs de chantier en tablettes durciées",
+        "definition": "Pourcentage des chefs de chantier équipés d'une tablette durcie IP65 avec les applications d'entreprise déployées",
+        "unite": "%",
+        "cible_sectorielle": "100% des chefs de chantier sur chantiers > 50 M FCFA équipés en tablettes durciées",
+        "frequence_mesure": "Trimestrielle"
+      },
+      {
+        "nom": "Performance des PC BIM (% conformes aux exigences Revit)",
+        "definition": "Pourcentage des stations de travail ingénieurs satisfaisant aux spécifications minimales Revit 2024 (32 Go RAM, GPU dédiée, SSD 500 Go)",
+        "unite": "%",
+        "cible_sectorielle": "100% des postes ingénieurs BIM conformes aux exigences Revit 2024",
+        "frequence_mesure": "Annuelle"
+      },
+      {
+        "nom": "Taux de disponibilité des postes de travail (uptime)",
+        "definition": "Pourcentage du temps de travail où les postes (PC bureau, tablettes chantier) sont opérationnels",
+        "unite": "%",
+        "cible_sectorielle": "> 98% de disponibilité (incluant protection contre coupures CIE CI via onduleurs)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "TCO (Coût Total de Possession) par poste sur 3 ans",
+        "definition": "Coût total d'un poste de travail incluant achat, maintenance, réparation et remplacement sur 3 ans",
+        "unite": "FCFA/poste",
+        "cible_sectorielle": "TCO < 2 M FCFA/poste sur 3 ans (tablette durcie vs. x2-3 remplacements tablette grand public)",
+        "frequence_mesure": "Annuelle"
+      },
+      {
+        "nom": "Taux d'équipements gérés sous MDM",
+        "definition": "Pourcentage des tablettes et smartphones d'entreprise inscrits et gérés dans le système MDM (Microsoft Intune ou équivalent)",
+        "unite": "%",
+        "cible_sectorielle": "100% des équipements d'entreprise sous MDM (effacement distant, conformité sécurité)",
+        "frequence_mesure": "Mensuelle"
+      }
+    ]
+  },
+  "bonnes_pratiques": {
+    "pratiques": [
+      {
+        "titre": "Choisir des tablettes durciées IP65 pour les chefs de chantier CI",
+        "description": "Investir dans des tablettes durciées certifiées IP65 (protection poussière et pluie) pour tous les chefs de chantier. Modèles recommandés en CI : Durabook R8 (rapport qualité/prix optimal : 750 000 FCFA), Panasonic FZ-G2 (haut de gamme : 1,4 M FCFA), ou Dell Latitude 7230 Rugged (1,1 M FCFA). Prévoir une housse de protection supplémentaire pour la latérite CI. Le surcoût vs. tablette grand public est récupéré dès la première panne évitée.",
+        "benefice": "Durée de vie 3-5 ans sur chantier CI vs. 6-12 mois pour tablette grand public, TCO inférieur"
+      },
+      {
+        "titre": "Onduleurs sur tous les PC bureau critiques (BIM, ERP, comptabilité)",
+        "description": "Équiper tous les PC bureau critiques (ingénieurs BIM, responsable ERP, comptabilité) d'onduleurs APC Back-UPS Pro (capacité 30-60 min sans courant). En zones de délestage fréquent (Abidjan Nord, intérieur CI), prévoir des onduleurs de 1 heure et un générateur électrique pour les bureaux de chantier. Coût onduleur 650 VA : 70 000-120 000 FCFA.",
+        "benefice": "Zéro perte de données lors des coupures CIE CI, continuité de travail garantie, protection matériel"
+      },
+      {
+        "titre": "Déployer Microsoft Intune pour la gestion centralisée des tablettes",
+        "description": "Utiliser Microsoft Intune (inclus dans Microsoft 365 Business Premium) pour la gestion centralisée des tablettes chantier CI : déploiement automatique des applications d'entreprise (Procore, SharePoint, Teams), configuration Wi-Fi/VPN automatique, effacement à distance en cas de vol, politique de mot de passe obligatoire, conformité sécurité vérifiée avant accès aux données d'entreprise.",
+        "benefice": "Sécurité des données en cas de vol de tablette sur chantier, déploiement centralisé des mises à jour, conformité APDP CI"
+      },
+      {
+        "titre": "Stations de travail partagées BIM (workstation server + thin clients)",
+        "description": "Pour les PME BTP CI qui ne peuvent pas équiper chaque ingénieur en PC BIM-ready (coût 1-2 M FCFA/PC), déployer une station de travail puissante partagée (serveur BIM Windows Server 2022 + GPU RTX 4080) accessible en mode thin client (Remote Desktop) depuis des PC moins puissants. Ou opter pour Windows 365 Cloud PC (abonnement 25 000-50 000 FCFA/mois/utilisateur) pour un accès BIM complet depuis n'importe quel PC.",
+        "benefice": "Accès BIM professionnel sans investissement lourd par poste, évolutivité, pas de matériel obsolète"
+      },
+      {
+        "titre": "Politique BYOD sécurisée pour les smartphones terrain",
+        "description": "Formaliser la politique BYOD (Bring Your Own Device) pour les smartphones des chefs de chantier et compagnons : conteneur applicatif sécurisé (Microsoft Intune App Protection) pour les applications d'entreprise installées sur les smartphones personnels, séparation données personnelles / données d'entreprise, effacement sélectif des données d'entreprise en cas de départ. Budget BYOD : prime mensuelle de 10 000-20 000 FCFA aux employés utilisant leur smartphone personnel pour le travail.",
+        "benefice": "Pas de coût d'achat smartphone, adoption maximale car les employés utilisent leur propre appareil"
+      }
+    ]
+  },
+  "ecueils_frequents": {
+    "ecueils": [
+      {
+        "titre": "Acheter du matériel inadapté aux conditions de chantier CI",
+        "description": "Distribuer des tablettes grand public (Samsung Galaxy Tab, iPad) aux chefs de chantier CI est une économie de court terme qui coûte cher à moyen terme (remplacement tous les 6-12 mois à cause des chocs, pluies et poussière latéritique des chantiers CI).",
+        "solution": "Calculer le TCO sur 3 ans avant d'acheter : tablette durcie IP65 à 1 M FCFA × 1 = 1 M FCFA. Tablette grand public à 350 000 FCFA × 3 remplacements = 1,05 M FCFA + perte de données et de productivité lors de chaque panne"
+      },
+      {
+        "titre": "PC BIM sous-dimensionnés pour Revit",
+        "description": "Acheter des PC 'entrée de gamme' pour les ingénieurs BIM pour économiser sur les coûts est contre-productif : Revit devient inutilisable (crash fréquents, temps de rendu insupportables), les ingénieurs retournent à AutoCAD 2D, le BIM n'est jamais adopté.",
+        "solution": "Budget minimal PC BIM-ready en CI (2024) : 800 000-1 200 000 FCFA pour un PC avec 32 Go RAM, Intel Core i7 12e génération+, SSD 512 Go, GPU NVIDIA RTX 3060. Pas de compromis sur la RAM."
+      },
+      {
+        "titre": "Déployer des tablettes sans formation à leur utilisation sur le chantier",
+        "description": "Les tablettes distribuées sans formation pratique sont rangées dans un tiroir ou utilisées uniquement pour la navigation web et les réseaux sociaux personnels. Le retour sur investissement est nul.",
+        "solution": "Formation pratique obligatoire de 2 heures par tablette déployée, sur le chantier, avec l'application cible (Procore, Fieldwire). Formation réalisée par le champion digital du chantier."
+      }
+    ]
+  },
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau d'équipement numérique des postes de travail BTP entre organisations représentatives",
+    "lignes": [
+      {
+        "organisation": "COLAS CI",
+        "profil": "Filiale Bouygues Construction, parc IT géré par DSI groupe",
+        "niveau_maturite": 4,
+        "points_forts": "PC Dell Precision 32 Go RAM + GPU pour tous les ingénieurs BIM, tablettes durciées Panasonic FZ-G2 sur tous les grands chantiers CI, MDM Intune déployé sur 250+ équipements CI, routeurs 4G Peplink sur 100% chantiers > 500 M FCFA, onduleurs généralisés siège Abidjan",
+        "points_faibles": "Renouvellement matériel contraint par les cycles groupe (3-4 ans), quelques équipements CI encore sous-dimensionnés pour les nouvelles versions Revit",
+        "initiatives_notables": "Pilote AR (Réalité Augmentée) Trimble XR10 sur chantier autoroute Y2T : superposition plans BIM sur chantier réel — résultats : -35% erreurs de conformité détectées plus tôt"
+      },
+      {
+        "organisation": "BNETD CI",
+        "profil": "Agence étatique CI, parc IT géré par DSI BNETD",
+        "niveau_maturite": 3,
+        "points_forts": "PC bureau 16-32 Go RAM pour les ingénieurs, onduleurs généralisés au siège Abidjan (Plateau), tablettes Samsung Tab récentes pour les contrôleurs de travaux terrain",
+        "points_faibles": "Tablettes non durciées (grand public) sur le terrain, pas de routeur 4G dédié (usage mobiles personnels), renouvellement matériel lent (cycles budgétaires État CI)",
+        "initiatives_notables": "Projet de dotation tablettes durciées Durabook pour les 45 contrôleurs de travaux BNETD CI terrain (budget PND CI 2025)"
+      },
+      {
+        "organisation": "SATCI CI",
+        "profil": "Promoteur immobilier CI de taille intermédiaire",
+        "niveau_maturite": 3,
+        "points_forts": "PC Dell 32 Go RAM pour 3 ingénieurs BIM, tablettes Durabook R8 pour 8 chefs de chantier, MDM Intune déployé, onduleurs APC sur PC critiques, routeur Peplink sur 2 chantiers principaux",
+        "points_faibles": "12 chefs de chantier encore sur smartphone personnel (BYOD non formalisé), 4 PC ingénieurs encore < 16 Go RAM sans GPU, pas de backup Starlink",
+        "initiatives_notables": "Pilote Windows 365 Cloud PC pour 2 ingénieurs mobiles : accès Revit complet depuis n'importe quel PC — coût 45 000 FCFA/mois/utilisateur, économie vs. PC Precision 1,2 M FCFA"
+      },
+      {
+        "organisation": "PME BTP CI classe C-D",
+        "profil": "Entreprise BTP locale 20-100 employés",
+        "niveau_maturite": 1,
+        "points_forts": "Agilité, pas de lourdeur IT à gérer",
+        "points_faibles": "PC vieux (8 Go RAM, Windows 10 non mis à jour), chefs de chantier sur smartphone personnel, pas d'onduleur, pas de MDM, perte de données régulière lors des coupures CIE CI",
+        "initiatives_notables": "Achat de 2 tablettes Samsung Tab A pour les chefs de chantier principaux (non durciées, déjà endommagées après 8 mois)"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "SATCI CI — Déploiement de tablettes durciées Durabook R8 sur 8 chantiers résidentiels Abidjan",
+    "contexte": "SATCI CI gérait 8 chantiers résidentiels VEFA simultanément à Abidjan en 2022 (total : 850 logements). Les 8 chefs de chantier utilisaient leur smartphone personnel Samsung/Tecno pour les photos et WhatsApp. 3 avaient reçu des tablettes Samsung Galaxy Tab A en 2021, dont 2 étaient hors service après 9 mois (écran fissuré, infiltration eau pluie). L'application Procore ne pouvait pas être déployée sur les smartphones personnels sans MDM. La direction a décidé d'investir dans des tablettes durciées avec MDM en 2022.",
+    "probleme": "2 tablettes grand public sur 3 hors service après 9 mois (coût remplacement : 700 000 FCFA). Photos chantier sur smartphones personnels (données appartenant aux chefs de chantier, non récupérables en cas de départ). Aucun MDM : données d'entreprise sur appareils personnels, risque APDP CI. Procore non déployable sur smartphones personnels sans politique MDM. Chefs de chantier passent 1,5h/semaine à transférer les photos de leur smartphone vers le PC du bureau.",
+    "solution_deployee": "Achat de 8 tablettes Durabook R8 (IP65, MIL-STD-810H, batterie 13h, 1,55 kg) à 780 000 FCFA pièce. Déploiement MDM Microsoft Intune : Procore, SharePoint, Teams, plans PDF Autodesk. Housses protection supplémentaires pour chantiers latéritiques. Formation 2h chantier par champion digital SATCI CI. Politique de gestion matériel : tablette propriété SATCI CI, prêtée au chef de chantier, restituée en fin de chantier ou de contrat. Onduleurs APC Back-UPS 650VA sur les PC bureau siège (30 500 FCFA pièce).",
+    "resultats": {
+      "disponibilite_materiel": "0 tablette hors service sur les 8 Durabook en 18 mois (vs. 2/3 tablettes grand public en 9 mois)",
+      "tco_3ans": "TCO calculé Durabook R8 sur 3 ans : 780 000 FCFA. TCO Samsung Tab A sur 3 ans : 350 000 × 3 remplacements = 1 050 000 FCFA — économie de 270 000 FCFA/tablette sur 3 ans",
+      "photos_chantier": "Transfert photos supprimé : photos géolocalisées synchronisées automatiquement sur SharePoint — 1,5h/semaine/chef de chantier économisées",
+      "adoption_procore": "Procore déployé via Intune : taux d'utilisation 72% (vs. 0% sur smartphones personnels sans MDM)",
+      "securite_donnees": "Aucune fuite de données depuis le déploiement MDM (effacement distant utilisé 2 fois pour des chefs de chantier ayant quitté l'entreprise)",
+      "coupures_cie_ci": "Onduleurs bureau : 0 perte de données depuis 18 mois (vs. 3 incidents majeurs Revit en 6 mois avant installation)"
+    },
+    "enseignements": "Le principal obstacle a été la résistance de certains chefs de chantier à 'rendre' leur tablette personnelle (quelques-uns avaient acheté leur Samsung Tab sur leurs fonds propres et utilisaient l'appareil de manière mixte perso/pro). La clarification dès le départ que la tablette Durabook est propriété SATCI CI, prêtée à titre professionnel, a évité les ambiguïtés."
+  },
+  "ai_context": {
+    "scoring_rubric": {
+      "score_1_to_20": "PC bureau obsolètes (> 7 ans, 8 Go RAM). Aucune tablette chantier. Chefs de chantier sur smartphone personnel sans politique. Pas d'onduleur, pertes de données lors des coupures CIE CI. Aucune gestion centralisée des équipements.",
+      "score_21_to_40": "PC récents pour ingénieurs clés. Quelques tablettes grand public non durciées. Onduleurs sur PC critiques. Politique BYOD informelle. Aucun MDM.",
+      "score_41_to_60": "PC BIM-ready pour tous les ingénieurs. Tablettes durciées IP65 pour chefs de chantier. MDM déployé. Routeur 4G multi-SIM sur chantiers principaux. Onduleurs généralisés. Applications d'entreprise déployées centralement.",
+      "score_61_to_80": "Cloud PC ou workstation partagée BIM pour ingénieurs mobiles. Tablettes offline garanties. Réseau chantier redondant (4G + satellite backup). Zero Trust sécurité. Conformité APDP CI sur tous les équipements.",
+      "score_81_to_100": "Réalité augmentée BIM sur chantier (AR casques). Wearables sécurité compagnons. Poste de travail 100% virtuel. Drones inspection automatisée IA. Matériel de pointe adapté aux innovations BTP CI."
+    },
+    "questions_cles_diagnostic": [
+      "Vos ingénieurs BIM ont-ils des PC avec au moins 32 Go RAM et une GPU dédiée pour Revit ? Revit est-il utilisable en conditions réelles ?",
+      "Vos chefs de chantier ont-ils des tablettes d'entreprise (durciées IP65) ou utilisent-ils leur smartphone personnel ?",
+      "Avez-vous des onduleurs sur vos PC bureau pour protéger vos données lors des coupures CIE CI ?",
+      "Vos équipements mobiles (tablettes, smartphones) sont-ils gérés sous MDM (Microsoft Intune ou équivalent) ?",
+      "Avez-vous un routeur 4G dédié sur vos chantiers pour garantir la connectivité des applications cloud ?"
+    ],
+    "pieges_evaluation": [
+      "Ne pas confondre la présence d'un PC dans le bureau du chef de chantier avec un poste de travail numérique utilisable (âge, RAM, connectivité à évaluer)",
+      "Vérifier que les tablettes mentionnées sont durciées IP65 et non des tablettes grand public qui 'pour l'instant marchent encore'",
+      "Distinguer les équipements des filiales de groupes internationaux (souvent renouvelés tous les 3-4 ans) de l'équipement réel des PME BTP CI"
+    ]
+  },
+  "ressources": {
+    "references_reglementaires": [
+      "ARTCI CI — Certifications matériel réseau CI (routeurs 4G, modems)",
+      "APDP CI Loi 2013-450 — Protection données sur les équipements mobiles (MDM requis pour données personnelles)",
+      "CIE CI — Informations délestage et alimentation électrique pour les entreprises CI"
+    ],
+    "outils_recommandes": [
+      "Durabook R8 / Panasonic FZ-G2 — Tablettes durciées IP65 pour chefs de chantier BTP CI",
+      "Dell Precision / HP ZBook — Stations de travail BIM (32 Go RAM, GPU NVIDIA) pour ingénieurs CI",
+      "Microsoft Intune — MDM pour gestion centralisée tablettes et smartphones BTP CI",
+      "APC Back-UPS Pro — Onduleurs pour PC bureau contre coupures CIE CI",
+      "Peplink Balance 310 — Routeur 4G multi-SIM Orange CI / MTN CI pour chantiers",
+      "Windows 365 Cloud PC — Alternative PC lourd pour ingénieurs BIM mobiles CI"
+    ],
+    "formations_certifications": [
+      "Microsoft Intune Administration — Formation MDM pour responsables IT BTP CI",
+      "Autodesk Certified Hardware (liste) — Vérification compatibilité matériel Revit/AutoCAD",
+      "CNBTP CI — Recommandations équipement numérique pour les entreprises BTP CI agréées"
+    ]
+  }
+}

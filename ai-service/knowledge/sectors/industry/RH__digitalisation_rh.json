@@ -1,0 +1,241 @@
+{
+  "axe": "RH",
+  "sous_axe": "Digitalisation RH",
+  "secteur": "industrie",
+  "description": "Digitalisation des processus RH dans l'industrie ivoirienne : SIRH, gestion de la paie (Mobile Money CI), pilotage des compétences techniques Industrie 4.0, conformité Code du Travail CI et CNPS CI.",
+  "maturite_niveaux": {
+    "initial": "Gestion RH 100% papier. Fiches de paie manuelles. Plannings production sur tableau blanc. Dossiers employés en classeurs physiques. Aucun SIRH.",
+    "en_developpement": "Excel pour la paie et les présences. Contrats numérisés en PDF. Pas de SIRH structuré. Déclarations CNPS CI envoyées manuellement.",
+    "structure": "SIRH basique déployé (paie, congés, absences). Fiches de paie générées automatiquement. Plannings de production digitaux. Déclarations CNPS CI via portail en ligne.",
+    "avance": "SIRH complet avec gestion des compétences (habilitations, certifications techniques, formations Industrie 4.0). Paie intégrée Mobile Money CI pour les opérateurs. Suivi des performances individuelles lié aux KPIs production.",
+    "optimise": "SIRH intégré à l'ERP de production. Gestion prédictive des compétences Industrie 4.0. Self-service RH complet pour les employés. Analytics RH : turn-over prédictif, planification des besoins en compétences digitales. Conformité APDP CI certifiée."
+  },
+  "questions_diagnostic": [
+    {
+      "id": "RH_digitalisation_rh_Q1",
+      "question": "Utilisez-vous un SIRH (Système d'Information des Ressources Humaines) pour gérer la paie, les congés et les contrats ?",
+      "type": "choix_unique",
+      "options": ["Non, gestion entièrement sur Excel/papier", "Excel avancé avec macros paie", "Logiciel de paie dédié (Sage Paie, Cegid)", "SIRH intégré (Odoo HR, SAP HCM) avec paie, congés, formations", "SIRH complet avec analytics RH et self-service employés"],
+      "poids": 25
+    },
+    {
+      "id": "RH_digitalisation_rh_Q2",
+      "question": "Comment versez-vous les salaires de vos opérateurs de production (souvent non bancarisés) ?",
+      "type": "choix_unique",
+      "options": ["Cash uniquement", "Virement bancaire pour tous (limité aux bancarisés)", "Virement bancaire + retrait cash pour les non-bancarisés", "Mix virement bancaire + Mobile Money CI (Orange Money, Wave, MTN)", "100% Mobile Money CI ou virement bancaire pour tous les employés"],
+      "poids": 20
+    },
+    {
+      "id": "RH_digitalisation_rh_Q3",
+      "question": "Gérez-vous digitalement les habilitations et certifications techniques de vos employés (permis de conduire engins, habilitations électriques, formations HACCP, certifications Industrie 4.0) ?",
+      "type": "choix_unique",
+      "options": ["Non, classeurs papier", "Fichier Excel suivi manuellement", "Module SIRH basique (liste et dates d'expiration)", "SIRH avec alertes automatiques d'expiration et planification renouvellements", "SIRH intégré LMS avec suivi formations, e-certifications et lien performance"],
+      "poids": 20
+    },
+    {
+      "id": "RH_digitalisation_rh_Q4",
+      "question": "Vos déclarations sociales (CNPS CI, impôts DIPE, DADS) sont-elles réalisées via les portails digitaux officiels ?",
+      "type": "choix_unique",
+      "options": ["Non, dépôt physique uniquement", "Partiellement (quelques déclarations en ligne)", "CNPS CI portail en ligne systématique", "CNPS CI + DGI CI télédéclaration intégrée au SIRH", "Déclarations automatisées depuis le SIRH sans ressaisie"],
+      "poids": 20
+    },
+    {
+      "id": "RH_digitalisation_rh_Q5",
+      "question": "Planifiez-vous digitalement les équipes de production (planning des postes, gestion des heures supplémentaires, remplacement d'urgence) ?",
+      "type": "choix_unique",
+      "options": ["Tableau blanc ou feuille papier affichée", "Excel ou Google Sheets partagé", "Module planning SIRH ou ERP", "Planning digital intégré avec alertes SMS/WhatsApp aux opérateurs", "Planning prédictif basé sur la charge de production MES avec auto-suggestion"],
+      "poids": 15
+    }
+  ],
+  "pratiques_recommandees": [
+    {
+      "titre": "Déploiement SIRH adapté industrie CI (Odoo HR ou Sage Paie CI)",
+      "description": "Déployer un SIRH couvrant au minimum : gestion de la paie conforme Code du Travail CI (heures sup +25%/+50%, primes, congés légaux), déclarations CNPS CI automatisées, gestion des absences. Odoo HR est recommandé si Odoo Manufacturing déjà déployé (synergie forte). Sage Paie CI est l'alternative locale avec expertise d'intégrateurs CI disponibles. Budget : 1,5-5 M FCFA selon taille.",
+      "priorite": "haute",
+      "effort": "élevé",
+      "impact": "très fort"
+    },
+    {
+      "titre": "Paiement des salaires via Mobile Money CI",
+      "description": "Migrer les paiements de salaires des opérateurs vers Orange Money Business CI ou Wave for Business CI. Avantages : instantanéité (vs. 3-5 jours virements bancaires), inclusion financière des opérateurs non-bancarisés (55% en CI selon BCEAO), réduction des risques de transport de cash. API Orange Money Business CI accessible aux PME industrielles. Coût de transaction : 0,5-1% selon volume.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Gestion digitale des habilitations techniques",
+      "description": "Créer dans le SIRH un module de gestion des habilitations critiques : permis cariste (OHSAS CI), habilitations électriques (NF C 18-510 adaptée CI), certifications HACCP (ISO 22000), formations SCADA/MES spécifiques. Alertes automatiques 60 jours avant expiration, déclenchement automatique du plan de formation. Réduit le risque de non-conformité lors d'audits ISO.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Télédéclarations CNPS CI et DGI CI automatisées",
+      "description": "Paramétrer le SIRH pour générer automatiquement les fichiers de déclaration CNPS CI (prestations et cotisations) au format accepté par le portail en ligne CNPS CI. Idem pour les déclarations DGI CI (DIPE, DADS). Économie estimée : 2-3 jours/mois de travail RH, réduction des pénalités de retard.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Self-service RH pour les cadres (congés, notes de frais)",
+      "description": "Déployer le portail self-service SIRH pour les cadres et fonctions support : demandes de congés en ligne (workflow validation manager), notes de frais digitales avec justificatifs photo (remplace la liasse papier), accès aux fiches de paie en ligne. Impact cultural fort : démonstration visible de la digitalisation RH.",
+      "priorite": "moyenne",
+      "effort": "faible",
+      "impact": "moyen"
+    }
+  ],
+  "outils_solutions": [
+    {
+      "categorie": "SIRH et paie",
+      "solutions": [
+        {
+          "nom": "Odoo HR / Payroll",
+          "description": "Module RH intégré Odoo. Gestion paie, congés, absences, recrutement, notes de frais. Paramétrable pour le droit du travail CI (OHADA, Code du Travail CI). Synergie forte avec Odoo Manufacturing. Communauté locale CI d'intégrateurs disponible.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Inclus dans Odoo ou module additionnel ~500 000 FCFA/an"
+        },
+        {
+          "nom": "Sage Paie CI",
+          "description": "Logiciel de paie leader en Afrique francophone. Paramétré pour la réglementation CI (CNPS, DGI, Code du Travail). Support local Côte d'Ivoire disponible. Utilisé par de nombreuses industries et cabinets comptables CI.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "500 000 - 2 M FCFA/an selon taille"
+        },
+        {
+          "nom": "SAP HCM / SuccessFactors",
+          "description": "SIRH groupe pour les grandes industries (SIFCA CI, SUCAF CI). Puissant mais coûteux. Pertinent uniquement pour les entreprises avec >500 employés ou faisant partie d'un groupe international.",
+          "pertinence_locale": "moyenne (grandes industries)",
+          "cout_estime": "Très variable selon contrat groupe"
+        }
+      ]
+    },
+    {
+      "categorie": "Paiements salaires Mobile Money",
+      "solutions": [
+        {
+          "nom": "Orange Money Business CI API",
+          "description": "API B2B Orange CI pour paiements salaires en masse. Virement instantané sur compte Orange Money des employés. Support API REST, tableau de bord business, rapprochement automatique. Disponible pour les entreprises enregistrées CI.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "0,5-1% par transaction selon volume contractuel"
+        },
+        {
+          "nom": "Wave for Business CI",
+          "description": "Alternative Orange Money, frais de transaction plus bas (0,5%), interface business simple. Croissance forte en CI. Idéal pour PME.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "0,5% par transaction"
+        }
+      ]
+    }
+  ],
+  "indicateurs_cles": [
+    {
+      "nom": "Taux de digitalisation de la paie",
+      "description": "Pourcentage d'employés recevant leur salaire par voie digitale (virement bancaire ou Mobile Money CI)",
+      "unite": "%",
+      "cible_sectorielle": "100% (zéro distribution cash)"
+    },
+    {
+      "nom": "Délai de traitement de la paie",
+      "description": "Nombre de jours ouvrés entre la clôture du mois et le versement des salaires",
+      "unite": "jours",
+      "cible_sectorielle": "<3 jours (vs. 5-8 jours sans SIRH)"
+    },
+    {
+      "nom": "Taux de conformité habilitations",
+      "description": "Pourcentage des employés dont toutes les habilitations obligatoires sont à jour",
+      "unite": "%",
+      "cible_sectorielle": "100% (zéro habilitation expirée sur postes à risque)"
+    },
+    {
+      "nom": "Pénalités CNPS CI et DGI CI",
+      "description": "Montant annuel des pénalités pour retard de déclaration ou erreur",
+      "unite": "FCFA",
+      "cible_sectorielle": "0 FCFA (zéro pénalité grâce à l'automatisation)"
+    }
+  ],
+  "reglementations_normes": [
+    {
+      "nom": "Code du Travail CI Loi 2015-532",
+      "description": "Réglemente les conditions de travail, les heures supplémentaires (+25% jours ouvrés, +50% jours fériés et nuits), les congés légaux (26 jours/an), le SMIG CI (75 000 FCFA/mois). Le SIRH doit être paramétré pour ces spécificités.",
+      "organisme": "Ministère de l'Emploi CI",
+      "obligatoire": true
+    },
+    {
+      "nom": "CNPS CI (Caisse Nationale de Prévoyance Sociale)",
+      "description": "Déclarations mensuelles des cotisations sociales (15,4% employeur + 6,3% employé). Sanctions sévères pour retard. La digitalisation des déclarations via le portail CNPS CI est fortement recommandée.",
+      "organisme": "CNPS CI",
+      "obligatoire": true
+    },
+    {
+      "nom": "APDP CI Loi 2013-450",
+      "description": "Le SIRH contient des données personnelles sensibles (salaires, données bancaires, évaluations). Déclaration du SIRH à l'APDP CI obligatoire. Contrôle des accès, chiffrement des données, politique de conservation.",
+      "organisme": "APDP CI",
+      "obligatoire": true
+    },
+    {
+      "nom": "OHADA Acte uniforme droit du travail",
+      "description": "Cadre juridique régional UEMOA. Les contrats de travail et registres du personnel doivent être conservés selon les prescriptions OHADA. La GED du SIRH doit assurer cette conservation.",
+      "organisme": "OHADA / Ministère Justice CI",
+      "obligatoire": true
+    }
+  ],
+  "comparatif_organisations": {
+    "organisation": "Comparaison de la maturité RH digitale dans les industries ivoiriennes",
+    "lignes": [
+      {
+        "organisation": "SUCAF CI (sucrerie, ~2000 emp.)",
+        "sirh": "SAP HCM groupe",
+        "paie_mobile_money": "Orange Money Business CI",
+        "habilitations_digitales": "Module SAP avec alertes",
+        "declarations_cnps": "Automatisées depuis SAP",
+        "niveau_global": "Avancé"
+      },
+      {
+        "organisation": "TRITURAF CI (~450 emp.)",
+        "sirh": "Odoo HR + Sage Paie CI",
+        "paie_mobile_money": "Virement bancaire + Wave CI",
+        "habilitations_digitales": "Excel avec alertes manuelles",
+        "declarations_cnps": "Portail CNPS CI en ligne",
+        "niveau_global": "Structuré"
+      },
+      {
+        "organisation": "PME agroalimentaire Abidjan (~80 emp.)",
+        "sirh": "Excel paie",
+        "paie_mobile_money": "Cash partiellement",
+        "habilitations_digitales": "Classeur papier",
+        "declarations_cnps": "Dépôt physique",
+        "niveau_global": "Initial"
+      },
+      {
+        "organisation": "CIPA CI (~520 emp.)",
+        "sirh": "Odoo HR complet",
+        "paie_mobile_money": "100% Orange Money Business CI",
+        "habilitations_digitales": "Odoo module habilitations",
+        "declarations_cnps": "Intégrées Odoo → CNPS CI",
+        "niveau_global": "Avancé"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "COGIT CI — Migration paiements salaires vers Mobile Money CI : 100% des 180 employés inclus",
+    "contexte": "COGIT CI (Compagnie d'Emballages Généraux et Industriels Tropicaux), Yopougon-Abidjan, 180 employés dont 135 opérateurs de production. En 2022, 60% des opérateurs n'avaient pas de compte bancaire. La paie mensuelle nécessitait 3 jours de préparation Excel et la distribution de cash à l'usine par deux responsables RH, avec les risques sécuritaires associés (transport, comptage).",
+    "probleme": "Distribution de cash : risque sécurité fort (vol, erreurs de comptage), coût logistique élevé (déplacements agence bancaire, frais de retrait), délai paie souvent 7-10 jours après la fin du mois, tension sociale liée aux retards. 3 incidents de sécurité en 2021.",
+    "solution": "Déploiement en 3 mois : (1) SIRH Odoo HR + Sage Paie CI pour automatisation calcul paie — 2,2 M FCFA ; (2) Partenariat Orange Money Business CI : ouverture de comptes Orange Money pour les 135 opérateurs non-bancarisés (séance d'inscription collective sur site avec un agent Orange CI) — 2 jours ; (3) Virement en masse : module Sage Paie CI → export fichier virement Orange Money Business CI API → validation DRH → virement instantané.",
+    "resultats": "100% des 180 employés payés digitalement depuis mois 4. Délai de paie : 10 jours → 2 jours après clôture mensuelle. Incidents sécurité distribution cash : 3 → 0. Coût logistique distribution cash éliminé : économie 1,8 M FCFA/an. Satisfaction employés (enquête interne) : 4,1/5 sur le système de paiement (vs. 2,8/5 avant). 3 réclamations de paie/mois vs. 15 réclamations avant (meilleure lisibilité des bulletins). ROI SIRH total : remboursement en 18 mois."
+  },
+  "ai_context": {
+    "focus_llm": "Évaluer la maturité des processus RH digitaux dans l'industrie ivoirienne en tenant compte du contexte local : faible taux de bancarisation (Mobile Money CI comme solution de paiement salaires), réglementation CNPS CI et Code du Travail CI spécifiques, importance des habilitations techniques dans les industries dangereuses. La conformité APDP CI pour les données RH est un enjeu croissant.",
+    "pieges_a_eviter": [
+      "Ne pas supposer que tous les opérateurs CI ont un compte bancaire : Mobile Money CI est la solution pour les non-bancarisés",
+      "Ne pas ignorer la spécificité réglementaire CI (CNPS CI, Code du Travail CI Loi 2015-532) dans les recommandations de SIRH",
+      "Éviter de recommander des SIRH non localisés pour la CI sans mentionner la nécessité de paramétrage pour le droit local",
+      "Ne pas négliger les habilitations techniques : dans les industries dangereuses (chimie, ATEX), une habilitation expirée est un risque grave et un motif de non-conformité lors des audits"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Gestion RH 100% papier/Excel. Paie en cash. Aucune déclaration CNPS CI en ligne. Dossiers employés physiques. Aucune traçabilité des habilitations.",
+      "score_21_to_40": "Excel paie avec quelques automatisations. Quelques virements bancaires. Portail CNPS CI utilisé partiellement. Habilitations sur fichier Excel.",
+      "score_41_to_60": "SIRH basique opérationnel (paie + congés). Mobile Money CI pour une partie des opérateurs. Déclarations CNPS CI en ligne systématiques. Module habilitations basique.",
+      "score_61_to_80": "SIRH complet intégré ERP. 100% paiements digitaux (virement + Mobile Money CI). Habilitations avec alertes automatiques. Self-service RH pour cadres. Conformité APDP CI.",
+      "score_81_to_100": "SIRH intégré production avec analytics RH prédictifs. 100% digital sur tous les processus RH. Automatisation complète déclarations légales CI. Gestion prédictive des compétences Industrie 4.0. Audit APDP CI passé."
+    }
+  }
+}

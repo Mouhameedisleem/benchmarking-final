@@ -1,0 +1,285 @@
+{
+  "secteur": "btp",
+  "axe": "MODELE_OP",
+  "sous_axe": "innovation",
+  "label": "Innovation et R&D digitale BTP",
+  "description": "Capacité des entreprises BTP à innover technologiquement et numériquement : adoption BIM de niveau avancé (4D/5D), impression 3D construction, drones IA, réalité mixte chantier, matériaux locaux innovants (BLS/LBTP CI), et modèles économiques nouveaux liés à l'innovation en Côte d'Ivoire et UEMOA.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Innovation BTP CI : dominée par les filiales groupes internationaux (COLAS CI, Bouygues CI) — PME locales en retard structurel",
+      "BIM 4D (planning) et 5D (coût) : adoption naissante CI — < 5% entreprises BTP CI utilisent BIM 4D",
+      "Impression 3D construction : expérimentale CI — LBTP CI surveille mais aucun projet commercial en 2024",
+      "Drones IA chantier : ARTCI CI réglementation — autorisation spécifique < 150m altitude, usage commercial",
+      "Matériaux locaux innovants : BLS (Briques Latérite Stabilisée) LBTP CI, béton GGBVS (laitier sidérurgique)",
+      "Réalité mixte chantier : Microsoft HoloLens 2 (400 000 FCFA/unité) — expérimental BTP CI, COLAS CI tests pilotes",
+      "PropTech CI : visite virtuelle 360° (Matterport), BIM viewer client — différentiation promoteurs VEFA"
+    ],
+    "acteurs_cles": [
+      "LBTP CI — Laboratoire du BTP : recherche matériaux locaux innovants, normes BLS, béton local CI",
+      "INP-HB Yamoussoukro — École des Mines et Géologie : formation BIM, partenariats R&D BTP CI",
+      "ARTCI CI — réglementation drones usage commercial CI, autorisation vol < 150m",
+      "BNETD CI — pilotes BIM 4D/5D sur projets infrastructure CI > 5 Mds FCFA",
+      "Agence Emploi Jeunes CI / ANADER — financement startups construction innovantes",
+      "Buildwise / CSTB France — partenariats R&D BTP francophone Afrique"
+    ],
+    "reglementation_locale": [
+      "ARTCI CI Décision 2019-0297 : réglementation drones CI — autorisation commerciale, zone de vol, altitude < 150m",
+      "LBTP CI normes NCI (Normes Ivoiriennes) : homologation matériaux innovants CI — BLS, béton local",
+      "BNETD CI Directive BIM 2023 : BIM imposé progressivement projets État CI > 5 Mds FCFA — BIM 3D obligatoire, 4D encouragé",
+      "OHADA Acte uniforme : protection innovations BTP CI — propriété intellectuelle OAPI (Bureau Africain Propriété Intellectuelle)",
+      "OAPI (Organisation Africaine de la Propriété Intellectuelle) : dépôt brevets innovations BTP en Afrique",
+      "FDFP CI Décret 96-287 : financement R&D via formations certifiantes (INP-HB, Buildwise) à 70-80%"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Aucune innovation digitale. Méthodes construction des années 1990. AutoCAD 2D uniquement. Aucun drone, aucune impression 3D, aucun intérêt pour les matériaux innovants. Innovation = achat d'un nouveau coffrage.",
+      "indicateurs": [
+        "AutoCAD 2D — aucune maquette BIM 3D jamais produite",
+        "0 expérimentation drone, impression 3D ou réalité mixte",
+        "Matériaux : 100% conventionnels (ciment, sable, gravier traditionnels CI)",
+        "0 veille technologique formelle — information par bouche-à-oreille",
+        "0 budget R&D / innovation — aucune ligne budgétaire"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "BIM 3D adopté sur quelques projets. Notions de BIM 4D/5D sans implémentation. Drones utilisés ponctuellement pour photos aériennes (sans analyse IA). Curiosité pour les matériaux innovants LBTP CI sans expérimentation.",
+      "indicateurs": [
+        "BIM 3D Revit utilisé — aucun BIM 4D ou 5D",
+        "Drones photos aériennes ponctuels — pas d'autorisation ARTCI CI formelle",
+        "Matériaux innovants : essais LBTP CI consultés mais non utilisés en projet",
+        "Veille technologique informelle : 1-2 personnes lisent des articles sectoriels",
+        "0 budget R&D — expérimentations financées sur budget formation"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "BIM 4D (planning) sur projets > 1 Md FCFA. Drones ARTCI CI autorisés — orthophotos et relevés topographiques. Tests matériaux LBTP CI (BLS) en cours. Budget innovation 1-2% CA. Veille technologique organisée. Partenariat INP-HB ou LBTP CI.",
+      "indicateurs": [
+        "BIM 4D planning lié maquette sur 1+ projet livré",
+        "Drones ARTCI CI autorisés : orthophotos + relevés topo chantier — 2+/mois",
+        "Tests BLS LBTP CI en cours : 1+ prototypes construits",
+        "Budget innovation 1-2% CA — suivi DSI/DG",
+        "Partenariat formel INP-HB Yamoussoukro ou LBTP CI pour R&D matériaux"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "BIM 5D (coût intégré) systématique. Drones IA analyse automatique avancement chantier. BLS ou béton local innovant LBTP CI sur projets commerciaux. Réalité mixte (tablette AR) pour contrôle conformité BIM. Budget R&D 3-5% CA. Brevets OAPI déposés.",
+      "indicateurs": [
+        "BIM 5D systématique : métrés auto → ERP → EVA mensuel — 2+ projets livrés",
+        "Drones IA : analyse avancement automatique hebdomadaire vs. planning BIM 4D",
+        "BLS ou béton local LBTP CI : 1+ bâtiment commercial livré avec matériaux innovants CI",
+        "AR/Réalité mixte tablette : contrôle conformité BIM sur chantier — 1+ projet",
+        "Budget R&D 3-5% CA. OAPI : 1+ brevet déposé"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Leadership innovation BTP CI. BIM 6D (développement durable, énergie UEMOA). Impression 3D construction prototype LBTP CI. IA prédictive maintenance et qualité. Startup ou spin-off PropTech/ConTech lancée. Référence Afrique de l'Ouest innovation BTP.",
+      "indicateurs": [
+        "BIM 6D énergie CI : simulations thermiques, certification HQE Africa ou EDGE UEMOA",
+        "Impression 3D construction : 1+ prototype validé LBTP CI ou projet pilote livré",
+        "IA prédictive : maintenance préventive, détection fissures drones IA — 0 incident non anticipé",
+        "ConTech / PropTech CI lancée : startup issue ou spin-off — 1+ M FCFA revenus",
+        "Référence CNBTP CI et INP-HB CI innovation BTP — publications, conférences UEMOA"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Utilisez-vous BIM 4D (lien planning) ou BIM 5D (lien coûts) sur vos projets ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — AutoCAD 2D ou BIM 3D uniquement"},
+        {"valeur": 2, "label": "BIM 3D utilisé — notions BIM 4D sans implémentation"},
+        {"valeur": 3, "label": "BIM 4D sur 1+ projet livré — planning lié maquette"},
+        {"valeur": 4, "label": "BIM 5D systématique — métrés auto + EVA mensuel"},
+        {"valeur": 5, "label": "BIM 6D — énergie, durabilité, certification HQE Africa/EDGE"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Utilisez-vous des drones sur vos chantiers avec autorisation ARTCI CI ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — aucun drone utilisé"},
+        {"valeur": 2, "label": "Drones ponctuels sans autorisation ARTCI CI formelle"},
+        {"valeur": 3, "label": "Drones ARTCI CI autorisés — orthophotos et relevés topo"},
+        {"valeur": 4, "label": "Drones IA — analyse automatique avancement vs BIM 4D"},
+        {"valeur": 5, "label": "Drones IA + maintenance prédictive — 0 incident non anticipé"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Expérimentez-vous des matériaux innovants locaux (BLS LBTP CI, béton local innovant) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — matériaux 100% conventionnels"},
+        {"valeur": 2, "label": "Essais LBTP CI consultés — aucun test en projet réel"},
+        {"valeur": 3, "label": "Tests BLS LBTP CI en cours — prototypes chantier"},
+        {"valeur": 4, "label": "BLS / béton innovant sur 1+ bâtiment commercial livré"},
+        {"valeur": 5, "label": "R&D matériaux locaux — brevet OAPI déposé, partenariat LBTP CI"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Disposez-vous d'un budget R&D/innovation formalisé ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — 0 budget R&D"},
+        {"valeur": 2, "label": "Expérimentations sur budget formation — non formalisé"},
+        {"valeur": 3, "label": "Budget innovation 1-2% CA — suivi direction"},
+        {"valeur": 4, "label": "Budget R&D 3-5% CA — projets pilotes formalisés, ROI mesuré"},
+        {"valeur": 5, "label": "Fonds R&D + startup ConTech/PropTech lancée — revenus innovation"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "BIM 4D/5D déployé",
+      "Drones IA autorisés ARTCI CI",
+      "Matériaux innovants LBTP CI",
+      "Budget R&D formalisé",
+      "Brevets/spin-off innovation"
+    ],
+    "lignes": [
+      {
+        "organisation": "PME BTP CI classe D-E",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "AutoCAD 2D, 0 drone, matériaux conventionnels, 0 R&D, 0 innovation"
+      },
+      {
+        "organisation": "AGEROUTE CI",
+        "scores": [3, 4, 2, 3, 2],
+        "note_globale": 3,
+        "commentaire": "BIM 4D sur projets CI, drones ARTCI CI autorisés, budget R&D partiel, aucun brevet"
+      },
+      {
+        "organisation": "SATCI CI",
+        "scores": [3, 3, 3, 3, 2],
+        "note_globale": 3,
+        "commentaire": "BIM 4D déployé, drones autorisés, tests BLS LBTP CI, budget 2% CA, 0 brevet"
+      },
+      {
+        "organisation": "COLAS CI",
+        "scores": [5, 4, 4, 5, 4],
+        "note_globale": 4,
+        "commentaire": "BIM 5D systématique, drones IA pilotes, BLS expérimental, budget 4% CA, pilotes HoloLens 2"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "LBTP CI — innovation matériaux locaux BTP",
+      "part_de_marche_estimee": "Référence nationale R&D matériaux BTP",
+      "forces": ["Laboratoire accrédité CI", "Normes NCI matériaux locaux", "BLS homologuées", "Partenariat INP-HB Yamoussoukro"],
+      "faiblesses": ["Budget R&D limité État CI", "Lenteur homologation innovations", "Peu de liens avec acteurs privés"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "CSTB Afrique (Centre Scientifique et Technique du Bâtiment) — partenariat Buildwise",
+      "part_de_marche_estimee": "R&D BTP francophone Afrique",
+      "forces": ["50 ans R&D BTP", "Partenariats laboratoires UEMOA", "Certifications HQE Africa", "Normes matériaux tropicaux"],
+      "faiblesses": ["Présence physique CI limitée", "Coûts certifications HQE élevés PME CI"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "Autodesk Construction Cloud — BIM 4D/5D/6D et innovation",
+      "part_de_marche_estimee": "Leader mondial BIM avancé",
+      "forces": ["BIM 4D Autodesk Timeliner", "BIM 5D Quantity Takeoff", "IA analyse drones intégrée", "Construction IQ prédictif"],
+      "faiblesses": ["Coût USD — change FCFA volatil", "Infrastructure réseau CI requise (BIM 5D lourd)", "Formation longue"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Autodesk Revit + Navisworks — BIM 4D/5D",
+      "usage": "Maquette BIM avec planning 4D (Timeliner) et métrés 5D (QTO) — économie 8-15% sur retravaux",
+      "niveau_cible": "3+",
+      "cout_estime": "800 000–2 000 000 FCFA/an (suite Autodesk AEC Collection)",
+      "disponibilite_ci": "International — revendeurs Autodesk CI disponibles"
+    },
+    {
+      "nom": "DJI Matrice 30T + DroneDeploy — drones IA chantier",
+      "usage": "Levés topographiques, orthophotos, analyse IA avancement vs BIM — autorisé ARTCI CI",
+      "niveau_cible": "3+",
+      "cout_estime": "Drone 2 500 000 FCFA + DroneDeploy 400 000 FCFA/an",
+      "disponibilite_ci": "International — importé CI, autorisation ARTCI CI préalable obligatoire"
+    },
+    {
+      "nom": "Microsoft HoloLens 2 / tablette AR — réalité mixte BIM",
+      "usage": "Contrôle conformité BIM sur chantier en réalité augmentée — superposition maquette vs réel",
+      "niveau_cible": "4",
+      "cout_estime": "HoloLens 2 : 1 800 000 FCFA/unité. Tablette AR : 400 000 FCFA/unité",
+      "disponibilite_ci": "International — importé CI"
+    },
+    {
+      "nom": "LBTP CI — partenariat R&D matériaux locaux",
+      "usage": "Tests homologation BLS, béton local innovant, rapport d'essais certifié CI",
+      "niveau_cible": "3+",
+      "cout_estime": "300 000–800 000 FCFA (essais laboratoire LBTP CI)",
+      "disponibilite_ci": "Natif CI — LBTP CI Abidjan Riviera"
+    },
+    {
+      "nom": "OAPI — dépôt brevet innovation BTP Afrique",
+      "usage": "Protection propriété intellectuelle innovations BTP en Afrique (17 pays OAPI dont CI)",
+      "niveau_cible": "4-5",
+      "cout_estime": "200 000–500 000 FCFA (dépôt brevet OAPI)",
+      "disponibilite_ci": "Natif UEMOA — OAPI Yaoundé, mandataires CI disponibles"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "COLAS CI — BIM 5D + drones IA : innovation chantier autoroute Y4 Abidjan",
+    "organisation": "COLAS CI (filiale Bouygues Construction, Abidjan) — autoroute Y4 Abidjan, lot terrassement et ouvrages d'art",
+    "contexte": "Chantier autoroute Y4 Abidjan (45 Mds FCFA, 38 km, lot terrassement COLAS CI 6,2 Mds FCFA) : première application BIM 5D full intégré avec drones IA sur projet autoroutier CI. Contexte : BNETD CI MOA délégué impose reporting mensuel digital — première exigence BIM formelle sur projet CI.",
+    "probleme": "Métrés traditionnels : 3 ingénieurs 10 jours/mois → retards EVA > 6 semaines. Relevés topographiques terrain : 8 topographes, 5 jours, coût 12 M FCFA/an. Écart planning vs réalisé découvert tardivement : retards non anticipés 8-12 semaines.",
+    "solution_deployee": "BIM 5D Revit + Navisworks Timeliner : maquette terrassement liée planning MS Project + métrés auto QTO → EVA mensuel. Drones DJI Matrice 30T autorisés ARTCI CI : relevés topographiques hebdomadaires + DroneDeploy analyse automatique avancement vs BIM 4D. HoloLens 2 pilote : 2 ingénieurs contrôle conformité ouvrages d'art.",
+    "resultats": "Métrés BIM 5D vs topographes : coût relevés -78% (12 M FCFA → 2,6 M FCFA/an). Délai EVA mensuel : 10 jours → 2h auto-généré. Précision métrés BIM vs traditionnel : ±1,2% vs ±8%. Écarts planning détectés en 4 jours vs 6-8 semaines (drone IA hebdomadaire). HoloLens 2 : 34 non-conformités détectées avant coulage béton (vs 11 détectées après coulage méthode classique) — économie 180 M FCFA retravaux béton. PPC chantier : 52% → 83% en 8 semaines (LPS + BIM 4D). Dépôt brevet OAPI en cours : méthode BIM 5D terrassement tropical (sol latéritique CI).",
+    "enseignements": [
+      "Le BIM 5D auto-génère l'EVA mensuel : l'économie topographes finance en 2 ans la totalité de l'investissement BIM",
+      "Les drones IA hebdomadaires détectent les écarts de planning en 4 jours vs 6-8 semaines — le coût d'une correction à J+4 est 20× inférieur à J+56",
+      "HoloLens 2 sur ouvrages d'art : la réalité mixte est économiquement justifiable dès 1 non-conformité détectée avant coulage — un retravaux béton armé CI coûte 5-15 M FCFA"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "BIM 4D", "BIM 5D", "BIM 6D", "innovation BTP", "drones IA", "ARTCI CI drones",
+      "impression 3D construction", "réalité mixte", "HoloLens", "AR BIM chantier",
+      "matériaux innovants", "BLS", "LBTP CI", "béton local", "R&D BTP",
+      "OAPI brevet", "PropTech CI", "ConTech CI", "budget innovation"
+    ],
+    "signaux_niveau_avance": [
+      "BIM 5D systématique : métrés auto + EVA",
+      "Drones IA hebdomadaires autorisés ARTCI CI",
+      "Matériaux innovants sur projet commercial livré",
+      "Budget R&D 3-5% CA avec ROI mesuré",
+      "Brevet OAPI déposé ou startup ConTech lancée"
+    ],
+    "pieges_frequents": [
+      "Drones sans autorisation ARTCI CI = illégal CI — ne pas comptabiliser comme innovation structurée",
+      "BIM 3D déclaré 'BIM 5D' parce qu'on a Excel de métrés à côté — ce n'est pas du BIM 5D natif",
+      "Budget formation FDFP CI confondu avec budget R&D — formations ≠ innovation produit",
+      "Essais LBTP CI commandés sans utilisation en projet = curiosité, pas innovation"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "AutoCAD 2D. 0 drone. 0 matériaux innovants. 0 R&D. Méthodes construction années 1990.",
+      "score_21_to_40": "BIM 3D adopté. Drones ponctuels sans autorisation. LBTP CI consulté. 0 budget innovation.",
+      "score_41_to_60": "BIM 4D sur 1+ projet. Drones ARTCI CI autorisés topo. Tests BLS en cours. Budget innovation 1-2% CA.",
+      "score_61_to_80": "BIM 5D systématique. Drones IA hebdomadaires. Matériaux innovants sur projet commercial. Budget R&D 3-5%.",
+      "score_81_to_100": "BIM 6D. Impression 3D prototype. IA prédictive qualité. Brevet OAPI. ConTech/PropTech lancée. Référence Afrique."
+    }
+  }
+}

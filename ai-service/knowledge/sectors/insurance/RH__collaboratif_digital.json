@@ -1,0 +1,57 @@
+{
+  "meta": { "axis": "RH_CULTURE_DIGITALE", "sub_axis": "Collaboratif Digital", "sector": "assurance", "language": "fr", "version": "1.0", "last_updated": "2026-05" },
+  "trends": [
+    { "title": "Collaboration à distance pour les assureurs multi-sites UEMOA", "description": "Les groupes d'assurance UEMOA (NSIA, SUNU, Allianz) gèrent des filiales dans 8 à 14 pays. Sans outils de collaboration digitale, les équipes techniques (actuaires, juristes, IT) dupliquent les efforts dans chaque pays. La collaboration cloud permet une mutualisation des expertises rares (actuaires, data scientists) au niveau groupe.", "impact_level": "Élevé", "horizon": "12-24 mois", "adoption_rate": "35 % des groupes d'assurance africains utilisent Microsoft Teams ou équivalent (Gartner Africa 2024)", "source": "Gartner Africa Enterprise Collaboration 2024", "year": "2024" },
+    { "title": "Gestion de projet collaborative — pilotage des projets de transformation digitale", "description": "Les projets de transformation digitale des assureurs UEMOA impliquent des équipes distribuées (IT, métiers, DSI, partenaires externes). Les outils de gestion de projet collaborative (Jira, Asana, Trello) permettent de coordonner ces projets complexes et d'éviter les dérives de planning.", "impact_level": "Moyen", "horizon": "6-12 mois", "adoption_rate": "20 % des assureurs africains utilisent des outils de gestion de projet collaboratifs (EY 2024)", "source": "EY Africa Insurance Digital Project Management 2024", "year": "2024" }
+  ],
+  "key_technologies": [
+    { "name": "Microsoft Teams / Slack pour la collaboration d'équipe", "category": "Communication et collaboration", "maturity_stage": "Mature", "adoption_in_sector": "Croissance en UEMOA", "leading_vendors": ["Microsoft Teams", "Slack", "Google Meet + Chat", "Zoom", "Webex"] },
+    { "name": "Intranet et base de connaissances assurance", "category": "Partage des connaissances", "maturity_stage": "Mature", "adoption_in_sector": "Faible en UEMOA", "leading_vendors": ["SharePoint Online", "Confluence", "Notion", "Guru", "Tettra"] },
+    { "name": "Gestion de projet agile (Jira, Asana)", "category": "Coordination des projets de transformation", "maturity_stage": "Mature", "adoption_in_sector": "Faible en UEMOA", "leading_vendors": ["Jira Software", "Asana", "Monday.com", "Trello", "ClickUp"] }
+  ],
+  "market_leaders": {
+    "national": [{ "organisation": "NSIA Groupe", "country": "Côte d'Ivoire / Pan-UEMOA", "key_practice": "Microsoft 365 et Teams déployés dans toutes les filiales UEMOA. SharePoint pour la base de connaissances groupe. Réunions hebdomadaires DG via Teams entre les 8 directeurs généraux de filiales. Jira pour le suivi des projets IT.", "differentiator": "NSIA a éliminé les voyages inter-filiales d'expertise technique en mutualisant ses compétences rares (actuaires, juristes CIMA) via Teams — économie de 150 voyages aériens/an et mise en commun de ressources rares entre 8 pays", "source": "NSIA Groupe Rapport Transformation 2023" }],
+    "regional": [{ "organisation": "Sanlam Pan Africa", "country": "Afrique du Sud / Pan-Afrique", "key_practice": "Plateforme de collaboration Sanlam Connect sur Microsoft 365 avec Teams, SharePoint, Planner et Viva. Wiki groupe avec 5 000 articles sur les produits, procédures et réglementations CIMA. Programme de pair-learning entre filiales.", "differentiator": "Sanlam a créé un réseau de 'Community of Practice' sur SharePoint rassemblant les experts métiers de 15 pays — actuaires, gestionnaires sinistres, compliance — qui partagent leurs bonnes pratiques en temps réel", "source": "Sanlam Annual Report 2023 / Microsoft Sanlam Case Study 2023" }],
+    "international": [{ "organisation": "AXA Group", "country": "France / Mondial", "key_practice": "AXA utilise Microsoft 365 avec Teams pour 160 000 collaborateurs dans 50 pays. GitHub Enterprise pour le code partagé entre les équipes IT. Confluence pour la documentation produit et technique. Workday pour la gestion RH collaborative.", "differentiator": "AXA a mutualisé 15 % de ses coûts de développement IT en passant à un modèle de partage de code et de composants entre ses entités via GitHub Enterprise — la collaboration digitale est devenue un levier d'efficacité IT direct", "source": "AXA Annual Report 2023 / Microsoft AXA Collaboration Case Study 2023" }]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Communication uniquement par email et présentiel. Aucun outil collaboratif. Réunions physiques obligatoires. Pas d'intranet. Documents partagés par clé USB.",
+    "level_2_developing": "Email + partage de fichiers (Google Drive ou Dropbox). Vidéoconférence basique. Pas d'intranet structuré. Quelques groupes WhatsApp informels.",
+    "level_3_defined": "Suite collaborative déployée (M365 ou Google Workspace). Visioconférence Teams/Meet. Intranet basique. Gestion documentaire centralisée.",
+    "level_4_managed": "Microsoft Teams ou Slack utilisé quotidiennement. SharePoint ou Confluence. Gestion de projet Jira/Asana. Collaboration inter-filiales structurée.",
+    "level_5_optimizing": "Collaboration avancée avec IA (Copilot). Communities of Practice. Wiki vivant. Pair-learning inter-filiales. Partage de code et composants IT."
+  },
+  "regulations": [],
+  "risks": [{ "title": "Shadow IT collaboratif — WhatsApp professionnel non sécurisé", "description": "En UEMOA, de nombreux collaborateurs utilisent WhatsApp personnel pour échanger des documents de travail, des polices clients et des informations de sinistres. Ces échanges non sécurisés violent la confidentialité des données assurés (Loi 2013-450) et sont ingérables en cas de contrôle ARTCI ou de litige.", "severity": "Élevé", "likelihood": "Très élevée", "mitigation": "Déployer une solution de messagerie professionnelle sécurisée (Teams ou WhatsApp Business for Enterprise). Politique claire d'interdiction du WhatsApp personnel pour les données clients. Formation sur les risques de l'usage de messageries non sécurisées." }],
+  "opportunities": [{ "title": "Mutualisation des expertises rares inter-filiales via Teams — économie de 30 % sur les coûts d'expertise", "description": "Les groupes d'assurance UEMOA manquent d'actuaires, de data scientists et de juristes CIMA dans chaque filiale. En mutualisant ces expertises via Teams (réunions à distance, travail collaboratif sur documents), un groupe peut faire fonctionner 5 filiales avec 2 actuaires au lieu de 5 — économie de 30 % sur les coûts d'expertise.", "impact_level": "Élevé", "time_to_value": "6-12 mois", "prerequisite_maturity": "Niveau 3" }],
+  "ma_and_fundraising": [],
+  "zoom_case_study": { "entreprise": "Sanlam Pan Africa — Communities of Practice inter-filiales sur SharePoint", "pays": "Afrique du Sud / Pan-Afrique (15 pays)", "technologie": "Microsoft 365 : Teams + SharePoint + Planner + Viva Learning", "description": "Sanlam Pan Africa a construit entre 2021 et 2023 la plateforme de collaboration 'Sanlam Connect' sur Microsoft 365 pour ses 15 filiales africaines. L'architecture collaborative : (1) Microsoft Teams comme hub de communication avec des équipes par filiale, par métier et par projet de transformation ; (2) SharePoint avec un wiki groupe de 5 000 articles — procédures CIMA, fiches produits, guides de tarification, templates réglementaires — mis à jour en temps réel par les équipes métier ; (3) Communities of Practice (CoP) thématiques : actuaires, gestionnaires sinistres, compliance CIMA, digital — chaque CoP rassemble les experts des 15 pays pour partager les bonnes pratiques ; (4) Viva Learning pour la formation continue partagée entre filiales. En 2023 : 80 % des collaborateurs du groupe utilisent Teams quotidiennement, 15 CoP actives avec 1 200 membres, économie estimée à 25 M$ sur les coûts d'expertise dupliqués entre filiales.", "resultats": "15 CoP actives · 1 200 experts en réseau · 5 000 articles wiki · 80 % utilisation Teams quotidienne · 25 M$ économie expertise · 15 pays connectés", "source": "Sanlam Annual Report 2023 / Microsoft Sanlam Collaboration Case Study 2023", "annee": "2023" },
+  "comparatif_organisations": {
+    "titre": "Maturité collaboratif digital — benchmark assureurs CIMA/UEMOA",
+    "colonnes": ["Organisation", "Suite collaborative cloud déployée", "Visioconférence utilisée quotidiennement", "Intranet/wiki groupe structuré", "Gestion de projet collaborative (Jira/Asana)", "Collaboration inter-filiales structurée"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "Partiel", "✗", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["Partiel", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "La collaboration digitale est un prérequis pour les groupes d'assurance multi-filiales UEMOA. La mutualisation des expertises rares (actuaires, compliance CIMA, data scientists) via des outils collaboratifs cloud représente une source d'économies immédiate et une amélioration de la qualité des décisions. Le principal risque est le shadow IT WhatsApp, omniprésent en UEMOA et potentiellement dangereux pour la confidentialité des données assurés.",
+    "maturity_max_description": "Suite collaborative Microsoft 365 ou Google Workspace déployée pour 100 % des collaborateurs. Teams ou Slack utilisé quotidiennement pour la communication d'équipe. Intranet avec wiki vivant de procédures et bonnes pratiques. Gestion de projet agile sur Jira ou Asana. Communities of Practice inter-filiales actives. Aucun usage de WhatsApp personnel pour les données clients.",
+    "scoring_rubric": {
+      "score_1_to_20": "Email et présentiel uniquement. Aucun outil collaboratif. WhatsApp personnel informel.",
+      "score_21_to_40": "Email + partage fichiers (Drive/Dropbox). Vidéo basique. Groupes WhatsApp non sécurisés.",
+      "score_41_to_60": "Suite cloud déployée. Teams/Meet. Intranet basique. Gestion documentaire centralisée.",
+      "score_61_to_80": "Teams/Slack quotidien. SharePoint/Confluence. Jira/Asana. Collaboration inter-filiales.",
+      "score_81_to_100": "IA collaborative (Copilot). Communities of Practice. Wiki vivant. Partage code IT. Shadow IT éliminé."
+    },
+    "prompt_injection_context": "Cette compagnie d'assurance est évaluée sur sa maturité en collaboration digitale dans le contexte CIMA/UEMOA. Analyse le déploiement d'une suite collaborative cloud, l'usage de la visioconférence, l'existence d'un intranet ou wiki groupe, les outils de gestion de projet et la collaboration inter-filiales.",
+    "key_questions_for_llm": [
+      "Une suite collaborative cloud (Microsoft 365, Google Workspace) est-elle déployée pour l'ensemble des collaborateurs ?",
+      "Des outils de visioconférence (Teams, Meet, Zoom) sont-ils utilisés quotidiennement pour les réunions internes et avec les partenaires ?",
+      "Un intranet ou wiki groupe centralisant les procédures, politiques et bonnes pratiques est-il disponible et maintenu à jour ?",
+      "Des outils de gestion de projet collaboratifs (Jira, Asana, Monday) sont-ils utilisés pour piloter les projets de transformation digitale ?",
+      "La collaboration entre les différentes filiales ou agences du groupe est-elle structurée via des outils digitaux formels ?"
+    ]
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "MODELE_OP",
+    "sub_axis": "innovation",
+    "sector": "energie",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Innovation ouverte énergie et partenariats startups cleantech",
+      "description": "Les distributeurs d'énergie africains adoptent des modèles d'innovation ouverte : programmes d'accélération startups cleantech, labs d'innovation internes, partenariats avec universités (INPHB Yamoussoukro, UCAD Dakar) pour la R&D sur les compteurs intelligents, l'optimisation réseau IA et les mini-grids hybrides. En Côte d'Ivoire, CIE a lancé 'CIE Innovation Lab' en 2023 avec 3 startups incubées (IoT réseau, prédiction panne IA, app client gamifiée). Le marché mondial cleantech Africa atteint 2,5 Mds USD en 2025.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "25%",
+      "source": "GOGLA / SE4ALL Africa Cleantech 2025",
+      "year": 2025
+    },
+    {
+      "title": "IA générative pour la conception de mini-grids et l'optimisation énergétique",
+      "description": "L'IA générative (LLM + optimisation combinatoire) transforme la conception des mini-grids solaires : dimensionnement automatisé (panneau, batterie, câblage) basé sur profil de charge communauté, simulation 20 ans (rendement, maintenance), génération automatique du dossier technique ADER CI. En Côte d'Ivoire, ADER CI teste avec 2 startups des outils IA générative pour accélérer les études de faisabilité mini-grids (délai : 3 mois → 2 semaines).",
+      "impact_level": "medium",
+      "horizon": "short_term",
+      "adoption_rate": "8%",
+      "source": "ADER CI / IRENA Africa Innovation Report 2025",
+      "year": 2025
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "Prédiction de pannes réseau par IA (Predictive Maintenance réseau HTA/BTA)",
+      "category": "IA / Machine Learning",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "CIE pilote 2024 (transformateurs HTA 225kV), ENEO Cameroun en production, 18% distributeurs UEMOA",
+      "leading_vendors": ["Uptake (GE)", "SparkCognition", "Dataminr Energy", "ABB AbilityTM Predictive Maintenance", "Siemens Predictive Services"]
+    },
+    {
+      "name": "Digital Twin réseau électrique (simulation temps réel)",
+      "category": "Digital Twin / Simulation",
+      "maturity_stage": "emerging",
+      "adoption_in_sector": "Pilotes CIE 2025 (réseau Abidjan 225kV), 5% distributeurs UEMOA",
+      "leading_vendors": ["ETAP (réseau électrique)", "DIgSILENT PowerFactory", "Siemens PSS/E", "GE PSCAD", "ABB Network Manager"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "CIE (Compagnie Ivoirienne d'Électricité)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "CIE Innovation Lab (2023) : 3 startups incubées (InnoGrid CI IoT réseau, PredictCIE IA panne, SmartWatt app gamifiée), budget R&D dédié 1,2 Mds FCFA/an, partenariat INPHB Yamoussoukro (thèses IA réseau), participation NEXT Énergie CI (concours innovation sectoriel), pilote prédiction panne transformateurs HTA (ABB AbilityTM)",
+        "differentiator": "Premier programme d'incubation interne du secteur électricité CI — 3 startups avec accès aux données réseau CIE (anonymisées) et aux techniciens terrain comme testeurs, délai mise en production pilote < 6 mois",
+        "source": "CIE Innovation Lab Rapport 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "BBOXX / ENGIE Energy Access — Innovation PAYG IA",
+        "country": "Côte d'Ivoire / Rwanda / Ouganda",
+        "key_practice": "Innovation PAYG next-gen : BBOXX Home Max (400W, pompe eau + réfrigérateur + TV), IA scoring crédit temps réel (18 variables, < 5 secondes), extension automatique crédit noctune (92% coupures nocturnes éliminées), partenariat M-KOPA (Kenya) pour benchmark cross-pays",
+        "differentiator": "Cadence d'innovation PAYG la plus rapide Afrique subsaharienne — 3 nouvelles fonctionnalités IA déployées/trimestre sur 300K kits CI via OTA (Over-The-Air firmware update)",
+        "source": "BBOXX Innovation Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Enel Innovation Hub",
+        "country": "Italie / Espagne / Brésil / USA",
+        "key_practice": "4 Innovation Hubs mondiaux (Rome, Madrid, São Paulo, Boston), programme Open Innovability (open call startups mondial, 15 000 candidatures/an), 300 brevets déposés/an, budget R&D 1,2 Mds EUR (2,1% CA), co-création avec 200 startups/an, pilote Digital Twin réseau Roma 380kV (Siemens PSS/E)",
+        "differentiator": "Leader mondial innovation ouverte énergie — Open Innovability : 1 startup sur 5 sélectionnée devient fournisseur Enel sous 12 mois, taux commercialisation innovations internes 68% (benchmark secteur : 35%)",
+        "source": "Enel Open Innovability Report 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Aucun processus d'innovation formalisé, budget R&D nul ou marginal, innovations adoptées uniquement si imposées par fournisseurs matériels (compteurs, transformateurs), aucun partenariat avec startups ou universités.",
+    "level_2_developing": "Participation occasionnelle à des salons/conférences énergie, veille technologique informelle par le DSI, quelques pilotes ponctuels sans méthodologie, budget innovation < 0,2% du CA.",
+    "level_3_defined": "Veille technologique structurée (benchmark sectoriel trimestriel), budget innovation dédié (0,2-0,5% CA), pilotes technologiques avec méthodologie (GO/NOGO à M+6), partenariats université locaux pour thèses appliquées.",
+    "level_4_managed": "Programme innovation ouvert (lab, accélérateur, open call startups), budget R&D 0,5-1% CA, pilotes IA actifs (prédiction panne, optimisation réseau), Digital Twin en développement, KPIs innovation suivis (nombre pilotes, taux commercialisation).",
+    "level_5_optimizing": "Innovation hub dédié avec startups incubées, Digital Twin réseau opérationnel, IA prédiction pannes en production (>80% actifs couverts), partenariats R&D internationaux, brevets déposés, budget R&D >1% CA, taux commercialisation innovations >50%."
+  },
+  "regulations": [
+    {
+      "name": "ADER CI — Cadre innovation mini-grids et appels à projets",
+      "authority": "ADER CI (Agence De l'Électricité Rurale de Côte d'Ivoire)",
+      "description": "L'ADER CI publie des appels à projets pour des mini-grids solaires innovants (hybrides diesel-solaire-stockage, IoT monitoring, PAYG intégré) dans les zones rurales non connectées au réseau CIE. Les projets sélectionnés bénéficient d'une garantie d'achat d'énergie (PPA subventionné) et d'une exonération de TVA sur les équipements solaires (Code des Investissements CI 2019). L'innovation technologique (IoT, IA optimisation) est un critère de sélection pondéré à 25% des appels à projets 2024.",
+      "compliance_deadline": "Appels à projets annuels ADER CI",
+      "impact_on_sector": "Les acteurs énergie innovants (startups cleantech, BBOXX, ENGIE) ont un accès privilégié aux marchés ruraux CI via ADER CI — l'innovation IoT/IA est récompensée par des PPA garantis"
+    },
+    {
+      "name": "Code des Investissements CI 2019 — Exonérations fiscales R&D énergie",
+      "authority": "CEPICI (Centre de Promotion des Investissements en Côte d'Ivoire)",
+      "description": "Le Code des Investissements CI 2019 prévoit des exonérations fiscales pour les entreprises réalisant des dépenses R&D dans le secteur énergétique (renouvelables, efficacité énergétique, smart grids) : exonération IS sur bénéfices issus de la R&D (5 ans), exonération droits de douane sur équipements de laboratoire/pilote, statut Entreprise Innovante CI (EIC) pour startups cleantech < 8 ans. CIE bénéficie du régime d'exonération R&D pour son Innovation Lab.",
+      "compliance_deadline": "En vigueur (Code Investissements 2019)",
+      "impact_on_sector": "Réduit le coût des pilotes technologiques de 30-40% pour les acteurs énergie CI — avantage compétitif significatif pour les entreprises structurant leur R&D formellement"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Pilotite : multiplication des pilotes sans passage à l'échelle",
+      "description": "Le secteur énergie CI souffre d'un phénomène de 'pilotite' : de nombreux pilotes technologiques (smart meters, IoT réseau, prédiction panne IA) sont lancés avec enthousiasme mais stagnent au stade expérimental faute de critères GO/NOGO clairs, de budget de déploiement préplanifié et de sponsor interne avec mandat. En Côte d'Ivoire, 12 pilotes technologiques énergie ont été lancés entre 2020 et 2024, dont seulement 3 ont été déployés à l'échelle (>1 000 unités).",
+      "severity": "medium",
+      "likelihood": "high",
+      "mitigation": "Adopter une méthodologie Stage-Gate pour les pilotes : critères GO/NOGO définis avant le lancement (seuil ROI, taux adoption, SAIDI delta), budget déploiement pré-alloué dès la décision GO, sponsor CODIR mandaté pour chaque pilote — CIE Innovation Lab a adopté ce processus en 2024 avec un taux de passage pilote → déploiement porté de 25% à 67% en 12 mois"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Digital Twin réseau électrique Abidjan pour optimisation SAIDI/SAIFI",
+      "description": "Un Digital Twin du réseau électrique d'Abidjan (30 000 km MT/BT, 4 500 transformateurs) permettrait de simuler en temps réel les impacts des incidents, d'optimiser la reconfiguration réseau après une panne, et de planifier les extensions réseau pour la CAN 2023/2025 (stades, hôtels). CIE est en discussions avec ABB et Siemens pour un pilote Digital Twin réseau HTA 225kV Abidjan Sud (600 000 clients) — investissement estimé 1,5 Mds FCFA, ROI via réduction SAIDI estimé 18-25%.",
+      "impact_level": "high",
+      "time_to_value": "2-4 ans",
+      "prerequisite_maturity": "Niveau 4 — SCADA avancé + GIS complet + données historiques incidents >5 ans"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "InnoGrid CI — Levée de fonds seed (startup issue CIE Innovation Lab)",
+      "montant": "350M FCFA (environ 530K EUR)",
+      "investisseurs": ["Orange Ventures CI", "Savannah Fund", "CIE (investisseur corporate)"],
+      "annee": 2024,
+      "description": "InnoGrid CI, startup incubée au CIE Innovation Lab, a levé 350M FCFA pour commercialiser son système IoT de monitoring réseau basse tension (capteurs clamp-on + IA détection défauts BTA). Le système identifie les zones de pertes réseau (21% pertes CI) avec une précision de ±3% et génère automatiquement des ordres de travail pour les équipes terrain CIE. Premier client : CIE (100 transformateurs pilote Abidjan Nord). Pipeline : ENEO Cameroun + SENELEC Sénégal."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "CIE (Compagnie Ivoirienne d'Électricité)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Pilote prédiction de pannes transformateurs HTA par IA (ABB AbilityTM Predictive Maintenance)",
+    "description": "En 2024, CIE a lancé un pilote de maintenance prédictive IA sur 450 transformateurs HTA (Haute Tension A - 15kV/BT) du district d'Abidjan Plateau-Cocody, représentant 35% des pannes réseau de la zone. Le système ABB AbilityTM intègre : capteurs IoT (température huile, vibrations, humidité, charge) sur chaque transformateur → transmission temps réel au cloud ABB → modèle ML (isolation forest + LSTM) entraîné sur 5 ans d'historique pannes CIE → score de risque 0-100 pour chaque transformateur → alerte automatique et ordre de travail Maximo généré si score > 70. Les équipes CIE reçoivent un rapport hebdomadaire de priorisation des 20 transformateurs les plus à risque.",
+    "resultats": "Sur 12 mois de pilote : 23 pannes transformateurs évitées (sur 31 prédites à risque élevé, 23 confirmées défaillantes lors de l'intervention préventive, soit 74% de précision). SAIDI pilote zone Plateau-Cocody : -28% (de 68h à 49h annuels). Coût intervention préventive transformateur : 850K FCFA (vs. 3,2M FCFA curatif en urgence, incluant pénalités ANARE-CI). ROI calculé sur 12 mois : 4,2x. CIE a décidé l'extension à 2 000 transformateurs supplémentaires (budget 2025 : 1,8 Mds FCFA).",
+    "source": "CIE / ABB Case Study Predictive Maintenance CI 2024",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif maturité innovation — Secteur Énergie Côte d'Ivoire",
+    "colonnes": ["organisation", "Budget R&D / CA", "Programme innovation ouvert", "IA prédictive réseau", "Digital Twin"],
+    "lignes": [
+      {
+        "organisation": "CIE CI",
+        "valeurs": ["~0,8% CA (1,2 Mds FCFA)", "CIE Innovation Lab (3 startups)", "Pilote ABB 450 transformateurs", "En développement (pilote 2025)"]
+      },
+      {
+        "organisation": "BBOXX CI",
+        "valeurs": ["~3% CA (R&D PAYG IA)", "Open innovation global (RwandaHQ)", "Score crédit ML temps réel", "Non (produit matériel)"]
+      },
+      {
+        "organisation": "ADER CI",
+        "valeurs": ["Budget public dédié (non publié)", "Appels à projets ADER CI", "Non (administration)", "Non"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue la capacité d'innovation dans le secteur énergie CI : budget R&D dédié, programmes d'innovation ouverte (labs, startups), pilotes technologiques IA actifs (prédiction panne, optimisation réseau, Digital Twin), et méthodologie de passage pilote → déploiement (Stage-Gate).",
+    "maturity_max_description": "Distributeur énergie CI avec écosystème d'innovation complet : Innovation Lab avec startups incubées, budget R&D >1% CA, prédiction panne IA en production sur >80% du parc transformateurs, Digital Twin réseau opérationnel, partenariats universités INPHB/UCAD, taux commercialisation pilotes >50%.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucun budget R&D, innovations adoptées uniquement si imposées par fournisseurs, aucun pilote technologique interne, zéro partenariat innovation.",
+      "score_21_to_40": "Veille technologique informelle, quelques pilotes ponctuels sans méthodologie, budget innovation < 0,2% CA, participation salons sectoriels.",
+      "score_41_to_60": "Veille structurée, budget innovation 0,2-0,5% CA, pilotes avec méthodologie GO/NOGO, partenariat université local, 1-2 pilotes IA actifs.",
+      "score_61_to_80": "Programme innovation ouvert (lab ou accélérateur), budget R&D 0,5-1% CA, IA prédiction panne en pilote avancé, KPIs innovation suivis, 3-5 pilotes actifs.",
+      "score_81_to_100": "Innovation Hub avec startups incubées, R&D >1% CA, IA prédiction en production réseau, Digital Twin opérationnel, brevets déposés, taux commercialisation >50%, partenariats internationaux R&D."
+    },
+    "prompt_injection_context": "Secteur énergie CI : ADER CI valorise l'innovation IoT/IA dans ses appels à projets mini-grids (critère pondéré 25%). Le Code des Investissements CI 2019 offre des exonérations fiscales R&D énergie. CIE souffre d'un réseau vieillissant (4 500 transformateurs, pertes 21%) — la prédiction IA a un ROI direct mesurable. Distinguer innovation réseau (CIE), innovation PAYG (BBOXX), et innovation rurale (ADER CI).",
+    "key_questions_for_llm": [
+      "Disposez-vous d'un budget R&D dédié et d'un programme d'innovation formalisé (lab, accélérateur, partenariats startups) ?",
+      "Avez-vous des pilotes technologiques IA actifs sur votre réseau (prédiction panne, optimisation charge, Digital Twin) ?",
+      "Quelle est votre méthodologie pour passer d'un pilote à un déploiement à l'échelle ? Quel est votre taux de commercialisation ?",
+      "Collaborez-vous avec des universités locales (INPHB, UFHB) ou des startups cleantech pour des projets R&D appliqués ?",
+      "Utilisez-vous les dispositifs d'incitation CI à l'innovation R&D énergie (Code des Investissements CI 2019, appels ADER CI) ?"
+    ]
+  }
+}

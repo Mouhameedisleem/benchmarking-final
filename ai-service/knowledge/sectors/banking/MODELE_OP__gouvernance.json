@@ -1,0 +1,235 @@
+{
+  "meta": {
+    "axis": "MODELE_OP",
+    "sub_axis": "Gouvernance",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Gouvernance digitale bancaire — Comité Digital au niveau du Conseil d'Administration",
+      "description": "Les banques africaines leaders créent des Comités Digitaux au niveau du CA ou du COMEX pour superviser la transformation digitale : approbation de la stratégie digitale, suivi des indicateurs clés, nomination d'un Chief Digital Officer (CDO) avec accès direct à la direction.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "30 % des grandes banques africaines ont un Comité Digital au CA ou COMEX (Deloitte Africa 2024)",
+      "source": "Deloitte Africa Banking Governance Digital 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Gouvernance des risques IA/ML — cadre de contrôle des algorithmes bancaires",
+      "description": "L'utilisation de l'IA pour les décisions de crédit, la détection de fraude et la recommandation de produits crée de nouveaux risques réglementaires (discriminations algorithmiques, erreurs systémiques). Les banques leaders développent des cadres de gouvernance AI expliquant et auditant chaque modèle en production.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "15 % des banques africaines ont un cadre de gouvernance IA formalisé (McKinsey 2024)",
+      "source": "McKinsey Africa AI Governance Banking 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Gouvernance de la conformité digitale — BCEAO, ARTCI et GIABA intégrés",
+      "description": "La multiplication des régulateurs pertinents pour les banques digitales (BCEAO pour le prudentiel, ARTCI pour les données, GIABA pour le LCB-FT) exige une gouvernance de conformité intégrée gérant simultanément ces trois référentiels avec des outils RegTech.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "100 % des banques UEMOA soumises à ces trois référentiels réglementaires",
+      "source": "BCEAO / ARTCI / GIABA — Cadre réglementaire applicable 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Gouvernance des données bancaires — Data Governance et RGPD africain",
+      "description": "Les données clients bancaires sont soumises à la loi ivoirienne sur la protection des données (Loi 2013-450) et aux directives BCEAO. Une gouvernance des données formalisée (Data Owner, Data Catalog, politique de rétention) est nécessaire pour la conformité et pour l'exploitation analytique.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "25 % des banques africaines ont une gouvernance des données formalisée (EY Africa 2024)",
+      "source": "EY Africa Data Governance Banking 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "GRC — Gouvernance, Risque et Conformité",
+      "category": "Plateforme de gouvernance intégrée",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["MetricStream GRC Banking", "IBM OpenPages", "SAP GRC Financial Services", "ServiceNow GRC", "Riskonnect"]
+    },
+    {
+      "name": "Outil de gouvernance IA/ML",
+      "category": "Contrôle des modèles algorithmiques",
+      "maturity_stage": "Émergence",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["IBM Watson OpenScale (Fairness)", "Fiddler AI", "Arthur AI", "Microsoft Responsible AI", "SAS Model Manager"]
+    },
+    {
+      "name": "Data Catalog / Gouvernance des données",
+      "category": "Gestion des données bancaires",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Collibra (Data Intelligence)", "Alation", "Microsoft Purview", "Informatica Data Governance", "Atlan"]
+    },
+    {
+      "name": "Tableau de bord de gouvernance",
+      "category": "Pilotage de la conformité réglementaire",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["Wolters Kluwer OneSumX", "AxiomSL", "Moody's Analytics RiskFoundation", "Oracle Financial Services GRC", "SAS Risk Management"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Société Générale Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Gouvernance SG Groupe adaptée en CI : comité des risques trimestriel, contrôle interne indépendant, conformité BCEAO + ARTCI + GIABA intégrée dans un référentiel unique",
+        "differentiator": "Cadres de gouvernance SG Groupe (ISO 31000, Bâle III, DORA) adaptés et déployés en CI — niveau de gouvernance significativement supérieur aux banques locales non affiliées",
+        "source": "SGCI Rapport Annuel 2023 / SG Group Governance Report"
+      },
+      {
+        "organisation": "Standard Chartered Bank CI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Gouvernance Standard Chartered Groupe : Chief Risk Officer dédié CI, comité de conformité mensuel, plateforme GRC IBM OpenPages déployée",
+        "differentiator": "Standard Chartered CI est la seule banque en CI avec une plateforme GRC automatisée gérant simultanément BCEAO, ARTCI et GIABA — conformité proactive plutôt que réactive",
+        "source": "Standard Chartered CI Rapport Annuel 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Comité Digital au CA, CDO Groupe avec reporting au CEO, gouvernance conformité intégrée sur 33 filiales via MetricStream GRC, Data Governance Program lancé en 2022",
+        "differentiator": "Ecobank Data Governance Program : premier groupe bancaire africain à nommer des Data Owners dans chaque filiale et à déployer un Data Catalog panafricain",
+        "source": "Ecobank Annual Report 2023 / Ecobank Governance Report 2023"
+      },
+      {
+        "organisation": "Standard Bank",
+        "country": "Afrique du Sud / Pan-Afrique",
+        "key_practice": "Cadre de gouvernance IA publié en 2022, comité d'éthique IA indépendant, audit de tous les modèles ML en production 2× par an",
+        "differentiator": "Premier groupe bancaire africain à publier un cadre de gouvernance IA complet avec explicabilité obligatoire de tous les modèles de crédit — référence africaine en AI governance",
+        "source": "Standard Bank AI Governance Framework 2022 / Standard Bank Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "ING Group",
+        "country": "Pays-Bas",
+        "key_practice": "ING Agile Governance : gouvernance distribuée dans les squads avec des guildes transversales Conformité, Sécurité et Risque — gouvernance intégrée dans chaque sprint agile",
+        "differentiator": "ING a résolu le paradoxe agile-gouvernance : en intégrant la conformité dans chaque squad, ING livère 5× plus vite tout en maintenant les standards prudentiels de la BCE",
+        "source": "ING Annual Report 2023 / McKinsey ING Agile Governance Model"
+      },
+      {
+        "organisation": "HSBC",
+        "country": "Royaume-Uni",
+        "key_practice": "Cadre de gouvernance IA mondial, comité d'éthique IA au CA, explicabilité obligatoire de tous les algorithmes de décision cliente, audit externe annuel des modèles IA",
+        "differentiator": "HSBC AI Ethics Committee est le seul comité d'éthique IA bancaire siégeant au niveau du Conseil d'Administration mondial — référence en gouvernance IA bancaire internationale",
+        "source": "HSBC Annual Report 2023 / HSBC AI Ethics Framework 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Gouvernance réactive uniquement. Pas de CDO. Conformité gérée en urgence lors des inspections. Pas de cadre de gouvernance des données. Pas de GRC. Risques IT non formalisés.",
+    "level_2_developing": "Comité des risques basique. Conformité BCEAO gérée mais pas les autres référentiels. Pas de CDO. Gouvernance des données absente. GRC manuel via Excel. Modèles IA non governés.",
+    "level_3_defined": "CDO ou équivalent nommé. Comité Digital au COMEX. Conformité BCEAO + ARTCI + GIABA intégrée. Gouvernance des données initiée (Data Owner nommés). Cadre de gestion des risques IT documenté.",
+    "level_4_managed": "Comité Digital au CA. Plateforme GRC déployée. Data Catalog actif. Cadre de gouvernance IA pour les modèles critiques. Reporting gouvernance trimestriel au CA. Chief Risk Officer dédié digital.",
+    "level_5_optimizing": "Gouvernance digitale agile intégrée dans les squads. GRC automatisée. Data Governance mature avec Data Catalog complet. Cadre AI governance publié et audité. Conformité proactive (pas réactive)."
+  },
+
+  "regulations": [
+    {
+      "name": "Dispositif de contrôle interne et de gouvernance BCEAO",
+      "issuing_body": "BCEAO",
+      "scope": "Toutes les banques UEMOA",
+      "key_requirement": "Comité d'audit indépendant, fonction de conformité indépendante, rapport annuel de gouvernance remis à la BCEAO, séparation des fonctions risque/conformité/audit",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Loi CI sur la protection des données — ARTCI",
+      "issuing_body": "ARTCI / République de Côte d'Ivoire",
+      "scope": "Toutes les organisations traitant des données personnelles en CI",
+      "key_requirement": "Délégué à la Protection des Données (DPO) recommandé pour les grandes organisations, registre des traitements, politique de rétention documentée",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.artci.ci"
+    },
+    {
+      "name": "LCB-FT UEMOA — Cadre GIABA de gouvernance anti-blanchiment",
+      "issuing_body": "GIABA / BCEAO",
+      "scope": "Toutes les banques UEMOA",
+      "key_requirement": "Responsable LCB-FT nommé et déclaré, comité de conformité LCB-FT, rapport annuel, déclarations CENTIF dans les délais",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.giaba.org"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Gouvernance IA absente — modèle de crédit discriminatoire non détecté",
+      "description": "Un modèle de scoring crédit ML qui discrimine systématiquement certaines catégories de clients (femmes, zones rurales, certaines professions) peut passer inaperçu sans cadre de gouvernance IA. La détection tardive entraîne des contentieux, des sanctions réglementaires et une atteinte grave à la réputation.",
+      "severity": "Élevé",
+      "likelihood": "Élevée sans gouvernance IA",
+      "mitigation": "Implémenter un audit de fairness (équité algorithmique) sur chaque modèle de décision crédit avant mise en production et semestriellement en production, avec rapport au Comité des Risques."
+    },
+    {
+      "title": "Conformité réactive — amende BCEAO lors d'un contrôle sur place imprévu",
+      "description": "Les banques qui gèrent la conformité BCEAO de manière réactive (préparation urgente avant inspection annoncée) accumulent des risques latents qui peuvent se matérialiser lors d'inspections inopinées en amendes et injonctions de mise en conformité.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée pour les banques sans GRC",
+      "mitigation": "Déployer une plateforme GRC automatisant le suivi continu de la conformité BCEAO, ARTCI et GIABA, avec des alertes sur les écarts et un tableau de bord de conformité en temps réel."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "CDO nommé — accélération de la transformation digitale x2",
+      "description": "Les banques avec un Chief Digital Officer au COMEX avancent 2× plus vite dans leur transformation digitale que celles sans CDO. Le CDO assure la cohérence de la stratégie digitale, arbitre les ressources et porte la voix du digital face aux fonctions traditionnelles.",
+      "impact_level": "Très élevé",
+      "time_to_value": "3-6 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [],
+
+  "zoom_case_study": {
+    "entreprise": "ING Group",
+    "pays": "Pays-Bas",
+    "technologie": "Gouvernance agile intégrée — conformité dans chaque squad bancaire",
+    "description": "ING a résolu un problème fondamental de la transformation agile bancaire : comment être agile tout en maintenant une gouvernance bancaire rigoureuse exigée par les régulateurs européens (BCE, EBA). La solution : des guildes transversales de Conformité, Sécurité et Risque qui rejoignent les sprints des squads, intégrant les vérifications réglementaires dans le processus de développement plutôt qu'à la fin. Résultat : 0 incident de conformité majeur en 8 ans d'agilité, délai de livraison 5× plus rapide qu'avant la transformation, NPS passé de 22 à 71. Le modèle ING est devenu la référence pour les banques qui veulent concilier vitesse agile et exigences réglementaires bancaires.",
+    "resultats": "0 incident conformité majeur en 8 ans · Livraison 5× plus rapide · NPS 22 → 71 · Guildes conformité dans chaque squad · Modèle adopté par 20+ banques mondiales",
+    "source": "ING Annual Report 2023 / McKinsey ING Agile Banking Model / Harvard Business Review ING Governance",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité gouvernance — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "CDO au COMEX ou CA", "Plateforme GRC déployée", "Gouvernance données (Data Catalog + Data Owner)", "Cadre gouvernance IA modèles ML", "Conformité BCEAO+ARTCI+GIABA intégrée"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "✗", "✗", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La gouvernance bancaire en UEMOA est souvent réduite à la conformité BCEAO, ignorant l'ARTCI (données) et le GIABA (LCB-FT). Avec l'essor de l'IA dans les décisions de crédit, la gouvernance algorithmique devient critique. La nomination d'un CDO et la création d'un Comité Digital au COMEX sont les deux décisions de gouvernance les plus structurantes pour accélérer la transformation digitale.",
+    "maturity_max_description": "CDO au COMEX avec budget et autorité. Comité Digital au CA. Plateforme GRC automatisant BCEAO + ARTCI + GIABA. Data Catalog complet avec Data Owners. Cadre de gouvernance IA avec audit semestriel des modèles. Guildes de conformité intégrées dans les squads agile. Conformité proactive et continue.",
+    "scoring_rubric": {
+      "score_1_to_20": "Gouvernance réactive. Pas de CDO. Conformité en urgence. Pas de GRC. Risques IT non formalisés.",
+      "score_21_to_40": "Comité risques basique. BCEAO uniquement. Pas de CDO. Pas de Data Gov. GRC manuel Excel.",
+      "score_41_to_60": "CDO nommé. Comité Digital COMEX. BCEAO+ARTCI+GIABA intégrée. Data Owners nommés. Risques IT documentés.",
+      "score_61_to_80": "Comité Digital CA. Plateforme GRC. Data Catalog actif. Gov IA modèles critiques. Reporting CA trimestriel.",
+      "score_81_to_100": "Gouvernance agile intégrée. GRC automatisée. Data Gov mature. AI Gov publié et audité. Conformité proactive."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur la maturité de sa gouvernance dans le contexte bancaire UEMOA. Analyse la présence d'un CDO au COMEX, l'existence d'une plateforme GRC intégrant BCEAO + ARTCI + GIABA, la gouvernance des données et le cadre de gouvernance des modèles IA/ML.",
+    "key_questions_for_llm": [
+      "Un Chief Digital Officer (CDO) ou équivalent est-il nommé au niveau du COMEX avec un budget et une autorité décisionnelle sur la transformation digitale ?",
+      "Un Comité Digital ou un comité dédié à la transformation numérique existe-t-il au niveau du Conseil d'Administration ou du Comité de Direction ?",
+      "Une plateforme GRC (Gouvernance, Risque et Conformité) automatise-t-elle le suivi continu des obligations réglementaires BCEAO, ARTCI et GIABA ?",
+      "Une gouvernance des données est-elle en place avec des Data Owners identifiés par domaine, un Data Catalog opérationnel et une politique de rétention documentée ?",
+      "Un cadre de gouvernance des modèles IA/ML est-il défini pour auditer l'équité, l'explicabilité et la performance des algorithmes de décision bancaire (crédit, fraude, recommandations) ?"
+    ]
+  }
+}

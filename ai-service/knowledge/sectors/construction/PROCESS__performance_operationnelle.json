@@ -1,0 +1,305 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "PROCESS",
+    "sous_axe": "performance_operationnelle",
+    "version": "1.0",
+    "langue": "fr",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "La performance opérationnelle du secteur BTP CI est structurellement faible par rapport aux standards internationaux : productivité de la main-d'œuvre inférieure de 35-50% aux normes françaises ou marocaines, taux de non-conformité qualité élevé (12-18% des travaux nécessitent des reprises), rendement des engins souvent en dessous de 55% du potentiel théorique. Les causes sont multiples : formation insuffisante des compagnons, maintenance défaillante des engins, absence de suivi de la productivité en temps réel, organisation de chantier non optimisée. Le PND CI 2021-2025 impose des standards de livraison que les entreprises doivent atteindre.",
+    "chiffres_cles": [
+      "Productivité main-d'œuvre BTP CI : 35-50% en dessous des standards France/Maroc",
+      "Taux de non-conformité qualité CI : 12-18% (reprises de travaux, défauts)",
+      "Rendement engins BTP CI : 50-60% du potentiel théorique (maintenance défaillante)",
+      "Coût des non-conformités BTP CI : estimé à 8-15% du coût total chantier",
+      "Taux de chantiers CI avec système de suivi productivité formalisé : < 10%"
+    ],
+    "specificites_locales": [
+      "CNBTP CI : classification agrément intègre la qualité des réalisations comme critère",
+      "BNETD CI : contrôles qualité réglementaires sur les projets publics (essais LBTP CI)",
+      "LBTP CI : laboratoire national de référence pour les essais de contrôle qualité BTP",
+      "ARTCI : normes de performance énergétique bâtiments (CIE interconnecté)",
+      "OHSAS 18001 / ISO 45001 : sécurité sur les chantiers CI (CNBTP CI agrément conditionnée)"
+    ]
+  },
+  "definition_axe": {
+    "titre": "Performance opérationnelle et excellence des processus BTP",
+    "description": "Capacité de l'entreprise BTP à mesurer, suivre et améliorer en continu ses indicateurs de performance opérationnelle sur les chantiers : productivité main-d'œuvre (rendements par tâche), rendement des engins et équipements, qualité des réalisations (taux de non-conformité, reprises), sécurité (taux d'accidents), efficacité des approvisionnements. L'excellence opérationnelle BTP repose sur des standards clairs, une mesure en temps réel et une amélioration continue structurée (kaizen construction).",
+    "perimetre": [
+      "Productivité main-d'œuvre : rendements par tâche (m²/heure, ml/jour) vs. standards BNETD CI",
+      "Rendement engins : taux d'utilisation, disponibilité technique, MTTR/MTBF",
+      "Qualité : taux de conformité premier passage, non-conformités, coût de la non-qualité",
+      "Sécurité chantier : taux de fréquence et gravité accidents, presqu'accidents",
+      "Délais et coûts : variance planning/réel, dépassements budgétaires par lot",
+      "Efficacité chaîne approvisionnement : taux de rupture, délais livraison, gaspillages"
+    ],
+    "technologies_cles": [
+      "Procore / Fieldwire — suivi qualité chantier (punch lists, non-conformités photographiées)",
+      "SAP S/4HANA PM (Plant Maintenance) — gestion maintenance engins et disponibilité technique",
+      "IoT capteurs engins — suivi temps réel rendement et géolocalisation (Tracktor, Samsara)",
+      "Power BI / Tableau — tableaux de bord performance KPI chantier actualisés quotidiennement",
+      "LBTP CI résultats d'essais — intégration aux rapports qualité (conformité béton, sol)",
+      "Application mobile sécurité chantier — déclaration presque-accidents, alertes EPI"
+    ]
+  },
+  "enjeux_specifiques": {
+    "enjeux": [
+      {
+        "titre": "Réduction du coût de la non-qualité BTP CI",
+        "description": "Les reprises de travaux (mauvais coulage béton, malfaçons maçonnerie, fuites étanchéité) représentent 8-15% du coût total des chantiers CI. Chaque reprise mobilise 2 à 3 fois plus de ressources que la réalisation initiale correcte. La mise en place de standards de qualité et de contrôle premier passage est le levier principal de réduction des coûts.",
+        "impact": "Économie 8-15% sur coût chantier, réduction litiges réception, amélioration marge nette"
+      },
+      {
+        "titre": "Amélioration du rendement des engins de chantier",
+        "description": "Les engins BTP CI (pelles, bulldozers, niveleuses) ont souvent un rendement effectif de 50-60% dû à la maintenance défaillante, aux pannes fréquentes, aux périodes d'inactivité non mesurées. L'IoT pour le suivi en temps réel du rendement et la maintenance préventive peut porter ce taux à 75-85%, réduisant significativement le coût/m³ ou km de travaux.",
+        "impact": "Réduction coût horaire effectif engins de 20-30%, réduction des pannes coûteuses"
+      },
+      {
+        "titre": "Sécurité sur les chantiers CI",
+        "description": "Le BTP est le secteur avec le plus fort taux d'accidents du travail en CI. Les exigences CNBTP CI en matière de sécurité sont croissantes (OHSAS 18001 / ISO 45001 pour les agréments classes A-B). Un système de suivi sécurité formalisé (déclarations, analyses causes, actions correctives) est obligatoire pour les grands marchés publics CI.",
+        "impact": "Réduction accidents (-40 à -60% avec système SMS formalisé), accès aux marchés BNETD CI exigeants"
+      }
+    ]
+  },
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Inexistant",
+      "description": "Aucun indicateur de performance opérationnelle mesuré formellement. Productivité évaluée de manière intuitive par le chef de chantier. Qualité contrôlée visuellement sans standards. Maintenance engins réactive (réparation après panne). Aucun suivi des accidents ou presque-accidents.",
+      "signes_distinctifs": [
+        "Aucun rendement par tâche mesuré (m²/h, ml/j) — feeling chef de chantier uniquement",
+        "Qualité contrôlée visuellement, sans check-list ni mesure (règles des 3 coups)",
+        "Maintenance engins : réparation uniquement après panne (pas de maintenance préventive)",
+        "Accidents déclarés uniquement s'ils sont graves (obligation légale), presque-accidents ignorés",
+        "Aucun tableau de bord KPI, aucun rapport de performance chantier"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Quelques indicateurs mesurés ad hoc (avancement physique, % budget consommé). Check-lists qualité pour les travaux courants. Registre des accidents tenu. Maintenance engins partiellement planifiée. Pas encore de système intégré de suivi performance.",
+      "signes_distinctifs": [
+        "Rapport d'avancement mensuel avec % physique et % financier",
+        "Check-listes qualité pour les principaux postes de travaux (béton armé, maçonnerie)",
+        "Registre d'accidents tenu à jour (obligation légale CI)",
+        "Planning de maintenance engins pour les révisions périodiques majeures",
+        "Tableaux Excel de suivi coûts par lot, mis à jour manuellement"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Système de KPI opérationnels défini et mesuré sur les principaux chantiers. Suivi des non-conformités avec analyse causes et actions correctives. Maintenance préventive planifiée pour les engins clés. Tableau de bord performance partagé avec l'équipe de direction.",
+      "signes_distinctifs": [
+        "KPIs opérationnels définis et mesurés : rendements, taux NC, disponibilité engins, TF accidentologie",
+        "Système NCF (Non-Conformités) : chaque NC documentée, cause analysée, action corrective tracée",
+        "Plan de maintenance préventive engins, suivi des heures moteur",
+        "Tableau de bord mensuel performance partagé avec direction et maître d'ouvrage",
+        "Objectifs de productivité par lot de travaux définis en début de chantier"
+      ]
+    },
+    "niveau_4": {
+      "label": "Optimisé",
+      "description": "Performance opérationnelle suivie en temps réel via IoT (engins) et application mobile (terrain). IA pour la prédiction des pannes engins (maintenance prédictive). Essais LBTP CI intégrés dans le flux qualité. Certification ISO 9001 ou ISO 45001. Benchmarking inter-chantiers.",
+      "signes_distinctifs": [
+        "IoT engins : rendement, géolocalisation, consommation carburant en temps réel (Samsara, Tracktor)",
+        "Maintenance prédictive : IA détecte anomalies comportementales des engins avant panne",
+        "Résultats essais LBTP CI intégrés automatiquement dans le rapport qualité chantier",
+        "Certification ISO 9001 (qualité) et ISO 45001 (sécurité) obtenues et maintenues",
+        "Benchmarking inter-chantiers : partage des meilleures pratiques productivité entre équipes"
+      ]
+    },
+    "niveau_5": {
+      "label": "Différenciant",
+      "description": "Excellence opérationnelle avec jumeau numérique du chantier pour l'optimisation en temps réel. Robotique et construction modulaire pour les postes à forte intensité main-d'œuvre. IA prédictive qualité : détection automatique des non-conformités par analyse d'images. Zéro accident certifié.",
+      "signes_distinctifs": [
+        "Jumeau numérique : simulation et optimisation des processus avant exécution sur chantier réel",
+        "Analyse IA images chantier : détection non-conformités et EPI manquants (drones + cameras fixes)",
+        "Construction modulaire / préfabrication : postes répétitifs hors-site pour qualité maximale et délai minimal",
+        "Objectif zéro accident atteint sur 12 mois consécutifs, documenté et certifié",
+        "Performance carbone mesurée et gérée : scope 1, 2, 3 chantier"
+      ]
+    }
+  },
+  "indicateurs_cles": {
+    "indicateurs": [
+      {
+        "nom": "Taux de conformité premier passage (First Pass Quality)",
+        "definition": "Pourcentage des éléments de travaux réceptionnés conformes lors du premier contrôle (sans reprise nécessaire)",
+        "unite": "%",
+        "cible_sectorielle": "> 88% conformité premier passage (vs. 82-88% secteur CI moyen)",
+        "frequence_mesure": "Hebdomadaire"
+      },
+      {
+        "nom": "Taux de disponibilité technique des engins",
+        "definition": "Pourcentage du temps où les engins clés (pelles, bulldozers, niveleuses) sont opérationnels vs. en panne ou maintenance",
+        "unite": "%",
+        "cible_sectorielle": "> 85% disponibilité technique (vs. 60-70% sans maintenance préventive)",
+        "frequence_mesure": "Hebdomadaire"
+      },
+      {
+        "nom": "Coût de la non-qualité (CNQ)",
+        "definition": "Coût total des reprises, corrections, tests supplémentaires et litiges dus aux non-conformités, exprimé en % du coût chantier",
+        "unite": "% coût chantier",
+        "cible_sectorielle": "< 5% (vs. 8-15% secteur CI sans système qualité)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Taux de fréquence accidents (TF)",
+        "definition": "Nombre d'accidents avec arrêt de travail pour 1 million d'heures travaillées",
+        "unite": "accidents/million heures",
+        "cible_sectorielle": "TF < 8 (vs. 18-25 secteur BTP CI, objectif CNBTP CI agrément classe A)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Rendement moyen main-d'œuvre par poste clé",
+        "definition": "Production effective par ouvrier et par journée sur les postes clés (m² carrelage/ouvrier/jour, m³ béton coulé/équipe/jour)",
+        "unite": "unité de production/personne/jour",
+        "cible_sectorielle": "> 85% du standard BNETD CI pour le type de travaux",
+        "frequence_mesure": "Hebdomadaire"
+      }
+    ]
+  },
+  "bonnes_pratiques": {
+    "pratiques": [
+      {
+        "titre": "Définir des standards de rendement par tâche dès le démarrage du chantier",
+        "description": "Avant le démarrage, définir pour chaque lot de travaux les rendements cibles par équipe et par jour, basés sur les standards BNETD CI (pour les projets publics) ou les historiques d'entreprise. Afficher ces standards sur le chantier, les communiquer aux chefs de lot. Mesurer hebdomadairement l'atteinte et analyser les écarts.",
+        "benefice": "Responsabilisation des équipes, identification précoce des postes à faible productivité"
+      },
+      {
+        "titre": "Intégrer les résultats LBTP CI dans le flux qualité en temps réel",
+        "description": "Organiser le processus de prélèvement et d'analyse LBTP CI pour obtenir les résultats avant la prochaine étape de travaux (pas après). Intégrer les résultats LBTP CI dans le système qualité numérique du chantier : si résultat non conforme → blocage automatique de l'étape suivante. Validation numérique du chef qualité obligatoire.",
+        "benefice": "Détection précoce des non-conformités béton/sol, évitement des reprises coûteuses en phase avancée"
+      },
+      {
+        "titre": "IoT sur les engins clés pour la maintenance prédictive",
+        "description": "Équiper les 3-5 engins les plus critiques du chantier (pelle hydraulique, compacteur, niveleuse) de capteurs IoT (Samsara, Tracktor ou OBD2 universel) pour le suivi des heures moteur, températures, consommation carburant. Alertes automatiques à l'approche des seuils de maintenance. Dashboard maintenance partagé avec l'atelier.",
+        "benefice": "Réduction pannes de 40-60%, disponibilité technique +15-25%, réduction coût maintenance -20%"
+      },
+      {
+        "titre": "Système de management de la sécurité (SMS) formalisé",
+        "description": "Déployer un SMS conforme OHSAS 18001 / ISO 45001 : analyse des risques par poste, permis de travail, déclarations de presque-accidents (incentivées), réunion sécurité hebdomadaire 10 min, affichage statistiques sécurité. Application mobile sécurité pour les déclarations terrain (photos, géolocalisation). Obligatoire pour agrément CNBTP CI classe A-B.",
+        "benefice": "Réduction TF de 40-60%, accès marchés BNETD CI classe A, réduction coûts assurance chantier"
+      },
+      {
+        "titre": "Tableaux de bord KPI opérationnels partagés avec le maître d'ouvrage",
+        "description": "Partager hebdomadairement avec le maître d'ouvrage (BNETD CI, clients privés) un tableau de bord incluant : avancement physique, qualité (taux NC), sécurité (TF), prévision date de fin. Format standardisé BNETD CI pour les projets publics. Cette transparence réduit les demandes de réunion physique et renforce la confiance.",
+        "benefice": "Amélioration relation maître d'ouvrage, NPS client +20-30 pts, réduction réunions de chantier"
+      }
+    ]
+  },
+  "ecueils_frequents": {
+    "ecueils": [
+      {
+        "titre": "Mesurer sans agir sur les KPIs",
+        "description": "Certaines entreprises BTP CI mettent en place des tableaux de bord performance mais ne prennent aucune mesure corrective lorsque les indicateurs se dégradent. Les KPIs deviennent du décor.",
+        "solution": "Définir des seuils d'alerte et des processus d'escalade : si rendement < 75% objectif pendant 3 jours → réunion cause racine obligatoire avec action corrective documentée"
+      },
+      {
+        "titre": "Concentrer les KPIs sur le coût/délai en négligeant la qualité et la sécurité",
+        "description": "La plupart des entreprises BTP CI suivent uniquement l'avancement physique et financier. La qualité et la sécurité ne sont mesurées qu'a posteriori (lors des sinistres ou des litiges).",
+        "solution": "Équilibrer le tableau de bord : coûts/délais + qualité (taux NC) + sécurité (TF) + satisfaction client — les 4 dimensions HSEQ sont complémentaires"
+      },
+      {
+        "titre": "IoT mal entretenu et abandonné après quelques mois",
+        "description": "Les capteurs IoT sur engins nécessitent une maintenance (batterie, connectivité, calibration) que les équipes BTP CI ne sont pas habituées à assurer. Après 3-6 mois, les données deviennent non fiables ou les capteurs tombent en panne.",
+        "solution": "Contrat de maintenance avec le fournisseur IoT, désigner un responsable IoT chantier, vérification mensuelle du fonctionnement de chaque capteur"
+      }
+    ]
+  },
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau de performance opérationnelle BTP entre organisations représentatives",
+    "lignes": [
+      {
+        "organisation": "COLAS CI",
+        "profil": "Filiale Bouygues Construction, certifiée ISO 9001 et ISO 45001",
+        "niveau_maturite": 4,
+        "points_forts": "Certification ISO 9001/45001, IoT sur parc engins (50 unités CI), tableau de bord KPI hebdomadaire partagé MO, TF < 6 (secteur 18-25), benchmarking intragroupe",
+        "points_faibles": "Standards groupe parfois rigides vs. réalités CI, surcoût des certifications pour les PME sous-traitantes",
+        "initiatives_notables": "Programme COLAS Zéro Accident CI : SMS complet avec application mobile presque-accidents, 3 ans sans accident grave sur le plus grand chantier CI"
+      },
+      {
+        "organisation": "LBTP CI (Laboratoire du BTP)",
+        "profil": "Laboratoire national de référence qualité matériaux BTP CI",
+        "niveau_maturite": 4,
+        "points_forts": "Référentiel qualité national BTP CI, système d'essais certifié, base de données résultats essais accessible pour les entreprises CI",
+        "points_faibles": "Délai de transmission résultats (3-5 jours) non adapté aux rythmes de chantier rapide",
+        "initiatives_notables": "Plateforme LBTP CI digital : transmission résultats essais en 24h par portail numérique sécurisé (2024)"
+      },
+      {
+        "organisation": "SATCI CI",
+        "profil": "Promoteur immobilier CI, suivi qualité résidentiel VEFA",
+        "niveau_maturite": 3,
+        "points_forts": "Check-listes qualité par appartement, application BatiScript CI pour levée réserves, NPS client post-livraison suivi",
+        "points_faibles": "Rendements main-d'œuvre non formellement mesurés, TF non publié, absence de maintenance préventive engins",
+        "initiatives_notables": "Processus de réception par appartement dématérialisé : 3 200 appartements réceptionnés sans litige majeur sur 2 ans"
+      },
+      {
+        "organisation": "PME BTP CI classe D (10-50 employés)",
+        "profil": "Petite entreprise BTP locale, marchés < 50 M FCFA",
+        "niveau_maturite": 1,
+        "points_forts": "Flexibilité, faible overhead, réactivité aux demandes spécifiques",
+        "points_faibles": "Aucun KPI opérationnel, qualité non mesurée, maintenance engins réactive, sécurité informelle, taux NC élevé",
+        "initiatives_notables": "Adhésion CNBTP CI : accès à la formation sécurité et aux normes qualité (peu utilisé en pratique)"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "SATCI CI — Déploiement d'un système de contrôle qualité dématérialisé sur 800 logements VEFA Cocody",
+    "contexte": "SATCI CI a lancé en 2021 la construction de 800 logements résidentiels VEFA à Cocody-Riviera (Abidjan), programme de 45 Mds FCFA financé partiellement par BHCI CI. Le chantier mobilisait 15 sous-traitants corps de métier (gros œuvre, électricité, plomberie, carrelage, peinture). Le processus de contrôle qualité reposait sur des check-listes papier et des visites de conformité mensuelles par lot de travaux. Sur les 100 premiers appartements livrés, le taux de réserves à la livraison était de 18,5 réserves par appartement en moyenne, générant un délai de livraison effective de 45 jours après remise des clés et une satisfaction client très faible.",
+    "probleme": "18,5 réserves par appartement à la livraison (seuil acceptable : < 5 réserves). Délai levée réserves post-livraison : 45 jours en moyenne. NPS client post-livraison : 12/100 (score très faible). Coût moyen reprise par appartement : 385 000 FCFA (soit 7,7% du prix de vente moyen des appartements). Litige client : 23% des acquéreurs du premier programme avaient ouvert un contentieux.",
+    "solution_deployee": "Déploiement de BatiScript CI pour le contrôle qualité en cours de chantier : check-listes numériques par corps de métier avec photos géolocalisées, transmission instantanée aux sous-traitants pour correction immédiate, tableau de bord qualité par appartement et par sous-traitant, double contrôle (chef de chantier + responsable qualité SATCI CI). Formation des 15 chefs de lot sous-traitants à BatiScript CI (2 jours). Instauration d'une réunion qualité hebdomadaire avec le top 5 des sous-traitants sur la base des KPIs qualité.",
+    "resultats": {
+      "reserves_livraison": "18,5 → 3,2 réserves par appartement (-83%)",
+      "delai_levee_reserves": "45 jours → 8 jours (-82%)",
+      "nps_post_livraison": "12 → 68/100 (NPS post-livraison clients)",
+      "cout_reprise": "385 000 → 92 000 FCFA/appartement (-76%)",
+      "litiges_client": "23% → 4% des acquéreurs avec contentieux",
+      "satisfaction_sous_traitants": "Les sous-traitants avec taux NC > 15% ont été reclassifiés ou remplacés lors de la phase 2 — élévation générale du niveau de qualité sous-traitance"
+    },
+    "enseignements": "L'instauration d'un classement des sous-traitants par taux de NC (visible par tous) a créé une émulation positive qui a réduit les NC plus vite que les formations techniques. Le droit de rétention des paiements sous-traitants en cas de NC non résolues a renforcé l'efficacité du système qualité."
+  },
+  "ai_context": {
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune mesure de performance opérationnelle. Qualité contrôlée visuellement sans standards. Maintenance engins réactive. Accidents déclarés uniquement si graves. Aucun KPI chantier. Performance évaluée uniquement par feeling du chef de chantier.",
+      "score_21_to_40": "Quelques indicateurs (avancement physique, % budget). Check-listes qualité pour travaux courants. Registre accidents tenu. Planning maintenance engins pour révisions majeures. Suivi ad hoc sans système intégré.",
+      "score_41_to_60": "KPIs opérationnels définis et mesurés. Système NCF documenté avec actions correctives. Maintenance préventive engins planifiée. Tableau de bord performance partagé direction. Essais LBTP CI intégrés au flux qualité.",
+      "score_61_to_80": "Performance suivie en temps réel (IoT engins, application mobile terrain). Maintenance prédictive. Certification ISO 9001/45001. Benchmarking inter-chantiers. Tableaux de bord KPI partagés avec maître d'ouvrage.",
+      "score_81_to_100": "Excellence opérationnelle avec jumeau numérique chantier. Analyse IA images pour détection non-conformités. Construction modulaire sur postes répétitifs. Zéro accident certifié. Performance carbone mesurée et gérée."
+    },
+    "questions_cles_diagnostic": [
+      "Mesurez-vous les rendements de vos équipes par tâche (m²/heure, ml/jour) sur le chantier ?",
+      "Quel est votre taux de non-conformité à la réception (réserves par logement ou ouvrage) ?",
+      "Avez-vous un plan de maintenance préventive pour vos engins de chantier ?",
+      "Mesurez-vous votre taux de fréquence d'accidents (TF) ? Quel est-il ?",
+      "Votre système de contrôle qualité est-il numérisé (application mobile, check-listes numériques) ?"
+    ],
+    "pieges_evaluation": [
+      "Ne pas confondre la présence d'un registre d'accidents avec un système de management de la sécurité réel (SMS)",
+      "Vérifier que les KPIs déclarés sont réellement mesurés et non juste des objectifs non suivis",
+      "Distinguer les exigences qualité des grands groupes (certifications ISO) de la réalité des PME BTP CI locales"
+    ]
+  },
+  "ressources": {
+    "references_reglementaires": [
+      "LBTP CI — Référentiel essais et normes qualité matériaux BTP Côte d'Ivoire",
+      "CNBTP CI — Conditions d'agrément classe A-B (sécurité OHSAS 18001 requise)",
+      "BNETD CI — Standards de performance et cahiers des charges qualité projets publics CI",
+      "ISO 9001:2015 — Management de la qualité BTP (applicable en CI via CODINORM)",
+      "ISO 45001:2018 — Sécurité et santé au travail BTP (remplace OHSAS 18001)"
+    ],
+    "outils_recommandes": [
+      "BatiScript CI — Contrôle qualité et réception travaux adapté contexte CI",
+      "Procore Quality & Safety — Gestion NCF et sécurité chantier cloud",
+      "Samsara / Tracktor — IoT engins BTP, rendement et maintenance prédictive",
+      "Power BI / Tableau — Tableaux de bord KPI performance opérationnelle",
+      "LBTP CI portail numérique — Résultats essais matériaux en 24h"
+    ],
+    "formations_certifications": [
+      "LBTP CI — Formation contrôle qualité béton et sols BTP CI",
+      "CNBTP CI — Formation sécurité chantier et OHSAS 18001 / ISO 45001",
+      "Bureau Veritas CI / SGS CI — Certification ISO 9001 construction",
+      "Formation Lean Construction / Kaizen BTP — IGLC, CNBTP CI"
+    ]
+  }
+}

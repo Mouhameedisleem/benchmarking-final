@@ -5,7 +5,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../../environments/environment';
 
-type QuestionAxis = 'BUSINESS' | 'PROCESS' | 'INFORMATION_SYSTEM' | 'CANAUX_DISTRIBUTION' | 'MARKETING_COMMUNICATION' | 'RH_CULTURE_DIGITALE' | 'OFFRES_DIGITALES';
+type QuestionAxis = 'BUSINESS' | 'PROCESS' | 'INFORMATION_SYSTEM' | 'CANAUX_DISTRIBUTION' | 'MARKETING_COMMUNICATION' | 'RH_CULTURE_DIGITALE' | 'OFFRES_DIGITALES' | 'MODELE_OPERATIONNEL_INNOVATION' | 'IT_DATA';
 
 interface AiQuestion {
   text: string;
@@ -74,15 +74,33 @@ interface SectorQuestion {
       <!-- Step 0: Generating -->
       <div *ngIf="step === 0" class="card border-0 shadow-sm rounded-4">
         <div class="card-body p-5 text-center">
-          <div class="mb-4">
+          <div *ngIf="!generateError">
             <div class="spinner-border text-primary mb-3" style="width:3rem;height:3rem;"></div>
             <h4 class="fw-bold">Génération en cours…</h4>
             <p class="text-muted">L'IA analyse le secteur et génère un questionnaire adapté.</p>
           </div>
-          <div *ngIf="generateError" class="alert alert-danger">
-            <i class="fas fa-exclamation-circle me-2"></i>{{ generateError }}
-            <div class="mt-2">
-              <button class="btn btn-danger btn-sm" (click)="loadAiQuestions()">Réessayer</button>
+          <div *ngIf="generateError" class="text-start">
+            <div class="alert alert-warning mb-3">
+              <div class="d-flex align-items-start gap-2">
+                <i class="fas fa-exclamation-triangle mt-1 text-warning"></i>
+                <div>
+                  <strong>Service IA indisponible</strong>
+                  <p class="mb-2 mt-1 small text-muted">
+                    Le service IA ne répond pas. Vous pouvez réessayer ou continuer avec un questionnaire standard
+                    <span *ngIf="generateError === 'fallback_ready'">
+                      ({{ fallbackSource === 'sector' ? 'basé sur les questions de votre secteur' : '28 questions génériques' }})
+                    </span>.
+                  </p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <button class="btn btn-sm btn-outline-primary" (click)="loadAiQuestions()">
+                      <i class="fas fa-sync me-1"></i>Réessayer avec l'IA
+                    </button>
+                    <button class="btn btn-sm btn-primary" (click)="useFallback()" [disabled]="generateError !== 'fallback_ready'">
+                      <i class="fas fa-forward me-1"></i>Continuer sans IA
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -94,7 +112,9 @@ interface SectorQuestion {
           <div class="card-header bg-white border-0 pt-4 px-4 pb-2 d-flex justify-content-between align-items-center">
             <div>
               <h5 class="mb-0 fw-bold">
-                <i class="fas fa-robot text-primary me-2"></i>Questions générées par l'IA
+                <i class="fas fa-robot text-primary me-2" *ngIf="aiAvailable"></i>
+                <i class="fas fa-database text-warning me-2" *ngIf="!aiAvailable"></i>
+                {{ questionsTitle }}
               </h5>
               <small class="text-muted">{{ questions.length }} questions — modifiez, supprimez ou ajoutez</small>
             </div>
@@ -197,6 +217,8 @@ interface SectorQuestion {
                         <option value="MARKETING_COMMUNICATION">Marketing</option>
                         <option value="RH_CULTURE_DIGITALE">RH & Culture</option>
                         <option value="OFFRES_DIGITALES">Offres digitales</option>
+                        <option value="MODELE_OPERATIONNEL_INNOVATION">Modèle opérationnel</option>
+                        <option value="IT_DATA">IT & Data</option>
                       </select>
                     </div>
                     <div class="col-5">
@@ -288,6 +310,9 @@ export class CompanySetupComponent implements OnInit {
   finalMessage = '';
   emailFailed = false;
   credentialLines: string[] = [];
+  aiAvailable = true;
+  fallbackSource = '';
+  private fallbackQuestions: AiQuestion[] = [];
 
   sectorQuestions: SectorQuestion[] = [];
   showSectorPanel = false;
@@ -295,13 +320,15 @@ export class CompanySetupComponent implements OnInit {
   steps = ['Génération IA', 'Révision', 'Envoi'];
 
   axisLabels = [
-    { key: 'BUSINESS',               label: 'Métier',          color: '#0d6efd' },
-    { key: 'PROCESS',                label: 'Processus',       color: '#198754' },
-    { key: 'INFORMATION_SYSTEM',     label: 'SI',              color: '#6366f1' },
-    { key: 'CANAUX_DISTRIBUTION',    label: 'Canaux',          color: '#f59e0b' },
-    { key: 'MARKETING_COMMUNICATION',label: 'Marketing',       color: '#ec4899' },
-    { key: 'RH_CULTURE_DIGITALE',    label: 'RH & Culture',    color: '#06b6d4' },
-    { key: 'OFFRES_DIGITALES',       label: 'Offres digitales',color: '#84cc16' },
+    { key: 'BUSINESS',                      label: 'Métier',              color: '#0d6efd' },
+    { key: 'PROCESS',                       label: 'Processus',           color: '#198754' },
+    { key: 'INFORMATION_SYSTEM',            label: 'SI',                  color: '#6366f1' },
+    { key: 'CANAUX_DISTRIBUTION',           label: 'Canaux',              color: '#f59e0b' },
+    { key: 'MARKETING_COMMUNICATION',       label: 'Marketing',           color: '#ec4899' },
+    { key: 'RH_CULTURE_DIGITALE',           label: 'RH & Culture',        color: '#06b6d4' },
+    { key: 'OFFRES_DIGITALES',              label: 'Offres digitales',    color: '#84cc16' },
+    { key: 'MODELE_OPERATIONNEL_INNOVATION',label: 'Modèle opérationnel', color: '#f97316' },
+    { key: 'IT_DATA',                       label: 'IT & Data',           color: '#8b5cf6' },
   ];
 
   constructor(
@@ -319,22 +346,42 @@ export class CompanySetupComponent implements OnInit {
     this.generateError = '';
     this.sectorQuestions = [];
     this.showSectorPanel = false;
+    this.aiAvailable = true;
+    this.fallbackQuestions = [];
 
-    this.http.get<any>(`${environment.apiUrl}/companies/${this.companyId}/ai-questions`).subscribe({
+    this.http.get<any>(`${environment.apiUrl}/companies/${this.companyId}/ai-questions?_t=${Date.now()}`).subscribe({
       next: (res) => {
-        this.questions = (res.questions as AiQuestion[]).map((q, i) => ({
+        const mapped = (res.questions as AiQuestion[]).map((q, i) => ({
           ...q,
           display_order: q.display_order ?? i + 1,
           editing: false,
           reused: false
         }));
-        this.step = 1;
-        this.loadSectorQuestions();
+        if (res.aiAvailable === false) {
+          // Backend returned fallback — store it but don't advance yet; let user choose
+          this.aiAvailable = false;
+          this.fallbackSource = res.source ?? 'default';
+          this.fallbackQuestions = mapped;
+          this.generateError = 'fallback_ready';
+        } else {
+          this.aiAvailable = true;
+          this.questions = mapped;
+          this.step = 1;
+          this.loadSectorQuestions();
+        }
       },
-      error: (err) => {
-        this.generateError = err?.error?.message || 'Erreur lors de la génération. Vérifiez que le service IA est démarré.';
+      error: () => {
+        this.generateError = 'error';
+        this.fallbackSource = '';
       }
     });
+  }
+
+  useFallback(): void {
+    this.questions = this.fallbackQuestions.length > 0 ? this.fallbackQuestions : [];
+    this.generateError = '';
+    this.step = 1;
+    this.loadSectorQuestions();
   }
 
   private loadSectorQuestions() {
@@ -368,15 +415,20 @@ export class CompanySetupComponent implements OnInit {
       .forEach(sq => this.addSectorQuestion(sq));
   }
 
+  get questionsTitle(): string {
+    return this.aiAvailable ? "Questions générées par l'IA" : 'Questions standard (IA indisponible)';
+  }
+
   addQuestion() {
-    this.questions.push({
+    this.questions.unshift({
       text: '',
       axis: 'BUSINESS',
       sub_axis: '',
       weight: 3,
-      display_order: this.questions.length + 1,
+      display_order: 1,
       editing: true
     });
+    this.questions.forEach((q, i) => q.display_order = i + 1);
   }
 
   removeQuestion(index: number) {

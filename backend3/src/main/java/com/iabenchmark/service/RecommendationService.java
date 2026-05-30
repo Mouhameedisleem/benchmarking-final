@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class RecommendationService {
@@ -20,7 +21,7 @@ public class RecommendationService {
     }
 
     public List<RecommendationResponse> generateRecommendations(Long evaluationId) {
-        Evaluation evaluation = evaluationRepository.findById(evaluationId)
+        Evaluation evaluation = evaluationRepository.findById(Objects.requireNonNull(evaluationId))
                 .orElseThrow(() -> new EntityNotFoundException("Evaluation not found: " + evaluationId));
 
         String sector = evaluation.getCompany().getSector();
@@ -32,6 +33,8 @@ public class RecommendationService {
         double marketingScore = evaluation.getMarketingCommunicationScore();
         double rhScore = evaluation.getRhCultureDigitaleScore();
         double offresScore = evaluation.getOffresDigitalesScore();
+        double modeleOperationnelScore = evaluation.getModeleOperationnelScore();
+        double itDataScore = evaluation.getItDataScore();
         MaturityLevel maturity = evaluation.getMaturityLevel();
 
         List<RecommendationResponse> recommendations = new ArrayList<>();
@@ -43,6 +46,8 @@ public class RecommendationService {
         if (marketingScore > 0) recommendations.addAll(generateMarketingRecommendations(marketingScore, sector, maturity));
         if (rhScore > 0) recommendations.addAll(generateRhRecommendations(rhScore, maturity));
         if (offresScore > 0) recommendations.addAll(generateOffresRecommendations(offresScore, sector, maturity));
+        if (modeleOperationnelScore > 0) recommendations.addAll(generateModeleOperationnelRecommendations(modeleOperationnelScore, maturity));
+        if (itDataScore > 0) recommendations.addAll(generateItDataRecommendations(itDataScore, sector, maturity));
 
         return recommendations;
     }
@@ -368,6 +373,104 @@ public class RecommendationService {
                     "Exporter les solutions digitales dans d'autres marchés CEDEAO",
                     "L'excellence en offres digitales locales ouvre des opportunités d'expansion régionale. Les solutions éprouvées localement peuvent être déployées dans d'autres pays de la CEDEAO.",
                     "Gartner Digital Business Models 2024 et McKinsey Africa Banking Report indiquent que les banques panafricaines leaders valorisent leur expertise digitale comme actif exportable, générant des revenus récurrents via des licences de plateforme dans d'autres marchés."
+            ));
+        }
+        return recs;
+    }
+
+    private List<RecommendationResponse> generateModeleOperationnelRecommendations(
+            double score, MaturityLevel maturity) {
+
+        List<RecommendationResponse> recs = new ArrayList<>();
+
+        if (score < 40) {
+            recs.add(new RecommendationResponse(
+                    "MODELE_OPERATIONNEL", "HAUTE",
+                    "Identifier et automatiser les processus à fort potentiel (RPA / IA)",
+                    "Les processus internes sont encore largement manuels. Une démarche de cartographie puis d'automatisation par vagues priorisées (quick wins d'abord) est indispensable pour réduire les coûts et les délais.",
+                    "Forrester Research estime que la RPA et l'hyperautomatisation réduisent de 25 à 50% les coûts opérationnels sur les processus ciblés. Les banques leaders ont automatisé plus de 40% de leurs tâches back-office d'ici 2025."
+            ));
+            recs.add(new RecommendationResponse(
+                    "MODELE_OPERATIONNEL", "HAUTE",
+                    "Mettre en place une gouvernance formelle de la transformation digitale",
+                    "L'absence de gouvernance claire freine la prise de décision et la cohérence des initiatives digitales. Un comité de pilotage dédié avec des KPI de transformation est nécessaire.",
+                    "McKinsey Digital Transformation Survey 2024 indique que 70% des transformations échouent faute de gouvernance. Les programmes gouvernés par un Chief Digital Officer (CDO) avec mandat clair ont 2,5x plus de chances de succès."
+            ));
+        } else if (score < 60) {
+            recs.add(new RecommendationResponse(
+                    "MODELE_OPERATIONNEL", "MOYENNE",
+                    "Structurer un programme d'hyperautomatisation (RPA + IA + BPM)",
+                    "Des automatisations ponctuelles existent mais ne sont pas coordonnées. Un programme d'hyperautomatisation unifié permettrait de maximiser l'impact et d'assurer la cohérence.",
+                    "Gartner Hyperautomation Forecast 2024 prévoit que les organisations qui adoptent l'hyperautomatisation réduisent leurs coûts opérationnels de 30% d'ici 2026 et améliorent la qualité de service de 40%."
+            ));
+            recs.add(new RecommendationResponse(
+                    "MODELE_OPERATIONNEL", "MOYENNE",
+                    "Développer un cadre d'innovation structuré (labs, incubateurs, partenariats startups)",
+                    "L'innovation reste sporadique et peu formalisée. Un cadre d'innovation avec des processus clairs (idéation, prototypage, mise à l'échelle) est nécessaire pour soutenir la croissance.",
+                    "Deloitte Innovation Benchmark 2024 montre que les entreprises dotées d'un lab d'innovation lancent des produits 40% plus vite et atteignent 2x plus souvent leurs objectifs de croissance digitale."
+            ));
+        } else if (score < 80) {
+            recs.add(new RecommendationResponse(
+                    "MODELE_OPERATIONNEL", "MOYENNE",
+                    "Accélérer l'innovation ouverte et les partenariats avec l'écosystème fintech",
+                    "La maturité opérationnelle atteinte permet d'ouvrir l'innovation à des partenaires extérieurs. Les collaborations avec des fintechs et startups accélèrent le cycle d'innovation.",
+                    "Accenture Fintech Partnership Report 2024 indique que les banques ayant une stratégie de partenariat fintech structurée lancent 3x plus de nouveaux services par an et réduisent leur time-to-market de 60%."
+            ));
+        } else {
+            recs.add(new RecommendationResponse(
+                    "MODELE_OPERATIONNEL", "BASSE",
+                    "Valoriser le modèle opérationnel comme actif exportable",
+                    "L'excellence opérationnelle atteinte constitue un avantage compétitif exportable. Le partage des pratiques et la licence du modèle à d'autres entités peuvent générer de nouvelles sources de revenus.",
+                    "BCG Operations Excellence 2024 montre que les leaders opérationnels mondiaux valorisent leur savoir-faire via des plateformes de services partagés et des accords de franchise opérationnelle, générant 15 à 20% de revenus additionnels."
+            ));
+        }
+        return recs;
+    }
+
+    private List<RecommendationResponse> generateItDataRecommendations(
+            double score, String sector, MaturityLevel maturity) {
+
+        List<RecommendationResponse> recs = new ArrayList<>();
+
+        if (score < 40) {
+            recs.add(new RecommendationResponse(
+                    "IT_DATA", "HAUTE",
+                    "Moderniser le socle IT : migration cloud et décommissionnement du legacy",
+                    "L'infrastructure IT repose sur des systèmes anciens (legacy) qui limitent l'agilité, augmentent les coûts de maintenance et fragilisent la sécurité. Une migration progressive vers le cloud est prioritaire.",
+                    "IDC Infrastructure 2024 estime que le maintien de systèmes legacy coûte en moyenne 60% du budget IT total. Une migration cloud réduit ces coûts de 30 à 40% tout en améliorant la résilience et la scalabilité."
+            ));
+            recs.add(new RecommendationResponse(
+                    "IT_DATA", "HAUTE",
+                    "Mettre en place les fondations d'une stratégie data (collecte, qualité, gouvernance)",
+                    "Les données sont éparpillées dans de multiples silos, non gouvernées et de qualité insuffisante pour alimenter des analyses fiables ou des modèles IA.",
+                    "DAMA International estime que la mauvaise qualité des données coûte en moyenne 12,9 millions USD par an aux grandes organisations. Une Data Strategy avec gouvernance formelle est le prérequis de toute initiative data-driven."
+            ));
+        } else if (score < 60) {
+            recs.add(new RecommendationResponse(
+                    "IT_DATA", "MOYENNE",
+                    "Déployer une plateforme cloud hybride et renforcer la cybersécurité",
+                    "Le socle IT est partiellement modernisé mais l'architecture cloud hybride n'est pas encore optimisée. La sécurité des environnements cloud mérite une attention particulière.",
+                    "NIST Cybersecurity Framework et CIS Controls recommandent une approche Zero Trust pour sécuriser les architectures hybrides. Les organisations certifiées ISO 27001 en cloud réduisent leur risque de breach de 55%."
+            ));
+            recs.add(new RecommendationResponse(
+                    "IT_DATA", "MOYENNE",
+                    "Construire un Data Warehouse / Data Lake pour centraliser les données",
+                    "Les données sont partiellement consolidées mais sans plateforme unifiée. Un Data Warehouse ou Data Lakehouse centralisé est nécessaire pour activer des analyses avancées.",
+                    "Snowflake Data Cloud Survey 2024 montre que les organisations dotées d'une plateforme data centralisée réduisent leurs délais d'analyse de 70% et multiplient par 3 leurs capacités de reporting en temps réel."
+            ));
+        } else if (score < 80) {
+            recs.add(new RecommendationResponse(
+                    "IT_DATA", "MOYENNE",
+                    "Activer la data science et les premiers cas d'usage IA métier",
+                    "L'infrastructure data est mature. L'étape suivante est de déployer des modèles de machine learning sur des cas d'usage à fort impact (scoring crédit, détection fraude, personnalisation).",
+                    "McKinsey State of AI 2024 indique que les entreprises du secteur " + formatSector(sector) + " qui déploient l'IA sur au moins 3 cas d'usage métier constatent une amélioration de 15 à 25% de leurs indicateurs clés de performance."
+            ));
+        } else {
+            recs.add(new RecommendationResponse(
+                    "IT_DATA", "BASSE",
+                    "Déployer une stratégie d'IA à l'échelle (AI at Scale) et valoriser les données",
+                    "L'excellence IT & Data atteinte permet de passer à l'IA généralisée : modèles en production, DataOps, et monétisation des données via des APIs ou des produits data.",
+                    "WEF Data Economy 2024 estime que les organisations qui monétisent leurs données (produits data, APIs, partenariats data) génèrent 2 à 5x plus de valeur par donnée collectée que celles qui les utilisent uniquement en interne."
             ));
         }
         return recs;

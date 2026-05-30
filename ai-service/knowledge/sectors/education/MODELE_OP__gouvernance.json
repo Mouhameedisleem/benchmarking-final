@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "secteur": "education",
+    "axe": "MODELE_OP",
+    "sous_axe": "gouvernance",
+    "titre": "Gouvernance numérique dans l'enseignement en Côte d'Ivoire",
+    "description": "Mise en place d'une gouvernance numérique formelle dans les établissements d'enseignement : comité de pilotage numérique, Délégué à la Protection des Données (DPO APDP CI), politique de sécurité SI, registre des traitements, audit MESRS CI et tableau de bord de maturité numérique.",
+    "version": "1.0",
+    "date_mise_a_jour": "2025-01-01",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "La gouvernance numérique des établissements d'enseignement ivoiriens est largement immature : 78% des établissements CI n'ont pas de comité de pilotage numérique formalisé, 92% n'ont pas de DPO désigné conformément à la Loi 2013-450 (APDP CI), et moins de 5% disposent d'une politique de sécurité SI documentée (PSSI). Cette lacune est devenue critique avec l'incident phishing UFHB 2023 (340 comptes compromis) et la multiplication des données apprenants traitées par les LMS. Le MESRS CI a intégré un indicateur de gouvernance numérique (IQN) dans ses 5 KPIs d'accréditation annuelle depuis 2024, créant une incitation formelle à structurer la gouvernance numérique.",
+    "chiffres_cles": [
+      "78% des établissements CI sans comité de pilotage numérique formalisé (enquête MESRS CI 2024)",
+      "92% des établissements CI sans DPO désigné (APDP CI Loi 2013-450, obligation depuis 2015)",
+      "< 5% des établissements CI avec une Politique de Sécurité SI (PSSI) documentée",
+      "Incident phishing UFHB 2023 : 340 comptes compromis — absence de PSSI et MFA révélée",
+      "IQN (Indicateur Qualité Numérique) intégré aux 5 KPIs MESRS CI depuis 2024",
+      "CAMES : exige > 60% des enseignants au niveau intermédiaire DigComp ET une gouvernance numérique documentée pour les accréditations de formations hybrides depuis 2023"
+    ],
+    "acteurs_cles": [
+      "MESRS CI — IQN (Indicateur Qualité Numérique) dans les KPIs d'accréditation annuelle",
+      "APDP CI — Loi 2013-450 obligation DPO et registre des traitements pour tous les établissements traitant des données personnelles",
+      "CAMES — gouvernance numérique requise pour accréditation formations hybrides",
+      "ARTCI — réglementation cybersécurité, logs Wi-Fi 12 mois, filtrage mineurs",
+      "Cour des Comptes CI — audit utilisation fonds publics IT dans universités publiques (UFHB, INPHB)",
+      "Bailleurs AUF/AFD — conditionnalité gouvernance numérique pour financements EdTech"
+    ]
+  },
+  "enjeux_cles": [
+    {
+      "enjeu": "Créer un comité de pilotage numérique (CODIR Digital) formalisé",
+      "description": "Sans organe de gouvernance numérique dédié, les décisions IT sont prises de manière ad hoc par la direction générale ou la DSI seule, sans vision stratégique alignée sur la mission académique. Un CODIR Numérique mensuel (DG + directeurs + DSI + DPO) structure les priorités, le budget IT et les arbitrages réglementaires.",
+      "impact": "Alignement stratégie numérique / mission académique et réduction des dépenses IT non justifiées"
+    },
+    {
+      "enjeu": "Désigner un DPO et mettre en conformité APDP CI",
+      "description": "La Loi 2013-450 oblige tout établissement traitant des données personnelles d'étudiants à désigner un DPO enregistré auprès de l'APDP CI. Les données LMS (xAPI, comportements en ligne), les données RH et les données d'évaluation sont concernées. Les sanctions peuvent atteindre 5% du budget.",
+      "impact": "Réduction du risque de sanction APDP CI et renforcement de la confiance des apprenants"
+    },
+    {
+      "enjeu": "Formaliser la Politique de Sécurité SI (PSSI)",
+      "description": "Une PSSI documentée et approuvée par la direction couvre : classification des données (publiques, confidentielles, sensibles), politique des mots de passe et MFA, gestion des incidents, plan de continuité pédagogique (PCP obligatoire MENA CI 2021), et responsabilités des utilisateurs (apprenants, enseignants, staff).",
+      "impact": "Réduction de la surface d'attaque cybersécurité et conformité ARTCI"
+    },
+    {
+      "enjeu": "Intégrer la gouvernance numérique dans les rapports d'accréditation MESRS CI et CAMES",
+      "description": "Le MESRS CI et le CAMES évaluent désormais la gouvernance numérique des établissements dans leurs processus d'accréditation. Un tableau de bord numérique (DCI — Degré de Culture et d'Infrastructure Informatique) et un registre des traitements APDP CI sont des prérequis pour les accréditations de formations hybrides.",
+      "impact": "Maintien et renouvellement des accréditations MESRS CI et CAMES"
+    },
+    {
+      "enjeu": "Allouer et piloter le budget numérique de manière transparente",
+      "description": "Dans la majorité des établissements CI, le budget IT est soit inexistant (ligne 'informatique' dans les frais généraux), soit opaque. Un processus de budgétisation numérique formalisé (ROI attendu, KPIs de suivi, validation CODIR) est nécessaire pour justifier les investissements devant les bailleurs et les tutelles.",
+      "impact": "Optimisation des dépenses IT et crédibilité auprès des bailleurs AUF/AFD"
+    }
+  ],
+  "niveau_maturite": {
+    "description": "Échelle de maturité gouvernance numérique pour les établissements d'enseignement CI",
+    "niveaux": [
+      {
+        "niveau": 1,
+        "label": "Absente",
+        "description": "Aucune gouvernance numérique formalisée. Décisions IT ad hoc par la direction. Aucun DPO. Aucune PSSI. Budget IT non tracé. Aucun registre des traitements APDP CI. Non-conformité totale."
+      },
+      {
+        "niveau": 2,
+        "label": "Émergente",
+        "description": "Un responsable IT désigné informellement. Quelques règles de sécurité non documentées. Budget IT estimé mais non alloué formellement. Aucun DPO. Registre des traitements APDP CI absent. Réaction aux incidents plutôt que prévention."
+      },
+      {
+        "niveau": 3,
+        "label": "Structurée",
+        "description": "DSI avec fiche de poste formelle. PSSI documentée et approuvée par la direction. DPO désigné et enregistré APDP CI. Registre des traitements à jour (20+ traitements documentés). Budget IT alloué (3-5% du budget de fonctionnement). Rapports IQN MESRS CI produits."
+      },
+      {
+        "niveau": 4,
+        "label": "Pilotée",
+        "description": "CODIR Numérique mensuel formalisé avec PV. DPO certifié (IAPP ou CNIL). Tableau de bord numérique trimestriel (DCI, couverture PSSI, incidents). Audit numérique annuel interne. Plan de continuité pédagogique (PCP MENA CI) opérationnel et testé. Conformité CAMES gouvernance hybride."
+      },
+      {
+        "niveau": 5,
+        "label": "Excellence",
+        "description": "ISO 27001 certifié (ou en cours de certification). Gouvernance IA formalisée (éthique IA, validation humaine décisions APDP CI, audit biais). Audit numérique externe annuel par cabinet certifié CI. Reporting ESG numérique pour bailleurs. Data Stewards dans chaque département académique. Score IQN MESRS CI > 85/100."
+      }
+    ]
+  },
+  "indicateurs_cles": [
+    {
+      "kpi": "IQN — Indicateur Qualité Numérique MESRS CI",
+      "definition": "Score de gouvernance numérique calculé par le MESRS CI dans le cadre de l'accréditation annuelle des établissements d'enseignement supérieur CI (100 points, 5 dimensions : infrastructure, sécurité, gouvernance, données, compétences)",
+      "unite": "score /100",
+      "benchmark_ci": "UVCI CI : 78/100 (2024) — secteur éducation privé CI moyen : 38/100 — universités publiques CI : 29/100",
+      "cible_sectorielle": "> 60/100 (seuil accréditation MESRS CI formations hybrides)",
+      "source": "MESRS CI IQN 2024"
+    },
+    {
+      "kpi": "Taux de conformité APDP CI (registre des traitements)",
+      "definition": "Part des traitements de données personnelles de l'établissement (LMS, RH, inscriptions, évaluations) documentés dans le registre des traitements et notifiés à l'APDP CI",
+      "unite": "%",
+      "benchmark_ci": "UVCI CI : 92% (28/30 traitements documentés) — secteur éducation CI : < 15%",
+      "cible_sectorielle": "> 90% (conformité APDP CI Loi 2013-450)",
+      "source": "APDP CI — statistiques enregistrements établissements éducatifs 2024"
+    },
+    {
+      "kpi": "Délai moyen de réponse à un incident de sécurité (MTTD + MTTR)",
+      "definition": "MTTD (Mean Time To Detect) : délai entre l'incident et sa détection. MTTR (Mean Time To Respond) : délai entre la détection et la remédiation complète de l'incident.",
+      "unite": "heures",
+      "benchmark_ci": "UFHB incident 2023 : MTTD 72h, MTTR 240h — UVCI CI (post-déploiement MFA) : MTTD 2h, MTTR 8h",
+      "cible_sectorielle": "MTTD < 4h, MTTR < 24h (standard ARTCI secteur éducation)",
+      "source": "ARTCI rapport cybersécurité secteur éducation CI 2024"
+    },
+    {
+      "kpi": "Part du budget allouée au numérique",
+      "definition": "Pourcentage du budget de fonctionnement annuel de l'établissement alloué formellement aux investissements et dépenses numériques (IT, cybersécurité, licences LMS, formation numérique)",
+      "unite": "%",
+      "benchmark_ci": "UVCI CI : 18% (numérique-natif) — secteur éducation privé CI : 4-6% — universités publiques CI : < 2%",
+      "cible_sectorielle": "> 8% (recommandation MESRS CI pour établissements hybrides)",
+      "source": "Enquête budgétaire MESRS CI 2024"
+    },
+    {
+      "kpi": "Taux de couverture MFA (authentification multi-facteurs)",
+      "definition": "Part des comptes utilisateurs actifs (apprenants, enseignants, staff) protégés par une authentification multi-facteurs sur les systèmes académiques (LMS, email, portail SIS)",
+      "unite": "%",
+      "benchmark_ci": "UVCI CI : 98% (post-incident UFHB 2023) — UFHB : 0% (2022) → 45% (2024) — secteur CI moyen : 12%",
+      "cible_sectorielle": "> 95% staff + 80% apprenants",
+      "source": "Rapport cybersécurité UVCI CI 2024 + ARTCI"
+    }
+  ],
+  "zoom_sur": {
+    "organisation": "UVCI CI (Université Virtuelle de Côte d'Ivoire)",
+    "titre": "Gouvernance numérique formalisée : CODIR Digital + DPO APDP CI + tableau de bord IQN",
+    "contexte": "En 2022, suite à l'incident phishing UFHB (340 comptes compromis) qui a secoué tout le secteur éducatif CI, l'UVCI CI — consciente de sa vulnérabilité en tant qu'université 100% en ligne — a décidé de formaliser sa gouvernance numérique. La direction constatait également que les demandes de financement AUF et AFD exigeaient désormais une gouvernance numérique documentée pour valider les projets EdTech.",
+    "solution": "Déploiement en 12 mois d'un cadre de gouvernance numérique à 5 composantes : (1) CODIR Numérique mensuel formalisé (DG + 4 directeurs + DSI + DPO), avec ordre du jour standardisé, PV horodatés et tableau de bord de suivi ; (2) DPO désigné — recrutement d'un DPO certifié CNIL (diplôme reconnu par l'APDP CI), enregistrement APDP CI en J+30, registre de 28 traitements documentés ; (3) PSSI (Politique de Sécurité SI) en 42 pages, approuvée CODIR, formant base du programme MFA et des audits ; (4) Tableau de bord IQN trimestriel (12 indicateurs, Power BI) partagé avec le MESRS CI ; (5) 8 Data Stewards désignés dans les départements pédagogiques (responsabilité qualité et conformité des données académiques de leur pôle).",
+    "resultats": {
+      "avant": "Aucun DPO, aucune PSSI, décisions IT ad hoc, IQN MESRS CI non calculé, 0 registre de traitements APDP CI, budget numérique non tracé formellement, financement AUF refusé une première fois (2021) pour absence de gouvernance documentée",
+      "apres": "CODIR Numérique mensuel opérationnel (12 réunions en 2024, 100% avec PV), DPO enregistré APDP CI + registre 28 traitements, IQN MESRS CI 78/100 (secteur éducation : 38/100), MTTD incidents réduit de 72h → 2h, MTTR 240h → 8h, financement AUF 45 M FCFA obtenu pour projet EdTech UEMOA (2023) grâce à la gouvernance documentée, conformité CAMES gouvernance hybride acquise (accréditation 3 nouvelles formations hybrides 2024)"
+    },
+    "lessons_learned": "Le rôle de DPO était perçu initialement comme une contrainte administrative. Sa valeur s'est révélée lors d'un tentative d'incident en 2023 : le DPO a identifié une exposition de données xAPI dans un contrat avec un fournisseur LRS tiers et a demandé un avenant APDP CI en 48h, évitant un incident potentiellement grave. Les Data Stewards ont été l'innovation la plus transformatrice : chaque département se sent désormais responsable de ses données, pas uniquement la DSI.",
+    "contact_reference": "Délégué à la Protection des Données UVCI CI — dpo@uvci.edu.ci"
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif gouvernance numérique — établissements enseignement CI et références",
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "type": "National — leader",
+        "codir_numerique": "Mensuel (formalisé, PV horodatés)",
+        "dpo_apdp": "Oui (certifié CNIL, 28 traitements documentés)",
+        "pssi": "Oui (42 pages, approuvée CODIR, révisée annuellement)",
+        "iqn_mesrs": "78/100 (2024)",
+        "mfa_couverture": "98%",
+        "score_estime": "81/100"
+      },
+      {
+        "organisation": "Pigier CI (Abidjan)",
+        "type": "National — privé",
+        "codir_numerique": "Trimestriel (intégré au CODIR général Salesforce)",
+        "dpo_apdp": "Oui (DPO externe mutualisé — cabinet juridique Abidjan)",
+        "pssi": "Oui (basée sur ISO 27002, partielle — 60% des contrôles implémentés)",
+        "iqn_mesrs": "72/100 (2024)",
+        "mfa_couverture": "91%",
+        "score_estime": "74/100"
+      },
+      {
+        "organisation": "INPHB Yamoussoukro",
+        "type": "National — grande école publique",
+        "codir_numerique": "Non formalisé (réunion DSI + DG ponctuelle)",
+        "dpo_apdp": "Non (désignation en cours — 2025 prévue)",
+        "pssi": "Partielle (politique mots de passe uniquement)",
+        "iqn_mesrs": "44/100 (2024)",
+        "mfa_couverture": "35%",
+        "score_estime": "38/100"
+      },
+      {
+        "organisation": "Strathmore University (Nairobi, Kenya)",
+        "type": "Régional — référence Afrique de l'Est",
+        "codir_numerique": "Mensuel (Digital Transformation Committee formalisé)",
+        "dpo_apdp": "Oui (DPO certifié, conforme Kenya DPA 2019)",
+        "pssi": "Oui (ISO 27001 certifié depuis 2022)",
+        "iqn_mesrs": "Score Kenya équivalent : 88/100",
+        "mfa_couverture": "100% staff, 78% étudiants",
+        "score_estime": "89/100"
+      },
+      {
+        "organisation": "MIT (Massachusetts Institute of Technology, USA)",
+        "type": "International — référence mondiale",
+        "codir_numerique": "Comité IT mensuel + sous-comités sécurité et données",
+        "dpo_apdp": "Oui (CISO + DPO + équipe conformité FERPA/GDPR/CCPA)",
+        "pssi": "Oui (MIT IS&T Security Policies — mises à jour trimestrielles)",
+        "iqn_mesrs": "Standard US : NIST CSF — score 96/100 équivalent",
+        "mfa_couverture": "100% (Duo Security — MIT depuis 2019)",
+        "score_estime": "98/100"
+      }
+    ]
+  },
+  "bonnes_pratiques": [
+    {
+      "pratique": "Créer le CODIR Numérique avant tout autre investissement numérique",
+      "description": "Sans organe de gouvernance, les investissements IT sont dispersés et non alignés. Le CODIR Numérique mensuel (1h30, ordre du jour standardisé : sécurité, projets, budget, conformité) est le premier acte de gouvernance — il structure tous les autres. Coût : quasi nul (temps des participants).",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Désigner un DPO (en interne ou externalisé) et s'enregistrer à l'APDP CI",
+      "description": "L'obligation légale existe depuis 2015 (Loi 2013-450). Un DPO peut être mutualisé entre plusieurs établissements (cabinet juridique spécialisé Abidjan : 500 000 - 1,5 M FCFA/an). L'enregistrement APDP CI protège l'établissement et renforce la confiance des apprenants et des bailleurs.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Commencer la PSSI par les 5 contrôles CIS les plus critiques pour l'éducation CI",
+      "description": "Les 5 contrôles prioritaires pour les établissements CI : (1) inventaire des actifs IT, (2) authentification MFA, (3) sauvegardes testées, (4) gestion des accès privilégiés, (5) sensibilisation anti-phishing. Ces 5 contrôles couvrent 80% des vecteurs d'attaque documentés en CI (ARTCI 2024).",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Désigner des Data Stewards dans chaque département académique",
+      "description": "Plutôt qu'une gouvernance des données centralisée sur la DSI seule, les Data Stewards (enseignant-chercheur référent par département) portent la responsabilité de la qualité et de la conformité des données de leur pôle. UVCI CI : 8 Data Stewards, 1h/mois de réunion avec le DPO.",
+      "priorite": "Moyenne"
+    },
+    {
+      "pratique": "Produire le rapport IQN MESRS CI trimestriellement (et non uniquement pour l'accréditation)",
+      "description": "Le tableau de bord IQN MESRS CI produit trimestriellement (pas uniquement lors de l'accréditation annuelle) permet de suivre la progression en temps réel et d'identifier les indicateurs à risque avant l'audit. Power BI + Moodle + SIS fournissent les données nécessaires automatiquement.",
+      "priorite": "Moyenne"
+    }
+  ],
+  "pieges_a_eviter": [
+    {
+      "piege": "Désigner le DPO uniquement pour cocher la case APDP CI sans réelle mission",
+      "consequence": "Un DPO sans budget, sans accès aux systèmes et sans autorité pour imposer des corrections ne protège pas l'établissement. En cas d'incident, l'APDP CI peut considérer que la désignation formelle sans mission réelle est une fraude à la conformité, aggravant les sanctions.",
+      "recommandation": "Le DPO doit avoir accès au CODIR Numérique, un budget d'audit (500 000 - 1 M FCFA/an) et le pouvoir de suspendre un traitement non conforme en urgence"
+    },
+    {
+      "piege": "Rédiger une PSSI sans la faire appliquer ni former les utilisateurs",
+      "consequence": "Une PSSI non diffusée et non formée est un document mort. L'incident UFHB 2023 s'est produit dans un établissement disposant d'une charte informatique signée par tous les enseignants — mais jamais appliquée ni formée. 34% des utilisateurs CI cliquent sur les liens de phishing simulés sans formation.",
+      "recommandation": "Formation annuelle obligatoire de 2h sur la PSSI + test de phishing simulé trimestriel pour tous les comptes + signature numérique de la PSSI lors de l'onboarding"
+    },
+    {
+      "piege": "Centraliser toutes les décisions IT sur le DSI seul sans CODIR",
+      "consequence": "Sans CODIR, les priorités IT sont définies par urgence technique et non par valeur stratégique. Résultat : des investissements dans des serveurs physiques alors que le cloud serait plus adapté, ou des choix de LMS incompatibles avec les standards LTI partenaires.",
+      "recommandation": "Tout investissement IT > 5 M FCFA doit passer en CODIR Numérique avec ROI estimé, KPIs de suivi et conformité APDP CI validée"
+    },
+    {
+      "piege": "Ignorer la gouvernance de l'IA dans le contexte de l'IA générative",
+      "consequence": "L'APDP CI impose une validation humaine obligatoire pour toutes les décisions finales basées sur l'IA (orientation, notation, admissibilité). Les établissements CI utilisant des outils IA sans politique formelle (qui peut utiliser quoi, avec quelles données) s'exposent à des sanctions croissantes.",
+      "recommandation": "Adopter une politique IA académique formalisée : liste des outils autorisés, interdiction des données nominatives apprenants dans les LLM publics, obligation de mention dans les travaux, validation humaine systématique des décisions IA"
+    }
+  ],
+  "roadmap": {
+    "titre": "Roadmap gouvernance numérique — établissement d'enseignement CI",
+    "phases": [
+      {
+        "phase": "Phase 1 — Fondations (Mois 1-4)",
+        "actions": [
+          "Constitution du CODIR Numérique (désignation membres + charte de fonctionnement)",
+          "Désignation DPO (interne ou externe mutualisé) + enregistrement APDP CI",
+          "Inventaire des traitements de données personnelles (apprenants, RH, partenaires)",
+          "Calcul du score IQN MESRS CI baseline pour établir les priorités"
+        ],
+        "budget_indicatif": "1 - 3 M FCFA (DPO externe mutualisé + audit baseline)"
+      },
+      {
+        "phase": "Phase 2 — PSSI et Conformité (Mois 5-10)",
+        "actions": [
+          "Rédaction et approbation PSSI (basée sur CIS Controls — 5 contrôles prioritaires)",
+          "Déploiement MFA sur tous les comptes staff et enseignants (Microsoft Entra ID ou Duo)",
+          "Registre des traitements APDP CI complet (30+ traitements documentés)",
+          "Formation annuelle anti-phishing + test phishing simulé (baseline taux de clic)"
+        ],
+        "budget_indicatif": "3 - 8 M FCFA (MFA + formation + PSSI + registre traitements)"
+      },
+      {
+        "phase": "Phase 3 — Pilotage et Excellence (Mois 11-24)",
+        "actions": [
+          "Tableau de bord IQN MESRS CI automatisé (Power BI + Moodle + SIS)",
+          "Désignation Data Stewards dans chaque département académique",
+          "Politique IA académique formalisée (outils autorisés, interdictions, validation humaine)",
+          "Audit numérique externe annuel + plan vers ISO 27001 (ou CAMES gouvernance hybride)"
+        ],
+        "budget_indicatif": "5 - 12 M FCFA (tableau de bord + audit externe + politique IA)"
+      }
+    ]
+  },
+  "ressources": {
+    "formations": [
+      "APDP CI — sessions de formation DPO et conformité Loi 2013-450 (Abidjan, 2 jours)",
+      "IAPP (International Association of Privacy Professionals) — certifications CIPP/E et CIPM reconnus CI",
+      "SANS Institute — formations cybersécurité et gouvernance SI (en ligne, partiellement FDFP CI éligible)",
+      "IIA CI (Institut des Auditeurs Internes) — formation audit numérique pour universités CI"
+    ],
+    "outils_recommandes": [
+      "OneTrust ou DPOrganizer — gestion registre des traitements APDP CI (tarif PME disponible)",
+      "Microsoft Entra ID — MFA et gestion des identités (tarif éducation inclus dans Microsoft 365)",
+      "Power BI — tableau de bord IQN MESRS CI automatisé (tarif éducation Microsoft)",
+      "Qualys ou Tenable — scan de vulnérabilités IT (version community gratuite pour audit basique)"
+    ],
+    "references_reglementaires": [
+      "APDP CI — Loi 2013-450 relative à la protection des données à caractère personnel (apdp.ci)",
+      "MESRS CI — cadre IQN (Indicateur Qualité Numérique) et KPIs accréditation 2024",
+      "ARTCI — obligations cybersécurité établissements éducatifs CI (logs 12 mois, filtrage mineurs)",
+      "CAMES — exigences gouvernance numérique pour accréditation formations hybrides UEMOA",
+      "CIS Controls v8 — cadre de référence cybersécurité adapté aux établissements éducatifs (cisecurity.org)"
+    ]
+  },
+  "ai_context": {
+    "scoring_dimension": "Maturité de la gouvernance numérique dans les établissements d'enseignement",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune gouvernance numérique formalisée : pas de CODIR, pas de DPO, pas de PSSI, décisions IT ad hoc, aucun registre des traitements APDP CI, non-conformité totale avec les obligations légales.",
+      "score_21_to_40": "Un responsable IT désigné informellement, quelques règles de sécurité non documentées, aucun DPO, budget IT non tracé formellement, aucun registre des traitements, réaction aux incidents uniquement.",
+      "score_41_to_60": "DSI formalisée, PSSI approuvée, DPO désigné et enregistré APDP CI, registre des traitements à jour, budget IT alloué (3-5% du budget), rapports IQN MESRS CI produits, MFA partiel.",
+      "score_61_to_80": "CODIR Numérique mensuel formalisé, DPO certifié, tableau de bord IQN automatisé, MFA > 90%, Data Stewards dans les départements, politique IA académique, conformité CAMES gouvernance hybride.",
+      "score_81_to_100": "ISO 27001 certifié (ou en cours), gouvernance IA formalisée, audit externe annuel, score IQN MESRS CI > 85/100, MTTD < 2h MTTR < 8h, Data Stewards autonomes, reporting ESG numérique bailleurs."
+    },
+    "questions_discriminantes": [
+      "Disposez-vous d'un comité de pilotage numérique formalisé qui se réunit régulièrement (CODIR Digital ou équivalent) avec des procès-verbaux traçables ?",
+      "Avez-vous désigné un Délégué à la Protection des Données (DPO) enregistré auprès de l'APDP CI, conformément à la Loi 2013-450 ?",
+      "Votre établissement dispose-t-il d'une Politique de Sécurité SI (PSSI) documentée, approuvée par la direction et formée auprès de l'ensemble du personnel ?",
+      "Quel est votre score IQN (Indicateur Qualité Numérique) MESRS CI le plus récent ?",
+      "Avez-vous une politique formalisée sur l'utilisation de l'IA générative par les enseignants et les étudiants (outils autorisés, interdictions, validation humaine) ?"
+    ],
+    "signaux_avances": [
+      "Score IQN MESRS CI supérieur à 70/100 avec tableau de bord trimestriel automatisé",
+      "DPO certifié (IAPP ou CNIL) avec registre de 25+ traitements documentés et à jour",
+      "Data Stewards désignés dans chaque département académique avec mission formelle",
+      "Politique IA académique formalisée couvrant les outils autorisés, les interdictions et la validation humaine",
+      "MTTD incidents < 4h et MTTR < 24h grâce à un SOC ou monitoring automatisé"
+    ]
+  }
+}

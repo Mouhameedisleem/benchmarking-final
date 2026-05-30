@@ -1,0 +1,252 @@
+{
+  "meta": {
+    "axis": "IS",
+    "sub_axis": "Données & Analytics",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Credit scoring alternatif — données comportementales et mobile money",
+      "description": "Les banques UEMOA exploitent les données de transactions mobile money, les historiques d'appels téléphoniques et les données satellites pour scorer des clients sans historique bancaire formel. Cette approche ouvre le crédit à 70 % de la population non-bancarisée.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "25 % des banques africaines utilisent des données alternatives pour le scoring crédit (IFC Fintech Africa 2024)",
+      "source": "IFC Alternative Credit Scoring Africa Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Reporting réglementaire automatisé — COREP/FINREP BCEAO",
+      "description": "La BCEAO exige des rapports prudentiels mensuels (ratios de solvabilité, liquidité, grands risques). Les banques modernes automatisent la production de ces rapports via des plateformes de regulatory reporting, réduisant les délais de J+30 à J+3.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "100 % des banques UEMOA soumises au reporting BCEAO mensuel",
+      "source": "BCEAO Dispositif de Remontée des Informations Financières (DRIF)",
+      "year": "2024"
+    },
+    {
+      "title": "Real-time fraud detection — ML sur les flux transactionnels",
+      "description": "La fraude bancaire en Afrique de l'Ouest atteint 1,2 Mds$ de pertes annuelles. Les banques déploient des modèles ML de détection de fraude en temps réel, analysant chaque transaction en < 200ms pour bloquer les transactions suspectes avant exécution.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "40 % des grandes banques africaines ont un système de fraud detection ML en production (AFI 2024)",
+      "source": "Alliance for Financial Inclusion — Fraud Prevention Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Data Governance bancaire — qualité des données et Master Data Management",
+      "description": "La mauvaise qualité des données est le principal obstacle aux projets analytics bancaires en UEMOA. Les doublons clients, les données manquantes et les référentiels multiples génèrent des erreurs de reporting et des risques de conformité.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "65 % des banques africaines citent la qualité des données comme principal frein analytics (EY Africa 2024)",
+      "source": "EY Africa Banking Analytics Survey 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Credit Scoring ML Alternatif",
+      "category": "Innovation crédit et inclusion financière",
+      "maturity_stage": "Croissance en Afrique",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Smile Identity", "Jumo", "Lendable AI", "Cignifi (données téléphoniques)", "Zindi (ML africain)"]
+    },
+    {
+      "name": "Regulatory Reporting Automatisé",
+      "category": "Conformité et reporting bancaire",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne en UEMOA",
+      "leading_vendors": ["Wolters Kluwer OneSumX", "AxiomSL", "Moody's Analytics RiskFoundation", "IBM OpenPages", "SAS Regulatory Reporting"]
+    },
+    {
+      "name": "Fraud Detection Temps Réel",
+      "category": "Gestion du risque opérationnel",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["FICO Falcon", "Temenos Financial Crime Mitigation", "Feedzai", "Featurespace ARIC", "SAS Fraud Management"]
+    },
+    {
+      "name": "Data Warehouse / Lakehouse Bancaire",
+      "category": "Infrastructure analytique",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en CI",
+      "leading_vendors": ["Snowflake Financial Services", "Databricks for Banking", "Microsoft Fabric", "Google BigQuery FSI", "Cloudera for Banking"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Standard Chartered Bank CI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Reporting réglementaire BCEAO automatisé via Wolters Kluwer, modèle scoring crédit PME basé sur données transactionnelles",
+        "differentiator": "Adossée au groupe Standard Chartered — accès à la plateforme analytics mondiale SC Ventures avec 500+ modèles ML bancaires",
+        "source": "Standard Chartered CI Rapport Annuel 2023"
+      },
+      {
+        "organisation": "Bridge Bank Group CI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Data warehouse opérationnel, reporting BCEAO automatisé J+5, modèle scoring PME basé sur données comptables",
+        "differentiator": "Banque ivoirienne indépendante la plus avancée en analytics — dashboard KPI temps réel pour le COMEX",
+        "source": "Bridge Bank Group Rapport Annuel 2023 / APBEF-CI"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Plateforme analytics centralisée (Ecobank Data Hub) alimentant 33 filiales, modèle de détection fraude temps réel pan-africain",
+        "differentiator": "Ecobank Data Hub : traitement de 2 Mds de transactions/mois pour les modèles ML de crédit, fraude et recommandation produits",
+        "source": "Ecobank Technology Report 2023"
+      },
+      {
+        "organisation": "Absa Bank Africa",
+        "country": "Afrique du Sud / Afrique de l'Ouest",
+        "key_practice": "Credit scoring alternatif via données M-Pesa et MTN Mobile Money, modèle ML de churn client (97 % précision)",
+        "differentiator": "Partenariat Absa/Jumo pour le crédit digital aux PME sans historique bancaire — 500 000 PME scorées en 2023",
+        "source": "Absa Group Annual Report 2023 / Jumo Partnership Report"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "JPMorgan Chase",
+        "country": "USA",
+        "key_practice": "50 000 data scientists et ingénieurs données, 300 millions de données clients analysées en temps réel, 400 modèles ML en production",
+        "differentiator": "JPMorgan Data Science Hub : détection de fraude en < 10ms sur 6 Mds de transactions/an, économies fraude de 600 M$/an",
+        "source": "JPMorgan Annual Report 2023 / JPMorgan Data Science Report"
+      },
+      {
+        "organisation": "Nubank",
+        "country": "Brésil",
+        "key_practice": "100 % des décisions crédit automatisées par ML, 100M clients scorés sans agence ni conseiller humain",
+        "differentiator": "Nubank Credit Model : scoring crédit basé sur 2 000 variables comportementales — taux de défaut 50 % inférieur aux banques traditionnelles brésiliennes",
+        "source": "Nubank Annual Report 2023 / McKinsey Digital Banking Brazil 2024"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Données dispersées dans plusieurs core banking sans consolidation. Reporting BCEAO manuel avec Excel. Pas de data warehouse. Analyses ad hoc sur demande. Pas de gouvernance des données.",
+    "level_2_developing": "Data warehouse basique opérationnel. Reporting BCEAO semi-automatisé. Quelques tableaux de bord KPI. Pas de modèles ML. Qualité des données non mesurée. Master data non gouverné.",
+    "level_3_defined": "Data warehouse central alimentant les reportings réglementaires et KPI opérationnels. Reporting BCEAO automatisé < J+10. Gouvernance données initiée (data owner identifiés). Premiers modèles ML en pilote.",
+    "level_4_managed": "Scoring crédit ML en production. Détection fraude temps réel opérationnelle. Reporting BCEAO automatisé < J+5. Data catalog actif. KPIs analytiques en tableau de bord COMEX temps réel.",
+    "level_5_optimizing": "Credit scoring alternatif (données mobiles, comportementales). ML fraud detection < 200ms. Data Lakehouse centralisé. Reporting BCEAO J+1. Gouvernance ML avec explicabilité des modèles (XRAI). Données as a Product."
+  },
+
+  "regulations": [
+    {
+      "name": "Dispositif de Remontée des Informations Financières (DRIF) — BCEAO",
+      "issuing_body": "BCEAO",
+      "scope": "Toutes les banques UEMOA",
+      "key_requirement": "Remontée mensuelle des états financiers et prudentiels (ratios de solvabilité, liquidité, grands risques, expositions) dans les délais BCEAO",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Réglementation sur les modèles de crédit et le scoring algorithmique",
+      "issuing_body": "BCEAO / Comité de Bâle",
+      "scope": "Banques utilisant des modèles ML/IA pour les décisions de crédit",
+      "key_requirement": "Documentation des modèles (validation, backtesting), obligation d'explicabilité des refus de crédit, supervision des modèles par le risk management",
+      "compliance_deadline": "Bâle III/IV en cours d'intégration UEMOA",
+      "source_url": "https://www.bis.org/bcbs"
+    },
+    {
+      "name": "LCB-FT UEMOA — reporting transactions suspectes",
+      "issuing_body": "GIABA / BCEAO",
+      "scope": "Toutes les banques UEMOA",
+      "key_requirement": "Déclaration des opérations suspectes à la CENTIF sous 24h, conservation des données KYC et transactionnelles 10 ans, audit trail complet",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.giaba.org"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Modèles ML crédit non expliqués — risque réglementaire et discriminatoire",
+      "description": "Les régulateurs bancaires exigent que tout refus de crédit basé sur un modèle ML puisse être expliqué au client. Un modèle 'boîte noire' expose la banque à des contentieux clients et à des sanctions réglementaires.",
+      "severity": "Élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Adopter des techniques d'explicabilité (SHAP, LIME) pour tous les modèles de décision crédit et documenter les facteurs de refus dans le dossier client."
+    },
+    {
+      "title": "Qualité des données — modèles ML erronés sur données corrompues",
+      "description": "Les données bancaires UEMOA contiennent souvent des doublons clients (15-30 %), des champs manquants et des incohérences entre core banking et CRM. Des modèles ML entraînés sur ces données produiront des scores erronés.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Implémenter un programme de Master Data Management avant tout projet ML, mesurer et publier un score de qualité des données mensuel, nommer des data owners par domaine."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Credit scoring mobile money — 3 millions de nouveaux clients scorables en CI",
+      "description": "En Côte d'Ivoire, 15 millions de personnes utilisent le mobile money (Orange Money, Wave, MTN MoMo) sans compte bancaire. Leurs historiques de transactions permettent un scoring crédit alternatif, ouvrant un marché de crédit digital de 500 Mds FCFA.",
+      "impact_level": "Très élevé",
+      "time_to_value": "18-36 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Reporting réglementaire automatisé — réduction des coûts de compliance de 40 %",
+      "description": "Les banques UEMOA consacrent en moyenne 15 ETP à la production manuelle des états BCEAO. L'automatisation complète (regulatory reporting as a service) réduit ce coût de 40-60 % et élimine les risques d'erreur réglementaire.",
+      "impact_level": "Élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Partenariat stratégique",
+      "acquirer_or_investor": "Ecobank",
+      "target": "Partenariat avec Jumo pour credit scoring alternatif",
+      "amount": "Partenariat commercial",
+      "date": "2022",
+      "strategic_rationale": "Intégrer les modèles ML Jumo (données téléphoniques) dans les processus de crédit Ecobank pour adresser les clients sans historique bancaire",
+      "source": "Ecobank/Jumo Partnership Announcement 2022"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Safaricom / M-Pesa",
+    "pays": "Kenya / Afrique de l'Est",
+    "technologie": "M-Shwari et Fuliza — credit scoring ML basé sur données mobile money",
+    "description": "Safaricom a lancé M-Shwari (2012) puis Fuliza (2019), des produits de micro-crédit entièrement basés sur le scoring ML des données M-Pesa. Le modèle analyse 12+ variables comportementales (fréquence des transactions, solde moyen, rythme de remboursement) pour attribuer une limite de crédit instantanée. En 2023 : 35 millions de Kenyans ont accès au crédit M-Shwari/Fuliza, décision en < 10 secondes, taux de défaut 3 % (vs 15 % pour le micro-crédit traditionnel). Le modèle génère 200 M$ de revenus annuels pour Safaricom sans agence physique.",
+    "resultats": "35M clients avec crédit · Décision < 10s · Défaut 3 % · 200 M$ revenus/an · 0 agence physique",
+    "source": "Safaricom Annual Report 2023 / GSMA Mobile Money Report 2024 / AfricaFinTech Summit",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité données & analytics — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "Data warehouse central", "Scoring crédit ML en prod", "Fraud detection temps réel", "Reporting BCEAO automatisé < J+10", "Gouvernance données active"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "✗", "Partiel", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Les données sont la ressource stratégique la plus sous-exploitée des banques UEMOA. La plupart ont des années de données transactionnelles inexploitées dans leurs core banking legacy. La qualité des données est le frein numéro 1 aux projets analytics. Les banques qui maîtrisent leur data peuvent révolutionner leur scoring crédit, détecter la fraude en temps réel et personnaliser leurs offres.",
+    "maturity_max_description": "Data Lakehouse centralisé alimenté par le core banking, les canaux digitaux et les partenaires externes. Scoring crédit ML alternatif basé sur données mobile money. Fraud detection temps réel < 200ms. Reporting BCEAO automatisé J+1. Gouvernance ML avec XRAI. Data catalog actif avec data owners. Données as a Product.",
+    "scoring_rubric": {
+      "score_1_to_20": "Données silotées dans le core banking. Reporting BCEAO manuel Excel. Pas de data warehouse. Pas d'analytics.",
+      "score_21_to_40": "Data warehouse basique. Reporting semi-automatisé. KPI basiques. Pas de ML. Qualité données non mesurée.",
+      "score_41_to_60": "Data warehouse central. Reporting BCEAO automatisé. Gouvernance initiée. Premiers pilotes ML.",
+      "score_61_to_80": "Scoring crédit ML en prod. Fraud detection temps réel. Reporting BCEAO < J+5. Data catalog actif.",
+      "score_81_to_100": "Scoring alternatif mobile. ML < 200ms fraude. Reporting J+1. XRAI. Données as a Product."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur sa maturité données et analytics dans le contexte bancaire UEMOA. Analyse l'existence d'un data warehouse central, les modèles ML de scoring crédit et détection fraude en production, l'automatisation du reporting BCEAO et la gouvernance des données.",
+    "key_questions_for_llm": [
+      "Un data warehouse ou une plateforme analytics centrale consolide-t-elle les données du core banking, des canaux digitaux et des partenaires externes ?",
+      "Des modèles de scoring crédit basés sur le ML sont-ils en production, incluant potentiellement des données alternatives (mobile money, comportementales) ?",
+      "Un système de détection de fraude en temps réel (< 1 seconde) est-il opérationnel sur les transactions bancaires et mobile ?",
+      "Le reporting réglementaire BCEAO (états prudentiels mensuels) est-il automatisé et produit dans les délais sans intervention manuelle significative ?",
+      "Une gouvernance des données est-elle en place avec des data owners, un data catalog et des indicateurs de qualité des données mesurés régulièrement ?"
+    ]
+  }
+}

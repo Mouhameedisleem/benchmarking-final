@@ -28,6 +28,7 @@ import java.io.ByteArrayOutputStream;
 import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class ReportService {
@@ -54,7 +55,7 @@ public class ReportService {
     }
 
     public byte[] generateEvaluationReport(Long evaluationId) {
-        Evaluation evaluation = evaluationRepository.findById(evaluationId)
+        Evaluation evaluation = evaluationRepository.findById(Objects.requireNonNull(evaluationId))
                 .orElseThrow(() -> new EntityNotFoundException("Evaluation not found: " + evaluationId));
 
         try {

@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "axis": "INFORMATION_SYSTEM",
+    "sub_axis": "Intégration & API",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "API Economy — l'API comme produit stratégique",
+      "description": "Les organisations leaders monétisent leurs APIs comme des produits (API-as-a-Product), créant de nouveaux flux de revenus via des portails développeurs et des modèles de tarification freemium ou pay-per-use.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "90 % des grandes entreprises exposent des APIs externes (MuleSoft Connectivity Report 2024)",
+      "source": "MuleSoft Connectivity Benchmark Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Event-Driven Architecture — découplage par les événements",
+      "description": "Les architectures EDA (Kafka, RabbitMQ) découplent les systèmes via des événements asynchrones, permettant une scalabilité élastique et une résilience accrue vs les intégrations point-à-point synchrones.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "67 % des organisations adoptent l'EDA pour les nouveaux projets (O'Reilly 2024)",
+      "source": "O'Reilly Architecture Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "API Gateway & Management — gouvernance centralisée",
+      "description": "Les API Gateways (Kong, AWS API Gateway, Azure APIM) centralisent la sécurité, le throttling, l'observabilité et la version management de toutes les APIs, remplaçant les intégrations point-à-point non gouvernées.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "75 % des entreprises utilisent un API Gateway (Kong Enterprise Report 2024)",
+      "source": "Kong Enterprise API Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "OpenBanking / Open APIs — interopérabilité réglementaire",
+      "description": "Les réglementations Open Banking (PSD2 en Europe, BCEAO en UEMOA) imposent aux institutions financières d'exposer des APIs standardisées permettant à des tiers d'accéder aux données clients avec consentement.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "100 % des banques européennes (PSD2), 30 % en Afrique de l'Ouest",
+      "source": "BCEAO Digital Finance Report 2024 / EBA PSD2 Monitoring",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "API Gateway & Management",
+      "category": "Gouvernance des APIs",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne en Afrique",
+      "leading_vendors": ["Kong", "AWS API Gateway", "Azure API Management", "MuleSoft Anypoint", "Apigee (Google)"]
+    },
+    {
+      "name": "ESB / iPaaS (Integration Platform as a Service)",
+      "category": "Intégration d'entreprise",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["MuleSoft", "Dell Boomi", "IBM App Connect", "Workato", "Make (ex-Integromat)"]
+    },
+    {
+      "name": "Message Broker / Event Streaming",
+      "category": "Architecture événementielle",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible en Afrique",
+      "leading_vendors": ["Apache Kafka", "RabbitMQ", "AWS SQS/SNS", "Azure Service Bus", "Confluent Cloud"]
+    },
+    {
+      "name": "GraphQL & REST APIs",
+      "category": "Protocoles d'API",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne",
+      "leading_vendors": ["GraphQL (Meta)", "OpenAPI/Swagger", "Postman", "Insomnia", "AWS AppSync"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "API Gateway déployé pour les services numériques exposés, documentation OpenAPI disponible",
+        "differentiator": "Premier acteur sectoriel à exposer des APIs partenaires avec portail développeur documenté",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Orange Money / Orange Côte d'Ivoire",
+        "country": "Côte d'Ivoire / Afrique de l'Ouest",
+        "key_practice": "API Orange Money exposée à 500+ partenaires marchands via portail développeur unifié",
+        "differentiator": "Paiement initié par API en temps réel sur 17 pays africains via un point d'entrée unique",
+        "source": "Orange Money Developer Portal 2023 / Orange Africa Tech Report"
+      },
+      {
+        "organisation": "MTN MoMo",
+        "country": "Pan-Afrique",
+        "key_practice": "MoMo API exposée à 100 000+ développeurs sur 21 pays via MTN Developer Portal",
+        "differentiator": "Écosystème d'intégration qui génère 30 % des revenus MoMo via des partenaires API tiers",
+        "source": "MTN Annual Report 2023 / MTN MoMo API Documentation"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Salesforce",
+        "country": "USA",
+        "key_practice": "MuleSoft Anypoint Platform — intégration de 1 500+ systèmes via 20 000+ connecteurs pré-construits",
+        "differentiator": "API Led Connectivity : chaque intégration est une API réutilisable exposée sur un catalogue centralisé",
+        "source": "MuleSoft Connectivity Report 2024 / Salesforce Annual Report 2023"
+      },
+      {
+        "organisation": "Stripe",
+        "country": "USA",
+        "key_practice": "API-first : 100 % de la plateforme paiement exposée via API REST avec 500+ SDKs, 99,9999 % SLA",
+        "differentiator": "Documentation API classée #1 mondiale 7 années consécutives — modèle d'expérience développeur de référence",
+        "source": "Stripe Technology Report 2023 / ProgrammableWeb API Rankings"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Intégrations point-à-point non documentées. Scripts batch nocturnes pour synchroniser les systèmes. Aucune API exposée. Dépendances cachées entre systèmes.",
+    "level_2_developing": "Quelques WebServices SOAP ou APIs REST basiques. Pas de documentation standardisée. Pas de versioning. Tests d'intégration manuels.",
+    "level_3_defined": "APIs REST documentées (OpenAPI/Swagger). API Gateway en place pour les APIs critiques. Versioning formalisé. Tests d'intégration automatisés.",
+    "level_4_managed": "iPaaS ou ESB pour orchestrer les intégrations. Catalogue d'APIs partagé. SLA d'API contractualisé. Monitoring d'API en temps réel. Portail développeur.",
+    "level_5_optimizing": "API Economy active — APIs monétisées ou exposées à des partenaires. Event-Driven Architecture. Catalogue d'APIs avec 100+ endpoints documentés. API Analytics avancé."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction BCEAO sur l'interopérabilité des paiements",
+      "issuing_body": "BCEAO",
+      "scope": "Institutions financières et opérateurs monnaie mobile de la zone UEMOA",
+      "key_requirement": "Interopérabilité obligatoire des systèmes de paiement mobile via APIs standardisées (GIM-UEMOA)",
+      "compliance_deadline": "En vigueur (2022)",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "RGPD — Consentement dans les APIs Open Banking",
+      "issuing_body": "Union Européenne",
+      "scope": "APIs exposant des données personnelles de résidents européens",
+      "key_requirement": "Gestion du consentement dans les APIs, traçabilité des accès, révocation possible en temps réel",
+      "compliance_deadline": "En vigueur depuis 2018",
+      "source_url": "https://gdpr.eu"
+    },
+    {
+      "name": "Loi n°2013-450 — Données personnelles et APIs",
+      "issuing_body": "République de Côte d'Ivoire / ARTCI",
+      "scope": "Organisations exposant des APIs traitant des données personnelles",
+      "key_requirement": "Déclaration ARTCI, consentement client, traçabilité des accès API aux données personnelles",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.artci.ci"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Prolifération non gouvernée des intégrations point-à-point",
+      "description": "Sans catalogue d'APIs ni gouvernance, les équipes créent des intégrations redondantes et non documentées qui créent une dette technique majeure et des points de défaillance cachés.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Déployer un API Gateway avec catalogue centralisé et imposer que toute nouvelle intégration passe par le catalogue."
+    },
+    {
+      "title": "Exposition non sécurisée d'APIs — surface d'attaque",
+      "description": "Les APIs mal sécurisées (sans authentification forte, sans rate limiting) sont la principale surface d'attaque. Le rapport OWASP API Security liste 10 vulnérabilités API critiques.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Appliquer OWASP API Security Top 10, OAuth2/OIDC pour l'authentification, rate limiting et monitoring de toutes les APIs exposées."
+    },
+    {
+      "title": "Dépendance aux APIs tierces sans SLA contractualisé",
+      "description": "Intégrer des APIs tierces sans SLA contractualisé crée des dépendances critiques qui peuvent paralyser les services en cas de panne du fournisseur.",
+      "severity": "Élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Contractualiser les SLAs des APIs critiques, implémenter des circuit breakers et des fallbacks pour toutes les dépendances externes."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Création d'un écosystème partenaire via des APIs",
+      "description": "Exposer des APIs à des partenaires (startups, fintechs, distributeurs) crée un écosystème qui multiplie les points de distribution sans CAPEX additionnel.",
+      "impact_level": "Très élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Réduction des coûts d'intégration via iPaaS",
+      "description": "Les plateformes iPaaS avec connecteurs pré-construits réduisent le coût et le délai d'intégration de nouveaux systèmes de 60-80 % vs développement custom.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Open Banking — nouveaux modèles de revenus",
+      "description": "L'ouverture des données via des APIs Open Banking permet de créer de nouveaux services (Personal Finance Management, crédit instantané, agrégation de comptes) génératifs de revenus.",
+      "impact_level": "Élevé",
+      "time_to_value": "18-36 mois",
+      "prerequisite_maturity": "Niveau 4"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Salesforce",
+      "target": "MuleSoft",
+      "amount": "6,5 Mds$",
+      "date": "2018",
+      "strategic_rationale": "Intégrer la plateforme d'intégration leader pour connecter Salesforce CRM à tous les systèmes d'entreprise",
+      "source": "Salesforce Press Release 2018"
+    },
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "IBM",
+      "target": "Red Hat (API Management via 3scale)",
+      "amount": "34 Mds$",
+      "date": "2019",
+      "strategic_rationale": "Renforcer les capacités d'intégration hybride et de management d'APIs open-source pour les entreprises",
+      "source": "IBM Press Release 2019"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Stripe",
+    "pays": "USA",
+    "technologie": "API-First Design — l'API comme produit principal de la plateforme",
+    "description": "Stripe a révolutionné l'intégration de paiements en faisant de son API le produit central. Là où l'intégration d'un système de paiement prenait 6 mois, Stripe le réduit à 7 lignes de code. La documentation est générée automatiquement depuis le code source, garantissant sa précision en permanence. Stripe maintient 500+ SDK dans tous les langages de programmation et garantit une compatibilité ascendante sur 5+ ans. Le portail développeur Stripe est classé #1 mondial par la developer experience. L'API traite 817 milliards de dollars de volume annuel avec un SLA de 99,9999 %.",
+    "resultats": "817 Mds$ de volume traité · 7 lignes de code pour intégrer le paiement · 500+ SDKs · 99,9999 % SLA · #1 developer experience mondiale",
+    "source": "Stripe Technology Report 2023 / ProgrammableWeb Developer Experience Awards 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité intégration & API — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "API Gateway déployé", "APIs documentées OpenAPI", "Catalogue d'APIs partagé", "Portail développeur", "SLA API contractualisé"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "Partiel", "✗", "✗", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'intégration et la gouvernance des APIs sont le système nerveux de toute architecture digitale moderne. Sans APIs bien gouvernées, chaque nouvelle intégration crée de la dette technique. Les organisations avec un catalogue d'APIs mature intègrent de nouveaux systèmes 5× plus rapidement et créent des écosystèmes partenaires qui multiplient leur distribution.",
+    "maturity_max_description": "API Gateway centralisé gouvernant toutes les APIs internes et externes. Catalogue d'APIs complet avec documentation OpenAPI automatisée. Portail développeur actif avec communauté partenaire. Event-Driven Architecture pour les intégrations temps réel. SLA d'API contractualisé et monitoré. APIs monétisées comme produits génératifs de revenus.",
+    "scoring_rubric": {
+      "score_1_to_20": "Intégrations point-à-point non documentées. Aucune API exposée. Scripts batch pour synchroniser les systèmes.",
+      "score_21_to_40": "Quelques APIs REST basiques. Pas de gateway ni de documentation standardisée. Tests manuels.",
+      "score_41_to_60": "APIs REST documentées (OpenAPI). API Gateway pour les APIs critiques. Versioning formalisé. Tests automatisés.",
+      "score_61_to_80": "iPaaS ou ESB pour orchestrer. Catalogue d'APIs partagé. SLA contractualisé. Monitoring temps réel. Portail développeur.",
+      "score_81_to_100": "API Economy active. Event-Driven Architecture. 100+ APIs cataloguées. Analytics avancé. APIs monétisées."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur sa maturité en intégration et gestion des APIs. Analyse la gouvernance via un API Gateway, la qualité de la documentation des APIs (OpenAPI/Swagger), l'existence d'un catalogue d'APIs partagé, la disponibilité d'un portail développeur pour les partenaires et la contractualisation des SLAs d'API.",
+    "key_questions_for_llm": [
+      "Un API Gateway centralisé gouverne-t-il les APIs internes et externes de l'organisation ?",
+      "Les APIs sont-elles documentées au standard OpenAPI/Swagger et accessibles dans un catalogue partagé ?",
+      "Existe-t-il un portail développeur permettant à des partenaires d'intégrer les APIs de l'organisation ?",
+      "Les intégrations entre systèmes utilisent-elles des événements asynchrones (EDA) ou uniquement des appels synchrones ?",
+      "Les SLAs des APIs critiques sont-ils contractualisés et monitorés en temps réel ?"
+    ]
+  }
+}

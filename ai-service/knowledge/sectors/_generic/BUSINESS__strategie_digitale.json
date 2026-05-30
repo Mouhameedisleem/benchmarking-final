@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "axis": "BUSINESS",
+    "sub_axis": "Stratégie digitale",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Stratégie digitale intégrée au plan d'entreprise",
+      "description": "Les organisations leaders ne traitent plus le digital comme un projet IT isolé mais l'intègrent dans leur plan stratégique global avec des OKRs mesurables et un budget dédié supérieur à 15 % de l'OPEX.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "68 % des grandes entreprises mondiales (McKinsey 2024)",
+      "source": "McKinsey Global Digital Strategy Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Chief Digital Officer (CDO) comme rôle stratégique",
+      "description": "73 % des organisations du top 100 mondial ont nommé un CDO avec pouvoir de décision budgétaire direct. Le CDO siège désormais au COMEX dans les entreprises les plus matures.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "73 % du top 100 mondial",
+      "source": "Gartner Digital Leadership Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Alignement ESG et transformation digitale",
+      "description": "La stratégie digitale intègre les critères ESG : réduction de l'empreinte carbone via la dématérialisation, inclusion mesurée comme KPI stratégique.",
+      "impact_level": "Moyen",
+      "horizon": "12-24 mois",
+      "adoption_rate": "45 % des entreprises du CAC 40 / S&P 500",
+      "source": "WEF Digital Transformation & ESG Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "IA générative comme levier stratégique central",
+      "description": "L'IA générative (LLM, copilots) s'intègre dans la feuille de route stratégique de 80 % des entreprises. Elle redéfinit les modèles opérationnels et de création de valeur.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "80 % des DSI prévoient un budget GenAI en 2025",
+      "source": "Gartner IT Spending Forecast 2025",
+      "year": "2025"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "OKR Management Platforms",
+      "category": "Pilotage stratégique",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Élevée dans les grandes organisations",
+      "leading_vendors": ["Workboard", "Betterworks", "Lattice", "Google Workspace OKR"]
+    },
+    {
+      "name": "Digital Maturity Assessment Tools",
+      "category": "Diagnostic",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Moyenne",
+      "leading_vendors": ["McKinsey Digital", "Gartner Maturity Models", "MIT CISR"]
+    },
+    {
+      "name": "Enterprise Architecture (EA) Platforms",
+      "category": "Alignement IT/Métier",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Élevée dans les grandes entreprises",
+      "leading_vendors": ["Ardoq", "LeanIX", "Sparx Systems", "Mega HOPEX"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Formalisation d'une feuille de route digitale avec OKRs trimestriels et CDO nommé",
+        "differentiator": "Premier acteur local à publier un rapport annuel de transformation digitale",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Safaricom",
+        "country": "Kenya",
+        "key_practice": "Stratégie 'Digital First' formalisée depuis 2017 — M-Pesa comme pivot de l'écosystème digital",
+        "differentiator": "Intégration de la stratégie digitale dans tous les métiers et filiales",
+        "source": "Safaricom Annual Report 2023"
+      },
+      {
+        "organisation": "CIH Bank",
+        "country": "Maroc",
+        "key_practice": "Budget digital 25 % du total investissement, transformation omnicanale complète",
+        "differentiator": "CDO avec droit de veto sur les décisions IT",
+        "source": "CIH Bank Rapport Annuel 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Amazon",
+        "country": "USA",
+        "key_practice": "Day-1 Strategy — refus de l'inertie, OKRs publics en interne, 16 % du CA en R&D",
+        "differentiator": "La stratégie digitale est l'ADN de l'entreprise, pas un département",
+        "source": "Amazon Annual Report 2023"
+      },
+      {
+        "organisation": "DBS Bank",
+        "country": "Singapour",
+        "key_practice": "Transformation en 'techfin' — CDO au COMEX, roadmap publiée annuellement",
+        "differentiator": "Ratio OPEX digital passé de 15 % à 38 % en 8 ans",
+        "source": "DBS Annual Report 2023 / Euromoney 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune stratégie digitale formalisée. Le digital est traité projet par projet sans vision globale ni budget dédié.",
+    "level_2_developing": "Une vision digitale existe mais n'est pas documentée ni chiffrée. Initiatives ad hoc sans pilotage centralisé.",
+    "level_3_defined": "Stratégie digitale formalisée avec axes prioritaires, budget alloué et responsable désigné. OKRs définis mais suivi irrégulier.",
+    "level_4_managed": "CDO nommé au COMEX. OKRs trimestriels avec revue régulière. Budget digital > 10 % de l'OPEX. Partenariats tech actifs.",
+    "level_5_optimizing": "Stratégie digitale intégrée au plan d'entreprise. Budget > 15 % OPEX. Roadmap publique. CDO avec pouvoir de décision. Benchmarking externe continu."
+  },
+
+  "regulations": [
+    {
+      "name": "Directive sur la résilience opérationnelle numérique (DORA)",
+      "issuing_body": "Union Européenne",
+      "scope": "Institutions financières européennes",
+      "key_requirement": "Stratégie ICT formalisée, tests de résilience, gouvernance des risques numériques",
+      "compliance_deadline": "Janvier 2025",
+      "source_url": "https://www.eba.europa.eu/regulation-and-policy/dora"
+    },
+    {
+      "name": "Politique nationale de transformation digitale (PNTD)",
+      "issuing_body": "Gouvernement de Côte d'Ivoire / MPEN",
+      "scope": "Entreprises opérant en Côte d'Ivoire",
+      "key_requirement": "Alignement avec la stratégie nationale de digitalisation 2025-2030",
+      "compliance_deadline": "Continu",
+      "source_url": "https://www.numerique.gouv.ci"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Stratégie digitale sans alignement métier",
+      "description": "Une transformation pilotée uniquement par la DSI sans ancrage dans les objectifs business génère des projets sans ROI mesurable.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Nommer un CDO avec mandate COMEX et créer des OKRs transversaux métier/IT."
+    },
+    {
+      "title": "Sous-investissement chronique",
+      "description": "Un budget digital inférieur à 5 % de l'OPEX ne permet pas de soutenir une transformation réelle face à des concurrents qui investissent 15-20 %.",
+      "severity": "Très élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Présenter au Board un business case ROI de la transformation avec benchmark sectoriel."
+    },
+    {
+      "title": "Change management insuffisant",
+      "description": "80 % des transformations digitales échouent en raison d'une résistance au changement non adressée.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Programme de conduite du changement structuré, ambassadeurs digitaux, communication régulière."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Positionnement comme leader digital du secteur",
+      "description": "Les premiers acteurs à formaliser et exécuter une stratégie digitale mature captent des parts de marché disproportionnées.",
+      "impact_level": "Très élevé",
+      "time_to_value": "18-36 mois",
+      "prerequisite_maturity": "Niveau 3 minimum"
+    },
+    {
+      "title": "Réduction des coûts opérationnels via la dématérialisation",
+      "description": "La digitalisation des processus papier génère en moyenne 20-30 % de réduction des coûts opérationnels selon McKinsey.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 2 minimum"
+    },
+    {
+      "title": "Accès aux financements et partenariats tech internationaux",
+      "description": "Une stratégie digitale formalisée est un prérequis pour accéder aux programmes d'accélération (Google for Startups, Microsoft for Startups, AWS Activate).",
+      "impact_level": "Moyen",
+      "time_to_value": "3-12 mois",
+      "prerequisite_maturity": "Niveau 2 minimum"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Salesforce",
+      "target": "Slack",
+      "amount": "27,7 Mds$",
+      "date": "2021",
+      "strategic_rationale": "Intégration de la collaboration digitale dans la stratégie CRM pour offrir une plateforme unifiée",
+      "source": "Salesforce Press Release 2021"
+    },
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Microsoft",
+      "target": "Nuance Communications",
+      "amount": "19,7 Mds$",
+      "date": "2022",
+      "strategic_rationale": "Renforcement de la stratégie IA sectorielle (santé, services financiers) via la reconnaissance vocale et NLP",
+      "source": "Microsoft Press Release 2022"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Amazon",
+    "pays": "USA",
+    "technologie": "Day-1 Strategy — culture digitale native & OKRs à tous les niveaux",
+    "description": "Amazon fonctionne depuis 1995 selon le principe 'Day 1' : chaque décision est prise comme si l'entreprise venait de naître, refusant l'inertie organisationnelle. La stratégie digitale est incarnée par le CEO et déclinée en Working Backwards Press Release pour chaque initiative. Les OKRs de chaque BU sont visibles en interne. 16 % du CA est réinvesti en R&D chaque année. Le CDO siège au COMEX avec pouvoir de veto sur les décisions IT.",
+    "resultats": "2 000 Mds$ de capitalisation · AWS leader mondial cloud · NPS +73 · 16 % CA en R&D · Day-1 culture maintenue après 30 ans",
+    "source": "Amazon Annual Report 2023 / Gartner Digital Business Strategy 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité stratégie digitale — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "Stratégie digitale formalisée", "CDO / Directeur digital nommé", "Budget digital > 10 % OPEX", "OKRs mesurables", "Partenariat tech actif"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "Partiel", "Partiel", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["Partiel", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La maturité stratégique digitale est le socle de toute transformation. Sans feuille de route formalisée, budget dédié et leadership engagé, les autres axes (IT, canaux, offres) ne peuvent atteindre leur plein potentiel.",
+    "maturity_max_description": "La stratégie digitale est pleinement intégrée au plan d'entreprise avec un CDO au COMEX, des OKRs trimestriels cascadés à tous les niveaux, un budget > 15 % de l'OPEX et une roadmap publiée annuellement pour les parties prenantes.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune stratégie digitale. Le digital est une suite de projets non coordonnés sans vision ni budget.",
+      "score_21_to_40": "Vision digitale informelle. Quelques initiatives pilotées par des champions isolés sans budget ni gouvernance.",
+      "score_41_to_60": "Stratégie digitale documentée avec axes prioritaires. Budget alloué mais CDO absent ou sans pouvoir réel.",
+      "score_61_to_80": "CDO nommé, OKRs définis, budget > 10 % OPEX. Partenariats tech actifs. Revue trimestrielle en place.",
+      "score_81_to_100": "Stratégie digitale intégrée au plan d'entreprise. CDO au COMEX. Budget > 15 % OPEX. Roadmap publique. Benchmarking externe continu."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur sa maturité de stratégie digitale. Analyse son niveau d'ambition digitale, la qualité de sa gouvernance (CDO, COMEX), l'adéquation de son budget, et la clarté de sa feuille de route par rapport aux leaders sectoriels.",
+    "key_questions_for_llm": [
+      "L'organisation dispose-t-elle d'une stratégie digitale formalisée avec des OKRs mesurables ?",
+      "Un CDO ou équivalent siège-t-il au comité de direction avec un mandat clair ?",
+      "Le budget digital représente-t-il plus de 10 % de l'OPEX ?",
+      "Existe-t-il des partenariats technologiques actifs avec des acteurs reconnus ?",
+      "La feuille de route digitale est-elle communiquée aux parties prenantes internes et externes ?"
+    ]
+  }
+}

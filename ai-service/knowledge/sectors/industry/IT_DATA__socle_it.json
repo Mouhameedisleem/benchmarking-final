@@ -1,0 +1,258 @@
+{
+  "axe": "IT_DATA",
+  "sous_axe": "Socle IT",
+  "secteur": "industrie",
+  "description": "Infrastructure IT de base dans l'industrie ivoirienne : réseau informatique d'atelier, serveurs de production, continuité électrique (UPS, groupes électrogènes CIE CI), connectivité internet et téléphonie industrielle adaptés aux conditions tropicales CI.",
+  "maturite_niveaux": {
+    "initial": "Infrastructure IT quasi inexistante en atelier. Quelques PC bureautiques non connectés. Pas de réseau d'entreprise structuré. Dépendance totale à l'électricité CIE CI sans protection. Pas de sauvegarde.",
+    "en_developpement": "Réseau local Ethernet basique entre bureaux. Quelques terminaux en atelier. Accès internet par partage de connexion mobile. UPS basiques sur les PC bureautiques. Sauvegarde manuelle sur disques externes.",
+    "structure": "Réseau structuré (LAN + Wi-Fi bureaux). Serveur local pour ERP. Internet haut débit dédié (fibre OrangeBusiness CI ou MTN CI). UPS sur les serveurs. Sauvegarde automatique locale. Séparation réseau bureautique / réseau atelier.",
+    "avance": "Infrastructure IT industrielle robuste : réseau OT/IT segmenté (conformité IEC 62443), Wi-Fi industriel IP67 sur plancher de production, UPS on-line double conversion + groupe électrogène auto pour la continuité face aux délestages CIE CI. Sauvegarde hors-site (cloud Azure ou site secondaire).",
+    "optimise": "Infrastructure IT/OT convergée et résiliente. SD-WAN pour gestion multi-sites CI. Infrastructure 100% redondante pour les systèmes critiques. Monitoring temps réel de l'infrastructure. Zéro impact des délestages CIE CI sur la production."
+  },
+  "questions_diagnostic": [
+    {
+      "id": "IT_DATA_socle_it_Q1",
+      "question": "Votre infrastructure réseau industrielle distingue-t-elle le réseau OT (automates, SCADA, capteurs) du réseau IT (bureautique, ERP, emails) ?",
+      "type": "choix_unique",
+      "options": ["Non, réseau unique non segmenté", "Séparation physique partielle (quelques équipements isolés)", "VLAN ou pare-feu entre OT et IT", "Zones de sécurité distinctes (DMZ industrielle) avec règles de flux strictes", "Architecture IEC 62443 complète : zones/conduits, DMZ, pare-feux industriels"],
+      "poids": 25
+    },
+    {
+      "id": "IT_DATA_socle_it_Q2",
+      "question": "Quelle est votre capacité de continuité électrique face aux délestages CIE CI (coupures fréquentes en Côte d'Ivoire) ?",
+      "type": "choix_unique",
+      "options": ["Aucune protection, arrêts de production à chaque coupure", "UPS basiques (10-30 min) sur quelques PC", "UPS on-line sur serveurs + groupe électrogène manuel", "UPS on-line double conversion + groupe électrogène automatique (bascule <10 secondes)", "UPS + GE auto + supervision de la continuité électrique avec alertes et rapports"],
+      "poids": 25
+    },
+    {
+      "id": "IT_DATA_socle_it_Q3",
+      "question": "Quelle est la disponibilité et la redondance de votre connexion internet industrielle ?",
+      "type": "choix_unique",
+      "options": ["Connexion mobile partagée (4G personnel)", "ADSL ou fibre résidentielle avec coupures fréquentes", "Fibre dédiée OrangeBusiness CI ou MTN CI sans redondance", "Fibre dédiée + liaison de secours 4G/5G avec bascule automatique", "SD-WAN multi-opérateurs (Orange CI + MTN CI) avec SLA de disponibilité garanti"],
+      "poids": 20
+    },
+    {
+      "id": "IT_DATA_socle_it_Q4",
+      "question": "Vos sauvegardes des données critiques (ERP, SCADA, CMMS, données de production) sont-elles automatisées et testées régulièrement ?",
+      "type": "choix_unique",
+      "options": ["Pas de sauvegarde systématique", "Sauvegarde manuelle hebdomadaire sur disques locaux", "Sauvegarde automatique quotidienne en local", "Sauvegarde automatique locale + copie hors-site (cloud ou site secondaire)", "Sauvegarde 3-2-1 (3 copies, 2 supports, 1 hors-site) + test de restauration mensuel"],
+      "poids": 15
+    },
+    {
+      "id": "IT_DATA_socle_it_Q5",
+      "question": "Disposez-vous d'un Wi-Fi industriel couvrant l'ensemble de votre plancher de production pour les terminaux mobiles et les capteurs IoT ?",
+      "type": "choix_unique",
+      "options": ["Non, pas de Wi-Fi en atelier", "Wi-Fi bureautique étendu à quelques zones atelier (couverture partielle)", "Wi-Fi industriel partiel (zones clés couvertes)", "Wi-Fi industriel IP67 couvrant 100% du plancher de production", "Wi-Fi industriel + réseau IoT dédié (LoRa ou Zigbee pour capteurs basse consommation)"],
+      "poids": 15
+    }
+  ],
+  "pratiques_recommandees": [
+    {
+      "titre": "Continuité électrique face aux délestages CIE CI",
+      "description": "Les délestages CIE CI sont le premier risque d'arrêt IT/production dans les industries ivoiriennes. Architecture recommandée : (1) UPS on-line double conversion (type APC Smart-UPS RT ou Eaton 9PX) sur les serveurs ERP/SCADA et automates critiques — autonomie 30-60 minutes ; (2) Groupe électrogène diesel auto-démarrant avec bascule automatique <10 secondes — dimensionné pour couvrir les équipements critiques de production ; (3) Supervision électrique avec alertes WhatsApp Business CI au responsable maintenance si anomalie. Investissement : 5-25 M FCFA selon taille usine.",
+      "priorite": "haute",
+      "effort": "élevé",
+      "impact": "très fort"
+    },
+    {
+      "titre": "Segmentation réseau OT/IT (pare-feu industriel)",
+      "description": "Déployer un pare-feu industriel entre le réseau OT (SCADA, automates) et le réseau IT (bureautique, ERP). Équipements recommandés en CI : Fortinet FortiGate (distributeur CI disponible), Cisco ASA 5500-X, ou Palo Alto Networks PA-440. Règles strictes : seuls les flux nécessaires entre OT et IT sont autorisés. Protège contre les ransomwares qui transitent du réseau bureautique vers les automates.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "très fort"
+    },
+    {
+      "titre": "Connexion internet industrielle dédiée avec redondance",
+      "description": "Passer d'une connexion partagée à une connexion internet dédiée pro (OrangeBusiness CI Fibre Entreprise ou MTN CI Business) avec SLA de disponibilité (99%+). Ajouter une connexion de secours 4G/5G avec bascule automatique (routeur SD-WAN ou simple failover). En CI, MTN CI et Orange CI ont des couvertures complémentaires — la diversité opérateurs réduit le risque de coupure simultanée.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Stratégie de sauvegarde 3-2-1 pour les données industrielles",
+      "description": "Implémenter la stratégie 3-2-1 : 3 copies des données, sur 2 supports différents, dont 1 hors-site. Pour les industries CI : sauvegarde locale NAS (Synology DS923+), sauvegarde cloud Azure Backup (centre de données le plus proche : Afrique du Sud, accessible via OrangeBusiness CI), test de restauration mensuel documenté. Données critiques : base ERP, historiques SCADA, base CMMS, données qualité EUDR.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Wi-Fi industriel IP67 pour le plancher de production",
+      "description": "Déployer des points d'accès Wi-Fi industriels certifiés IP67 (imperméables, résistants à la poussière et aux chocs) pour couvrir 100% du plancher de production. Équipements adaptés aux conditions CI : Cisco Catalyst IW9165E (IP67), Huawei AirEngine 5761-11W (IP67), Cambium cnPilot e600. Prévoir amplificateurs dans les zones avec murs béton épais courants dans les usines CI. Budget : 1,2-3 M FCFA pour une usine de taille moyenne.",
+      "priorite": "haute",
+      "effort": "élevé",
+      "impact": "fort"
+    }
+  ],
+  "outils_solutions": [
+    {
+      "categorie": "Continuité électrique",
+      "solutions": [
+        {
+          "nom": "APC Smart-UPS RT (on-line double conversion)",
+          "description": "UPS on-line professionnel pour serveurs industriels. Disponible via distributeurs CI (Ecotech CI, SICOM CI). Gestion réseau intégrée pour supervision à distance.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "500 000 - 2 M FCFA selon capacité kVA"
+        },
+        {
+          "nom": "Groupe électrogène Cummins / Perkins auto",
+          "description": "Groupes électrogènes diesel avec auto-démarrage (<10 secondes). Disponibles et maintenables en CI. Partenaires locaux : SOPROMA CI, ENCO CI. Essentiels pour les usines avec production continue.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "3 - 20 M FCFA selon kVA"
+        }
+      ]
+    },
+    {
+      "categorie": "Infrastructure réseau industrielle",
+      "solutions": [
+        {
+          "nom": "Fortinet FortiGate (pare-feu industriel)",
+          "description": "Leader mondial des pare-feux réseau. Distributeurs agréés disponibles à Abidjan (ESET CI, Ecotech CI). FortiGate 60F adapté aux PME industrielles CI. IPS, contrôle applicatif, VPN.",
+          "pertinence_locale": "haute",
+          "cout_estime": "400 000 - 1 500 000 FCFA selon modèle"
+        },
+        {
+          "nom": "Cisco Catalyst IW9165E (Wi-Fi industriel)",
+          "description": "Point d'accès Wi-Fi industriel IP67, Wi-Fi 6, outdoor. Résistant chaleur, poussière, humidité tropicale CI. Certifié pour usage industriel intensif.",
+          "pertinence_locale": "haute",
+          "cout_estime": "350 000 - 600 000 FCFA par point d'accès"
+        },
+        {
+          "nom": "Peplink Balance (SD-WAN/routeur failover)",
+          "description": "Routeur SD-WAN permettant la combinaison Orange CI + MTN CI avec bascule automatique en <1 seconde. Très utilisé en Afrique pour la redondance internet. Distribution CI disponible.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "200 000 - 800 000 FCFA selon modèle"
+        }
+      ]
+    },
+    {
+      "categorie": "Sauvegarde et stockage",
+      "solutions": [
+        {
+          "nom": "Synology DS923+ NAS",
+          "description": "NAS 4 baies professionnel pour sauvegarde locale. Compatible Hyper Backup (sauvegarde vers Azure, AWS S3). Disponible via importateurs CI (Jumia Business, Ecotech CI). Fiable et maintenable.",
+          "pertinence_locale": "haute",
+          "cout_estime": "350 000 - 600 000 FCFA (NAS + disques)"
+        },
+        {
+          "nom": "Azure Backup",
+          "description": "Service de sauvegarde cloud Microsoft avec centre de données Afrique du Sud (le plus proche de CI). Intégration native Windows Server. Chiffrement des données en transit et au repos.",
+          "pertinence_locale": "haute",
+          "cout_estime": "Paiement à l'usage ~5-15 $/100 GB/mois"
+        }
+      ]
+    }
+  ],
+  "indicateurs_cles": [
+    {
+      "nom": "Taux de disponibilité électrique et IT",
+      "description": "Pourcentage du temps où les systèmes IT/OT sont opérationnels (impact délestages CIE CI inclus)",
+      "unite": "%",
+      "cible_sectorielle": ">99,5% (moins de 44h d'indisponibilité/an)"
+    },
+    {
+      "nom": "Nombre d'arrêts de production liés aux pannes IT/électriques",
+      "description": "Arrêts de production directement causés par des défaillances IT ou des coupures électriques",
+      "unite": "arrêts/an",
+      "cible_sectorielle": "<5 arrêts/an, 0 arrêt >4h"
+    },
+    {
+      "nom": "Couverture Wi-Fi atelier",
+      "description": "Pourcentage du plancher de production avec couverture Wi-Fi industrielle opérationnelle",
+      "unite": "%",
+      "cible_sectorielle": "100% des zones nécessitant des terminaux mobiles"
+    },
+    {
+      "nom": "RTO (Recovery Time Objective) ERP",
+      "description": "Délai de reprise de l'ERP après un incident majeur (temps de restauration)",
+      "unite": "heures",
+      "cible_sectorielle": "<8 heures"
+    },
+    {
+      "nom": "RPO (Recovery Point Objective) SCADA",
+      "description": "Perte de données maximale acceptable pour le système SCADA après incident",
+      "unite": "heures",
+      "cible_sectorielle": "<1 heure (sauvegarde horaire)"
+    }
+  ],
+  "reglementations_normes": [
+    {
+      "nom": "IEC 62443 — cybersécurité systèmes industriels",
+      "description": "Standard international pour la sécurité des systèmes de contrôle industriels. La segmentation OT/IT est une exigence de niveau 1 d'IEC 62443. Les clients industriels multinationaux (Nestlé CI, Unilever CI) peuvent exiger la conformité de leurs fournisseurs.",
+      "organisme": "IEC",
+      "obligatoire": false
+    },
+    {
+      "nom": "ARTCI CI — sécurité des réseaux",
+      "description": "L'ARTCI CI est l'autorité de régulation des télécommunications et des réseaux en CI. Elle peut auditer la sécurité des réseaux industriels pour les opérateurs d'importance vitale.",
+      "organisme": "ARTCI CI",
+      "obligatoire": true
+    },
+    {
+      "nom": "APDP CI — sécurité des données",
+      "description": "La Loi 2013-450 exige des mesures techniques de sécurité pour les données personnelles. L'infrastructure IT (sauvegardes, chiffrement, contrôle d'accès) doit être dimensionnée en conséquence.",
+      "organisme": "APDP CI",
+      "obligatoire": true
+    }
+  ],
+  "comparatif_organisations": {
+    "description": "Comparaison de la maturité du socle IT dans les industries ivoiriennes",
+    "lignes": [
+      {
+        "organisation": "SUCAF CI (sucrerie)",
+        "continuite_electrique": "UPS on-line + GE auto 2 MW",
+        "reseau_ot_it": "Segmenté IEC 62443 partiel",
+        "internet": "Fibre dédiée + SD-WAN",
+        "sauvegarde": "3-2-1 avec cloud Azure",
+        "niveau_global": "Avancé"
+      },
+      {
+        "organisation": "TRITURAF CI",
+        "continuite_electrique": "UPS serveurs + GE manuel",
+        "reseau_ot_it": "VLAN OT/IT",
+        "internet": "Fibre OrangeBusiness CI dédiée",
+        "sauvegarde": "Local NAS + cloud partiel",
+        "niveau_global": "Structuré"
+      },
+      {
+        "organisation": "PME agroalimentaire Abidjan",
+        "continuite_electrique": "UPS PC bureautiques seulement",
+        "reseau_ot_it": "Non segmenté",
+        "internet": "ADSL résidentiel",
+        "sauvegarde": "Disques durs manuels",
+        "niveau_global": "En développement"
+      },
+      {
+        "organisation": "SATCI CI (chimie)",
+        "continuite_electrique": "UPS double conversion + GE auto",
+        "reseau_ot_it": "Pare-feu FortiGate OT/IT",
+        "internet": "Fibre + failover 4G Peplink",
+        "sauvegarde": "Synology NAS + Azure Backup",
+        "niveau_global": "Avancé"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "SATCI CI — Infrastructure IT résiliente : 0 arrêt SCADA en 18 mois malgré délestages CIE CI",
+    "contexte": "SATCI CI (Société Africaine de Transformation Chimique et Industrielle), Port-Bouët, production de produits chimiques industriels avec processus continu (réactions chimiques 24h/24). En 2021, les délestages CIE CI (3-5 heures/jour certaines semaines) causaient en moyenne 8 arrêts de production/an, chaque arrêt coûtant 35 M FCFA de perte (gâchis matières, relance procédé, heures supplémentaires). Coût annuel délestages : 280 M FCFA.",
+    "probleme": "Les UPS existants (30 minutes) ne couvraient pas les délestages prolongés. Le groupe électrogène était manuel et nécessitait 8-12 minutes de démarrage : les automates SCADA redémarraient dans un état instable, nécessitant une procédure de remise en route de 2-3 heures.",
+    "solution": "Refonte complète de l'infrastructure de continuité électrique en 3 mois : (1) UPS on-line double conversion APC Symmetra LX 30 kVA sur automates SCADA, serveur ERP, routeurs (autonomie 2 heures) — 4,2 M FCFA ; (2) Groupe électrogène Cummins 250 kVA auto-démarrant avec bascule automatique <8 secondes — 12,5 M FCFA ; (3) Routeur Peplink Balance Two (Orange CI + MTN CI failover) pour la connexion internet — 550 000 FCFA ; (4) Supervision électrique avec alertes WhatsApp Business CI en temps réel. Investissement total : 17,25 M FCFA.",
+    "resultats": "Arrêts SCADA liés aux délestages CIE CI : 8/an → 0 en 18 mois. Économie directe : 280 M FCFA/an (vs. investissement 17,25 M FCFA = ROI 5,2 semaines). Délai de réponse aux alertes électriques : >12 min → <30 secondes (WhatsApp Business CI). Disponibilité systèmes IT : non mesurée → 99,8% sur 18 mois. Le réseau Peplink a basculé 23 fois sur MTN CI lors de coupures Orange CI sans impact utilisateur constaté."
+  },
+  "ai_context": {
+    "focus_llm": "Évaluer la robustesse de l'infrastructure IT de base dans les industries ivoiriennes, avec une attention particulière aux problèmes spécifiques au contexte CI : délestages CIE CI fréquents (premier risque d'arrêt IT en CI), chaleur et humidité tropicale dégradant les équipements non industriels, connectivité internet variable selon les zones. Ne pas supposer que les infrastructures standards européennes ou mondiales sont applicables sans adaptation.",
+    "pieges_a_eviter": [
+      "Ne pas ignorer l'impact des délestages CIE CI : c'est le risque n°1 de disponibilité IT en CI, avant même les pannes matérielles",
+      "Ne pas recommander une infrastructure exclusivement cloud sans considérer la qualité de la connectivité internet CI (la fibre dédiée n'est pas disponible partout)",
+      "Éviter de recommander des équipements IT grand public pour l'atelier industriel CI : chaleur, poussière, humidité et vibrations détruisent les équipements non industriels en quelques mois",
+      "Ne pas oublier la segmentation OT/IT : un réseau industriel non segmenté est une vulnérabilité critique permettant aux ransomwares IT de toucher les automates SCADA"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Infrastructure IT minimale. Pas de réseau structuré en atelier. Aucune protection électrique. Internet partagé mobile. Aucune sauvegarde systématique. Arrêts fréquents liés aux délestages CIE CI.",
+      "score_21_to_40": "LAN bureautique basique. UPS simples sur PC. Internet ADSL ou fibre résidentielle. Sauvegarde manuelle. Quelques terminaux en atelier mais non industriels.",
+      "score_41_to_60": "Réseau structuré avec Wi-Fi partiel atelier. Serveur local ERP avec UPS. Fibre dédiée OrangeBusiness CI. Sauvegarde automatique locale. Segmentation OT/IT basique.",
+      "score_61_to_80": "Infrastructure industrielle robuste : Wi-Fi IP67 couverture totale, segmentation OT/IT pare-feu, UPS on-line + GE auto pour la continuité face aux délestages CI. Sauvegarde 3-2-1 avec hors-site. Internet redondant.",
+      "score_81_to_100": "Infrastructure IT/OT convergée résiliente. Disponibilité systèmes >99,8%. 0 impact délestages CIE CI sur production. SD-WAN multi-opérateurs. Monitoring infrastructure temps réel. RPO <1h, RTO <4h certifiés par tests."
+    }
+  }
+}

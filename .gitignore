@@ -17,8 +17,10 @@ target/
 *.war
 *.log
 
-# Spring live logs
-spring-live.*.log
+# Spring logs
+spring-*.log
+*.err.log
+*.out.log
 
 # Node / Angular
 node_modules/

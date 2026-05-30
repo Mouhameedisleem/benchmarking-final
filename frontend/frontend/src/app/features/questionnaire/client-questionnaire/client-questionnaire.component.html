@@ -1,219 +1,256 @@
-<div class="container-fluid py-4 bg-light min-vh-100">
-  <!-- En-tête -->
-  <div class="row mb-4">
-    <div class="col-12">
-      <div class="d-flex justify-content-between align-items-center">
-        <div>
-          <h2 class="mb-1">
-            <i class="fas fa-clipboard-list me-2 text-primary"></i>
-            Questionnaire d'évaluation
-          </h2>
-          <p class="text-muted mb-0">{{ companyName }}</p>
-        </div>
-        <a routerLink="/client/dashboard" class="btn btn-outline-secondary">
-          <i class="fas fa-times me-2"></i>Quitter
-        </a>
+<div class="gf-wrapper">
+
+  <!-- ════════ LOADING ════════ -->
+  <div class="gf-state-screen" *ngIf="isLoading">
+    <div class="gf-state-card">
+      <div class="gf-spinner-wrap">
+        <div class="gf-spinner-ring"></div>
       </div>
+      <h3 class="gf-state-title">Préparation du questionnaire…</h3>
+      <p class="gf-state-sub">Veuillez patienter quelques instants</p>
     </div>
   </div>
 
-  <!-- Loading -->
-  <div class="text-center py-5" *ngIf="isLoading">
-    <div class="spinner-border text-primary" role="status">
-      <span class="visually-hidden">Chargement...</span>
-    </div>
-    <p class="mt-3 text-muted">Préparation du questionnaire...</p>
-  </div>
-
-  <!-- Error -->
-  <div class="alert alert-danger" *ngIf="errorMessage">
-    <i class="fas fa-exclamation-circle me-2"></i>{{ errorMessage }}
-    <div class="mt-2">
-      <a routerLink="/client/dashboard" class="btn btn-outline-danger btn-sm">
-        Retour au dashboard
+  <!-- ════════ ERROR ════════ -->
+  <div class="gf-state-screen" *ngIf="errorMessage && !isLoading">
+    <div class="gf-state-card gf-state-card--error">
+      <div class="gf-state-icon gf-state-icon--error">
+        <i class="fas fa-exclamation-triangle"></i>
+      </div>
+      <h3 class="gf-state-title">Une erreur est survenue</h3>
+      <p class="gf-state-sub">{{ errorMessage }}</p>
+      <a routerLink="/client/dashboard" class="gf-btn gf-btn--outline">
+        <i class="fas fa-arrow-left"></i> Retour au tableau de bord
       </a>
     </div>
   </div>
 
-  <!-- Success screen after submission -->
-  <div *ngIf="submitted" class="row justify-content-center">
-    <div class="col-md-7">
-      <div class="card border-0 shadow-sm rounded-4 text-center p-5">
-        <div class="mb-4">
-          <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
-               style="width:88px;height:88px;background:linear-gradient(135deg,#d1fae5,#a7f3d0);">
-            <i class="fas fa-check-circle fa-3x text-success"></i>
-          </div>
-          <h3 class="fw-bold text-success mb-2">Félicitations !</h3>
-          <p class="text-muted fs-6 mb-0">
-            Vos réponses ont bien été enregistrées et transmises à votre consultant.
+  <!-- ════════ SUCCESS ════════ -->
+  <div class="gf-state-screen" *ngIf="submitted">
+    <div class="gf-state-card gf-state-card--success">
+      <div class="gf-state-icon gf-state-icon--success">
+        <i class="fas fa-check"></i>
+      </div>
+      <h3 class="gf-state-title">Questionnaire soumis !</h3>
+      <p class="gf-state-sub">Vos réponses ont bien été enregistrées et transmises à votre consultant.</p>
+      <div class="gf-success-info">
+        <i class="fas fa-envelope gf-success-info-icon"></i>
+        <div>
+          <p class="gf-success-info-title">Prochaines étapes</p>
+          <p class="gf-success-info-text">
+            Votre consultant va analyser vos réponses. Vous recevrez par email votre
+            <strong>score de maturité digitale</strong>, vos <strong>recommandations personnalisées</strong>
+            et votre <strong>positionnement sectoriel</strong>.
           </p>
         </div>
-        <div class="alert alert-info border-0 rounded-3 text-start mb-4" style="background:#eff6ff;">
-          <div class="d-flex gap-3 align-items-start">
-            <i class="fas fa-envelope-open-text text-primary mt-1 fs-5"></i>
-            <div>
-              <div class="fw-semibold text-primary mb-1">Prochaines étapes</div>
-              <p class="mb-1 small text-secondary">
-                Votre consultant va analyser vos réponses et valider les résultats.
-              </p>
-              <p class="mb-0 small text-secondary">
-                Vous recevrez par email votre <strong>score de maturité digitale</strong>,
-                vos <strong>recommandations personnalisées</strong> et votre
-                <strong>positionnement sectoriel</strong> (benchmarking régional &amp; international).
-              </p>
-            </div>
+      </div>
+      <a routerLink="/client/dashboard" class="gf-btn gf-btn--primary">
+        <i class="fas fa-home"></i> Retour au tableau de bord
+      </a>
+    </div>
+  </div>
+
+  <!-- ════════ QUESTIONNAIRE ════════ -->
+  <div class="gf-page" *ngIf="!submitted && !isLoading && !errorMessage && currentSection">
+
+    <!-- Top progress strip -->
+    <div class="gf-topstrip">
+      <div class="gf-topstrip-fill" [style.width.%]="globalProgress.percentage"></div>
+    </div>
+
+    <div class="gf-container">
+
+      <!-- ── Header card ── -->
+      <div class="gf-card gf-header-card">
+        <div class="gf-header-accent-bar"></div>
+        <div class="gf-header-inner">
+          <div class="gf-header-left">
+            <h1 class="gf-form-title">Questionnaire de Maturité Digitale</h1>
+            <p class="gf-form-company">
+              <i class="fas fa-building"></i> {{ companyName }}
+            </p>
           </div>
-        </div>
-        <div class="d-flex justify-content-center gap-3">
-          <a routerLink="/client/dashboard" class="btn btn-primary px-4 rounded-pill">
-            <i class="fas fa-home me-2"></i>Retour au tableau de bord
+          <a routerLink="/client/dashboard" class="gf-quit-btn" title="Quitter">
+            <i class="fas fa-times"></i>
           </a>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Questionnaire -->
-  <div *ngIf="!submitted && !isLoading && !errorMessage && currentSection">
-    <!-- Barre de progression globale -->
-    <div class="card shadow-sm border-0 mb-4">
-      <div class="card-body">
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <span class="fw-semibold">Progression globale</span>
-          <span class="text-primary fw-bold">{{ globalProgress.percentage }}%</span>
-        </div>
-        <div class="progress" style="height: 10px;">
-          <div class="progress-bar bg-success" 
-               [style.width.%]="globalProgress.percentage"
-               [attr.aria-valuenow]="globalProgress.percentage"
-               aria-valuemin="0" aria-valuemax="100">
+        <div class="gf-header-progress">
+          <div class="gf-header-progress-row">
+            <span class="gf-header-progress-label">Progression globale</span>
+            <span class="gf-header-progress-pct">{{ globalProgress.percentage }}%</span>
           </div>
+          <div class="gf-prog-track">
+            <div class="gf-prog-fill" [style.width.%]="globalProgress.percentage"></div>
+          </div>
+          <span class="gf-prog-count">
+            {{ globalProgress.answered }} / {{ globalProgress.total }} questions répondues
+          </span>
         </div>
-        <small class="text-muted mt-2 d-block">
-          {{ globalProgress.answered }} / {{ globalProgress.total }} questions répondues
-        </small>
       </div>
-    </div>
 
-    <!-- Navigation des sections -->
-    <div class="card shadow-sm border-0 mb-4">
-      <div class="card-body p-0">
-        <div class="nav nav-tabs" role="tablist">
-          <button *ngFor="let section of sections; let i = index"
-                  class="nav-link flex-fill text-center"
-                  [class.active]="i === currentIndex"
-                  [class.text-success]="section.progress.answered === section.questions.length"
-                  [disabled]="i > currentIndex"
-                  (click)="currentIndex = i">
-            <div class="small">{{ getCategoryIcon(section.category) }}</div>
-            <div class="small fw-semibold">{{ section.category }}</div>
-            <div class="progress mt-1" style="height: 3px;">
-              <div class="progress-bar bg-success" 
-                   [style.width.%]="getSectionProgress(section)">
+      <!-- ── Section stepper ── -->
+      <div class="gf-card gf-stepper-card">
+        <div class="gf-stepper-scroll">
+          <div class="gf-stepper">
+            <ng-container *ngFor="let s of sections; let i = index">
+              <div class="gf-step"
+                   [class.gf-step--active]="i === currentIndex"
+                   [class.gf-step--done]="getSectionProgress(s) === 100"
+                   [class.gf-step--locked]="i > currentIndex"
+                   (click)="goToSection(i)">
+                <div class="gf-step-bubble">
+                  <i class="fas fa-check" *ngIf="getSectionProgress(s) === 100"></i>
+                  <span *ngIf="getSectionProgress(s) < 100">{{ i + 1 }}</span>
+                </div>
+                <div class="gf-step-label">
+                  <span class="gf-step-icon">{{ getCategoryIcon(s.category) }}</span>
+                  <span class="gf-step-name">{{ s.category }}</span>
+                </div>
+                <div class="gf-step-mini-bar">
+                  <div [style.width.%]="getSectionProgress(s)"></div>
+                </div>
               </div>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section courante -->
-    <div class="card shadow-sm border-0">
-      <div class="card-header bg-white py-3">
-        <h5 class="mb-0">
-          <span class="badge bg-primary me-2">{{ currentIndex + 1 }}/{{ sections.length }}</span>
-          {{ currentSection.categoryLabel }}
-          <small class="text-muted ms-2">({{ currentSection.questions.length }} questions)</small>
-        </h5>
-      </div>
-
-      <div class="card-body p-4">
-        <!-- Questions -->
-        <div *ngFor="let question of currentSection.questions; let i = index" 
-             class="question-item mb-4 pb-4 border-bottom">
-          <div class="d-flex mb-3">
-            <span class="badge bg-light text-dark me-2">{{ i + 1 }}</span>
-            <div>
-              <label class="fw-semibold">{{ question.content }}</label>
-              <small class="text-muted d-block" *ngIf="question.helpText">
-                <i class="fas fa-info-circle me-1"></i>{{ question.helpText }}
-              </small>
-            </div>
-          </div>
-
-          <!-- Niveaux de maturité (SCALE_1_5 ou défaut) -->
-          <div class="mt-3" *ngIf="question.responseType === 'SCALE_1_5' || !question.responseType || question.responseType === 'BOOLEAN'">
-            <div *ngFor="let opt of getMaturityOptions(question); let idx = index" class="mb-2">
-              <label class="d-flex align-items-center gap-3 p-3 rounded-3 border w-100"
-                     style="cursor:pointer;transition:all .15s;"
-                     [style.border-color]="getResponse(question.id!) === (idx + 1) ? '#1768e5' : '#dee2e6'"
-                     [style.background]="getResponse(question.id!) === (idx + 1) ? '#eff6ff' : '#fff'">
-                <input type="radio"
-                       class="flex-shrink-0"
-                       style="width:18px;height:18px;accent-color:#1768e5;"
-                       [name]="'q' + question.id"
-                       [value]="idx + 1"
-                       [checked]="getResponse(question.id!) === (idx + 1)"
-                       (change)="onAnswerChange(question, $event)">
-                <span class="rounded-pill fw-bold flex-shrink-0 text-center"
-                      style="width:24px;height:24px;font-size:12px;line-height:24px;"
-                      [style.background]="getResponse(question.id!) === (idx + 1) ? '#1768e5' : '#e9ecef'"
-                      [style.color]="getResponse(question.id!) === (idx + 1) ? '#fff' : '#6c757d'">
-                  {{ idx + 1 }}
-                </span>
-                <span class="small" [class.fw-semibold]="getResponse(question.id!) === (idx + 1)"
-                      [style.color]="getResponse(question.id!) === (idx + 1) ? '#1e40af' : '#374151'">
-                  {{ opt }}
-                </span>
-              </label>
-            </div>
-          </div>
-
-          <!-- Description optionnelle -->
-          <div class="mt-3">
-            <label class="small fw-semibold mb-1 d-flex align-items-center gap-1">
-              Décrivez votre situation actuelle
-              <span class="text-muted ms-1" style="font-size:11px;">(optionnel)</span>
-              <i class="fas fa-check-circle text-success ms-1" *ngIf="isCommentFilled(question.id!)"></i>
-            </label>
-            <textarea class="form-control form-control-sm"
-                      rows="2"
-                      placeholder="Décrivez brièvement votre situation, vos pratiques actuelles ou vos contraintes..."
-                      [class.border-success]="isCommentFilled(question.id!)"
-                      [value]="getComment(question.id!)"
-                      (input)="onCommentChange(question, $event)"></textarea>
+              <div class="gf-step-connector"
+                   *ngIf="i < sections.length - 1"
+                   [class.gf-step-connector--done]="i < currentIndex">
+              </div>
+            </ng-container>
           </div>
         </div>
+      </div>
 
-        <!-- Boutons de navigation -->
-        <div class="d-flex justify-content-between mt-4">
-          <button class="btn btn-outline-primary" 
-                  *ngIf="currentIndex > 0"
-                  (click)="previousSection()">
-            <i class="fas fa-arrow-left me-2"></i>Section précédente
-          </button>
-          <div></div>
-          <button class="btn btn-primary" 
-                  *ngIf="!isLastSection"
-                  (click)="nextSection()"
-                  [disabled]="!isCurrentSectionComplete">
-            Section suivante<i class="fas fa-arrow-right ms-2"></i>
-          </button>
-          <button class="btn btn-success" 
-                  *ngIf="isLastSection"
-                  (click)="submitQuestionnaire()"
-                  [disabled]="!isCurrentSectionComplete || isSubmitting">
-            <span *ngIf="!isSubmitting">
-              <i class="fas fa-check-circle me-2"></i>Soumettre le questionnaire
+      <!-- ── Section header banner ── -->
+      <div class="gf-card gf-section-banner">
+        <div class="gf-sec-banner-body">
+          <div class="gf-sec-banner-left">
+            <span class="gf-sec-num-badge">{{ currentIndex + 1 }} / {{ sections.length }}</span>
+            <h2 class="gf-sec-title">{{ currentSection.categoryLabel }}</h2>
+            <div class="gf-sec-stats">
+              <span class="gf-sec-stat">
+                <i class="fas fa-list-ul"></i> {{ currentSection.questions.length }} questions
+              </span>
+              <span class="gf-sec-stat gf-sec-stat--done">
+                <i class="fas fa-check-circle"></i> {{ currentSection.progress.answered }} répondues
+              </span>
+            </div>
+          </div>
+          <div class="gf-sec-ring-wrap">
+            <svg class="gf-ring-svg" viewBox="0 0 42 42">
+              <circle cx="21" cy="21" r="15.9" fill="none" stroke="#e8eaed" stroke-width="4"/>
+              <circle cx="21" cy="21" r="15.9" fill="none" stroke="#1a73e8" stroke-width="4"
+                      stroke-linecap="round"
+                      [attr.stroke-dasharray]="getSectionProgress(currentSection) + ' 100'"
+                      stroke-dashoffset="25"/>
+            </svg>
+            <span class="gf-ring-label">{{ getSectionProgress(currentSection) }}%</span>
+          </div>
+        </div>
+        <div class="gf-sec-bar-track">
+          <div class="gf-sec-bar-fill" [style.width.%]="getSectionProgress(currentSection)"></div>
+        </div>
+      </div>
+
+      <!-- ── Question cards ── -->
+      <div class="gf-card gf-question-card"
+           *ngFor="let question of currentSection.questions; let qi = index"
+           [class.gf-question-card--answered]="isAnswered(question.id!)">
+
+        <!-- Question header row -->
+        <div class="gf-q-header">
+          <span class="gf-q-num">{{ qi + 1 }}</span>
+          <p class="gf-q-text">{{ question.content }}</p>
+          <span class="gf-q-answered-mark" *ngIf="isAnswered(question.id!)">
+            <i class="fas fa-check-circle"></i>
+          </span>
+        </div>
+
+        <!-- Help text -->
+        <p class="gf-q-hint" *ngIf="question.helpText">
+          <i class="fas fa-lightbulb"></i> {{ question.helpText }}
+        </p>
+
+        <!-- Maturity scale options -->
+        <div class="gf-options">
+          <label *ngFor="let opt of getMaturityOptions(question); let oi = index"
+                 class="gf-option"
+                 [class.gf-option--selected]="getResponse(question.id!) === (oi + 1)">
+            <input type="radio"
+                   class="gf-radio-input"
+                   [name]="'q' + question.id"
+                   [value]="oi + 1"
+                   [checked]="getResponse(question.id!) === (oi + 1)"
+                   (change)="onAnswerChange(question, $event)">
+            <span class="gf-radio-circle">
+              <span class="gf-radio-dot"></span>
             </span>
-            <span *ngIf="isSubmitting">
-              <span class="spinner-border spinner-border-sm me-2"></span>
-              Calcul en cours...
-            </span>
-          </button>
+            <span class="gf-opt-level-badge" [attr.data-level]="oi + 1">{{ oi + 1 }}</span>
+            <span class="gf-opt-text">{{ opt }}</span>
+            <i class="fas fa-check gf-opt-selected-icon"></i>
+          </label>
         </div>
+
+        <!-- Comment field -->
+        <div class="gf-comment-wrap">
+          <div class="gf-comment-label-row">
+            <i class="fas fa-pen gf-comment-pen"></i>
+            <span class="gf-comment-label">Décrivez votre situation actuelle</span>
+            <span class="gf-optional-badge">optionnel</span>
+            <i class="fas fa-check-circle gf-comment-ok-icon" *ngIf="isCommentFilled(question.id!)"></i>
+          </div>
+          <textarea class="gf-comment-textarea"
+                    [class.gf-comment-textarea--filled]="isCommentFilled(question.id!)"
+                    rows="2"
+                    placeholder="Décrivez brièvement votre situation, vos pratiques actuelles ou vos contraintes…"
+                    [value]="getComment(question.id!)"
+                    (input)="onCommentChange(question, $event)">
+          </textarea>
+        </div>
+
       </div>
+      <!-- /questions -->
+
+      <div style="height: 16px;"></div>
     </div>
+    <!-- /container -->
+
+    <!-- ── Sticky navigation bar ── -->
+    <nav class="gf-nav">
+      <div class="gf-nav-inner">
+        <button class="gf-btn gf-btn--ghost"
+                *ngIf="currentIndex > 0"
+                (click)="previousSection()">
+          <i class="fas fa-chevron-left"></i> Précédent
+        </button>
+        <div class="gf-nav-meta" *ngIf="currentIndex === 0">
+          <span>{{ globalProgress.answered }} / {{ globalProgress.total }} réponses</span>
+        </div>
+        <div class="gf-nav-spacer" *ngIf="currentIndex > 0"></div>
+
+        <button class="gf-btn gf-btn--primary"
+                *ngIf="!isLastSection"
+                [disabled]="!isCurrentSectionComplete"
+                (click)="nextSection()">
+          Suivant <i class="fas fa-chevron-right"></i>
+        </button>
+        <button class="gf-btn gf-btn--success"
+                *ngIf="isLastSection"
+                [disabled]="!isCurrentSectionComplete || isSubmitting"
+                (click)="submitQuestionnaire()">
+          <ng-container *ngIf="!isSubmitting">
+            <i class="fas fa-paper-plane"></i> Soumettre le questionnaire
+          </ng-container>
+          <ng-container *ngIf="isSubmitting">
+            <span class="gf-spinner-sm"></span> Calcul en cours…
+          </ng-container>
+        </button>
+      </div>
+      <div class="gf-nav-progress-bar">
+        <div [style.width.%]="globalProgress.percentage"></div>
+      </div>
+    </nav>
+
   </div>
+  <!-- /gf-page -->
+
 </div>
+<!-- /gf-wrapper -->

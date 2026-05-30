@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "CANAUX",
+    "sous_axe": "selfcare_client",
+    "version": "1.0",
+    "langue": "fr",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "Le selfcare client dans le BTP CI est quasi-inexistant : les acquéreurs VEFA, les maîtres d'ouvrage privés et même les collectivités doivent appeler ou se déplacer pour obtenir la moindre information (état d'avancement, documents contractuels, attestations). Les portails clients BTP permettant aux clients d'accéder eux-mêmes à leurs documents, de télécharger leurs attestations, de déposer des réclamations ou de configurer des options sont rares même chez les grands promoteurs CI. Le selfcare est le prolongement naturel du portail client, permettant une autonomie complète du client.",
+    "chiffres_cles": [
+      "85% des interactions clients BTP CI nécessitent une intervention humaine du côté de l'entreprise",
+      "Coût d'un appel client BTP CI traité par agent : estimé 2 500-5 000 FCFA (salaire + temps)",
+      "Taux de résolution en selfcare potentiel BTP CI : 60-70% des demandes courantes",
+      "Demandes récurrentes client BTP CI : 40% = suivi avancement, 25% = documents (attestation, plan), 20% = réclamation, 15% = autre",
+      "Taux de satisfaction selfcare vs. appel téléphonique CI : +22 pts en NPS quand le selfcare est disponible 24/7"
+    ],
+    "specificites_locales": [
+      "Penetration smartphone Android CI : 85% des acquéreurs BTP CI ont un Android (selfcare doit être mobile-first)",
+      "Alphabétisation numérique CI : variable — selfcare doit être simple, pictogrammes, pas de formulaires complexes",
+      "Acquéreurs diaspora CI : exigent un selfcare complet (impossibilité de se déplacer physiquement)",
+      "APDP CI Loi 2013-450 : authentification forte requise pour l'accès aux documents personnels contractuels",
+      "Orange Money CI / Mobile Money : selfcare paiement d'acomptes et d'échéances VEFA via mobile"
+    ]
+  },
+  "definition_axe": {
+    "titre": "Selfcare client dans le BTP",
+    "description": "Capacité de l'entreprise BTP à permettre à ses clients (acquéreurs VEFA, maîtres d'ouvrage) d'effectuer eux-mêmes, sans intervention humaine, les actions et recherches d'information les plus fréquentes : consultation de l'avancement de chantier, téléchargement de documents (contrat, attestations, plans), paiement d'échéances, déclaration de réclamations, configuration d'options d'appartement, prise de rendez-vous de réception. Le selfcare réduit les coûts de relation client et améliore la satisfaction par la disponibilité 24/7.",
+    "perimetre": [
+      "Consultation autonome de l'avancement chantier (photos, jalons, % avancement)",
+      "Téléchargement autonome des documents (contrat VEFA, attestation, PV de réception)",
+      "Paiement d'échéances VEFA en selfcare (Mobile Money CI, carte bancaire)",
+      "Déclaration autonome de réclamations ou demandes de SAV post-livraison",
+      "Configuration d'options (finitions, sanitaires, électricité supplémentaire) en ligne",
+      "Prise de rendez-vous de réception ou de visite chantier en selfcare"
+    ],
+    "technologies_cles": [
+      "Portail web responsive / Application mobile Android — Espace client selfcare BTP CI",
+      "Orange Money API / Wave API CI — Paiement d'échéances VEFA en selfcare mobile",
+      "FAQ intelligente (base de connaissances) / Chatbot WhatsApp — Réponses automatiques questions fréquentes BTP",
+      "Docusign Self-service / HelloSign — Signature électronique autonome documents VEFA",
+      "Calendly / Google Calendar integration — Prise de rendez-vous réception en selfcare",
+      "Configurateur 3D web (Three.js, Speckle) — Choix de finitions en selfcare autonome"
+    ]
+  },
+  "enjeux_specifiques": {
+    "enjeux": [
+      {
+        "titre": "Réduction de la charge du service client BTP CI",
+        "description": "Les équipes commerciales et administratives des promoteurs CI passent 30-50% de leur temps à répondre à des demandes d'informations répétitives (avancement chantier, prochain appel de fonds, documents contractuels). Le selfcare permet de libérer ce temps pour des tâches à valeur ajoutée (vente, gestion de chantier).",
+        "impact": "Réduction charge service client de 40-60%, libération équipes commerciales pour la vente"
+      },
+      {
+        "titre": "Disponibilité 24/7 pour les acquéreurs diaspora",
+        "description": "Les acquéreurs ivoiriens de la diaspora (France, Canada, USA) vivent dans des fuseaux horaires différents et ne peuvent pas appeler pendant les heures de bureau CI. Un selfcare disponible 24/7 leur permet de consulter l'avancement de leur bien, de télécharger leurs documents et d'effectuer des paiements à n'importe quelle heure.",
+        "impact": "Satisfaction diaspora +30 pts NPS, élimination de la frustration des décalages horaires"
+      },
+      {
+        "titre": "Selfcare paiement des échéances VEFA par Mobile Money CI",
+        "description": "Les appels de fonds VEFA (construction en cours) nécessitent des paiements qui passent encore souvent par des chèques ou des virements bancaires physiques CI. L'intégration d'Orange Money CI, MTN MoMo CI et Wave CI dans un portail client selfcare permet de payer ses échéances VEFA en quelques secondes depuis son smartphone, en CI ou depuis la diaspora.",
+        "impact": "Délai de paiement des échéances réduit, réduction des relances, expérience client fluide"
+      }
+    ]
+  },
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Inexistant",
+      "description": "Aucun selfcare disponible. Toutes les demandes clients nécessitent un appel téléphonique ou un déplacement physique. Documents transmis uniquement par courrier physique ou lors de rendez-vous. Paiements exclusivement par chèque ou virement bancaire avec visite en agence.",
+      "signes_distinctifs": [
+        "Seul canal client : téléphone (heures ouvrables) et rendez-vous physique",
+        "Documents contractuels transmis par courrier physique ou lors de rendez-vous",
+        "Paiements VEFA : chèque remis en main propre ou virement avec ordre papier",
+        "Réclamations reçues uniquement par téléphone ou lettre recommandée",
+        "Aucun contenu d'aide en ligne (FAQ, guides, notices)"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Email et WhatsApp Business permettent quelques demandes asynchrones. PDF des documents envoyés par email sur demande. FAQ basique sur le site web. Paiements toujours physiques mais quelques paiements Orange Money CI initiés par l'entreprise. Pas encore d'espace client sécurisé.",
+      "signes_distinctifs": [
+        "Email : envoi documents sur demande (délai 24-48h réponse)",
+        "FAQ basique sur site web (10-15 questions, peu mise à jour)",
+        "WhatsApp Business : réponses manuelles aux questions fréquentes (non automatisé)",
+        "Quelques paiements Mobile Money CI initiés par l'entreprise (pas en selfcare autonome)",
+        "Aucun espace client avec authentification — tout est envoyé sur simple demande"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Espace client sécurisé (login/password) avec accès aux documents, à l'avancement chantier et à l'historique des paiements. Paiement Mobile Money CI disponible en selfcare. Déclaration de réclamations via formulaire en ligne. Prise de rendez-vous réception en ligne.",
+      "signes_distinctifs": [
+        "Portail client authentifié (email + mot de passe ou OTP SMS) : documents, avancement, paiements",
+        "Paiement Orange Money / Wave CI en selfcare depuis le portail : appels de fonds VEFA",
+        "Formulaire de réclamation en ligne avec numéro de ticket automatique",
+        "Téléchargement autonome : contrat VEFA signé, attestations, PV de réception",
+        "Prise de rendez-vous réception en ligne (Calendly ou équivalent) sans appel"
+      ]
+    },
+    "niveau_4": {
+      "label": "Optimisé",
+      "description": "Selfcare complet sur application mobile Android/iOS. Chatbot WhatsApp répondant aux 50 questions les plus fréquentes. Configurateur de finitions en selfcare. Signature électronique autonome des avenants. SAV selfcare : déclaration et suivi des interventions post-livraison.",
+      "signes_distinctifs": [
+        "Application mobile branded Android-first : selfcare complet (avancement, docs, paiement, SAV)",
+        "Chatbot WhatsApp CI : 50 réponses automatiques aux questions fréquentes BTP (disponible 24/7)",
+        "Configurateur finitions en selfcare : choix carrelage, peinture, sanitaires avec simulation 3D",
+        "Signature électronique autonome : avenant de modification ou de finitions signé en selfcare",
+        "SAV selfcare : déclaration intervention, suivi statut, notification résolution — sans appel"
+      ]
+    },
+    "niveau_5": {
+      "label": "Différenciant",
+      "description": "Selfcare hyper-personnalisé avec IA. L'espace client anticipe les besoins (alerte proactive avant l'appel de fonds, récapitulatif jalon automatique). Communauté d'acquéreurs connectés (résidence digitale). Selfcare syndic digital post-livraison. NPS > 70/100.",
+      "signes_distinctifs": [
+        "IA personnalisation : l'espace client adapte le contenu aux préférences et comportements de chaque acquéreur",
+        "Anticipation proactive : alerte 15 jours avant chaque appel de fonds avec montant et modalités de paiement",
+        "Communauté résidence : espace digital pour futurs et actuels résidents (informations quartier, voisins, équipements)",
+        "Syndic digital post-livraison : gestion des parties communes, demandes d'intervention en selfcare depuis l'application",
+        "NPS > 70/100 mesuré et certifié par organisme tiers"
+      ]
+    }
+  },
+  "indicateurs_cles": {
+    "indicateurs": [
+      {
+        "nom": "Taux de selfcare (résolution sans agent)",
+        "definition": "Pourcentage des demandes clients traitées entièrement en selfcare (sans intervention humaine de l'équipe BTP)",
+        "unite": "%",
+        "cible_sectorielle": "> 60% des demandes courantes traitées en selfcare autonome",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Taux d'adoption du paiement Mobile Money CI en selfcare",
+        "definition": "Part des paiements d'échéances VEFA réalisés via Mobile Money CI (Orange Money, Wave, MTN MoMo) en selfcare sur le portail",
+        "unite": "%",
+        "cible_sectorielle": "> 50% des paiements VEFA via Mobile Money CI en selfcare",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Délai moyen de traitement des réclamations",
+        "definition": "Délai entre la déclaration d'une réclamation en selfcare et sa résolution confirmée au client",
+        "unite": "jours",
+        "cible_sectorielle": "< 10 jours (vs. 30+ jours sans suivi digital)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "CSAT selfcare",
+        "definition": "Score de satisfaction client (Customer Satisfaction Score) mesuré immédiatement après une interaction selfcare",
+        "unite": "score /5",
+        "cible_sectorielle": "CSAT > 4/5 (80% des interactions selfcare satisfaisantes)",
+        "frequence_mesure": "Continue (automatique après chaque interaction)"
+      },
+      {
+        "nom": "Taux de déflexion chatbot (résolution sans escalade agent)",
+        "definition": "Pourcentage des conversations chatbot WhatsApp/portail résolues sans escalade vers un agent humain",
+        "unite": "%",
+        "cible_sectorielle": "> 70% de déflexion (chatbot résout 7 demandes sur 10 sans agent)",
+        "frequence_mesure": "Mensuelle"
+      }
+    ]
+  },
+  "bonnes_pratiques": {
+    "pratiques": [
+      {
+        "titre": "Identifier les 10 demandes clients les plus fréquentes et les automatiser en priorité",
+        "description": "Analyser le journal des appels et emails entrants du service client BTP CI pendant 1 mois pour identifier les 10 demandes les plus fréquentes (ex : 'Où en est mon chantier ?', 'Quand est mon prochain appel de fonds ?', 'Pouvez-vous me renvoyer mon contrat ?'). Automatiser ces 10 demandes en selfcare en priorité. 80% des appels sont généralement couverts par les 10 premières demandes.",
+        "benefice": "Réduction immédiate de 60-70% des appels entrants avec un investissement minimal"
+      },
+      {
+        "titre": "Chatbot WhatsApp CI en français pour les questions fréquentes",
+        "description": "Déployer un chatbot WhatsApp Business (via Twilio, Wassenger, ou une solution locale CI) répondant en français aux 50 questions les plus fréquentes BTP CI : avancement chantier, appels de fonds, documents disponibles, contacts agence, horaires de livraison. Rédaction des réponses en français simple et accessible, sans jargon BTP. Escalade automatique vers un agent humain si la question n'est pas couverte. Disponible 24h/24.",
+        "benefice": "Disponibilité 24/7, satisfaction diaspora, réduction 40% des appels entrants"
+      },
+      {
+        "titre": "Intégrer le paiement Mobile Money CI dans l'espace client VEFA",
+        "description": "Intégrer les APIs Orange Money Business CI, Wave CI et MTN MoMo CI dans le portail client VEFA pour permettre le paiement des appels de fonds en selfcare. Envoi automatique d'une notification WhatsApp/SMS 15 jours avant chaque appel de fonds avec le montant, la date limite et le lien de paiement direct. Reçu de paiement automatique dans l'espace client.",
+        "benefice": "Réduction délais de paiement des échéances, élimination des relances manuelles, satisfaction diaspora"
+      },
+      {
+        "titre": "FAQ vidéo pour les questions complexes (finitions, livraison, garanties)",
+        "description": "Créer une bibliothèque de FAQ vidéo courtes (2-3 min) en français sur les questions complexes : 'Comment se déroule la réception de votre appartement ?', 'Quelles sont vos garanties légales CI ?', 'Comment personnaliser vos finitions ?'. Vidéos accessibles depuis l'espace client et le chatbot. Format vertical pour mobile (85% des clients CI utilisent leur smartphone).",
+        "benefice": "Compréhension supérieure vs. texte, réduction des questions de procédure, confiance acquéreurs"
+      },
+      {
+        "titre": "Authentification par OTP SMS pour simplifier l'accès selfcare CI",
+        "description": "Pour faciliter l'accès au portail selfcare (clientèle pas toujours à l'aise avec les mots de passe), utiliser l'authentification par OTP SMS sur numéro Orange CI / MTN CI déclaré au contrat. Le client reçoit un code à 6 chiffres par SMS, saisi pour accéder à son espace. Simple, sécurisé, et compatible avec les pratiques mobile CI (OTP habituel pour les paiements Mobile Money).",
+        "benefice": "Adoption massée du selfcare (plus de mot de passe oublié), sécurité maintenue, conformité APDP CI"
+      }
+    ]
+  },
+  "ecueils_frequents": {
+    "ecueils": [
+      {
+        "titre": "Selfcare trop complexe pour les clients CI peu digitaux",
+        "description": "Un portail selfcare avec de nombreuses étapes, formulaires complexes et navigation non intuitive sera abandonné par les clients CI moins habituels au numérique (personnes âgées, clients peu scolarisés). Le selfcare doit être conçu pour le niveau d'alphabétisation numérique le plus faible.",
+        "solution": "Tests utilisateurs avec des profils clients CI variés avant le lancement, UX ultra-simplifiée (3 clics maximum), pictogrammes et icônes, tutoriel vidéo intégré à l'onboarding"
+      },
+      {
+        "titre": "Selfcare créé mais non relié aux systèmes back-end",
+        "description": "Certains promoteurs CI créent un portail selfcare qui affiche des informations statiques (non reliées à l'ERP ou au logiciel chantier). Les informations d'avancement sont mises à jour manuellement et avec délai. Les clients s'aperçoivent rapidement que le selfcare n'est pas fiable.",
+        "solution": "Connecter le portail selfcare directement aux données live de l'ERP et du logiciel chantier via API — pas de saisie manuelle côté entreprise pour alimenter le selfcare"
+      },
+      {
+        "titre": "Négliger la sécurité et la conformité APDP CI du selfcare",
+        "description": "Un espace client contenant des contrats VEFA (valeur juridique), des informations financières (montants payés, restants) et des données personnelles (identité, adresse) doit être sécurisé avec authentification forte et conforme APDP CI.",
+        "solution": "Authentification OTP SMS ou MFA, chiffrement HTTPS/TLS, registre des traitements APDP CI, politique de confidentialité accessible depuis le portail"
+      }
+    ]
+  },
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau de selfcare client BTP entre organisations représentatives",
+    "lignes": [
+      {
+        "organisation": "SATCI CI",
+        "profil": "Promoteur immobilier CI, portail client Mon Projet SATCI CI",
+        "niveau_maturite": 3,
+        "points_forts": "Portail client authentifié (avancement, documents, jalons paiement), téléchargement documents autonome, prise de RDV réception en ligne",
+        "points_faibles": "Paiement Mobile Money CI pas encore intégré en selfcare, chatbot WhatsApp absent, application mobile non disponible",
+        "initiatives_notables": "Intégration Orange Money CI API en cours (pilote sur résidence Cocody-Riviera 450 appartements)"
+      },
+      {
+        "organisation": "Groupe Immobilier Palm CI",
+        "profil": "Promoteur immobilier émergent CI, cible classe moyenne et diaspora",
+        "niveau_maturite": 4,
+        "points_forts": "Application mobile Android/iOS avec selfcare complet, paiement Wave CI et OM CI intégré, chatbot WhatsApp 35 questions automatiques, configurateur finitions en selfcare, NPS 67/100",
+        "points_faibles": "Maintenance application coûteuse, chatbot couvre seulement 60% des questions (40% escalade agent), SAV selfcare post-livraison perfectible",
+        "initiatives_notables": "Selfcare paiement Mobile Money CI : 62% des appels de fonds VEFA payés via Orange Money ou Wave CI en selfcare (sans intervention humaine)"
+      },
+      {
+        "organisation": "BNETD CI (pour les entreprises BTP partenaires)",
+        "profil": "Portail GEOPROJET CI : selfcare pour les entreprises BTP suivant leurs projets",
+        "niveau_maturite": 3,
+        "points_forts": "Portail BNETD CI : suivi projets, téléchargement PV de réception, rapport avancement en selfcare pour les entreprises partenaires",
+        "points_faibles": "Peu de selfcare pour les entreprises BTP (surtout lecture seule), pas de paiement ou de signature en selfcare",
+        "initiatives_notables": "API BNETD CI (2024) : accès données projets en selfcare pour les entreprises BTP CI et les bailleurs de fonds"
+      },
+      {
+        "organisation": "PME Promoteur immobilier CI (< 100 logements/an)",
+        "profil": "Petit promoteur résidentiel CI, Abidjan",
+        "niveau_maturite": 1,
+        "points_forts": "Proximité client (peu d'acquéreurs, relation personnalisée)",
+        "points_faibles": "Selfcare inexistant, toutes les demandes traitées par téléphone personnel, documents envoyés par WhatsApp, paiements en cash ou chèque",
+        "initiatives_notables": "Création d'un groupe WhatsApp par résidence (informel, non structuré, non du selfcare réel)"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "Groupe Immobilier Palm CI — Selfcare Mobile Money CI pour les paiements d'échéances VEFA",
+    "contexte": "Groupe Immobilier Palm CI est un promoteur immobilier ivoirien de taille intermédiaire (300-500 logements/an), ciblant la classe moyenne abidjanaise et la diaspora ivoirienne. 38% de ses acquéreurs résident hors de Côte d'Ivoire (France, Canada, USA, autres pays UEMOA). Le processus de paiement des appels de fonds VEFA (en moyenne 5-7 appels par logement) nécessitait historiquement des virements bancaires BNI CI ou des chèques, représentant 3-7 jours de délai de traitement et de nombreux problèmes pour les acquéreurs de la diaspora.",
+    "probleme": "Délai paiement appels de fonds : 3-7 jours (virement bancaire CI). Taux de retard de paiement : 28% des appels de fonds payés hors délai (pénalités contractuelles appliquées). Diaspora : impossibilité de payer en ligne, nécessité de demander à un proche CI de payer en leur nom. Service client surchargé : 60% des appels = suivi paiement et relances. 12% des virements comportaient des erreurs (références manquantes).",
+    "solution_deployee": "Intégration de 3 APIs paiement mobile dans le portail selfcare : Orange Money Business CI (38% des acquéreurs), Wave CI (35%), MTN MoMo CI (15%), carte bancaire VISA/Mastercard (12% restants, dont diaspora). Notification automatique WhatsApp 15 jours avant chaque appel de fonds : montant, date limite, lien paiement direct. Reçu de paiement automatique dans l'espace client et par email. Intégration ERP Sage CI pour la comptabilisation automatique.",
+    "resultats": {
+      "taux_selfcare_paiement": "62% des appels de fonds payés en selfcare via Mobile Money CI (vs. 0% avant)",
+      "delai_paiement": "3-7 jours → 2 heures (paiement Mobile Money instantané Orange CI / Wave CI)",
+      "taux_retard": "28% → 9% d'appels de fonds payés hors délai (-68%)",
+      "erreurs_virement": "12% → 0,8% d'erreurs de référence (paiement lié automatiquement à l'appel de fonds)",
+      "appels_relances": "Appels de relance paiement : 45/mois → 11/mois (-76%)",
+      "satisfaction_diaspora": "NPS acquéreurs diaspora : 38 → 71/100 sur le processus de paiement"
+    },
+    "enseignements": "La clé du succès a été l'envoi WhatsApp automatique 15 jours avant l'échéance avec le lien direct de paiement — les acquéreurs n'ont pas besoin de chercher comment payer. La résistance initiale venait des acquéreurs âgés (> 55 ans) habitués au virement bancaire — maintien d'un canal virement bancaire classique pour ce segment."
+  },
+  "ai_context": {
+    "scoring_rubric": {
+      "score_1_to_20": "Aucun selfcare disponible. Toutes les demandes nécessitent un appel ou un déplacement physique. Documents transmis uniquement par courrier ou en rendez-vous. Paiements exclusivement en chèque ou virement bancaire physique. Aucune FAQ ni chatbot.",
+      "score_21_to_40": "Email et WhatsApp Business pour quelques demandes asynchrones. FAQ basique sur le site web. Paiements mobile money initiés par l'entreprise (pas en selfcare). Aucun espace client sécurisé.",
+      "score_41_to_60": "Espace client authentifié avec accès aux documents, avancement et historique paiements. Paiement Mobile Money CI en selfcare. Formulaire de réclamation en ligne. Prise de RDV réception en selfcare.",
+      "score_61_to_80": "Application mobile Android avec selfcare complet. Chatbot WhatsApp 50 questions automatiques 24/7. Configurateur finitions. Signature électronique autonome avenants. SAV selfcare post-livraison.",
+      "score_81_to_100": "Selfcare hyper-personnalisé avec IA. Anticipation proactive des besoins. Communauté résidence digitale. Syndic digital post-livraison. NPS > 70/100 certifié."
+    },
+    "questions_cles_diagnostic": [
+      "Vos clients peuvent-ils consulter l'avancement de leur chantier et télécharger leurs documents de manière autonome, sans appeler votre service client ?",
+      "Avez-vous intégré le paiement Orange Money / Wave CI dans votre portail pour les échéances VEFA ?",
+      "Disposez-vous d'un chatbot ou d'une FAQ automatique pour répondre aux questions fréquentes de vos clients ?",
+      "Quel est le pourcentage de demandes clients traitées sans intervention humaine (selfcare) ?",
+      "Vos clients de la diaspora peuvent-ils effectuer toutes leurs démarches entièrement en ligne (achat, paiement, réception) ?"
+    ],
+    "pieges_evaluation": [
+      "Ne pas confondre un site web vitrine avec un espace client selfcare réel (authentification + données live + transactions)",
+      "Vérifier que le 'chatbot' mentionné est réellement automatisé et pas juste un agent humain qui répond via WhatsApp Business",
+      "Évaluer la disponibilité du selfcare pour la diaspora : certains selfcare ne fonctionnent qu'avec des numéros CI"
+    ]
+  },
+  "ressources": {
+    "references_reglementaires": [
+      "Loi CI n°2018-570 VEFA — Droits des acquéreurs, transparence et accès aux informations",
+      "BCEAO — Réglementation paiements mobile money UEMOA pour les transactions VEFA",
+      "APDP CI Loi 2013-450 — Sécurisation des espaces clients et authentification forte",
+      "Loi CI 2017-771 — Valeur juridique des documents téléchargés depuis un espace client authentifié"
+    ],
+    "outils_recommandes": [
+      "Glide / Bubble — Création portail selfcare no-code Android-first pour PME promoteurs CI",
+      "Orange Money Business API / Wave API CI — Paiements selfcare appels de fonds VEFA",
+      "Twilio / Wassenger — Chatbot WhatsApp CI en français pour questions fréquentes BTP",
+      "Calendly — Prise de rendez-vous réception en selfcare (intégrable dans portail)",
+      "Docusign Self-service — Signature électronique autonome avenants et documents VEFA"
+    ],
+    "formations_certifications": [
+      "Google UX Design Certificate — Conception d'expériences selfcare adaptées au contexte CI",
+      "Orange Money Business CI — Formation intégration API paiement pour portails clients BTP",
+      "APDP CI — Formation conformité espaces clients et données personnelles en selfcare"
+    ]
+  }
+}

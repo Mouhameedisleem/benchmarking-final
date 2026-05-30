@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "axis": "INFORMATION_SYSTEM",
+    "sub_axis": "Cybersécurité",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Zero Trust Architecture — fin du périmètre de confiance",
+      "description": "Le modèle Zero Trust ('ne jamais faire confiance, toujours vérifier') remplace la sécurité périmétrique traditionnelle. Chaque accès est authentifié et autorisé indépendamment, même en réseau interne.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "72 % des organisations ont initié un projet Zero Trust (Microsoft Security Report 2024)",
+      "source": "Microsoft Digital Defense Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "IA défensive — détection des menaces par apprentissage automatique",
+      "description": "Les SIEM de nouvelle génération utilisent le ML pour détecter les anomalies comportementales (UEBA) et les menaces inconnues, réduisant le MTTR de 90 % vs signatures classiques.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "65 % des SOC utilisent l'IA défensive (Gartner 2024)",
+      "source": "Gartner Security Operations Summit 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Ransomware — menace N°1 pour les organisations",
+      "description": "Les attaques ransomware ont augmenté de 400 % depuis 2020. Le coût moyen d'un incident (rançon + reprise + réputation) dépasse 4,45 M$ en 2023 (IBM Cost of a Data Breach).",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "Cible : 100 % des organisations connectées",
+      "source": "IBM Cost of a Data Breach Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "MFA obligatoire — authentification multi-facteurs généralisée",
+      "description": "Le MFA bloque 99,9 % des attaques par compromission de compte (Microsoft). Il devient obligatoire dans la plupart des cadres réglementaires sectoriels.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "78 % des entreprises ont déployé le MFA (Okta State of Identity 2024)",
+      "source": "Okta State of Identity Report 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "SIEM (Security Information and Event Management)",
+      "category": "Détection et réponse aux incidents",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en Afrique",
+      "leading_vendors": ["Microsoft Sentinel", "Splunk", "IBM QRadar", "Google Chronicle", "Elastic SIEM"]
+    },
+    {
+      "name": "IAM / MFA (Identity & Access Management)",
+      "category": "Gestion des identités",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne",
+      "leading_vendors": ["Microsoft Entra ID (Azure AD)", "Okta", "Ping Identity", "CyberArk"]
+    },
+    {
+      "name": "EDR / XDR (Endpoint & Extended Detection Response)",
+      "category": "Protection des postes",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible en Afrique",
+      "leading_vendors": ["CrowdStrike Falcon", "Microsoft Defender", "SentinelOne", "Palo Alto Cortex"]
+    },
+    {
+      "name": "Vulnerability Management & Pentest",
+      "category": "Évaluation des risques",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["Tenable Nessus", "Qualys", "Rapid7", "Burp Suite"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "MFA déployé, tests de pénétration annuels, politique PSSI formalisée",
+        "differentiator": "Premier acteur sectoriel certifié ISO 27001 en Côte d'Ivoire",
+        "source": "Benchmark sectoriel Hsys 2024 / ARTCI"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank Transnational",
+        "country": "Pan-Afrique / UEMOA",
+        "key_practice": "SOC centralisé couvrant 33 pays, programme de certification PCI-DSS groupe",
+        "differentiator": "Partage de threat intelligence entre filiales pour réponse coordonnée aux incidents",
+        "source": "Ecobank Technology Report 2023"
+      },
+      {
+        "organisation": "MTN Group",
+        "country": "Afrique du Sud",
+        "key_practice": "Centre de cybersécurité dédié (MTN Cyber Fusion Centre) pour 21 pays",
+        "differentiator": "Analyse de 5 milliards d'événements sécurité par jour via SIEM centralisé",
+        "source": "MTN Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Microsoft",
+        "country": "USA",
+        "key_practice": "Zero Trust Architecture — 65 Mds événements/jour via Microsoft Sentinel, 4 Mds$/an investis en sécurité",
+        "differentiator": "Blueprints Zero Trust partagés gratuitement avec 10 000+ entreprises partenaires",
+        "source": "Microsoft Digital Defense Report 2023"
+      },
+      {
+        "organisation": "Barclays",
+        "country": "Royaume-Uni",
+        "key_practice": "SOC 24/7 avec 300 analystes, 50 Mds d'événements/jour via IBM QRadar, MTTR < 15 min",
+        "differentiator": "Threat intelligence partagée en temps réel avec les régulateurs (FCA) via CBEST",
+        "source": "Barclays Technology & Cyber Risk Report 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune politique de sécurité formalisée. Mots de passe simples. Pas de MFA. Pas d'antivirus centralisé. Aucune procédure d'incident.",
+    "level_2_developing": "Antivirus déployé. Politique de mots de passe basique. Firewall en place. Pas de SIEM ni de SOC. Tests de sécurité ponctuels.",
+    "level_3_defined": "PSSI formalisée et approuvée. MFA déployé sur les accès critiques. Tests de pénétration annuels. Procédure de gestion des incidents documentée.",
+    "level_4_managed": "ISO 27001 en cours ou certifié. SIEM opérationnel. SOC interne ou externalisé. Veille sur les menaces active. PCI-DSS si applicable.",
+    "level_5_optimizing": "Zero Trust déployé. SOC 24/7 avec IA défensive. Threat Intelligence opérationnelle. MTTR < 1h. Certification ISO 27001 groupe. Exercices de crise réguliers."
+  },
+
+  "regulations": [
+    {
+      "name": "Loi n°2013-451 relative à la lutte contre la cybercriminalité",
+      "issuing_body": "République de Côte d'Ivoire",
+      "scope": "Toute organisation utilisant des systèmes informatiques en Côte d'Ivoire",
+      "key_requirement": "Protection des systèmes, notification des incidents, coopération avec ARTCI/PLCC",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.artci.ci/index.php/cybersecurite"
+    },
+    {
+      "name": "ISO 27001:2022 — Systèmes de management de la sécurité de l'information",
+      "issuing_body": "ISO / IEC",
+      "scope": "Toute organisation souhaitant certifier sa sécurité de l'information",
+      "key_requirement": "PSSI formalisée, évaluation des risques, 93 contrôles de sécurité, audit annuel",
+      "compliance_deadline": "Sur demande (certification volontaire)",
+      "source_url": "https://www.iso.org/standard/75652.html"
+    },
+    {
+      "name": "PCI-DSS v4.0 — Sécurité des données de paiement",
+      "issuing_body": "PCI Security Standards Council",
+      "scope": "Organisations traitant des données de cartes de paiement",
+      "key_requirement": "12 exigences de sécurité, chiffrement des données cartes, tests d'intrusion trimestriels",
+      "compliance_deadline": "Mars 2025 (v4.0 obligatoire)",
+      "source_url": "https://www.pcisecuritystandards.org"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Ransomware — paralysie totale des opérations",
+      "description": "Une attaque ransomware réussie peut paralyser 100 % des opérations pendant plusieurs semaines. Le coût total (rançon + reprise + perte d'image) dépasse 4,45 M$ en moyenne (IBM 2024).",
+      "severity": "Très élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Sauvegardes hors ligne testées régulièrement, MFA sur tous les accès, EDR déployé, formation anti-phishing."
+    },
+    {
+      "title": "Ingénierie sociale et phishing ciblé",
+      "description": "90 % des cyberattaques réussies débutent par une attaque de phishing. Les employés mal formés sont le maillon faible le plus exploité.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Formations anti-phishing régulières avec simulations, MFA obligatoire, filtrage email avancé."
+    },
+    {
+      "title": "Tiers et supply chain non sécurisés",
+      "description": "Les fournisseurs tiers avec accès au SI de l'organisation représentent un vecteur d'attaque majeur (SolarWinds, MOVEit). 60 % des violations impliquent un tiers (Verizon DBIR 2024).",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Due diligence cybersécurité des fournisseurs, accès tiers limités et monitorés, clauses contractuelles sécurité."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Certification ISO 27001 comme avantage commercial",
+      "description": "La certification ISO 27001 est un prérequis croissant pour répondre aux appels d'offres de grandes entreprises et d'organisations internationales. Elle différencie l'organisation sur des marchés compétitifs.",
+      "impact_level": "Élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Cybersécurité comme proposition de valeur client",
+      "description": "Dans les secteurs santé, finance et éducation, la sécurité des données devient un critère de choix client. Communiquer sur ses certifications et pratiques sécurité attire et fidélise les clients.",
+      "impact_level": "Moyen",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Réduction des primes d'assurance cyber",
+      "description": "Les organisations certifiées ISO 27001 avec SOC opérationnel obtiennent des réductions de primes d'assurance cyber de 20-40 % vs organisations non certifiées.",
+      "impact_level": "Moyen",
+      "time_to_value": "6-12 mois post-certification",
+      "prerequisite_maturity": "Niveau 4"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Google (Alphabet)",
+      "target": "Mandiant",
+      "amount": "5,4 Mds$",
+      "date": "2022",
+      "strategic_rationale": "Renforcer les capacités de threat intelligence et de réponse aux incidents de Google Cloud Security",
+      "source": "Google Press Release 2022"
+    },
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Palo Alto Networks",
+      "target": "Demisto",
+      "amount": "560 M$",
+      "date": "2019",
+      "strategic_rationale": "Intégrer l'orchestration SOAR dans la plateforme de cybersécurité pour automatiser la réponse aux incidents",
+      "source": "Palo Alto Networks Press Release 2019"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Microsoft",
+    "pays": "USA",
+    "technologie": "Zero Trust Architecture — sécurité périmètre nul, 65 Mds événements/jour",
+    "description": "Suite à la cyberattaque SolarWinds (2020), Microsoft a accéléré son déploiement du modèle Zero Trust : aucun utilisateur ni appareil n'est implicitement approuvé, même en réseau interne. Microsoft Sentinel (SIEM cloud natif) analyse 65 milliards d'événements de sécurité par jour via ML. Le programme Secure Future Initiative investit 4 Mds$/an. Microsoft partage ses blueprints Zero Trust gratuitement avec 10 000+ entreprises et forme 250 000 professionnels cybersécurité par an.",
+    "resultats": "65 Mds événements/jour · Détection menaces < 1 min · ISO 27001 / SOC2 / FedRAMP · Zero Trust adopté par 70 % du Fortune 500 · 4 Mds$/an investis",
+    "source": "Microsoft Digital Defense Report 2024 / Gartner Magic Quadrant SIEM 2024",
+    "annee": "2024"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité cybersécurité — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "PSSI formalisée", "MFA déployé", "Tests pénétration annuels", "SOC opérationnel", "ISO 27001 certifié"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "✓", "Partiel", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["Partiel", "Partiel", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La cybersécurité n'est plus une option mais une obligation réglementaire et opérationnelle. Une seule attaque ransomware peut paralyser une organisation des semaines et causer des pertes supérieures à plusieurs années d'investissement en sécurité. En Afrique de l'Ouest, les incidents cybersécurité augmentent de 45 % par an (INTERPOL 2024).",
+    "maturity_max_description": "Zero Trust Architecture déployé. SOC 24/7 avec IA défensive (UEBA, ML). Threat Intelligence opérationnelle. MTTR < 1h. ISO 27001 certifié. PCI-DSS si applicable. Exercices de crise trimestriels. Formation anti-phishing mensuelle. Veille CVE automatisée.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune PSSI. Pas de MFA. Antivirus basique. Aucune procédure d'incident. Vulnérabilité totale.",
+      "score_21_to_40": "Antivirus et firewall. Politique mots de passe basique. Pas de SIEM ni SOC. Tests ponctuels.",
+      "score_41_to_60": "PSSI formalisée. MFA sur accès critiques. Pénétrations tests annuels. Procédure incidents documentée.",
+      "score_61_to_80": "ISO 27001 en cours. SIEM opérationnel. SOC interne ou externe. Veille menaces active.",
+      "score_81_to_100": "Zero Trust. SOC 24/7 avec IA. Threat Intel. MTTR < 1h. ISO 27001 certifié. Exercices réguliers."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur sa maturité cybersécurité. Analyse la formalisation de la politique de sécurité (PSSI), le déploiement du MFA, la réalisation de tests de pénétration, l'opérationnalité d'un SOC et la certification ISO 27001 ou équivalent.",
+    "key_questions_for_llm": [
+      "Une Politique de Sécurité du Système d'Information (PSSI) formalisée et approuvée est-elle en place ?",
+      "Le MFA (authentification multi-facteurs) est-il déployé sur tous les accès critiques ?",
+      "Des tests de pénétration sont-ils réalisés au moins une fois par an par un prestataire externe ?",
+      "Un SOC (Security Operations Centre) interne ou externalisé surveille-t-il les incidents 24/7 ?",
+      "L'organisation est-elle certifiée ISO 27001 ou en cours de certification ?"
+    ]
+  }
+}

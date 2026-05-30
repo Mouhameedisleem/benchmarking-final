@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "axis": "PROCESS",
+    "sub_axis": "Performance opérationnelle",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Tableaux de bord temps réel et BI self-service",
+      "description": "Les organisations leaders remplacent les reportings Excel hebdomadaires par des dashboards temps réel accessibles à tous les niveaux managériaux via des outils BI self-service.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "68 % des grandes entreprises (Gartner BI Magic Quadrant 2024)",
+      "source": "Gartner BI Magic Quadrant 2024",
+      "year": "2024"
+    },
+    {
+      "title": "KPIs digitaux liés à la rémunération variable des dirigeants",
+      "description": "La performance digitale (NPS, taux de digitalisation, revenus digitaux) est intégrée dans les critères de rémunération variable des C-suite dans 40 % des grandes organisations.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "40 % des grandes entreprises (Bain 2024)",
+      "source": "Bain & Company Executive Compensation Benchmark 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Continuous Performance Management — feedback en continu",
+      "description": "L'évaluation annuelle est remplacée par des cycles de feedback continus (hebdomadaires ou mensuels), alignés avec les OKRs agiles pour une correction de cap plus rapide.",
+      "impact_level": "Élevé",
+      "horizon": "6-18 mois",
+      "adoption_rate": "55 % des grandes entreprises (Gartner 2024)",
+      "source": "Gartner Performance Management Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "IA prédictive pour anticiper les dérives de performance",
+      "description": "Les modèles ML analysent les KPIs en temps réel pour prédire les dérives (risque qualité, dépassement de coût, churn) avant qu'elles ne se matérialisent, permettant une action préventive.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "30 % des grandes organisations (IDC 2024)",
+      "source": "IDC Predictive Operations Report 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Business Intelligence & Reporting",
+      "category": "Pilotage performance",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne à élevée",
+      "leading_vendors": ["Power BI (Microsoft)", "Tableau (Salesforce)", "Qlik", "Looker (Google)", "Metabase"]
+    },
+    {
+      "name": "Plateformes de gestion des KPIs et OKRs",
+      "category": "Alignement stratégique",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible à moyenne",
+      "leading_vendors": ["Workboard", "Betterworks", "Perdoo", "Weekdone"]
+    },
+    {
+      "name": "Monitoring & Alerting temps réel",
+      "category": "Surveillance opérationnelle",
+      "maturity_stage": "Mature (IT) / Croissance (métier)",
+      "adoption_in_sector": "Faible (métier)",
+      "leading_vendors": ["Datadog", "Grafana", "Dynatrace", "New Relic"]
+    },
+    {
+      "name": "Enterprise Performance Management (EPM)",
+      "category": "Planification et consolidation",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en Afrique",
+      "leading_vendors": ["Oracle Hyperion", "SAP BPC", "Anaplan", "Workday Adaptive"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Tableau de bord mensuel des KPIs clés partagé avec le COMEX, SLA documenté et mesuré",
+        "differentiator": "Premier acteur sectoriel à déployer Power BI ou équivalent en self-service pour les équipes métier",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Standard Bank",
+        "country": "Afrique du Sud",
+        "key_practice": "Tableau de bord exécutif unifié sur 20+ pays avec 300 KPIs temps réel",
+        "differentiator": "Décision managériale data-driven à tous les niveaux, du teller au CEO",
+        "source": "Standard Bank Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Amazon",
+        "country": "USA",
+        "key_practice": "500+ KPIs opérationnels en temps réel, alertes automatiques, décision data-driven",
+        "differentiator": "Working Backwards : chaque initiative définit ses KPIs avant tout développement",
+        "source": "Amazon Operations Report 2023"
+      },
+      {
+        "organisation": "JPMorgan Chase",
+        "country": "USA",
+        "key_practice": "Tableau de bord exécutif avec 400 KPIs bancaires centralisés, revue hebdomadaire obligatoire",
+        "differentiator": "Détection d'anomalies 10× plus rapide via alertes IA sur les métriques critiques",
+        "source": "JPMorgan Annual Report 2023 / Gartner Financial Services Summit"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune mesure formelle de performance opérationnelle. Reporting manuel et ponctuel. Décisions basées sur l'intuition.",
+    "level_2_developing": "Quelques KPIs définis mais suivis de façon irrégulière via Excel. Reporting mensuel sans analyse des causes racines.",
+    "level_3_defined": "KPIs digitaux définis pour les processus clés. SLA documenté. Tableau de bord mensuel partagé avec le management. Reporting régulier.",
+    "level_4_managed": "Dashboard temps réel pour les dirigeants. SLA mesuré et publié. Alertes automatiques sur dérive. KPIs liés aux OKRs stratégiques.",
+    "level_5_optimizing": "Performance monitoring en temps réel sur tous les processus critiques. IA prédictive pour anticiper les dérives. KPIs liés à la rémunération variable. Amélioration continue mesurée."
+  },
+
+  "regulations": [
+    {
+      "name": "SYSCOHADA Révisé — Reporting financier et de performance",
+      "issuing_body": "OHADA (Organisation pour l'Harmonisation en Afrique du Droit des Affaires)",
+      "scope": "Entreprises des 17 pays membres OHADA dont la Côte d'Ivoire",
+      "key_requirement": "Tenue de comptabilité selon le SYSCOHADA, états financiers annuels certifiés, reporting de performance",
+      "compliance_deadline": "En vigueur (révisé 2017)",
+      "source_url": "https://www.ohada.com"
+    },
+    {
+      "name": "Règles de gouvernance d'entreprise — Code CIMA",
+      "issuing_body": "CIMA (Conférence Interafricaine des Marchés d'Assurances)",
+      "scope": "Compagnies d'assurance en zone CIMA (14 pays dont CI)",
+      "key_requirement": "Reporting de performance réglementaire trimestriel, ratios de solvabilité mesurés en continu",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.cima-afrique.org"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Vanity metrics — KPIs qui rassurent sans informer",
+      "description": "Mesurer des métriques qui progressent toujours positivement (nombre de likes, visiteurs web bruts) masque la réalité opérationnelle et retarde la prise de décision corrective.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Adopter des métriques actionnables (taux de conversion, coût par acquisition, NPS) liées à des décisions concrètes."
+    },
+    {
+      "title": "Silos de données empêchant une vue unifiée de la performance",
+      "description": "Quand chaque département gère ses propres KPIs dans des outils séparés, il est impossible d'obtenir une vue consolidée de la performance organisationnelle.",
+      "severity": "Élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Déployer un data warehouse unifié alimentant un tableau de bord unique partagé entre tous les départements."
+    },
+    {
+      "title": "Reporting trop fréquent créant une paralysie analytique",
+      "description": "Des reportings quotidiens sur des métriques à évolution lente génèrent du bruit et distraient du travail de fond.",
+      "severity": "Moyen",
+      "likelihood": "Moyenne",
+      "mitigation": "Définir la fréquence optimale par type de KPI : temps réel pour les alertes critiques, hebdomadaire pour le pilotage opérationnel, mensuel pour le stratégique."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Accélération de la prise de décision via données temps réel",
+      "description": "Les organisations avec un tableau de bord temps réel prennent des décisions 5× plus rapidement que celles qui dépendent de rapports mensuels (McKinsey).",
+      "impact_level": "Très élevé",
+      "time_to_value": "3-12 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Identification et élimination des gaspillages opérationnels",
+      "description": "La mesure systématique du coût unitaire par processus révèle les inefficacités cachées. En moyenne, 15-25 % des coûts opérationnels sont éliminables sans impact sur la qualité.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Benchmarking sectoriel pour guider les investissements",
+      "description": "La comparaison des KPIs opérationnels avec les leaders sectoriels permet d'identifier les priorités d'investissement les plus rentables.",
+      "impact_level": "Moyen",
+      "time_to_value": "Immédiat",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Salesforce",
+      "target": "Tableau Software",
+      "amount": "15,7 Mds$",
+      "date": "2019",
+      "strategic_rationale": "Intégrer la visualisation de données et le BI self-service dans la plateforme CRM Salesforce",
+      "source": "Salesforce Press Release 2019"
+    },
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Microsoft",
+      "target": "Nuance Communications",
+      "amount": "19,7 Mds$",
+      "date": "2022",
+      "strategic_rationale": "Renforcer les capacités d'IA dans les outils de monitoring et de performance opérationnelle",
+      "source": "Microsoft Press Release 2022"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Amazon",
+    "pays": "USA",
+    "technologie": "Operations Excellence — 500 KPIs temps réel, décision 100 % data-driven",
+    "description": "Amazon mesure 500+ métriques opérationnelles en temps réel dans ses entrepôts et data centers. Chaque responsable dispose d'un tableau de bord montrant coût par expédition, taux d'erreur, NPS et vitesse de traitement. Les alertes automatiques déclenchent des actions correctives sans intervention managériale. Le principe 'Working Backwards' force chaque initiative à définir ses KPIs avant tout développement. Aucune réunion ne peut démarrer sans un mémo de 6 pages présentant les données.",
+    "resultats": "Coût logistique -30 % en 5 ans · SLA 99,8 % · Traitement commande 15 min · Anomalie détectée < 5 min · 0 réunion sans données",
+    "source": "Amazon Operations Report 2023 / Gartner Supply Chain Top 25 Awards",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité performance opérationnelle — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "KPIs digitaux définis et suivis", "SLA mesuré et publié", "Tableau de bord temps réel", "Alertes automatiques sur dérive", "KPIs liés aux OKRs stratégiques"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "Partiel", "Partiel", "✗", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["Partiel", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La performance opérationnelle digitale est le miroir de la maturité de transformation. Sans KPIs clairs, mesurés en temps réel et liés aux décisions, la transformation reste une intention sans résultats. Les organisations data-driven surperforment de 23 % leurs concurrents (McKinsey 2024).",
+    "maturity_max_description": "KPIs définis pour chaque processus critique, mesurés en temps réel via dashboards BI self-service. SLA publié et respecté. Alertes automatiques sur dérive. IA prédictive intégrée. KPIs liés aux OKRs stratégiques et à la rémunération variable des dirigeants.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune mesure formelle. Reporting manuel ponctuel. Décisions basées sur l'intuition.",
+      "score_21_to_40": "Quelques KPIs définis mais suivi irrégulier via Excel. Pas de SLA formalisé.",
+      "score_41_to_60": "KPIs documentés. SLA défini. Tableau de bord mensuel partagé. Reporting régulier.",
+      "score_61_to_80": "Dashboard temps réel. SLA mesuré et publié. Alertes automatiques. KPIs liés aux OKRs.",
+      "score_81_to_100": "Monitoring temps réel complet. IA prédictive. KPIs liés à la rémunération. Amélioration continue."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur sa maturité de pilotage de la performance opérationnelle. Analyse la complétude et la pertinence des KPIs digitaux, la disponibilité du reporting en temps réel, l'existence d'alertes automatiques sur dérive de performance, et le lien entre les métriques et les décisions stratégiques.",
+    "key_questions_for_llm": [
+      "L'organisation dispose-t-elle de KPIs digitaux formellement définis pour ses processus clés ?",
+      "Un tableau de bord temps réel est-il accessible au management pour le pilotage opérationnel ?",
+      "Le SLA des services clés est-il documenté, mesuré et publié aux parties prenantes ?",
+      "Des alertes automatiques déclenchent-elles des actions correctives en cas de dérive ?",
+      "Les KPIs opérationnels sont-ils liés aux OKRs stratégiques et aux évaluations de performance des dirigeants ?"
+    ]
+  }
+}

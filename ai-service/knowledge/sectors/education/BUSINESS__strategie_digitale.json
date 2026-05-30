@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "BUSINESS",
+    "sub_axis": "strategie_digitale",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Stratégies EdTech nationales et plans de digitalisation scolaire UEMOA",
+      "description": "Les pays UEMOA accélèrent leurs stratégies nationales de digitalisation éducative : tableaux blancs interactifs dans les écoles publiques, LMS (Learning Management System) nationaux, distribution de tablettes aux élèves. En Côte d'Ivoire, le MENA (Ministère de l'Éducation Nationale et de l'Alphabétisation) a lancé le Programme National de Digitalisation de l'Éducation (PNDE CI 2022-2025) avec 3 axes : connectivité des établissements, équipements numériques, et formation des enseignants. Budget alloué : 45 Mds FCFA sur 4 ans.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "32%",
+      "source": "MENA CI / PNDE CI 2025",
+      "year": 2025
+    },
+    {
+      "title": "IA générative et personnalisation de l'apprentissage à grande échelle",
+      "description": "Les LLM (GPT-4, Claude, Gemini) permettent de créer des tuteurs IA personnalisés adaptant le contenu, le rythme et les exercices au niveau de chaque apprenant. En Afrique subsaharienne, des startups EdTech (Khanmigo Afrika, LearnX CI, Preppy Ghana) déploient des tuteurs IA en langues locales (français, wolof, mooré). En Côte d'Ivoire, l'UVCI (Université Virtuelle de Côte d'Ivoire) teste des tuteurs IA pour les cours de mathématiques de niveau licence avec 2 500 étudiants pilotes.",
+      "impact_level": "high",
+      "horizon": "short_term",
+      "adoption_rate": "12%",
+      "source": "UVCI / UNESCO Digital Education Africa 2025",
+      "year": 2025
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "LMS (Learning Management System) — Moodle, Canvas, Blackboard",
+      "category": "EdTech / Plateforme d'apprentissage",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "UVCI (Moodle, 45K utilisateurs), UFHB (Moodle partiel), INPHB (Canvas pilote), Pigier CI (Blackboard) — 35% établissements CI avec LMS opérationnel",
+      "leading_vendors": ["Moodle (open source)", "Canvas (Instructure)", "Blackboard (Anthology)", "Google Classroom", "Microsoft Teams Education"]
+    },
+    {
+      "name": "Tuteur IA / Adaptive Learning (IA personnalisation apprentissage)",
+      "category": "IA / EdTech",
+      "maturity_stage": "emerging",
+      "adoption_in_sector": "UVCI (pilote 2 500 étudiants), Khan Academy Khanmigo CI (en test), 5% établissements CI",
+      "leading_vendors": ["Khan Academy Khanmigo", "Duolingo (langues)", "Squirrel AI", "Carnegie Learning", "Synthesis (maths)"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Stratégie digitale native : 100% cours en ligne (Moodle + visioconférence Zoom), 45K apprenants actifs, partenariats AUF (Agence Universitaire de la Francophonie) et CAMES, accès via smartphone (app mobile UVCI + mode offline), formation continue en ligne pour fonctionnaires CI",
+        "differentiator": "Seul établissement CI à opérer un modèle 100% digital depuis sa création (2012) — couverture nationale sans infrastructure physique, 45K étudiants dans 20 pays francophones, coût par étudiant 85% inférieur aux universités traditionnelles CI",
+        "source": "UVCI Rapport Annuel 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "African Management Institute (AMI)",
+        "country": "Kenya / Côte d'Ivoire / Ghana / Sénégal",
+        "key_practice": "Plateforme blended learning (présentiel + digital) pour PME/managers africains, app AMI mobile (cours offline + communauté pairs), LMS propriétaire avec IA tracking engagement, certifications reconnues UEMOA, partenariats USAID/AFD pour programmes CI",
+        "differentiator": "Leader régional formation management Afrique subsaharienne — modèle blended learning avec 78% de taux de complétion (benchmark secteur EdTech : 25%), communauté 180 000 alumni actifs dans 35 pays africains",
+        "source": "AMI Impact Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Coursera for Campus / Coursera for Government",
+        "country": "États-Unis (présence globale)",
+        "key_practice": "Plateforme MOOC avec 7 000+ cours (Google, Yale, IBM certifiés), partenariat UFHB CI (accès étudiant subventionné), programme Coursera for Government CI (formation fonctionnaires), IA de recommandation de parcours, diplômes professionnels reconnus employeurs CI (Google, IBM)",
+        "differentiator": "Accès à la plus grande bibliothèque de cours certifiés au monde (7 000+) avec reconnaissance employeurs globaux — en CI, 12 000 étudiants UFHB ont accès via partenariat institutionnel à 3 500 cours Coursera à 0 FCFA",
+        "source": "Coursera CI Partnership Report 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Aucune stratégie digitale formalisée, cours 100% présentiel papier, aucun LMS, pas de Wi-Fi dans les salles de classe, équipes pédagogiques sans formation numérique.",
+    "level_2_developing": "Wi-Fi disponible en partie de l'établissement, quelques enseignants utilisent PowerPoint/YouTube, tentatives LMS informelles (WhatsApp, Google Drive partagé), aucune politique digitale institutionnelle.",
+    "level_3_defined": "LMS déployé (Moodle/Google Classroom) avec adoption partielle (>30% cours en ligne), stratégie digitale 3 ans documentée, formation enseignants TICE, direction digitale nommée.",
+    "level_4_managed": "LMS avec >60% cours hybrides, tuteur IA en pilote, KPIs d'apprentissage suivis (taux complétion, engagement, résultats), partenariats EdTech (Coursera, Microsoft Education), budget digital dédié >3% budget établissement.",
+    "level_5_optimizing": "Apprentissage hybride généralisé, tuteur IA en production (personnalisation temps réel), analytics apprenants avancées (prédiction décrochage, recommandation parcours), certifications digitales reconnues employeurs, modèle exporté à d'autres établissements UEMOA."
+  },
+  "regulations": [
+    {
+      "name": "MENA CI — Programme National Digitalisation Éducation (PNDE CI 2022-2025)",
+      "authority": "MENA (Ministère de l'Éducation Nationale et de l'Alphabétisation de Côte d'Ivoire)",
+      "description": "Le PNDE CI 2022-2025 définit le cadre stratégique de digitalisation du système éducatif ivoirien : objectif 100% des lycées connectés (4G/fibre) d'ici 2025, distribution de 200 000 tablettes aux élèves du secondaire, déploiement d'un LMS national (plateforme Mon École Numérique CI), formation de 12 000 enseignants aux TICE (Technologies de l'Information et de la Communication pour l'Enseignement). Budget : 45 Mds FCFA (financement BEI + BM + État CI).",
+      "compliance_deadline": "2025 (objectifs PNDE)",
+      "impact_on_sector": "Les établissements privés doivent s'aligner sur les standards MENA (LMS interopérable, formats de cours compatibles) pour être reconnus — les certifications digitales doivent être validées par le MENA pour la reconnaissance employeurs CI"
+    },
+    {
+      "name": "CAMES — Reconnaissance des diplômes et certifications en ligne UEMOA",
+      "authority": "CAMES (Conseil Africain et Malgache pour l'Enseignement Supérieur)",
+      "description": "Le CAMES définit les standards de reconnaissance des diplômes au sein des 19 pays membres (incluant CI, Sénégal, Burkina Faso, Mali). Depuis 2022, le CAMES a publié un cadre de reconnaissance des diplômes en ligne et hybrides, sous conditions : volume horaire minimum présentiel (30%), évaluation proctorée pour les examens finaux, accréditation de la plateforme LMS par le CAMES. Les diplômes 100% en ligne non accrédités CAMES ne sont pas transférables entre pays UEMOA.",
+      "compliance_deadline": "En vigueur (cadre CAMES 2022)",
+      "impact_on_sector": "Conditionne la stratégie digitale des universités UEMOA — les formations 100% en ligne doivent obtenir l'accréditation CAMES pour être reconnues dans tout l'espace UEMOA (marché de 130M personnes)"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Fracture numérique et exclusion des élèves sans accès internet ni équipement",
+      "description": "En Côte d'Ivoire, 67% des ménages n'ont pas accès à internet fixe, et seulement 38% des 15-24 ans utilisent internet quotidiennement (ARTCI 2024). Dans les zones rurales, ce taux tombe à 12%. Une stratégie digitale éducative trop rapide risque d'exclure les populations les plus vulnérables : élèves ruraux (35% de la population scolaire CI), filles (gap numérique genre 18 points en CI), et ménages pauvres (téléphone feature phone sans smartphone).",
+      "severity": "critical",
+      "likelihood": "high",
+      "mitigation": "Stratégie 'digital-first mais offline-ready' : contenus téléchargeables (UVCI app offline), cours via SMS/USSD pour zones sans smartphone, antennes de diffusion DVB-T2 pour cours TV (MENA CI + RTI partenariat), laboratoires numériques partagés en milieu rural (1 labo/commune subventionné PNDE) — UVCI CI a 68% de ses étudiants ruraux accédant aux cours via smartphone en mode offline"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Formation professionnelle continue en ligne pour les 550 000 fonctionnaires CI",
+      "description": "La Côte d'Ivoire compte 550 000 fonctionnaires (DGFP 2024) nécessitant une formation continue obligatoire de 40h/an (Statut Général de la Fonction Publique CI). Aujourd'hui, seulement 15% de cette formation est réalisée, faute de capacités présentielle suffisantes. Un LMS national dédié aux fonctionnaires (e-administration, TICE, langues, management public) permettrait d'atteindre les 40h/an à coût marginal — marché estimé 12 Mds FCFA/an pour les prestataires EdTech CI.",
+      "impact_level": "high",
+      "time_to_value": "2-3 ans",
+      "prerequisite_maturity": "Niveau 3 — LMS opérationnel + identifiants fonctionnaires intégrés (SI État CI)"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "UVCI — Financement BAD (Banque Africaine de Développement) Extension Plateforme",
+      "montant": "8 Mds FCFA (environ 12M EUR)",
+      "investisseurs": ["BAD (Banque Africaine de Développement)", "État de Côte d'Ivoire", "AUF (Agence Universitaire de la Francophonie)"],
+      "annee": 2024,
+      "description": "La BAD a accordé à l'UVCI un financement de 8 Mds FCFA pour : extension de la plateforme Moodle (scalabilité 100K utilisateurs simultanés), développement de 200 nouveaux modules de formation professionnelle en ligne (santé, agriculture, finance, éducation), partenariat avec 12 universités CAMES pour mutualisation de cours, et déploiement de 50 centres d'accès numérique pour les étudiants sans internet (bibliothèques numériques régionales CI)."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Plateforme Moodle + App mobile offline — Démocratisation de l'enseignement supérieur en ligne",
+    "description": "Créée en 2012 par décret présidentiel CI, l'UVCI opère comme université 100% en ligne avec une stratégie digitale native. La plateforme Moodle héberge 450 modules de cours (licence, master, formation continue), accessibles via web et app mobile (iOS/Android) avec mode offline complet (synchronisation Wi-Fi, cours disponibles sans connexion pendant 30 jours). Partenariats avec AUF pour la mutualisation de cours francophones, et avec 8 universités CAMES pour la reconnaissance des diplômes UVCI dans l'espace UEMOA. Formation de 85 tuteurs en ligne et 120 concepteurs pédagogiques.",
+    "resultats": "45 000 apprenants actifs (2024) dans 20 pays francophones. Taux de complétion des modules : 67% (benchmark secteur MOOC : 10-15%). Coût par étudiant diplômé : 185 000 FCFA/an (vs. 650 000 FCFA université traditionnelle CI). NPS apprenants : 72/100. Emploi à 6 mois post-diplôme : 71% (vs. 54% universités CI traditionnelles). Taux d'apprenants femmes : 52% (vs. 38% universités physiques CI — démocratisation genre significative).",
+    "source": "UVCI Rapport d'Activité 2024 / BAD Évaluation Programme",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif maturité stratégie digitale — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "LMS déployé", "Cours en ligne (%)", "IA / Adaptive learning", "Accréditation CAMES digital"],
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "valeurs": ["Moodle 45K utilisateurs", "100% (modèle natif digital)", "Pilote tuteur IA 2 500 étudiants", "Oui (pionnière CAMES digital)"]
+      },
+      {
+        "organisation": "UFHB Abidjan",
+        "valeurs": ["Moodle partiel (30% cours)", "30% cours hybrides", "Non", "Diplômes physiques CAMES"]
+      },
+      {
+        "organisation": "Pigier CI",
+        "valeurs": ["Blackboard (établissement privé)", "50% cours hybrides", "Non", "Non (privé non CAMES)"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue la maturité de la stratégie digitale dans le secteur éducation CI : présence d'un LMS opérationnel, taux de cours hybrides ou en ligne, tuteur IA, conformité CAMES pour les diplômes digitaux, connectivité des campus, et stratégie d'inclusion numérique (offline, zones rurales).",
+    "maturity_max_description": "Établissement éducatif CI avec stratégie digitale complète : LMS en production (>60% cours hybrides), tuteur IA personnalisation temps réel, analytics apprenants (prédiction décrochage), accréditation CAMES, partenariats Coursera/Microsoft Education, budget digital >3% — accessible offline pour zones rurales CI.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucun LMS, cours 100% présentiel papier, pas de Wi-Fi salle de classe, aucune formation enseignants TICE, zéro stratégie digitale.",
+      "score_21_to_40": "Tentatives informelles (WhatsApp, Google Drive), Wi-Fi partiel, quelques cours PowerPoint/YouTube, pas de LMS institutionnel.",
+      "score_41_to_60": "LMS déployé (Moodle/Google Classroom) avec >30% cours en ligne, formation enseignants TICE, stratégie digitale 3 ans documentée, direction digitale nommée.",
+      "score_61_to_80": "LMS avec >60% cours hybrides, tuteur IA en pilote, analytics learning, partenariats EdTech, budget digital dédié >3%, accès offline partiel.",
+      "score_81_to_100": "Apprentissage hybride généralisé, tuteur IA en production, analytics prédictives (décrochage), certifications reconnues CAMES/employeurs, modèle offline-ready pour zones rurales CI."
+    },
+    "prompt_injection_context": "Secteur éducation CI : MENA CI pilote le PNDE CI 2022-2025 (45 Mds FCFA). CAMES conditionne la reconnaissance des diplômes digitaux dans l'espace UEMOA. La fracture numérique CI (67% ménages sans internet fixe) impose une stratégie offline-ready. UVCI est l'acteur référence digital natif CI. L'accréditation CAMES pour le digital est un verrou réglementaire clé.",
+    "key_questions_for_llm": [
+      "Disposez-vous d'un LMS institutionnel (Moodle, Canvas, autre) et quelle proportion de vos cours y est disponible (hybride ou 100% en ligne) ?",
+      "Votre stratégie digitale prend-elle en compte la fracture numérique CI (accès offline, zones rurales, étudiants sans smartphone) ?",
+      "Vos diplômes et certifications en ligne sont-ils accrédités par le CAMES pour être reconnus dans l'espace UEMOA ?",
+      "Utilisez-vous des outils d'IA pour personnaliser l'apprentissage ou prédire le décrochage étudiant ?",
+      "Avez-vous un budget digital dédié et une direction (CDO, Directeur Pédagogique Digital) responsable de la transformation numérique de votre établissement ?"
+    ]
+  }
+}

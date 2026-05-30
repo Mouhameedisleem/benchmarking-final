@@ -1,0 +1,58 @@
+{
+  "meta": { "axis": "INFORMATION_SYSTEM", "sub_axis": "Données & Analytics", "sector": "assurance", "language": "fr", "version": "1.0", "last_updated": "2026-05" },
+  "trends": [
+    { "title": "Actuariat prédictif — ML pour la tarification individualisée des risques", "description": "Les modèles ML (gradient boosting, réseaux de neurones) permettent aux assureurs d'affiner la tarification bien au-delà des tables actuarielles traditionnelles. En auto UEMOA, les variables comportementales (données téléphoniques, mobile money) commencent à enrichir les modèles de risque.", "impact_level": "Très élevé", "horizon": "24-36 mois", "adoption_rate": "15 % des grands assureurs africains utilisent des modèles ML en tarification (McKinsey 2024)", "source": "McKinsey Africa Insurance Analytics 2024", "year": "2024" },
+    { "title": "Customer 360 assurance — vision unifiée de l'assuré pour la fidélisation et l'upsell", "description": "Les assureurs qui consolident toutes les interactions client (polices, sinistres, paiements, réclamations) en une vue 360° peuvent identifier les opportunités d'upsell (proposer une assurance vie à un client auto satisfait) et prédire le churn avec 6 mois d'avance.", "impact_level": "Élevé", "horizon": "12-24 mois", "adoption_rate": "20 % des assureurs africains ont un CRM avec vue 360° partielle (FANAF 2024)", "source": "FANAF Analytics Report 2024", "year": "2024" },
+    { "title": "Données alternatives pour l'inclusion assurantielle — mobile money et télécoms", "description": "Pour les populations sans historique d'assurance, les données alternatives (transactions mobile money, durée des appels, localisation GPS) permettent de construire des profils de risque et d'offrir des produits personnalisés. Turaco et Bima utilisent déjà ces données en partenariat avec MTN et Orange.", "impact_level": "Élevé", "horizon": "24-36 mois", "adoption_rate": "5 insurtechs africaines utilisent les données alternatives pour la tarification (IFC 2024)", "source": "IFC Alternative Data Africa Insurance 2024", "year": "2024" }
+  ],
+  "key_technologies": [
+    { "name": "Data Lakehouse assurance (polices + sinistres + clients)", "category": "Centralisation des données", "maturity_stage": "Mature", "adoption_in_sector": "Très faible en UEMOA", "leading_vendors": ["Databricks", "Snowflake", "AWS Redshift", "Azure Synapse", "Google BigQuery"] },
+    { "name": "Modèles ML actuariels et anti-fraude", "category": "Analytics avancé", "maturity_stage": "Mature", "adoption_in_sector": "Faible en Afrique", "leading_vendors": ["SAS Actuarial Intelligence", "Guidewire Predictive Analytics", "FRISS ML", "DataRobot", "H2O.ai"] },
+    { "name": "BI et reporting assurance (tableaux de bord CIMA)", "category": "Reporting réglementaire et management", "maturity_stage": "Mature", "adoption_in_sector": "Moyenne", "leading_vendors": ["Power BI", "Tableau Insurance", "Qlik Sense", "MicroStrategy", "SAP Analytics Cloud"] }
+  ],
+  "market_leaders": {
+    "national": [{ "organisation": "NSIA Groupe", "country": "Côte d'Ivoire / Pan-UEMOA", "key_practice": "Data warehouse centralisé pour toutes les filiales. Tableaux de bord actuariels automatisés. Modèle de scoring anti-fraude basé sur 50 variables. Customer 360 partiel sur le portefeuille vie.", "differentiator": "NSIA a automatisé la production de 15 états réglementaires CIMA — économie de 500 heures/trimestre pour les équipes finance", "source": "NSIA Groupe Rapport IT 2023" }],
+    "regional": [{ "organisation": "Jubilee Insurance Kenya", "country": "Kenya", "key_practice": "Modèles ML de prédiction du churn (précision 78 %). Tarification dynamique auto basée sur 25 variables. Data Lake avec données de 10 ans de sinistres. Analytics teams de 12 data scientists.", "differentiator": "Jubilee Insurance Kenya a réduit son taux de churn de 22 % à 14 % grâce à des campagnes de rétention prédictives basées sur ML", "source": "Jubilee Insurance Annual Report 2023" }],
+    "international": [{ "organisation": "Ping An Insurance", "country": "Chine", "key_practice": "1 000+ data scientists. Modèles ML pour la tarification de 200 M+ polices. IA pour le diagnostic médical (Ping An Good Doctor). Analyse d'images sinistres auto par IA (délai 3 secondes).", "differentiator": "Ping An traite 3 millions de sinistres/jour via ses modèles ML — 98 % sans intervention humaine pour les montants < 10 000 CNY", "source": "Ping An Annual Report 2023" }]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Données dans des silos (PAS, Excel, papier). Aucune analyse avancée. Reporting CIMA 100 % manuel. Aucune équipe data.",
+    "level_2_developing": "Quelques tableaux de bord Excel. Reporting CIMA semi-automatisé. Pas de data warehouse. Analyses ad hoc.",
+    "level_3_defined": "Data warehouse opérationnel. BI déployé. Reporting CIMA automatisé. Customer 360 partiel. Début de scoring anti-fraude.",
+    "level_4_managed": "Data Lake assurance. ML anti-fraude et churn. Actuariat digital avec modèles prédictifs. Équipe data science de 3-5 personnes.",
+    "level_5_optimizing": "Data Lakehouse temps réel. ML tarification. Customer 360 complet. IA sinistres. Données alternatives intégrées."
+  },
+  "regulations": [{ "name": "Loi n°2013-450 — Utilisation des données pour la tarification (Côte d'Ivoire)", "issuing_body": "ARTCI / APDP", "scope": "Assureurs utilisant des données personnelles pour la tarification ou la sélection des risques", "key_requirement": "L'utilisation de données personnelles pour la tarification différenciée doit être déclarée à l'APDP. Le consentement explicite est requis pour l'utilisation de données alternatives (mobile money, télécoms).", "compliance_deadline": "En vigueur", "source_url": "https://www.artci.ci" }],
+  "risks": [{ "title": "Discrimination algorithmique dans la tarification — risque réglementaire et réputationnel", "description": "Des modèles ML mal conçus peuvent introduire des biais discriminatoires (proxy de la race, du quartier de résidence, de l'ethnie) dans la tarification. En Côte d'Ivoire, cela pourrait violer la Loi 2013-450 et générer des controverses médiatiques.", "severity": "Élevé", "likelihood": "Moyenne", "mitigation": "Audit de biais des modèles ML avant déploiement. Explainability des décisions de tarification (SHAP, LIME). Validation actuarielle indépendante. Conformité APDP pour les variables utilisées." }],
+  "opportunities": [{ "title": "Données mobile money pour couvrir les non-assurés — 10 millions de clients potentiels en CI", "description": "Les 10 millions d'utilisateurs de mobile money en Côte d'Ivoire ont des données transactionnelles qui permettent de construire un profil de risque. Un assureur qui accède à ces données (via partenariat Orange/MTN) peut proposer des produits personnalisés à une population jamais couverte.", "impact_level": "Très élevé", "time_to_value": "24-48 mois", "prerequisite_maturity": "Niveau 3" }],
+  "ma_and_fundraising": [],
+  "zoom_case_study": { "entreprise": "Turaco + MTN — Données mobile money pour tarifier 500 000 micro-assurés", "pays": "Ouganda / Ghana / Côte d'Ivoire (expansion 2024)", "technologie": "API mobile money MTN + modèles ML de scoring comportemental", "description": "Turaco est une insurtech africaine spécialisée dans la micro-assurance basée sur les données. En partenariat avec MTN, Turaco accède (avec consentement) aux données de transactions mobile money pour construire un profil de risque de chaque client. Les variables utilisées : fréquence et montant des transactions, régularité du revenu, historique d'épargne. Ces données permettent à Turaco de proposer des primes personnalisées (500 FCFA à 5 000 FCFA/mois selon le profil) pour des produits santé et vie. Résultat : 500 000 clients couverts dans 3 pays, sinistralité 35 % inférieure aux projections grâce à la meilleure sélection des risques, coût d'acquisition client 70 % inférieur au canal agent (les données font le travail de sélection).", "resultats": "500 000 micro-assurés · Sinistralité -35 % vs projections · Coût acquisition -70 % · Données mobile money comme score de risque · Expansion CI 2024", "source": "Turaco Annual Report 2023 / IFC Africa Insurtech Investment 2024", "annee": "2023" },
+  "comparatif_organisations": {
+    "titre": "Maturité données & analytics — benchmark assureurs CIMA/UEMOA",
+    "colonnes": ["Organisation", "Data warehouse/lake assurance", "ML anti-fraude actif", "Customer 360 déployé", "Reporting CIMA automatisé", "Équipe data science"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "Partiel", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Les données sont l'actif le plus précieux des assureurs — et paradoxalement l'un des moins exploités en UEMOA. Les données de polices et de sinistres accumulées sur 20-30 ans dorment dans des PAS legacy sans être analysées. Leur exploitation (anti-fraude, actuariat prédictif, customer 360) représente le levier de rentabilité le plus rapide à activer, avant même la digitalisation des canaux de distribution.",
+    "maturity_max_description": "Data Lakehouse temps réel consolidant polices, sinistres, paiements et interactions clients. Modèles ML de tarification, anti-fraude et prédiction du churn en production. Customer 360 complet avec recommandations d'upsell automatisées. Reporting CIMA 100 % automatisé. Équipe data science de 5+ personnes. Données alternatives (mobile money) intégrées avec consentement.",
+    "scoring_rubric": {
+      "score_1_to_20": "Données dans des silos. Reporting CIMA manuel. Aucune analyse avancée.",
+      "score_21_to_40": "Tableaux de bord Excel. Reporting semi-auto. Pas de data warehouse.",
+      "score_41_to_60": "Data warehouse. BI déployé. Reporting auto. Customer 360 partiel. Anti-fraude basique.",
+      "score_61_to_80": "Data Lake. ML anti-fraude et churn. Actuariat digital. Équipe data science.",
+      "score_81_to_100": "Data Lakehouse temps réel. ML tarification. Customer 360. IA sinistres. Données alternatives."
+    },
+    "prompt_injection_context": "Cette compagnie d'assurance est évaluée sur sa maturité en données et analytics dans le contexte CIMA/UEMOA. Analyse l'existence d'un data warehouse ou lake, l'utilisation de ML pour l'anti-fraude et l'actuariat, le niveau de Customer 360, et l'automatisation du reporting CIMA.",
+    "key_questions_for_llm": [
+      "Les données de polices, sinistres et clients sont-elles consolidées dans un data warehouse ou data lake centralisé ?",
+      "Des modèles de machine learning sont-ils utilisés pour la détection de fraude ou la tarification des risques ?",
+      "Une vue Customer 360 permettant de voir toutes les interactions d'un assuré est-elle disponible pour les équipes commerciales ?",
+      "Le reporting réglementaire CIMA (états financiers, statistiques sinistres) est-il automatisé ou encore principalement manuel ?",
+      "Une équipe dédiée à la data science ou à l'analytics est-elle en place dans la compagnie ?"
+    ]
+  }
+}

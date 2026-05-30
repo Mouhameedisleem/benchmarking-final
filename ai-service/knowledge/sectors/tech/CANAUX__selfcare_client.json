@@ -1,0 +1,56 @@
+{
+  "meta": { "axis": "CANAUX", "sub_axis": "Selfcare Client", "sector": "telecom", "language": "fr", "version": "1.0", "last_updated": "2026-05" },
+  "trends": [
+    { "title": "Self-care USSD — canal universel pour les abonnés sans smartphone en UEMOA", "description": "Le menu USSD (*123# ou *144#) reste le canal de self-care le plus inclusif en UEMOA : il fonctionne sur tous les téléphones mobiles, même sans smartphone ni connexion Internet. Les opérateurs qui maintiennent un USSD riche (recharge, solde, MoMo, offres, réclamations) touchent 100 % de leur base abonnés.", "impact_level": "Très élevé", "horizon": "Permanent (coexistence avec l'app)", "adoption_rate": "100 % des opérateurs UEMOA ont un USSD fonctionnel (ARTCI 2024)", "source": "ARTCI Rapport Annuel CI 2024 / GSMA USSD Africa 2024", "year": "2024" },
+    { "title": "Chatbot IA télécom — résoudre 70 % des demandes sans agent humain", "description": "Les chatbots IA pour les opérateurs télécoms permettent de répondre aux demandes fréquentes (solde, offres, couverture, réclamation basique) 24/7 via l'application mobile, WhatsApp ou le site web. Les opérateurs qui déploient un chatbot IA réduisent les contacts entrants au call center de 30-50 % en 6 mois.", "impact_level": "Élevé", "horizon": "12-24 mois", "adoption_rate": "30 % des opérateurs africains ont un chatbot IA opérationnel (GSMA 2024)", "source": "GSMA AI Customer Service Telecom Africa 2024", "year": "2024" }
+  ],
+  "key_technologies": [
+    { "name": "USSD Platform avancée (menu riche pour services télécom et MoMo)", "category": "Self-care universel", "maturity_stage": "Mature", "adoption_in_sector": "Très haute en UEMOA", "leading_vendors": ["Comviva Mobiquity USSD", "Ericsson USSD Gateway", "OpenMake USSD Builder", "Africa's Talking USSD", "Custom USSD plateform"] },
+    { "name": "Chatbot IA pour le service client télécom (NLP francophone)", "category": "Automatisation service client", "maturity_stage": "Croissance", "adoption_in_sector": "Faible en UEMOA", "leading_vendors": ["IBM Watson Assistant Telecom", "Google Dialogflow CX", "Microsoft Bot Framework", "Orange Chatbot Platform", "Botpress"] }
+  ],
+  "market_leaders": {
+    "national": [{ "organisation": "MTN Côte d'Ivoire", "country": "Côte d'Ivoire", "key_practice": "USSD *222# : 45 services disponibles (recharge, solde, MoMo, offres data, réclamation de crédit, signalement panne). Application MTN CI avec chatbot 'Mia' (IA basique). Portail web self-care avec compte abonné. 3 M transactions USSD/jour.", "differentiator": "Le menu USSD *222# de MTN CI traite 3 millions de transactions par jour — soit 65 % de toutes les interactions abonnés MTN CI — démontrant que le USSD reste le canal de self-care le plus utilisé malgré la montée des smartphones", "source": "MTN CI Customer Service Report 2023" }],
+    "regional": [{ "organisation": "Safaricom Kenya", "country": "Kenya", "key_practice": "USSD *234# avec 60 services. Chatbot 'Sema na Zuri' (WhatsApp + app) résolvant 72 % des demandes sans agent. Portail My Safaricom self-care complet. Voicebot IVR intelligent pour les appels call center (réduction 40 % des appels humains).", "differentiator": "Le chatbot 'Sema na Zuri' de Safaricom résout 72 % des demandes clients sans intervention humaine — en anglais et en swahili — représentant une économie de 25 M$/an sur les coûts de service client humain", "source": "Safaricom Annual Report 2023" }],
+    "international": [{ "organisation": "Vodafone UK", "country": "Royaume-Uni", "key_practice": "TOBi — chatbot IA déployé dans 12 pays de Vodafone. Résolution de 58 % des demandes sans agent humain. NLP multilingue (22 langues). Disponible sur app, web et WhatsApp. Escalade transparente vers agent humain avec contexte transmis.", "differentiator": "TOBi de Vodafone résout 58 % des demandes dans 12 pays en 22 langues — le chatbot télécom le plus déployé au monde — avec une escalade seamless vers les agents humains qui reçoivent le contexte de la conversation automatiquement", "source": "Vodafone Annual Report 2023" }]
+  },
+  "maturity_levels": {
+    "level_1_initial": "USSD basique (recharge et solde uniquement). Aucun self-care digital. Pas de chatbot. Toutes demandes complexes en agence ou call center.",
+    "level_2_developing": "USSD étendu (15-25 services). Portail web compte abonné. Pas de chatbot. Self-service limité aux transactions simples.",
+    "level_3_defined": "USSD complet (30+ services). Application mobile self-care. Chatbot basique (FAQ). Portail web fonctionnel. 30-40 % transactions en self-service.",
+    "level_4_managed": "USSD riche (40+ services). Chatbot IA NLP. Portail complet. WhatsApp self-service. 50-70 % transactions self-service. Voicebot IVR.",
+    "level_5_optimizing": "USSD + app + chatbot IA convergés. 70 %+ self-service. Chatbot résout 70 %+ demandes. Voicebot IA pour call center. Personnalisation IA."
+  },
+  "regulations": [],
+  "risks": [{ "title": "Fracture digitale — abonnés âgés ou ruraux exclus des canaux self-care digitaux", "description": "La transition vers les canaux digitaux (application, chatbot) peut exclure les abonnés peu alphabétisés numériquement, les personnes âgées et les abonnés ruraux avec des feature phones. Une stratégie 100 % digitale sans maintien du canal USSD riche et du call center accessible risque de créer une expérience dégradée pour une partie significative de la base abonnés UEMOA.", "severity": "Élevé", "likelihood": "Élevée", "mitigation": "Maintenir le USSD riche en parallèle des canaux digitaux — le USSD sera encore le canal n°1 en UEMOA pendant 5-10 ans. Simplifier l'UX de l'application pour les moins digitaux. Agents de terrain équipés de tablettes pour aider les abonnés en agence." }],
+  "opportunities": [{ "title": "Voicebot IA en français — répondre aux 50 % d'abonnés qui préfèrent appeler plutôt que taper", "description": "50 % des abonnés UEMOA préfèrent appeler le service client plutôt que d'utiliser un chatbot textuel. Un voicebot IA en français (et potentiellement en langues locales) capable de traiter les demandes fréquentes (solde, offres, panne signalée) par la voix réduirait le volume d'appels humains de 40-50 % tout en maintenant l'expérience vocale attendue.", "impact_level": "Très élevé", "time_to_value": "12-18 mois", "prerequisite_maturity": "Niveau 3" }],
+  "ma_and_fundraising": [],
+  "zoom_case_study": { "entreprise": "Safaricom 'Sema na Zuri' — chatbot résolvant 72 % des demandes, économie 25 M$/an", "pays": "Kenya", "technologie": "Google Dialogflow CX + WhatsApp Business API + My Safaricom App + Salesforce CRM escalade", "description": "Safaricom Kenya a lancé son chatbot 'Sema na Zuri' (Parle avec Zuri en swahili) en 2020 et l'a progressivement amélioré pour atteindre en 2023 les performances suivantes : disponible sur WhatsApp, My Safaricom App et le site web safaricom.co.ke, en anglais et en swahili. Les 50 demandes les plus fréquentes (consultation du solde M-Pesa, transfert d'argent, activation d'offres data, signalement de panne, récupération de PIN, déclaration de SIM swap) sont gérées entièrement en selfcare par Zuri sans intervention humaine. Quand la demande dépasse les capacités du chatbot, Zuri transfère la conversation à un agent humain en envoyant automatiquement le contexte de la conversation — l'abonné n'a pas à re-expliquer son problème. En 2023 : 72 % des demandes résolues sans agent humain, économie de 25 M$/an sur les coûts de service client, NPS chatbot +45 (plus élevé que le NPS call center à +28), disponible 24/7 vs call center 6h-22h.", "resultats": "72 % demandes résolues sans agent · 25 M$/an économisé · NPS chatbot +45 > call center +28 · Disponible 24/7 · Anglais + Swahili · 50 demandes gérées · Contexte transmis à l'agent", "source": "Safaricom Annual Report 2023 / Google Dialogflow Safaricom Case Study 2023", "annee": "2023" },
+  "comparatif_organisations": {
+    "titre": "Maturité selfcare client — benchmark opérateurs télécoms UEMOA",
+    "colonnes": ["Organisation", "USSD avec > 30 services", "Chatbot IA NLP opérationnel", "Portail web self-care complet", "Self-service > 50 % transactions", "Voicebot IVR intelligent"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "Partiel", "Partiel", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["Partiel", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Le selfcare est le levier de réduction des coûts de service client le plus rapide en télécom UEMOA. Un contact self-service coûte 10-20× moins qu'un contact agent humain. Le chatbot IA est le catalyseur mais le USSD reste incontournable pour toucher 100 % des abonnés. Les opérateurs qui investissent dans le selfcare réduisent leurs coûts tout en améliorant la satisfaction (disponibilité 24/7, réponse instantanée).",
+    "maturity_max_description": "USSD avec 40+ services couvrant tous les besoins abonnés (recharge, MoMo, offres, réclamations). Chatbot IA NLP en français résolvant > 70 % des demandes sur app, WhatsApp et web. Portail self-care complet avec gestion du compte, des offres et des réclamations. Voicebot IA pour les appels call center réduisant le volume humain de 40 %. Self-service > 70 % de toutes les transactions abonnés.",
+    "scoring_rubric": {
+      "score_1_to_20": "USSD basique (recharge/solde). Aucun selfcare digital. Pas de chatbot. Agence obligatoire.",
+      "score_21_to_40": "USSD 15-25 services. Portail web basique. Pas de chatbot. Selfcare limité.",
+      "score_41_to_60": "USSD 30+ services. App selfcare. Chatbot FAQ. Portail fonctionnel. 30-40 % selfcare.",
+      "score_61_to_80": "USSD riche. Chatbot IA NLP. Portail complet. WhatsApp selfcare. 50-70 % selfcare.",
+      "score_81_to_100": "Convergence USSD+app+chatbot. 70 %+ selfcare. Chatbot 70 %+ résolution. Voicebot IA."
+    },
+    "prompt_injection_context": "Cet opérateur télécom est évalué sur sa maturité selfcare dans le contexte UEMOA. Analyse le USSD (nombre de services), le chatbot IA, le portail web, le taux de selfcare et le voicebot.",
+    "key_questions_for_llm": [
+      "Le menu USSD de l'opérateur permet-il aux abonnés d'accéder à plus de 30 services différents (recharge, MoMo, offres, réclamations) sans passer par une agence ?",
+      "Un chatbot IA capable de répondre aux demandes fréquentes en français est-il disponible sur l'application, WhatsApp ou le site web ?",
+      "Le portail web ou l'application permettent-ils aux abonnés de gérer entièrement leur compte (modification d'offre, réclamation, historique) en self-service ?",
+      "Quel est le taux de transactions abonnés traitées en self-service (USSD, app, chatbot) sans contact humain ?",
+      "Un voicebot ou IVR intelligent est-il utilisé pour gérer les appels entrants au call center et en résoudre une partie sans intervention d'un agent ?"
+    ]
+  }
+}

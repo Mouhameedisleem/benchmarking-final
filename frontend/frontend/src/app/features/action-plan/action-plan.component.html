@@ -1,0 +1,321 @@
+<div class="container-fluid py-4">
+
+  <!-- Header -->
+  <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-4">
+    <div>
+      <h4 class="fw-bold mb-1">
+        <i class="fas fa-tasks text-primary me-2"></i>Plan d'action
+        <span class="text-muted fs-6 ms-2" *ngIf="companyName">— {{ companyName }}</span>
+      </h4>
+      <p class="text-muted mb-0 small">Tâches générées automatiquement depuis les recommandations IA</p>
+    </div>
+    <div class="d-flex gap-2 flex-wrap">
+      <!-- View toggle -->
+      <div class="btn-group btn-group-sm">
+        <button class="btn" [class.btn-primary]="view==='kanban'" [class.btn-outline-primary]="view!=='kanban'"
+                (click)="view='kanban'">
+          <i class="fas fa-columns me-1"></i>Kanban
+        </button>
+        <button class="btn" [class.btn-primary]="view==='list'" [class.btn-outline-primary]="view!=='list'"
+                (click)="view='list'">
+          <i class="fas fa-list me-1"></i>Liste
+        </button>
+      </div>
+      <button class="btn btn-sm btn-outline-success" (click)="exportExcel()" [disabled]="tasks.length===0">
+        <i class="fas fa-file-excel me-1"></i>Export Excel
+      </button>
+      <button class="btn btn-sm btn-primary" (click)="generate()" [disabled]="generating">
+        <span *ngIf="generating" class="spinner-border spinner-border-sm me-1"></span>
+        <i *ngIf="!generating" class="fas fa-magic me-1"></i>
+        {{ tasks.length === 0 ? 'Générer le plan' : 'Régénérer' }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="card border-0 shadow-sm mb-4" *ngIf="tasks.length > 0">
+    <div class="card-body py-3">
+      <div class="d-flex justify-content-between align-items-center mb-1">
+        <span class="small fw-semibold text-muted">Progression globale</span>
+        <span class="fw-bold text-primary">{{ doneCount }} / {{ tasks.length }} tâches terminées ({{ progress }}%)</span>
+      </div>
+      <div class="progress" style="height:10px">
+        <div class="progress-bar bg-success" [style.width.%]="progress"></div>
+      </div>
+      <div class="d-flex gap-3 mt-2 small text-muted">
+        <span><i class="fas fa-circle text-secondary me-1"></i>{{ todoTasks.length }} À faire</span>
+        <span><i class="fas fa-circle text-warning me-1"></i>{{ inProgressTasks.length }} En cours</span>
+        <span><i class="fas fa-circle text-success me-1"></i>{{ doneTasks.length }} Terminé</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading -->
+  <div *ngIf="loading" class="text-center py-5">
+    <div class="spinner-border text-primary"></div>
+  </div>
+
+  <!-- Empty state -->
+  <div *ngIf="!loading && tasks.length === 0" class="text-center py-5">
+    <i class="fas fa-clipboard-list fa-3x text-muted mb-3 d-block"></i>
+    <h6 class="text-muted">Aucun plan d'action généré</h6>
+    <p class="text-muted small">Cliquez sur "Générer le plan" pour créer automatiquement les tâches depuis les recommandations IA.</p>
+    <button class="btn btn-primary" (click)="generate()" [disabled]="generating">
+      <span *ngIf="generating" class="spinner-border spinner-border-sm me-1"></span>
+      <i *ngIf="!generating" class="fas fa-magic me-1"></i>Générer le plan d'action
+    </button>
+  </div>
+
+  <!-- ══════════════════════ KANBAN VIEW ══════════════════════ -->
+  <div *ngIf="!loading && tasks.length > 0 && view === 'kanban'" class="row g-3">
+
+    <!-- TODO -->
+    <div class="col-md-4">
+      <div class="kanban-col h-100">
+        <div class="kanban-header bg-secondary text-white rounded-top px-3 py-2 d-flex justify-content-between align-items-center">
+          <span class="fw-semibold"><i class="fas fa-circle-notch me-2"></i>À faire</span>
+          <span class="badge bg-white text-dark">{{ todoTasks.length }}</span>
+        </div>
+        <div class="kanban-body bg-light rounded-bottom p-2">
+          <div *ngFor="let task of todoTasks" class="kanban-card card mb-2 border-0 shadow-sm">
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <span class="badge rounded-pill me-1" [ngClass]="priorityClass(task.priority)">{{ task.priority }}</span>
+                <span class="badge bg-light text-dark border small">{{ axeShort(task.axe) }}</span>
+              </div>
+              <div class="fw-semibold small mt-2">{{ task.title }}</div>
+              <div class="text-muted x-small mt-1 text-truncate" title="{{ task.description }}">{{ task.description }}</div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <small class="text-muted"><i class="fas fa-user me-1"></i>{{ task.responsible }}</small>
+                <small [class.text-danger]="isOverdue(task.deadline)" [class.text-muted]="!isOverdue(task.deadline)">
+                  <i class="far fa-calendar me-1"></i>{{ task.deadline | date:'dd/MM/yy' }}
+                </small>
+              </div>
+              <div class="d-flex gap-1 mt-2 justify-content-end">
+                <button class="btn btn-xs btn-outline-secondary" (click)="openEdit(task)" title="Modifier">
+                  <i class="fas fa-pen"></i>
+                </button>
+                <button class="btn btn-xs btn-outline-warning" (click)="moveForward(task)" title="Démarrer">
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="btn btn-xs btn-outline-danger" (click)="deleteTask(task)" title="Supprimer">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="todoTasks.length === 0" class="text-center text-muted small py-3">Aucune tâche</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IN PROGRESS -->
+    <div class="col-md-4">
+      <div class="kanban-col h-100">
+        <div class="kanban-header bg-warning text-dark rounded-top px-3 py-2 d-flex justify-content-between align-items-center">
+          <span class="fw-semibold"><i class="fas fa-spinner me-2"></i>En cours</span>
+          <span class="badge bg-white text-dark">{{ inProgressTasks.length }}</span>
+        </div>
+        <div class="kanban-body bg-light rounded-bottom p-2">
+          <div *ngFor="let task of inProgressTasks" class="kanban-card card mb-2 border-0 shadow-sm border-start border-warning border-3">
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <span class="badge rounded-pill me-1" [ngClass]="priorityClass(task.priority)">{{ task.priority }}</span>
+                <span class="badge bg-light text-dark border small">{{ axeShort(task.axe) }}</span>
+              </div>
+              <div class="fw-semibold small mt-2">{{ task.title }}</div>
+              <div class="text-muted x-small mt-1 text-truncate" title="{{ task.description }}">{{ task.description }}</div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <small class="text-muted"><i class="fas fa-user me-1"></i>{{ task.responsible }}</small>
+                <small [class.text-danger]="isOverdue(task.deadline)" [class.text-muted]="!isOverdue(task.deadline)">
+                  <i class="far fa-calendar me-1"></i>{{ task.deadline | date:'dd/MM/yy' }}
+                </small>
+              </div>
+              <div class="d-flex gap-1 mt-2 justify-content-end">
+                <button class="btn btn-xs btn-outline-secondary" (click)="moveBack(task)" title="Retour À faire">
+                  <i class="fas fa-arrow-left"></i>
+                </button>
+                <button class="btn btn-xs btn-outline-secondary" (click)="openEdit(task)" title="Modifier">
+                  <i class="fas fa-pen"></i>
+                </button>
+                <button class="btn btn-xs btn-outline-success" (click)="moveForward(task)" title="Terminer">
+                  <i class="fas fa-check"></i>
+                </button>
+                <button class="btn btn-xs btn-outline-danger" (click)="deleteTask(task)" title="Supprimer">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="inProgressTasks.length === 0" class="text-center text-muted small py-3">Aucune tâche</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DONE -->
+    <div class="col-md-4">
+      <div class="kanban-col h-100">
+        <div class="kanban-header bg-success text-white rounded-top px-3 py-2 d-flex justify-content-between align-items-center">
+          <span class="fw-semibold"><i class="fas fa-check-circle me-2"></i>Terminé</span>
+          <span class="badge bg-white text-dark">{{ doneTasks.length }}</span>
+        </div>
+        <div class="kanban-body bg-light rounded-bottom p-2">
+          <div *ngFor="let task of doneTasks" class="kanban-card card mb-2 border-0 shadow-sm opacity-75 border-start border-success border-3">
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <span class="badge rounded-pill me-1" [ngClass]="priorityClass(task.priority)">{{ task.priority }}</span>
+                <span class="badge bg-light text-dark border small">{{ axeShort(task.axe) }}</span>
+              </div>
+              <div class="fw-semibold small mt-2 text-decoration-line-through text-muted">{{ task.title }}</div>
+              <div class="d-flex gap-1 mt-2 justify-content-end">
+                <button class="btn btn-xs btn-outline-secondary" (click)="moveBack(task)" title="Rouvrir">
+                  <i class="fas fa-undo"></i>
+                </button>
+                <button class="btn btn-xs btn-outline-danger" (click)="deleteTask(task)" title="Supprimer">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="doneTasks.length === 0" class="text-center text-muted small py-3">Aucune tâche</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════ LIST VIEW ══════════════════════ -->
+  <div *ngIf="!loading && tasks.length > 0 && view === 'list'" class="card border-0 shadow-sm">
+    <div class="card-body p-0">
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-dark">
+            <tr>
+              <th>#</th>
+              <th>Phase</th>
+              <th>Axe</th>
+              <th>Titre</th>
+              <th>Priorité</th>
+              <th>Responsable</th>
+              <th>Deadline</th>
+              <th>Statut</th>
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let task of tasks; let i = index">
+              <td class="text-muted small">{{ i + 1 }}</td>
+              <td class="small">{{ task.phase }}</td>
+              <td><span class="badge bg-light text-dark border">{{ axeShort(task.axe) }}</span></td>
+              <td>
+                <div class="fw-semibold small">{{ task.title }}</div>
+                <small class="text-muted">{{ task.description | slice:0:60 }}{{ (task.description || '').length > 60 ? '…' : '' }}</small>
+              </td>
+              <td><span class="badge rounded-pill" [ngClass]="priorityClass(task.priority)">{{ task.priority }}</span></td>
+              <td class="small">{{ task.responsible }}</td>
+              <td>
+                <small [class.text-danger]="isOverdue(task.deadline) && task.status !== 'DONE'"
+                       [class.text-muted]="!isOverdue(task.deadline) || task.status === 'DONE'">
+                  {{ task.deadline | date:'dd/MM/yyyy' }}
+                </small>
+              </td>
+              <td>
+                <span class="badge rounded-pill"
+                      [class.bg-secondary]="task.status==='TODO'"
+                      [class.bg-warning]="task.status==='IN_PROGRESS'"
+                      [class.text-dark]="task.status==='IN_PROGRESS'"
+                      [class.bg-success]="task.status==='DONE'">
+                  {{ statusLabel(task.status) }}
+                </span>
+              </td>
+              <td class="text-center">
+                <div class="d-flex gap-1 justify-content-center">
+                  <button class="btn btn-xs btn-outline-secondary" (click)="openEdit(task)" title="Modifier">
+                    <i class="fas fa-pen"></i>
+                  </button>
+                  <button class="btn btn-xs btn-outline-warning" *ngIf="task.status === 'TODO'" (click)="moveForward(task)" title="Démarrer">
+                    <i class="fas fa-play"></i>
+                  </button>
+                  <button class="btn btn-xs btn-outline-success" *ngIf="task.status === 'IN_PROGRESS'" (click)="moveForward(task)" title="Terminer">
+                    <i class="fas fa-check"></i>
+                  </button>
+                  <button class="btn btn-xs btn-outline-secondary" *ngIf="task.status !== 'TODO'" (click)="moveBack(task)" title="Retour">
+                    <i class="fas fa-undo"></i>
+                  </button>
+                  <button class="btn btn-xs btn-outline-danger" (click)="deleteTask(task)" title="Supprimer">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════ EDIT MODAL ══════════════════════ -->
+<div class="modal-backdrop fade show" *ngIf="editingTask" (click)="cancelEdit()"></div>
+<div class="modal d-block" *ngIf="editingTask" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered" (click)="$event.stopPropagation()">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title"><i class="fas fa-pen me-2"></i>Modifier la tâche</h5>
+        <button type="button" class="btn-close btn-close-white" (click)="cancelEdit()"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-12">
+            <label class="form-label fw-semibold">Titre</label>
+            <input class="form-control" [(ngModel)]="editForm.title" />
+          </div>
+          <div class="col-12">
+            <label class="form-label fw-semibold">Description</label>
+            <textarea class="form-control" rows="3" [(ngModel)]="editForm.description"></textarea>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label fw-semibold">Axe</label>
+            <select class="form-select" [(ngModel)]="editForm.axe">
+              <option *ngFor="let a of AXES" [value]="a">{{ axeShort(a) }}</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label fw-semibold">Priorité</label>
+            <select class="form-select" [(ngModel)]="editForm.priority">
+              <option *ngFor="let p of PRIORITIES" [value]="p">{{ p }}</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label fw-semibold">Phase</label>
+            <select class="form-select" [(ngModel)]="editForm.phase">
+              <option *ngFor="let ph of PHASES" [value]="ph">{{ ph }}</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Responsable</label>
+            <input class="form-control" [(ngModel)]="editForm.responsible" />
+          </div>
+          <div class="col-md-3">
+            <label class="form-label fw-semibold">Deadline</label>
+            <input type="date" class="form-control" [(ngModel)]="editForm.deadline" />
+          </div>
+          <div class="col-md-3">
+            <label class="form-label fw-semibold">Statut</label>
+            <select class="form-select" [(ngModel)]="editForm.status">
+              <option value="TODO">À faire</option>
+              <option value="IN_PROGRESS">En cours</option>
+              <option value="DONE">Terminé</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="cancelEdit()">Annuler</button>
+        <button class="btn btn-primary" (click)="saveEdit()">
+          <i class="fas fa-save me-1"></i>Enregistrer
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

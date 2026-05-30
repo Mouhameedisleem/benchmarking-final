@@ -1,0 +1,58 @@
+{
+  "meta": { "axis": "CANAUX", "sub_axis": "Canaux & Expérience Client", "sector": "assurance", "language": "fr", "version": "1.0", "last_updated": "2026-05" },
+  "trends": [
+    { "title": "Application mobile assurance — portail sinistres et polices 24/7", "description": "L'application mobile est devenue le canal principal pour déclarer un sinistre, consulter sa police et payer sa prime en dehors des heures d'ouverture des agences. En UEMOA, la pénétration smartphone atteint 45 % en 2024, rendant le canal mobile critique pour toucher les assurés urbains.", "impact_level": "Très élevé", "horizon": "12-24 mois", "adoption_rate": "25 % des assureurs CIMA proposent une application mobile à leurs assurés (FANAF 2024)", "source": "FANAF Digital Channels Report 2024", "year": "2024" },
+    { "title": "Omnicanalité assurance — cohérence entre agence, mobile et call center", "description": "Les assurés UEMOA utilisent en moyenne 2,3 canaux différents lors d'un parcours sinistre (agence + téléphone + application). Les assureurs qui n'ont pas une vue unifiée du client sur tous les canaux créent des ruptures d'expérience qui détériorent la satisfaction et augmentent les réclamations.", "impact_level": "Élevé", "horizon": "18-36 mois", "adoption_rate": "12 % des assureurs africains ont une expérience omnicanale réellement intégrée (McKinsey 2024)", "source": "McKinsey Africa Insurance Customer Experience 2024", "year": "2024" },
+    { "title": "WhatsApp comme canal de service client — déclaration de sinistre et suivi via messaging", "description": "WhatsApp est le canal de communication dominant en Afrique de l'Ouest. Des assureurs pionniers permettent désormais de déclarer un sinistre, recevoir des devis et suivre l'état de sa police via WhatsApp Business API. Le coût de traitement est 80 % inférieur au canal call center.", "impact_level": "Élevé", "horizon": "6-18 mois", "adoption_rate": "8 % des assureurs CIMA utilisent WhatsApp Business pour le service client (FANAF 2024)", "source": "FANAF Customer Channels Survey 2024", "year": "2024" }
+  ],
+  "key_technologies": [
+    { "name": "Application mobile assurance (iOS + Android)", "category": "Canal digital principal", "maturity_stage": "Mature", "adoption_in_sector": "Faible en UEMOA", "leading_vendors": ["Guidewire Digital", "Majesco Digital1st", "Applied CSR24", "OutSystems (low-code)", "Flutter/React Native (custom)"] },
+    { "name": "WhatsApp Business API pour l'assurance", "category": "Canal messaging", "maturity_stage": "Croissance", "adoption_in_sector": "Émergent en UEMOA", "leading_vendors": ["Twilio WhatsApp API", "Meta Business API", "360dialog", "Vonage WhatsApp", "ChatAPI"] },
+    { "name": "CRM assurance avec vue omnicanale", "category": "Gestion de la relation client", "maturity_stage": "Mature", "adoption_in_sector": "Faible en UEMOA", "leading_vendors": ["Salesforce Financial Services Cloud", "Microsoft Dynamics 365 Insurance", "Zoho CRM Insurance", "Oracle Siebel Insurance"] }
+  ],
+  "market_leaders": {
+    "national": [{ "organisation": "NSIA Assurances CI", "country": "Côte d'Ivoire", "key_practice": "Application mobile 'NSIA Mobile' : consultation police, paiement prime MTN/Orange, déclaration sinistre auto avec photo. Call center intégré avec historique CRM. Agences physiques avec tablettes pour accès CRM en temps réel.", "differentiator": "NSIA Mobile compte 45 000 utilisateurs actifs mensuels — premier assureur ivoirien à dépasser 40 000 MAU sur son application mobile en 2023", "source": "NSIA Rapport Annuel 2023" }],
+    "regional": [{ "organisation": "Old Mutual Africa", "country": "Afrique du Sud / Pan-Afrique", "key_practice": "Omnicanalité complète : application mobile, portail web, WhatsApp, chatbot IA, agences digitales. NPS +34 grâce au suivi temps réel des sinistres. Self-service 65 % des transactions.", "differentiator": "Old Mutual permet de déclarer et régler un sinistre auto simple entièrement via WhatsApp en moins de 4 heures — sans intervention humaine pour les sinistres < 500 000 FCFA", "source": "Old Mutual Annual Report 2023 / WhatsApp Business Case Study 2023" }],
+    "international": [{ "organisation": "Lemonade (USA)", "country": "USA", "key_practice": "Application mobile 100 % digitale — souscription en 90 secondes, règlement sinistre en 3 secondes par IA. Pas d'agences physiques, pas de call center. NPS +70. Chatbot IA 'Maya' et 'Jim' pour souscription et sinistres.", "differentiator": "Lemonade a prouvé qu'une expérience 100 % mobile peut atteindre un NPS +70 dans l'assurance — industrie traditionnellement à NPS négatif — en éliminant toutes les frictions humaines", "source": "Lemonade Annual Report 2023" }]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Canal unique : agence physique. Aucun canal digital. Téléphone sans CRM. Aucun self-service. Parcours sinistre 100 % papier.",
+    "level_2_developing": "Site web institutionnel (sans service). Téléphone avec CRM basique. Quelques agents terrain avec tablettes. Pas d'application mobile.",
+    "level_3_defined": "Application mobile basique (consultation police + paiement). Call center avec CRM unifié. WhatsApp pour le service client. Portail web clients.",
+    "level_4_managed": "Omnicanalité partielle : mobile + web + call center synchronisés. Déclaration sinistre mobile avec photos. WhatsApp Business intégré. NPS mesuré.",
+    "level_5_optimizing": "Omnicanalité complète. Self-service > 60 %. Chatbot IA 24/7. Sinistres réglés via mobile. NPS > 40. Personnalisation contextualisée."
+  },
+  "regulations": [{ "name": "Code CIMA — Obligations d'information et de conseil envers les assurés", "issuing_body": "CIMA", "scope": "Tous assureurs CIMA", "key_requirement": "L'assureur doit informer l'assuré des conditions générales avant souscription, des modalités de déclaration de sinistre et des délais de règlement. Ces informations doivent être accessibles via tous les canaux utilisés, y compris digital.", "compliance_deadline": "En vigueur", "source_url": "https://www.cima-afrique.org" }],
+  "risks": [{ "title": "Fracture digitale — exclure les assurés ruraux sans smartphone", "description": "En UEMOA, 55 % des assurés potentiels résident en zone périurbaine ou rurale avec un accès limité au smartphone et à Internet. Une stratégie 100 % digitale risque d'exclure ces populations et de violer les exigences CIMA d'accès aux services d'assurance pour tous.", "severity": "Élevé", "likelihood": "Élevée", "mitigation": "Stratégie phygitale : maintenir le réseau d'agents physiques pour les zones rurales, digital pour les zones urbaines. USSD comme canal complémentaire pour les assurés sans smartphone." }],
+  "opportunities": [{ "title": "USSD assurance — canal universel pour les assurés sans smartphone", "description": "Le protocole USSD (menu *xxx#) fonctionne sur tous les téléphones mobiles, même les feature phones sans Internet. Un menu USSD permettant de payer sa prime ou déclarer un sinistre simple toucherait 10 millions d'assurés potentiels en Côte d'Ivoire non atteignables par une application mobile.", "impact_level": "Élevé", "time_to_value": "6-12 mois", "prerequisite_maturity": "Niveau 2" }],
+  "ma_and_fundraising": [],
+  "zoom_case_study": { "entreprise": "Old Mutual Africa — Sinistre auto réglé en 4h via WhatsApp", "pays": "Afrique du Sud / Kenya / Nigeria", "technologie": "WhatsApp Business API + IA de traitement des images de sinistres + mobile money", "description": "Old Mutual Africa a lancé en 2022 un parcours sinistre 100 % WhatsApp pour les sinistres auto inférieurs à 500 000 FCFA (équivalent). Le parcours : l'assuré envoie les photos du sinistre via WhatsApp → l'IA analyse les dommages et estime le coût en 2 minutes → si le montant est validé automatiquement, l'assuré reçoit le règlement sur son mobile money en moins de 4 heures. En 2023 : 38 % des sinistres auto éligibles traités entièrement via WhatsApp, NPS sur ce parcours spécifique : +52 (vs +34 en moyenne groupe), coût de traitement du sinistre réduit de 65 % vs canal agence, délai moyen de règlement : 4h12 (vs 14 jours canal traditionnel).", "resultats": "38 % sinistres auto via WhatsApp · Règlement en 4h12 · Délai -80 % vs traditionnel · Coût traitement -65 % · NPS parcours WhatsApp : +52", "source": "Old Mutual Annual Report 2023 / Meta WhatsApp Business Insurance Case Study 2023", "annee": "2023" },
+  "comparatif_organisations": {
+    "titre": "Maturité canaux & expérience client — benchmark assureurs CIMA/UEMOA",
+    "colonnes": ["Organisation", "Application mobile assurance", "WhatsApp Business intégré", "CRM omnicanal unifié", "Déclaration sinistre digital", "NPS mesuré et piloté"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "✗", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "L'expérience client est le différenciateur concurrentiel le plus visible pour les assurés UEMOA. Dans un marché où les produits d'assurance sont peu différenciés, la qualité du parcours de déclaration et de règlement des sinistres est le facteur n°1 de fidélisation et de recommandation. L'application mobile et WhatsApp sont les deux canaux prioritaires à développer pour les assureurs CI.",
+    "maturity_max_description": "Application mobile complète avec souscription, paiement, déclaration sinistre et suivi en temps réel. WhatsApp Business intégré pour le service client et les sinistres simples. CRM omnicanal unifié avec vue 360° de l'assuré. Self-service > 60 % des transactions. NPS > 40 mesuré et piloté mensuellement. Canal USSD disponible pour les zones rurales.",
+    "scoring_rubric": {
+      "score_1_to_20": "Agence physique uniquement. Aucun canal digital. Pas de CRM. Parcours sinistre 100 % papier.",
+      "score_21_to_40": "Site web institutionnel. Téléphone avec CRM basique. Pas d'application mobile.",
+      "score_41_to_60": "Application mobile basique. Call center CRM. WhatsApp pour service client. Portail web.",
+      "score_61_to_80": "Omnicanalité partielle synchronisée. Déclaration sinistre mobile. NPS mesuré.",
+      "score_81_to_100": "Omnicanalité complète. Self-service > 60 %. Chatbot IA. Sinistres mobiles. NPS > 40."
+    },
+    "prompt_injection_context": "Cette compagnie d'assurance est évaluée sur sa maturité canaux et expérience client dans le contexte CIMA/UEMOA. Analyse la présence d'une application mobile, l'intégration de WhatsApp Business, l'omnicanalité du CRM, la possibilité de déclarer un sinistre digitalement et le pilotage du NPS.",
+    "key_questions_for_llm": [
+      "Une application mobile permettant aux assurés de consulter leur police, payer leur prime et déclarer un sinistre est-elle disponible ?",
+      "WhatsApp Business est-il intégré comme canal de service client avec des réponses automatisées et un suivi des interactions ?",
+      "Un CRM omnicanal unifiant les interactions agence, call center et digital est-il en place pour les équipes commerciales ?",
+      "Un assuré peut-il déclarer et suivre l'état de son sinistre entièrement en ligne ou via mobile, sans se déplacer en agence ?",
+      "Le Net Promoter Score (NPS) est-il mesuré régulièrement et utilisé pour piloter l'amélioration de l'expérience client ?"
+    ]
+  }
+}

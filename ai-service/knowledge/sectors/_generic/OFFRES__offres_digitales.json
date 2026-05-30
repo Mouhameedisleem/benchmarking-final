@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "axis": "OFFRES_SERVICES_DIGITAUX",
+    "sub_axis": "Offres digitales",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Servicisation — des produits aux services digitaux permanents",
+      "description": "Les organisations transforment leurs produits physiques en services digitaux permanents (Product-as-a-Service, SaaS, abonnement) créant des revenus récurrents et une relation client continue vs une vente ponctuelle.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "70 % des éditeurs logiciels ont migré vers le SaaS (Gartner 2024)",
+      "source": "Gartner Software Market Trends 2024",
+      "year": "2024"
+    },
+    {
+      "title": "IA embarquée dans les offres — Intelligence as a Feature",
+      "description": "L'IA n'est plus un produit distinct mais une fonctionnalité intégrée dans toutes les offres (recommandation, détection d'anomalie, personnalisation automatique), créant un différenciateur compétitif.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "85 % des nouvelles offres digitales incluront de l'IA d'ici 2026 (IDC 2024)",
+      "source": "IDC AI Market Forecast 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Embedded Finance — intégration des services financiers dans les offres non-financières",
+      "description": "Les acteurs non-financiers (e-commerce, logistique, télécoms) intègrent des services financiers (paiement, crédit, assurance, épargne) dans leurs offres, créant de nouveaux revenus sans licence bancaire complète.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "40 % des transactions financières en 2026 passeront par des non-banques (McKinsey 2024)",
+      "source": "McKinsey Global Banking Annual Review 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Freemium & PLG (Product-Led Growth) — l'essai gratuit comme canal d'acquisition",
+      "description": "Le modèle PLG (Slack, Zoom, Figma, Notion) utilise le produit lui-même comme canal d'acquisition et d'expansion, avec un essai gratuit qui convertit les utilisateurs satisfaits en clients payants.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "58 % des entreprises SaaS B2B utilisent une stratégie PLG (OpenView 2024)",
+      "source": "OpenView Product Benchmarks 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Plateforme de gestion des offres digitales",
+      "category": "Product management",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne",
+      "leading_vendors": ["Akeneo", "Contentful", "Salesforce Product Catalog", "SAP CPQ", "Pimcore"]
+    },
+    {
+      "name": "Payment & Monetization Platform",
+      "category": "Monétisation des offres",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne en Afrique",
+      "leading_vendors": ["Stripe", "Zuora", "Chargebee", "Wave (Afrique)", "Flutterwave (Afrique)"]
+    },
+    {
+      "name": "API Marketplace",
+      "category": "Distribution d'offres via APIs",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["Apigee (Google)", "MuleSoft Exchange", "Kong Konnect", "RapidAPI"]
+    },
+    {
+      "name": "Product Analytics",
+      "category": "Mesure de l'adoption des offres",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["Mixpanel", "Amplitude", "FullStory", "Heap", "Pendo"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Offres disponibles en ligne avec souscription digitale autonome, catalogue digital accessible 24/7",
+        "differentiator": "Premier acteur sectoriel à proposer une offre entièrement digitale sans déplacement physique requis",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Wave Mobile Money",
+        "country": "Afrique de l'Ouest",
+        "key_practice": "Offre 100 % digitale — compte ouvert en 5 minutes, sans agence, transferts gratuits entre utilisateurs",
+        "differentiator": "Modèle freemium disruptif : zéro frais sur les transferts internes, revenus sur les transactions marchands — a capturé 60 % du marché sénégalais en 3 ans",
+        "source": "Wave Annual Report 2023 / TechCabal Africa Fintech Report 2024"
+      },
+      {
+        "organisation": "Flutterwave",
+        "country": "Nigeria (Pan-Afrique)",
+        "key_practice": "API-first : offre de paiement intégrable en 5 lignes de code, disponible dans 30+ pays africains",
+        "differentiator": "Marketplace d'offres financières : paiement, transfert, e-commerce, POS — tout via une API unifiée",
+        "source": "Flutterwave Investor Deck 2023 / TechCrunch Africa 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Stripe",
+        "country": "USA",
+        "key_practice": "Plateforme d'offres financières modulaires : paiement, facturation, fiscal, identité — chacune en API",
+        "differentiator": "Stripe Atlas : permet de créer une startup américaine et d'accepter des paiements mondiaux en 48h",
+        "source": "Stripe Annual Report 2023"
+      },
+      {
+        "organisation": "Salesforce",
+        "country": "USA",
+        "key_practice": "Plateforme multi-cloud : CRM, Marketing, Commerce, Analytics, Platform — 150 000 clients",
+        "differentiator": "AppExchange : 7 000+ applications partenaires qui étendent les offres Salesforce — 13M d'installations",
+        "source": "Salesforce Annual Report 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Offres uniquement physiques/manuelles. Aucune offre digitale. Souscription en agence uniquement. Catalogue papier. Pas de self-service.",
+    "level_2_developing": "Quelques offres présentées en ligne mais souscription encore physique. Catalogue digital basique. Pas de paiement en ligne. Tarification non transparente.",
+    "level_3_defined": "Offres digitales souscriptibles en ligne. Paiement en ligne intégré. Catalogue digital complet et à jour. Service delivery partiellement automatisé.",
+    "level_4_managed": "Offres entièrement digitales de la souscription à la livraison. Personnalisation des offres par profil client. Product analytics déployé. Revenu digital > 30 %.",
+    "level_5_optimizing": "Offres intelligentes (IA embarquée). PLG ou freemium actif. Embedded Finance intégré. API Marketplace pour les partenaires. Revenu digital > 60 %."
+  },
+
+  "regulations": [
+    {
+      "name": "Loi n°2016-412 relative au commerce électronique",
+      "issuing_body": "République de Côte d'Ivoire",
+      "scope": "Organisations vendant des biens ou services en ligne en Côte d'Ivoire",
+      "key_requirement": "Conditions générales claires, droit de rétractation, sécurité des transactions, mentions légales",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.gouv.ci"
+    },
+    {
+      "name": "Réglementation BCEAO sur les services de paiement électronique",
+      "issuing_body": "BCEAO",
+      "scope": "Organisations offrant des services de paiement électronique en zone UEMOA",
+      "key_requirement": "Agrément BCEAO, protection des fonds clients, conformité AML/KYC pour les transactions",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Cannibalisation des offres physiques — transition mal gérée",
+      "description": "Lancer des offres digitales sans stratégie de transition peut cannibaliser les revenus des offres traditionnelles plus tôt que prévu, avant que le revenu digital soit suffisant pour compenser.",
+      "severity": "Élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Définir un plan de migration progressif avec des offres digitales complémentaires avant d'être substituables, accompagné d'une stratégie de pricing différenciée."
+    },
+    {
+      "title": "Offre digitale sans adoption — investissement non rentabilisé",
+      "description": "Lancer une application ou un service digital sans stratégie d'adoption (formation, communication, incentives) génère un investissement sans retour — le syndrome du 'beau portail que personne n'utilise'.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Définir des KPIs d'adoption (actifs mensuels, taux de conversion, rétention) avant le lancement et un plan d'activation clients dédié."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Croissance des revenus sans CAPEX additionnel via le digital",
+      "description": "Les offres digitales ont un coût marginal proche de zéro une fois développées. Chaque nouveau client digital génère de la valeur sans investissement proportionnel en infrastructure physique.",
+      "impact_level": "Très élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Embedded Finance — nouvelles sources de revenus sans licence bancaire",
+      "description": "Intégrer des services financiers (crédit, assurance, épargne) dans une offre existante peut générer 30-50 % de revenus additionnels sur la base client existante.",
+      "impact_level": "Très élevé",
+      "time_to_value": "18-36 mois",
+      "prerequisite_maturity": "Niveau 4"
+    },
+    {
+      "title": "API Marketplace — monétiser les capacités existantes",
+      "description": "Exposer des capacités existantes (paiement, logistique, data) via des APIs à des partenaires tiers crée des revenus sans développement de nouveaux produits.",
+      "impact_level": "Élevé",
+      "time_to_value": "12-18 mois",
+      "prerequisite_maturity": "Niveau 4"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Investors (Sequoia, Stripe, etc.)",
+      "target": "Flutterwave",
+      "amount": "250 M$ (Series D)",
+      "date": "2022",
+      "strategic_rationale": "Développer la plateforme de paiements africaine et étendre les offres de services financiers sur 30+ pays",
+      "source": "Flutterwave Press Release 2022"
+    },
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Investors (Stripe, Sequoia Capital Africa)",
+      "target": "Wave Mobile Money",
+      "amount": "200 M$",
+      "date": "2021",
+      "strategic_rationale": "Disruption du marché du mobile money en Afrique de l'Ouest avec des frais de transfert à zéro",
+      "source": "Wave Press Release 2021"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Wave Mobile Money",
+    "pays": "Sénégal / Afrique de l'Ouest",
+    "technologie": "Offre digitale disruptive — compte en 5 minutes, transferts gratuits, adoption mobile-first",
+    "description": "Wave a lancé en 2018 au Sénégal avec une proposition de valeur radicale : compte ouvert en 5 minutes via smartphone, sans agence, avec des frais de transfert entre utilisateurs à zéro. Ce modèle freemium a capturé 60 % du marché sénégalais en 3 ans, devant Orange Money et Free Money établis. L'offre est 100 % digitale — pas de guichet, pas de papier. Wave génère ses revenus sur les transactions marchands et les retraits. En 2021, Wave est devenu la première licorne tech d'Afrique de l'Ouest (valorisation > 1,7 Md$).",
+    "resultats": "60 % de part de marché sénégalais · 5 minutes pour ouvrir un compte · Valorisation 1,7 Md$ · Expansion en CI, Mali, Ouganda · Modèle copié par 5+ concurrents",
+    "source": "Wave Annual Report 2023 / TechCabal Africa Fintech Report 2024",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité offres digitales — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "Offres souscriptibles en ligne", "Paiement en ligne intégré", "Service delivery automatisé", "Product analytics déployé", "Revenu digital > 30 %"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Les offres digitales sont le moteur de croissance des organisations dans un monde où les clients exigent l'instantanéité et la simplicité. En Afrique de l'Ouest, le mobile est le canal dominant — toute offre digitale doit être mobile-first pour avoir un impact. Les acteurs qui digitalisent leurs offres complètement réduisent leurs coûts de 40-60 % tout en améliorant l'expérience client.",
+    "maturity_max_description": "Offres entièrement digitales de la souscription à la livraison. IA embarquée pour la personnalisation et les recommandations. PLG ou freemium actif. Embedded Finance intégré. API Marketplace pour les partenaires. Revenu digital > 60 %. Product analytics avec métriques North Star définies.",
+    "scoring_rubric": {
+      "score_1_to_20": "Offres uniquement physiques. Aucune offre digitale. Souscription en agence. Catalogue papier.",
+      "score_21_to_40": "Offres présentées en ligne mais souscription physique. Catalogue digital basique. Pas de paiement en ligne.",
+      "score_41_to_60": "Offres souscriptibles en ligne. Paiement en ligne. Catalogue digital complet. Service partiellement automatisé.",
+      "score_61_to_80": "Offres entièrement digitales. Personnalisation par profil. Product analytics. Revenu digital > 30 %.",
+      "score_81_to_100": "IA embarquée. PLG/Freemium. Embedded Finance. API Marketplace. Revenu digital > 60 %."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur la maturité de ses offres digitales. Analyse la disponibilité d'offres souscriptibles en ligne sans passage en agence, l'intégration du paiement en ligne, l'automatisation de la délivrance du service, l'utilisation du product analytics et la part du revenu digital dans le chiffre d'affaires total.",
+    "key_questions_for_llm": [
+      "Les offres de l'organisation peuvent-elles être souscrites entièrement en ligne sans déplacement physique requis ?",
+      "Le paiement en ligne est-il intégré dans le parcours de souscription des offres digitales ?",
+      "La délivrance du service ou produit est-elle automatisée après souscription digitale, sans intervention manuelle ?",
+      "Un outil de product analytics (Mixpanel, Amplitude) est-il déployé pour mesurer l'adoption et la rétention des offres digitales ?",
+      "Quelle est la part du chiffre d'affaires générée via les canaux digitaux (objectif > 30 %) ?"
+    ]
+  }
+}

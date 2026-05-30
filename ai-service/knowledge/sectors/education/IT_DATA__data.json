@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "secteur": "education",
+    "axe": "IT_DATA",
+    "sous_axe": "data",
+    "titre": "Gouvernance et exploitation des données dans l'enseignement en Côte d'Ivoire",
+    "description": "Stratégie de gouvernance des données institutionnelles des établissements d'enseignement CI : qualité des données académiques, Business Intelligence institutionnel (tableau de bord direction), Master Data Management (MDM) des dossiers étudiants, reporting MESRS CI/CAMES automatisé, Open Data éducation CI et conformité APDP CI sur l'ensemble du cycle de vie de la donnée.",
+    "version": "1.0",
+    "date_mise_a_jour": "2025-01-01",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "Les établissements d'enseignement ivoiriens génèrent d'importants volumes de données académiques (inscriptions, notes, présences, comportements LMS, résultats examens nationaux, insertion professionnelle) mais les exploitent peu pour la prise de décision. La direction prend souvent ses décisions stratégiques (ouverture/fermeture de filières, recrutement enseignants, investissements IT) sans données consolidées fiables. Le MESRS CI exige désormais 5 KPIs annuels documentés pour l'accréditation (taux de réussite, taux d'insertion, ratio d'encadrement, ressources propres, production de recherche), et le CAMES demande une gouvernance des données pour les formations hybrides. Ces exigences créent une pression institutionnelle pour professionnaliser la gestion des données éducatives en CI.",
+    "chiffres_cles": [
+      "5 KPIs annuels MESRS CI pour l'accréditation : taux de réussite, taux d'insertion, ratio d'encadrement, ressources propres, production de recherche",
+      "UVCI CI : Power BI institutionnel (15 KPIs quotidiens) — délai rapport MESRS CI réduit de 5 jours à 2h",
+      "MENA CI Open Data Éducation CI (2024) : 38 datasets publiés, 18 000 téléchargements en 6 mois",
+      "Taux de doublon dans les bases étudiants CI : estimé 8-15% (même étudiant inscrit dans 2 filières avec 2 identifiants différents)",
+      "Coût d'une mauvaise qualité de données CI : 180-320 M FCFA/an en corrections manuelles et erreurs de diplomation (estimation MESRS CI 2023)",
+      "APDP CI : 0 établissement CI a déclaré son pipeline de learning analytics à l'APDP CI (obligation depuis 2022 pour les traitements comportementaux)"
+    ],
+    "acteurs_cles": [
+      "MESRS CI — 5 KPIs annuels d'accréditation exigeant des données consolidées et auditables",
+      "MENA CI — portail Open Data Éducation CI (portail 2024, 38 datasets) et politique données ouvertes",
+      "APDP CI — Loi 2013-450 (obligation de déclaration des traitements comportementaux LMS, anonymisation)",
+      "CAMES — exigence de données de suivi alumni et d'insertion pour accréditations UEMOA",
+      "AUF — partage de données de recherche en éducation entre universités francophones",
+      "ARTCI — Open Data télécom CI (données connectivité écoles, croisables avec données éducatives)"
+    ]
+  },
+  "enjeux_cles": [
+    {
+      "enjeu": "Consolider les données étudiants dans un référentiel unique (MDM)",
+      "description": "Les établissements CI maintiennent des données étudiants fragmentées : un dossier dans le SIS, un autre dans le LMS, un troisième dans le logiciel de paie (pour les tuteurs-apprenants), un quatrième dans le CRM (pour les prospects). Le Master Data Management (MDM) — création d'un identifiant étudiant unique et d'un référentiel consolidé — est le prérequis de tout analytics institutionnel fiable.",
+      "impact": "Élimination des 8-15% de doublons et base unique pour analytics, diplomation et reporting MESRS CI"
+    },
+    {
+      "enjeu": "Déployer un Business Intelligence institutionnel pour la prise de décision",
+      "description": "Sans tableau de bord institutionnel, les décisions stratégiques (fermeture d'une filière non rentable, recrutement d'un enseignant, investissement en infrastructure) se prennent à l'instinct ou après 5 jours de préparation manuelle Excel. Un BI institutionnel connecté en temps réel aux sources de données (LMS, SIS, CRM, RH, finance) permet des décisions en 30 minutes.",
+      "impact": "Réduction du délai de décision stratégique de plusieurs jours à quelques heures"
+    },
+    {
+      "enjeu": "Automatiser les rapports MESRS CI, CAMES et bailleurs",
+      "description": "La préparation des rapports d'accréditation MESRS CI (5 KPIs annuels) et des rapports pour les bailleurs (AUF, AFD, IFC) mobilise 2-4 semaines de travail administratif intense. Un pipeline de données automatisé (ETL + Power BI) génère ces rapports en 2 heures avec données auditables.",
+      "impact": "Libération de 40+ heures/an de travail administratif et amélioration de la qualité des rapports"
+    },
+    {
+      "enjeu": "Assurer la qualité des données tout au long de leur cycle de vie",
+      "description": "Les erreurs de données académiques CI (notes incorrectes, diplômes avec fautes d'orthographe dans les noms, doublons d'inscription) ont un coût direct (corrections manuelles, retards de diplomation) et indirect (mauvaise réputation, litiges étudiants). Un programme de data quality (règles de validation, monitoring des anomalies, processus de correction) est le socle de la confiance dans les données.",
+      "impact": "Réduction des erreurs de données de 80% et amélioration de la fiabilité des rapports officiels"
+    },
+    {
+      "enjeu": "Publier des données éducatives en Open Data conformes à la politique MENA CI",
+      "description": "Le portail Open Data MENA CI (2024) publie des données anonymisées sur le système éducatif ivoirien. Les établissements qui contribuent (taux de réussite anonymisés par filière, données insertion professionnelle, satisfaction apprenants) participent à la co-construction de la politique éducative CI et renforcent leur image auprès des bailleurs internationaux.",
+      "impact": "Renforcement de la légitimité institutionnelle et accès facilité aux financements conditionnels"
+    }
+  ],
+  "niveau_maturite": {
+    "description": "Échelle de maturité gouvernance et exploitation des données pour les établissements d'enseignement CI",
+    "niveaux": [
+      {
+        "niveau": 1,
+        "label": "Silotée",
+        "description": "Données 100% silotées et non consolidées : dossiers étudiants dans des tableurs Excel distincts par département, notes dans un format par enseignant, aucune source unique de vérité. Rapports MESRS CI préparés manuellement en 2-4 semaines avec données approximatives. Aucune conformité APDP CI sur les traitements."
+      },
+      {
+        "niveau": 2,
+        "label": "Centralisée basique",
+        "description": "SIS centralisé avec données étudiants consolidées partiellement. Quelques rapports standard exportés depuis le SIS (effectifs, taux de réussite). Doublons non gérés (8-15%). Aucun BI institutionnel. Rapports MESRS CI produits en 5-7 jours. Aucune déclaration APDP CI des traitements comportementaux LMS."
+      },
+      {
+        "niveau": 3,
+        "label": "Structurée",
+        "description": "MDM partiel (identifiant unique étudiant, déduplication mensuelle). ETL automatique SIS → data warehouse. Tableau de bord Direction mensuel (5-8 KPIs). Rapports MESRS CI générés en 2 jours. Déclaration APDP CI des principaux traitements. Données anonymisées disponibles pour la recherche interne."
+      },
+      {
+        "niveau": 4,
+        "label": "Pilotée par les données",
+        "description": "BI institutionnel en temps quasi-réel (Power BI ou Tableau, 15+ KPIs, alertes automatiques). MDM complet avec qualité de données monitorée (taux de doublon < 2%, complétude > 95%). Rapports MESRS CI/CAMES/bailleurs automatisés (< 2h). Registre APDP CI complet (30+ traitements). Contribution Open Data MENA CI. Données croisées LMS + SIS + RH pour analytics institutionnels avancés."
+      },
+      {
+        "niveau": 5,
+        "label": "Excellence data-driven",
+        "description": "Plateforme de données unifiée (data lakehouse) alimentant le BI, le ML (EWS décrochage, prédiction insertion) et l'Open Data. Data catalog institutionnel (chaque dataset documenté et trouvable). Qualité de données automatisée (Great Expectations ou équivalent). Score data maturity MESRS CI > 90/100. Partage de données recherche avec réseau AUF/CAMES. Monétisation éthique de données agrégées anonymisées (veille marché éducatif CI)."
+      }
+    ]
+  },
+  "indicateurs_cles": [
+    {
+      "kpi": "Délai de production du rapport d'accréditation MESRS CI (5 KPIs)",
+      "definition": "Nombre de jours nécessaires pour assembler, vérifier et formater les 5 KPIs annuels MESRS CI (taux de réussite, insertion, encadrement, ressources propres, recherche) à partir des sources de données de l'établissement",
+      "unite": "jours",
+      "benchmark_ci": "UVCI CI (Power BI automatisé) : 0,08 jour (2h) — secteur éducation CI non numérisé : 10-20 jours",
+      "cible_sectorielle": "< 1 jour (avec pipeline ETL automatisé)",
+      "source": "Benchmark MESRS CI rapport accréditation 2024"
+    },
+    {
+      "kpi": "Taux de doublons dans la base de données étudiants",
+      "definition": "Part des dossiers étudiants dans le SIS ayant un doublon identifié (même étudiant enregistré deux fois avec des identifiants différents dans la même base ou entre bases SIS et LMS)",
+      "unite": "%",
+      "benchmark_ci": "Universités publiques CI estimé : 8-15% — UVCI CI (MDM actif) : 1,2% — Pigier CI (Salesforce MDM) : 0,8%",
+      "cible_sectorielle": "< 2% (taux acceptable avec MDM actif)",
+      "source": "Audit qualité données MESRS CI 2023 + benchmarks établissements"
+    },
+    {
+      "kpi": "Complétude des dossiers étudiants (champs obligatoires renseignés)",
+      "definition": "Pourcentage des dossiers étudiants actifs ayant l'ensemble des champs obligatoires renseignés (identité, contacts, diplômes antérieurs, données de paiement, statut CNPS pour les formations éligibles)",
+      "unite": "%",
+      "benchmark_ci": "UVCI CI : 96% — UFHB : 68% — secteur éducation privé CI : 81%",
+      "cible_sectorielle": "> 95% (prérequis fiabilité des rapports MESRS CI)",
+      "source": "Audit qualité données UVCI CI 2024"
+    },
+    {
+      "kpi": "Nombre de KPIs institutionnels disponibles en temps réel",
+      "definition": "Nombre d'indicateurs clés de performance institutionnels accessibles en moins de 30 secondes via un tableau de bord BI, sans extraction manuelle",
+      "unite": "KPIs",
+      "benchmark_ci": "UVCI CI : 15 KPIs (Power BI quotidien) — Pigier CI : 22 KPIs (Salesforce Einstein) — UFHB : 0 (rapports manuels uniquement)",
+      "cible_sectorielle": "> 10 KPIs institutionnels en temps réel (socle BI minimum)",
+      "source": "Rapport Direction UVCI CI 2024 + Pigier CI"
+    },
+    {
+      "kpi": "Taux de conformité APDP CI des traitements de données (déclarations)",
+      "definition": "Part des traitements de données académiques et comportementales (LMS analytics, xAPI, CRM marketing) ayant fait l'objet d'une déclaration ou d'une mise en conformité formelle auprès de l'APDP CI",
+      "unite": "%",
+      "benchmark_ci": "UVCI CI : 92% (28/30 traitements déclarés) — secteur éducation CI : < 8%",
+      "cible_sectorielle": "> 90% des traitements comportementaux LMS et marketing déclarés APDP CI",
+      "source": "APDP CI statistiques déclarations établissements éducatifs 2024"
+    }
+  ],
+  "zoom_sur": {
+    "organisation": "UVCI CI (Université Virtuelle de Côte d'Ivoire)",
+    "titre": "BI institutionnel Power BI : 15 KPIs en temps réel, rapports MESRS CI en 2h",
+    "contexte": "En 2021, la direction de l'UVCI CI prenait ses décisions stratégiques avec un rapport mensuel Excel préparé par l'équipe administrative en 5 jours ouvrés. Ce rapport agrégait manuellement les données de 4 sources non connectées : Moodle (apprenants, taux de complétion), SIS custom (inscriptions, paiements), CRM Mailchimp (prospects, conversion) et fichiers RH Excel (tuteurs, indemnités). Les données avaient souvent 2-3 semaines de retard, limitant la réactivité de la direction.",
+    "solution": "Déploiement d'une plateforme BI institutionnelle en 3 phases (12 mois total) : (1) ETL automatisé (Apache Airflow) connectant les 4 sources de données vers un data warehouse AWS Redshift (actualisation toutes les 4 heures) ; (2) Master Data Management : création d'un identifiant étudiant unique (UUID) réconciliant les dossiers entre Moodle, SIS et CRM — réduction des doublons de 12% à 1,2% ; (3) Tableau de bord Power BI institutionnel en 3 vues : direction générale (5 KPIs stratégiques : CA, inscrits, complétion, NPS, insertion), opérationnel (15 KPIs quotidiens : modules actifs, taux décrochage, tickets support, paiements en attente), MESRS CI/APDP CI (rapports accréditation et conformité pré-formatés en 2h). Anonymisation automatique des datasets Open Data publiés sur le portail MENA CI (3 datasets en 2024).",
+    "resultats": {
+      "avant": "Rapport mensuel Direction en 5 jours (Manuel Excel, 4 sources non connectées), 12% de doublons dans la base étudiants, délai rapport MESRS CI 12 jours, décisions stratégiques sans données en temps réel, 0 dataset Open Data publié, 0 traitement LMS déclaré APDP CI",
+      "apres": "15 KPIs institutionnels disponibles en temps réel (< 30 secondes sur Power BI), délai rapport MESRS CI 5 jours → 2h (-96%), taux doublons 12% → 1,2% (-90%), complétude dossiers étudiants 78% → 96%, 3 datasets anonymisés publiés portail Open Data MENA CI (2 400 téléchargements en 2024), 28/30 traitements déclarés APDP CI, économie 3,5 ETP/mois sur la production de rapports manuels, décision de fermeture de 2 filières sous-occupées (< 12 étudiants/cohorte) validée par les données en 48h"
+    },
+    "lessons_learned": "La résistance principale est venue des responsables de département qui ne voulaient pas exposer leurs données (taux de réussite, présences) en temps réel à la direction générale — perçu comme une surveillance. La solution a été de leur donner accès à leur propre vue Power BI avant la direction, et de positionner les données comme outil d'aide à la décision (budget, ressources) plutôt que de contrôle. La décision de fermeture des 2 filières sous-occupées, basée sur les données et partagée avec les parties prenantes, a été la meilleure démonstration de la valeur du BI institutionnel.",
+    "contact_reference": "Direction des Systèmes d'Information UVCI CI — dsi@uvci.edu.ci"
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif gouvernance et exploitation des données — établissements enseignement CI et références",
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "type": "National — leader",
+        "bi_institutionnel": "Power BI (15 KPIs temps réel, 3 vues)",
+        "mdm": "UUID étudiant unique, 1,2% doublons, complétude 96%",
+        "rapport_mesrs_ci": "2h (automatisé ETL + Power BI)",
+        "open_data": "3 datasets anonymisés publiés (portail MENA CI 2024)",
+        "conformite_apdp": "92% traitements déclarés (28/30)",
+        "score_estime": "83/100"
+      },
+      {
+        "organisation": "Pigier CI (Abidjan)",
+        "type": "National — privé",
+        "bi_institutionnel": "Salesforce Einstein Analytics (22 KPIs temps réel)",
+        "mdm": "Salesforce MDM natif, 0,8% doublons, complétude 98%",
+        "rapport_mesrs_ci": "4h (Salesforce reports pré-formatés)",
+        "open_data": "Non (données propriétaires)",
+        "conformite_apdp": "85% traitements déclarés (Salesforce DPA APDP CI)",
+        "score_estime": "81/100"
+      },
+      {
+        "organisation": "UFHB (Université FHB Abidjan)",
+        "type": "National — université publique",
+        "bi_institutionnel": "Aucun (rapports Excel manuels)",
+        "mdm": "Aucun (8-15% doublons estimés, complétude 68%)",
+        "rapport_mesrs_ci": "15-20 jours (assemblage manuel multi-services)",
+        "open_data": "Non",
+        "conformite_apdp": "< 5% traitements déclarés",
+        "score_estime": "14/100"
+      },
+      {
+        "organisation": "Ashesi University (Ghana)",
+        "type": "Régional — référence Afrique de l'Ouest",
+        "bi_institutionnel": "Tableau + Salesforce (25 KPIs temps réel, partage avec conseil d'administration)",
+        "mdm": "Salesforce MDM, 0,5% doublons, complétude 99%",
+        "rapport_mesrs_ci": "Rapport Ghana CAA en 6h (automatisé)",
+        "open_data": "Oui (3 datasets sur portail Ghana Open Data)",
+        "conformite_apdp": "Conforme Ghana Data Protection Act 2012 (équivalent APDP CI)",
+        "score_estime": "88/100"
+      },
+      {
+        "organisation": "edX / 2U (USA)",
+        "type": "International — leader mondial",
+        "bi_institutionnel": "Data platform propriétaire (500+ KPIs, ML prédictif, 140M apprenants)",
+        "mdm": "MDM global multi-sources (Snowflake data warehouse)",
+        "rapport_mesrs_ci": "Rapports institutionnels automatisés en temps réel",
+        "open_data": "Open edX datasets publiés (recherche éducative mondiale)",
+        "conformite_apdp": "Conforme GDPR + FERPA + CCPA (certifications tiers)",
+        "score_estime": "98/100"
+      }
+    ]
+  },
+  "bonnes_pratiques": [
+    {
+      "pratique": "Commencer par créer un identifiant étudiant unique (UUID) avant tout analytics",
+      "description": "Sans identifiant unique, tous les analytics sont pollués par les doublons. La première étape du MDM est de définir et déployer un UUID (Universally Unique Identifier) étudiant utilisé par tous les systèmes (SIS, LMS, CRM, RH). UVCI CI : réduction des doublons de 12% à 1,2% après UUID — précondition de tous les tableaux de bord institutionnels.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Connecter les sources de données en ETL automatisé avant de construire les tableaux de bord",
+      "description": "Un tableau de bord Power BI alimenté manuellement (copier-coller Excel) n'apporte pas de valeur réelle. L'investissement dans l'ETL automatisé (Apache Airflow, Azure Data Factory ou n8n open source) est le prérequis. Coût : 3-8 M FCFA, ROI dès le 3ème mois via les heures économisées.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Structurer les données pour répondre d'abord aux exigences MESRS CI et CAMES",
+      "description": "Les 5 KPIs MESRS CI (réussite, insertion, encadrement, ressources propres, recherche) sont le premier cas d'usage du BI institutionnel — ils ont une deadline fixe et un impact direct sur l'accréditation. Construire le data warehouse autour de ces KPIs garantit un ROI immédiat et mesurable.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Déclarer les traitements comportementaux LMS à l'APDP CI avant de les déployer",
+      "description": "Les données xAPI (comportements en ligne des apprenants : temps sur chaque page, réponses aux QCM, fréquence de connexion) sont des données personnelles au sens de la Loi 2013-450. Leur traitement à des fins d'analytics (EWS, prédiction décrochage) doit être déclaré à l'APDP CI avec mention dans la politique de confidentialité accessible aux apprenants.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Publier des données éducatives anonymisées sur le portail Open Data MENA CI",
+      "description": "La contribution au portail Open Data MENA CI (taux de réussite par filière anonymisé, données d'insertion professionnelle, satisfaction apprenants) renforce la réputation de transparence de l'établissement et améliore son positionnement auprès des bailleurs (AFD, IFC, Google.org) qui conditionnent leurs financements à la disponibilité des données d'impact.",
+      "priorite": "Moyenne"
+    }
+  ],
+  "pieges_a_eviter": [
+    {
+      "piege": "Construire des tableaux de bord BI sur des données non nettoyées",
+      "consequence": "Un tableau de bord alimenté par des données avec 12% de doublons ou 32% de champs manquants affiche des KPIs faux — ce qui est plus dangereux que pas de KPIs du tout. Les décisions prises sur des données corrompues peuvent coûter des millions de FCFA (fermeture d'une filière rentable par erreur, maintien d'une filière déficitaire).",
+      "recommandation": "Mettre en place des règles de qualité de données (validation + alertes) avant d'afficher un KPI sur le tableau de bord. Un KPI avec une indication de fiabilité ('données incomplètes à 68% — résultat indicatif') vaut mieux qu'un KPI présenté comme fiable alors qu'il ne l'est pas"
+    },
+    {
+      "piege": "Partager des données apprenants nominatives entre départements sans cadre APDP CI",
+      "consequence": "Le partage interne de données apprenants (notes, comportements LMS, données de santé pour les aménagements d'examens) doit être encadré par des règles d'accès conformes à la Loi 2013-450. Des partages non contrôlés (email avec liste de notes détaillées) exposent l'établissement à des sanctions et à des litiges étudiants.",
+      "recommandation": "Déployer un contrôle d'accès basé sur les rôles (RBAC) dans le data warehouse : chaque utilisateur ne voit que les données dont il a besoin pour sa mission"
+    },
+    {
+      "piege": "Utiliser des outils BI grand public (Google Sheets partagé en ligne) pour les données institutionnelles",
+      "consequence": "Un Google Sheet partagé contenant les données de scolarité ou d'insertion de 45 000 étudiants est un risque APDP CI majeur : accès non contrôlé, données indexables par Google, historique non supprimable. Incident documenté : relevés de notes UFHB accessibles sur Google Drive public (2022).",
+      "recommandation": "Utiliser des outils BI avec contrôle d'accès et journalisation (Power BI Premium, Tableau Server, Metabase auto-hébergé) pour toutes les données institutionnelles sensibles"
+    },
+    {
+      "piege": "Vouloir tout mesurer dès le départ (KPI inflation)",
+      "consequence": "Un tableau de bord avec 80 KPIs est inutilisable — les décideurs ne savent pas où regarder, les alertes sont ignorées, et la maintenance du pipeline de données devient un gouffre de ressources. L'UFHB a tenté un projet BI avec 120 indicateurs en 2022 — le projet a été abandonné après 8 mois faute de priorisation.",
+      "recommandation": "Commencer avec 5-7 KPIs stratégiques (taux de réussite, taux de complétion, NPS, CA, taux d'insertion), les perfectionner, puis ajouter progressivement. La règle des 7 KPIs (pas plus de 7 sur une page de tableau de bord) est un standard BI reconnu"
+    }
+  ],
+  "roadmap": {
+    "titre": "Roadmap gouvernance et exploitation des données — établissement d'enseignement CI",
+    "phases": [
+      {
+        "phase": "Phase 1 — Fondations données (Mois 1-4)",
+        "actions": [
+          "Audit qualité des données existantes (doublons, complétude, cohérence SIS vs. LMS)",
+          "Définition et déploiement de l'identifiant étudiant unique (UUID)",
+          "Déclaration des traitements principaux à l'APDP CI (inscriptions, notes, LMS analytics)",
+          "Rapport MESRS CI 5 KPIs automatisé (ETL simple + Power BI ou Google Data Studio)"
+        ],
+        "budget_indicatif": "2 - 6 M FCFA (audit + UUID + déclarations APDP CI + ETL basique)"
+      },
+      {
+        "phase": "Phase 2 — BI institutionnel (Mois 5-12)",
+        "actions": [
+          "ETL automatisé multi-sources (SIS + LMS + CRM + RH) vers data warehouse",
+          "Tableau de bord institutionnel (10-15 KPIs, 3 vues : direction, opérationnel, MESRS CI)",
+          "Master Data Management complet (déduplication automatique, règles qualité)",
+          "Anonymisation et publication premier dataset Open Data sur portail MENA CI"
+        ],
+        "budget_indicatif": "6 - 18 M FCFA (ETL + data warehouse + Power BI + MDM)"
+      },
+      {
+        "phase": "Phase 3 — Analytics avancés (Mois 13-24)",
+        "actions": [
+          "Intégration analytics comportementaux LMS (xAPI + LRS) dans le data warehouse",
+          "Modèles prédictifs : décrochage (EWS XGBoost), insertion professionnelle, rétention tuteurs",
+          "Data catalog institutionnel (documentation de chaque dataset, lineage, propriétaire)",
+          "Partage données recherche avec réseau AUF/CAMES (données agrégées anonymisées)"
+        ],
+        "budget_indicatif": "10 - 25 M FCFA (analytics ML + LRS + data catalog + partage AUF)"
+      }
+    ]
+  },
+  "ressources": {
+    "formations": [
+      "Microsoft Power BI — formation certifiante PL-300 (tarif éducation Microsoft, en ligne)",
+      "Coursera Data Engineering — spécialisation ETL et data warehouses (IBM, Google — 6 mois)",
+      "APDP CI — formation conformité traitement données académiques (Abidjan, 1 jour)",
+      "FDFP CI — financement formations data engineering et BI pour établissements agréés"
+    ],
+    "outils_recommandes": [
+      "Power BI Premium — BI institutionnel, connecteurs natifs Moodle et Salesforce (tarif éducation Microsoft)",
+      "Apache Airflow (open source) — orchestration ETL automatisé multi-sources",
+      "AWS Redshift ou Azure Synapse — data warehouse cloud (tarif éducation AUF négocié)",
+      "Metabase (open source, auto-hébergé) — BI accessible sans licence propriétaire pour établissements à budget limité",
+      "Great Expectations (open source Python) — validation qualité données automatisée"
+    ],
+    "references_reglementaires": [
+      "APDP CI — Loi 2013-450 (déclaration traitements comportementaux LMS, anonymisation Open Data)",
+      "MESRS CI — 5 KPIs accréditation annuelle et format rapport standardisé (mesrs.ci)",
+      "MENA CI — portail Open Data Éducation CI et guide contribution (données.education.ci)",
+      "CAMES — exigences données suivi alumni et insertion pour accréditations UEMOA",
+      "AUF — politique partage données recherche éducative réseau universités francophones (auf.org)"
+    ]
+  },
+  "ai_context": {
+    "scoring_dimension": "Maturité de la gouvernance et de l'exploitation des données dans les établissements d'enseignement",
+    "scoring_rubric": {
+      "score_1_to_20": "Données 100% silotées en tableurs Excel non connectés, aucun MDM, doublons > 15%, rapports MESRS CI préparés manuellement en 10-20 jours, aucune conformité APDP CI sur les traitements comportementaux, aucun BI institutionnel.",
+      "score_21_to_40": "SIS centralisé avec données partiellement consolidées, quelques rapports SIS standards, doublons 8-15% non gérés, rapport MESRS CI en 5-7 jours, aucun BI temps réel, 0 déclaration APDP CI des traitements LMS.",
+      "score_41_to_60": "MDM partiel (UUID étudiant), ETL automatique SIS → data warehouse, tableau de bord mensuel (5-8 KPIs), rapport MESRS CI en 2 jours, déclarations APDP CI principales, anonymisation datasets basique.",
+      "score_61_to_80": "BI institutionnel temps réel (15+ KPIs, 3 vues), MDM complet (< 2% doublons, > 95% complétude), rapport MESRS CI < 2h, 90%+ traitements déclarés APDP CI, données Open Data publiées sur portail MENA CI, analytics prédictifs basiques.",
+      "score_81_to_100": "Data lakehouse unifié, data catalog institutionnel, ML prédictif (EWS, insertion, rétention), 100% conformité APDP CI, partage données recherche AUF/CAMES, monétisation éthique données agrégées, score MESRS CI données > 90/100."
+    },
+    "questions_discriminantes": [
+      "Disposez-vous d'un identifiant étudiant unique réconciliant les données entre votre LMS, votre SIS et votre CRM ?",
+      "En combien de temps pouvez-vous produire le rapport des 5 KPIs d'accréditation MESRS CI (taux de réussite, insertion, encadrement, ressources propres, recherche) ?",
+      "Avez-vous un tableau de bord institutionnel permettant à votre direction de suivre les KPIs clés en temps réel, sans extraction manuelle ?",
+      "Avez-vous déclaré vos traitements de données comportementales LMS (xAPI, analytics apprenants) auprès de l'APDP CI ?",
+      "Publiez-vous des données éducatives anonymisées sur le portail Open Data MENA CI ou sous toute autre forme accessible ?"
+    ],
+    "signaux_avances": [
+      "Data warehouse cloud centralisant toutes les sources (LMS, SIS, CRM, RH) avec actualisation automatique toutes les 4 heures ou moins",
+      "Taux de doublons dans la base étudiants inférieur à 2% grâce à un MDM actif avec identifiant unique",
+      "Rapport d'accréditation MESRS CI (5 KPIs) généré automatiquement en moins de 2 heures par un pipeline ETL + BI",
+      "100% des traitements comportementaux LMS (xAPI, learning analytics) déclarés et conformes APDP CI",
+      "Modèles prédictifs ML (décrochage, insertion professionnelle) intégrés au tableau de bord institutionnel et alimentant les décisions pédagogiques"
+    ]
+  }
+}

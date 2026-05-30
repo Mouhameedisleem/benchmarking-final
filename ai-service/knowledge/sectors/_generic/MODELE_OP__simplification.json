@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "axis": "MODELE_OPERATIONNEL",
+    "sub_axis": "Simplification & Automatisation",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Hyperautomatisation — automatiser tout ce qui peut l'être",
+      "description": "Gartner définit l'hyperautomatisation comme l'application disciplinée de RPA, IA, ML et iPaaS pour automatiser les processus métier de bout en bout. L'objectif : identifier et automatiser rapidement tous les processus automatisables.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "85 % des organisations ont augmenté leur niveau d'automatisation en 2024 (Gartner)",
+      "source": "Gartner Top Strategic Technology Trends 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Low-Code / No-Code — démocratisation du développement d'automatisations",
+      "description": "Les plateformes low-code (Power Platform, OutSystems) permettent aux équipes métier de créer leurs propres automatisations sans dépendre des équipes IT, réduisant les délais de 80 %.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "70 % des nouvelles applications d'entreprise utilisent du low-code/no-code d'ici 2025 (Gartner)",
+      "source": "Gartner Low-Code Development Technologies 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Process Mining — cartographie automatique des processus réels",
+      "description": "Le process mining (Celonis, UiPath Process Mining) analyse les logs des systèmes pour cartographier les processus tels qu'ils sont réellement exécutés (vs les procédures théoriques) et identifier les goulots d'étranglement.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "37 % des grandes entreprises ont initié le process mining (Gartner 2024)",
+      "source": "Gartner Process Mining Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Agentic AI — agents IA autonomes pour les tâches complexes",
+      "description": "Les agents IA (AutoGPT, Microsoft Copilot Studio agents) peuvent désormais exécuter des workflows multi-étapes de façon autonome (recherche, analyse, rédaction, envoi) sans supervision humaine pour chaque étape.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "40 % des grandes entreprises pilotent des agents IA autonomes en 2024 (Gartner 2024)",
+      "source": "Gartner Agentic AI Trends 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "RPA (Robotic Process Automation)",
+      "category": "Automatisation des processus répétitifs",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en Afrique",
+      "leading_vendors": ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate", "Zapier (PME)"]
+    },
+    {
+      "name": "Low-Code / No-Code Platform",
+      "category": "Développement citoyen",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["Microsoft Power Platform", "OutSystems", "Mendix", "Appian", "Bubble"]
+    },
+    {
+      "name": "Process Mining",
+      "category": "Découverte et optimisation des processus",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["Celonis", "UiPath Process Mining", "IBM Process Mining", "SAP Signavio", "Minit"]
+    },
+    {
+      "name": "BPM (Business Process Management)",
+      "category": "Gestion et orchestration des processus",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["Pega", "Appian", "IBM BPM", "Camunda (open-source)", "Bizagi"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Automatisation des processus administratifs répétitifs (reporting, réconciliation, relances) via RPA ou Power Automate",
+        "differentiator": "Premier acteur sectoriel à déployer une plateforme low-code permettant aux équipes métier de créer leurs propres automatisations",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "RPA déployé pour l'automatisation du KYC, de la réconciliation comptable et du reporting réglementaire sur 33 pays",
+        "differentiator": "Réduction de 60 % du temps de traitement des opérations back-office via 200+ robots RPA actifs",
+        "source": "Ecobank Technology Report 2023 / UiPath Case Study Africa"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Siemens",
+        "country": "Allemagne",
+        "key_practice": "Hyperautomatisation : 1 000+ robots RPA actifs, process mining sur 500 processus, agents IA pour les achats",
+        "differentiator": "Celonis Process Mining a révélé 1 Md€ d'opportunités d'optimisation cachées dans les processus P2P",
+        "source": "Siemens Digital Industries Report 2023 / Celonis Siemens Case Study"
+      },
+      {
+        "organisation": "JP Morgan Chase",
+        "country": "USA",
+        "key_practice": "COIN (Contract Intelligence) : IA analysant 12 000 contrats de prêt en secondes vs 360 000h humaines/an",
+        "differentiator": "Legal tech IA interne traitant en 3 secondes ce qu'il faut 18h à un juriste — 360 000h de travail économisées/an",
+        "source": "JP Morgan Annual Report 2023 / Harvard Business Review 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Processus 100 % manuels. Aucune automatisation. Saisie manuelle omniprésente. Erreurs fréquentes. Temps de traitement longs. Processus non documentés.",
+    "level_2_developing": "Quelques automatisations ponctuelles (macros Excel, scripts). Processus partiellement documentés. Automatisation non gouvernée. Pas de vision globale.",
+    "level_3_defined": "RPA déployé sur les processus répétitifs clés. Processus documentés et optimisés avant automatisation. Métriques d'efficacité mesurées. Centre d'excellence RPA naissant.",
+    "level_4_managed": "Hyperautomatisation structurée. Low-code pour les équipes métier. Process Mining actif. 50+ processus automatisés. ROI des automatisations mesuré.",
+    "level_5_optimizing": "Agents IA autonomes sur les processus complexes. Process Mining continu. 200+ automatisations actives. Citizen developers actifs. Économies d'ETP mesurées et réinvesties."
+  },
+
+  "regulations": [
+    {
+      "name": "SYSCOHADA Révisé — Processus comptables et financiers",
+      "issuing_body": "OHADA",
+      "scope": "Entreprises des pays membres OHADA",
+      "key_requirement": "Traçabilité des processus comptables, piste d'audit complète pour les opérations automatisées",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.ohada.com"
+    },
+    {
+      "name": "Directives BCEAO sur les processus de paiement automatisés",
+      "issuing_body": "BCEAO",
+      "scope": "Institutions financières automatisant des processus de paiement",
+      "key_requirement": "Contrôles humains résiduels sur les processus automatisés critiques, audit trail complet",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Automatisation d'un processus mal conçu — accélérer l'erreur",
+      "description": "Automatiser un processus inefficace ou mal conçu ne fait qu'accélérer la production d'erreurs. 'Automatiser le chaos produit le chaos automatisé'.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Standardiser et simplifier les processus avant de les automatiser. Utiliser le process mining pour identifier les inefficacités avant l'automatisation."
+    },
+    {
+      "title": "Fragilité des robots RPA — maintenance élevée",
+      "description": "Les robots RPA basés sur des interfaces graphiques sont fragiles : chaque mise à jour de l'interface de l'application sous-jacente casse le robot, créant une dette de maintenance significative.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Préférer les APIs aux interfaces graphiques pour les automatisations critiques. Maintenir un inventaire des robots et des plans de maintenance préventive."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Libérer les collaborateurs des tâches sans valeur ajoutée",
+      "description": "L'automatisation des tâches répétitives (saisie, réconciliation, reporting) libère 20-40 % du temps des équipes pour des activités à valeur ajoutée (relation client, analyse, innovation).",
+      "impact_level": "Très élevé",
+      "time_to_value": "3-12 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Réduction des erreurs et des coûts de correction",
+      "description": "Les processus automatisés ont un taux d'erreur < 0,01 % vs 1-5 % pour les processus manuels. La réduction des erreurs de saisie génère des économies directes et réduit le risque opérationnel.",
+      "impact_level": "Élevé",
+      "time_to_value": "3-6 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "SAP",
+      "target": "Signavio",
+      "amount": "1,2 Mds$",
+      "date": "2021",
+      "strategic_rationale": "Intégrer le process mining et la gestion des processus métier dans l'écosystème SAP pour l'optimisation continue",
+      "source": "SAP Press Release 2021"
+    },
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Investors (Accel, Sequoia)",
+      "target": "UiPath",
+      "amount": "IPO 9 Mds$",
+      "date": "2021",
+      "strategic_rationale": "Développer la plateforme d'hyperautomatisation leader mondial pour les entreprises",
+      "source": "UiPath IPO Prospectus 2021"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "JP Morgan Chase",
+    "pays": "USA",
+    "technologie": "COIN — Contract Intelligence IA : 360 000 heures de travail juridique automatisées",
+    "description": "JP Morgan a développé COIN (Contract Intelligence), un système d'IA qui analyse les contrats de prêt commerciaux. Là où 360 000 heures de travail juridique annuelles étaient nécessaires pour interpréter 12 000 contrats de prêt, COIN le réalise en secondes avec une précision supérieure. Au-delà de COIN, JP Morgan déploie 300+ robots RPA sur les processus back-office (KYC, réconciliation, reporting réglementaire), économisant 500 000 heures de travail manuel par an. Le programme d'automatisation génère 300 M$ d'économies annuelles.",
+    "resultats": "360 000h juridiques automatisées · 300+ robots RPA · 500 000h back-office économisées · 300 M$ d'économies/an · Erreurs de conformité -80 %",
+    "source": "JP Morgan Annual Report 2023 / Harvard Business Review AI Banking 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité simplification & automatisation — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "Processus clés documentés et cartographiés", "RPA déployé sur les processus répétitifs", "Low-code pour les équipes métier", "Process Mining actif", "ROI des automatisations mesuré"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "✗", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'automatisation des processus est le levier d'efficacité opérationnelle le plus direct. Chaque processus automatisé libère du temps humain pour des tâches à valeur ajoutée et réduit les erreurs. En Afrique de l'Ouest, le premier niveau d'automatisation (Power Automate, Zapier) est accessible aux PMEs sans expertise technique approfondie.",
+    "maturity_max_description": "Hyperautomatisation avec RPA + IA. Process Mining continu pour l'optimisation. Low-code pour les citizen developers. 200+ automatisations actives. Agents IA autonomes sur les processus complexes. ROI de chaque automatisation mesuré et publié. Centre d'excellence automatisation opérationnel.",
+    "scoring_rubric": {
+      "score_1_to_20": "Processus 100 % manuels. Aucune automatisation. Saisie manuelle partout. Processus non documentés.",
+      "score_21_to_40": "Quelques macros Excel ou scripts. Automatisations ponctuelles non gouvernées. Pas de vision globale.",
+      "score_41_to_60": "RPA sur les processus répétitifs clés. Processus documentés avant automatisation. Métriques d'efficacité mesurées.",
+      "score_61_to_80": "Hyperautomatisation structurée. Low-code métier. Process Mining. 50+ automatisations. ROI mesuré.",
+      "score_81_to_100": "Agents IA autonomes. Process Mining continu. 200+ automatisations. Citizen developers actifs."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur la maturité de sa simplification et automatisation des processus. Analyse la cartographie des processus existants, le déploiement de solutions RPA sur les tâches répétitives, l'usage du low-code pour les équipes métier, l'activation du process mining et la mesure du ROI des automatisations.",
+    "key_questions_for_llm": [
+      "Les processus clés de l'organisation sont-ils documentés et cartographiés avant toute automatisation ?",
+      "Des solutions RPA (UiPath, Power Automate) sont-elles déployées pour automatiser les processus répétitifs ?",
+      "Les équipes métier peuvent-elles créer leurs propres automatisations via des outils low-code sans dépendre de l'IT ?",
+      "Le process mining est-il utilisé pour analyser et optimiser les processus réels à partir des logs systèmes ?",
+      "Le ROI des automatisations déployées est-il mesuré et reporté régulièrement (heures économisées, erreurs réduites) ?"
+    ]
+  }
+}

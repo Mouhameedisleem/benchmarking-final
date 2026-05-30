@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "axis": "BUSINESS",
+    "sub_axis": "Modèle économique digital",
+    "sector": "assurance",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Bancassurance digitale — le canal de distribution le plus rentable en UEMOA",
+      "description": "La bancassurance représente 25-40 % des primes collectées par les assureurs CIMA actifs dans ce canal. La digitalisation de la bancassurance (offre intégrée dans l'application bancaire) multiplie les taux de pénétration par 3 à 5 selon les expériences africaines.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "18 assureurs UEMOA actifs en bancassurance digitale en 2024 (FANAF)",
+      "source": "FANAF Rapport Bancassurance 2024 / Munich Re Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Commission digitale vs commission agent — réduction du coût d'acquisition",
+      "description": "Le coût d'acquisition d'un client par canal digital (5 000-15 000 FCFA) est 3 à 5 fois inférieur à celui d'un agent physique (25 000-60 000 FCFA) en UEMOA. Les assureurs qui développent le direct-digital améliorent structurellement leur ratio combiné.",
+      "impact_level": "Élevé",
+      "horizon": "24-36 mois",
+      "adoption_rate": "10 % des nouvelles polices IARD souscrites en direct-digital en UEMOA (estimation 2024)",
+      "source": "McKinsey Africa Insurance Distribution 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Assurance as a Service (AaaS) — monétisation de la capacité d'assurance via API",
+      "description": "Les assureurs disposant d'un agrément CIMA peuvent monétiser leur capacité de souscription en proposant des API à des acteurs non-assureurs (fintech, e-commerce, opérateurs télécoms) qui intègrent l'assurance dans leurs produits.",
+      "impact_level": "Élevé",
+      "horizon": "36-60 mois",
+      "adoption_rate": "3 assureurs UEMOA ont lancé un modèle AaaS en 2024",
+      "source": "Swiss Re Embedded Insurance Africa 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Plateforme de distribution multi-canal (omnicanal assurance)",
+      "category": "Distribution digitale",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Majesco Digital1st", "Sapiens DigitalSuite", "Ebix Insurance Solutions", "FINEOS Platform"]
+    },
+    {
+      "name": "Agrégateur d'assurance en ligne (comparateur)",
+      "category": "Distribution digitale B2C",
+      "maturity_stage": "Mature en Europe",
+      "adoption_in_sector": "Émergence en UEMOA — AssurAfrique, Cowry Assurance",
+      "leading_vendors": ["AssurAfrique (CI)", "Cowry (Nigéria)", "Bisika (Kenya)", "PolicyBazaar (Inde — référence émergents)"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Sanlam CI (ex-SAHAM CI)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Modèle de bancassurance digitale avec SGBCI et Ecobank. Distribution via application mobile bancaire. Commission digitale réduite de 30 % vs réseau agent.",
+        "differentiator": "Sanlam CI génère 38 % de ses nouvelles polices vie via la bancassurance digitale — le ratio le plus élevé du marché ivoirien",
+        "source": "Sanlam CI Rapport Commercial 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Old Mutual Africa",
+        "country": "Afrique du Sud / Pan-Afrique",
+        "key_practice": "Modèle hybride agent-digital : les agents utilisent une application mobile pour la souscription, réduisant le coût de traitement de 45 %. Plateforme Old Mutual Money disponible via USSD dans les pays sans smartphones.",
+        "differentiator": "Old Mutual a réduit son coût d'acquisition client de 52 % en 5 ans via la digitalisation des agents — sans supprimer le réseau de distribution",
+        "source": "Old Mutual Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Ping An Insurance (Chine)",
+        "country": "Chine",
+        "key_practice": "Modèle 'Finance + Technology' — écosystème intégré santé, auto, habitation. 220 millions de clients. IA pour tarification, sinistres et détection de fraude. 10 Mds$ investis en technologie en 2023.",
+        "differentiator": "Ping An génère 35 % de son CA via des canaux 100 % digitaux et a transformé son modèle en plateforme de services de vie — référence mondiale en transformation du modèle économique assurance",
+        "source": "Ping An Annual Report 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Modèle 100 % agents physiques. Aucune présence digitale commerciale. Revenus 100 % commissions traditionnelles. Coût d'acquisition très élevé.",
+    "level_2_developing": "Site web avec formulaire de contact. Quelques courtiers partenaires en ligne. Pas de souscription directe. Bancassurance non digitalisée.",
+    "level_3_defined": "Bancassurance digitale avec 1-2 banques partenaires. Souscription en ligne pour produits simples. Commission digitale différenciée. Partenariat avec 1 comparateur en ligne.",
+    "level_4_managed": "Multi-canal actif : direct-digital + bancassurance + agents équipés app. > 15 % nouvelles polices en digital. Modèle AaaS pilote avec 1 fintech partenaire.",
+    "level_5_optimizing": "> 30 % polices via canaux digitaux. AaaS commercialisé avec 3+ partenaires. Coût acquisition digital < 15 000 FCFA. Plateforme ouverte aux courtiers digitaux."
+  },
+
+  "regulations": [
+    {
+      "name": "Règlement CIMA sur la bancassurance",
+      "issuing_body": "CIMA",
+      "scope": "Partenariats banque-assurance dans les 14 États membres",
+      "key_requirement": "Les banques peuvent distribuer des produits d'assurance sous convention avec un assureur agréé CIMA. La souscription digitale via l'application bancaire est autorisée sous conditions de traçabilité et de consentement.",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.cima-afrique.org"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Cannibalisation du réseau d'agents par le digital — risque social et commercial",
+      "description": "Le développement du direct-digital peut générer des conflits avec les agents généraux et courtiers qui représentent 70-80 % du CA. Une stratégie digitale mal gérée peut démotiver le réseau et entraîner des pertes de CA à court terme supérieures aux gains digitaux.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Stratégie 'agent augmenté' : équiper les agents d'outils digitaux avant de développer le direct. Définir des zones et produits exclusifs pour chaque canal. Incentives pour les agents qui génèrent des leads digitaux."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Comparateur d'assurance en ligne — marché quasi-inexistant en CI",
+      "description": "Il n'existe pas encore de comparateur d'assurance mature en Côte d'Ivoire. Un assureur qui développe ou partenaire avec un comparateur capture les leads digitaux en amont de la concurrence.",
+      "impact_level": "Élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [],
+
+  "zoom_case_study": {
+    "entreprise": "Ping An Insurance — De l'assureur traditionnel à la super-plateforme de services de vie",
+    "pays": "Chine",
+    "technologie": "IA, big data, FinTech intégrée — écosystème santé-auto-habitation-finance",
+    "description": "Ping An est parti d'un assureur vie classique fondé en 1988 pour devenir en 2023 la 4ème entreprise la plus profitable du monde. La transformation : entre 2013 et 2023, Ping An a investi 10 Mds$ en technologie et créé un écosystème de 220 millions de clients autour de 5 services : assurance, santé (Ping An Good Doctor — 400 millions d'utilisateurs), auto (Autohome), immobilier et finance. Chaque service génère des données qui alimentent les autres. Le modèle 'Finance + Technology' génère 35 % du CA via des canaux 100 % digitaux. L'IA traite 98 % des sinistres auto simples sans intervention humaine. Leçon pour les assureurs UEMOA : la transformation du modèle économique passe par l'écosystème, pas seulement la digitalisation des processus existants.",
+    "resultats": "220 M clients · 35 % CA digital · 10 Mds$ investis en tech · 98 % sinistres auto auto-traités · 4ème entreprise mondiale par profit · Ping An Good Doctor 400 M utilisateurs",
+    "source": "Ping An Annual Report 2023 / Harvard Business Review Ping An Transformation 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité modèle économique digital — benchmark assureurs CIMA/UEMOA",
+    "colonnes": ["Organisation", "Bancassurance digitale active", "Souscription directe en ligne", "Coût acquisition digital < 20K FCFA", "Modèle AaaS ou API partenaires", "> 15 % polices via digital"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "Partiel", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Le modèle économique des assureurs UEMOA repose encore à 80-90 % sur les réseaux d'agents et courtiers physiques, avec des coûts d'acquisition élevés (25 000-60 000 FCFA par client) et des ratios combinés supérieurs à 100 % pour certains acteurs. La digitalisation du modèle — bancassurance digitale, direct-digital, AaaS — représente le principal levier de rentabilité structurelle. Les assureurs qui n'amorcent pas cette transition avant 2027 risquent d'être disruptés par les insurtechs et les opérateurs télécoms.",
+    "maturity_max_description": "Multi-canal actif avec > 30 % des nouvelles polices via canaux digitaux (direct, bancassurance digitale, embedded). Coût d'acquisition digital < 15 000 FCFA. Modèle AaaS opérationnel avec 3+ partenaires fintech ou e-commerce. Plateforme ouverte aux courtiers digitaux. Ratio combiné en amélioration structurelle grâce à la réduction des coûts d'acquisition.",
+    "scoring_rubric": {
+      "score_1_to_20": "100 % agents physiques. Aucun canal digital commercial. Coût acquisition > 50 000 FCFA.",
+      "score_21_to_40": "Site web passif. Pas de souscription en ligne. Bancassurance non digitalisée.",
+      "score_41_to_60": "Bancassurance digitale avec 1-2 banques. Souscription en ligne produits simples. < 10 % digital.",
+      "score_61_to_80": "Multi-canal actif. 10-25 % polices digitales. Agents équipés app. AaaS pilote.",
+      "score_81_to_100": "> 30 % polices digitales. AaaS commercial. Coût acquisition < 15K FCFA. Écosystème partenaires."
+    },
+    "prompt_injection_context": "Cette compagnie d'assurance est évaluée sur la transformation de son modèle économique dans le contexte CIMA/UEMOA. Analyse la part des polices souscrites via les canaux digitaux, le développement de la bancassurance digitale, le coût d'acquisition client, et l'existence de modèles innovants (AaaS, embedded insurance).",
+    "key_questions_for_llm": [
+      "Quelle part des nouvelles polices est souscrite via des canaux digitaux (direct, bancassurance digitale, embedded) ?",
+      "La bancassurance digitale est-elle opérationnelle avec au moins une banque partenaire ?",
+      "Le coût d'acquisition d'un client par canal digital a-t-il été mesuré et comparé au canal agent ?",
+      "Un modèle Assurance as a Service (AaaS) ou d'assurance embarquée est-il en développement ou actif ?",
+      "Les agents disposent-ils d'outils digitaux (application mobile) pour souscrire et gérer les polices ?"
+    ]
+  }
+}

@@ -68,7 +68,7 @@ import { environment } from '../../../../environments/environment';
               <ng-container *ngIf="evaluationStatus === 'none'">
                 <ul class="list-unstyled small text-muted mb-4">
                   <li class="mb-1"><i class="fas fa-check text-success me-1"></i>Questions personnalisées</li>
-                  <li class="mb-1"><i class="fas fa-check text-success me-1"></i>Analyse par 7 axes stratégiques</li>
+                  <li class="mb-1"><i class="fas fa-check text-success me-1"></i>Analyse par 9 axes stratégiques</li>
                   <li class="mb-1"><i class="fas fa-check text-success me-1"></i>Score instantané à la soumission</li>
                 </ul>
                 <a routerLink="/client/questionnaire" class="btn btn-primary w-100 rounded-pill mt-auto">

@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "axis": "BUSINESS",
+    "sub_axis": "Modèle économique digital",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Platformisation et modèle marketplace",
+      "description": "Les organisations leaders transforment leur cœur de métier en plateforme : elles créent de la valeur en connectant offreurs et demandeurs, capturant une commission sur chaque transaction.",
+      "impact_level": "Très élevé",
+      "horizon": "12-36 mois",
+      "adoption_rate": "40 % des grandes entreprises (Gartner 2024)",
+      "source": "Gartner Platform Business Models 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Modèle freemium et subscription economy",
+      "description": "Le passage d'un revenu transactionnel unique à un revenu récurrent par abonnement améliore la visibilité financière et la valorisation. SaaS, médias, services digitaux adoptent massivement ce modèle.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "70 % des nouveaux services digitaux (Zuora Subscription Economy Index 2024)",
+      "source": "Zuora Subscription Economy Index 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Monétisation des données (data-as-a-service)",
+      "description": "Les données collectées lors des interactions clients deviennent une source de revenus : vente d'insights anonymisés, APIs de données sectorielles, rapports de benchmarking.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "30 % des grandes organisations (IDC 2024)",
+      "source": "IDC Data Monetization Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Embedded finance et services financiers intégrés",
+      "description": "Les organisations non-financières intègrent des services financiers (paiement, crédit, assurance) dans leurs parcours clients, créant de nouveaux flux de revenus sans dépendre des banques traditionnelles.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "45 % des plateformes e-commerce (McKinsey 2024)",
+      "source": "McKinsey Embedded Finance Report 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Plateformes e-commerce et marketplace",
+      "category": "Commerce digital",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne à élevée",
+      "leading_vendors": ["Shopify", "Magento (Adobe Commerce)", "WooCommerce", "Jumia"]
+    },
+    {
+      "name": "Systèmes de facturation par abonnement",
+      "category": "Modèle récurrent",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible à moyenne",
+      "leading_vendors": ["Stripe Billing", "Chargebee", "Recurly", "Zuora"]
+    },
+    {
+      "name": "Passerelles de paiement digital",
+      "category": "Monétisation",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Élevée",
+      "leading_vendors": ["Wave", "Orange Money API", "MTN MoMo API", "Stripe", "PayDunya"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Intégration du paiement mobile (Orange Money, MTN MoMo, Wave) dans les parcours de vente",
+        "differentiator": "Premier acteur à lancer un abonnement digital dans son secteur",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Jumia",
+        "country": "Nigeria / Pan-Afrique",
+        "key_practice": "Marketplace multi-secteurs avec commission sur transaction + services logistiques (Jumia Logistics)",
+        "differentiator": "Modèle marketplace adapté aux réalités africaines (paiement à la livraison, logistique last-mile)",
+        "source": "Jumia Annual Report 2023"
+      },
+      {
+        "organisation": "Wave",
+        "country": "Sénégal / Côte d'Ivoire",
+        "key_practice": "Modèle freemium — transferts sans frais, revenus via float et services premium",
+        "differentiator": "Coût d'acquisition client 5× inférieur aux opérateurs mobiles traditionnels",
+        "source": "Wave Press Release 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Netflix",
+        "country": "USA",
+        "key_practice": "Pivot DVD → streaming, modèle abonnement mensuel, contenu original comme barrière à l'entrée",
+        "differentiator": "Algorithme de recommandation IA générant 80 % des visionnages et optimisant la rétention",
+        "source": "Netflix Annual Report 2023"
+      },
+      {
+        "organisation": "Nubank",
+        "country": "Brésil",
+        "key_practice": "Super-app financière freemium — 1 produit gratuit, monétisation progressive via 14 services",
+        "differentiator": "Coût d'acquisition client 5$/client vs 300$ pour une banque traditionnelle",
+        "source": "Nubank S-1 2021 / CB Insights 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Modèle économique 100 % traditionnel. Aucune offre digitale. Revenus exclusivement issus des canaux physiques.",
+    "level_2_developing": "Premières offres digitales disponibles mais non monétisées directement. Paiement mobile accepté. Revenus digitaux < 5 %.",
+    "level_3_defined": "Offre digitale complète avec paiement en ligne. Revenus digitaux 5-20 %. Modèle hybride physique-digital.",
+    "level_4_managed": "Revenus digitaux > 20 %. Modèle abonnement ou marketplace actif. Partenariats de distribution digitale. Données valorisées en interne.",
+    "level_5_optimizing": "Modèle économique digital dominant (> 50 % des revenus). Plateforme ou marketplace opérationnelle. Data monetization. Embedded finance intégré."
+  },
+
+  "regulations": [
+    {
+      "name": "Réglementation sur la monnaie électronique (BCEAO)",
+      "issuing_body": "Banque Centrale des États de l'Afrique de l'Ouest (BCEAO)",
+      "scope": "Émetteurs de monnaie électronique en zone UEMOA",
+      "key_requirement": "Agrément EME requis, capital minimum, ratio de couverture des dépôts électroniques",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Loi sur le commerce électronique en Côte d'Ivoire",
+      "issuing_body": "ARTCI / Ministère du Commerce de Côte d'Ivoire",
+      "scope": "Plateformes e-commerce et marketplaces opérant en CI",
+      "key_requirement": "Conditions générales de vente obligatoires, droit de rétractation, information précontractuelle",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.artci.ci"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Cannibalisation du modèle traditionnel",
+      "description": "La transition vers un modèle digital peut désorganiser les réseaux existants (agents, revendeurs, franchisés) et générer des conflits de canal.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Stratégie de gestion des canaux inclusive : commissionnement des agents sur les ventes digitales initiées par leurs clients."
+    },
+    {
+      "title": "Faible pénétration d'internet et du paiement digital",
+      "description": "En Afrique de l'Ouest, 40 % de la population reste non-bancarisée et à connectivité limitée, contraignant les modèles 100 % digitaux.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Proposer des offres hybrides USSD / app compatible avec les feature phones et le paiement mobile (Orange Money, Wave)."
+    },
+    {
+      "title": "Dépendance à une plateforme tiers (plateformisation risquée)",
+      "description": "Distribuer exclusivement via une plateforme externe (Jumia, Amazon) crée une dépendance et expose aux changements de conditions tarifaires.",
+      "severity": "Moyen",
+      "likelihood": "Moyenne",
+      "mitigation": "Maintenir un canal direct digital (site, app) en parallèle des marketplaces tierces."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Intégration du paiement mobile comme levier de croissance",
+      "description": "Le mobile money (Orange Money, MTN MoMo, Wave) couvre 50M+ utilisateurs en Afrique de l'Ouest. L'intégrer dans les parcours de vente démultiplie le marché adressable.",
+      "impact_level": "Très élevé",
+      "time_to_value": "3-6 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Création d'un modèle abonnement sectoriel",
+      "description": "Le passage à un modèle d'abonnement mensuel améliore la prévisibilité des revenus et la valeur vie client (LTV). Applicable à de nombreux secteurs (santé, éducation, logistique).",
+      "impact_level": "Élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Embedded finance — monétiser les flux financiers clients",
+      "description": "Intégrer des services financiers (micro-crédit, assurance paramétrique, épargne) dans les parcours clients génère de nouveaux revenus sans nécessiter d'agrément bancaire propre (via partenariat EME).",
+      "impact_level": "Élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Partech Africa + divers",
+      "target": "Wave",
+      "amount": "200 M$",
+      "date": "2021",
+      "strategic_rationale": "Financement de l'expansion panafricaine du modèle freemium de transfert mobile (0 % de frais)",
+      "source": "TechCrunch / Wave Press Release 2021"
+    },
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Stripe",
+      "target": "Paystack",
+      "amount": "200 M$",
+      "date": "2020",
+      "strategic_rationale": "Accélérer la pénétration du modèle de paiement digital en Afrique via l'infrastructure Paystack",
+      "source": "Stripe Blog 2020"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Netflix",
+    "pays": "USA",
+    "technologie": "Subscription economy — pivot DVD → streaming, modèle copié mondialement",
+    "description": "Netflix a pivoté en 2007 du DVD physique au streaming en ligne, inventant le modèle d'abonnement mensuel pour le contenu. Le moteur de recommandation IA (80 % des contenus visionnés via algorithme) optimise la rétention. En 2022, lancement d'un tier publicitaire diversifiant les revenus. Le contenu original (House of Cards, Squid Game) crée des barrières à l'entrée via IP exclusives. Coût d'acquisition : 40$ vs 400$ pour les services câble traditionnels.",
+    "resultats": "260M abonnés · CA 33 Mds$ · Marge nette 16 % · 190 pays · Modèle abonnement copié par 10 000+ entreprises mondiales",
+    "source": "Netflix Annual Report 2023 / McKinsey Digital Revenue Models 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité modèle économique digital — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "Offre 100% digital disponible", "Paiement mobile intégré", "Revenus digitaux > 20%", "Abonnement / freemium", "Marketplace ou plateforme"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "Partiel"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✓", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "Partiel", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Le modèle économique digital est le moteur de croissance de long terme. Les organisations qui diversifient leurs revenus vers le digital (abonnement, marketplace, data) réduisent leur dépendance aux canaux physiques et améliorent leur résilience face aux chocs.",
+    "maturity_max_description": "Modèle économique digital dominant (> 50 % des revenus). Offre complète 100 % digitale avec abonnement ou freemium. Paiement mobile omniprésent. Marketplace ou plateforme opérationnelle. Données monétisées. Embedded finance intégré.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune offre ni revenu digital. Modèle 100 % traditionnel sans paiement numérique.",
+      "score_21_to_40": "Présence digitale basique. Paiement mobile accepté. Revenus digitaux < 5 %. Pas de modèle récurrent.",
+      "score_41_to_60": "Offre digitale complète avec paiement en ligne. Revenus digitaux 5-20 %. Modèle hybride.",
+      "score_61_to_80": "Revenus digitaux > 20 %. Abonnement ou marketplace actif. Partenariats de distribution digitale.",
+      "score_81_to_100": "Revenus digitaux > 50 %. Plateforme opérationnelle. Data monetization. Embedded finance intégré."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur la maturité de son modèle économique digital. Analyse la part des revenus digitaux, la diversification (abonnement, marketplace, data), l'intégration du paiement mobile et la capacité à évoluer vers un modèle plateforme.",
+    "key_questions_for_llm": [
+      "Quelle part des revenus est générée par des canaux et offres 100 % digitaux ?",
+      "L'organisation propose-t-elle un modèle d'abonnement ou freemium digital ?",
+      "Le paiement mobile (Orange Money, Wave, MTN MoMo) est-il intégré dans tous les parcours de vente ?",
+      "Existe-t-il une marketplace ou un modèle plateforme dans l'offre de l'organisation ?",
+      "Les données clients sont-elles valorisées comme source de revenus additionnels ?"
+    ]
+  }
+}

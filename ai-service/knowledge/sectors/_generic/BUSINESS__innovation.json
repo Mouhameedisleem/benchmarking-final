@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "axis": "BUSINESS",
+    "sub_axis": "Innovation",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "IA générative comme vecteur d'innovation produit",
+      "description": "Les organisations intègrent les LLMs (GPT-4, Claude, Gemini) dans leurs processus d'innovation : génération d'idées, prototypage rapide, analyse de brevets concurrents, rédaction de specs.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "65 % des équipes R&D en 2025 (Gartner)",
+      "source": "Gartner Innovation Trends 2025",
+      "year": "2025"
+    },
+    {
+      "title": "Innovation ouverte et partenariats startups",
+      "description": "Les grandes organisations abandonnent le modèle de R&D fermée au profit de l'open innovation : hackathons publics, programmes d'accélération, acquisitions de startups.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "78 % des grandes entreprises (PwC Innovation Survey 2024)",
+      "source": "PwC Global Innovation Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "MVP (Minimum Viable Product) comme standard de développement",
+      "description": "La méthode lean startup — tester une hypothèse minimum avant d'investir massivement — se généralise dans les grandes organisations. Time-to-MVP < 3 mois devient un KPI d'innovation.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "60 % des projets digitaux (McKinsey 2024)",
+      "source": "McKinsey Digital Innovation Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Labs d'innovation internes (Digital Factory / Studio)",
+      "description": "Les organisations créent des structures d'innovation dédiées (labs, studios, garages) séparées des opérations courantes pour incuber des produits en cycles courts.",
+      "impact_level": "Élevé",
+      "horizon": "6-18 mois",
+      "adoption_rate": "55 % des grandes entreprises mondiales (Deloitte 2024)",
+      "source": "Deloitte Digital Transformation Survey 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Design Thinking & Rapid Prototyping Tools",
+      "category": "Processus d'innovation",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne",
+      "leading_vendors": ["Figma", "Miro", "InVision", "Marvel App"]
+    },
+    {
+      "name": "Plateformes d'idéation collaborative",
+      "category": "Innovation participative",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible à moyenne",
+      "leading_vendors": ["IdeaScale", "Brightidea", "Crowdicity", "Microsoft Viva Insights"]
+    },
+    {
+      "name": "Outils de veille technologique et brevets",
+      "category": "Intelligence économique",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["Derwent Innovation", "PatSnap", "Crayon", "Klue"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Partenariat avec des startups locales (Hub Innovation ARTCI, CCI-CI)",
+        "differentiator": "Premier acteur sectoriel à organiser un hackathon ouvert aux startups",
+        "source": "ARTCI Rapport Innovation 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Safaricom",
+        "country": "Kenya",
+        "key_practice": "Safaricom Spark — accélérateur de startups tech africaines avec 50M KES de financement annuel",
+        "differentiator": "M-Pesa incubé en interne, devenu le service fintech le plus utilisé en Afrique de l'Est",
+        "source": "Safaricom Annual Report 2023"
+      },
+      {
+        "organisation": "Orange Afrique",
+        "country": "Pan-Afrique",
+        "key_practice": "Orange Fab — programme d'accélération dans 7 pays africains",
+        "differentiator": "Orange Digital Center : formation et innovation dans 20 pays africains",
+        "source": "Orange Group Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Google / Alphabet",
+        "country": "USA",
+        "key_practice": "Google X — moonshot factory avec règle 70/20/10 et budget dédié aux projets à fort risque",
+        "differentiator": "Waymo (véhicules autonomes), Wing (drones), issus du programme moonshot",
+        "source": "Alphabet Annual Report 2023 / MIT Sloan 2023"
+      },
+      {
+        "organisation": "BNP Paribas",
+        "country": "France",
+        "key_practice": "Digital Garage — 500 développeurs dédiés, 25 produits actifs, MVP en 6 semaines",
+        "differentiator": "Nickel (néobanque, 4M clients) né du programme innovation interne",
+        "source": "BNP Paribas Digital & Innovation Report 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune structure d'innovation. Les idées émergent de façon aléatoire sans processus ni budget. Pas de partenariat externe.",
+    "level_2_developing": "Quelques initiatives innovation portées par des champions isolés. Hackathon ponctuel. Pas de lab dédié ni de budget formalisé.",
+    "level_3_defined": "Lab ou cellule innovation créée. Budget R&D dédié. Partenariats startups en cours. MVP livrés en < 6 mois.",
+    "level_4_managed": "Programme d'innovation structuré avec sponsor COMEX. Hackathons réguliers. Partenariats startups actifs. Time-to-MVP < 3 mois. KPIs innovation suivis.",
+    "level_5_optimizing": "Innovation intégrée à la culture d'entreprise. Lab dédié opérationnel. Budget > 5 % OPEX. Brevets déposés. Accélérateur interne. MVP livré en < 6 semaines."
+  },
+
+  "regulations": [
+    {
+      "name": "Propriété intellectuelle et dépôt de brevets",
+      "issuing_body": "OAPI (Organisation Africaine de la Propriété Intellectuelle)",
+      "scope": "Entreprises innovantes en Afrique francophone",
+      "key_requirement": "Protection des innovations via dépôt de brevet OAPI couvrant 17 pays membres",
+      "compliance_deadline": "Sur demande",
+      "source_url": "https://www.oapi.int"
+    },
+    {
+      "name": "Programme d'Appui à la Compétitivité et au Développement de l'Innovation (PACDI)",
+      "issuing_body": "Gouvernement de Côte d'Ivoire",
+      "scope": "PME et grandes entreprises ivoiriennes",
+      "key_requirement": "Accès aux financements innovation via le PACDI et le FIRCA selon le secteur",
+      "compliance_deadline": "Continu",
+      "source_url": "https://www.tresor.gouv.ci"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Innovation sans alignement stratégique",
+      "description": "Des initiatives innovation déconnectées des objectifs business génèrent des coûts sans ROI. 70 % des labs d'innovation ferment dans les 3 ans selon McKinsey.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Aligner le lab sur 3 à 5 thèmes stratégiques prioritaires avec un sponsor COMEX et des KPIs clairs."
+    },
+    {
+      "title": "Talent gap en innovation digitale",
+      "description": "Le manque de profils UX, data science et product management locaux freine la capacité d'innovation.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Partenariats avec universités locales (INPHB, ESATIC), programmes de formation interne, recrutement diaspora."
+    },
+    {
+      "title": "Propriété intellectuelle non protégée",
+      "description": "Les innovations développées sans dépôt de brevet peuvent être copiées par des concurrents.",
+      "severity": "Moyen",
+      "likelihood": "Moyenne",
+      "mitigation": "Mettre en place un processus de veille PI et de dépôt OAPI systématique pour les innovations majeures."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Partenariat avec l'écosystème startup local",
+      "description": "La Côte d'Ivoire dispose d'un écosystème startup croissant (Abidjan Tech City, Orange Fab). Collaborer avec ces startups accélère l'innovation à coût réduit.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Accès aux programmes d'innovation des Big Tech",
+      "description": "Google for Startups, Microsoft for Startups, AWS Activate offrent des ressources cloud, mentoring et visibilité aux organisations innovantes.",
+      "impact_level": "Moyen",
+      "time_to_value": "3-6 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Création d'un avantage compétitif durable via les brevets",
+      "description": "Les organisations qui protègent leurs innovations créent des barrières à l'entrée et peuvent générer des revenus via licences.",
+      "impact_level": "Élevé",
+      "time_to_value": "24-48 mois",
+      "prerequisite_maturity": "Niveau 4"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Google",
+      "target": "DeepMind",
+      "amount": "400 M$",
+      "date": "2014",
+      "strategic_rationale": "Acquérir la capacité de recherche en IA fondamentale pour accélérer l'innovation dans tous les produits Google",
+      "source": "Google Press Release 2014"
+    },
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Wave (fintech)",
+      "target": "Wave CI / Sénégal",
+      "amount": "200 M$",
+      "date": "2021",
+      "strategic_rationale": "Financement de l'expansion panafricaine d'un modèle de paiement mobile innovant (frais 0 %)",
+      "source": "Wave Press Release 2021 / TechCrunch"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Google / Alphabet",
+    "pays": "USA",
+    "technologie": "Google X — moonshot factory + règle des 70/20/10",
+    "description": "Google institutionnalise l'innovation à deux vitesses : 70 % sur le cœur de métier, 20 % sur des projets adjacents, 10 % sur des moonshots radicaux (Google X). Cette structure a produit Gmail, Google Maps, Android, Chrome. Chaque ingénieur dispose de 20 % de son temps pour innover librement. Google X fonctionne comme une startup interne : budget dédié, droit à l'échec explicitement documenté, 50 équipes évaluées par an dont 5 survivent.",
+    "resultats": "20+ produits nés du programme 20% · Waymo valorisée 30 Mds$ · Wing livre 1M colis/an · 85 000 brevets déposés · R&D 40 Mds$/an",
+    "source": "Alphabet Annual Report 2023 / MIT Sloan Innovation Report 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité innovation — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "Lab / cellule innovation", "Partenariat startups actif", "Hackathon organisé", "Budget R&D dédié", "MVP livré < 3 mois"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "Partiel", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'innovation structurée est un différenciateur stratégique de long terme. Les organisations qui formalisent leur processus d'innovation (lab dédié, budget, partenariats) génèrent 2,3× plus de nouvelles sources de revenus sur 5 ans (McKinsey).",
+    "maturity_max_description": "Lab d'innovation dédié avec sponsor COMEX et budget > 5 % OPEX. Programme de partenariats startups actif. Hackathons réguliers. Time-to-MVP < 6 semaines. KPIs innovation liés aux OKRs stratégiques. Brevets déposés.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune structure d'innovation. Pas de budget ni de processus. Innovation absente du plan stratégique.",
+      "score_21_to_40": "Quelques champions de l'innovation isolés. Hackathon ponctuel. Pas de lab ni de budget formalisé.",
+      "score_41_to_60": "Lab ou cellule innovation créée. Budget R&D alloué. Partenariats startups en cours. MVPs livrés en < 6 mois.",
+      "score_61_to_80": "Programme d'innovation structuré. Hackathons réguliers. Partenariats actifs. Time-to-MVP < 3 mois. KPIs suivis.",
+      "score_81_to_100": "Innovation dans la culture d'entreprise. Lab opérationnel. Budget > 5 % OPEX. Brevets. Accélérateur interne. MVP < 6 semaines."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur sa capacité d'innovation digitale. Analyse l'existence et l'efficacité d'une structure d'innovation dédiée, la qualité des partenariats avec des startups, le budget alloué à la R&D, la rapidité de mise en marché des innovations et la culture d'expérimentation.",
+    "key_questions_for_llm": [
+      "L'organisation dispose-t-elle d'un lab ou d'une cellule innovation dédiée avec budget propre ?",
+      "Existe-t-il des partenariats actifs avec des startups ou acteurs de l'écosystème tech ?",
+      "Des hackathons ou programmes d'innovation interne sont-ils organisés régulièrement ?",
+      "Quel est le time-to-MVP moyen pour une nouvelle initiative digitale ?",
+      "Les innovations sont-elles protégées par des brevets ou dépôts de propriété intellectuelle ?"
+    ]
+  }
+}

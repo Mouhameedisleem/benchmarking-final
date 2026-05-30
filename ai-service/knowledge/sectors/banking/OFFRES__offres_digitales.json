@@ -1,0 +1,261 @@
+{
+  "meta": {
+    "axis": "OFFRES",
+    "sub_axis": "Offres digitales",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Crédit digital instantané — réponse bancaire au micro-crédit des fintechs",
+      "description": "Wave Sénégal, Orange Money CI et Moov Money accordent du micro-crédit en < 30 secondes via scoring ML. Les banques UEMOA doivent développer des offres de crédit digital à la consommation instantané pour conserver la relation crédit avec leurs clients existants.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "15 % des banques UEMOA ont lancé un produit de crédit digital (BCEAO 2024)",
+      "source": "BCEAO Rapport sur le Crédit Digital en UEMOA 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Compte bancaire 100 % digital — ouverture sans passage en agence",
+      "description": "La Directive BCEAO sur le KYC électronique permet l'ouverture de compte sans visite en agence (eKYC). Les banques qui proposent une ouverture de compte en < 5 minutes sur mobile capturent la génération Millennial qui refuse de se déplacer en agence.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "20 % des banques UEMOA proposent une ouverture de compte digital conforme BCEAO (BCEAO 2024)",
+      "source": "BCEAO Rapport sur la Digitalisation des Services Bancaires 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Offre PME digitale — crédit et services bancaires pour les 500 000 PME ivoiriennes",
+      "description": "Les 500 000 PME ivoiriennes sont sous-bancarisées (60 % sans compte professionnel). Les banques qui proposent une offre PME digitale intégrée (compte, crédit, TPE, facturation) capturent un segment à fort potentiel de revenus avec des coûts d'acquisition digitaux.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "25 % des banques UEMOA ont une offre PME digitale différenciée (Banque Mondiale 2024)",
+      "source": "Banque Mondiale — Finance pour les PME Afrique de l'Ouest 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Bancassurance digitale — vente d'assurance intégrée au parcours bancaire",
+      "description": "La bancassurance (assurance vie, auto, habitation) vendue via l'app bancaire génère des commissions de 3-8 % des primes sans coût de distribution supplémentaire. Les banques qui intègrent les produits d'assurance NSIA, Allianz ou Sanlam dans leur app multiplient leurs revenus non-intérêts.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "30 % des banques africaines proposent une offre de bancassurance digitale (CIMA 2024)",
+      "source": "CIMA Rapport sur la Bancassurance Digitale 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Plateforme de crédit digital / LOS",
+      "category": "Origination de crédit digital",
+      "maturity_stage": "Croissance en Afrique",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Temenos Credit Management", "nCino Loan Origination", "Finastra LaserPro", "Mambu Loan Engine", "FICO Origination Manager"]
+    },
+    {
+      "name": "eKYC / Digital Onboarding",
+      "category": "Ouverture de compte digitale",
+      "maturity_stage": "Croissance en Afrique",
+      "adoption_in_sector": "Faible en CI",
+      "leading_vendors": ["Smile Identity (Afrique)", "Onfido", "Jumio", "Sumsub", "Trulioo"]
+    },
+    {
+      "name": "Plateforme Bancassurance",
+      "category": "Distribution digitale d'assurance",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Majesco Insurance Suite", "Guidewire Cloud", "Duck Creek Technologies", "NSIA Partenariat API", "Allianz API Partner Program"]
+    },
+    {
+      "name": "Solutions PME digitales",
+      "category": "Offres bancaires pour les PME",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["QuickBooks + Banque intégrée", "Wave Accounting (CI)", "Sage Business Cloud Banking", "nCino SME", "Temenos Transact SME"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Ecobank Côte d'Ivoire — Xpress Account",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Xpress Account : ouverture de compte gratuit via l'app en 5 minutes, sans agence, avec crédit Xpress Credit basé sur les données transactionnelles",
+        "differentiator": "Premier compte bancaire ivoirien entièrement digital avec crédit instantané intégré — 60 000 comptes Xpress ouverts en CI en 2023 via canaux 100 % digitaux",
+        "source": "Ecobank CI Rapport 2023 / Ecobank Xpress Account Product Sheet"
+      },
+      {
+        "organisation": "UBA Côte d'Ivoire — LEO Chatbot",
+        "country": "Côte d'Ivoire",
+        "key_practice": "LEO (chatbot banking UBA) : crédit diaspora digital, ouverture de compte, virements internationaux depuis WhatsApp ou Facebook Messenger",
+        "differentiator": "UBA LEO est le seul chatbot bancaire ivoirien permettant l'ouverture de compte et les virements depuis Facebook Messenger — 10 000 clients LEO en CI en 2023",
+        "source": "UBA CI Rapport Annuel 2023 / UBA LEO Product Launch Report"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Suite d'offres digitales panafricaines : Xpress Account, Xpress Credit, Ecobank Pay, Rapidtransfer, Bancassurance avec Prudential Africa",
+        "differentiator": "Seule banque africaine avec une suite d'offres digitales complète déployée simultanément dans 33 pays — accélération du time-to-market 10× via un seul lancement groupe",
+        "source": "Ecobank Annual Report 2023 / Ecobank Digital Products Portfolio"
+      },
+      {
+        "organisation": "Equity Bank Kenya",
+        "country": "Kenya / Afrique de l'Est",
+        "key_practice": "M-Kesho (épargne mobile), Equity Afia (santé digitale), EazzyBiz (PME), crédit Equitel < 60 secondes — écosystème de services financiers intégrés",
+        "differentiator": "Equity Bank a construit un écosystème de 12 offres digitales intégrées — banking + santé + assurance + épargne retraite — accessible via une seule app",
+        "source": "Equity Bank Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Nubank",
+        "country": "Brésil",
+        "key_practice": "Portefeuille 100 % digital : compte courant, carte de crédit, épargne automatique, assurance vie, crédit personnel, investissements — tout depuis une app",
+        "differentiator": "Nubank a lancé chaque nouveau produit en < 3 mois via des squads produit agile — portfolio de 8 produits financiers lancés en 5 ans avec NPS > 80 sur chacun",
+        "source": "Nubank Annual Report 2023 / McKinsey Nubank Product Strategy"
+      },
+      {
+        "organisation": "Revolut",
+        "country": "Royaume-Uni",
+        "key_practice": "30+ produits financiers dans l'app : comptes multi-devises, crypto, assurance voyage, actions, crédits, cartes virtuelles — super-app financière",
+        "differentiator": "Revolut a transformé l'app bancaire en super-app financière avec 30+ services : modèle qui inspire les banques africaines pour construire leur propre super-app locale",
+        "source": "Revolut Annual Report 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Offres bancaires uniquement physiques. Pas d'ouverture de compte digital. Pas de crédit digital. Pas de bancassurance. Pas d'offre PME digitale. Produits standardisés non différenciés.",
+    "level_2_developing": "Consultation de compte en ligne. Quelques produits accessibles via app (épargne, carte). Pas de crédit digital. Bancassurance traditionnelle (agence). Offre PME standard non digitale.",
+    "level_3_defined": "Ouverture de compte digital disponible (partielle ou complète). Crédit à la consommation partiellement digitalisé. Bancassurance sur canaux digitaux. Offre PME avec quelques services digitaux.",
+    "level_4_managed": "Compte 100 % digital eKYC conforme BCEAO. Crédit digital instantané (< 24h). Bancassurance intégrée dans l'app. Offre PME digitale complète. 3+ produits lancés via canaux 100 % digitaux.",
+    "level_5_optimizing": "Super-app bancaire : 8+ produits intégrés (crédit, épargne, assurance, investissements, PME). Crédit < 60 secondes par ML. Personnalisation IA des offres. Time-to-market < 6 semaines pour les nouveaux produits."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction BCEAO sur le KYC électronique pour l'ouverture de compte à distance",
+      "issuing_body": "BCEAO",
+      "scope": "Banques proposant l'ouverture de compte sans visite en agence",
+      "key_requirement": "Identification électronique du client via biométrie ou document d'identité numérisé, vérification CNI ivoirienne ou passeport, conservation du dossier KYC électronique",
+      "compliance_deadline": "En vigueur (cadre BCEAO 2023)",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Code CIMA — distribution de produits d'assurance par les banques",
+      "issuing_body": "CIMA (Conférence Interafricaine des Marchés d'Assurances)",
+      "scope": "Banques distribuant des produits d'assurance en zone CIMA (dont CI)",
+      "key_requirement": "Agrément de distributeur de produits d'assurance requis, formation des conseillers bancaires sur les produits d'assurance, information précontractuelle obligatoire au client",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.cima-afrique.org"
+    },
+    {
+      "name": "Instruction BCEAO sur le crédit à la consommation digital",
+      "issuing_body": "BCEAO",
+      "scope": "Banques accordant des crédits à la consommation par voie électronique",
+      "key_requirement": "Information précontractuelle du taux effectif global (TEG), délai de réflexion minimum, processus de validation du consentement électronique documenté",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Crédit digital sans contrôle — sur-endettement et hausse du taux de défaut",
+      "description": "Un crédit digital mal calibré (plafonds trop élevés, scoring insuffisant) génère des taux de défaut élevés pouvant atteindre 15-25 % (vs 5-8 % pour le crédit traditionnel bien géré). Le régulateur BCEAO surveille les taux de défaut du crédit digital.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée lors du lancement",
+      "mitigation": "Démarrer avec des plafonds de crédit faibles (< 100 000 FCFA) sur un segment de clients existants avec historique transactionnel, monitorer quotidiennement le taux de défaut et ajuster le scoring avant tout déploiement à grande échelle."
+    },
+    {
+      "title": "Offre digitale lancée sans conformité BCEAO — retrait forcé du marché",
+      "description": "Lancer un produit de crédit digital ou une offre de collecte de dépôts sans validation préalable BCEAO expose la banque à un retrait forcé du service, des amendes et une atteinte grave à la réputation.",
+      "severity": "Très élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Engager systématiquement la BCEAO en phase de conception de tout nouveau produit financier digital, utiliser le sandbox réglementaire BCEAO pour les innovations, et documenter la conformité avant tout lancement commercial."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Crédit PME digital — 500 000 PME ivoiriennes sous-bancarisées à adresser",
+      "description": "Les 500 000 PME ivoiriennes formelles ont accès au crédit bancaire dans seulement 30 % des cas. Un crédit PME digital basé sur les données comptables (Sage, Wave Accounting) et transactionnelles réduit le délai d'instruction de 3 semaines à 72 heures et ouvre un marché de 2 000 Mds FCFA.",
+      "impact_level": "Très élevé",
+      "time_to_value": "18-36 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Bancassurance digitale — commissions de 3-8 % sans coût distribution",
+      "description": "Intégrer des offres d'assurance (NSIA, Allianz CI) dans l'app bancaire génère des commissions de distribution de 3-8 % des primes collectées sans coût d'acquisition supplémentaire. Pour une banque avec 100 000 clients actifs, le potentiel est de 500-800 M FCFA de revenus additionnels.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Partenariat produit",
+      "acquirer_or_investor": "Ecobank",
+      "target": "Prudential Africa — Bancassurance digitale panafricaine",
+      "amount": "Partenariat de distribution (revenus partagés)",
+      "date": "2022",
+      "strategic_rationale": "Distribuer les produits d'assurance vie Prudential via l'app Ecobank dans 33 pays africains — nouveau flux de revenus commissions sans coût d'acquisition client",
+      "source": "Ecobank/Prudential Africa Partnership 2022 / Ecobank Annual Report 2023"
+    },
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Investisseurs VC (Tiger Global, Ribbit Capital)",
+      "target": "Nubank — néobanque brésilienne modèle pour l'Afrique",
+      "amount": "700 M$ (Série G, 2021)",
+      "date": "2021",
+      "strategic_rationale": "Financer l'expansion du portefeuille produits Nubank (crédit, investissements, assurance) à 100M clients — modèle super-app financière transposable en Afrique",
+      "source": "Nubank Crunchbase / Nubank Annual Report 2023"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Ecobank — Xpress Account & Xpress Credit",
+    "pays": "Pan-Afrique / Côte d'Ivoire",
+    "technologie": "Offre bancaire 100 % digitale : compte + crédit instantané sans agence",
+    "description": "Ecobank a lancé Xpress Account en 2019 : un compte bancaire ouvert en 5 minutes via l'app mobile, sans visite en agence, avec eKYC conforme aux réglementations des 33 pays UEMOA inclus. Xpress Credit (lancé 2021) accorde un crédit à la consommation en < 24h basé sur les données transactionnelles Xpress Account. En Côte d'Ivoire en 2023 : 60 000 comptes Xpress ouverts digitalement, taux de défaut Xpress Credit de 6 % (vs 12 % pour le crédit traditionnel), NPS Xpress de 52. Le coût d'ouverture de compte digital est de 2 500 FCFA vs 15 000 FCFA en agence.",
+    "resultats": "60 000 comptes CI ouverts digitalement · Défaut crédit 6 % vs 12 % traditionnel · NPS 52 · Coût ouverture -83 % · 33 pays conformes réglementation locale",
+    "source": "Ecobank Annual Report 2023 / Ecobank Xpress Product Report / BCEAO Rapport Digitalisation 2024",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité offres digitales — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "Ouverture compte 100 % digital eKYC", "Crédit digital instantané (< 24h)", "Bancassurance dans l'app", "Offre PME digitale complète", "3+ produits lancés 100 % digitaux"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Les offres digitales sont le test de réalité de la transformation bancaire UEMOA. Une banque peut avoir la meilleure app mobile du marché, mais si elle n'offre pas de crédit digital ou d'ouverture de compte sans agence, elle ne concurrence pas Wave. Le crédit digital instantané est la priorité absolue : c'est le produit qui génère la plus forte valeur client ET le meilleur ROI bancaire. La BCEAO a créé le cadre réglementaire (sandbox, eKYC) — il ne reste plus qu'à l'utiliser.",
+    "maturity_max_description": "Super-app bancaire avec 8+ produits financiers intégrés. Ouverture de compte 100 % digital eKYC < 5 minutes conforme BCEAO. Crédit digital instantané < 60 secondes par ML. Bancassurance intégrée dans l'app avec 3+ partenaires assureurs. Offre PME digitale complète. Time-to-market < 6 semaines pour les nouveaux produits. NPS offres digitales > 50.",
+    "scoring_rubric": {
+      "score_1_to_20": "Offres physiques uniquement. Pas de digital. Pas d'ouverture compte digital. Pas de crédit digital.",
+      "score_21_to_40": "Consultation compte en ligne. Quelques produits sur app. Pas de crédit digital. Bancassurance agence.",
+      "score_41_to_60": "Ouverture compte digital partielle. Crédit partiellement digitalisé. Bancassurance digitale. Offre PME basique.",
+      "score_61_to_80": "Compte eKYC conforme BCEAO. Crédit digital < 24h. Bancassurance app. Offre PME digitale. 3+ produits.",
+      "score_81_to_100": "Super-app 8+ produits. Crédit < 60s ML. Bancassurance 3+ partenaires. PME digitale complète. TTM < 6 semaines."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur la maturité de ses offres digitales dans le contexte bancaire UEMOA. Analyse la disponibilité d'une ouverture de compte 100 % digital conforme BCEAO, l'existence d'un crédit digital instantané, des offres de bancassurance dans l'app et d'une offre PME digitale complète.",
+    "key_questions_for_llm": [
+      "L'ouverture de compte bancaire est-elle possible en 100 % digital (sans visite en agence) avec un processus eKYC conforme à la réglementation BCEAO ?",
+      "Un crédit à la consommation digital est-il disponible avec une décision automatisée en moins de 24 heures pour les clients existants ?",
+      "Des produits d'assurance (bancassurance) sont-ils accessibles directement depuis l'application bancaire mobile sans devoir se déplacer en agence ?",
+      "Une offre bancaire spécifique pour les PME est-elle disponible en digital (compte professionnel, crédit PME, terminal de paiement électronique, facturation) ?",
+      "Combien de produits ou services financiers peuvent être souscrits et gérés entièrement via les canaux digitaux (app, web) sans intervention physique ?"
+    ]
+  }
+}

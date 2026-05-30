@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "axis": "PROCESS",
+    "sub_axis": "Automatisation",
+    "sector": "assurance",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "RPA pour la gestion des sinistres — automatisation de la saisie et de la vérification",
+      "description": "La Robotic Process Automation (RPA) est appliquée aux tâches répétitives de gestion de sinistres : saisie de données, vérification de pièces, relances. En UEMOA, où la saisie manuelle domine, le RPA peut réduire de 60-70 % le temps de traitement administratif des sinistres.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "15 % des assureurs africains ont déployé des robots RPA (EY Africa 2024)",
+      "source": "EY Africa Insurance Automation 2024",
+      "year": "2024"
+    },
+    {
+      "title": "STP (Straight-Through Processing) pour la souscription auto et santé",
+      "description": "Le STP permet de traiter une souscription de bout en bout sans intervention humaine pour les profils à risque standard. En assurance auto, le STP peut traiter 60-70 % des demandes de devis sans agent pour des véhicules de moins de 5 ans avec un historique clean.",
+      "impact_level": "Très élevé",
+      "horizon": "18-36 mois",
+      "adoption_rate": "20 % des assureurs africains ont un processus STP partiel pour l'auto (FANAF 2024)",
+      "source": "FANAF Digital Operations 2024 / Accenture Africa Insurance 2024",
+      "year": "2024"
+    },
+    {
+      "title": "IA pour la détection de fraude à la souscription et au sinistre",
+      "description": "La fraude représente 8-15 % des sinistres déclarés en UEMOA selon la CIMA. Les modèles ML détectent les patterns de fraude (doublons de sinistres, incohérences de déclaration, réseaux de fraude organisée) avec une précision de 85-95 % selon les implémentations africaines.",
+      "impact_level": "Très élevé",
+      "horizon": "24-36 mois",
+      "adoption_rate": "12 % des assureurs africains ont un système IA anti-fraude actif (McKinsey 2024)",
+      "source": "McKinsey Africa Insurance Fraud Detection 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "RPA (Robotic Process Automation) assurance",
+      "category": "Automatisation des tâches répétitives",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["UiPath Insurance", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"]
+    },
+    {
+      "name": "IA pour la détection de fraude assurance",
+      "category": "Anti-fraude",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["FRISS (spécialiste assurance)", "SAS Fraud Management", "IBM Safer Payments", "Shift Technology"]
+    },
+    {
+      "name": "IDP — Intelligent Document Processing pour les pièces sinistres",
+      "category": "Traitement automatique des documents",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Émergence en Afrique",
+      "leading_vendors": ["ABBYY FlexiCapture", "Hyperscience", "Amazon Textract", "Google Document AI"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Allianz CI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Déploiement RPA sur 5 processus répétitifs (enregistrement sinistres, relances, génération d'attestations). Économie de 2 500 heures/an sur la saisie manuelle. Attestation d'assurance générée automatiquement en 30 secondes.",
+        "differentiator": "Premier assureur ivoirien à générer automatiquement les attestations d'assurance auto par SMS sans intervention humaine",
+        "source": "Allianz CI Rapport Transformation 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Kenya Re (Réassureur)",
+        "country": "Kenya",
+        "key_practice": "Plateforme de traitement automatique des traités de réassurance. STP pour les renouvellements de polices groupe. Détection IA des anomalies de sinistres cross-portefeuille.",
+        "differentiator": "Kenya Re a automatisé 70 % de ses processus de traitement de traités de réassurance, réduisant les erreurs de 90 % et le délai de traitement de 15 à 2 jours",
+        "source": "Kenya Re Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Lemonade (USA)",
+        "country": "USA",
+        "key_practice": "IA Jim : règlement automatique des sinistres en 3 secondes pour les cas simples. 30 % des sinistres réglés sans intervention humaine. Détection de fraude IA en temps réel lors de la déclaration vidéo.",
+        "differentiator": "Lemonade détecte la fraude en analysant les micro-expressions et les incohérences sémantiques dans les vidéos de déclaration — 0 fraude non détectée sur les sinistres < 1 000$ en 2023",
+        "source": "Lemonade Annual Report 2023 / MIT Technology Review Lemonade AI 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "100 % manuel. Saisie papier ou Excel. Aucune automatisation. Erreurs fréquentes. Délais de traitement > 30 jours.",
+    "level_2_developing": "Quelques macros Excel ou scripts basiques. Pas de RPA déployé. Automatisation partielle de l'émission des attestations.",
+    "level_3_defined": "RPA déployé sur 2-3 processus répétitifs (saisie, relances, attestations). STP partiel pour produits simples. Premiers gains de productivité mesurés.",
+    "level_4_managed": "RPA sur 8+ processus. STP actif pour 40-60 % des souscriptions auto et santé standards. Système IA anti-fraude déployé. IDP pour les pièces sinistres.",
+    "level_5_optimizing": "STP > 70 % souscriptions standards. Sinistres simples réglés automatiquement. IA anti-fraude active 24/7. Zéro ressaisie entre systèmes. Économies > 500 M FCFA/an."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction CIMA sur la dématérialisation des polices et attestations",
+      "issuing_body": "CIMA",
+      "scope": "Tous assureurs CIMA",
+      "key_requirement": "Les attestations d'assurance auto peuvent être émises sous format électronique depuis 2020. La police électronique a la même valeur légale que le document papier sous conditions de sécurisation et traçabilité.",
+      "compliance_deadline": "En vigueur depuis 2020",
+      "source_url": "https://www.cima-afrique.org"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Automatisation sur des processus non optimisés — amplification des erreurs",
+      "description": "Automatiser un processus défaillant revient à faire les erreurs plus vite. En assurance UEMOA, où les processus sont souvent non documentés et non optimisés, le déploiement précipité de RPA peut créer des robots qui reproduisent des erreurs à grande vitesse.",
+      "severity": "Élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Cartographier et optimiser les processus AVANT d'automatiser. Règle : 'Never automate a broken process'. Tester en sandbox avant déploiement en production."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Attestation d'assurance auto générée automatiquement par SMS — conformité CIMA et gain de temps",
+      "description": "En Côte d'Ivoire, les automobilistes sont souvent en infraction pour défaut d'attestation à jour. Un système automatique d'envoi de l'attestation par SMS à chaque renouvellement génère de la valeur pour le client et réduit le travail administratif de 80 %.",
+      "impact_level": "Élevé",
+      "time_to_value": "3-6 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [],
+
+  "zoom_case_study": {
+    "entreprise": "FRISS + Assureur partenaire — IA anti-fraude : 15 % de sinistres frauduleux détectés automatiquement",
+    "pays": "Pays-Bas / Déploiements en Afrique (Kenya, Nigeria, Maroc)",
+    "technologie": "IA et Machine Learning pour la détection de fraude en temps réel à la souscription et au sinistre",
+    "description": "FRISS est le leader mondial de la détection de fraude en assurance. Sa plateforme analyse en temps réel toutes les demandes de souscription et déclarations de sinistres pour identifier les patterns frauduleux : doublons de sinistres (même événement déclaré à plusieurs assureurs), réseaux de fraude organisée (garage + expert + assuré), incohérences de déclaration, et profils de risque sous-évalués. Dans ses déploiements africains (Kenya, Nigeria), FRISS a détecté en moyenne 15 % de sinistres frauduleux dans les portefeuilles IARD — soit 3 à 5 fois plus que la détection manuelle. Pour un assureur avec 5 Mds FCFA de sinistres/an, cela représente 450-750 M FCFA récupérés annuellement. Le ROI moyen est de 400 % sur 3 ans.",
+    "resultats": "15 % sinistres frauduleux détectés · 3-5x plus efficace que la détection manuelle · ROI 400 % sur 3 ans · 450-750 M FCFA récupérés pour 5 Mds FCFA sinistres",
+    "source": "FRISS Annual Industry Report 2024 / IFC Africa Insurance Fraud Report 2024",
+    "annee": "2024"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité automatisation — benchmark assureurs CIMA/UEMOA",
+    "colonnes": ["Organisation", "RPA déployé sur processus clés", "STP souscription > 40 %", "IA anti-fraude active", "Attestation auto-générée", "IDP pièces sinistres"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "Partiel"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'automatisation dans le secteur assurance UEMOA en est à ses prémices. La majorité des compagnies traitent encore les sinistres et les souscriptions manuellement, avec des ressaisies entre systèmes et des délais incompatibles avec les attentes des clients digitaux. Le potentiel de gain est considérable : l'automatisation du traitement des sinistres courants peut réduire les coûts de 40-60 % et les délais de 70-80 %. La fraude non détectée (8-15 % des sinistres) représente la première source de pertes évitables.",
+    "maturity_max_description": "RPA déployé sur 10+ processus répétitifs. STP actif pour > 70 % des souscriptions auto et santé standards. IA anti-fraude déployée sur l'ensemble du portefeuille (souscription + sinistres). Attestations auto-générées par SMS. IDP pour la lecture automatique des pièces justificatives. Sinistres simples réglés automatiquement en < 48h.",
+    "scoring_rubric": {
+      "score_1_to_20": "100 % manuel. Aucun RPA. Fraude détectée uniquement manuellement. Délais > 30 jours.",
+      "score_21_to_40": "Macros Excel ou scripts basiques. Pas de RPA structuré. Attestations semi-manuelles.",
+      "score_41_to_60": "RPA sur 2-3 processus. STP partiel. Attestation automatisée. Premiers outils anti-fraude.",
+      "score_61_to_80": "RPA sur 8+ processus. STP 40-60 %. IA anti-fraude déployée. IDP en pilote.",
+      "score_81_to_100": "STP > 70 %. IA anti-fraude complète. Sinistres simples automatisés. Économies > 500 M FCFA."
+    },
+    "prompt_injection_context": "Cette compagnie d'assurance est évaluée sur sa maturité en automatisation dans le contexte CIMA/UEMOA. Analyse le déploiement de RPA, le niveau de STP pour la souscription, l'existence d'un système IA anti-fraude, et l'automatisation de la génération des attestations.",
+    "key_questions_for_llm": [
+      "Des robots RPA sont-ils déployés sur des processus répétitifs (saisie sinistres, relances, génération attestations) ?",
+      "Quelle proportion des souscriptions auto ou santé standards est traitée en Straight-Through Processing (sans intervention humaine) ?",
+      "Un système de détection de fraude basé sur l'IA ou le machine learning est-il actif sur le portefeuille sinistres ?",
+      "Les attestations d'assurance sont-elles générées et envoyées automatiquement (SMS, email) sans intervention manuelle ?",
+      "Un système de lecture automatique de documents (IDP) est-il utilisé pour les pièces justificatives des sinistres ?"
+    ]
+  }
+}

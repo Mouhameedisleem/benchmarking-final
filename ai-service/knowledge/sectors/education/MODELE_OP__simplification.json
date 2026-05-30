@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "secteur": "education",
+    "axe": "MODELE_OP",
+    "sous_axe": "simplification",
+    "titre": "Simplification des processus opérationnels dans l'enseignement en Côte d'Ivoire",
+    "description": "Dématérialisation et simplification des processus administratifs et académiques : délibérations de jury en ligne, publication des résultats automatisée, diplômes électroniques certifiés (Loi CI 2017-771), réduction des couches de validation hiérarchique et rationalisation du catalogue de formation.",
+    "version": "1.0",
+    "date_mise_a_jour": "2025-01-01",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "Les processus académiques ivoiriens souffrent d'une lourdeur administrative structurelle : délibérations de jury pouvant durer 3 semaines après les examens, délai de délivrance des diplômes atteignant 6 mois post-soutenance, résultats affichés sur papier dans les couloirs des universités. Ces inefficacités génèrent une insatisfaction étudiante mesurable (NPS négatif dans les universités publiques CI) et des surcoûts opérationnels. La Loi CI 2017-771 sur la valeur juridique des documents électroniques ouvre la voie aux diplômes numériques, relevés de notes électroniques et procès-verbaux de jury dématérialisés. Les établissements pionniers (Pigier CI, UVCI CI) ont réduit leurs délais de 60-80% en numérisant ces processus.",
+    "chiffres_cles": [
+      "Délai moyen délibération jury → publication résultats : 21 jours (universités publiques CI) vs. 3 jours (établissements privés numérisés)",
+      "Délai délivrance diplôme original CI : 4-6 mois (UFHB, INPHB) vs. 21 jours (UVCI CI numérique)",
+      "Coût traitement administratif diplôme papier CI : 35 000-85 000 FCFA vs. 8 000 FCFA numérique",
+      "Taux de litiges sur notes/résultats CI : 18% des étudiants déposent une réclamation manuelle (2023)",
+      "UFHB : 83 000 étudiants, 4 200 litiges de notes par an — délai traitement réclamation : 45 jours en moyenne",
+      "Loi CI 2017-771 : valeur juridique des documents électroniques (diplômes, relevés, attestations) depuis 2017, sous-exploitée par 90% des établissements CI"
+    ],
+    "acteurs_cles": [
+      "MESRS CI — cadre légal délivrance diplômes supérieurs, contrôle authenticité",
+      "Loi CI 2017-771 — valeur juridique des documents académiques électroniques",
+      "APDP CI — protection données personnelles dans les processus académiques numériques",
+      "Digicert CI / prestataires QR code — certification électronique des documents académiques",
+      "CAMES — équivalence et reconnaissance des diplômes dans l'espace UEMOA",
+      "CNPS CI — exigence de diplômes certifiés pour certains avantages sociaux"
+    ]
+  },
+  "enjeux_cles": [
+    {
+      "enjeu": "Dématérialiser les délibérations de jury et la publication des résultats",
+      "description": "Le passage de délibérations physiques avec procès-verbaux papier à des délibérations en ligne (Teams, portail dédié) avec publication automatique des résultats par SMS/email réduit le délai de 21 jours à 2-3 jours et élimine les erreurs de transcription manuelle.",
+      "impact": "Réduction délai résultats de 87% et élimination des erreurs de transcription manuelle"
+    },
+    {
+      "enjeu": "Déployer des diplômes électroniques certifiés avec QR code",
+      "description": "La Loi CI 2017-771 reconnaît la valeur juridique des diplômes électroniques. Un QR code Digicert CI (ou équivalent) lié au diplôme permet aux employeurs CI et internationaux de vérifier l'authenticité en temps réel, éliminant les faux diplômes.",
+      "impact": "Délai diplôme 6 mois → 21 jours, coût -75%, élimination des faux diplômes"
+    },
+    {
+      "enjeu": "Automatiser le traitement des réclamations et litiges de notes",
+      "description": "18% des étudiants CI déposent des réclamations sur leurs notes. Avec un portail de réclamation en ligne (délai soumission : 3 min) connecté au relevé de notes numérique, le délai de traitement passe de 45 jours à 7 jours et la traçabilité est complète.",
+      "impact": "Amélioration de la satisfaction étudiante et réduction des charges administratives"
+    },
+    {
+      "enjeu": "Rationaliser le catalogue de formation pour réduire la complexité opérationnelle",
+      "description": "Certains établissements CI proposent 50+ filières dont 20-30% comptent moins de 15 étudiants par promotion, générant des coûts fixes disproportionnés. La rationalisation basée sur les analytics LMS (taux de remplissage, taux de complétion, taux d'insertion) permet de concentrer les ressources sur les filières à forte valeur.",
+      "impact": "Réduction des coûts opérationnels de 15-25% et amélioration de la qualité sur les filières maintenus"
+    },
+    {
+      "enjeu": "Simplifier les validations hiérarchiques pour accélérer la prise de décision pédagogique",
+      "description": "Dans les universités publiques CI, la mise à jour d'un programme requiert 8-12 validations hiérarchiques (chef de département → doyen → MESRS CI → CAMES). La numérisation du processus avec workflows automatisés (Power Automate, Salesforce Flow) et signatures électroniques réduit ce délai de 18 mois à 4-6 mois.",
+      "impact": "Réactivité pédagogique accrue pour s'adapter aux besoins du marché ivoirien"
+    }
+  ],
+  "niveau_maturite": {
+    "description": "Échelle de maturité simplification des processus opérationnels pour les établissements d'enseignement CI",
+    "niveaux": [
+      {
+        "niveau": 1,
+        "label": "Manuel",
+        "description": "Tous les processus académiques sont papier : notes manuscrites, délibérations physiques, diplômes imprimés, résultats affichés sur panneau. Délai diplôme > 6 mois. Réclamations par courrier physique."
+      },
+      {
+        "niveau": 2,
+        "label": "Partiellement numérique",
+        "description": "Notes saisies sur Excel, résultats publiés sur site web statique, quelques formulaires de réclamation en ligne. Délibérations encore physiques. Diplômes papier. Processus de validation non automatisés."
+      },
+      {
+        "niveau": 3,
+        "label": "Structuré",
+        "description": "Portail de notes en ligne (Banner ou équivalent), résultats publiés automatiquement via SMS/email après délibération, formulaire de réclamation numérique avec suivi. Diplômes papier mais avec QR code vérification. Délai diplôme : 60-90 jours."
+      },
+      {
+        "niveau": 4,
+        "label": "Dématérialisé",
+        "description": "Délibérations de jury en ligne (Teams ou portail dédié), procès-verbaux électroniques signés (Loi CI 2017-771), diplômes numériques certifiés Digicert CI, relevés de notes en ligne vérifiables instantanément, traitement réclamations < 7 jours, workflows de validation numérisés. Délai diplôme : < 30 jours."
+      },
+      {
+        "niveau": 5,
+        "label": "Excellence",
+        "description": "Processus zéro papier complet : délibérations IA-assistées (détection anomalies dans les notes), diplômes blockchain (OAPI-certifiés, vérifiables globalement), réclamations traitées en < 48h par chatbot RPA + validation humaine, analytics prédictifs pour anticipation des réclamations, intégration CAMES pour reconnaissance automatique dans l'espace UEMOA."
+      }
+    ]
+  },
+  "indicateurs_cles": [
+    {
+      "kpi": "Délai délibération jury → publication résultats",
+      "definition": "Nombre de jours entre la fin du dernier examen d'une session et la publication officielle des résultats accessibles aux étudiants",
+      "unite": "jours",
+      "benchmark_ci": "Universités publiques CI : 21 jours — établissements privés numérisés CI : 3 jours",
+      "cible_sectorielle": "< 5 jours",
+      "source": "Enquête satisfaction étudiante MESRS CI 2024 + benchmark Pigier CI"
+    },
+    {
+      "kpi": "Délai de délivrance du diplôme (résultats finaux → diplôme en main)",
+      "definition": "Nombre de jours entre la publication des résultats finaux et la remise du diplôme officiel (original ou numérique certifié) à l'étudiant",
+      "unite": "jours",
+      "benchmark_ci": "UFHB/INPHB CI : 120-180 jours — UVCI CI (diplôme numérique) : 21 jours",
+      "cible_sectorielle": "< 30 jours (standard conforme Loi CI 2017-771)",
+      "source": "Rapport MESRS CI qualité de service 2024"
+    },
+    {
+      "kpi": "Taux de dématérialisation des processus académiques",
+      "definition": "Part des processus académiques clés (inscription, notes, délibération, diplôme, réclamation) entièrement dématérialisés sans intervention papier",
+      "unite": "%",
+      "benchmark_ci": "UVCI CI : 87% — Pigier CI : 82% — UFHB : 28% — INPHB : 35%",
+      "cible_sectorielle": "> 75% (5 processus clés sur 6)",
+      "source": "Audit numérique MESRS CI 2024"
+    },
+    {
+      "kpi": "Délai de traitement des réclamations de notes",
+      "definition": "Nombre de jours entre le dépôt d'une réclamation par un étudiant et la réponse officielle motivée de l'établissement",
+      "unite": "jours",
+      "benchmark_ci": "UFHB : 45 jours — Pigier CI numérisé : 5 jours — UVCI CI : 7 jours",
+      "cible_sectorielle": "< 10 jours (aligné sur droit étudiant MESRS CI)",
+      "source": "Service juridique MESRS CI 2024 + benchmarks établissements"
+    },
+    {
+      "kpi": "Taux de faux diplômes détectés via vérification QR code",
+      "definition": "Part des vérifications de diplômes effectuées par des employeurs ou tiers qui révèlent un faux (diplôme non enregistré dans le système de l'établissement)",
+      "unite": "% (sur vérifications demandées)",
+      "benchmark_ci": "MESRS CI estime 8-12% des diplômes présentés au secteur privé CI sont des faux (2023)",
+      "cible_sectorielle": "Objectif : 0% de faux diplômes non détectés (QR code vérifiable en temps réel)",
+      "source": "Rapport MESRS CI fraude documentaire 2023"
+    }
+  ],
+  "zoom_sur": {
+    "organisation": "Pigier CI (Abidjan)",
+    "titre": "Jury en ligne et diplômes numériques certifiés : délai réduit de 6 mois à 18 jours",
+    "contexte": "En 2022, Pigier CI organisait ses délibérations de jury de manière traditionnelle : réunion physique des enseignants (12-15 personnes) en salle, saisie manuelle des notes sur Excel, procès-verbal papier signé à la main, puis saisie dans le SIS Salesforce Education Cloud, publication des résultats 18 jours plus tard sur le site web. Les diplômes originaux papier étaient imprimés et remis lors d'une cérémonie unique en juin, quel que soit le mois de fin de formation.",
+    "solution": "Déploiement d'un processus de jury et diplomation entièrement numérique en 3 composantes : (1) délibérations en ligne sur Microsoft Teams + formulaire Salesforce (chaque enseignant saisit ses notes directement avant la séance, délibération de validation en 1h sur Teams au lieu de 3h en présentiel) ; (2) publication automatique des résultats par SMS (MTN CI, Orange CI) et email dans les 2h suivant la clôture du jury ; (3) diplômes numériques certifiés PDF + QR code Digicert CI, enregistrés dans le MESRS CI en J+5, remis par email en J+18, vérifiables en ligne 24/7 par les employeurs CI et internationaux.",
+    "resultats": {
+      "avant": "Délibérations physiques 18 jours après examens (saisie + coordination), publication résultats J+18, diplôme original remis uniquement lors de la cérémonie annuelle (délai moyen 5,5 mois), 8-12% de faux Pigier CI détectés au marché CI, coût impression + cérémonie 45 000 FCFA/diplôme",
+      "apres": "Délibération en ligne J+3 après dernier examen, résultats SMS/email dans les 2h de clôture jury, diplôme numérique certifié Digicert CI remis en J+18 (-94% vs. 5,5 mois), 0 faux diplôme Pigier CI non détecté depuis 2023 (QR code instantané), coût diplôme numérique 8 500 FCFA (-81%), NPS satisfaction processus diplomation 77/100 (vs. 31/100 en 2022), 1 200 vérifications QR code effectuées par des employeurs CI en 2024"
+    },
+    "lessons_learned": "La résistance principale des enseignants portait sur la saisie préalable des notes avant la séance de jury — ils craignaient une perte de l'échange collégial. La solution a été de maintenir la séance Teams de délibération comme moment collectif (même format, même durée) mais sans la saisie manuelle en séance. L'adhésion a été immédiate dès la première session. L'enregistrement MESRS CI des diplômes numériques a pris 3 mois de démarches administratives — le chemin critique à anticiper.",
+    "contact_reference": "Direction Académique Pigier CI — Abidjan Plateau"
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif simplification processus opérationnels — établissements enseignement CI et références",
+    "lignes": [
+      {
+        "organisation": "Pigier CI (Abidjan)",
+        "type": "National — leader privé",
+        "delai_resultats": "2h après clôture jury (SMS + email)",
+        "delai_diplome": "18 jours (numérique certifié Digicert CI)",
+        "reclamations_delai": "5 jours (portail Salesforce)",
+        "faux_diplomes": "0 non détecté (QR code)",
+        "score_dematerialisation": "82%",
+        "score_estime": "86/100"
+      },
+      {
+        "organisation": "UVCI CI",
+        "type": "National — leader numérique",
+        "delai_resultats": "48h après clôture jury (portail + email)",
+        "delai_diplome": "21 jours (numérique certifié)",
+        "reclamations_delai": "7 jours (portail self-service)",
+        "faux_diplomes": "0 non détecté (QR code Digicert CI)",
+        "score_dematerialisation": "87%",
+        "score_estime": "84/100"
+      },
+      {
+        "organisation": "UFHB (Université FHB Abidjan)",
+        "type": "National — université publique",
+        "delai_resultats": "21 jours après clôture jury",
+        "delai_diplome": "150 jours (papier, cérémonie annuelle)",
+        "reclamations_delai": "45 jours (courrier physique)",
+        "faux_diplomes": "Non contrôlé (pas de QR code)",
+        "score_dematerialisation": "28%",
+        "score_estime": "21/100"
+      },
+      {
+        "organisation": "Ashesi University (Ghana)",
+        "type": "Régional — référence Afrique de l'Ouest",
+        "delai_resultats": "24h après clôture jury (portail étudiant)",
+        "delai_diplome": "30 jours (numérique + option papier)",
+        "reclamations_delai": "5 jours (portail en ligne)",
+        "faux_diplomes": "0 non détecté (QR code + blockchain pilote)",
+        "score_dematerialisation": "79%",
+        "score_estime": "81/100"
+      },
+      {
+        "organisation": "Arizona State University — ASU EdPlus (USA)",
+        "type": "International — référence mondiale",
+        "delai_resultats": "Immédiat (automatique à clôture jury)",
+        "delai_diplome": "7 jours (diplôme numérique blockchain)",
+        "reclamations_delai": "48h (chatbot IA + validation humaine)",
+        "faux_diplomes": "0 (blockchain certifié, vérifiable globalement)",
+        "score_dematerialisation": "98%",
+        "score_estime": "97/100"
+      }
+    ]
+  },
+  "bonnes_pratiques": [
+    {
+      "pratique": "Déployer les diplômes numériques avec QR code dès que possible (Loi CI 2017-771)",
+      "description": "La valeur juridique des diplômes numériques est reconnue en CI depuis 2017. Le QR code lié à une base de données MESRS CI ou à un registre de l'établissement permet une vérification instantanée par les employeurs. Coût de déploiement : 2-5 M FCFA, ROI immédiat sur la réduction des faux diplômes.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Séparer la saisie des notes de la séance de délibération",
+      "description": "Exiger que chaque enseignant saisisse ses notes dans le SIS (Salesforce, Banner, ou Moodle Gradebook) avant la séance de jury élimine 2-3h de saisie en séance et réduit les erreurs de transcription de 90%. La séance devient un vrai moment collégial de décision, pas de saisie.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Automatiser la notification des résultats par SMS/email dès la clôture du jury",
+      "description": "Une notification automatique par SMS (Orange CI, MTN CI) envoyée dans les 2h de la clôture du jury élimine les longues queues d'étudiants aux panneaux d'affichage et les appels téléphoniques au secrétariat. Coût SMS CI : 15-25 FCFA/message.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Déployer un portail de réclamation en ligne avec suivi de statut",
+      "description": "Un formulaire de réclamation en ligne (3 minutes de saisie) avec numéro de dossier, statut en temps réel et délai maximum garanti (10 jours) réduit les réclamations informelles (couloir, WhatsApp) et les escalades. MESRS CI recommande un délai maximum de 15 jours pour les réclamations de notes.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Cartographier les processus académiques pour identifier les étapes non-valeur",
+      "description": "Avant toute numérisation, cartographier le flux complet du processus (BPMN ou swimlane) pour identifier les étapes sans valeur ajoutée : validations redondantes, circuits papier inutiles, réunions de coordination remplaçables par des workflows asynchrones. Réduire le nombre d'étapes avant de les numériser.",
+      "priorite": "Haute"
+    }
+  ],
+  "pieges_a_eviter": [
+    {
+      "piege": "Numériser des processus sans les simplifier au préalable",
+      "consequence": "On obtient un processus papier complexe devenu un processus numérique complexe. L'INPHB a numérisé son circuit de validation de notes en 2022 sans éliminer les 8 étapes de validation — le délai a seulement diminué de 21 à 18 jours au lieu des 5 jours attendus.",
+      "recommandation": "Appliquer d'abord la règle des 3 questions : cette étape est-elle obligatoire légalement ? Apporte-t-elle une valeur réelle ? Peut-elle être automatisée ?"
+    },
+    {
+      "piege": "Délivrer des diplômes numériques sans enregistrement préalable au MESRS CI",
+      "consequence": "Un diplôme numérique non enregistré au MESRS CI n'a pas de valeur légale en CI, même avec un QR code. Les employeurs de la Fonction Publique CI exigent systématiquement la vérification MESRS CI. Risque de rejet du diplôme et litige étudiant.",
+      "recommandation": "Finaliser l'enregistrement des diplômes numériques au MESRS CI avant leur délivrance — prévoir 60-90 jours pour les démarches administratives lors du premier déploiement"
+    },
+    {
+      "piege": "Dématérialiser sans prévoir un mode dégradé pour les pannes",
+      "consequence": "Une panne du système de résultats lors de la période post-jury crée une crise de communication majeure. L'UVCI CI a subi une coupure AWS de 4h en pleine période de publication des résultats (2023) — l'absence de mode dégradé (SMS de fallback) a généré 450 appels simultanés au secrétariat.",
+      "recommandation": "Prévoir systématiquement un mode dégradé : fichier de résultats sauvegardé localement, SMS envoyé en parallèle de la publication en ligne, numéro de hotline activé pendant les 48h post-jury"
+    },
+    {
+      "piege": "Ignorer les données personnelles dans les processus académiques numérisés",
+      "consequence": "Les relevés de notes et diplômes contiennent des données personnelles sensibles. Leur publication sur un portail sans contrôle d'accès strict (authentification étudiante) expose l'établissement à des violations APDP CI. Incident UFHB 2023 : relevés de notes accessibles sans authentification sur 3 semaines.",
+      "recommandation": "Authentification obligatoire (mot de passe + OTP SMS) pour l'accès à tout document académique nominatif, journalisation des téléchargements conformément à l'APDP CI"
+    }
+  ],
+  "roadmap": {
+    "titre": "Roadmap simplification processus opérationnels — établissement d'enseignement CI",
+    "phases": [
+      {
+        "phase": "Phase 1 — Résultats et réclamations (Mois 1-4)",
+        "actions": [
+          "Cartographie BPMN des processus académiques (notes, jury, diplôme, réclamation)",
+          "Numérisation de la saisie des notes dans le SIS existant (avant délibération)",
+          "Déploiement notification automatique résultats par SMS/email post-jury",
+          "Portail de réclamation en ligne avec numéro de dossier et suivi de statut"
+        ],
+        "budget_indicatif": "2 - 5 M FCFA (développement portail + SMS gateway + formation)"
+      },
+      {
+        "phase": "Phase 2 — Jury en ligne et diplômes numériques (Mois 5-12)",
+        "actions": [
+          "Déploiement délibérations de jury en ligne (Teams + formulaire SIS)",
+          "Démarches MESRS CI pour enregistrement des diplômes numériques (délai 60-90 jours)",
+          "Déploiement QR code Digicert CI sur les diplômes et relevés de notes",
+          "Conformité APDP CI : authentification portail académique + journalisation accès"
+        ],
+        "budget_indicatif": "4 - 10 M FCFA (Digicert CI + développement jury en ligne + MESRS CI)"
+      },
+      {
+        "phase": "Phase 3 — Excellence opérationnelle (Mois 13-24)",
+        "actions": [
+          "Analytics prédictifs réclamations (identification des modules à fort risque de contestation)",
+          "Workflow automatisé validations hiérarchiques (Power Automate ou Salesforce Flow)",
+          "Rationalisation catalogue : suppression filières < 15 étudiants sur 3 ans consécutifs",
+          "Intégration CAMES pour reconnaissance automatique diplômes dans l'espace UEMOA"
+        ],
+        "budget_indicatif": "5 - 15 M FCFA (analytics + workflows + CAMES)"
+      }
+    ]
+  },
+  "ressources": {
+    "formations": [
+      "FDFP CI — formations gestion de projet numérique et BPM (Business Process Management)",
+      "Microsoft Learn — Power Automate pour workflows académiques (gratuit)",
+      "Salesforce Trailhead — Education Cloud pour processus académiques (gratuit en ligne)"
+    ],
+    "outils_recommandes": [
+      "Digicert CI — certification QR code documents académiques (conformité Loi CI 2017-771)",
+      "Salesforce Education Cloud — SIS avec jury en ligne, portail étudiant et analytics réclamations",
+      "Microsoft Power Automate — automatisation workflows de validation académique (tarif Microsoft 365 éducation)",
+      "Moodle Gradebook + Moodle Grades Export — saisie notes et export vers SIS (open source)",
+      "Twilio ou Orange Business SMS API — notifications résultats automatiques par SMS CI"
+    ],
+    "references_reglementaires": [
+      "Loi CI 2017-771 — valeur juridique des documents électroniques (diplômes, relevés, attestations)",
+      "MESRS CI — procédure enregistrement des diplômes numériques et des résultats officiels",
+      "APDP CI — Loi 2013-450 (protection données personnelles dans les portails académiques)",
+      "CAMES — reconnaissance des diplômes dans l'espace UEMOA (procédure équivalence)",
+      "Code de l'Éducation CI — droits des étudiants en matière de résultats et réclamations"
+    ]
+  },
+  "ai_context": {
+    "scoring_dimension": "Maturité de la simplification et dématérialisation des processus opérationnels académiques",
+    "scoring_rubric": {
+      "score_1_to_20": "Tous les processus académiques sont papier : jury physique, notes manuscrites ou Excel, diplômes papier remis en cérémonie annuelle (délai > 6 mois), réclamations par courrier physique, aucun portail étudiant.",
+      "score_21_to_40": "Notes saisies sur Excel ou SIS basique, résultats publiés sur site web statique manuellement, quelques formulaires de réclamation en ligne mais délai > 30 jours, diplômes papier sans QR code, processus non automatisés.",
+      "score_41_to_60": "Portail de notes en ligne, résultats SMS/email automatique post-jury, formulaire réclamation numérique avec suivi, diplômes papier avec QR code de vérification, délai diplôme 60-90 jours.",
+      "score_61_to_80": "Délibérations de jury en ligne, procès-verbaux électroniques signés (Loi CI 2017-771), diplômes numériques certifiés Digicert CI, résultats publiés < 48h, réclamations traitées < 10 jours, taux dématérialisation > 75%.",
+      "score_81_to_100": "Zéro papier complet : délibérations IA-assistées, diplômes blockchain vérifiables globalement, réclamations traitées < 48h par chatbot RPA, analytics prédictifs réclamations, intégration CAMES automatique, taux dématérialisation > 95%."
+    },
+    "questions_discriminantes": [
+      "Quel est le délai entre la fin du dernier examen et la publication officielle des résultats aux étudiants ?",
+      "Vos diplômes sont-ils délivrés sous forme numérique avec un QR code vérifiable par les employeurs, conformément à la Loi CI 2017-771 ?",
+      "Les délibérations de jury se font-elles entièrement en ligne, ou requièrent-elles encore une réunion physique avec procès-verbal papier ?",
+      "Disposez-vous d'un portail en ligne permettant aux étudiants de déposer et suivre leurs réclamations de notes ?",
+      "Quel est le délai moyen entre la fin de la formation et la remise du diplôme officiel à l'étudiant ?"
+    ],
+    "signaux_avances": [
+      "Diplômes numériques certifiés vérifiables en temps réel par les employeurs CI et internationaux via QR code",
+      "Délai de publication des résultats inférieur à 2 heures après clôture du jury grâce à une notification automatique",
+      "Délai de traitement des réclamations inférieur à 5 jours via un portail numérique avec suivi de statut",
+      "Analytics prédictifs identifiant les modules à fort risque de contestation avant la session d'examens",
+      "Intégration avec la base CAMES pour reconnaissance automatique des diplômes dans l'espace UEMOA"
+    ]
+  }
+}

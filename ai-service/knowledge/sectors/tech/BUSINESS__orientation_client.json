@@ -1,0 +1,56 @@
+{
+  "meta": { "axis": "BUSINESS", "sub_axis": "Orientation Client", "sector": "telecom", "language": "fr", "version": "1.0", "last_updated": "2026-05" },
+  "trends": [
+    { "title": "NPS télécom en UEMOA — améliorer la satisfaction dans un secteur à forte attrition", "description": "Les opérateurs télécoms africains affichent parmi les NPS les plus bas de tous les secteurs (-5 à +15) en raison de la qualité réseau, des réclamations de facturation et du service client déprécié. La réduction du churn (qui peut atteindre 25-30 % par an dans certains marchés UEMOA) est l'enjeu n°1 d'orientation client.", "impact_level": "Très élevé", "horizon": "12-24 mois", "adoption_rate": "40 % des opérateurs africains mesurent le NPS régulièrement (GSMA 2024)", "source": "GSMA Customer Experience Benchmark 2024", "year": "2024" },
+    { "title": "Personnalisation des offres télécoms par IA — tarifs et bundles sur mesure", "description": "Les opérateurs UEMOA qui utilisent l'IA pour analyser les comportements d'utilisation (voix, data, transferts d'argent) peuvent proposer des bundles personnalisés (ex: 'Pack Tik Tok 1Go + 30 min voix à 200 FCFA') plus attractifs que les forfaits standardisés. La personnalisation réduit le churn de 20-30 %.", "impact_level": "Élevé", "horizon": "18-36 mois", "adoption_rate": "25 % des opérateurs africains utilisent l'IA pour la personnalisation des offres (GSMA 2024)", "source": "GSMA AI Personalization Telecom Africa 2024", "year": "2024" }
+  ],
+  "key_technologies": [
+    { "name": "CRM télécom avec vue 360° abonné (convergence fixe/mobile/data/money)", "category": "Gestion de la relation abonné", "maturity_stage": "Mature", "adoption_in_sector": "Moyenne en UEMOA", "leading_vendors": ["Salesforce Telecom Cloud", "Microsoft Dynamics 365 Telco", "Comverse CCARE", "Ericsson BSCS", "Amdocs CES"] },
+    { "name": "IA pour la prédiction du churn et la rétention proactive", "category": "Fidélisation client par données", "maturity_stage": "Mature", "adoption_in_sector": "Faible en UEMOA", "leading_vendors": ["Salesforce Einstein", "IBM Watson Customer Experience", "DataRobot Churn", "Google Vertex AI", "Ericsson Decision Support"] }
+  ],
+  "market_leaders": {
+    "national": [{ "organisation": "Orange Côte d'Ivoire", "country": "Côte d'Ivoire", "key_practice": "CRM Orange avec vue 360° sur 18 M abonnés. Modèle ML de prédiction du churn avec actions proactives de rétention (offre personnalisée J-7 avant expiration du contrat). NPS +18 — le plus élevé des opérateurs CI. Programme 'Orange Moi' de fidélisation gamifié.", "differentiator": "Orange CI affiche un NPS de +18 — 25 points au-dessus de la moyenne sectorielle UEMOA — grâce à son programme de fidélisation 'Orange Moi' qui a réduit le churn mensuel de 4,2 % à 2,8 %", "source": "Orange CI Rapport Client 2023" }],
+    "regional": [{ "organisation": "Safaricom Kenya", "country": "Kenya", "key_practice": "NPS +54 (le plus élevé du secteur télécom africain). Programme M-Pesa Points de fidélisation. Personnalisation des offres par ML (bundles Bonga Points). Application My Safaricom avec 8 M utilisateurs actifs. Customer service via WhatsApp, app et centres d'appels.", "differentiator": "Safaricom Kenya a atteint un NPS de +54 — un record mondial pour un opérateur télécom dans un marché émergent — grâce à l'intégration unique de M-Pesa (mobile money) et des services télécoms dans une expérience client unifiée", "source": "Safaricom Annual Report 2023" }],
+    "international": [{ "organisation": "T-Mobile USA", "country": "USA", "key_practice": "Customer Excellence : NPS +35, churn < 1 %/mois. IA pour la détection proactive des problèmes réseau par abonné. 'Team of Experts' — équipe dédiée à chaque client (fin du call center généraliste). Transparence tarifaire totale.", "differentiator": "T-Mobile USA a atteint un churn < 1 % mensuel (vs 2-3 % chez les concurrents) grâce à son modèle 'Team of Experts' où chaque client a une équipe dédiée — une innovation RH qui est devenue un avantage concurrentiel durable", "source": "T-Mobile Annual Report 2023" }]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Aucune mesure NPS. Service client uniquement en agence. Pas de CRM. Réclamations non traitées systématiquement. Churn > 4 % mensuel.",
+    "level_2_developing": "Service client par téléphone et agence. CRM basique. NPS mesuré annuellement. Programme de fidélisation minimal. Churn 3-4 % mensuel.",
+    "level_3_defined": "CRM opérationnel. NPS trimestriel. Application self-care. Programme fidélisation. Churn 2-3 % mensuel. ML basique pour la rétention.",
+    "level_4_managed": "CRM 360°. NPS mensuel et piloté. IA prédiction churn. Personnalisation offres. Churn < 2 % mensuel. Multi-canal service client.",
+    "level_5_optimizing": "NPS > 40. Churn < 1,5 %. Personnalisation IA temps réel. Team of Experts. Customer service 24/7 multi-canal. Fidélisation gamifiée."
+  },
+  "regulations": [{ "name": "ARTCI — Cahier des charges qualité de service et traitement des réclamations", "issuing_body": "ARTCI", "scope": "Opérateurs télécoms en Côte d'Ivoire", "key_requirement": "L'ARTCI impose des délais maximum de traitement des réclamations clients (48h pour les réclamations de facturation, 7 jours pour les réclamations de qualité de service). Les opérateurs doivent publier trimestriellement leurs indicateurs QoS (qualité de service) et les taux de résolution des réclamations. Un système de médiation est prévu pour les litiges non résolus.", "compliance_deadline": "En vigueur", "source_url": "https://www.artci.ci" }],
+  "risks": [{ "title": "Churn multi-SIM — les abonnés UEMOA utilisent 2-3 SIM simultanément", "description": "En Côte d'Ivoire, 45 % des abonnés possèdent 2 SIM ou plus (usage selon la qualité réseau et les promotions). Ce comportement multi-SIM rend les métriques d'abonnés peu fiables et complique la fidélisation — un abonné 'actif' peut basculer vers un concurrent en cas de meilleure promotion sans préavis.", "severity": "Élevé", "likelihood": "Très élevée", "mitigation": "Développer des offres cross-services (voix + data + mobile money + contenu) qui créent une dépendance économique forte. Les abonnés mono-SIM ont un churn 3× inférieur aux multi-SIM. Le mobile money est le meilleur retention tool — les utilisateurs MoMo ont un churn 60 % inférieur." }],
+  "opportunities": [{ "title": "Super-app télécom — une seule application pour voix, data, money, contenu et services B2B", "description": "Une super-app télécom (modèle Safaricom M-Pesa/My Safaricom) qui unifie voix, data, mobile money, contenu (musique, sport) et services B2B dans une seule application crée une dépendance forte qui réduit le churn de 50-60 %. L'application devient le point d'entrée de toute la vie numérique de l'abonné.", "impact_level": "Très élevé", "time_to_value": "18-36 mois", "prerequisite_maturity": "Niveau 3" }],
+  "ma_and_fundraising": [],
+  "zoom_case_study": { "entreprise": "Safaricom Kenya — NPS +54, churn 1,3 %, M-Pesa comme outil de rétention", "pays": "Kenya", "technologie": "CRM Salesforce + ML churn prediction + M-Pesa loyalty + My Safaricom app (8 M MAU)", "description": "Safaricom Kenya est la référence mondiale en orientation client pour un opérateur télécom dans un marché émergent. Les piliers de sa stratégie client : (1) M-Pesa comme outil de rétention — les abonnés utilisant M-Pesa ont un churn 4× inférieur aux non-utilisateurs, ce qui a conduit Safaricom à pousser l'adoption de M-Pesa comme priorité de rétention avant même la rentabilité directe de la transaction ; (2) My Safaricom App — super-app avec 8 M utilisateurs actifs permettant la gestion de tous les services (airtime, data, M-Pesa, contenu), NPS in-app de +62 ; (3) ML churn prediction — Salesforce Einstein analyse en temps réel 80 variables comportementales pour identifier les abonnés à risque de churn 30 jours avant — déclenchement automatique d'offres de rétention personnalisées. En 2023 : NPS +54, churn mensuel 1,3 % (vs 3-4 % de la moyenne africaine), 95 % des réclamations résolues au premier contact.", "resultats": "NPS +54 · Churn 1,3 %/mois · M-Pesa rétention 4× · My Safaricom 8M MAU · 80 variables ML churn · 95 % réclamations 1er contact · Référence mondiale", "source": "Safaricom Annual Report 2023 / GSMA Customer Experience Award 2024", "annee": "2023" },
+  "comparatif_organisations": {
+    "titre": "Maturité orientation client — benchmark opérateurs télécoms UEMOA",
+    "colonnes": ["Organisation", "NPS mesuré et piloté (> +20)", "Churn mensuel < 2 %", "CRM 360° abonné opérationnel", "ML prédiction churn actif", "Personnalisation offres par IA"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "L'orientation client est le levier de rentabilité le plus sous-exploité des opérateurs UEMOA. Avec un churn mensuel de 3-4 % (vs 1-1,5 % pour les leaders mondiaux), les opérateurs CI perdent et reconstituent leur base abonnés constamment — à un coût d'acquisition 5-8× supérieur au coût de rétention. Le mobile money est le meilleur outil de rétention disponible — les utilisateurs MoMo/Orange Money ont un churn structurellement inférieur.",
+    "maturity_max_description": "NPS supérieur à +40 mesuré mensuellement et piloté par le COMEX. Churn mensuel inférieur à 1,5 %. CRM 360° unifiant voix, data, mobile money et contenu pour chaque abonné. ML de prédiction du churn avec actions proactives de rétention déclenchées automatiquement. Personnalisation des offres par IA en temps réel. Service client 24/7 via app, WhatsApp et call center.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune mesure NPS. Pas de CRM. Churn > 4 %. Service client en agence uniquement.",
+      "score_21_to_40": "Service client téléphone+agence. CRM basique. NPS annuel. Programme fidélisation minimal.",
+      "score_41_to_60": "CRM opérationnel. NPS trimestriel. App self-care. Programme fidélisation. Churn 2-3 %.",
+      "score_61_to_80": "CRM 360°. NPS mensuel. IA prédiction churn. Personnalisation offres. Churn < 2 %.",
+      "score_81_to_100": "NPS > 40. Churn < 1,5 %. Personnalisation IA temps réel. Super-app. Service 24/7."
+    },
+    "prompt_injection_context": "Cet opérateur télécom est évalué sur sa maturité en orientation client dans le contexte UEMOA. Analyse le NPS, le taux de churn, le CRM abonné, les modèles ML de prédiction du churn et la personnalisation des offres.",
+    "key_questions_for_llm": [
+      "Le NPS (Net Promoter Score) est-il mesuré régulièrement et utilisé comme KPI de pilotage par la direction ?",
+      "Quel est le taux de churn mensuel moyen — est-il inférieur à 2 % ?",
+      "Un CRM avec vue 360° sur l'abonné (historique voix, data, mobile money, réclamations) est-il opérationnel ?",
+      "Un modèle ML de prédiction du churn est-il en production pour déclencher des actions de rétention proactives ?",
+      "Les offres et bundles sont-ils personnalisés par abonné en fonction de son comportement d'utilisation ?"
+    ]
+  }
+}

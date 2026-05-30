@@ -1,0 +1,305 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "RH",
+    "sous_axe": "agilite",
+    "version": "1.0",
+    "langue": "fr",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "L'agilité RH dans le BTP CI est un enjeu critique : la demande de compétences fluctue fortement selon le carnet de commandes (boom PND CI 2021-2025, puis contraction possible), les profils rares (ingénieurs BIM, géotechniciens, ingénieurs structures) font face à une forte concurrence des secteurs minier et pétrolier, et le recrutement traditionnel (annonces papier, bouche-à-oreille) prend 60-90 jours pour les profils qualifiés. L'agilité RH BTP CI couvre la rapidité de recrutement, la flexibilité des effectifs (intérim, CDD, sous-traitance RH), la rétention des talents rares et la capacité à développer rapidement de nouvelles compétences (BIM, numérique) en interne.",
+    "chiffres_cles": [
+      "Délai moyen recrutement ingénieur BTP CI (CDI) : 60-90 jours (temps-to-hire trop long)",
+      "Profils BIM certifiés en Côte d'Ivoire : estimés à < 200 personnes (pénurie critique)",
+      "Concurrence recrutement CI : mines (Endeavour Mining, Barrick Gold CI), pétrolier (CNR International CI), banques",
+      "Turnover ingénieurs BTP CI : 28% par an (en partie vers le secteur minier et l'étranger : France, Canada)",
+      "Taux de recrutement digital (LinkedIn, plateformes) BTP CI : < 15% (vs. 65% en Europe)"
+    ],
+    "specificites_locales": [
+      "FDFP CI : financement de la reconversion interne (formation BIM d'un ingénieur AutoCAD → Revit, par exemple)",
+      "CAMES (Conseil Africain et Malgache pour l'Enseignement Supérieur) : reconnaissance des diplômes ingénieurs CI",
+      "INPHB CI, ESTP CI Abidjan, ENSTP CI Yamoussoukro : vivier principal d'ingénieurs BTP CI recrutables",
+      "Convention collective BTP CI : grilles salariales et conditions d'emploi encadrées",
+      "Marché Afrique de l'Ouest : recrutement régional possible (Sénégal, Burkina Faso, Mali pour les profils rares)"
+    ]
+  },
+  "definition_axe": {
+    "titre": "Agilité RH dans le BTP",
+    "description": "Capacité de l'entreprise BTP à adapter rapidement ses effectifs et ses compétences aux variations de son carnet de commandes et aux besoins des chantiers. L'agilité RH BTP CI couvre : la rapidité de recrutement (time-to-hire < 30 jours pour les profils standards), la flexibilité des effectifs (intérim BTP CI, CDD saisonniers pour la saison des pluies), la rétention des talents rares (ingénieurs BIM, géotechniciens), le développement rapide des compétences internes (upskilling BIM, numérique), et la gestion des départs de compétences critiques.",
+    "perimetre": [
+      "Recrutement agile : processus digital (LinkedIn CI, JobMalela, plateformes) réduisant le time-to-hire",
+      "Flexibilité effectifs : intérim BTP CI (Adecco CI, Manpower CI), CDD saisonniers, sous-traitance RH",
+      "Rétention talents : plan de rétention ingénieurs rares (BIM, géotechniciens), politiques de fidélisation",
+      "Upskilling interne : reconversion AutoCAD → BIM (Revit), formation chefs de chantier → conducteurs de travaux",
+      "Plans de succession : gestion des départs de compétences critiques, doublures identifiées",
+      "Marque employeur : attractivité pour les jeunes diplômés ingénieurs CI (INPHB CI, ESTP CI)"
+    ],
+    "technologies_cles": [
+      "LinkedIn CI — Recrutement digital ingénieurs BTP CI (profils actifs et passifs)",
+      "JobMalela / Emploitogo CI — Plateformes recrutement digital spécifiques Côte d'Ivoire",
+      "Taleo / SmartRecruiters / Workday — ATS (Applicant Tracking System) pour structurer le recrutement BTP CI",
+      "LinkedIn Learning / Coursera — Upskilling BIM et numérique pour ingénieurs BTP CI",
+      "FDFP CI — Financement reconversions internes (BIM, numérique) et formations qualifiantes",
+      "Adecco CI / Manpower CI / Interact CI — Agences intérim BTP pour flexibilité effectifs"
+    ]
+  },
+  "enjeux_specifiques": {
+    "enjeux": [
+      {
+        "titre": "Pénurie de profils BIM en Côte d'Ivoire",
+        "description": "Avec moins de 200 ingénieurs certifiés BIM en CI, la demande est largement supérieure à l'offre, notamment pour les projets BNETD CI imposant le BIM. Les entreprises BTP CI qui forment leurs ingénieurs AutoCAD au BIM en interne (upskilling financé FDFP CI) ont un avantage compétitif majeur et fidélisent des profils en créant un investissement mutuel.",
+        "impact": "Avantage concurrentiel sur les marchés BIM, rétention des ingénieurs formés, accès aux grands marchés BNETD CI"
+      },
+      {
+        "titre": "Réduction du time-to-hire pour les profils critiques",
+        "description": "Un poste d'ingénieur civil vacant pendant 60-90 jours sur un chantier CI coûte cher : ralentissement des travaux, surcharge des autres ingénieurs, risque de pénalités de retard BNETD CI. Un processus de recrutement agile (vivier de CV en attente, partenariats INPHB CI, réseau LinkedIn CI actif) peut réduire ce délai à 20-30 jours.",
+        "impact": "Réduction du coût de la vacance de poste, continuité des chantiers, compétitivité sur les AO demandant des profils spécifiques"
+      },
+      {
+        "titre": "Rétention des ingénieurs face à la concurrence sectorielle CI",
+        "description": "Les ingénieurs BTP CI expérimentés (5-10 ans d'expérience) sont très sollicités par le secteur minier (Randgold/Barrick, Endeavour Mining CI) et le secteur pétrolier (CNR International CI, TotalEnergies CI) qui offrent des salaires 30-50% supérieurs à la convention collective BTP CI. La rétention passe par la formation (investissement perçu), les perspectives d'évolution claires et un environnement de travail valorisant.",
+        "impact": "Réduction du turnover ingénieurs de 28% à < 15%, économie sur les coûts de recrutement et de formation"
+      }
+    ]
+  },
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Inexistant",
+      "description": "Recrutement uniquement par bouche-à-oreille et relations personnelles. Aucune publication d'offre digitale. Pas de vivier de candidatures. Délai de recrutement 90+ jours pour les ingénieurs. Aucune politique de rétention. Formation ad hoc uniquement si obligatoire.",
+      "signes_distinctifs": [
+        "Recrutement : réseau du dirigeant, contacts CNBTP CI, affiches papier bureau de chantier",
+        "Délai recrutement ingénieur CI : 90-120 jours (inacceptable pour les besoins chantier)",
+        "Aucune publication d'offres d'emploi sur LinkedIn CI ou JobMalela",
+        "Turnover 35%+ par an sans analyse des causes ni plan de rétention",
+        "Formation : uniquement réglementaire (habilitations sécurité) si imposée par CNBTP CI"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Offres d'emploi publiées sur quelques plateformes digitales (JobMalela, AbidjanCI.net). Partenariats informels avec INPHB CI et ESTP CI pour les stagiaires. Début de politique de formation annuelle (FDFP CI). Délai recrutement 60-80 jours. Quelques tentatives de rétention (augmentations ponctuelles).",
+      "signes_distinctifs": [
+        "Offres publiées sur JobMalela ou AbidjanCI.net (sans ATS, CV reçus par email)",
+        "Stagiaires INPHB CI accueillis régulièrement (vivier informel de futures recrues)",
+        "1-2 formations/an financées FDFP CI (formations techniques réglementaires prioritairement)",
+        "Délai recrutement : 60-80 jours (amélioration vs. 90-120 mais encore trop long)",
+        "Rétention : augmentations salariales ponctuelles pour les profils clés qui annoncent un départ"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Processus de recrutement digital structuré (LinkedIn CI, ATS). Partenariats formels INPHB CI / ESTP CI pour les stages et les pré-recrutements. Plan de formation annuel FDFP CI avec budget. Programme d'upskilling BIM financé. Délai recrutement < 45 jours pour les profils standards. Plan de rétention formalisé.",
+      "signes_distinctifs": [
+        "LinkedIn CI actif : page entreprise, offres publiées, sourcing actif des profils passifs BTP CI",
+        "ATS (ou Trello RH) : suivi des candidatures, pipeline de recrutement visible, délai mesuré",
+        "Convention stage / pré-embauche INPHB CI et ESTP CI : 5-10 stagiaires/an, taux de CDI 40%",
+        "Plan formation FDFP CI : 8+ jours/an par ingénieur, budget dédié, pilotage DRH",
+        "Upskilling BIM : 3-5 ingénieurs formés Revit par an (financé FDFP CI)"
+      ]
+    },
+    "niveau_4": {
+      "label": "Optimisé",
+      "description": "Agilité RH complète : vivier de candidatures actif, intérim BTP CI pour les pics de charge, plans de succession définis. Time-to-hire < 30 jours pour les profils standards. Taux de turnover réduit à < 18%. Ingénieurs BIM reconvertis en interne. Marque employeur active sur LinkedIn CI.",
+      "signes_distinctifs": [
+        "Vivier de candidatures actif : 50+ CV qualifiés en attente, mise à jour trimestrielle",
+        "Intérim BTP CI (Adecco CI, Manpower CI) : contrats cadres pour pics de charge, délai 5 jours",
+        "Plans de succession : doublures identifiées pour les 5 postes clés (chef de projet, ingénieur BIM, etc.)",
+        "Time-to-hire < 30 jours pour profils ingénieurs standards (vs. 60-90 jours processus traditionnel)",
+        "NPS employés mesuré trimestriellement : > 50/100, actions correctives sur les points < 40"
+      ]
+    },
+    "niveau_5": {
+      "label": "Différenciant",
+      "description": "L'entreprise BTP CI est un employeur de référence dans le secteur CI. Programme de leadership accéléré pour les jeunes ingénieurs. Partenariats académiques R&D. Politique de mobilité internationale (groupe ou sous-région UEMOA). IA pour la prédiction du turnover et l'optimisation du recrutement.",
+      "signes_distinctifs": [
+        "Employeur de référence BTP CI : classé Top 10 Employeurs CI sur LinkedIn CI (évaluation Glassdoor)",
+        "Programme leadership accéléré : 3 jeunes ingénieurs CI promus à des postes senior en 24 mois",
+        "IA prédiction turnover : modèle ML identifiant les ingénieurs à risque de départ 3 mois à l'avance",
+        "Mobilité UEMOA : échanges d'ingénieurs avec filiales ou partenaires Sénégal, Mali, Burkina Faso",
+        "R&D académique : projets de recherche avec INPHB CI sur BIM, matériaux innovants ou IoT chantier"
+      ]
+    }
+  },
+  "indicateurs_cles": {
+    "indicateurs": [
+      {
+        "nom": "Time-to-hire (délai de recrutement)",
+        "definition": "Délai moyen entre la décision de recruter et la signature du contrat de travail pour les profils ingénieurs et chefs de chantier",
+        "unite": "jours",
+        "cible_sectorielle": "Time-to-hire < 30 jours pour profils ingénieurs standards BTP CI",
+        "frequence_mesure": "Par recrutement"
+      },
+      {
+        "nom": "Taux de turnover annuel (ingénieurs et chefs de chantier)",
+        "definition": "Pourcentage de départs volontaires (démissions) des ingénieurs et chefs de chantier sur l'effectif total annuel moyen",
+        "unite": "%",
+        "cible_sectorielle": "Turnover < 18% pour ingénieurs BTP CI (vs. 28% moyenne sectorielle CI)",
+        "frequence_mesure": "Annuelle"
+      },
+      {
+        "nom": "Taux d'ingénieurs BIM certifiés",
+        "definition": "Pourcentage des ingénieurs de l'entreprise certifiés BIM (Autodesk Revit Professional, Archicad ou équivalent)",
+        "unite": "%",
+        "cible_sectorielle": "> 30% des ingénieurs BTP certifiés BIM (vs. < 5% dans le secteur CI global)",
+        "frequence_mesure": "Annuelle"
+      },
+      {
+        "nom": "Coût d'acquisition d'un recrutement",
+        "definition": "Coût total d'un recrutement (temps DRH + frais sourcing + cabinet recrutement éventuel + formation onboarding) divisé par le nombre de recrutements",
+        "unite": "FCFA",
+        "cible_sectorielle": "< 1,5 M FCFA par recrutement ingénieur CDI (vs. 3-5 M FCFA via cabinet externe)",
+        "frequence_mesure": "Par recrutement"
+      },
+      {
+        "nom": "NPS employés (eNPS)",
+        "definition": "Net Promoter Score des employés : 'Sur une échelle de 0 à 10, recommanderiez-vous notre entreprise comme lieu de travail à un ami ?' eNPS = % Promoteurs - % Détracteurs",
+        "unite": "score",
+        "cible_sectorielle": "eNPS > 30 (employés satisfaits recommandant l'entreprise), objectif > 50",
+        "frequence_mesure": "Semestrielle"
+      }
+    ]
+  },
+  "bonnes_pratiques": {
+    "pratiques": [
+      {
+        "titre": "Activer LinkedIn Recruiter CI pour le sourcing actif d'ingénieurs BTP",
+        "description": "Créer une page LinkedIn CI attractive pour l'entreprise BTP (projets réalisés, équipes, ambiance de travail) et utiliser LinkedIn Recruiter (abonnement mensuel ~130 000 FCFA/mois) pour identifier et contacter directement les ingénieurs BTP CI sur LinkedIn, y compris les passifs (non en recherche active). Cibler les profils INPHB CI, ESTP CI, universités françaises avec stages CI. Message de prise de contact personnalisé, pas un modèle générique.",
+        "benefice": "Accès aux profils passifs (les meilleurs sont rarement en recherche active), time-to-hire réduit à 25-35 jours"
+      },
+      {
+        "titre": "Programme d'upskilling BIM financé par le FDFP CI",
+        "description": "Former 3-5 ingénieurs AutoCAD 2D par an au BIM Revit (formation Autodesk de 5 jours + accompagnement 3 mois sur un chantier pilote). Coût brut : 800 000 FCFA/ingénieur. Remboursement FDFP CI : 70-80% si formation certifiante et plan de formation approuvé. Ingénieur formé : engagement de 2 ans minimum dans l'entreprise. Les ingénieurs BIM CI deviennent des actifs stratégiques qui fidélisent leur employeur.",
+        "benefice": "Résolution de la pénurie BIM CI en interne, fidélisation des ingénieurs formés, avantage compétitif marchés BIM"
+      },
+      {
+        "titre": "Convention de pré-embauche avec INPHB CI et ESTP CI",
+        "description": "Négocier des conventions de partenariat avec l'INPHB CI (Yamoussoukro) et l'ESTP CI (Abidjan) : accueil de 5-10 stagiaires/an (projets de fin d'études sur des chantiers CI réels), identification des meilleurs profils pour une offre de CDI à la diplomation. Participation aux forums emploi INPHB CI et ESTP CI. Le recrutement direct depuis l'école coûte 10x moins cher qu'un recrutement via cabinet.",
+        "benefice": "Pipeline de recrutement pérenne, recrutement 5-8x moins coûteux, image d'employeur engagé auprès des étudiants CI"
+      },
+      {
+        "titre": "Contrats cadres intérim BTP CI pour la flexibilité des effectifs",
+        "description": "Négocier des contrats cadres avec Adecco CI, Manpower CI ou Interact CI pour le recrutement d'intérimaires BTP CI en moins de 5 jours : maçons, électriciens BTP, plombiers, chefs d'équipe expérimentés pour les pics de charge. Définir en avance les profils types et les conditions contractuelles pour une mise en place rapide. Conformité CNSS CI assurée par l'agence intérim.",
+        "benefice": "Flexibilité effectifs sur les pics de charge (saison sèche CI = haute saison BTP), sans CDI permanents sous-utilisés"
+      },
+      {
+        "titre": "Programme de rétention ciblé pour les ingénieurs BIM et profils rares",
+        "description": "Identifier les 5-10 profils les plus critiques (ingénieurs BIM certifiés, géotechniciens, ingénieurs structures expérimentés) et définir un plan de rétention individuel : entretien annuel de rétention, plan de carrière à 3 ans, formation avancée, responsabilité croissante (chef de projet junior, encadrement d'équipe), prime de fidélité à 2 et 3 ans d'ancienneté. Objectif : diviser par 2 le turnover de ces profils critiques.",
+        "benefice": "Turnover profils rares < 15%, économie 3-5 M FCFA/remplacement évité, continuité des projets BIM"
+      }
+    ]
+  },
+  "ecueils_frequents": {
+    "ecueils": [
+      {
+        "titre": "Recruter uniquement quand le poste est urgent (recrutement réactif)",
+        "description": "Dans le BTP CI, les postes sont souvent pourvus en urgence (ingénieur partant non anticipé, nouveau marché signé sans effectif disponible). Le recrutement urgent prend plus de temps, coûte plus cher et aboutit à des profils moins adaptés.",
+        "solution": "Maintenir un vivier de candidatures actif (50+ CV qualifiés en permanence) en faisant de la veille candidats même en période sans besoin urgent. Rencontrer 2-3 profils intéressants par mois 'en avance' sur les besoins."
+      },
+      {
+        "titre": "Former les ingénieurs BIM puis les laisser partir",
+        "description": "Investir dans la formation BIM d'un ingénieur sans plan de rétention est risqué : formé aux frais de l'entreprise, le profil devient immédiatement plus attractif sur le marché CI et peut être débauché par un concurrent ou le secteur minier.",
+        "solution": "Formaliser un engagement de maintien post-formation (2 ans minimum) dans le contrat de travail ou via une convention de formation remboursable si départ anticipé (légal sous Code du Travail CI avec accord écrit préalable)"
+      },
+      {
+        "titre": "Négliger la marque employeur dans le secteur BTP CI",
+        "description": "Le BTP CI est perçu comme un secteur peu attractif (conditions difficiles, moins bien payé que les mines ou le pétrole, peu de visibilité digitale des entreprises BTP CI comme employeurs). Sans travail sur la marque employeur, les meilleurs profils ne postulent pas.",
+        "solution": "Créer et maintenir une page LinkedIn CI attractive (photos de chantiers, témoignages d'ingénieurs, projets réalisés), participer aux forums emploi INPHB CI et ESTP CI, publier régulièrement du contenu RH sur LinkedIn CI"
+      }
+    ]
+  },
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau d'agilité RH BTP entre organisations représentatives",
+    "lignes": [
+      {
+        "organisation": "COLAS CI",
+        "profil": "Filiale Bouygues Construction, marque employeur groupe",
+        "niveau_maturite": 4,
+        "points_forts": "Page LinkedIn COLAS CI 45 000 followers (marque groupe), ATS Workday global, programme Graduate Bouygues CI (ingénieurs INPHB CI recrutés en promotion), upskilling BIM certifié 30% des ingénieurs CI, eNPS CI : 52/100",
+        "points_faibles": "Rémunérations groupe parfois non compétitives vs. secteur minier CI, processus recrutement groupe parfois lents (validation Paris) pour les recrutements urgents CI",
+        "initiatives_notables": "COLAS Talents Africa CI : programme de développement accéléré 24 mois pour 5 jeunes ingénieurs CI/an (promotion chef de projet junior)"
+      },
+      {
+        "organisation": "BNETD CI",
+        "profil": "Agence étatique CI, statut fonctionnaire/contractuel",
+        "niveau_maturite": 3,
+        "points_forts": "Partenariat fort INPHB CI / ENSTP CI, stages et pré-recrutements systématiques, formation continue financée (État CI), stabilité de l'emploi public = facteur de rétention",
+        "points_faibles": "Grilles salariales État CI non compétitives vs. secteur privé (risque de départ des meilleurs profils vers le privé CI), pas de LinkedIn CI actif comme employeur, turnover ingénieurs contractuels 22%",
+        "initiatives_notables": "BNETD CI Bureau des stages : 85 stagiaires ingénieurs BTP CI accueillis/an — vivier de recrutement principal de l'agence"
+      },
+      {
+        "organisation": "SATCI CI",
+        "profil": "Promoteur immobilier CI, 80-120 ingénieurs et techniciens",
+        "niveau_maturite": 3,
+        "points_forts": "LinkedIn CI actif (2 800 followers, offres publiées), convention INPHB CI (8 stagiaires/an), plan formation FDFP CI (6 jours/an/ingénieur), 4 ingénieurs convertis BIM en 2 ans",
+        "points_faibles": "Pas d'ATS (CV reçus par email), intérim BTP CI non formalisé, eNPS non mesuré, turnover 25%/an non piloté",
+        "initiatives_notables": "Programme 'Ingénieur BIM SATCI CI' : formation Revit (5 jours) + accompagnement 3 mois sur chantier BIM pilote, 4 ingénieurs convertis à 80% de coût financé FDFP CI"
+      },
+      {
+        "organisation": "PME BTP CI classe C (20-100 employés)",
+        "profil": "Entreprise BTP locale de taille intermédiaire",
+        "niveau_maturite": 1,
+        "points_forts": "Structure familiale créant parfois une forte loyauté personnelle des collaborateurs anciens",
+        "points_faibles": "Recrutement uniquement par réseau du patron, délai 90+ jours, aucun outil digital RH, formation nulle, turnover élevé (35%) non géré, aucune marque employeur",
+        "initiatives_notables": "Quelques PME BTP CI ont commencé à publier des offres sur JobMalela (première étape d'agilité RH)"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "SATCI CI — Programme d'upskilling BIM interne : 4 ingénieurs AutoCAD convertis au BIM Revit",
+    "contexte": "SATCI CI voulait proposer le BIM sur ses chantiers résidentiels pour répondre aux exigences croissantes de certains maîtres d'ouvrage institutionnels et pour améliorer la détection des conflits de coordination. Face à la pénurie de profils BIM CI et aux coûts de recrutement external (1 ingénieur BIM expérimenté CI en CDI : 2,5-3 M FCFA/an + difficultés à recruter), SATCI CI a choisi la voie de l'upskilling interne.",
+    "probleme": "Pénurie BIM CI : < 200 profils certifiés disponibles, très demandés. Coût recrutement ingénieur BIM externe : 2,5-3 M FCFA/an + 90 jours de délai. Risque de formation externe + départ rapide (investissement perdu). 4 ingénieurs internes AutoCAD 2D très compétents mais sans compétence BIM. Refus BNETD CI d'un marché en 2022 faute de profil BIM dans l'équipe SATCI CI.",
+    "solution_deployee": "Programme 'Ingénieur BIM SATCI CI' : sélection de 4 ingénieurs volontaires parmi les meilleurs profils AutoCAD internes (critères : ancienneté > 3 ans, aptitude numérique, motivation). Formation Revit Architecture + MEP (5 jours chez formateur agréé Autodesk CI). Accompagnement 3 mois sur le chantier pilote BIM de Cocody-Riviera (supervision ingénieur BIM externe consultant). Convention de formation FDFP CI (remboursement 75%). Clause de maintien 2 ans dans le contrat de travail. Promotion automatique au grade 'Ingénieur BIM SATCI CI' avec revalorisation salariale +15%.",
+    "resultats": {
+      "ingénieurs_bim_formes": "4 ingénieurs AutoCAD → ingénieurs BIM Revit en 6 mois",
+      "cout_formation_net": "Coût brut 3,2 M FCFA (4 × 800 000 FCFA) → remboursement FDFP CI 2,4 M FCFA = coût net 800 000 FCFA pour 4 profils BIM",
+      "vs_recrutement_externe": "Économie vs. recrutement externe : 4 × 3 M FCFA/an = 12 M FCFA/an + délai 0 (vs. 90 jours recrutement)",
+      "retention": "3 des 4 ingénieurs BIM toujours chez SATCI CI après 2 ans (turnover 25% vs. 0 sur ce groupe BIM)",
+      "marche_obtenu": "Marché BNETD CI de 850 M FCFA obtenu en 2023 grâce au profil BIM dans l'équipe SATCI CI (marché refusé en 2022 faute de BIM)",
+      "nps_employe_bim": "eNPS ingénieurs BIM SATCI CI : 72/100 (vs. 38/100 eNPS global) — l'investissement formation crée un attachement fort"
+    },
+    "enseignements": "La revalorisation salariale de 15% accompagnant la promotion 'Ingénieur BIM SATCI CI' a été déterminante pour la motivation et la rétention. Sans cette reconnaissance financière, 2 des 4 ingénieurs auraient probablement quitté SATCI CI après la formation pour valoriser leur nouvelle compétence BIM sur le marché CI à meilleur prix."
+  },
+  "ai_context": {
+    "scoring_rubric": {
+      "score_1_to_20": "Recrutement uniquement par bouche-à-oreille. Aucune offre digitale. Délai recrutement 90+ jours. Aucune formation. Turnover > 35% non analysé. Aucune politique de rétention. Aucun profil BIM interne.",
+      "score_21_to_40": "Offres publiées sur plateformes digitales. Partenariats informels INPHB CI. Formation FDFP CI ponctuelle. Délai recrutement 60-80 jours. Tentatives de rétention réactives (augmentations post-annonce de départ).",
+      "score_41_to_60": "Processus recrutement digital structuré (LinkedIn CI, ATS). Partenariats formels INPHB CI / ESTP CI. Plan formation FDFP CI annuel. Upskilling BIM financé. Time-to-hire < 45 jours. Plan de rétention formalisé.",
+      "score_61_to_80": "Agilité RH complète (vivier actif, intérim BTP CI, plans de succession). Time-to-hire < 30 jours. Turnover < 18%. Ingénieurs BIM reconvertis en interne. Marque employeur active LinkedIn CI. eNPS > 50.",
+      "score_81_to_100": "Employeur de référence BTP CI. Programme leadership accéléré. IA prédiction turnover. Mobilité UEMOA. R&D académique INPHB CI. eNPS > 70. Top 10 Employeurs CI LinkedIn."
+    },
+    "questions_cles_diagnostic": [
+      "Quel est votre délai moyen de recrutement pour un ingénieur BTP CI (time-to-hire) ?",
+      "Avez-vous des ingénieurs certifiés BIM Revit dans vos équipes ? Comment ont-ils été formés ?",
+      "Publiez-vous vos offres d'emploi sur LinkedIn CI ou d'autres plateformes digitales CI ?",
+      "Quel est votre taux de turnover annuel pour les ingénieurs et chefs de chantier ?",
+      "Avez-vous un programme de formation BIM financé par le FDFP CI ?"
+    ],
+    "pieges_evaluation": [
+      "Ne pas confondre la stabilité de l'emploi (peu de départs) avec l'agilité RH réelle (capacité à recruter rapidement et à développer les compétences)",
+      "Vérifier que le 'turnover faible' n'est pas dû à une rémunération en dessous du marché CI créant une trappe de fidélisation involontaire",
+      "Distinguer l'agilité RH des filiales de groupes internationaux (marque employeur groupe) de celle des PME BTP CI locales sans notoriété employeur"
+    ]
+  },
+  "ressources": {
+    "references_reglementaires": [
+      "FDFP CI — Financement formations professionnelles certifiantes BTP CI (dont BIM, numérique)",
+      "Code du Travail CI Loi 2015-532 — Clauses de formation et de maintien dans l'emploi post-formation",
+      "Convention Collective BTP CI — Grilles salariales et conditions d'emploi secteur BTP CI",
+      "CAMES — Reconnaissance des diplômes ingénieurs pour le recrutement UEMOA",
+      "INPHB CI / ESTP CI — Conventions de stage et de pré-recrutement ingénieurs BTP CI"
+    ],
+    "outils_recommandes": [
+      "LinkedIn Recruiter CI — Sourcing actif ingénieurs BTP CI (profils passifs et actifs)",
+      "JobMalela / EmploiCI — Plateformes recrutement digital spécifiques Côte d'Ivoire",
+      "SmartRecruiters / Trello RH — ATS pour structurer le pipeline de recrutement BTP CI",
+      "Autodesk Learning / Coursera — Formation BIM Revit en ligne pour l'upskilling ingénieurs CI",
+      "FDFP CI portail — Dépôt plans de formation et demandes de remboursement"
+    ],
+    "formations_certifications": [
+      "Autodesk Certified Professional (ACP) Revit — Certification BIM pour upskilling ingénieurs BTP CI",
+      "FDFP CI — Plan de formation annuel BTP CI certifiant (formations techniques et numériques)",
+      "CNBTP CI / INPHB CI — Formation continue ingénieurs BTP CI (géotechnique, structures, fluides)",
+      "PMI / IPMA — Certifications management de projet pour chefs de projet BTP CI (fidélisation)"
+    ]
+  }
+}

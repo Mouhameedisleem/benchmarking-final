@@ -1,0 +1,252 @@
+{
+  "axe": "OFFRES",
+  "sous_axe": "Open platform",
+  "secteur": "industrie",
+  "description": "Ouverture et interopérabilité des systèmes industriels ivoiriens : APIs ouvertes, intégration supply chain digitale, connexion aux plateformes sectorielles UEMOA (APEX-CI, Conseil Café-Cacao CI, GUCE CI) et standards d'échange de données industrielles (OPC-UA, EDI).",
+  "maturite_niveaux": {
+    "initial": "Systèmes totalement fermés. Aucune API. Échanges de données uniquement par saisie manuelle ou transferts de fichiers non structurés (Excel, PDF). Chaque système est une île.",
+    "en_developpement": "Quelques exports CSV/Excel automatiques entre systèmes internes. Pas d'API publique. Connexions avec les partenaires uniquement par email et portails web manuels.",
+    "structure": "APIs internes entre ERP, MES et SCADA. Connexion au portail GUCE CI pour les exportations. EDI basique avec les principaux clients. Ouverture des données aux partenaires sur demande.",
+    "avance": "API REST documentée pour les partenaires clés (clients, fournisseurs, transporteurs). Intégration EUDR via portail Conseil Café-Cacao CI. Connexion Orange Money Business CI API pour les paiements. Partage de données production avec les clients sur des indicateurs convenus.",
+    "optimise": "Écosystème d'APIs ouvertes. Marketplace de données industrielles sectorielles. Participation aux initiatives open data CI (FIRCA CI, APEX-CI). Interopérabilité totale avec la supply chain (fournisseurs, transformateurs, logisticiens, clients UE)."
+  },
+  "questions_diagnostic": [
+    {
+      "id": "OFFRES_open_platform_Q1",
+      "question": "Vos systèmes industriels (ERP, MES, SCADA, CMMS) sont-ils interconnectés avec des APIs ou des interfaces automatiques (sans ressaisie manuelle) ?",
+      "type": "choix_unique",
+      "options": ["Non, silos complets (re-saisie manuelle entre systèmes)", "Exports CSV/Excel planifiés entre systèmes", "Interfaces automatiques sur quelques flux clés (ex: MES → ERP)", "APIs REST internes entre tous les systèmes clés", "Architecture microservices avec API gateway et événements temps réel"],
+      "poids": 25
+    },
+    {
+      "id": "OFFRES_open_platform_Q2",
+      "question": "Êtes-vous connecté aux plateformes digitales institutionnelles CI pour les échanges commerciaux (GUCE CI, portail Conseil Café-Cacao CI, portail APEX-CI exportateurs) ?",
+      "type": "choix_multiple",
+      "options": ["GUCE CI (dédouanement et certificats export)", "Portail Conseil Café-Cacao CI (cacao/café traçabilité)", "APEX-CI portail exportateurs", "DGI CI télédéclarations TVA et factures", "Aucune connexion aux plateformes institutionnelles CI"],
+      "poids": 20
+    },
+    {
+      "id": "OFFRES_open_platform_Q3",
+      "question": "Proposez-vous des APIs ou des accès données structurés à vos clients B2B (données de lot, certifications EUDR, résultats qualité) ?",
+      "type": "choix_unique",
+      "options": ["Non, uniquement des documents PDF", "Partage de fichiers par email ou FTP", "Portail client avec téléchargement de fichiers structurés", "API REST documentée pour les clients techniques", "API REST + webhooks temps réel + sandbox de test pour intégration client"],
+      "poids": 20
+    },
+    {
+      "id": "OFFRES_open_platform_Q4",
+      "question": "Utilisez-vous le protocole OPC-UA ou des standards d'échange industriels (EDI, EDIFACT) pour échanger des données avec vos partenaires ou vos équipements ?",
+      "type": "choix_unique",
+      "options": ["Non, pas de standards d'échange", "EDI basique (bon de commande email structuré)", "EDI EDIFACT ou X12 avec quelques partenaires", "OPC-UA pour les données machines + EDI pour les échanges commerciaux", "OPC-UA + EDI + API REST : architecture complète d'interopérabilité"],
+      "poids": 20
+    },
+    {
+      "id": "OFFRES_open_platform_Q5",
+      "question": "Participez-vous à des initiatives sectorielles de partage de données (FIRCA CI, Conseil Café-Cacao CI blockchain, initiatives APEX-CI data) ou à des consortiums de traçabilité UEMOA ?",
+      "type": "choix_unique",
+      "options": ["Non", "Connaissance des initiatives sans participation active", "Membre observateur d'une ou plusieurs initiatives", "Contributeur actif avec données partagées", "Animateur ou coordinateur d'initiatives de partage de données sectorielles"],
+      "poids": 15
+    }
+  ],
+  "pratiques_recommandees": [
+    {
+      "titre": "Connexion GUCE CI et dématérialisation export",
+      "description": "Intégrer le GUCE CI (Guichet Unique du Commerce Extérieur CI) dans le processus export : dépôt des déclarations douanières, certificats d'origine Form A/EUR1, manifestes. La connexion via API ou portail GUCE CI réduit les délais de dédouanement de 5-7 jours à <48h. Essentiel pour les industries exportatrices CI soumises aux délais des acheteurs européens.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "très fort"
+    },
+    {
+      "titre": "Connexion portail Conseil Café-Cacao CI pour traçabilité EUDR",
+      "description": "Pour les industries du cacao et café CI : s'intégrer au système de traçabilité du Conseil Café-Cacao CI (CCC CI) qui gère les données de provenance des coopératives et planteurs. L'API ou le portail CCC CI fournit les données géospatiales de conformité EUDR à la source, réduisant les efforts de collecte terrain.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "très fort"
+    },
+    {
+      "titre": "API partenaires pour intégration supply chain",
+      "description": "Développer une API REST documentée permettant aux partenaires de la supply chain (clients importateurs UE, transitaires, laboratoires d'analyse) d'accéder en temps réel aux données de lot : numéro de lot, CoA, données EUDR, statut de livraison. Standard d'authentification OAuth 2.0. Documentation Swagger/OpenAPI. Sandbox de test pour les développeurs clients.",
+      "priorite": "haute",
+      "effort": "élevé",
+      "impact": "fort"
+    },
+    {
+      "titre": "EDI avec les grands comptes clients (EDIFACT)",
+      "description": "Déployer l'échange EDI (Electronic Data Interchange) avec les clients multinationaux en CI (Nestlé CI, Olam CI, Unilever CI) pour automatiser les bons de commande, les avis d'expédition et les factures. Format EDIFACT standard utilisé par les multinationales. Réduction des erreurs de saisie et du délai de traitement des commandes de 3-5 jours à <4 heures.",
+      "priorite": "moyenne",
+      "effort": "élevé",
+      "impact": "fort"
+    },
+    {
+      "titre": "Interopérabilité OPC-UA atelier → cloud",
+      "description": "Pour les équipements industriels CI (SCADA Siemens, Schneider, automates), mettre en place un serveur OPC-UA permettant la collecte standardisée des données machine vers l'ERP, le MES et éventuellement des plateformes de monitoring cloud (Azure IoT Hub, AWS IoT). OPC-UA est le standard international d'interopérabilité Industrie 4.0.",
+      "priorite": "moyenne",
+      "effort": "élevé",
+      "impact": "fort"
+    }
+  ],
+  "outils_solutions": [
+    {
+      "categorie": "Plateformes d'intégration (iPaaS)",
+      "solutions": [
+        {
+          "nom": "Odoo External API",
+          "description": "API REST native Odoo (JSON-RPC + XML-RPC). Permet l'intégration avec tous les partenaires via webhooks et appels API. Documentation officielle complète. Adapté aux industries CI déjà sur Odoo.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Inclus dans Odoo Enterprise"
+        },
+        {
+          "nom": "MuleSoft Anypoint Platform",
+          "description": "Plateforme iPaaS enterprise pour les grandes industries. Gestion des APIs, transformations de données, monitoring. Pertinent pour SIFCA CI, SUCAF CI avec intégrations complexes.",
+          "pertinence_locale": "moyenne (grandes industries)",
+          "cout_estime": "Variable selon contrat Salesforce/Mulesoft"
+        },
+        {
+          "nom": "n8n (open-source)",
+          "description": "Plateforme d'automatisation open-source auto-hébergeable. Connecteurs prébuilt pour les APIs courantes (ERP, Gmail, WhatsApp Business). Adapté PME CI avec équipe IT limitée.",
+          "pertinence_locale": "haute",
+          "cout_estime": "Open-source ou cloud ~20 $/mois"
+        }
+      ]
+    },
+    {
+      "categorie": "Connectivité industrielle OPC-UA",
+      "solutions": [
+        {
+          "nom": "Prosys OPC UA Server",
+          "description": "Serveur OPC-UA compatible avec les automates Siemens S7 et Schneider Modicon courants dans les industries CI. Licence par serveur.",
+          "pertinence_locale": "haute",
+          "cout_estime": "1 000-5 000 € selon licence"
+        },
+        {
+          "nom": "Kepware KEPServerEX",
+          "description": "Solution leader de connectivité industrielle. Drivers pour Siemens, Schneider, ABB, FANUC. Compatible OPC-UA, MQTT. Utilisé dans les grandes industries CI.",
+          "pertinence_locale": "haute",
+          "cout_estime": "Variable selon drivers : 500-5 000 €"
+        }
+      ]
+    },
+    {
+      "categorie": "Portails institutionnels CI",
+      "solutions": [
+        {
+          "nom": "GUCE CI",
+          "description": "Guichet Unique du Commerce Extérieur CI. Dématérialisation des procédures d'import/export. Accès en ligne sur le portail officiel GUCE CI.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Frais de dossier réglementaires CI"
+        },
+        {
+          "nom": "Portail Conseil Café-Cacao CI",
+          "description": "Système de traçabilité du CCC CI pour le cacao et le café ivoirien. Accès aux données de provenance géospatiales pour la conformité EUDR.",
+          "pertinence_locale": "très haute (industries cacao/café CI)",
+          "cout_estime": "Adhésion CCC CI requise"
+        }
+      ]
+    }
+  ],
+  "indicateurs_cles": [
+    {
+      "nom": "Nombre d'intégrations APIs actives",
+      "description": "Nombre de connexions API actives entre les systèmes internes et les partenaires externes",
+      "unite": "intégrations",
+      "cible_sectorielle": ">5 intégrations actives (ERP-MES, ERP-CMMS, GUCE CI, API clients, paiements CI)"
+    },
+    {
+      "nom": "Taux de transactions commerciales sans ressaisie manuelle",
+      "description": "Pourcentage des transactions (commandes, factures, livraisons) échangées de manière automatique sans ressaisie entre les systèmes",
+      "unite": "%",
+      "cible_sectorielle": ">70%"
+    },
+    {
+      "nom": "Délai de dédouanement à l'export",
+      "description": "Temps moyen entre la finalisation de la commande et l'obtention de tous les documents douaniers (avec GUCE CI)",
+      "unite": "jours",
+      "cible_sectorielle": "<2 jours (vs. 5-7 jours sans dématérialisation)"
+    },
+    {
+      "nom": "Disponibilité API partenaires",
+      "description": "Taux de disponibilité de l'API ouverte aux partenaires (clients, fournisseurs)",
+      "unite": "%",
+      "cible_sectorielle": ">99,5% (SLA de service)"
+    }
+  ],
+  "reglementations_normes": [
+    {
+      "nom": "GUCE CI réglementation commerce extérieur",
+      "description": "Le GUCE CI est le point d'entrée obligatoire pour les opérations d'import/export en CI. La connexion au GUCE CI est obligatoire pour les entreprises exportatrices industrielles CI.",
+      "organisme": "GUCE CI / Ministère Commerce CI",
+      "obligatoire": true
+    },
+    {
+      "nom": "EUDR — interopérabilité DUE",
+      "description": "Le portail européen Due Diligence (DUE) pour la déclaration EUDR requiert des formats de données spécifiques (JSON/XML) pour les données géospatiales. Les systèmes CI doivent être capables d'exporter dans ces formats.",
+      "organisme": "Union Européenne / Commission Européenne",
+      "obligatoire": true
+    },
+    {
+      "nom": "ARTCI CI — échanges électroniques sécurisés",
+      "description": "L'ARTCI CI régule les échanges électroniques commerciaux en CI. Les APIs publiques doivent respecter les standards de sécurité des communications électroniques (chiffrement TLS 1.3 minimum, authentification robuste).",
+      "organisme": "ARTCI CI",
+      "obligatoire": true
+    }
+  ],
+  "comparatif_organisations": {
+    "description": "Comparaison de la maturité open platform / interopérabilité dans les industries ivoiriennes",
+    "lignes": [
+      {
+        "organisation": "TRITURAF CI (huile palme)",
+        "apis_internes": "OPC-UA + Odoo API",
+        "guce_ci": "Intégré",
+        "api_clients": "API REST documentée",
+        "portail_ccc": "Non applicable (hors cacao)",
+        "niveau_global": "Avancé"
+      },
+      {
+        "organisation": "SIC-CACAO CI",
+        "apis_internes": "ERP-MES interface auto",
+        "guce_ci": "Portail web manuel",
+        "api_clients": "Portail fichiers téléchargeables",
+        "portail_ccc": "Connecté CCC CI",
+        "niveau_global": "Structuré"
+      },
+      {
+        "organisation": "PME transformation anacarde",
+        "apis_internes": "Non (silos Excel)",
+        "guce_ci": "Non",
+        "api_clients": "Non",
+        "portail_ccc": "Non",
+        "niveau_global": "Initial"
+      },
+      {
+        "organisation": "CIPA CI (anacarde)",
+        "apis_internes": "Odoo API complet",
+        "guce_ci": "Intégré avec automation",
+        "api_clients": "API EUDR clients",
+        "portail_ccc": "FIRCA CI connecté",
+        "niveau_global": "Avancé"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "SIEI CI — Interopérabilité GUCE CI + EDI clients : dédouanement 5j→36h, ressaisie éliminée",
+    "contexte": "SIEI CI (Société Ivoirienne d'Électricité Industrielle), Abidjan, fabricant de câbles et équipements électriques industriels, 380 employés, CA 8,5 Mds FCFA, dont 28% export régional (Mali, Burkina, Sénégal). En 2022, chaque commande export nécessitait 3-4 ressaisies manuelles entre systèmes (ERP → fichier Excel → portail GUCE CI → fichier banque) et 5-7 jours de dédouanement.",
+    "probleme": "Les ressaisies manuelles généraient 8-12 erreurs/mois (numéros de lot, quantités, codes HS douaniers), causant des blocages douaniers et des pénalités. Le délai de 5-7 jours pour les documents export CI faisait perdre des commandes urgentes régionales au profit de concurrents ghanéens.",
+    "solution": "Architecture d'interopérabilité en 3 niveaux : (1) Intégration Odoo ERP → GUCE CI via API GUCE CI officielle : génération automatique des déclarations douanières et certificats d'origine depuis l'ERP — 4,5 M FCFA ; (2) EDI EDIFACT avec les 3 principaux clients régionaux (SODIGAZ Mali, ONATEL Burkina, SENELEC Sénégal) via un opérateur EDI régional — 6,2 M FCFA ; (3) API Orange Money Business CI pour paiements fournisseurs matières premières (câblerie cuivre) — 0 coût d'intégration (API gratuite).",
+    "resultats": "Délai de dédouanement : 5-7 jours → 36 heures en moyenne. Erreurs de ressaisie : 8-12/mois → 0 depuis 9 mois. Temps de traitement des commandes export : 3 heures de ressaisie/commande → 0 (automatique). 2 contrats export perdus auparavant récupérés grâce aux délais réduits : CA additionnel 1,4 Md FCFA. Paiements fournisseurs câblerie : virements 15-30 jours → Orange Money Business CI instantané. Satisfaction clients EDI : NPS +22 points en 8 mois."
+  },
+  "ai_context": {
+    "focus_llm": "Évaluer la capacité de l'industrie ivoirienne à ouvrir ses systèmes d'information et à s'interconnecter avec l'écosystème institutionnel CI (GUCE CI, CCC CI, FIRCA CI) et ses partenaires commerciaux. L'interopérabilité est un levier de compétitivité export direct : des délais de dédouanement réduits et des échanges EDI automatisés donnent un avantage concurrentiel sur les marchés UEMOA.",
+    "pieges_a_eviter": [
+      "Ne pas confondre 'open platform' avec 'open source' — l'ouverture ici est l'ouverture des systèmes aux partenaires via APIs et standards",
+      "Ne pas oublier la spécificité CI du GUCE CI : c'est le point d'entrée obligatoire pour l'export, pas un choix optionnel",
+      "Éviter de recommander des architectures API complexes sans base ERP solide — l'interopérabilité suppose des systèmes source fiables",
+      "Ne pas négliger la sécurité des APIs ouvertes : ARTCI CI exige le chiffrement TLS et l'authentification forte pour les échanges commerciaux CI"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Systèmes complètement silotés. Aucune intégration. GUCE CI non utilisé. Ressaisies manuelles à chaque étape. Échanges avec partenaires uniquement par email/téléphone.",
+      "score_21_to_40": "Quelques exports CSV entre systèmes. GUCE CI utilisé via portail web manuel. Pas d'EDI ni d'API partenaires. Ressaisies partiellement réduites.",
+      "score_41_to_60": "Interfaces automatiques internes (ERP-MES). Connexion GUCE CI semi-automatisée. EDI avec 1-2 grands clients. API interne documentée mais pas encore ouverte aux partenaires.",
+      "score_61_to_80": "APIs internes complètes. GUCE CI intégré avec automatisation. EDI avec principaux clients export. Portail CCC CI connecté pour EUDR. API REST ouverte aux clients techniques.",
+      "score_81_to_100": "Écosystème d'APIs ouvertes complet. Interopérabilité totale supply chain (OPC-UA + EDI + API). Participation active aux initiatives de données sectorielles CI (FIRCA CI, APEX-CI). Délais export <24h grâce à l'intégration GUCE CI."
+    }
+  }
+}

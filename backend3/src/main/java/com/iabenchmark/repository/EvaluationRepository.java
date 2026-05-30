@@ -10,6 +10,7 @@ public interface EvaluationRepository extends JpaRepository<Evaluation, Long> {
     List<Evaluation> findByPendingReviewTrueOrderByCreatedAtDesc();
     List<Evaluation> findByPendingReviewTrueAndCompanyConsultantIdOrderByCreatedAtDesc(Long consultantId);
     Evaluation findFirstByCompanyIdOrderByCreatedAtDesc(Long companyId);
+    List<Evaluation> findByCompanyConsultantIdOrderByCreatedAtDesc(Long consultantId);
     boolean existsByCompanyId(Long companyId);
     boolean existsBySubmittedById(Long userId);
 }

@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "axis": "RH_DIGITAL",
+    "sub_axis": "Agilité RH",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "HR Agile — application des principes agiles aux processus RH",
+      "description": "Les équipes RH adoptent les méthodes agiles (OKRs trimestriels, sprints RH, feedback continu) pour répondre plus rapidement aux évolutions du marché des talents et des besoins business.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "74 % des grandes entreprises ont adopté des pratiques HR Agile (Deloitte Human Capital 2024)",
+      "source": "Deloitte Human Capital Trends 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Continuous Performance Management — feedback continu vs évaluation annuelle",
+      "description": "L'évaluation annuelle est abandonnée au profit de conversations régulières (check-ins mensuels), d'OKRs trimestriels et de feedback 360° en temps réel, plus adaptés à la vitesse du monde digital.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "82 % des organisations ont réformé leur processus d'évaluation (Gartner Reimagining Performance 2024)",
+      "source": "Gartner Reimagining Performance Management 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Talent Marketplace — mobilité interne en self-service",
+      "description": "Les plateformes de talent marketplace (Gloat, Eightfold) permettent aux collaborateurs de postuler en interne sur des projets ou postes selon leurs compétences, réduisant le turnover de 20-30 %.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "47 % des grandes entreprises ont une talent marketplace (LinkedIn Talent Solutions 2024)",
+      "source": "LinkedIn Talent Solutions Global Trends 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Skills-based Organization — gestion par les compétences",
+      "description": "Les organisations abandonnent la gestion par les postes (job descriptions fixes) pour une gestion par les compétences (skills), permettant une allocation des talents plus fluide et adaptable.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "63 % des entreprises fortune 500 transitionnent vers un modèle skills-based (IBM 2024)",
+      "source": "IBM Institute for Business Value 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Plateformes de Continuous Performance Management",
+      "category": "Évaluation et feedback continu",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["Lattice", "15Five", "Betterworks", "Culture Amp", "Leapsome"]
+    },
+    {
+      "name": "OKR Platforms",
+      "category": "Alignement stratégique agile",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["Workboard", "Perdoo", "Betterworks", "Weekdone", "Gtmhub"]
+    },
+    {
+      "name": "Talent Marketplace",
+      "category": "Mobilité interne",
+      "maturity_stage": "Émergence",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["Gloat", "Eightfold.ai", "Fuel50", "Hitch Works", "Workday Talent Marketplace"]
+    },
+    {
+      "name": "Skills Inventory & Management",
+      "category": "Gestion des compétences",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["Degreed", "Cornerstone Skills Graph", "TalentGuard", "PeopleFluent"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "OKRs trimestriels pour les équipes digitales, évaluations de performance en ligne avec feedback 360°",
+        "differentiator": "Premier acteur sectoriel à supprimer l'évaluation annuelle au profit de check-ins mensuels formalisés",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "MTN Group",
+        "country": "Pan-Afrique",
+        "key_practice": "Transformation RH agile sur 21 pays : OKRs cascadés, talent marketplace interne, upskilling continu",
+        "differentiator": "Réduction du turnover de 18 % à 11 % via la talent marketplace permettant la mobilité interne cross-pays",
+        "source": "MTN Annual Report 2023 / MTN People Strategy"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Google",
+        "country": "USA",
+        "key_practice": "OKRs inventés par Intel, popularisés par Google — 100 % des 180 000 collaborateurs ont des OKRs trimestriels",
+        "differentiator": "Projet Oxygen (2009) : Google a utilisé des données pour identifier les 10 comportements clés d'un bon manager",
+        "source": "Google Re:Work 2023 / John Doerr 'Measure What Matters'"
+      },
+      {
+        "organisation": "ING Group",
+        "country": "Pays-Bas",
+        "key_practice": "Agile HR : 350 squads autonomes, plus d'évaluation annuelle, feedback continu intégré dans les sprints",
+        "differentiator": "Satisfaction collaborateur +40 % et turnover -25 % grâce à l'agilité RH déployée en 18 mois",
+        "source": "ING Agile Transformation Case Study 2023 / McKinsey"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Processus RH 100 % traditionnels. Évaluation annuelle formelle sans feedback intermédiaire. Objectifs annuels figés. Pas de mobilité interne structurée.",
+    "level_2_developing": "Quelques OKRs définis mais non cascadés. Évaluation annuelle maintenue. Mobilité interne informelle et rare. Pas de talent marketplace.",
+    "level_3_defined": "OKRs trimestriels pour les équipes digitales. Feedback 360° en ligne. Mobilité interne encouragée. Plans de développement individuels documentés.",
+    "level_4_managed": "Continuous Performance Management déployé. OKRs cascadés de la direction aux équipes. Talent Marketplace interne. Skills inventory maintenu. Turnover prédit.",
+    "level_5_optimizing": "Organisation skills-based. Mobilité interne fluide sans friction. OKRs reliés à la stratégie et mesurés en temps réel. IA pour le matching talents/projets. Engagement collaborateur > 80 %."
+  },
+
+  "regulations": [
+    {
+      "name": "Code du travail ivoirien — Entretiens annuels d'évaluation",
+      "issuing_body": "République de Côte d'Ivoire / Ministère de l'Emploi",
+      "scope": "Entreprises avec conventions collectives incluant des clauses d'évaluation",
+      "key_requirement": "Documentation des critères d'évaluation, non-discrimination dans les évaluations, transparence des critères de promotion",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.emploi.gouv.ci"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "OKRs mal définis — métriques qui optimisent le mauvais signal",
+      "description": "Des OKRs définis sans rigueur (trop ambitieux, non mesurables, déconnectés de la stratégie) créent une culture de 'gaming' où les équipes optimisent les métriques sans créer de valeur réelle.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Former les managers aux OKRs (méthode SMART, distinction input/output metrics), auditer trimestriellement la qualité des OKRs."
+    },
+    {
+      "title": "Résistance des managers à l'abandon de l'évaluation annuelle",
+      "description": "Les managers habitués à l'évaluation annuelle voient le continuous feedback comme une charge additionnelle plutôt qu'un outil de management. Sans adhésion managériale, la transformation échoue.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Former les managers au feedback continu, simplifier les outils et montrer des résultats concrets (engagement, performance) pour obtenir l'adhésion."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Réduction du turnover via la talent marketplace interne",
+      "description": "Les collaborateurs qui trouvent des opportunités internes ont 3× moins de chance de quitter l'organisation. La mobilité interne réduit le coût de recrutement tout en capitalisant sur les connaissances existantes.",
+      "impact_level": "Très élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Engagement collaborateur comme avantage concurrentiel",
+      "description": "Les organisations avec un engagement collaborateur > 80 % ont une productivité 21 % supérieure et une rétention 87 % meilleure. L'engagement est corrélé directement aux revenus.",
+      "impact_level": "Très élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Workday",
+      "target": "Eightfold.ai (partenariat)",
+      "amount": "N/A",
+      "date": "2023",
+      "strategic_rationale": "Intégrer l'IA de talent intelligence dans Workday pour la mobilité interne et le skills matching",
+      "source": "Workday Press Release 2023"
+    },
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Investors (Sequoia, Lightspeed)",
+      "target": "Lattice",
+      "amount": "175 M$ (Series F)",
+      "date": "2022",
+      "strategic_rationale": "Développer la plateforme de performance management et d'engagement pour les entreprises agiles",
+      "source": "Lattice Press Release 2022"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Google",
+    "pays": "USA",
+    "technologie": "OKRs & Project Oxygen — management data-driven et agilité RH à 180 000 collaborateurs",
+    "description": "Google a popularisé les OKRs (Objectives & Key Results) initialement inventés par Andy Grove chez Intel. Depuis 1999, 100 % des 180 000 collaborateurs de Google ont des OKRs trimestriels publics et alignés sur la stratégie. Le Projet Oxygen (2009) a utilisé des données pour identifier les 10 comportements des meilleurs managers — résultat : chaque manager est formé et évalué sur ces 10 comportements. Les OKRs de Google sont partiellement publics (chaque Googler peut voir les OKRs de son manager et du CEO). Le taux d'engagement dépasse 85 % annuellement.",
+    "resultats": "100 % des collaborateurs avec OKRs · Engagement > 85 % · Projet Oxygen : 10 comportements managers identifiés · OKRs publics jusqu'au CEO · #1 Fortune Best Employer",
+    "source": "Google Re:Work 2023 / John Doerr 'Measure What Matters' 2018 / Fortune Best Companies 2024",
+    "annee": "2024"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité agilité RH — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "OKRs trimestriels déployés", "Continuous Performance Management", "Talent Marketplace interne", "Skills inventory maintenu", "Engagement collaborateur mesuré"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "✗", "✗", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'agilité RH transforme la fonction RH d'un rôle administratif en un levier stratégique de performance. Les organisations qui adoptent les OKRs, le continuous feedback et la talent marketplace réduisent leur turnover, augmentent leur engagement et améliorent leur performance globale. En Afrique, l'introduction des OKRs est souvent le premier pas vers une RH agile.",
+    "maturity_max_description": "OKRs trimestriels cascadés de la direction aux équipes. Continuous Performance Management avec check-ins mensuels. Talent Marketplace interne permettant la mobilité fluide. Skills inventory complet. Engagement collaborateur mesuré et > 80 %. Organisation skills-based en transition.",
+    "scoring_rubric": {
+      "score_1_to_20": "Processus RH 100 % traditionnels. Évaluation annuelle formelle. Objectifs figés. Pas de mobilité interne.",
+      "score_21_to_40": "Quelques OKRs non cascadés. Évaluation annuelle maintenue. Mobilité interne informelle.",
+      "score_41_to_60": "OKRs trimestriels pour équipes digitales. Feedback 360° en ligne. Mobilité interne encouragée.",
+      "score_61_to_80": "Continuous Performance Management. OKRs cascadés. Talent Marketplace. Skills inventory. Turnover prédit.",
+      "score_81_to_100": "Organisation skills-based. Mobilité interne fluide. OKRs temps réel. IA matching talents. Engagement > 80 %."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur sa maturité en agilité RH. Analyse le déploiement d'OKRs trimestriels cascadés, le remplacement de l'évaluation annuelle par un continuous performance management, l'existence d'une talent marketplace interne, la tenue d'un skills inventory et la mesure régulière de l'engagement collaborateur.",
+    "key_questions_for_llm": [
+      "Des OKRs (Objectives & Key Results) trimestriels sont-ils déployés et cascadés de la direction aux équipes opérationnelles ?",
+      "L'évaluation annuelle a-t-elle été remplacée ou complétée par un continuous performance management avec check-ins réguliers ?",
+      "Une talent marketplace interne permet-elle aux collaborateurs de postuler sur des projets ou postes en interne ?",
+      "Un inventaire des compétences (skills inventory) est-il maintenu pour chaque collaborateur ?",
+      "L'engagement collaborateur est-il mesuré régulièrement via des enquêtes pulse ou eNPS ?"
+    ]
+  }
+}

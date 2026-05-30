@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "axis": "PROCESS",
+    "sub_axis": "Automatisation",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "RPA bancaire — automatisation des processus de back-office à haute volumétrie",
+      "description": "Les banques UEMOA déploient des robots logiciels (RPA) pour automatiser les tâches répétitives de back-office : réconciliation comptable, traitement des virements en masse, mise à jour des données clients, génération des états réglementaires BCEAO.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "30 % des banques africaines utilisent le RPA en production (IDC Africa 2024)",
+      "source": "IDC Africa Intelligent Automation Banking 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Automatisation du processus de crédit — décision instantanée pour le crédit digital",
+      "description": "Les fintechs comme Wave et Orange Money accordent du crédit en < 30 secondes via des algorithmes ML. Les banques traditionnelles qui maintiennent des processus d'octroi de crédit en 5-15 jours perdent les clients vers le crédit digital instantané.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "15 % des banques UEMOA ont automatisé le crédit à la consommation (Fintech Africa 2024)",
+      "source": "Fintech Africa Digital Credit Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Hyperautomation bancaire — combinaison RPA + IA + BPM",
+      "description": "L'hyperautomation combine RPA, IA (NLP, ML) et BPM pour automatiser des processus complexes à forte valeur ajoutée : analyse de documents de crédit, détection d'anomalies KYC, traitement automatique des réclamations simples.",
+      "impact_level": "Élevé",
+      "horizon": "24-36 mois",
+      "adoption_rate": "12 % des grandes banques africaines ont démarré un programme d'hyperautomation (Gartner 2024)",
+      "source": "Gartner Hyperautomation in Banking Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Automatisation de la conformité (RegTech) — LCB-FT et reporting BCEAO",
+      "description": "Les obligations de reporting BCEAO (états mensuels, déclarations CENTIF) représentent un coût de conformité élevé. Les solutions RegTech automatisent ces obligations, réduisant les délais de production et les risques d'erreur.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "20 % des banques africaines utilisent des solutions RegTech (Deloitte Africa 2024)",
+      "source": "Deloitte RegTech Africa Banking Report 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "RPA Bancaire",
+      "category": "Automatisation des processus répétitifs",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["UiPath for Banking", "Automation Anywhere Banking", "Blue Prism FSI", "Microsoft Power Automate", "Pega RPA"]
+    },
+    {
+      "name": "Crédit décisionnel automatisé",
+      "category": "Automatisation du processus de crédit",
+      "maturity_stage": "Croissance en Afrique",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["FICO Blaze Advisor", "Experian PowerCurve", "Moody's Analytics CreditLens", "SAS Credit Scoring", "Temenos Credit Management"]
+    },
+    {
+      "name": "RegTech / Automatisation Conformité",
+      "category": "Automatisation des obligations réglementaires",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Wolters Kluwer OneSumX", "Actico (règles conformité)", "Behavox (LCB-FT IA)", "ComplyAdvantage", "NICE Actimize"]
+    },
+    {
+      "name": "IDP — Traitement Intelligent de Documents",
+      "category": "Automatisation de la lecture documentaire",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["ABBYY FlexiCapture Banking", "Hyperscience", "IBM Datacap", "Kofax TotalAgility", "Microsoft Azure Form Recognizer"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "BICICI (BNP Paribas CI)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Robots RPA (UiPath) déployés pour la réconciliation comptable quotidienne, le traitement des virements de masse et la génération des états BCEAO",
+        "differentiator": "Standards BNP Paribas d'automatisation applicables en CI — bénéficie du programme RPA groupe déployé dans 65 pays",
+        "source": "BICICI Rapport Annuel 2023 / BNP Paribas Technology Report 2023"
+      },
+      {
+        "organisation": "Ecobank Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Automatisation du traitement des virements internationaux SWIFT et des virements locaux GIM-UEMOA, RPA sur les processus de reporting",
+        "differentiator": "Bénéficie du programme d'automatisation centralisé Ecobank Group — 40 processus automatisés déployés depuis le Technology Centre d'Accra",
+        "source": "Ecobank CI Rapport Annuel 2023 / Ecobank Technology Report"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Attijariwafa Bank",
+        "country": "Maroc / Afrique de l'Ouest",
+        "key_practice": "Programme d'automatisation groupe : 150 robots RPA (UiPath) déployés dans 24 filiales, réduction de 2 000 heures/mois de traitement manuel",
+        "differentiator": "Premier groupe bancaire africain francophone à publier des KPIs d'automatisation groupe (heures économisées, taux d'automatisation par domaine)",
+        "source": "Attijariwafa Bank Digital Transformation Report 2023"
+      },
+      {
+        "organisation": "Equity Bank Kenya",
+        "country": "Kenya / Afrique de l'Est",
+        "key_practice": "Crédit Equitel automatisé en < 60 secondes via ML scoring, 8 M$ de micro-crédits décaissés automatiquement par jour",
+        "differentiator": "Modèle de crédit digital entièrement automatisé sur le mobile — zéro intervention humaine pour les crédits < 100 000 KES",
+        "source": "Equity Bank Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "JPMorgan Chase",
+        "country": "USA",
+        "key_practice": "COIN (Contract Intelligence) : IA analysant 12 000 contrats de crédit/an en quelques secondes (vs 360 000 heures juristes/an), 300+ robots RPA",
+        "differentiator": "JPMorgan Automation Program : économies de 1,5 Mds$/an via RPA + IA, 300 000 heures de travail juridique automatisées",
+        "source": "JPMorgan Annual Report 2023 / Harvard Business Review JPMorgan COIN"
+      },
+      {
+        "organisation": "DBS Bank",
+        "country": "Singapour",
+        "key_practice": "93 % des processus de crédit retail automatisés, 350+ robots en production, octroi crédit immobilier en 24h vs 3 semaines",
+        "differentiator": "DBS DigiBank : premier emprunteur en Inde avec crédit 100 % automatisé, approuvé en < 4 secondes via ML et Aadhaar biométrique",
+        "source": "DBS Annual Report 2023 / DBS Automation Excellence Award 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Processus 100 % manuels. Réconciliation comptable sur Excel. Pas de RPA. Traitement des virements et des états BCEAO entièrement manuel. Erreurs fréquentes et délais non maîtrisés.",
+    "level_2_developing": "Quelques macros Excel ou scripts basiques. Premiers essais RPA sans programme structuré. Traitement automatique partiel de certains virements domestiques. Pas d'automatisation de la conformité.",
+    "level_3_defined": "Programme RPA initié avec 5-15 robots en production. Réconciliation comptable automatisée. Virements domestiques traités automatiquement. Premiers éléments de reporting BCEAO automatisés.",
+    "level_4_managed": "20+ robots RPA en production. Reporting BCEAO automatisé. Crédit à la consommation partiellement automatisé. IDP pour les documents de crédit. RegTech sur le screening LCB-FT.",
+    "level_5_optimizing": "Hyperautomation RPA + IA + BPM. Crédit retail décidé en < 60 secondes. Reporting BCEAO J+1 automatisé. IDP sur tous les documents entrants. 80 %+ des tâches back-office automatisées."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction BCEAO sur le contrôle interne et la gestion des risques opérationnels",
+      "issuing_body": "BCEAO",
+      "scope": "Toutes les banques UEMOA",
+      "key_requirement": "Les systèmes automatisés de traitement des opérations bancaires doivent être validés, audités et disposer de pistes d'audit complètes",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "LCB-FT — Screening automatisé des listes de sanctions",
+      "issuing_body": "GIABA / BCEAO / FATF",
+      "scope": "Toutes les banques UEMOA",
+      "key_requirement": "Screening automatisé obligatoire de chaque nouveau client et de chaque transaction contre les listes de sanctions internationales (OFAC, ONU, UE) en temps réel",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.giaba.org"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Robot RPA en production sans supervision — erreur en cascade sur les opérations bancaires",
+      "description": "Un robot RPA mal supervisé peut propager des erreurs à haute vitesse : réconciliation incorrecte, virements erronés, données clients corrompues. Sans mécanisme d'alertes et de supervision, l'impact peut toucher des milliers d'opérations avant détection.",
+      "severity": "Très élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Déployer un Centre d'Excellence RPA (CoE) qui supervise tous les robots en production, avec alertes automatiques sur les anomalies et procédures de rollback documentées."
+    },
+    {
+      "title": "Crédit automatisé sans explicabilité — risque réglementaire et contentieux",
+      "description": "Un refus de crédit décidé par un algorithme doit pouvoir être expliqué au client (obligation BCEAO / droit bancaire). Un système de crédit automatisé 'boîte noire' expose la banque à des contentieux et sanctions réglementaires.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Implémenter des techniques d'explicabilité (SHAP) pour tout refus automatique de crédit et documenter les critères de décision dans le dossier client."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Réconciliation comptable automatisée — 200h/mois économisées par banque",
+      "description": "La réconciliation comptable manuelle quotidienne mobilise 5-8 ETP dans une banque de taille moyenne UEMOA. 3-5 robots RPA automatisent ce processus à 98 % en réduisant les erreurs de rapprochement de 80 %.",
+      "impact_level": "Élevé",
+      "time_to_value": "3-6 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Crédit digital instantané — concurrencer Wave et Orange Money Credit",
+      "description": "Wave Sénégal et Orange Money CI accordent du crédit en < 30 secondes. Les banques peuvent répliquer ce modèle sur leurs propres clients (données transactionnelles disponibles) et récupérer le marché du crédit à la consommation digital.",
+      "impact_level": "Très élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Programme d'automatisation",
+      "acquirer_or_investor": "Attijariwafa Bank",
+      "target": "UiPath — programme RPA groupe 150 robots",
+      "amount": "Investissement interne groupe (multi-M$)",
+      "date": "2021-2023",
+      "strategic_rationale": "Déployer 150 robots RPA dans 24 filiales africaines pour automatiser les processus back-office et conformité, réduire les coûts opérationnels de 15 %",
+      "source": "Attijariwafa Bank Digital Transformation Report 2023 / UiPath Case Study"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "JPMorgan Chase",
+    "pays": "USA",
+    "technologie": "COIN (Contract Intelligence) — IA d'analyse automatisée des contrats de crédit",
+    "description": "JPMorgan Chase a développé COIN (Contract Intelligence) en 2017 pour automatiser l'analyse des contrats de crédit commercial. Auparavant, 12 000 contrats/an mobilisaient 360 000 heures de travail juridique (30 juristes à temps plein). COIN analyse ces mêmes contrats en quelques secondes avec une précision supérieure aux juristes humains (moins d'erreurs d'interprétation). En 2023, COIN est étendu à 300+ types de documents bancaires. Économies : 1,5 Mds$/an. Le programme est accompagné de 300+ robots RPA sur les processus de back-office. JPMorgan est devenu la référence mondiale en automatisation bancaire.",
+    "resultats": "360 000h juristes → quelques secondes · 1,5 Mds$/an économisés · 300+ robots RPA · 300 types de documents automatisés · Référence mondiale",
+    "source": "JPMorgan Annual Report 2023 / Harvard Business Review 2023 / JPMorgan Technology Report",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité automatisation — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "RPA en production (> 10 robots)", "Réconciliation comptable automatisée", "Crédit automatisé (partie)", "Reporting BCEAO automatisé", "Screening LCB-FT temps réel"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "Partiel", "✓"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'automatisation est la réponse des banques UEMOA à la pression des fintechs qui accordent du crédit en 30 secondes et traitent les réclamations en 24h. Les banques sans programme RPA paient un surcoût opérationnel de 20-30 % vs leurs concurrents automatisés. Le ROI du RPA bancaire est typiquement de 6-12 mois.",
+    "maturity_max_description": "Programme RPA mature avec 20+ robots en production supervisés par un CoE. Crédit à la consommation décidé automatiquement en < 60 secondes. Reporting BCEAO entièrement automatisé J+1. IDP sur tous les documents entrants. Screening LCB-FT temps réel. 80 %+ des tâches back-office sans intervention humaine.",
+    "scoring_rubric": {
+      "score_1_to_20": "Processus 100 % manuels. Réconciliation Excel. Pas de RPA. Traitement virements et BCEAO manuel.",
+      "score_21_to_40": "Macros/scripts basiques. Premiers essais RPA. Automatisation virements partielle. Pas de programme structuré.",
+      "score_41_to_60": "5-15 robots RPA en prod. Réconciliation automatisée. Virements domestiques auto. Reporting BCEAO partiel.",
+      "score_61_to_80": "20+ robots RPA. Reporting BCEAO auto. Crédit partiel automatisé. IDP documents crédit. RegTech LCB-FT.",
+      "score_81_to_100": "Hyperautomation. Crédit < 60s. Reporting J+1. 80 %+ back-office automatisé. IDP complet."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur sa maturité en automatisation des processus dans le contexte bancaire UEMOA. Analyse le déploiement de robots RPA, l'automatisation du processus de crédit, la production automatisée des états BCEAO et l'utilisation de solutions RegTech pour la conformité LCB-FT.",
+    "key_questions_for_llm": [
+      "Des robots RPA sont-ils déployés en production pour automatiser des processus bancaires répétitifs (réconciliation, virements, états BCEAO) ?",
+      "Le processus d'octroi de crédit à la consommation est-il partiellement ou totalement automatisé avec une décision en moins de quelques minutes ?",
+      "Le reporting réglementaire BCEAO (états prudentiels) est-il généré automatiquement sans intervention manuelle significative ?",
+      "Un système de screening automatisé des listes de sanctions (LCB-FT) vérifie-t-il chaque client et chaque transaction en temps réel ?",
+      "Un Centre d'Excellence RPA (CoE) ou une équipe dédiée supervise-t-elle les robots en production avec des alertes automatiques sur les anomalies ?"
+    ]
+  }
+}

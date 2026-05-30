@@ -1,0 +1,230 @@
+{
+  "axe": "RH",
+  "sous_axe": "Culture digitale",
+  "secteur": "industrie",
+  "description": "Culture digitale dans l'industrie ivoirienne : acculturation des opérateurs et cadres à l'Industrie 4.0, gestion du changement lors de déploiements SCADA/MES, posture d'innovation et d'amélioration continue.",
+  "maturite_niveaux": {
+    "initial": "Résistance au changement forte. Les opérateurs rejettent les outils digitaux. La direction ne valorise pas les compétences numériques. Formation absente.",
+    "en_developpement": "Quelques 'champions digitaux' isolés. Formations ponctuelles non structurées. La majorité du personnel reste sur des pratiques analogiques (papier, verbal).",
+    "structure": "Programme d'acculturation formalisé. Champions digitaux par atelier. Direction exemplaire sur l'usage des outils digitaux. Indicateurs de maturité culturelle suivis.",
+    "avance": "Culture d'amélioration continue ancrée. Opérateurs proposent des améliorations via des outils digitaux (Kaizen numérique). Partage des bonnes pratiques inter-sites. Benchmarking actif.",
+    "optimise": "Innovation bottom-up systématique. Les opérateurs expérimentent de nouvelles pratiques Industrie 4.0. Partenariats INP-HB Yamoussoukro et CNRA CI pour R&D terrain. Taux d'adoption des outils digitaux >90%."
+  },
+  "questions_diagnostic": [
+    {
+      "id": "RH_culture_digitale_Q1",
+      "question": "Comment décririez-vous l'attitude générale du personnel de production face aux outils digitaux (SCADA, MES, tablettes atelier) ?",
+      "type": "choix_unique",
+      "options": ["Résistance active, rejets fréquents", "Réticence mais acceptation progressive sous contrainte", "Neutralité, usage minimal requis", "Adoption volontaire, curiosité positive", "Enthousiasme, demande de nouvelles fonctionnalités"],
+      "poids": 25
+    },
+    {
+      "id": "RH_culture_digitale_Q2",
+      "question": "Votre entreprise a-t-elle désigné des 'référents digitaux' ou 'champions Industrie 4.0' au sein des équipes de production ?",
+      "type": "choix_unique",
+      "options": ["Non", "Oui, informellement (passionnés identifiés)", "Oui, formellement désignés sans missions définies", "Oui, avec missions définies et temps dédié (10-20% du temps)", "Oui, avec programme complet : formation, coaching pairs, KPIs"],
+      "poids": 25
+    },
+    {
+      "id": "RH_culture_digitale_Q3",
+      "question": "La direction générale utilise-t-elle elle-même les tableaux de bord digitaux (OEE, KPIs production, CMMS) dans ses revues de performance ?",
+      "type": "choix_unique",
+      "options": ["Non, revues sur papier/Excel", "Occasionnellement sur écrans partagés", "Régulièrement pour les revues mensuelles", "Systématiquement, direction 'data-driven' affichée", "La DG pilote exclusivement via dashboards temps réel"],
+      "poids": 20
+    },
+    {
+      "id": "RH_culture_digitale_Q4",
+      "question": "Avez-vous mis en place un programme de gestion du changement lors du déploiement de vos derniers outils digitaux (SCADA, MES, ERP) ?",
+      "type": "choix_unique",
+      "options": ["Non, déploiement technique uniquement", "Communication interne basique (email annonce)", "Sessions d'information + formation utilisateurs", "Programme complet : diagnostic résistances, ambassadeurs, formation, accompagnement 3 mois post-déploiement", "Programme change management certifié (PROSCI/ADKAR) avec mesure adoption"],
+      "poids": 15
+    },
+    {
+      "id": "RH_culture_digitale_Q5",
+      "question": "Les opérateurs et techniciens peuvent-ils soumettre des idées d'amélioration digitale (remontée terrain) via un canal structuré ?",
+      "type": "choix_unique",
+      "options": ["Non", "Boîte à idées physique uniquement", "Canal digital informel (WhatsApp groupe)", "Système de suggestions digitalisé (formulaire, application)", "Plateforme Kaizen numérique intégrée au MES avec suivi et récompense des idées implémentées"],
+      "poids": 15
+    }
+  ],
+  "pratiques_recommandees": [
+    {
+      "titre": "Programme 'Champions Industrie 4.0' par atelier",
+      "description": "Identifier et former un référent digital par équipe/atelier (20% du temps dédié). Former ces champions sur les outils SCADA, MES, tablettes industrielles et les responsabiliser sur l'adoption locale. Critères de sélection : ouverture technologique, respect des pairs, ancienneté terrain. Rémunération additionnelle recommandée (+15 000-25 000 FCFA/mois sur SMIG CI 75 000 FCFA).",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "très fort"
+    },
+    {
+      "titre": "Exemplarité de la direction sur les outils digitaux",
+      "description": "La DG et les directeurs de production doivent piloter exclusivement via les dashboards digitaux lors des revues (jamais sur Excel papier). Afficher les KPIs temps réel (OEE, TRS, MTTR) sur des écrans visibles en salle de direction et dans les ateliers. Ce signal fort est le levier culturel le plus puissant.",
+      "priorite": "haute",
+      "effort": "faible",
+      "impact": "fort"
+    },
+    {
+      "titre": "Gestion du changement structurée (méthode ADKAR)",
+      "description": "Avant chaque déploiement d'outil digital, appliquer la séquence ADKAR : Awareness (pourquoi ce changement), Desire (intérêt personnel), Knowledge (formation), Ability (mise en pratique encadrée), Reinforcement (accompagnement 3 mois). Documenter les résistances et adresser les freins individuellement. Budget change management : prévoir 15-20% du budget IT total.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Kaizen numérique — remontées terrain digitalisées",
+      "description": "Déployer une application mobile simple (Google Forms ou formulaire intégré MES) permettant aux opérateurs de soumettre des idées d'amélioration depuis la ligne. Gamification légère : afficher le tableau des idées implémentées avec le nom de l'auteur sur l'écran atelier. Récompenser : prime unique de 50 000 FCFA pour toute idée implémentée générant un gain mesurable.",
+      "priorite": "moyenne",
+      "effort": "faible",
+      "impact": "fort"
+    },
+    {
+      "titre": "Partenariat INP-HB Yamoussoukro — acculturation Industrie 4.0",
+      "description": "Initier un partenariat avec l'INP-HB (Institut National Polytechnique Félix Houphouët-Boigny, Yamoussoukro) pour organiser des journées portes ouvertes Industrie 4.0, accueillir des stagiaires ingénieurs comme vecteurs de culture digitale, et participer aux conférences annuelles de l'INP-HB sur la transformation industrielle.",
+      "priorite": "moyenne",
+      "effort": "moyen",
+      "impact": "moyen"
+    },
+    {
+      "titre": "Indicateurs de maturité culturelle digitale",
+      "description": "Mesurer trimestriellement le taux d'adoption réel des outils : % d'opérateurs utilisant le MES quotidiennement, nombre de tickets CMMS créés depuis tablette vs. papier, taux de complétion des formations e-learning. Partager ces métriques en réunion de production pour créer une dynamique collective.",
+      "priorite": "moyenne",
+      "effort": "faible",
+      "impact": "moyen"
+    }
+  ],
+  "outils_solutions": [
+    {
+      "categorie": "Plateformes d'apprentissage (LMS) industriels",
+      "solutions": [
+        {
+          "nom": "Moodle LMS",
+          "description": "LMS open-source déployable localement. Modules e-learning SCADA, MES, sécurité industrielle. Hébergeable sur serveur site. Support en français disponible.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Open-source + coût développement modules : 500 000 - 2 M FCFA"
+        },
+        {
+          "nom": "TalentLMS",
+          "description": "LMS SaaS adapté PME industrielles. Interface mobile, modules SCADA/IoT disponibles en marketplace. Plan Small 69 $/mois jusqu'à 40 utilisateurs.",
+          "pertinence_locale": "haute",
+          "cout_estime": "69-299 $/mois"
+        }
+      ]
+    },
+    {
+      "categorie": "Outils de gestion du changement",
+      "solutions": [
+        {
+          "nom": "Microsoft Teams + Viva Engage",
+          "description": "Plateforme collaborative pour diffuser la culture digitale : groupes par atelier, canaux d'annonces, publication des succès Industrie 4.0. Intégré Office 365 souvent déjà déployé.",
+          "pertinence_locale": "haute",
+          "cout_estime": "Inclus dans Microsoft 365 Business"
+        },
+        {
+          "nom": "WhatsApp Business groupes ateliers",
+          "description": "Dans le contexte CI, WhatsApp est l'outil de communication de facto des équipes terrain. Groupes structurés par atelier pour partage des bonnes pratiques, alertes formation.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Gratuit (WhatsApp Business)"
+        }
+      ]
+    }
+  ],
+  "indicateurs_cles": [
+    {
+      "nom": "Taux d'adoption des outils MES/SCADA",
+      "description": "Pourcentage des utilisateurs cibles utilisant activement les outils au moins 3 fois par semaine",
+      "unite": "%",
+      "cible_sectorielle": ">85% en 12 mois post-déploiement"
+    },
+    {
+      "nom": "Nombre d'idées Kaizen digitales soumises",
+      "description": "Idées d'amélioration soumises via les canaux digitaux par les opérateurs",
+      "unite": "idées/mois",
+      "cible_sectorielle": "2-5 idées/atelier/mois"
+    },
+    {
+      "nom": "Score culture digitale (enquête interne)",
+      "description": "Score moyen de l'enquête annuelle sur la perception du digital par le personnel (0-10)",
+      "unite": "/10",
+      "cible_sectorielle": ">7/10"
+    },
+    {
+      "nom": "Taux de rotation des champions digitaux",
+      "description": "Pourcentage de champions digitaux restant dans leur rôle d'une année sur l'autre",
+      "unite": "%",
+      "cible_sectorielle": ">80% (stabilité du réseau d'ambassadeurs)"
+    }
+  ],
+  "reglementations_normes": [
+    {
+      "nom": "Code du Travail CI Loi 2015-532",
+      "description": "Le Code du Travail CI encadre les modifications des conditions de travail liées à la digitalisation. Tout changement significatif des postes (introduction de nouvelles technologies modifiant substantiellement le travail) doit être négocié avec les représentants du personnel.",
+      "organisme": "Ministère de l'Emploi CI",
+      "obligatoire": true
+    },
+    {
+      "nom": "Convention collective industrie CI",
+      "description": "Les conventions collectives sectorielles CI prévoient des dispositions sur la formation professionnelle obligatoire. La transformation digitale doit inclure un plan de formation conforme.",
+      "organisme": "Ministère de l'Emploi CI / Syndicats",
+      "obligatoire": true
+    }
+  ],
+  "comparatif_organisations": {
+    "description": "Comparaison de la maturité culture digitale dans les industries ivoiriennes",
+    "lignes": [
+      {
+        "organisation": "SUCAF CI (sucrerie)",
+        "champions_digitaux": "Réseau formel par unité",
+        "direction_data_driven": "Oui, tableaux de bord Industrie 4.0",
+        "kaizen_digital": "Formulaire mobile déployé",
+        "partenariat_recherche": "INP-HB Yamoussoukro actif",
+        "niveau_global": "Avancé"
+      },
+      {
+        "organisation": "SITAB CI (tabac)",
+        "champions_digitaux": "Quelques passionnés identifiés",
+        "direction_data_driven": "Partiellement",
+        "kaizen_digital": "Boîte à idées physique",
+        "partenariat_recherche": "Aucun",
+        "niveau_global": "En développement"
+      },
+      {
+        "organisation": "PME brasserie artisanale Abidjan",
+        "champions_digitaux": "Non",
+        "direction_data_driven": "Non",
+        "kaizen_digital": "Non",
+        "partenariat_recherche": "Non",
+        "niveau_global": "Initial"
+      },
+      {
+        "organisation": "SIFCA CI (agroalimentaire)",
+        "champions_digitaux": "Programme groupe formalisé",
+        "direction_data_driven": "Oui, KPIs groupe consolidés",
+        "kaizen_digital": "Plateforme groupe intégrée",
+        "partenariat_recherche": "CNRA CI + CIRAD",
+        "niveau_global": "Optimisé"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "BIJF CI — Programme 'Atelier 4.0' : acculturation digitale 320 opérateurs en 9 mois",
+    "contexte": "BIJF CI (Brasserie Ivoirienne de Jus de Fruits), Abidjan-Yopougon, 320 opérateurs de production, 45 techniciens de maintenance. En 2022, déploiement d'un système MES Odoo Manufacturing + SCADA sur 3 lignes d'embouteillage. Le taux d'adoption réel après 3 mois était de seulement 23% : les opérateurs continuaient à remplir les rapports papier en parallèle.",
+    "probleme": "Résistance culturelle forte : les opérateurs perçevaient le MES comme un outil de surveillance plutôt qu'un outil d'aide. Les chefs d'équipe n'utilisaient pas les dashboards lors des briefings. La direction générait encore des rapports Excel à partir des données MES.",
+    "solution": "Programme 'Atelier 4.0' en 3 phases : (1) Diagnostic des résistances par atelier (entretiens individuels) : 4 profils identifiés — enthousiastes 18%, attentistes 45%, sceptiques 28%, réfractaires 9% — 3 semaines ; (2) Formation de 12 champions digitaux (1 par équipe) avec 15% du temps dédié et prime mensuelle 20 000 FCFA ; (3) Campagne 'Ma donnée, mon outil' : affichage des gains individuels liés aux données MES (prime performance liée à OEE atelier), suppression progressive du papier avec accompagnement. Investissement change management : 8,2 M FCFA sur 9 mois.",
+    "resultats": "Taux d'adoption MES : 23% → 91% en 9 mois. Remplissage papier parallèle : éliminé à 97% en mois 8. Idées Kaizen soumises via formulaire mobile : 0 → 34/mois (8 implémentées, gains 450 M FCFA/an). Absentéisme lié au stress technologique : -42%. La direction pilote exclusivement via dashboards depuis le mois 6. OEE moyen lignes : +11 points (vs. +5 points attendus avant le programme culture). ROI programme change management : 7,6x en 12 mois."
+  },
+  "ai_context": {
+    "focus_llm": "Évaluer la capacité de l'entreprise industrielle ivoirienne à créer un environnement humain propice à l'adoption des outils Industrie 4.0. Insister sur le fait que la résistance culturelle est le premier frein à l'adoption des technologies SCADA/MES/IoT, souvent plus bloquant que les obstacles techniques. La visibilité de la direction sur les outils digitaux est un signal de maturité clé.",
+    "pieges_a_eviter": [
+      "Ne pas réduire la culture digitale à la formation technique : l'état d'esprit (mindset) et la confiance dans les outils comptent autant",
+      "Ne pas ignorer le contexte socio-culturel CI : la relation hiérarchique forte signifie que l'exemplarité de la direction a un impact démultiplié",
+      "Éviter de recommander des budgets change management trop faibles : 5% du budget IT est insuffisant, 15-20% est la norme pour les transformations industrielles",
+      "Ne pas sous-estimer le rôle de WhatsApp Business comme canal de communication digitale de facto dans les usines CI"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Culture entièrement analogique. Résistance active aux outils digitaux. Direction ne valorise pas le digital. Aucun champion identifié, aucune formation, aucun programme de changement.",
+      "score_21_to_40": "Quelques enthousiasmes isolés sans structure. Direction neutre sur le digital. Formations ponctuelles non suivies. Taux d'adoption des outils <30%.",
+      "score_41_to_60": "Programme de champions digitaux en place. Direction utilise les dashboards pour les revues formelles. Gestion du changement basique lors des déploiements. Taux d'adoption 50-70%.",
+      "score_61_to_80": "Culture d'amélioration continue intégrée. Champions actifs, direction exemplaire, Kaizen digital opérationnel. Partenariat INP-HB ou équivalent. Taux d'adoption >80%.",
+      "score_81_to_100": "Innovation bottom-up systématique. Opérateurs co-construisent les outils digitaux. Taux d'adoption >90%. Partenariats recherche formalisés (INP-HB, CNRA CI). Benchmark culture digitale reconnu au niveau UEMOA."
+    }
+  }
+}

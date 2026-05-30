@@ -56,9 +56,9 @@ public class EvaluationService {
     }
 
     public EvaluationResponse submitEvaluation(EvaluationRequest request) {
-        Company company = companyRepository.findById(request.getCompanyId())
+        Company company = companyRepository.findById(Objects.requireNonNull(request.getCompanyId()))
                 .orElseThrow(() -> new EntityNotFoundException("Company not found with id: " + request.getCompanyId()));
-        Questionnaire questionnaire = questionnaireRepository.findById(request.getQuestionnaireId())
+        Questionnaire questionnaire = questionnaireRepository.findById(Objects.requireNonNull(request.getQuestionnaireId()))
                 .orElseThrow(() -> new EntityNotFoundException("Questionnaire not found with id: " + request.getQuestionnaireId()));
         User submittedBy = getCurrentUser();
 
@@ -90,11 +90,11 @@ public class EvaluationService {
             response.setComment(answer.getComment());
             evaluation.addResponse(response);
 
-            weightedScores.merge(question.getAxis(), normalizedScore * question.getWeight(), Double::sum);
-            totalWeights.merge(question.getAxis(), question.getWeight(), Integer::sum);
+            weightedScores.merge(question.getAxis(), normalizedScore * question.getWeight(), (a, b) -> a + b);
+            totalWeights.merge(question.getAxis(), question.getWeight(), (a, b) -> a + b);
             String subAxisKey = buildSubAxisKey(question.getAxis(), question.getSubAxis());
-            weightedScoresBySubAxis.merge(subAxisKey, normalizedScore * question.getWeight(), Double::sum);
-            totalWeightsBySubAxis.merge(subAxisKey, question.getWeight(), Integer::sum);
+            weightedScoresBySubAxis.merge(subAxisKey, normalizedScore * question.getWeight(), (a, b) -> a + b);
+            totalWeightsBySubAxis.merge(subAxisKey, question.getWeight(), (a, b) -> a + b);
         }
 
         double businessScore = computeAxisScore(weightedScores, totalWeights, QuestionAxis.BUSINESS);
@@ -104,6 +104,8 @@ public class EvaluationService {
         double marketingScore = computeAxisScore(weightedScores, totalWeights, QuestionAxis.MARKETING_COMMUNICATION);
         double rhScore = computeAxisScore(weightedScores, totalWeights, QuestionAxis.RH_CULTURE_DIGITALE);
         double offresScore = computeAxisScore(weightedScores, totalWeights, QuestionAxis.OFFRES_DIGITALES);
+        double modeleOperationnelScore = computeAxisScore(weightedScores, totalWeights, QuestionAxis.MODELE_OPERATIONNEL_INNOVATION);
+        double itDataScore = computeAxisScore(weightedScores, totalWeights, QuestionAxis.IT_DATA);
         double globalScore = computeGlobalScore(weightedScores, totalWeights);
 
         evaluation.setBusinessScore(businessScore);
@@ -113,16 +115,27 @@ public class EvaluationService {
         evaluation.setMarketingCommunicationScore(marketingScore);
         evaluation.setRhCultureDigitaleScore(rhScore);
         evaluation.setOffresDigitalesScore(offresScore);
+        evaluation.setModeleOperationnelScore(modeleOperationnelScore);
+        evaluation.setItDataScore(itDataScore);
         evaluation.setGlobalScore(globalScore);
-        evaluation.setMaturityLevel(determineMaturityLevel(globalScore));
+        MaturityLevel maturityLevel = determineMaturityLevel(globalScore);
+        evaluation.setMaturityLevel(maturityLevel);
+        evaluation.setTargetMaturityLevel(suggestTargetMaturity(maturityLevel));
 
         Evaluation saved = evaluationRepository.save(evaluation);
         EvaluationResponse response = toResponse(saved);
 
-        // Enrich with AI scoring and pre-generate recommendations + benchmark (best-effort)
+        // Fast AI enrichment (scoring synthesis) — kept synchronous, completes quickly
         if (aiService.isAiServiceAvailable()) {
             aiService.enrichWithAiScoring(response, saved);
-            aiService.generateAndStoreAiData(saved);
+            // Heavy AI generation (recommendations + benchmark) runs in background
+            // so the HTTP response is returned immediately to the client
+            final Evaluation savedForAsync = saved;
+            Thread aiThread = new Thread(() -> {
+                try { aiService.generateAndStoreAiData(savedForAsync); } catch (Exception ignored) {}
+            });
+            aiThread.setDaemon(true);
+            aiThread.start();
         }
 
         return response;
@@ -130,6 +143,12 @@ public class EvaluationService {
 
     public EvaluationResponse getEvaluation(Long id) {
         return toResponse(findEvaluation(id));
+    }
+
+    public void setTargetMaturity(Long id, MaturityLevel target) {
+        Evaluation evaluation = findEvaluation(id);
+        evaluation.setTargetMaturityLevel(target);
+        evaluationRepository.save(evaluation);
     }
 
     public List<EvaluationResponse> getCompanyEvaluations(Long companyId) {
@@ -141,13 +160,13 @@ public class EvaluationService {
     public EvaluationResponse getLatestCompanyEvaluation(Long companyId) {
         Evaluation evaluation = evaluationRepository.findFirstByCompanyIdOrderByCreatedAtDesc(companyId);
         if (evaluation == null) {
-            throw new EntityNotFoundException("No evaluation found for company id: " + companyId);
+            return null;
         }
         return toResponse(evaluation);
     }
 
     private Evaluation findEvaluation(Long id) {
-        return evaluationRepository.findById(id)
+        return evaluationRepository.findById(Objects.requireNonNull(id))
                 .orElseThrow(() -> new EntityNotFoundException("Evaluation not found with id: " + id));
     }
 
@@ -197,6 +216,16 @@ public class EvaluationService {
         return Math.round(value * 100.0) / 100.0;
     }
 
+    private MaturityLevel suggestTargetMaturity(MaturityLevel current) {
+        return switch (current) {
+            case INITIAL       -> MaturityLevel.INTERMEDIAIRE;
+            case BASIQUE       -> MaturityLevel.INTERMEDIAIRE;
+            case INTERMEDIAIRE -> MaturityLevel.AVANCE;
+            case AVANCE        -> MaturityLevel.OPTIMISE;
+            case OPTIMISE      -> MaturityLevel.OPTIMISE;
+        };
+    }
+
     private String buildSubAxisKey(QuestionAxis axis, String subAxis) {
         return axis.name() + "::" + (subAxis == null ? "" : subAxis.trim());
     }
@@ -210,6 +239,8 @@ public class EvaluationService {
             case MARKETING_COMMUNICATION -> "MARKETING_COMMUNICATION";
             case RH_CULTURE_DIGITALE -> "RH_CULTURE_DIGITALE";
             case OFFRES_DIGITALES -> "OFFRES_DIGITALES";
+            case MODELE_OPERATIONNEL_INNOVATION -> "MODELE_OPERATIONNEL_INNOVATION";
+            case IT_DATA -> "IT_DATA";
         };
     }
 
@@ -221,7 +252,9 @@ public class EvaluationService {
                 new AxisScoreResponse("CANAUX_DISTRIBUTION", evaluation.getCanauxDistributionScore()),
                 new AxisScoreResponse("MARKETING_COMMUNICATION", evaluation.getMarketingCommunicationScore()),
                 new AxisScoreResponse("RH_CULTURE_DIGITALE", evaluation.getRhCultureDigitaleScore()),
-                new AxisScoreResponse("OFFRES_DIGITALES", evaluation.getOffresDigitalesScore())
+                new AxisScoreResponse("OFFRES_DIGITALES", evaluation.getOffresDigitalesScore()),
+                new AxisScoreResponse("MODELE_OPERATIONNEL_INNOVATION", evaluation.getModeleOperationnelScore()),
+                new AxisScoreResponse("IT_DATA", evaluation.getItDataScore())
         );
 
         List<EvaluationAnswer> sortedResponses = evaluation.getResponses().stream()
@@ -278,7 +311,7 @@ public class EvaluationService {
                 ))
                 .toList();
 
-        return new EvaluationResponse(
+        EvaluationResponse resp = new EvaluationResponse(
                 evaluation.getId(),
                 evaluation.getCompany().getId(),
                 evaluation.getCompany().getName(),
@@ -293,6 +326,8 @@ public class EvaluationService {
                 evaluation.getCreatedAt(),
                 evaluation.getUpdatedAt()
         );
+        resp.setTargetMaturityLevel(evaluation.getTargetMaturityLevel());
+        return resp;
     }
 
     private int questionWeight(EvaluationAnswer answer) {

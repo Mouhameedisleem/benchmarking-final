@@ -1,0 +1,56 @@
+{
+  "meta": { "axis": "PROCESS", "sub_axis": "Agilité", "sector": "telecom", "language": "fr", "version": "1.0", "last_updated": "2026-05" },
+  "trends": [
+    { "title": "Agile at Scale dans les opérateurs télécoms — squads pour les produits digitaux et le réseau", "description": "Les opérateurs télécoms adoptent les méthodes agiles pour accélérer le TTM de leurs produits digitaux (applications, bundles, mobile money features). En UEMOA, MTN et Orange ont organisé des squads agiles pour leurs produits digitaux, réduisant le TTM de 6-9 mois à 6-8 semaines pour les nouvelles offres.", "impact_level": "Très élevé", "horizon": "12-36 mois", "adoption_rate": "35 % des grands opérateurs africains ont des squads agiles opérationnelles (GSMA 2024)", "source": "GSMA Agile Transformation Telecom Africa 2024", "year": "2024" },
+    { "title": "DevOps télécom — déploiements continus pour les applications BSS/OSS", "description": "Le DevOps permet aux équipes IT des opérateurs de déployer plusieurs fois par semaine des mises à jour sur les applications BSS (facturation, portail client, application mobile) sans downtime. La pratique du CI/CD est encore rare dans les opérations télécom UEMOA.", "impact_level": "Élevé", "horizon": "18-36 mois", "adoption_rate": "20 % des opérateurs africains pratiquent le DevOps pour leurs applications client (GSMA 2024)", "source": "GSMA DevOps Telecom Africa 2024", "year": "2024" }
+  ],
+  "key_technologies": [
+    { "name": "Framework Agile à l'échelle (SAFe, LeSS) pour les opérateurs", "category": "Organisation agile", "maturity_stage": "Mature", "adoption_in_sector": "Faible en UEMOA", "leading_vendors": ["SAFe (Scaled Agile Framework)", "LeSS (Large Scale Scrum)", "Spotify Model", "Disciplined Agile", "Jira + Confluence (outils)"] },
+    { "name": "CI/CD Pipeline pour les applications BSS/OSS télécom", "category": "Livraison continue", "maturity_stage": "Mature", "adoption_in_sector": "Très faible en UEMOA", "leading_vendors": ["GitLab CI", "Azure DevOps", "Jenkins", "GitHub Actions", "Ericsson Cloud Native DevOps"] }
+  ],
+  "market_leaders": {
+    "national": [{ "organisation": "Orange Côte d'Ivoire", "country": "Côte d'Ivoire", "key_practice": "3 squads agiles dédiées aux produits digitaux : Squad Orange Money Features, Squad My Orange App, Squad B2B Digital. Sprints de 2 semaines. CI/CD pour l'application My Orange. TTM réduit à 6 semaines pour les nouvelles fonctionnalités Orange Money.", "differentiator": "Orange CI a réduit le TTM de nouvelles fonctionnalités Orange Money de 9 mois à 6 semaines grâce à ses squads agiles — permettant de répondre aux évolutions du marché (Wave, MTN) quasi en temps réel", "source": "Orange CI Digital Transformation Report 2023" }],
+    "regional": [{ "organisation": "Safaricom Kenya", "country": "Kenya", "key_practice": "Modèle Spotify adapté avec 12 squads produit (M-Pesa, My Safaricom App, Enterprise, Network, Data). OKRs trimestriels. CI/CD avec 15 déploiements/semaine sur My Safaricom App. Tribes organisées par domaine (Retail, M-Pesa, B2B, Network).", "differentiator": "Safaricom déploie 15 mises à jour de son application My Safaricom par semaine — une cadence possible uniquement grâce à ses équipes DevOps matures qui permettent des déploiements sans downtime pour 8 millions d'utilisateurs actifs", "source": "Safaricom Annual Report 2023" }],
+    "international": [{ "organisation": "Vodafone Group", "country": "Royaume-Uni / Mondial", "key_practice": "Transformation agile à l'échelle avec SAFe dans 25 marchés. 300+ squads agiles. DevSecOps avec déploiements quotidiens. OKRs groupe alignés sur les KPIs digitaux. Université Agile Vodafone pour la formation de tous les collaborateurs.", "differentiator": "Vodafone a formé 30 000 collaborateurs aux méthodes agiles via son université Agile — un investissement en culture qui a permis de doubler la vitesse de livraison des produits digitaux en 18 mois dans tous ses marchés", "source": "Vodafone Annual Report 2023" }]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Méthodes waterfall uniquement. Projets IT de 12-18 mois. Aucune pratique agile. TTM > 12 mois pour un nouveau produit digital. Équipes en silo.",
+    "level_2_developing": "Quelques projets pilotes Scrum. Formation agile ponctuelle. Pas de squads formels. TTM 6-12 mois.",
+    "level_3_defined": "1-3 squads agiles opérationnelles. Scrum maîtrisé. Rituels en place. TTM 2-4 mois. CI/CD pour les applications client.",
+    "level_4_managed": "5+ squads agiles. DevOps déployé. OKRs trimestriels. TTM 4-8 semaines. Déploiements hebdomadaires. Agilité intégrée dans la culture.",
+    "level_5_optimizing": "Agile à l'échelle (SAFe). DevSecOps. 15+ squads. TTM < 4 semaines. Déploiements quotidiens. Organisation entièrement agile."
+  },
+  "regulations": [],
+  "risks": [{ "title": "Agilité sans gouvernance IT — déploiements non testés causant des pannes BSS/OSS", "description": "Des équipes agiles qui déploient fréquemment sans tests de régression complets sur les systèmes BSS/OSS (facturation, provisioning) peuvent introduire des bugs qui causent des pannes de facturation ou des erreurs de provisioning touchant des millions d'abonnés. En télécom, une panne BSS peut bloquer les activations SIM ou les transactions MoMo pendant des heures.", "severity": "Très élevé", "likelihood": "Élevée", "mitigation": "Environnement de test complet (staging) reproduisant fidèlement le BSS/OSS de production. Tests automatisés de régression avant chaque déploiement. Feature flags pour les déploiements progressifs (5 % des abonnés d'abord). Rollback automatique en cas d'erreur détectée." }],
+  "opportunities": [{ "title": "MVP mobile money features — lancer en 4 semaines pour tester, puis scaler", "description": "Le modèle MVP (Minimum Viable Product) appliqué aux fonctionnalités mobile money permet de lancer rapidement une nouvelle feature (ex: paiement de factures SODECI/CIE depuis MoMo) avec le minimum de développement, de mesurer l'adoption réelle, puis de l'optimiser ou de l'abandonner selon les résultats. Plus rapide et moins risqué qu'un développement complet.", "impact_level": "Élevé", "time_to_value": "3-6 mois", "prerequisite_maturity": "Niveau 3" }],
+  "ma_and_fundraising": [],
+  "zoom_case_study": { "entreprise": "Safaricom Kenya — 12 squads agiles, 15 déploiements app/semaine, modèle Spotify adapté", "pays": "Kenya", "technologie": "Spotify Model (Squads/Tribes) + Jira + GitLab CI/CD + Azure DevOps", "description": "Safaricom Kenya a achevé sa transformation agile en 2021 en adoptant le modèle Spotify adapté au contexte télécom. L'organisation : 12 squads autonomes organisées en 4 Tribes — Tribe Retail (My Safaricom App, Customer Experience), Tribe M-Pesa (Fuliza, Daraja API, Send Money), Tribe B2B (Enterprise services, IoT), Tribe Network & Technology (AIOps, performance réseau). Chaque squad a un PO, un Scrum Master, 5-8 développeurs et des représentants métier. CI/CD GitLab avec pipeline automatisé : code → tests automatiques (2 000 tests de régression) → déploiement staging → validation automatique → production. Résultat : 15 déploiements par semaine sur My Safaricom App (vs 1 déploiement par trimestre avant la transformation agile), 0 panne de service liée aux déploiements grâce aux tests automatisés, NPS in-app +62, TTM réduit de 8 mois à 3 semaines.", "resultats": "15 déploiements/semaine · 12 squads · TTM 8 mois → 3 semaines · 0 panne déploiement · 2 000 tests auto · NPS app +62 · 4 Tribes organisées", "source": "Safaricom Annual Report 2023 / GitLab Safaricom Case Study 2023", "annee": "2023" },
+  "comparatif_organisations": {
+    "titre": "Maturité agilité — benchmark opérateurs télécoms UEMOA",
+    "colonnes": ["Organisation", "Squads agiles opérationnelles (> 3)", "CI/CD pour applications client", "TTM < 2 mois features digitales", "OKRs trimestriels alignés", "DevOps ou DevSecOps actif"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "L'agilité est un avantage compétitif décisif pour les opérateurs UEMOA face à la pression de la concurrence (Wave qui disrupte le mobile money, OTT qui capturent les usages). Les opérateurs qui peuvent lancer de nouvelles fonctionnalités mobile money, de nouveaux bundles data ou de nouveaux services B2B en 4-6 semaines peuvent répondre aux mouvements de marché quasi en temps réel. Ceux qui restent en mode waterfall sont structurellement en retard.",
+    "maturity_max_description": "Organisation agile à l'échelle avec 10+ squads autonomes par domaine (mobile money, app client, B2B, réseau). CI/CD avec déploiements hebdomadaires sans downtime. OKRs trimestriels alignés sur les KPIs business. TTM inférieur à 4 semaines pour les nouvelles fonctionnalités. Agilité intégrée dans la culture de toute l'organisation, pas seulement l'IT.",
+    "scoring_rubric": {
+      "score_1_to_20": "Waterfall uniquement. TTM > 12 mois. Aucune pratique agile. Silos organisationnels.",
+      "score_21_to_40": "Pilotes Scrum. Formation ponctuelle. TTM 6-12 mois. Pas de squads.",
+      "score_41_to_60": "1-3 squads. Scrum maîtrisé. TTM 2-4 mois. CI/CD pour apps client.",
+      "score_61_to_80": "5+ squads. DevOps. OKRs. TTM 4-8 semaines. Déploiements hebdomadaires.",
+      "score_81_to_100": "Agile à l'échelle. DevSecOps. 15+ squads. TTM < 4 semaines. Déploiements quotidiens."
+    },
+    "prompt_injection_context": "Cet opérateur télécom est évalué sur sa maturité agile dans le contexte UEMOA. Analyse l'existence de squads agiles, le CI/CD, le TTM pour les nouvelles fonctionnalités digitales, les OKRs et le DevOps.",
+    "key_questions_for_llm": [
+      "Des squads agiles pluridisciplinaires sont-elles opérationnelles pour les produits digitaux (application mobile, mobile money, B2B) ?",
+      "Un pipeline CI/CD permet-il des déploiements fréquents (hebdomadaires ou plus) sur les applications client sans downtime ?",
+      "Quel est le TTM actuel pour le lancement d'une nouvelle fonctionnalité dans l'application mobile ou le mobile money ?",
+      "Des OKRs (Objectives and Key Results) trimestriels sont-ils utilisés pour aligner les équipes sur les objectifs de transformation digitale ?",
+      "Le DevOps ou DevSecOps est-il pratiqué par les équipes IT avec des tests automatisés et des déploiements continus ?"
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "meta": { "axis": "INFORMATION_SYSTEM", "sub_axis": "Infrastructure & Cloud", "sector": "assurance", "language": "fr", "version": "1.0", "last_updated": "2026-05" },
+  "trends": [
+    { "title": "Migration des core insurance systems vers le cloud — le grand chantier des assureurs africains", "description": "Les assureurs UEMOA opèrent souvent sur des core insurance systems (PAS) datant de 10-20 ans, hébergés on-premise avec une disponibilité limitée. La migration vers des solutions cloud-native (Majesco, Guidewire Cloud, Socotra) est le chantier IT le plus structurant de la décennie.", "impact_level": "Très élevé", "horizon": "36-60 mois", "adoption_rate": "8 % des assureurs africains ont migré leur PAS vers le cloud (Gartner Africa 2024)", "source": "Gartner Africa Insurance IT Survey 2024", "year": "2024" },
+    { "title": "Cloud hybride pour la conformité CIMA — données locales, traitement cloud", "description": "La CIMA n'interdit pas le cloud mais exige la souveraineté des données des assurés dans les États membres. Le cloud hybride (traitement cloud + stockage local ou régional) permet de concilier modernité et conformité réglementaire.", "impact_level": "Élevé", "horizon": "24-36 mois", "adoption_rate": "15 % des assureurs africains utilisent une architecture cloud hybride (IDC Africa 2024)", "source": "IDC Africa Cloud Insurance 2024", "year": "2024" }
+  ],
+  "key_technologies": [
+    { "name": "Core Insurance System Cloud-Native (PAS SaaS)", "category": "Système de gestion de polices", "maturity_stage": "Croissance", "adoption_in_sector": "Faible en UEMOA", "leading_vendors": ["Majesco Cloud Insurance", "Guidewire Cloud Platform", "Socotra", "Applied Epic (IARD)", "Sapiens ALIS (Vie)"] },
+    { "name": "Cloud public africain et data centers régionaux", "category": "Infrastructure", "maturity_stage": "Croissance", "adoption_in_sector": "Moyenne", "leading_vendors": ["AWS Afrique du Sud/Lagos", "Azure Afrique du Sud/Nigeria", "Google Cloud Afrique", "RAXIO CI", "Celtiis Africa"] }
+  ],
+  "market_leaders": {
+    "national": [{ "organisation": "NSIA Groupe", "country": "Côte d'Ivoire", "key_practice": "Migration vers un PAS centralisé pour toutes les filiales UEMOA. Architecture cloud hybride avec hébergement RAXIO CI. Disponibilité système 99,5 %. PCA testé semestriellement.", "differentiator": "NSIA a centralisé son PAS pour 8 filiales UEMOA sur une plateforme cloud hybride — le premier assureur UEMOA à atteindre 99,5 % de disponibilité", "source": "NSIA IT Infrastructure Report 2023" }],
+    "regional": [{ "organisation": "Sanlam Pan Africa", "country": "Afrique du Sud / Pan-Afrique", "key_practice": "Migration Azure pour les workloads non-sensibles, on-premise pour les données clients. Architecture microservices pour les nouvelles fonctionnalités. NOC 24/7 partagé entre filiales.", "differentiator": "Sanlam a réduit ses coûts IT de 35 % en 3 ans grâce à la consolidation cloud et au partage d'infrastructure entre ses 10 filiales africaines", "source": "Sanlam Annual Report 2023" }],
+    "international": [{ "organisation": "AXA Group", "country": "France / Mondial", "key_practice": "Stratégie cloud-first depuis 2020. Migration de 70 % des workloads vers AWS et Azure. Fermeture de 30 % des datacenters propres. PCA cloud testé trimestriellement.", "differentiator": "AXA a réduit ses coûts IT de 40 % et amélioré sa disponibilité à 99,95 % grâce à sa migration cloud — référence mondiale en infrastructure assurance", "source": "AXA Annual Report 2023 / AWS AXA Case Study 2023" }]
+  },
+  "maturity_levels": {
+    "level_1_initial": "100 % on-premise. Serveurs physiques non redondés. PCA non testé. Disponibilité < 95 %. Aucune sauvegarde automatique.",
+    "level_2_developing": "Virtualisation des serveurs. Sauvegarde automatique. PCA documenté mais non testé. Disponibilité 95-98 %.",
+    "level_3_defined": "Cloud hybride pour applications non-critiques. PCA testé annuellement. Disponibilité > 99 %. Monitoring basique.",
+    "level_4_managed": "Cloud hybride structuré. Core insurance en cours de migration SaaS. PCA testé semestriellement. Disponibilité 99,5 %. NOC 24/7.",
+    "level_5_optimizing": "Core insurance SaaS. Cloud-first. Disponibilité > 99,9 %. PCA < 4h RTO. Infrastructure as Code. NOC proactif."
+  },
+  "regulations": [{ "name": "Instruction CIMA sur la sécurité et la continuité des systèmes d'information", "issuing_body": "CIMA", "scope": "Tous assureurs CIMA", "key_requirement": "Plan de Continuité d'Activité (PCA) obligatoire. Tests du PCA au moins une fois par an. Les données des assurés doivent être conservées dans des conditions garantissant leur intégrité et leur disponibilité pendant au moins 10 ans.", "compliance_deadline": "En vigueur", "source_url": "https://www.cima-afrique.org" }],
+  "risks": [{ "title": "Dépendance à un seul prestataire IT legacy — risque de continuité", "description": "De nombreux assureurs UEMOA dépendent d'un seul prestataire local pour leur PAS legacy. Si ce prestataire fait défaut (faillite, fin de support), la continuité des opérations est menacée. Ce risque de concentration IT est rarement évalué.", "severity": "Très élevé", "likelihood": "Moyenne", "mitigation": "Cartographier les dépendances IT. Exiger des contrats de maintenance avec escrow du code source. Planifier la migration vers des solutions standard avec plusieurs prestataires." }],
+  "opportunities": [{ "title": "Mutualisation de l'infrastructure IT entre assureurs — réduction des coûts de 30-50 %", "description": "En UEMOA, où les assureurs de taille moyenne ont du mal à amortir les coûts d'infrastructure IT, la mutualisation (cloud partagé, NOC commun via FANAF) pourrait réduire les coûts IT de 30-50 % tout en améliorant la disponibilité.", "impact_level": "Élevé", "time_to_value": "18-36 mois", "prerequisite_maturity": "Niveau 2" }],
+  "ma_and_fundraising": [],
+  "zoom_case_study": { "entreprise": "Guidewire Cloud — Migration d'un assureur africain en 18 mois", "pays": "USA (solution) / Déploiements en Afrique du Sud, Kenya, Nigeria", "technologie": "Guidewire InsuranceSuite Cloud — PAS SaaS avec mises à jour automatiques", "description": "Guidewire Cloud est la plateforme de gestion de polices assurance la plus déployée au monde. Dans ses déploiements africains (Santam Afrique du Sud, Jubilee Kenya), la migration depuis les systèmes legacy a pris 18-24 mois. Les bénéfices : mises à jour automatiques 3 fois par an (fin de la dette technique), disponibilité 99,95 % garantie par Guidewire, coûts IT réduits de 30-40 % (pas de maintenance infrastructure), et capacité d'intégration API avec les insurtechs via la Guidewire Marketplace (250+ partenaires). Pour les assureurs UEMOA, Guidewire Cloud représente l'alternative la plus crédible aux PAS legacy, avec un déploiement possible en 18 mois et un ROI positif dès la 3ème année.", "resultats": "18-24 mois de migration · Disponibilité 99,95 % · Coûts IT -30/40 % · 250+ intégrations partenaires · Mises à jour 3x/an automatiques · ROI positif an 3", "source": "Guidewire Annual Report 2023 / Santam Guidewire Case Study 2023", "annee": "2023" },
+  "comparatif_organisations": {
+    "titre": "Maturité infrastructure & cloud — benchmark assureurs CIMA/UEMOA",
+    "colonnes": ["Organisation", "Cloud hybride opérationnel", "PCA testé semestriellement", "Disponibilité > 99,5 %", "PAS SaaS en cours/déployé", "NOC 24/7"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "Partiel", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "L'infrastructure IT des assureurs UEMOA est souvent le maillon faible de la transformation digitale. Les PAS legacy non maintenus, l'absence de redondance et les faibles niveaux de disponibilité bloquent tous les projets digitaux en aval. La migration cloud et la modernisation du PAS sont des prérequis à tout développement d'application mobile, de portail client ou d'IA.",
+    "maturity_max_description": "Architecture cloud-first avec core insurance system SaaS (Guidewire, Majesco ou équivalent). Disponibilité > 99,9 %. PCA testé semestriellement avec RTO < 4h. NOC 24/7. Infrastructure as Code. Conformité CIMA sur la souveraineté des données.",
+    "scoring_rubric": {
+      "score_1_to_20": "100 % on-premise non redondé. Disponibilité < 95 %. PCA inexistant.",
+      "score_21_to_40": "Virtualisation. Sauvegarde auto. PCA non testé. Disponibilité 95-98 %.",
+      "score_41_to_60": "Cloud hybride partiel. PCA annuel. Disponibilité > 99 %. Monitoring basique.",
+      "score_61_to_80": "Cloud hybride structuré. PAS migration en cours. Dispo 99,5 %. NOC 24/7.",
+      "score_81_to_100": "PAS SaaS. Cloud-first. Dispo > 99,9 %. PCA < 4h. Infrastructure as Code."
+    },
+    "prompt_injection_context": "Cette compagnie d'assurance est évaluée sur sa maturité infrastructure et cloud dans le contexte CIMA/UEMOA. Analyse l'état du core insurance system (PAS), le niveau de cloud adoption, la disponibilité des systèmes, le PCA et la conformité CIMA sur la conservation des données.",
+    "key_questions_for_llm": [
+      "Le core insurance system (PAS) est-il hébergé sur une infrastructure moderne (cloud ou datacenter certifié) avec une disponibilité garantie > 99 % ?",
+      "Un Plan de Continuité d'Activité (PCA) est-il documenté et testé au moins une fois par an conformément aux exigences CIMA ?",
+      "Une architecture cloud hybride est-elle en place pour les applications digitales (portail client, application mobile) ?",
+      "Un NOC (Network Operations Center) ou équipe de monitoring 24/7 assure-t-il la surveillance des systèmes critiques ?",
+      "Une migration du PAS vers une solution SaaS moderne est-elle planifiée ou en cours ?"
+    ]
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "meta": {
+    "axis": "INFORMATION_SYSTEM",
+    "sub_axis": "Cybersécurité",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Fraude mobile banking — vecteur d'attaque dominant en UEMOA",
+      "description": "Les attaques ciblant le mobile banking (SIM swap, phishing WhatsApp, faux agents mobile money) représentent 70 % des incidents de fraude bancaire en Afrique de l'Ouest. Les banques doivent déployer une authentification forte et une détection de fraude en temps réel.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "Fraude mobile banking +45 %/an en Afrique de l'Ouest (INTERPOL 2024)",
+      "source": "INTERPOL Cybercrime Africa Report 2024 / BCEAO Rapport Fraude 2023",
+      "year": "2024"
+    },
+    {
+      "title": "PCI-DSS v4.0 obligatoire — sécurisation des données de paiement",
+      "description": "La norme PCI-DSS v4.0 est obligatoire depuis mars 2025 pour toutes les organisations traitant des données de cartes de paiement. Les banques UEMOA acceptant Visa/Mastercard doivent se conformer sous peine de pénalités et de suspension.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "40 % des banques UEMOA en cours de certification PCI-DSS (Visa/Mastercard Africa 2024)",
+      "source": "Visa/Mastercard Africa Compliance Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "SOC bancaire régional — mutualisation de la surveillance des menaces",
+      "description": "Face au coût élevé d'un SOC 24/7 interne, des banques UEMOA mutualisent leur surveillance cybersécurité via des SOC régionaux partagés ou des services MSSP spécialisés dans le secteur bancaire africain.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "25 % des banques UEMOA utilisent un MSSP pour la surveillance 24/7 (KPMG Africa 2024)",
+      "source": "KPMG Africa Banking Cybersecurity Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Authentification sans mot de passe — biométrie et FIDO2",
+      "description": "Les banques leaders migrent vers l'authentification biométrique (empreinte digitale, Face ID) et FIDO2 pour les accès mobiles bancaires, éliminant les risques liés aux mots de passe et améliorant l'expérience client.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "55 % des apps bancaires africaines utilisent la biométrie (GSMA Mobile Money Security 2024)",
+      "source": "GSMA Mobile Money Security Report 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Système de détection de fraude temps réel",
+      "category": "Fraude et sécurité des transactions",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne en UEMOA",
+      "leading_vendors": ["FICO Falcon", "SAS Fraud Management", "ACI Worldwide", "Featurespace ARIC", "Mastercard Decision Intelligence"]
+    },
+    {
+      "name": "AML / KYC Platform",
+      "category": "Conformité LCB-FT",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne en UEMOA",
+      "leading_vendors": ["Temenos Financial Crime Mitigation", "NICE Actimize", "Oracle FCCM", "ComplyAdvantage", "Chainalysis"]
+    },
+    {
+      "name": "SIEM bancaire",
+      "category": "Surveillance des événements de sécurité",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Microsoft Sentinel", "Splunk", "IBM QRadar", "Google Chronicle", "Elastic SIEM"]
+    },
+    {
+      "name": "Authentification forte (MFA/Biométrie)",
+      "category": "Sécurité des accès",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne",
+      "leading_vendors": ["OneSpan", "RSA SecurID", "Thales SafeNet", "Entrust", "Apple Face ID / Android Biometrics"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "SGCI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Système anti-fraude Société Générale Groupe déployé en CI, PSSI formalisée, tests de pénétration annuels par prestataire externe",
+        "differentiator": "Bénéfice des standards cybersécurité du groupe SG France (ISO 27001, PCI-DSS) déployés en CI",
+        "source": "SGCI Rapport Annuel 2023 / Société Générale Group Cybersecurity Report"
+      },
+      {
+        "organisation": "Ecobank CI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "SOC centralisé Ecobank Groupe couvrant 33 pays incluant la CI, threat intelligence partagée entre filiales",
+        "differentiator": "Infrastructure cybersécurité mutualisée entre 33 pays — économies d'échelle et réponse coordonnée aux incidents",
+        "source": "Ecobank Technology Report 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank Transnational",
+        "country": "Pan-Afrique",
+        "key_practice": "SOC centralisé à Lomé analysant 2 milliards d'événements/jour pour 33 filiales, programme de certification PCI-DSS groupe",
+        "differentiator": "Partage de threat intelligence en temps réel entre filiales : un incident détecté au Sénégal protège immédiatement la CI",
+        "source": "Ecobank Technology Report 2023"
+      },
+      {
+        "organisation": "Standard Bank",
+        "country": "Afrique du Sud",
+        "key_practice": "Cyber Fusion Centre à Johannesburg : SIEM centralisé pour 20 pays, MTTR < 30 min pour les incidents critiques",
+        "differentiator": "Programme de threat hunting proactif : détection des menaces avant qu'elles n'impactent les clients",
+        "source": "Standard Bank Technology Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Barclays",
+        "country": "Royaume-Uni",
+        "key_practice": "SOC 24/7 avec 300 analystes, 50 Mds d'événements/jour via IBM QRadar, MTTR < 15 min",
+        "differentiator": "Threat intelligence partagée en temps réel avec le régulateur FCA via le programme CBEST",
+        "source": "Barclays Technology & Cyber Risk Report 2023"
+      },
+      {
+        "organisation": "JPMorgan Chase",
+        "country": "USA",
+        "key_practice": "600 M$/an investis en cybersécurité, équipe de 3 000 cybersécurité experts, SOC mondial",
+        "differentiator": "Partage de threat intelligence avec 7 000 autres entreprises via le Financial Services ISAC (FS-ISAC)",
+        "source": "JPMorgan Annual Report 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune politique de sécurité bancaire formalisée. Mots de passe simples sur le core banking. Pas de détection de fraude automatisée. Pas de procédure d'incident. Vulnérabilité totale aux attaques SIM swap.",
+    "level_2_developing": "Antivirus et firewall basiques. Politique de mots de passe sur les systèmes. Pas de détection de fraude temps réel. Tests de sécurité ponctuels. Incidents traités de façon réactive.",
+    "level_3_defined": "PSSI formalisée et approuvée par le CA. MFA sur l'accès au core banking et au mobile banking. Système anti-fraude de base. Tests de pénétration annuels. Procédure d'incident documentée. PCI-DSS en cours.",
+    "level_4_managed": "PCI-DSS certifié (si cartes Visa/Mastercard). Détection de fraude ML en temps réel. SIEM opérationnel ou MSSP. ISO 27001 en cours. Biométrie sur le mobile banking. SOC ou surveillance 24/7.",
+    "level_5_optimizing": "ISO 27001 certifié. PCI-DSS v4.0 conforme. SOC 24/7 avec IA défensive. MTTR < 1h. Threat intelligence opérationnelle. Zero Trust sur les accès bancaires. Exercices de crise trimestriels."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction BCEAO sur la sécurité des systèmes d'information bancaires",
+      "issuing_body": "BCEAO",
+      "scope": "Toutes les banques et établissements financiers en zone UEMOA",
+      "key_requirement": "PSSI formalisée, plan de continuité PCA, notification BCEAO dans les 72h d'un incident de sécurité majeur, tests de pénétration annuels",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "PCI-DSS v4.0 — Sécurité des données de paiement par carte",
+      "issuing_body": "PCI Security Standards Council / Visa / Mastercard",
+      "scope": "Toutes les banques traitant des données de cartes de paiement Visa/Mastercard",
+      "key_requirement": "12 exigences de sécurité, chiffrement des données cartes, tests d'intrusion trimestriels, rapport QSA annuel",
+      "compliance_deadline": "Mars 2025 (v4.0 obligatoire)",
+      "source_url": "https://www.pcisecuritystandards.org"
+    },
+    {
+      "name": "Loi UEMOA sur la LCB-FT — Sécurité des transactions digitales",
+      "issuing_body": "BCEAO / GIABA",
+      "scope": "Banques et opérateurs de paiement en zone UEMOA",
+      "key_requirement": "Surveillance automatisée des transactions suspectes, KYC digital conforme, déclarations de soupçons électroniques",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.giaba.org"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Fraude SIM swap — vol d'identité mobile pour vider les comptes",
+      "description": "Le SIM swap (vol du numéro de téléphone via un opérateur complaisant) permet à un fraudeur de recevoir les OTP bancaires et de vider les comptes. Technique dominante en Afrique de l'Ouest avec des pertes estimées à 50M FCFA/mois pour certaines banques.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Déployer une authentification multi-facteurs non basée sur le SMS (biométrie, TOTP app), surveiller les changements SIM en temps réel via les APIs opérateurs, bloquer les transactions post-SIM swap pendant 24h."
+    },
+    {
+      "title": "Non-conformité PCI-DSS — suspension des transactions cartes Visa/Mastercard",
+      "description": "Une banque non conforme PCI-DSS peut se voir suspendre le droit de traiter les transactions Visa/Mastercard. Cette suspension paralyserait immédiatement les retraits DAB et les paiements en ligne.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée pour les banques sans certification",
+      "mitigation": "Initier immédiatement le projet de certification PCI-DSS avec un QSA (Qualified Security Assessor) accrédité, prioriser la tokenisation des données cartes et le chiffrement end-to-end."
+    },
+    {
+      "title": "Attaque sur le core banking — risque systémique",
+      "description": "Une attaque ransomware réussie sur le core banking peut paralyser 100 % des opérations bancaires pendant des semaines. La BCEAO et les clients peuvent exiger des compensations et des explications.",
+      "severity": "Catastrophique",
+      "likelihood": "Moyenne",
+      "mitigation": "Sauvegardes offline du core banking testées mensuellement, segmentation réseau isolant le core banking, plan de continuité avec RTO < 4h conformément aux exigences BCEAO."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Certification ISO 27001 — avantage concurrentiel sur les appels d'offres",
+      "description": "Les grandes entreprises et organisations internationales exigent la certification ISO 27001 de leurs banques partenaires. Une banque certifiée peut accéder à des segments corporate et institutionnel plus rentables.",
+      "impact_level": "Élevé",
+      "time_to_value": "18-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Détection de fraude ML — réduction des pertes de 60-80 %",
+      "description": "Un système de détection de fraude basé sur le machine learning réduit les pertes sur fraude de 60-80 % vs les règles statiques, avec un taux de faux positifs 5× inférieur — moins de blocages légitimes frustrants pour les clients.",
+      "impact_level": "Très élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Ecobank",
+      "target": "Services cybersécurité MSSP (partenariat)",
+      "amount": "N/A",
+      "date": "2023",
+      "strategic_rationale": "Externaliser la surveillance SOC 24/7 pour les filiales de taille moyenne ne pouvant justifier un SOC interne",
+      "source": "Ecobank Technology Report 2023"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Barclays",
+    "pays": "Royaume-Uni",
+    "technologie": "SOC 24/7 avec IA défensive — 50 milliards d'événements/jour, MTTR < 15 min",
+    "description": "Barclays opère l'un des SOC les plus avancés du secteur bancaire mondial. 300 analystes surveillent 50 milliards d'événements de sécurité quotidiens via IBM QRadar enrichi par du machine learning. L'IA classe automatiquement 95 % des alertes, permettant aux analystes de se concentrer sur les 5 % critiques. Le MTTR (Mean Time to Respond) est de 15 minutes pour les incidents critiques. Barclays partage sa threat intelligence en temps réel avec le régulateur FCA via le programme CBEST, participant à la défense collective du secteur financier britannique.",
+    "resultats": "50 Mds événements/jour · MTTR 15 min · 95 % alertes classées automatiquement · 300 analystes SOC · Partage threat intel FCA temps réel",
+    "source": "Barclays Technology & Cyber Risk Report 2023 / Gartner Magic Quadrant SIEM 2024",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité cybersécurité — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "PSSI formalisée et approuvée CA", "MFA sur core banking et mobile", "Détection fraude temps réel", "PCI-DSS certifié", "SOC ou MSSP 24/7"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "Partiel", "Partiel", "En cours", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["Partiel", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La cybersécurité bancaire en UEMOA est un enjeu critique et réglementairement contraint. La fraude mobile banking croît de 45 %/an. La non-conformité PCI-DSS peut entraîner la suspension des transactions cartes Visa/Mastercard. Une attaque ransomware sur le core banking est une menace existentielle. Les banques doivent passer d'une posture réactive à une défense proactive.",
+    "maturity_max_description": "PSSI formalisée approuvée par le CA. MFA/biométrie sur tous les accès. Système de détection de fraude ML temps réel. PCI-DSS v4.0 certifié. ISO 27001 en cours ou certifié. SOC 24/7 (interne ou MSSP). Sauvegarde offline core banking testée. MTTR < 1h. Notification BCEAO dans les 72h conforme.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune PSSI. Pas de MFA. Pas de détection fraude. Pas de PCI-DSS. Vulnérabilité totale.",
+      "score_21_to_40": "Antivirus/firewall. Politique mots de passe. Pas de fraude temps réel. PCI-DSS non initié.",
+      "score_41_to_60": "PSSI formalisée. MFA core banking. Anti-fraude basique. PCI-DSS en cours. Tests pénétration annuels.",
+      "score_61_to_80": "PCI-DSS certifié. Fraude ML temps réel. SIEM ou MSSP. ISO 27001 en cours. Biométrie mobile.",
+      "score_81_to_100": "ISO 27001 certifié. PCI-DSS v4.0. SOC 24/7 IA. MTTR < 1h. Threat Intel. Zero Trust. Exercices crise."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur sa maturité cybersécurité dans le contexte bancaire UEMOA. Analyse la formalisation de la PSSI approuvée par le CA, le déploiement du MFA/biométrie sur les accès critiques, l'existence d'un système de détection de fraude en temps réel, la conformité PCI-DSS et l'opération d'un SOC ou MSSP 24/7.",
+    "key_questions_for_llm": [
+      "La Politique de Sécurité des Systèmes d'Information (PSSI) est-elle formalisée et approuvée par le Conseil d'Administration ?",
+      "Le MFA (authentification multi-facteurs) ou la biométrie est-il déployé sur l'accès au core banking et sur l'application mobile bancaire ?",
+      "Un système de détection de fraude en temps réel (basé sur des règles ou du machine learning) surveille-t-il les transactions 24/7 ?",
+      "La banque est-elle certifiée PCI-DSS (obligatoire si transactions cartes Visa/Mastercard) ou en cours de certification ?",
+      "Un SOC (Security Operations Centre) interne ou un MSSP externalisé surveille-t-il les événements de sécurité 24/7 ?"
+    ]
+  }
+}

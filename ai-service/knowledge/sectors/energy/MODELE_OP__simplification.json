@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "MODELE_OP",
+    "sub_axis": "simplification",
+    "sector": "energie",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Dématérialisation des processus client énergie (zéro papier)",
+      "description": "La simplification des processus opérationnels dans le secteur énergie passe par la dématérialisation complète du parcours client : demande de raccordement en ligne, contrat électronique, facturation dématérialisée, déclaration de panne via app ou SMS, réclamation digitale avec suivi temps réel. En Côte d'Ivoire, CIE a lancé en 2023 le projet 'Zéro Papier Agence' : 80% des actes de gestion client sont désormais dématérialisés à Abidjan (contre 35% en 2021). L'objectif ANARE-CI est 100% dématérialisé pour les gros comptes d'ici 2026.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "58%",
+      "source": "CIE Rapport Transformation Digitale 2024 / ANARE-CI",
+      "year": 2024
+    },
+    {
+      "title": "Automatisation des processus réseau (NMS auto-healing, work order digital)",
+      "description": "La simplification des opérations réseau passe par l'automatisation des ordres de travail (work orders) : génération automatique depuis le NMS/SCADA en cas d'alarme, dispatch IA vers le technicien optimal (compétence, localisation GIS, disponibilité), clôture terrain via tablette/smartphone avec photo géotagguée. En Côte d'Ivoire, CIE a déployé un EAM (Enterprise Asset Management) IBM Maximo couvrant 4 500 transformateurs avec work orders digitaux pour 1 800 techniciens terrain.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "45%",
+      "source": "CIE / IBM Maximo Case Study CI 2024",
+      "year": 2024
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "EAM / CMMS (Computerized Maintenance Management System) avec work orders mobiles",
+      "category": "Operations Management / Mobilité",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "CIE IBM Maximo (4 500 assets), SENELEC IFS (Sénégal) — 40% des distributeurs UEMOA",
+      "leading_vendors": ["IBM Maximo", "IFS Field Service", "SAP EAM", "Infor EAM", "UpKeep (PME)"]
+    },
+    {
+      "name": "BPM / Low-code pour dématérialisation processus client",
+      "category": "BPM / Low-code",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "25% des distributeurs CI avec portail client dématérialisé complet",
+      "leading_vendors": ["Pega BPM", "Appian", "Microsoft Power Platform", "Salesforce Energy Cloud", "ServiceNow"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "CIE (Compagnie Ivoirienne d'Électricité)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Projet 'Zéro Papier Agence' : portail client CIE Online (demande raccordement, réclamation, facturation dématérialisée), work orders IBM Maximo sur tablettes Zebra TC52 (1 800 techniciens), dispatch automatique SCADA → Maximo → technicien, signature électronique contrats (DocuSign CI)",
+        "differentiator": "80% actes gestion client dématérialisés à Abidjan en 24 mois — délai raccordement nouveau client réduit de 21 jours à 8 jours grâce au workflow digital bout-en-bout",
+        "source": "CIE Rapport Annuel 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "ENEO Cameroun",
+        "country": "Cameroun",
+        "key_practice": "Application ENEO Express (demande raccordement, paiement, réclamation en < 5 min), intégration Orange Money/MTN MoMo/Express Union, portail B2B ENEO Pro (gros comptes, API ERP), 200K utilisateurs actifs app mobile",
+        "differentiator": "Délai réclamation traité < 48h via app (vs. 15 jours avant dématérialisation), taux résolution premier contact 72% — référence régionale simplification processus client énergie",
+        "source": "ENEO Rapport Annuel 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Enel / Enel X",
+        "country": "Italie / Espagne / Amérique Latine",
+        "key_practice": "Parcours client 100% digital (Enel App : raccordement, contrat, paiement, réclamation, autoconsommation solaire), processus O2C (Order-to-Cash) automatisé en < 24h, NLP pour traitement automatique réclamations (95% sans agent humain), RPA pour facturation et relance impayés",
+        "differentiator": "Leader mondial simplification processus énergie — O2C automatisé < 24h pour 70M clients Europe/LATAM, NLP traitement réclamations 95% auto, économies 450M€/an sur coûts opérationnels",
+        "source": "Enel Rapport Annuel 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Processus 100% papier : demande raccordement formulaire papier en agence, bon de travail papier pour techniciens, facture postale, réclamation au guichet uniquement, délais > 30 jours.",
+    "level_2_developing": "Portail web basique (consultation facture, paiement en ligne), formulaires PDF téléchargeables, work orders partiellement digitaux, techniciens avec smartphones mais sans app dédiée.",
+    "level_3_defined": "Portail client complet (demande raccordement en ligne, réclamation digitale avec numéro de suivi), work orders mobiles sur 50%+ des techniciens terrain, facturation électronique disponible.",
+    "level_4_managed": "Dématérialisation >80% des processus client, work orders mobiles 100% avec GIS et photo géotagguée, dispatch automatique IA, KPIs processus monitorés en temps réel (délai raccordement, MTTR, taux résolution).",
+    "level_5_optimizing": "Zéro papier complet (contrat, facture, work order, rapport technique), processus auto-déclenchés depuis événements réseau (SCADA → EAM → technicien → client), RPA/IA sur 80%+ des processus, délai raccordement < 5 jours."
+  },
+  "regulations": [
+    {
+      "name": "ANARE-CI — Standards qualité de service et délais réglementaires",
+      "authority": "ANARE-CI (Autorité Nationale de Régulation de l'Électricité)",
+      "description": "ANARE-CI impose des délais réglementaires maximaux pour les processus clés : raccordement nouveau client (21 jours réglementaires, objectif 10 jours CIE 2025), rétablissement suite impayé (< 48h après régularisation), traitement réclamation écrite (15 jours). Le non-respect expose à des pénalités financières progressives. Les rapports trimestriels IQS incluent désormais des indicateurs de délais de processus client.",
+      "compliance_deadline": "En vigueur (IQS trimestriels ANARE-CI)",
+      "impact_on_sector": "La dématérialisation des processus est le levier principal d'atteinte des délais ANARE-CI — raccordement digital 8 jours vs. papier 21 jours, réclamation app 48h vs. guichet 15 jours"
+    },
+    {
+      "name": "Loi CI 2017-771 — Signature électronique et dématérialisation",
+      "authority": "ARTCI / MPEN (Ministère du Plan, de l'Économie Numérique)",
+      "description": "La loi ivoirienne sur les transactions électroniques (2017-771) reconnaît la signature électronique et les contrats dématérialisés comme ayant valeur juridique équivalente aux documents papier signés. Elle encadre l'horodatage, la conservation des preuves électroniques et les autorités de certification (AC) reconnues. CIE s'appuie sur cette loi pour ses contrats de raccordement digitaux et ses factures électroniques.",
+      "compliance_deadline": "2018 (en vigueur)",
+      "impact_on_sector": "Fondement juridique de la dématérialisation complète des processus énergie — contrats raccordement, ordres de travail signés numériquement, factures électroniques légalement valides en CI"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Résistance au changement des techniciens terrain et adoption limitée des outils digitaux",
+      "description": "La simplification numérique des processus terrain (work orders mobiles, rapports d'intervention digitaux, GIS offline) se heurte à la résistance de techniciens habitués aux bons papier, avec des niveaux d'alphabétisation numérique variables. En Côte d'Ivoire, CIE a constaté lors du déploiement Maximo/Zebra TC52 que 22% des techniciens (principalement en zones périurbaines et rurales) avaient des difficultés à utiliser les tablettes en autonomie les 3 premiers mois.",
+      "severity": "medium",
+      "likelihood": "high",
+      "mitigation": "Programme de formation terrain immersive (3 jours sur site avec accompagnateur digital), interface UX simplifiée en langue locale (pictogrammes, voix française), champions digitaux par district (1 technicien formateur/20 techniciens), feedback loop mensuel pour amélioration UX — CIE a atteint 94% d'adoption Maximo/Zebra à M+6 avec cette approche"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Raccordement en ligne en 5 jours ouvrés comme avantage concurrentiel ANARE-CI",
+      "description": "ANARE-CI envisage de publier les délais de raccordement par distributeur (benchmark public trimestriel similaire aux IQS SAIDI/SAIFI). Un distributeur capable de garantir un raccordement 100% digital en < 5 jours ouvrés (vs. 21 jours réglementaires) disposerait d'un avantage concurrentiel majeur pour les zones où plusieurs acteurs coexistent (zones péri-urbaines avec ADER CI + CIE). C'est également un argument commercial fort pour les lotisseurs immobiliers et industriels.",
+      "impact_level": "medium",
+      "time_to_value": "1-2 ans",
+      "prerequisite_maturity": "Niveau 3 — portail client complet + workflow digital raccordement"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "Salesforce Energy Cloud — Extension secteur utilities Afrique",
+      "montant": "Investissement Salesforce 500M USD (global utilities cloud)",
+      "investisseurs": ["Salesforce (investissement propre R&D)"],
+      "annee": 2024,
+      "description": "Salesforce a lancé Energy Cloud (ex-Utilities Cloud) avec des modules spécifiques dématérialisation énergie : work orders mobiles, portail client self-service, gestion abonnements AMI. En Côte d'Ivoire, un partenaire Salesforce local (Axess Group CI) a déployé Energy Cloud pour ZECI (2024) couvrant 45K clients ruraux — premier déploiement Salesforce Energy Cloud en Afrique subsaharienne francophone."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "CIE (Compagnie Ivoirienne d'Électricité)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Projet 'Zéro Papier Agence' — Dématérialisation bout-en-bout du processus de raccordement nouveau client",
+    "description": "En 2022-2024, CIE a conduit la dématérialisation complète du processus de raccordement nouveau client résidentiel à Abidjan. Avant : formulaire papier en agence → instruction manuelle → bon de travail papier → technicien → facture postale → délai moyen 21 jours. Après : portail CIE Online (demande + upload docs : CNI, plan de localisation, photos) → workflow automatisé (validation documentaire IA, vérification capacité réseau GIS automatique) → order de travail Maximo auto-généré → technicien Zebra TC52 (GPS dispatch) → signature électronique contrat sur tablette → compteur activé → facture mail/SMS. L'ensemble du processus est tracé en temps réel sur un dashboard client (statut : reçu → étude → planifié → intervention → activé).",
+    "resultats": "Délai moyen raccordement : 21 jours → 8 jours ouvrés (-62%). Taux satisfaction raccordement : 58% → 84% (enquête post-raccordement). Coût de traitement dossier CIE : 45 000 FCFA → 12 000 FCFA (-73%, élimination manipulation papier, déplacements agence, ressaisie). Volume raccordements traités/mois : +35% à effectif constant (gain productivité dématérialisation). Litiges raccordement : -68% (traçabilité complète élimine les contestations).",
+    "source": "CIE Rapport Transformation Digitale 2024",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif maturité simplification processus — Secteur Énergie Côte d'Ivoire",
+    "colonnes": ["organisation", "Dématérialisation client (%)", "Work orders mobiles", "Délai raccordement", "RPA / automatisation"],
+    "lignes": [
+      {
+        "organisation": "CIE CI",
+        "valeurs": ["80% actes dématérialisés", "1 800 techniciens Zebra TC52", "8 jours (vs. 21 réglementaires)", "Maximo auto-dispatch partiel"]
+      },
+      {
+        "organisation": "BBOXX CI",
+        "valeurs": ["95% (né digital PAYG)", "100% app BBOXX OS", "< 2 jours (livraison kit)", "Score crédit + activation 100% auto"]
+      },
+      {
+        "organisation": "ADER CI",
+        "valeurs": ["35% (administration publique)", "Partiel (pilotes ruraux)", "45-90 jours (procédures publiques)", "Non"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue le niveau de simplification et dématérialisation des processus opérationnels énergie : taux de dématérialisation des processus client (raccordement, réclamation, facturation), adoption work orders mobiles terrain, délais de processus vs. standards ANARE-CI, et présence d'automatisation IA/RPA.",
+    "maturity_max_description": "Distributeur énergie CI avec dématérialisation complète (zéro papier), raccordement < 5 jours via portail digital, work orders 100% mobiles avec dispatch IA GIS, processus client auto-déclenchés depuis événements SCADA, RPA sur facturation et réclamations — KPIs processus temps réel conformes IQS ANARE-CI.",
+    "scoring_rubric": {
+      "score_1_to_20": "Processus 100% papier, aucun canal digital client, work orders manuscrits, délais raccordement > 30 jours, zéro automatisation.",
+      "score_21_to_40": "Portail web basique (paiement/consultation), formulaires PDF, work orders partiellement digitaux, délais raccordement 15-25 jours.",
+      "score_41_to_60": "Portail client complet (demande raccordement en ligne, réclamation digitale), work orders mobiles sur 50%+ techniciens, délais raccordement 10-15 jours, facturation électronique disponible.",
+      "score_61_to_80": "Dématérialisation >75%, work orders 100% mobiles avec GIS, dispatch semi-automatique, délai raccordement < 10 jours, KPIs processus monitorés en temps réel.",
+      "score_81_to_100": "Zéro papier complet, raccordement < 5 jours, dispatch IA temps réel SCADA→EAM→technicien, RPA/IA 80%+ processus, satisfaction raccordement > 85%, conformité totale IQS ANARE-CI."
+    },
+    "prompt_injection_context": "Secteur énergie CI : ANARE-CI impose des délais réglementaires (raccordement 21 jours, réclamation 15 jours). La Loi CI 2017-771 valide les signatures et contrats électroniques. CIE est le distributeur principal (réseau) ; BBOXX/ADER CI gèrent l'off-grid. Les processus terrain (techniciens) sont critiques pour la simplification opérationnelle en CI.",
+    "key_questions_for_llm": [
+      "Quel est le délai moyen de raccordement d'un nouveau client ? Quel est le niveau de dématérialisation de ce processus (de 0% papier à 100% digital) ?",
+      "Vos techniciens terrain utilisent-ils des work orders digitaux (tablette/smartphone) avec GIS et dispatch automatique ?",
+      "Quelle proportion de vos processus client (raccordement, réclamation, facturation, paiement) est entièrement dématérialisée ?",
+      "Utilisez-vous la RPA ou l'IA pour automatiser des processus répétitifs (facturation, relance impayés, génération ordres de travail) ?",
+      "Comment mesurez-vous la performance de vos processus opérationnels ? Êtes-vous en conformité avec les délais réglementaires ANARE-CI ?"
+    ]
+  }
+}

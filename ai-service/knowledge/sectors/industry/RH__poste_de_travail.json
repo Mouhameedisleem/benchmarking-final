@@ -1,0 +1,246 @@
+{
+  "axe": "RH",
+  "sous_axe": "Poste de travail",
+  "secteur": "industrie",
+  "description": "Modernisation des postes de travail dans l'industrie ivoirienne : équipements terrain industriels durables, interfaces opérateur HMI/IHM, terminaux mobiles d'atelier résistants aux conditions CI (chaleur, poussière, humidité tropicale).",
+  "maturite_niveaux": {
+    "initial": "Postes de travail entièrement papier. Aucun terminal informatique en atelier. Les opérateurs remplissent des feuilles de relevé manuelles transmises au bureau.",
+    "en_developpement": "Quelques PC bureautiques en cabine de contrôle. Interfaces HMI sur automates uniquement. Pas de terminaux mobiles. Données de production saisies manuellement en fin de poste.",
+    "structure": "HMI/IHM standardisés sur les équipements critiques. Tablettes industrielles en atelier pour saisie des données. ERP accessible depuis les postes de production. MDM pour gestion des terminaux.",
+    "avance": "Tablettes IP65 durables, scanners codes-barres intégrés, impression étiquettes connectée. Postes MES avec accès temps réel aux paramètres de production. BYOD encadré pour certains techniciens.",
+    "optimise": "Environnement de travail digital complet : terminaux mobiles robustes gérés par MDM, accès unificé ERP/MES/CMMS depuis l'atelier, réalité augmentée pour maintenance assistée, affichage dynamique des KPIs en zone de production."
+  },
+  "questions_diagnostic": [
+    {
+      "id": "RH_poste_de_travail_Q1",
+      "question": "Quel type d'équipement informatique vos opérateurs de production utilisent-ils directement en atelier ?",
+      "type": "choix_multiple",
+      "options": ["Aucun équipement informatique (papier uniquement)", "HMI/IHM des automates (écrans dédiés machines)", "PC fixes en cabine de contrôle", "Tablettes industrielles (IP54 minimum)", "Terminaux mobiles robustes (scanners, PDA industriels)"],
+      "poids": 25
+    },
+    {
+      "id": "RH_poste_de_travail_Q2",
+      "question": "Vos équipements informatiques d'atelier sont-ils adaptés aux conditions tropicales ivoiriennes (chaleur >35°C, poussière, humidité, vibrations) ?",
+      "type": "choix_unique",
+      "options": ["Non, équipements bureautiques standard non adaptés", "Partiellement, avec protection basique (boîtier)", "Équipements semi-industriels (IP52)", "Équipements industriels certifiés (IP65, plage -20°C à +60°C)", "Équipements robustes certifiés + procédure de maintenance préventive terminaux"],
+      "poids": 20
+    },
+    {
+      "id": "RH_poste_de_travail_Q3",
+      "question": "Utilisez-vous un MDM (Mobile Device Management) pour gérer, sécuriser et mettre à jour vos terminaux d'atelier à distance ?",
+      "type": "choix_unique",
+      "options": ["Non", "Gestion manuelle (mise à jour physique sur chaque terminal)", "MDM basique (inventaire et déploiement applications)", "MDM complet avec politique de sécurité, effacement distant, géolocalisation", "MDM intégré au SIEM de sécurité industrielle (IEC 62443)"],
+      "poids": 20
+    },
+    {
+      "id": "RH_poste_de_travail_Q4",
+      "question": "Les techniciens de maintenance peuvent-ils accéder au CMMS (Gestion de Maintenance Assistée par Ordinateur) et aux schémas techniques directement depuis l'atelier ou la machine ?",
+      "type": "choix_unique",
+      "options": ["Non, consultation uniquement au bureau", "Accès possible depuis PC cabine de contrôle", "Accès depuis tablette en Wi-Fi zone atelier", "Accès mobile complet (tablette IP65 + photos pièces défectueuses)", "Accès mobile + réalité augmentée (superposition schéma sur équipement)"],
+      "poids": 20
+    },
+    {
+      "id": "RH_poste_de_travail_Q5",
+      "question": "Disposez-vous d'affichages dynamiques (écrans) en zone de production diffusant les KPIs en temps réel (OEE, TRS, production vs. objectif) ?",
+      "type": "choix_unique",
+      "options": ["Non, tableaux blancs ou aucun affichage", "Tableaux de bord papier mis à jour manuellement", "Écrans fixes avec données actualisées toutes les heures", "Affichage temps réel (OEE, TRS, alertes qualité)", "Affichage temps réel multisite + alertes automatiques sur anomalies"],
+      "poids": 15
+    }
+  ],
+  "pratiques_recommandees": [
+    {
+      "titre": "Équipements industriels IP65 adaptés CI",
+      "description": "Déployer des tablettes industrielles certifiées IP65 (protection totale poussière et jets d'eau) avec plage de températures -20°C/+60°C pour les conditions tropicales CI. Références éprouvées en Afrique subsaharienne : Zebra ET85, Panasonic TOUGHBOOK, Samsung Galaxy Tab Active4 Pro. Budget : 350 000-600 000 FCFA par terminal. Durée de vie minimale visée : 4-5 ans vs. 18 mois pour des tablettes grand public.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "MDM Microsoft Intune pour gestion centralisée",
+      "description": "Déployer Intune (inclus dans Microsoft 365 Business Premium) pour gérer tous les terminaux d'atelier : déploiement des applications MES/CMMS, politique mot de passe, effacement distant en cas de vol, mises à jour OS programmées hors production. Critique pour les industries CI soumises à APDP CI (sécurisation des données opérateurs sur terminaux mobiles).",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Affichage dynamique KPIs atelier (Andon digital)",
+      "description": "Installer des écrans 42-55 pouces en zones de production diffusant en temps réel : OEE/TRS par ligne, production actuelle vs. objectif, alertes qualité, messages de sécurité. Solution économique : Power BI Report Server sur Raspberry Pi ou serveur local avec écran TV commercial. Coût par zone : 150 000-300 000 FCFA. Impact fort sur la culture de performance et la transparence.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Accès CMMS mobile pour techniciens maintenance",
+      "description": "Équiper les techniciens de maintenance de tablettes IP65 avec accès CMMS (Odoo Maintenance ou CARL Source CI) en Wi-Fi d'atelier. Fonctionnalités essentielles : consultation des historiques machine, création d'ordres de travail depuis la machine, accès aux schémas électriques/mécaniques en PDF, photo-documentation des défauts. Réduction des allers-retours bureau-atelier : gain estimé 45 min/technicien/jour.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Infrastructure Wi-Fi industrielle dédiée atelier",
+      "description": "Déployer un réseau Wi-Fi industriel dédié aux terminaux mobiles d'atelier (séparé du réseau bureautique et du réseau OT/SCADA). Points d'accès industriels certifiés IP67 (ex: Cisco Catalyst IW9165E, Huawei AirEngine 5761-11W). Couverture totale du plancher de production est un prérequis à tout déploiement de terminaux mobiles.",
+      "priorite": "haute",
+      "effort": "élevé",
+      "impact": "très fort"
+    }
+  ],
+  "outils_solutions": [
+    {
+      "categorie": "Terminaux mobiles industriels",
+      "solutions": [
+        {
+          "nom": "Zebra Technologies ET85 / TC57",
+          "description": "Tablettes et terminaux mobiles industriels leader mondial. IP65, chutes 1,8 m, températures extrêmes. Disponibles via distributeurs Zebra CI/UEMOA. Logiciels MDM et Zebra DNA inclus.",
+          "pertinence_locale": "haute",
+          "cout_estime": "350 000 - 550 000 FCFA par terminal"
+        },
+        {
+          "nom": "Samsung Galaxy Tab Active4 Pro",
+          "description": "Alternative économique : IP68, MIL-STD-810H, prix compétitif. Disponible dans les enseignes CI (Jumia Business, distributeurs Samsung CI). Gestionnaire Samsung Knox MDM intégré.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "250 000 - 380 000 FCFA"
+        },
+        {
+          "nom": "Panasonic TOUGHBOOK 33",
+          "description": "Laptop/tablette 2-en-1 industriel haut de gamme pour techniciens instrumentation. IP65, résistance maximale. Pour postes à haute valeur (bureau technique, salle de contrôle).",
+          "pertinence_locale": "moyenne",
+          "cout_estime": "800 000 - 1 200 000 FCFA"
+        }
+      ]
+    },
+    {
+      "categorie": "MDM et gestion terminaux",
+      "solutions": [
+        {
+          "nom": "Microsoft Intune",
+          "description": "MDM complet inclus dans Microsoft 365 Business Premium. Gestion unifiée Windows, Android, iOS. Politique sécurité APDP CI compatible. Support français disponible.",
+          "pertinence_locale": "haute",
+          "cout_estime": "Inclus dans Microsoft 365 Business Premium (~6 500 FCFA/utilisateur/mois)"
+        },
+        {
+          "nom": "Cisco Meraki Systems Manager",
+          "description": "MDM cloud intégré à l'écosystème Meraki (switching, Wi-Fi). Adapté si infrastructure réseau Meraki déjà déployée.",
+          "pertinence_locale": "moyenne",
+          "cout_estime": "3-5 $/terminal/mois"
+        }
+      ]
+    },
+    {
+      "categorie": "Affichage dynamique",
+      "solutions": [
+        {
+          "nom": "Power BI Report Server sur écrans TV",
+          "description": "Solution économique CI : Power BI Report Server local + TV commercial Samsung/LG en mode kiosque. Affichage KPIs temps réel sans abonnement cloud. Investissement initial : 200 000-400 000 FCFA par zone.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "200 000 - 400 000 FCFA par zone"
+        }
+      ]
+    }
+  ],
+  "indicateurs_cles": [
+    {
+      "nom": "Taux de couverture terminaux mobiles atelier",
+      "description": "Pourcentage des postes de travail en production équipés de terminaux industriels connectés",
+      "unite": "%",
+      "cible_sectorielle": ">80% des postes clés"
+    },
+    {
+      "nom": "Taux de disponibilité des terminaux",
+      "description": "Pourcentage du temps où les terminaux d'atelier sont opérationnels (vs. en panne, en réparation)",
+      "unite": "%",
+      "cible_sectorielle": ">95%"
+    },
+    {
+      "nom": "Durée de vie moyenne des terminaux",
+      "description": "Durée effective entre remplacement des terminaux d'atelier",
+      "unite": "mois",
+      "cible_sectorielle": ">42 mois (3,5 ans) pour terminaux industriels"
+    },
+    {
+      "nom": "Temps d'accès aux informations de maintenance",
+      "description": "Temps moyen pour un technicien pour accéder aux schémas et historiques depuis la machine",
+      "unite": "minutes",
+      "cible_sectorielle": "<3 minutes (vs. >20 min sans mobile)"
+    }
+  ],
+  "reglementations_normes": [
+    {
+      "nom": "APDP CI Loi 2013-450",
+      "description": "Les terminaux mobiles d'atelier peuvent stocker des données personnelles d'opérateurs. Politique MDM obligatoire : effacement distant en cas de perte, chiffrement des données stockées, accès par authentification.",
+      "organisme": "APDP CI",
+      "obligatoire": true
+    },
+    {
+      "nom": "IEC 62443 (cybersécurité OT)",
+      "description": "Les terminaux mobiles connectés au réseau OT doivent respecter les zones et conduits IEC 62443. Segmentation réseau entre Wi-Fi terminaux mobiles et réseau SCADA/automates.",
+      "organisme": "IEC / ARTCI CI",
+      "obligatoire": false
+    },
+    {
+      "nom": "Normes atex (atmosphères explosibles)",
+      "description": "Dans les industries CI avec zones ATEX (stockage solvants, raffineries, silos), les terminaux mobiles doivent être certifiés ATEX Zone 2 minimum. Non-conformité = risque explosion.",
+      "organisme": "CODINORM CI / norme IEC 60079",
+      "obligatoire": true
+    }
+  ],
+  "comparatif_organisations": {
+    "description": "Comparaison de la maturité des postes de travail numériques dans les industries ivoiriennes",
+    "lignes": [
+      {
+        "organisation": "SUCAF CI (sucrerie)",
+        "terminaux_atelier": "Tablettes Zebra ET85 IP65",
+        "mdm": "Microsoft Intune",
+        "affichage_kpis": "Andon digital temps réel 8 zones",
+        "cmms_mobile": "Oui, techniciens équipés",
+        "niveau_global": "Avancé"
+      },
+      {
+        "organisation": "SIEI CI (électricité industrielle)",
+        "terminaux_atelier": "Tablettes Samsung Tab Active",
+        "mdm": "Samsung Knox basique",
+        "affichage_kpis": "Écrans Power BI 3 zones",
+        "cmms_mobile": "Oui, accès partiel",
+        "niveau_global": "Structuré"
+      },
+      {
+        "organisation": "PME fonderie Abidjan",
+        "terminaux_atelier": "PC fixes cabine uniquement",
+        "mdm": "Non",
+        "affichage_kpis": "Tableau blanc manuel",
+        "cmms_mobile": "Non",
+        "niveau_global": "En développement"
+      },
+      {
+        "organisation": "SITAB CI (tabac)",
+        "terminaux_atelier": "HMI machines + tablettes IP54",
+        "mdm": "MDM basique",
+        "affichage_kpis": "Écrans cabine contrôle",
+        "cmms_mobile": "Partiel",
+        "niveau_global": "Structuré"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "SATCI CI — Déploiement tablettes IP65 sur 4 lignes de fabrication : économie 3,8 M FCFA/an en remplacements",
+    "contexte": "SATCI CI (Société Africaine de Transformation Chimique et Industrielle), Abidjan-Port-Bouët, 280 employés, production de produits chimiques industriels (détergents, dégraissants). En 2021, SATCI avait équipé ses opérateurs de tablettes grand public (Samsung Galaxy Tab S6) pour la saisie MES. En 12 mois, 8 tablettes sur 20 avaient été remplacées pour cause de panne liée aux conditions d'atelier : humidité, chutes, projections chimiques. Coût de remplacement : 3,8 M FCFA.",
+    "probleme": "Les tablettes grand public non adaptées aux conditions industrielles généraient des pannes fréquentes (corrosion connecteurs USB par vapeurs chimiques, écrans fissurés par chutes, surchauffe à 40°C). Le taux de disponibilité réel des terminaux atelier était de 68% contre 95% attendu.",
+    "solution": "Migration vers tablettes Zebra ET85 (IP65, résistance chimique, port USB étanche) : 18 unités à 420 000 FCFA = 7,56 M FCFA. Déploiement MDM Microsoft Intune pour gestion centralisée. Wi-Fi industriel Cisco Catalyst IW9165E déployé sur 4 lignes (couverture 100% plancher). Housses protection chimique supplémentaires pour zones les plus agressives.",
+    "resultats": "18 mois après déploiement des Zebra ET85 : 0 remplacement de terminal (vs. 8 remplacements en 12 mois précédents). Taux de disponibilité terminaux : 68% → 98,5%. Économie directe en remplacements : 3,8 M FCFA/an. Économie indirecte (moins d'interruptions saisie MES, données production plus complètes) : +620 M FCFA de gains OEE liés à la meilleure traçabilité. MDM Intune : 0 incident de sécurité sur terminaux depuis déploiement. ROI total équipement industriel vs. grand public : 14 mois (investissement supplémentaire amorti par économies)."
+  },
+  "ai_context": {
+    "focus_llm": "Évaluer l'adéquation entre les équipements informatiques déployés et les conditions réelles de l'environnement industriel ivoirien : chaleur tropicale, humidité, poussière des industries agro-alimentaires, vibrations, projections chimiques ou alimentaires. Insister sur le fait que des équipements inadaptés génèrent des coûts cachés (remplacements, pannes, interruptions de production) supérieurs à l'investissement initial dans du matériel industriel adapté.",
+    "pieges_a_eviter": [
+      "Ne pas recommander des équipements bureautiques/grand public pour des environnements industriels CI",
+      "Ne pas oublier les contraintes ATEX pour les industries CI avec zones à risque d'explosion",
+      "Éviter de déployer des terminaux sans MDM : le vol est un risque réel, et la gestion des mises à jour est critique pour la sécurité OT",
+      "Ne pas sous-dimensionner l'infrastructure Wi-Fi : un réseau Wi-Fi insuffisant est la première cause d'échec des projets de mobilité en atelier"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Aucun équipement informatique en atelier. Production et maintenance 100% papier. Pas de HMI sur les machines.",
+      "score_21_to_40": "HMI sur machines uniquement. Quelques PC bureautiques en cabine. Pas de terminaux mobiles. Données saisies manuellement post-production.",
+      "score_41_to_60": "Tablettes en atelier (pas nécessairement industrielles). Accès MES en Wi-Fi. Quelques affichages KPIs. MDM basique ou absent.",
+      "score_61_to_80": "Terminaux industriels IP65 déployés. MDM Intune en place. Affichage dynamique KPIs. Techniciens maintenance équipés de mobile CMMS. Wi-Fi industriel couvrant les zones clés.",
+      "score_81_to_100": "Environnement de travail digital industriel complet. Terminaux robustes sur tous les postes clés. MDM intégré SIEM. Réalité augmentée maintenance. Couverture Wi-Fi 100%. Taux de disponibilité terminaux >98%."
+    }
+  }
+}

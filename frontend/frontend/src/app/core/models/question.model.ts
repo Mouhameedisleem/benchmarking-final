@@ -11,7 +11,7 @@
 export interface Question {
   id?: number;
   content: string;
-  axis: 'METIER' | 'PROCESSUS' | 'SI' | 'CANAUX_DISTRIBUTION' | 'MARKETING_COMMUNICATION' | 'RH_CULTURE_DIGITALE' | 'OFFRES_DIGITALES';
+  axis: 'METIER' | 'PROCESSUS' | 'SI' | 'CANAUX_DISTRIBUTION' | 'MARKETING_COMMUNICATION' | 'RH_CULTURE_DIGITALE' | 'OFFRES_DIGITALES' | 'MODELE_OPERATIONNEL_INNOVATION' | 'IT_DATA';
   category: string;
   subAxis: string;
   subAxisLabel?: string;
@@ -101,7 +101,7 @@ export interface QuestionnaireState {
 export interface SubAxis {
   id: string;
   name: string;
-  axis: 'METIER' | 'PROCESSUS' | 'SI' | 'CANAUX_DISTRIBUTION' | 'MARKETING_COMMUNICATION' | 'RH_CULTURE_DIGITALE' | 'OFFRES_DIGITALES';
+  axis: 'METIER' | 'PROCESSUS' | 'SI' | 'CANAUX_DISTRIBUTION' | 'MARKETING_COMMUNICATION' | 'RH_CULTURE_DIGITALE' | 'OFFRES_DIGITALES' | 'MODELE_OPERATIONNEL_INNOVATION' | 'IT_DATA';
   category: string;
   description?: string;
   helpText?: string;
@@ -120,7 +120,7 @@ export interface SubAxis {
 export interface Category {
   id: string;
   name: string;
-  axis: 'METIER' | 'PROCESSUS' | 'SI' | 'CANAUX_DISTRIBUTION' | 'MARKETING_COMMUNICATION' | 'RH_CULTURE_DIGITALE' | 'OFFRES_DIGITALES';
+  axis: 'METIER' | 'PROCESSUS' | 'SI' | 'CANAUX_DISTRIBUTION' | 'MARKETING_COMMUNICATION' | 'RH_CULTURE_DIGITALE' | 'OFFRES_DIGITALES' | 'MODELE_OPERATIONNEL_INNOVATION' | 'IT_DATA';
   description?: string;
   icon?: string;
   color?: string;
@@ -280,15 +280,39 @@ export const CATEGORIES: Category[] = [
     order: 14,
     weight: 1.1
   },
-  { 
-    id: 'POSTE_TRAVAIL', 
-    name: 'Poste de travail du banquier', 
-    axis: 'SI', 
-    icon: '🖥️', 
+  {
+    id: 'POSTE_TRAVAIL',
+    name: 'Poste de travail du banquier',
+    axis: 'SI',
+    icon: '🖥️',
     color: '#6f42c1',
     description: 'Équipement et assistance technologique des collaborateurs',
     order: 15,
     weight: 0.9
+  },
+
+  // AXE MODELE_OPERATIONNEL_INNOVATION
+  {
+    id: 'MODELE_OPERATIONNEL',
+    name: 'Modèle opérationnel & innovation',
+    axis: 'MODELE_OPERATIONNEL_INNOVATION',
+    icon: '🏭',
+    color: '#f97316',
+    description: 'Simplification des processus, gouvernance digitale et capacité d\'innovation',
+    order: 16,
+    weight: 1.1
+  },
+
+  // AXE IT_DATA
+  {
+    id: 'IT_DATA',
+    name: 'IT & Data',
+    axis: 'IT_DATA',
+    icon: '🗄️',
+    color: '#8b5cf6',
+    description: 'Infrastructure IT, socle technique et exploitation des données',
+    order: 17,
+    weight: 1.2
   }
 ];
 
@@ -746,14 +770,63 @@ export const SUB_AXES: SubAxis[] = [
   },
   
   // ========== SI - POSTE DE TRAVAIL ==========
-  { 
-    id: 'assistance-conseiller', 
-    name: 'Assistance du conseiller par la technologie', 
-    axis: 'SI', 
+  {
+    id: 'assistance-conseiller',
+    name: 'Assistance du conseiller par la technologie',
+    axis: 'SI',
     category: 'POSTE_TRAVAIL',
     helpText: 'Outils d\'aide à la relation client pour les conseillers',
     weight: 1.0,
     examples: ['CRM', 'Knowledge base', 'Salesforce']
+  },
+
+  // ========== MODELE_OPERATIONNEL_INNOVATION ==========
+  {
+    id: 'simplification-processus',
+    name: 'Simplification & automatisation des processus',
+    axis: 'MODELE_OPERATIONNEL_INNOVATION',
+    category: 'MODELE_OPERATIONNEL',
+    helpText: 'Pipelines automatisés, 0 ressaisie, workflows digitaux',
+    weight: 1.1,
+    examples: ['n8n', 'Make', 'Power Automate', 'ODK → ERP']
+  },
+  {
+    id: 'gouvernance-mod-op',
+    name: 'Gouvernance digitale & conformité',
+    axis: 'MODELE_OPERATIONNEL_INNOVATION',
+    category: 'MODELE_OPERATIONNEL',
+    helpText: 'Comité de pilotage, PRA/PCA, conformité réglementaire',
+    weight: 1.0,
+    examples: ['RGPD / APDP CI', 'PRA testé annuellement', 'Budget digital 2-3% CA']
+  },
+  {
+    id: 'innovation-mod-op',
+    name: 'Innovation digitale & R&D',
+    axis: 'MODELE_OPERATIONNEL_INNOVATION',
+    category: 'MODELE_OPERATIONNEL',
+    helpText: 'Partenariats R&D, IoT, IA sectorielle, veille technologique',
+    weight: 1.0,
+    examples: ['IoT capteurs', 'IA prédictive', 'FIRCA / subventions']
+  },
+
+  // ========== IT_DATA ==========
+  {
+    id: 'socle-it',
+    name: 'Socle IT & infrastructure',
+    axis: 'IT_DATA',
+    category: 'IT_DATA',
+    helpText: 'Disponibilité, redondance, connectivité, alimentation de secours',
+    weight: 1.2,
+    examples: ['UPS', 'Dual-SIM 4G', 'Cloud hybride', 'Monitoring UptimeRobot']
+  },
+  {
+    id: 'data-analytics',
+    name: 'Data & analytics',
+    axis: 'IT_DATA',
+    category: 'IT_DATA',
+    helpText: 'Collecte, qualité, exploitation et gouvernance des données',
+    weight: 1.1,
+    examples: ['Lac de données', 'ML prévisionnel', 'Dashboard temps réel', 'NDVI / API']
   }
 ];
 
@@ -1143,15 +1216,85 @@ export const DEFAULT_QUESTIONS: Partial<Question>[] = [
   },
   
   // ========== POSTE DE TRAVAIL ==========
-  { 
-    content: "Les conseillers disposent-ils d'outils d'aide à la relation client ?", 
-    axis: 'SI', 
-    category: 'POSTE_TRAVAIL', 
-    subAxis: 'assistance-conseiller', 
-    order: 1, 
+  {
+    content: "Les conseillers disposent-ils d'outils d'aide à la relation client ?",
+    axis: 'SI',
+    category: 'POSTE_TRAVAIL',
+    subAxis: 'assistance-conseiller',
+    order: 1,
     responseType: 'SCALE_1_5',
     required: true,
     helpText: "CRM, knowledge base, outils de suggestion"
+  },
+
+  // ========== MODELE_OPERATIONNEL_INNOVATION ==========
+  {
+    content: "Les processus métier clés sont-ils automatisés de bout en bout (0 ressaisie manuelle) ?",
+    axis: 'MODELE_OPERATIONNEL_INNOVATION',
+    category: 'MODELE_OPERATIONNEL',
+    subAxis: 'simplification-processus',
+    order: 1,
+    responseType: 'SCALE_1_5',
+    required: true,
+    helpText: "Évaluez le niveau d'automatisation des processus opérationnels",
+    weight: 1.1
+  },
+  {
+    content: "Une politique de gouvernance digitale et de conformité réglementaire est-elle formalisée ?",
+    axis: 'MODELE_OPERATIONNEL_INNOVATION',
+    category: 'MODELE_OPERATIONNEL',
+    subAxis: 'gouvernance-mod-op',
+    order: 2,
+    responseType: 'BOOLEAN',
+    required: true,
+    helpText: "PRA testé, conformité RGPD/APDP, comité de pilotage actif",
+    weight: 1.0
+  },
+  {
+    content: "Des initiatives d'innovation digitale (IoT, IA, R&D) sont-elles engagées ?",
+    axis: 'MODELE_OPERATIONNEL_INNOVATION',
+    category: 'MODELE_OPERATIONNEL',
+    subAxis: 'innovation-mod-op',
+    order: 3,
+    responseType: 'BOOLEAN',
+    required: false,
+    helpText: "Partenariats R&D, pilotes IoT, IA prédictive, brevets",
+    weight: 1.0
+  },
+
+  // ========== IT_DATA ==========
+  {
+    content: "L'infrastructure IT est-elle fiable, redondante et disponible en permanence ?",
+    axis: 'IT_DATA',
+    category: 'IT_DATA',
+    subAxis: 'socle-it',
+    order: 1,
+    responseType: 'SCALE_1_5',
+    required: true,
+    helpText: "Alimentation secourue, connectivité multi-opérateurs, monitoring",
+    weight: 1.2
+  },
+  {
+    content: "Des outils d'analyse de données et d'aide à la décision sont-ils déployés ?",
+    axis: 'IT_DATA',
+    category: 'IT_DATA',
+    subAxis: 'data-analytics',
+    order: 2,
+    responseType: 'SCALE_1_5',
+    required: true,
+    helpText: "Tableaux de bord, ML prédictif, lac de données, analytique en temps réel",
+    weight: 1.1
+  },
+  {
+    content: "Une stratégie de gouvernance des données est-elle définie et appliquée ?",
+    axis: 'IT_DATA',
+    category: 'IT_DATA',
+    subAxis: 'data-analytics',
+    order: 3,
+    responseType: 'BOOLEAN',
+    required: true,
+    helpText: "Politique de qualité, de sécurité et de valorisation des données",
+    weight: 1.0
   }
 ];
 

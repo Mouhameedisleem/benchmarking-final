@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "PROCESS",
+    "sub_axis": "performance_operationnelle",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Learning Analytics et tableaux de bord de performance pédagogique en temps réel",
+      "description": "Les plateformes LMS génèrent des données de learning analytics exploitées pour piloter la performance opérationnelle des établissements : taux de complétion par cours, temps moyen par module, corrélation entre engagement LMS et résultats aux examens, TTFP (Time-To-First-Pass = délai avant réussite du premier examen). En Côte d'Ivoire, l'UVCI et Pigier CI disposent de tableaux de bord direction weekly incluant ces KPIs. La MESRS CI expérimente un tableau de bord national de performance des universités publiques CI (UFHB, INPHB, UAO).",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "30%",
+      "source": "UVCI / MESRS CI Analytics 2024",
+      "year": 2024
+    },
+    {
+      "title": "Optimisation du taux d'encadrement et de la charge enseignante via l'IA",
+      "description": "Le ratio élève/enseignant est un KPI clé de performance opérationnelle en éducation : en CI, il est de 43/1 en primaire (objectif MENA 35/1) et 52/1 dans le supérieur public (MESRS 2024). L'IA permet d'optimiser la charge enseignante : cours asynchrones (un enseignant crée un cours visionné par 1 000 étudiants), tutorat IA pour les questions fréquentes (déflexion 60% des questions vers le chatbot LMS), groupes de niveaux automatiquement formés (adaptive grouping). Ces outils permettent à un enseignant CI d'accompagner efficacement 150-200 étudiants vs. 50 en présentiel classique.",
+      "impact_level": "high",
+      "horizon": "short_term",
+      "adoption_rate": "18%",
+      "source": "UNESCO / MESRS CI 2025",
+      "year": 2025
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "Learning Analytics et tableau de bord pédagogique (LRS — Learning Record Store)",
+      "category": "Analytics / EdTech",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "UVCI CI (Moodle Analytics + Power BI), Pigier CI (Salesforce Analytics Education), 20% établissements CI",
+      "leading_vendors": ["Moodle Analytics (xAPI/Tin Can)", "Canvas Analytics", "D2L Brightspace Analytics", "Microsoft Education Insights", "Tableau for Education"]
+    },
+    {
+      "name": "Chatbot éducatif (FAQ apprenant, tuteur IA niveau 1)",
+      "category": "IA / Support Apprenant",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "UVCI CI (chatbot WhatsApp, déflexion 45%), Pigier CI (chatbot Messenger), 15% établissements CI",
+      "leading_vendors": ["Khanmigo (Khan Academy)", "Jill Watson (Georgia Tech)", "Tidio Education", "Intercom for Education", "WhatsApp Business API (chatbot)"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Tableau de bord direction hebdomadaire (Power BI) : 12 KPIs (taux complétion/module, NPS, connexions quotidiennes, taux réussite examens, taux décrochage par filière, revenu/étudiant), chatbot WhatsApp Business (FAQ scolarité, résultats, rechargement — déflexion 45% des appels téléphoniques), ratio tuteur/étudiant optimisé 1/250 (vs. 1/50 présentiel CI) grâce aux cours asynchrones",
+        "differentiator": "Ratio opérationnel le plus efficient du secteur éducation CI — 1 tuteur pour 250 étudiants avec NPS 72/100 (vs. 1/50 université physique CI pour NPS 54/100) grâce aux outils digitaux (asynchrone + chatbot + analytics EWS), coût par étudiant 71% inférieur",
+        "source": "UVCI Rapport Performance 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "University of South Africa (UNISA)",
+        "country": "Afrique du Sud",
+        "key_practice": "400 000 étudiants en ligne gérés avec analytics temps réel (Oracle Analytics), chatbot myUNISA (déflexion 68% des appels administratifs), KPIs nationaux publiés (taux de diplomation, insertion professionnelle, satisfaction), ratio 1/450 (tuteur/étudiant) avec support IA, coût par étudiant le plus bas d'Afrique subsaharienne pour un diplôme accrédité",
+        "differentiator": "Plus grande université d'Afrique subsaharienne (400K étudiants) avec les meilleurs KPIs de performance opérationnelle — coût/étudiant diplomé : 2 100 USD (vs. 8 500 USD université présentielle standard Afrique du Sud), chatbot myUNISA : 68% déflexion des demandes répétitives",
+        "source": "UNISA Annual Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Western Governors University (WGU)",
+        "country": "États-Unis",
+        "key_practice": "Modèle compétency-based (pas de cours hebdomadaires — étudiant progresse à son rythme), analytics prédictives temps réel (coach IA + humain alerté à J+3 si signal décrochage), KPIs publiés annuellement (taux complétion, délai diplomation, salaire médian post-diplôme par filière), coût moyen diplôme 4 ans : 15 000 USD (vs. 60 000 USD université US standard)",
+        "differentiator": "Leader mondial performance opérationnelle éducative — coût par diplôme 4x inférieur à la moyenne US, taux de rétention 89% (benchmark : 60%), coach IA + humain : alerte décrochage en 3 jours, 87% d'insertion à 6 mois avec salaire médian publié par filière",
+        "source": "WGU Annual Report 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Aucun KPI de performance formalisé (autre que le taux de réussite aux examens), décisions de direction basées sur l'intuition, pas de tableau de bord, aucune mesure de satisfaction, taux d'abandon non mesuré.",
+    "level_2_developing": "KPIs basiques suivis manuellement (effectifs, taux de réussite, taux d'assiduité), rapport annuel direction, satisfaction mesurée informellement, aucun learning analytics LMS.",
+    "level_3_defined": "Tableau de bord direction mensuel (taux complétion, NPS, taux réussite, effectifs), learning analytics LMS basiques, chatbot FAQ scolarité déployé, KPIs communiqués aux équipes.",
+    "level_4_managed": "Tableau de bord direction hebdomadaire (temps réel), learning analytics avancées (corrélation engagement/résultats), chatbot déflexion > 40%, KPIs par filière/enseignant, benchmarks sectoriels MESRS CI.",
+    "level_5_optimizing": "Performance opérationnelle optimisée et continue : analytics temps réel toutes dimensions, IA coaching apprenant 24/7, ratio tuteur/étudiant optimisé (> 1/200 avec qualité NPS > 75), coût par diplômé inséré comme KPI principal, benchmarks publiés MESRS CI."
+  },
+  "regulations": [
+    {
+      "name": "MESRS CI — Indicateurs de performance des établissements d'enseignement supérieur",
+      "authority": "MESRS (Ministère de l'Enseignement Supérieur et de la Recherche Scientifique de Côte d'Ivoire)",
+      "description": "Le MESRS CI a instauré depuis 2022 un système d'évaluation de la performance des universités (publiques et privées agréées) sur 5 indicateurs : (1) taux de réussite aux examens (objectif > 65%), (2) taux d'insertion professionnelle à 12 mois (objectif > 60%), (3) taux d'encadrement (ratio enseignant/étudiant, objectif < 1/45 pour le supérieur), (4) ressources propres (diversification des revenus), (5) qualité de la recherche (publications). Ces indicateurs alimentent la plateforme nationale INFOGEST MESRS CI et peuvent conditionner les renouvellements d'accréditation.",
+      "compliance_deadline": "Rapport annuel MESRS CI (depuis 2022)",
+      "impact_on_sector": "Les établissements doivent disposer de systèmes de suivi (SIS + LMS analytics) capables de produire ces indicateurs automatiquement — les établissements sans système de tracking ne peuvent pas répondre aux exigences MESRS CI dans les délais"
+    },
+    {
+      "name": "MENA CI — Indicateurs de qualité de service des lycées (IQS Éducation)",
+      "authority": "MENA (Ministère de l'Éducation Nationale et de l'Alphabétisation)",
+      "description": "Le MENA CI publie depuis 2023 des indicateurs de qualité de service pour les lycées publics et privés conventionnés : taux de scolarisation, taux d'achèvement cycle (non-décrochage), résultats BAC/BEPC par établissement. Ces résultats sont publiés sur le portail MENA CI (palmarès lycées CI) et influencent les dotations budgétaires pour les établissements publics et les renouvellements de conventionnement pour les privés. Le MENA a également introduit un indice de qualité numérique (IQN) depuis 2024 mesurant l'équipement et l'usage digital des lycées.",
+      "compliance_deadline": "Publication annuelle MENA CI",
+      "impact_on_sector": "Les lycées sont désormais comparés publiquement sur leur performance — pression croissante sur la direction pour améliorer les KPIs. L'IQN 2024 crée une pression supplémentaire sur la digitalisation des lycées pour améliorer leur classement"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Surcharge des enseignants et burnout lié à l'intensification numérique",
+      "description": "La digitalisation accélérée dans les établissements CI (nouvelles plateformes à maîtriser, cours à numériser, réponses aux messages WhatsApp des étudiants 24/7, adaptation aux nouvelles évaluations IA) peut générer un surmenage des enseignants. En CI, 78% des enseignants du supérieur déclarent avoir augmenté leur temps de travail depuis l'introduction des outils digitaux sans réduction compensatoire de la charge de cours. Le risque de burnout enseignant est élevé, avec un impact direct sur la qualité pédagogique.",
+      "severity": "high",
+      "likelihood": "high",
+      "mitigation": "Définir une 'charte de disponibilité numérique enseignante' (pas de réponse aux messages > 18h ou weekend), déployer des outils d'automatisation qui RÉDUISENT réellement la charge (chatbot FAQ déflectant 60%+ des questions répétitives, génération IA de QCM), comptabiliser le temps de préparation numérique dans la charge de service — UVCI CI a instauré une charte de disponibilité 8h-18h (lun-ven) avec chatbot prenant le relais en dehors des heures"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Benchmark national de performance des établissements CI et label qualité MESRS",
+      "description": "Le MESRS CI envisage de publier un palmarès national des universités et grandes écoles CI (sur le modèle du Times Higher Education ou du classement Shanghai) incluant des KPIs digitaux : taux de complétion LMS, NPS apprenant, taux d'insertion. Les établissements leaders (UVCI, INPHB) ont intérêt à structurer leur communication data autour de ces KPIs pour attirer les meilleurs profils et les financements institutionnels. La création d'un label 'Établissement Numérique Performant CI' est en discussion au MESRS pour 2026.",
+      "impact_level": "medium",
+      "time_to_value": "2-3 ans",
+      "prerequisite_maturity": "Niveau 3 — SIS + LMS analytics + KPIs formalisés et mesurés régulièrement"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "Microsoft Education — Déploiement Education Insights pour universités CI",
+      "montant": "Programme subventionné Microsoft (valeur 1,2 Mds FCFA en licences pour CI)",
+      "investisseurs": ["Microsoft Philanthropies (programme Education)"],
+      "annee": 2024,
+      "description": "Microsoft a lancé en 2024 un programme de déploiement gratuit de Microsoft Education Insights (analytics avancées sur Teams Education : engagement, participation, progression) pour 8 universités CI partenaires (dont UFHB, INPHB, UVCI, MESRS CI). Education Insights fournit aux enseignants et direction des données en temps réel sur l'engagement des étudiants (présence virtuelle, participation discussions, remise devoirs à temps) intégrées au dashboard Microsoft 365. Objectif : outiller 3 500 enseignants CI avec des analytics learning."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Tableau de bord direction Power BI + chatbot WhatsApp Business — Pilotage opérationnel en temps réel",
+    "description": "L'UVCI a déployé en 2023 un système de pilotage opérationnel intégrant : (1) Tableau de bord direction Power BI (connecté à Moodle, SIS, et module paiements) avec 12 KPIs mis à jour quotidiennement : taux de connexion LMS (objectif > 65%/semaine par étudiant), taux de complétion modules (objectif > 67%), NPS par module (objectif > 65), taux de réussite examens (objectif > 70%), taux de décrochage (alarme si > 20%), revenus B2G DGFP vs. objectif mensuel ; (2) Chatbot WhatsApp Business UVCI (bot automatique répondant à 85 questions fréquentes : résultats examens, délais attestations, rechargement mobile money, planning cours, contact tuteur) avec escalade humaine si score confiance < 70%.",
+    "resultats": "Tableau de bord direction : 100% des décisions de direction validées avec données (vs. 35% avant déploiement Power BI). Temps de réunion direction réduit de 2h → 45 min/semaine (données pré-traitées). Chatbot WhatsApp : 4 200 questions/mois traitées dont 1 890 entièrement automatisées (45% déflexion) → 850 appels téléphoniques évités/mois → économie 2,5 ETP administration. NPS apprenants ayant interagi avec le chatbot : 69/100 (vs. 55/100 avant chatbot — frustration attente téléphonique éliminée). Taux de complétion modules suivi en temps réel : actions correctives déclenchées en < 72h lorsqu'un module passe sous 55% complétion.",
+    "source": "UVCI Rapport Pilotage Opérationnel 2024",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif performance opérationnelle — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "Tableau de bord direction", "Taux complétion cours (%)", "Chatbot apprenant", "Ratio tuteur/étudiant"],
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "valeurs": ["Power BI quotidien (12 KPIs)", "67% (objectif atteint)", "WhatsApp Business (45% déflexion)", "1/250 (optimisé digital)"]
+      },
+      {
+        "organisation": "Pigier CI",
+        "valeurs": ["Salesforce Analytics (hebdomadaire)", "Non mesuré (présentiel dominant)", "Chatbot Messenger (FAQ scolarité)", "1/80 (standard privé CI)"]
+      },
+      {
+        "organisation": "UFHB Abidjan",
+        "valeurs": ["Rapport manuel mensuel (partiel)", "Non mesuré", "Non", "1/52 (supérieur public CI)"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue la performance opérationnelle dans le secteur éducation CI : existence d'un tableau de bord direction avec KPIs pédagogiques en temps réel (learning analytics), chatbot apprenant pour déflexion des demandes répétitives, ratio tuteur/étudiant, taux de complétion mesuré, et conformité avec les indicateurs MESRS CI (taux réussite, insertion, encadrement).",
+    "maturity_max_description": "Établissement éducatif CI avec pilotage opérationnel complet : tableau de bord direction temps réel (12+ KPIs pédagogiques), chatbot apprenant 24/7 (déflexion > 50%), learning analytics avancées (corrélation engagement/résultats), ratio tuteur/étudiant optimisé (> 1/200 avec NPS > 72), KPIs MESRS CI automatiquement produits — performance publiée et benchmarkée.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucun KPI formalisé, décisions intuitives, pas de tableau de bord, taux d'abandon non mesuré, aucune analytics LMS.",
+      "score_21_to_40": "KPIs basiques manuels (effectifs, réussite examens), rapport annuel direction, aucun chatbot, learning analytics inexistantes.",
+      "score_41_to_60": "Tableau de bord direction mensuel, learning analytics basiques LMS, chatbot FAQ déployé (< 30% déflexion), KPIs MESRS CI partiellement produits.",
+      "score_61_to_80": "Tableau de bord hebdomadaire (temps réel), learning analytics avancées, chatbot > 40% déflexion, KPIs par filière/enseignant, benchmarks MESRS CI.",
+      "score_81_to_100": "Tableau de bord quotidien temps réel, chatbot > 50% déflexion, IA coaching 24/7, ratio > 1/200 avec NPS > 72, coût par diplômé inséré comme KPI principal, publication MESRS CI."
+    },
+    "prompt_injection_context": "Secteur éducation CI : MESRS CI évalue les universités sur 5 KPIs annuels (réussite, insertion, encadrement, ressources propres, recherche). MENA CI publie un palmarès lycées incluant un Indice Qualité Numérique (IQN) depuis 2024. UVCI est le modèle de pilotage opérationnel digital en CI (Power BI + chatbot WhatsApp). Le ratio enseignant/étudiant CI est critique : 52/1 dans le supérieur public (objectif MESRS : 45/1).",
+    "key_questions_for_llm": [
+      "Disposez-vous d'un tableau de bord de pilotage opérationnel avec des KPIs pédagogiques mis à jour régulièrement (taux de complétion, NPS, taux de réussite, taux de décrochage) ?",
+      "Utilisez-vous les learning analytics de votre LMS pour piloter la qualité pédagogique et déclencher des actions correctives en temps réel ?",
+      "Avez-vous un chatbot ou un système automatisé pour répondre aux questions fréquentes des apprenants (scolarité, résultats, délais) et réduire la charge de vos équipes administratives ?",
+      "Quel est votre ratio enseignant/étudiant ? Avez-vous des outils digitaux (cours asynchrones, chatbot IA) permettant d'accompagner plus d'apprenants avec la même équipe ?",
+      "Êtes-vous en mesure de produire automatiquement les indicateurs de performance demandés par le MESRS CI (taux réussite, taux insertion, ratio encadrement) sans ressaisie manuelle ?"
+    ]
+  }
+}

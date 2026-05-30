@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "PROCESS",
+    "sub_axis": "automatisation",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "RPA et IA pour l'automatisation des tâches administratives éducatives",
+      "description": "Les établissements d'enseignement automatisent leurs tâches administratives répétitives : relances impayés scolarité (SMS automatiques), génération des emplois du temps (algorithmes de scheduling), notification des absences aux parents (SMS/email auto), traitement des demandes de transferts de dossiers. En Côte d'Ivoire, le MENA CI a lancé le projet 'École Numérique' incluant une plateforme automatisée de gestion des absences et de notification parents (SMS USSD) pour 3 200 lycées publics. Économie estimée : 6 000 heures de saisie administrative/jour pour le système éducatif CI.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "28%",
+      "source": "MENA CI / Projet École Numérique 2024",
+      "year": 2024
+    },
+    {
+      "title": "Génération automatique de contenu pédagogique par IA générative",
+      "description": "Les LLM (Claude, GPT-4, Mistral) permettent aux enseignants de générer automatiquement : questionnaires (QCM + questions ouvertes adaptés au niveau), plans de cours, exercices différenciés par niveau, feedback personnalisé sur les travaux d'étudiants. En Afrique francophone, Mistral AI (français) et Claude sont privilégiés pour les contenus pédagogiques en français. L'UVCI CI a pilote en 2024 la génération automatique de QCM sur 120 modules Moodle (réduction de 75% du temps de création de quiz pour les enseignants).",
+      "impact_level": "high",
+      "horizon": "short_term",
+      "adoption_rate": "18%",
+      "source": "UVCI / AUF IA Éducation Afrique Francophone 2025",
+      "year": 2025
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "Système automatisé de gestion des absences et de notification parents",
+      "category": "Automatisation / Communication",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "MENA CI (projet École Numérique, 3 200 lycées en déploiement), Pigier CI (SMS automatique parents), 30% établissements CI",
+      "leading_vendors": ["Pronote (France, utilisé CI lycées français)", "Classe365", "SCONET (système éducation nationale)", "Edusign (émargement)", "Twilio (SMS automatisé)"]
+    },
+    {
+      "name": "IA générative pour création de contenu pédagogique (quiz, exercices, feedback)",
+      "category": "GenAI / EdTech",
+      "maturity_stage": "emerging",
+      "adoption_in_sector": "UVCI CI (pilote 2024, 120 modules Moodle), INPHB (expérimentation enseignants), 10% établissements CI",
+      "leading_vendors": ["Khanmigo (Khan Academy)", "ChatGPT for Education (OpenAI)", "Claude for Education (Anthropic)", "Mistral AI (Éducation francophone)", "QuestionWell (quiz AI)"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Automatisation native sur LMS Moodle : génération automatique QCM (pilote GPT-4 turbo / Mistral large — 120 modules), correction automatique QCM (résultats immédiats), relances absences en ligne automatiques (email + SMS), notification résultats examens (push notification app mobile UVCI), anti-plagiat Turnitin automatique sur chaque devoir soumis, emplois du temps générés par algorithme",
+        "differentiator": "Premier établissement CI à déployer la génération IA de QCM en production sur 120 modules Moodle — enseignants UVCI : gain de temps 4h/module pour création d'évaluations, qualité des QCM jugée équivalente à 92% par les tuteurs UVCI comparé aux QCM manuels",
+        "source": "UVCI Rapport IA Pédagogique 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Edulastic / Schoolnet Afrique du Sud",
+        "country": "Afrique du Sud / Kenya / Ghana",
+        "key_practice": "Plateforme d'évaluation automatisée (QCM, questions ouvertes corrigées par IA, projets collaboratifs), feedback personnalisé en temps réel (NLP analyse réponses), tableau de bord enseignant (analytics classe en temps réel), notification automatique parents (app + SMS), emploi du temps optimisé (algorithme de scheduling contraintes multiples)",
+        "differentiator": "Leader Afrique évaluation automatisée K-12 — correction automatique 98% précision QCM, feedback NLP sur questions ouvertes < 2 secondes, dashboard enseignant: 100% des élèves avec profil compétences actualisé en temps réel",
+        "source": "Schoolnet SA / Edulastic Africa Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Gradescope (Turnitin Company)",
+        "country": "États-Unis",
+        "key_practice": "Correction automatique IA des travaux académiques : QCM (100% auto), code (50+ langages corrigés automatiquement), exercices mathématiques (OCR + correction IA), dissertations (NLP feedback structuré), réduction de 90% du temps de correction pour TA/enseignants, intégration Canvas/Blackboard/Moodle, audit trail complet des corrections",
+        "differentiator": "Leader mondial correction automatique universitaire — 1 500 universités clientes (MIT, Stanford, Georgia Tech), 10M d'étudiants corrigés/an, délai feedback : < 24h vs. 7-21 jours avant IA, précision évaluation code 96% (benchmark enseignant humain)",
+        "source": "Gradescope / Turnitin Annual Report 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Tout manuel : appel papier, cahier des absences, correction à la main, relevés de notes calculés à la calculatrice, communication parents par courrier ou réunions physiques.",
+    "level_2_developing": "Tableur pour gestion des notes, SMS ponctuel aux parents (sans automatisation), quelques QCM sur Google Forms (correction manuelle), aucun système automatisé.",
+    "level_3_defined": "LMS avec QCM auto-corrigés, notification automatique absences (email aux parents), emploi du temps digital (logiciel de planning), anti-plagiat déployé, génération relevés de notes automatique.",
+    "level_4_managed": "Automatisation de 70%+ des tâches administratives répétitives (relances, notifications, emplois du temps), IA générative pour création de quiz (pilote ou en production), correction automatique code pour filières informatiques, dashboard enseignant en temps réel.",
+    "level_5_optimizing": "Automatisation complète du cycle éducatif : génération IA cours + QCM + feedback, correction automatique toutes matières, emploi du temps IA (optimisation multi-contraintes), RPA pour 100% des tâches administratives répétitives, zéro saisie manuelle."
+  },
+  "regulations": [
+    {
+      "name": "MENA CI — Cahier des charges Projet École Numérique (gestion absences automatisée)",
+      "authority": "MENA (Ministère de l'Éducation Nationale et de l'Alphabétisation)",
+      "description": "Le MENA CI définit dans le Projet École Numérique les standards d'automatisation des absences dans les lycées publics : notification des parents dans les 24h suivant toute absence non justifiée (SMS ou email), taux de saisie des absences dans le système > 95% des cours, rapport hebdomadaire automatique au proviseur. Les lycées ne respectant pas ces standards s'exposent à une évaluation défavorable lors des inspections MENA. Le MENA a déployé un système national (Plateforme ÉNA-CI) pour les lycées publics en 2024.",
+      "compliance_deadline": "2024 (lycées publics) / 2025 (lycées privés conventionnés)",
+      "impact_on_sector": "Les établissements privés conventionnés MENA CI doivent s'aligner sur les standards ÉNA-CI pour maintenir leur conventionnement — soit adopter la plateforme MENA, soit déployer un système équivalent certifié"
+    },
+    {
+      "name": "APDP CI — Encadrement des outils IA utilisés pour l'évaluation des apprenants",
+      "authority": "APDP (Autorité de Protection des Données Personnelles de Côte d'Ivoire)",
+      "description": "L'APDP CI a publié en 2024 des lignes directrices sur l'utilisation de l'IA dans l'évaluation éducative : (1) toute décision d'évaluation finale (note, diplôme, passage en classe supérieure) ne peut pas être prise par une IA seule — validation humaine obligatoire ; (2) les données de réponses des apprenants utilisées pour entraîner des modèles IA doivent faire l'objet d'un consentement explicite et d'une anonymisation ; (3) les résultats d'outils anti-plagiat IA ne constituent pas une preuve formelle de fraude — procédure disciplinaire humaine obligatoire.",
+      "compliance_deadline": "Lignes directrices APDP 2024 (recommandations, non encore contraignantes)",
+      "impact_on_sector": "Conditionne le déploiement des outils IA d'évaluation (Gradescope, correction IA) — la validation humaine est obligatoire pour les décisions finales, et les données apprenants ne peuvent alimenter des modèles tiers sans consentement"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Contournement des outils anti-plagiat par les étudiants via IA générative",
+      "description": "En Côte d'Ivoire, l'adoption rapide des LLM par les étudiants (ChatGPT, Claude) pour rédiger des devoirs représente un défi majeur pour l'intégrité académique. Les détecteurs de contenu IA (GPTZero, Turnitin IA detection) ont des taux de faux positifs de 5-15%, créant des risques d'accusation injuste d'un étudiant non-fraudeur. En 2024, 3 établissements CI ont été impliqués dans des litiges suite à des accusations d'IA plagiarism basées sur des détecteurs automatiques — tous résolus en faveur des étudiants.",
+      "severity": "high",
+      "likelihood": "high",
+      "mitigation": "Adapter les formats d'évaluation (oral + écrit + projet pratique en lieu de dissertations pure), former les enseignants à détecter le style IA sans outils automatiques, adopter une politique claire d'usage autorisé/interdit de l'IA par matière (publicisée dans le syllabus), ne jamais sanctionner sur la seule base d'un détecteur IA automatique — l'UVCI CI a adopté cette politique en 2024"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Automatisation de la génération de cours personnalisés par niveau pour les 35 000 enseignants CI",
+      "description": "En Côte d'Ivoire, 35 000 enseignants du secondaire et du supérieur consacrent en moyenne 8h/semaine à la préparation de cours (MENA CI 2024). Un outil de génération IA de plans de cours, exercices différenciés et QCM adaptatifs (selon le niveau, le programme MENA, les résultats antérieurs de la classe) pourrait économiser 3-4h/semaine/enseignant — soit 105M heures/an de préparation économisées pour le système éducatif CI. L'AUF développe un tel outil pour l'Afrique francophone (projet GenIA-Pédagogie 2025).",
+      "impact_level": "high",
+      "time_to_value": "1-2 ans",
+      "prerequisite_maturity": "Niveau 3 — LMS déployé + enseignants formés aux TICE de base"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "QuestionWell AI — Expansion Afrique francophone",
+      "montant": "8M USD (Série A)",
+      "investisseurs": ["Reach Capital", "Owl Ventures", "GSV Ventures"],
+      "annee": 2024,
+      "description": "QuestionWell, startup de génération automatique de quiz par IA (LLM + extraction PDF syllabus → QCM adaptatifs), a levé 8M USD pour son expansion en Afrique francophone, dont la Côte d'Ivoire. Partenariat pilote avec l'AUF (Agence Universitaire de la Francophonie) pour le déploiement dans 12 universités UEMOA (dont UVCI CI, UCAD Dakar). QuestionWell génère des QCM Moodle-compatibles en < 30 secondes depuis n'importe quel PDF de cours."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Génération automatique de QCM par IA (Mistral Large) sur plateforme Moodle",
+    "description": "En 2024, l'UVCI a déployé un pipeline de génération automatique de QCM sur 120 modules Moodle, en partenariat avec l'AUF (projet GenIA-Francophonie). Chaque enseignant-tuteur UVCI soumet son PDF de cours (20-80 pages) à un assistant IA (Mistral Large, hébergé AUF — conformité APDP CI via hébergement France) qui génère automatiquement : 20 QCM à 4 choix par module (couvrant les points clés du cours), 5 questions ouvertes avec guide de correction, 10 exercices d'application différenciés (niveau débutant, intermédiaire, avancé). L'enseignant valide, modifie si nécessaire, et publie directement dans Moodle (intégration API QuestionWell → Moodle).",
+    "resultats": "Temps de création d'une banque de questions par module : 8h (manuel) → 2h (IA + validation tuteur), soit -75%. Qualité perçue des QCM générés par IA : 92% jugés 'équivalents ou meilleurs' par les tuteurs UVCI (évaluation aveugle). Nombre de QCM disponibles sur la plateforme UVCI : +320% en 6 mois (2 400 → 10 100 questions). Taux de variétédes évaluations (moins de répétition de questions) : +58% — réduction du partage de corrections entre étudiants. Satisfaction enseignants tuteurs : 79/100 (principal bénéfice : plus de temps pour l'accompagnement individuel des apprenants).",
+    "source": "UVCI / AUF GenIA-Pédagogie Rapport Pilote 2024",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif automatisation processus éducatifs — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "QCM auto-corrigés", "Génération IA cours / quiz", "Notification absences parents", "Emploi du temps automatisé"],
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "valeurs": ["100% sur Moodle", "Oui (Mistral Large, 120 modules)", "Email + push app automatique", "Algorithme scheduling Moodle"]
+      },
+      {
+        "organisation": "Pigier CI",
+        "valeurs": ["QCM Blackboard auto-corrigés", "Non (expérimentation)", "SMS automatique (Twilio)", "Logiciel EDT (emploi du temps)"]
+      },
+      {
+        "organisation": "Lycées publics CI",
+        "valeurs": ["Non (correction manuelle)", "Non", "Partiel (ÉNA-CI en déploiement)", "Tableau papier ou Excel"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue l'automatisation des processus éducatifs en CI : correction automatique des QCM, génération IA de contenu pédagogique, notification automatique des absences, emploi du temps automatisé, et respect des lignes directrices APDP CI sur l'IA éducative (validation humaine obligatoire pour les décisions finales).",
+    "maturity_max_description": "Établissement éducatif CI avec automatisation complète : QCM auto-corrigés (tous modules), génération IA cours + exercices + feedback, notification absences temps réel (parents), emploi du temps IA multi-contraintes, RPA tâches administratives — conformité APDP CI (humain en validation finale), politique IA académique publiée.",
+    "scoring_rubric": {
+      "score_1_to_20": "Tout manuel (appel papier, correction à la main, communication parents par courrier), aucune automatisation.",
+      "score_21_to_40": "QCM Google Forms (correction semi-auto), SMS ponctuel parents (sans automatisation systématique), tableur notes, aucune IA.",
+      "score_41_to_60": "LMS avec QCM auto-corrigés, notification absences automatique, emploi du temps digital, anti-plagiat, génération documents auto.",
+      "score_61_to_80": "70%+ tâches administratives automatisées, IA générative quiz en pilote, correction code auto, dashboard enseignant temps réel, conformité APDP CI partielle.",
+      "score_81_to_100": "Automatisation complète, génération IA cours + QCM en production, correction automatique toutes matières, RPA 100% tâches répétitives, politique IA académique publiée, validation humaine décisions finales APDP CI."
+    },
+    "prompt_injection_context": "Secteur éducation CI : MENA CI impose la notification automatique absences (plateforme ÉNA-CI 2024 pour lycées publics). APDP CI interdit les décisions d'évaluation finale par IA seule (validation humaine obligatoire). UVCI CI est pionnier de la génération IA de QCM en Afrique francophone (partenariat AUF). La fraude académique via IA générative (ChatGPT dissertations) est un enjeu croissant en CI.",
+    "key_questions_for_llm": [
+      "Vos évaluations (QCM, devoirs) sont-elles auto-corrigées sur votre LMS ? Quel pourcentage de vos cours bénéficie d'une correction automatique ?",
+      "Utilisez-vous l'IA générative pour créer des contenus pédagogiques (plans de cours, quiz, exercices différenciés) ? Avez-vous une politique d'usage encadrée ?",
+      "Votre système notifie-t-il automatiquement les parents (ou tuteurs) en cas d'absence non justifiée, conformément au Projet École Numérique MENA CI ?",
+      "Comment automatisez-vous vos processus administratifs répétitifs (relances scolarité, emplois du temps, génération de documents) ?",
+      "Avez-vous une politique institutionnelle sur l'usage de l'IA par les apprenants, et comment gérez-vous l'intégrité académique face aux LLM (ChatGPT, etc.) ?"
+    ]
+  }
+}

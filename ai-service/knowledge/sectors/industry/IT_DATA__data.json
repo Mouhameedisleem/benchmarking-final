@@ -1,0 +1,252 @@
+{
+  "axe": "IT_DATA",
+  "sous_axe": "Data",
+  "secteur": "industrie",
+  "description": "Stratégie data dans l'industrie ivoirienne : lac de données industriel, qualité et gouvernance des données de production, analytics avancés pour l'optimisation des procédés, traçabilité EUDR géospatiale et intelligence artificielle appliquée à la production.",
+  "maturite_niveaux": {
+    "initial": "Aucune stratégie data. Données de production sur papier ou Excel non structurés. Pas d'historique fiable. Décisions basées sur l'intuition. Aucune mesure automatique.",
+    "en_developpement": "Données partiellement collectées dans des silos (ERP, SCADA, Excel). Rapports manuels hebdomadaires ou mensuels. Analyses rétrospectives basiques. Pas d'intégration des sources.",
+    "structure": "Données centralisées dans l'ERP et le MES. Tableaux de bord opérationnels (OEE, TRS, rebuts). Historiques de production exploitables. Qualité des données surveillée. KPIs définis et suivis.",
+    "avance": "Data lake industriel intégrant les flux ERP, MES, SCADA, CMMS, qualité et EUDR. Analytics avancés pour la détection d'anomalies et l'optimisation des paramètres de procédé. Machine learning pour la maintenance prédictive.",
+    "optimise": "Plateforme data industrielle avancée. IA de contrôle de procédé en temps réel. Jumeaux numériques de production. EUDR géospatial automatisé. Analytics prédictifs sur la supply chain. Monétisation des données de filière via FIRCA CI ou APEX-CI."
+  },
+  "questions_diagnostic": [
+    {
+      "id": "IT_DATA_data_Q1",
+      "question": "Disposez-vous d'une source unique de vérité pour les données de production (un entrepôt ou lac de données consolidant ERP, MES, SCADA) ?",
+      "type": "choix_unique",
+      "options": ["Non, données éparpillées (Excel, papier, silos systèmes)", "Données dans l'ERP mais non intégrées avec SCADA/MES", "Entrepôt de données partiel (quelques sources intégrées)", "Lac de données industriel intégrant ERP + MES + SCADA + CMMS", "Data lake complet avec pipeline de données temps réel et gouvernance formalisée"],
+      "poids": 25
+    },
+    {
+      "id": "IT_DATA_data_Q2",
+      "question": "Utilisez-vous des analytics avancés ou du machine learning pour optimiser vos procédés de production (prédiction de pannes, optimisation paramètres, contrôle qualité prédictif) ?",
+      "type": "choix_unique",
+      "options": ["Non, aucune analyse prédictive", "Analyses rétrospectives sur Excel/Power BI uniquement", "Alertes sur seuils simples depuis le SCADA/MES", "Modèles de maintenance prédictive basés sur ML pour les équipements critiques", "IA de contrôle de procédé en temps réel avec optimisation automatique des paramètres"],
+      "poids": 25
+    },
+    {
+      "id": "IT_DATA_data_Q3",
+      "question": "Votre système de traçabilité des lots (de la matière première au produit fini) est-il digital et complet, incluant les données EUDR (origine géospatiale des matières) ?",
+      "type": "choix_unique",
+      "options": ["Traçabilité papier uniquement ou absente", "Traçabilité digitale partielle (lots dans ERP sans fournisseurs)", "Traçabilité complète lot → fournisseur dans ERP", "Traçabilité complète avec données EUDR (GPS parcelles fournisseurs) liées aux lots", "Traçabilité géospatiale automatisée : chaque lot lié à ses données GPS fournisseurs, accessible portail clients"],
+      "poids": 20
+    },
+    {
+      "id": "IT_DATA_data_Q4",
+      "question": "Mesurez-vous et suivez-vous les indicateurs de qualité des données (complétude, cohérence, fraîcheur) dans vos systèmes de production ?",
+      "type": "choix_unique",
+      "options": ["Non, pas de mesure de qualité des données", "Vérifications manuelles ponctuelles par l'équipe IT", "Alertes automatiques sur données manquantes critiques", "Tableau de bord qualité des données avec KPIs de complétude et cohérence", "Gouvernance des données formalisée avec data stewards, KPIs qualité et plan d'amélioration"],
+      "poids": 15
+    },
+    {
+      "id": "IT_DATA_data_Q5",
+      "question": "Utilisez-vous des données de production pour améliorer vos relations avec vos fournisseurs (retours qualité automatisés, partage de données de performance filière) ?",
+      "type": "choix_unique",
+      "options": ["Non, aucun partage de données avec fournisseurs", "Retours qualité informels par téléphone", "Retours qualité structurés par email", "Portail fournisseurs avec données qualité des lots reçus accessibles", "Partage en temps réel des données de performance fournisseurs avec benchmarking CI/UEMOA"],
+      "poids": 15
+    }
+  ],
+  "pratiques_recommandees": [
+    {
+      "titre": "Data lake industriel CI avec Power BI",
+      "description": "Construire un lac de données industriel consolidant les flux : ERP (commandes, stocks, coûts), MES (OEE, production, rebuts), SCADA (paramètres procédés), CMMS (maintenance, MTTR, MTBF), qualité (non-conformités, CoA), et données EUDR (traçabilité fournisseurs). Solution recommandée pour les industries CI : Azure Data Factory + Azure Data Lake Gen2 + Power BI Service, accessible depuis Abidjan via OrangeBusiness CI. Coût hébergement : 1-5 M FCFA/mois selon volume.",
+      "priorite": "haute",
+      "effort": "élevé",
+      "impact": "très fort"
+    },
+    {
+      "titre": "Maintenance prédictive ML sur équipements critiques CI",
+      "description": "Déployer des modèles de machine learning pour prédire les pannes des équipements les plus critiques (compresseurs, réducteurs, pompes, moteurs électriques). Données d'entrée : vibrations (capteurs IoT), température, ampèrage, historiques CMMS. Algorithmes utilisés : isolation forest pour détection d'anomalies, gradient boosting pour prédiction de durée de vie résiduelle. Coût de démarrage : Python open-source sur Azure ML (5-15 M FCFA pour le déploiement). ROI démontré : réduction MTTR -40%, économies évitement pannes > 5x le coût du projet.",
+      "priorite": "haute",
+      "effort": "élevé",
+      "impact": "très fort"
+    },
+    {
+      "titre": "Traçabilité EUDR géospatiale automatisée",
+      "description": "Pour les industries CI exportatrices de cacao, anacarde, huile de palme : construire un pipeline de données géospatiales automatisé. Sources : (1) Application mobile terrain pour collecte GPS des parcelles fournisseurs ; (2) Données satellitaires Copernicus pour vérification déforestation (API gratuite, accessible depuis CI) ; (3) Portail Conseil Café-Cacao CI pour validation cacao ; (4) Intégration dans l'ERP : chaque lot de matière première est lié à ses parcelles GPS. Dossier EUDR généré automatiquement à chaque livraison.",
+      "priorite": "haute",
+      "effort": "élevé",
+      "impact": "très fort"
+    },
+    {
+      "titre": "Tableaux de bord OEE temps réel par ligne",
+      "description": "Déployer des dashboards Power BI ou Grafana affichant en temps réel : OEE/TRS par ligne et par équipement, décomposition des pertes (disponibilité, performance, qualité), tendances, comparaisons entre lignes et vs. benchmark UEMOA. Accessible sur les écrans atelier, tablettes des chefs de production et smartphones des directeurs. Base de toute démarche d'amélioration continue data-driven.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Gouvernance des données industrielles",
+      "description": "Définir les responsabilités des données : data steward par domaine (data steward production, data steward qualité, data steward supply chain). Critères de qualité des données définis : complétude (>98%), fraîcheur (<15 min pour données temps réel), cohérence (pas de contradictions entre ERP et MES). Revue trimestrielle qualité des données avec le DSI et les directeurs métier.",
+      "priorite": "moyenne",
+      "effort": "moyen",
+      "impact": "fort"
+    }
+  ],
+  "outils_solutions": [
+    {
+      "categorie": "Data lake et analytics industriels",
+      "solutions": [
+        {
+          "nom": "Microsoft Azure Data Lake + Power BI",
+          "description": "Stack data Microsoft accessible depuis CI via OrangeBusiness. Azure Data Factory pour l'intégration des sources ERP/MES/SCADA, Azure Data Lake Gen2 pour le stockage, Power BI pour la visualisation. Standard de facto en Afrique francophone pour les industries ayant Microsoft 365.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "1 - 5 M FCFA/mois selon volume + licences Power BI Premium"
+        },
+        {
+          "nom": "Grafana + InfluxDB (time series IoT)",
+          "description": "Stack open-source pour les données de séries temporelles IoT/SCADA. Grafana dashboards temps réel, InfluxDB base de données optimisée pour les mesures. Hébergeable sur serveur local pour les industries CI avec connectivité internet limitée.",
+          "pertinence_locale": "haute",
+          "cout_estime": "Open-source (coût infrastructure locale : 500 000 - 2 M FCFA)"
+        }
+      ]
+    },
+    {
+      "categorie": "Machine learning industriel",
+      "solutions": [
+        {
+          "nom": "Azure Machine Learning",
+          "description": "Plateforme ML cloud Microsoft. Support Python/R. MLOps pour déploiement des modèles en production. AutoML pour les équipes sans expertise data science avancée. Adapté aux projets de maintenance prédictive CI.",
+          "pertinence_locale": "haute",
+          "cout_estime": "Paiement à l'usage + compute : 500 000 - 2 M FCFA/mois selon charge"
+        },
+        {
+          "nom": "Python open-source (scikit-learn, Prophet)",
+          "description": "Pour les PME CI avec budget limité : modèles ML open-source en Python (scikit-learn pour détection anomalies, Prophet pour prédiction de séries temporelles). Hébergeables sur serveur Linux local ou VM Azure économique.",
+          "pertinence_locale": "haute",
+          "cout_estime": "Gratuit (open-source) + coût data scientist CI"
+        }
+      ]
+    },
+    {
+      "categorie": "Traçabilité géospatiale EUDR",
+      "solutions": [
+        {
+          "nom": "Google Earth Engine (détection déforestation)",
+          "description": "Plateforme d'analyse satellitaire. API gratuite pour ONG et institutions de recherche, payante pour les entreprises. Utilisée pour la vérification de déforestation des parcelles fournisseurs (EUDR). Alternative : images Sentinel-2 Copernicus gratuites.",
+          "pertinence_locale": "haute",
+          "cout_estime": "Gratuit (Copernicus Sentinel-2) ou 0-10 $/ha (services commerciaux)"
+        },
+        {
+          "nom": "ODK (Open Data Kit) terrain GPS",
+          "description": "Application mobile open-source pour la collecte de données terrain (GPS, photos, formulaires). Utilisée par de nombreuses ONG et entreprises pour la collecte des données EUDR fournisseurs. Gratuit, fonctionne offline CI.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Open-source (gratuit)"
+        }
+      ]
+    }
+  ],
+  "indicateurs_cles": [
+    {
+      "nom": "Couverture du data lake industriel",
+      "description": "Pourcentage des sources de données critiques (ERP, MES, SCADA, CMMS, qualité) intégrées dans le lac de données",
+      "unite": "% sources intégrées",
+      "cible_sectorielle": ">80% des sources critiques"
+    },
+    {
+      "nom": "Précision des modèles de maintenance prédictive",
+      "description": "Précision des modèles ML pour la prédiction de pannes (taux de faux positifs et faux négatifs)",
+      "unite": "% précision",
+      "cible_sectorielle": ">85% de précision sur les équipements critiques"
+    },
+    {
+      "nom": "Taux de traçabilité EUDR complète par lot",
+      "description": "Pourcentage des lots produits avec un dossier EUDR complet (données GPS fournisseurs vérifiées)",
+      "unite": "%",
+      "cible_sectorielle": "100% pour les lots destinés à l'export UE"
+    },
+    {
+      "nom": "Délai de mise à disposition des données de production",
+      "description": "Latence entre la fin d'un batch ou shift et la disponibilité des données dans les dashboards",
+      "unite": "minutes",
+      "cible_sectorielle": "<15 minutes (objectif temps quasi-réel)"
+    },
+    {
+      "nom": "Gains économiques issus de l'analytics industriel",
+      "description": "Économies ou gains de production directement attribuables à l'usage des analytics (réduction rebuts, réduction pannes, optimisation énergie)",
+      "unite": "M FCFA/an",
+      "cible_sectorielle": ">10x le coût de la plateforme data"
+    }
+  ],
+  "reglementations_normes": [
+    {
+      "nom": "EUDR Règlement EU 2023/1115 — données géospatiales",
+      "description": "Obligation de collecter et conserver les données géospatiales (coordonnées GPS des parcelles) pour les produits forestiers exportés vers l'UE (cacao, café, huile de palme, soja, bois, caoutchouc, viande bovine). Ces données doivent être accessibles aux autorités UE via le portail DUE.",
+      "organisme": "Union Européenne",
+      "obligatoire": true
+    },
+    {
+      "nom": "APDP CI Loi 2013-450 — données personnelles dans les flux data",
+      "description": "Les lacs de données industriels peuvent contenir des données personnelles (données RH liées à la production, données fournisseurs personnes physiques). La politique de gouvernance des données doit intégrer les exigences APDP CI : accès contrôlé, anonymisation si possible, durée de conservation.",
+      "organisme": "APDP CI",
+      "obligatoire": true
+    },
+    {
+      "nom": "ISO 22000 / HACCP — traçabilité alimentaire",
+      "description": "Pour les industries agro-alimentaires CI certifiées ISO 22000, la traçabilité complète des lots (de la matière première au produit fini) est une exigence de certification. Le système data industriel doit permettre de réaliser un retrait de lot en <24h.",
+      "organisme": "CODINORM CI / ISO",
+      "obligatoire": false
+    }
+  ],
+  "comparatif_organisations": {
+    "description": "Comparaison de la maturité data dans les industries ivoiriennes exportatrices",
+    "lignes": [
+      {
+        "organisation": "TRITURAF CI (huile palme)",
+        "data_lake": "Azure Data Lake complet",
+        "analytics": "ML maintenance prédictive déployé",
+        "tracabilite_eudr": "GPS automatisé 850 fournisseurs",
+        "gouvernance_data": "Data stewards désignés",
+        "niveau_global": "Avancé"
+      },
+      {
+        "organisation": "SIC-CACAO CI",
+        "data_lake": "ERP + MES intégrés partiellement",
+        "analytics": "Power BI OEE temps réel",
+        "tracabilite_eudr": "GPS partiel (grands fournisseurs)",
+        "gouvernance_data": "KPIs qualité données définis",
+        "niveau_global": "Structuré"
+      },
+      {
+        "organisation": "PME huile artisanale",
+        "data_lake": "Non",
+        "analytics": "Excel manuel",
+        "tracabilite_eudr": "Papier, non conforme EUDR",
+        "gouvernance_data": "Non",
+        "niveau_global": "Initial"
+      },
+      {
+        "organisation": "CIPA CI (anacarde)",
+        "data_lake": "Azure + Odoo intégrés",
+        "analytics": "ML anomalies + Power BI",
+        "tracabilite_eudr": "100% lots tracés EUDR ODK",
+        "gouvernance_data": "Gouvernance APDP CI conforme",
+        "niveau_global": "Avancé"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "TRITURAF CI — Data lake + ML prédictif : rendement extraction +3,2 Mds FCFA/an et 850 fournisseurs EUDR",
+    "contexte": "TRITURAF CI (Société de Trituration des Fruits de Palmier), San Pedro, 420 employés, production d'huile de palme brute (CPO) et de palmiste. CA 2023 : 22 Mds FCFA, dont 60% export UE. 850 fournisseurs de régimes de palme dans la région de San Pedro. Soumis à l'EUDR pour 100% de ses exports UE à partir de 2025.",
+    "probleme": "En 2022, deux défis majeurs : (1) le rendement d'extraction d'huile variait de 17% à 23% selon les shifts (écart 35%) sans que personne ne comprenne pourquoi — coût estimé de cette variabilité : 2,8 Mds FCFA/an ; (2) 850 fournisseurs dispersés dans 6 cercles d'approvisionnement sans aucune donnée GPS — non-conformité EUDR totale.",
+    "solution": "Programme data en 2 phases sur 12 mois (investissement total 28 M FCFA) : (1) Data lake Azure (Azure Data Factory + Data Lake Gen2 + Power BI) intégrant SCADA stérilisateurs/presses, MES, ERP Odoo, données laboratoire qualité CPO — 14 M FCFA ; modèle ML Python (gradient boosting) identifiant les paramètres optimaux d'extraction (température stérilisation, pression presses, temps de cycle) selon la qualité des régimes entrants — déployé sur Azure ML ; (2) Collecte GPS fournisseurs via ODK offline sur 35 agents de collecte terrain (tablets Samsung) + vérification déforestation via images Sentinel-2 Copernicus gratuites — 8 M FCFA.",
+    "resultats": "Rendement extraction : 17-23% → 21,4% stable (optimisation continue par le modèle ML). Gain économique : +3,2 Mds FCFA/an (sur 22 Mds FCFA CA). 850 fournisseurs avec données GPS vérifiées : 72% (612 fournisseurs) entièrement conformes EUDR, 28% en cours de finalisation. Dossiers EUDR générés automatiquement pour 100% des lots export depuis mois 10. Audit EUDR préparatoire réalisé par acheteur néerlandais : validé. Maintenance prédictive déployée sur 3 presses hydrauliques critiques : MTTR -38%, économie 285 M FCFA/an. ROI data lake : 8 mois."
+  },
+  "ai_context": {
+    "focus_llm": "Évaluer la maturité de la stratégie data dans l'industrie ivoirienne, en insistant sur deux enjeux spécifiques à la CI : (1) la traçabilité EUDR géospatiale est un impératif commercial 2025 pour les exportateurs UE CI — les industries non conformes perdront l'accès au marché européen ; (2) les données SCADA/MES ont une valeur analytique immense encore sous-exploitée dans la majorité des industries CI — la réduction de la variabilité des procédés peut représenter plusieurs pourcents du CA.",
+    "pieges_a_eviter": [
+      "Ne pas proposer des architectures data cloud complexes à des industries n'ayant pas encore de connectivité internet fiable — séquencer : d'abord consolider les données localement, puis cloud",
+      "Ne pas confondre 'avoir de l'ERP' avec 'avoir une stratégie data' : l'ERP est une source de données, pas un lac de données",
+      "Éviter de sous-estimer la complexité de la collecte des données EUDR terrain en CI : les petits planteurs n'ont pas toujours de smartphones, les zones rurales ont une connectivité limitée — des agents de collecte avec tablettes offline (ODK) sont souvent nécessaires",
+      "Ne pas négliger la qualité des données : des données ERP/MES de mauvaise qualité (doublons, valeurs manquantes, erreurs de saisie) donnent des analytics inutilisables — la gouvernance des données doit précéder les projets d'analytics avancés"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune stratégie data. Données sur papier ou Excel non structurés. Pas de système de mesure automatique. Décisions basées sur l'intuition. Traçabilité EUDR inexistante.",
+      "score_21_to_40": "Données partielles dans l'ERP et le SCADA mais non intégrées. Rapports manuels. Power BI basique sur données ERP. Traçabilité lots sans données GPS fournisseurs.",
+      "score_41_to_60": "ERP + MES intégrés dans un entrepôt ou lac partiel. Tableaux de bord OEE temps réel. Qualité des données surveillée. Traçabilité EUDR en cours pour les grands fournisseurs.",
+      "score_61_to_80": "Data lake industriel opérationnel (ERP + MES + SCADA + CMMS). Analytics prédictifs sur équipements critiques. Traçabilité EUDR complète pour les lots export UE. Gouvernance données formalisée.",
+      "score_81_to_100": "Plateforme data industrielle avancée. ML optimisation procédé en temps réel. EUDR automatisé 100% fournisseurs. Jumeaux numériques de production. Analytics supply chain prédictifs. ROI data >10x coût plateforme."
+    }
+  }
+}

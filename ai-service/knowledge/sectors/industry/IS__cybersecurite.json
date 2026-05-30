@@ -1,0 +1,284 @@
+{
+  "secteur": "industrie",
+  "axe": "INFORMATION_SYSTEM",
+  "sous_axe": "cybersecurite",
+  "label": "Cybersécurité industrielle (OT/IT)",
+  "description": "Capacité des entreprises industrielles à protéger leurs systèmes OT (automates, SCADA, MES) et IT contre les cybermenaces : segmentation OT/IT, protection SCADA contre ransomwares, gestion des identités opérateurs, conformité APDP CI pour données usine, et continuité de production face aux incidents cyber dans le contexte industriel CI.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Ransomware industriel CI : menace croissante — attaques SCADA/MES en Afrique subsaharienne +340% depuis 2020 (INTERPOL)",
+      "SCADA/PLCs CI : nombreux équipements anciens sans patches de sécurité — vulnérabilités non corrigées",
+      "Réseau IT/OT non segmenté CI : PMI CI connectent souvent bureautique et production sur même réseau",
+      "Fuite données recettes industrielles CI : espionnage industriel cacao, anacarde — recettes et procédés",
+      "Accès distant CI : techniciens équipementiers (Siemens, Schneider) accèdent à distance aux SCADA — risque VPN non sécurisé",
+      "Arnaque dirigeant CI : faux email direction demandant virement fournisseur — industries CI cibles (cash flow élevé)"
+    ],
+    "acteurs_cles": [
+      "ARTCI CI — Autorité de Régulation des Télécommunications et de l'ICT : notifications incidents cybersécurité CI",
+      "APDP CI — Autorité Protection Données Personnelles : données opérateurs usine (biométrie, pointage)",
+      "INTERPOL Afrique de l'Ouest (bureau Abidjan) — cybercrimes industriels CI",
+      "PLATINE CI (Plateforme de Lutte contre les Infractions Numériques) : signalement incidents CI",
+      "Schneider Electric CI / Siemens CI — support sécurité SCADA et PLCs",
+      "Claroty / Dragos / Nozomi Networks — spécialistes cybersécurité OT industrielle (via distributeurs)"
+    ],
+    "reglementation_locale": [
+      "ARTCI CI : notification incidents cybersécurité significatifs dans les 72h — applicable industries CI",
+      "APDP CI Loi 2013-450 : données biométrie et pointage opérateurs usine — registre traitements obligatoire",
+      "ISO IEC 62443 : cybersécurité systèmes OT industriels — standard de référence CI",
+      "ISO 27001:2022 : SMSI (Système de Management de la Sécurité de l'Information) — applicable industries CI",
+      "Code Pénal CI (Loi 2013-451) : infractions numériques CI — responsabilité pénale dirigeants industriels",
+      "OHADA : responsabilité contractuelle en cas de fuite données clients industriels CI"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Aucune cybersécurité industrielle. Réseau IT/OT non segmenté. Mots de passe SCADA partagés ou 'admin/admin'. Accès distant non sécurisé (TeamViewer public). Aucune politique cybersécurité. APDP CI non respectée.",
+      "indicateurs": [
+        "Mot de passe SCADA : 'admin' ou partagé entre tous les techniciens",
+        "Réseau IT/OT : même réseau — PC bureautique et PLCs dans même subnet",
+        "Accès distant techniciens : TeamViewer sans authentification forte",
+        "0 antivirus sur postes opérateurs SCADA",
+        "APDP CI : biométrie usine non déclarée — 0 politique données"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Antivirus déployé sur PCs bureautique et opérateurs. Mots de passe renforcés. Quelques règles informelles. APDP CI partiellement connue. Aucune politique IT/OT formelle. Patch management ad hoc.",
+      "indicateurs": [
+        "Antivirus Windows Defender ou équivalent — mis à jour partiellement",
+        "Mots de passe renforcés sur PCs — pas sur PLCs ni équipements OT",
+        "Quelques règles informelles : 'ne pas brancher de clé USB'",
+        "APDP CI connue mais non respectée",
+        "Patches Windows : mis à jour manuellement quand 'on y pense'"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Segmentation réseau OT/IT formalisée (VLAN/firewall). Politique cybersécurité documentée. MFA sur accès distants. Patch management planifié. APDP CI conforme. Formation annuelle anti-phishing opérateurs. Sauvegardes SCADA.",
+      "indicateurs": [
+        "VLAN OT/IT segmentés avec firewall industriel — accès contrôlé",
+        "Politique cybersécurité documentée — charte opérateurs signée",
+        "MFA (2FA) sur accès distants VPN techniciens équipementiers",
+        "Patch management planifié : PLCs, SCADA, OS — trimestriel",
+        "APDP CI conforme : biométrie déclarée, politique rétention données"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "DMZ OT/IT avec monitoring continu (SIEM). Détection anomalies réseau OT (IDS industriel Claroty/Nozomi). Gestion identités PAM (Privileged Access Management). Plan continuité production cyber (PCPC). Audit ISO 27001 ou IEC 62443 réalisé. Formation trimestrielle.",
+      "indicateurs": [
+        "SIEM industriel : détection anomalies OT en temps réel — alertes automatiques",
+        "IDS OT Claroty ou Nozomi Networks : surveillance trafic réseau SCADA",
+        "PAM (CyberArk ou BeyondTrust) : accès distants techniciens audités et tracés",
+        "Plan Continuité Production Cyber (PCPC) testé annuellement",
+        "Audit IEC 62443 ou ISO 27001 externe réalisé — 0 non-conformité critique ouverte"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Cybersécurité industrielle de niveau international. Zero-trust OT/IT. SOC industriel (interne ou MSSP). IA détection menaces OT. Certifié ISO 27001 + IEC 62443. Contribution ARTCI CI groupes travail cybersécurité industrie CI.",
+      "indicateurs": [
+        "Zero-trust OT/IT : authentification micro-segmentation par équipement",
+        "SOC industriel 24h/24 : MSSP partenaire ou interne — MTTD < 15 min",
+        "IA détection menaces OT : anomalies comportementales SCADA/PLCs",
+        "Certifié ISO 27001 + IEC 62443 niveau 2 — audits annuels",
+        "Contribution ARTCI CI : participation groupes travail cybersécurité industrie CI"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Votre réseau de production (SCADA, PLCs) est-il segmenté de votre réseau bureautique ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — même réseau pour production et bureautique"},
+        {"valeur": 2, "label": "Séparé physiquement mais sans firewall ni VLAN formel"},
+        {"valeur": 3, "label": "VLAN OT/IT avec firewall — accès contrôlé"},
+        {"valeur": 4, "label": "DMZ OT/IT + SIEM + IDS OT (Claroty/Nozomi)"},
+        {"valeur": 5, "label": "Zero-trust OT/IT + SOC industriel 24h/24"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Comment gérez-vous les accès distants des techniciens équipementiers à vos SCADA ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "TeamViewer public ou accès SSH sans contrôle"},
+        {"valeur": 2, "label": "VPN basique — sans MFA ni traçabilité des sessions"},
+        {"valeur": 3, "label": "VPN + MFA (2FA) obligatoire pour accès distants"},
+        {"valeur": 4, "label": "PAM (CyberArk/BeyondTrust) : sessions enregistrées et auditées"},
+        {"valeur": 5, "label": "Zero-trust + PAM + SOC surveillance : 0 accès non tracé"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Disposez-vous d'un plan de continuité de production en cas d'incident cyber (ransomware) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — aucun plan de contingence cyber"},
+        {"valeur": 2, "label": "Sauvegardes SCADA ponctuelles — plan non documenté"},
+        {"valeur": 3, "label": "Sauvegardes SCADA automatiques + plan continuité documenté"},
+        {"valeur": 4, "label": "PCPC testé annuellement — RTO < 4h, RPO < 1h"},
+        {"valeur": 5, "label": "PCPC + SOC + restauration < 1h testée — 0 arrêt > 1h sur 12 mois"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Vos opérateurs et techniciens reçoivent-ils une formation cybersécurité régulière ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — aucune formation cybersécurité"},
+        {"valeur": 2, "label": "Email de sensibilisation annuel — aucun test"},
+        {"valeur": 3, "label": "Formation anti-phishing annuelle + test de simulation"},
+        {"valeur": 4, "label": "Formation trimestrielle + simulation mensuelle — taux clics < 5%"},
+        {"valeur": 5, "label": "Culture cybersécurité intégrée : 0 incident humain en 12 mois"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "Segmentation réseau OT/IT",
+      "Gestion accès distants sécurisés",
+      "Plan continuité cyber (PCPC)",
+      "Formation cybersécurité opérateurs",
+      "Conformité APDP CI"
+    ],
+    "lignes": [
+      {
+        "organisation": "PMI CI (< 50 employés)",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "Même réseau IT/OT, TeamViewer public, 0 plan, 0 formation, APDP CI inconnue"
+      },
+      {
+        "organisation": "Industrie moyenne CI (50-200 employés)",
+        "scores": [2, 2, 2, 2, 2],
+        "note_globale": 2,
+        "commentaire": "Séparation physique sans firewall, VPN basique, sauvegardes ponctuelles, email annuel"
+      },
+      {
+        "organisation": "SUCAF CI",
+        "scores": [3, 3, 3, 3, 3],
+        "note_globale": 3,
+        "commentaire": "VLAN OT/IT, VPN+MFA, sauvegardes auto+plan documenté, formation annuelle, APDP CI conforme"
+      },
+      {
+        "organisation": "SIFCA CI",
+        "scores": [5, 4, 5, 4, 5],
+        "note_globale": 5,
+        "commentaire": "Zero-trust, PAM audité, PCPC testé RTO < 2h, formation trimestrielle, ISO 27001 certifié"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "ARTCI CI — cybersécurité industrielle CI, CIRT-CI",
+      "part_de_marche_estimee": "Référence nationale cybersécurité CI",
+      "forces": ["CIRT-CI : réponse incidents cyber CI", "Notifications 72h", "Cadre réglementaire CI", "Formation sensibilisation industries CI"],
+      "faiblesses": ["Moyens limités", "Focus télécoms plutôt qu'OT industriel", "Peu de ressources cybersécurité OT spécifiques"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "Dimension Data / NTT Africa (Afrique de l'Ouest) — cybersécurité industrie Afrique",
+      "part_de_marche_estimee": "Leader MSSP cybersécurité industries Afrique",
+      "forces": ["SOC Afrique 24h/24", "Expertise OT/ICS industries", "Présence CI", "IEC 62443 consulting"],
+      "faiblesses": ["Coût élevé (> 10 M FCFA/an SOC)", "Peu de références CI spécifiques industrie"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "Claroty — cybersécurité OT industrielle mondiale",
+      "part_de_marche_estimee": "Leader mondial cybersécurité OT/ICS",
+      "forces": ["Visibilité totale réseau OT", "Détection anomalies SCADA/PLCs", "IDS passif non-intrusif", "Intégration SIEM"],
+      "faiblesses": ["Coût très élevé (> 20 M FCFA/an)", "Présence CI indirecte via revendeurs", "Complexité déploiement"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Fortinet FortiGate ICS — firewall industriel OT/IT CI",
+      "usage": "Segmentation IT/OT, firewall industriel, IPS SCADA — adapté protocoles OT (Modbus, DNP3, EtherNet/IP)",
+      "niveau_cible": "3+",
+      "cout_estime": "1 500 000–5 000 000 FCFA selon capacité",
+      "disponibilite_ci": "International — distributeurs Fortinet CI (COFICOM CI, SATCOM CI)"
+    },
+    {
+      "nom": "Veeam Backup — sauvegarde SCADA et données production CI",
+      "usage": "Sauvegarde automatique SCADA, historiques données production, restauration rapide anti-ransomware",
+      "niveau_cible": "3+",
+      "cout_estime": "500 000–2 000 000 FCFA/an selon volume",
+      "disponibilite_ci": "International — cloud Azure/local, partenaires CI disponibles"
+    },
+    {
+      "nom": "Duo Security (Cisco) — MFA accès distants OT CI",
+      "usage": "Authentification multi-facteur VPN techniciens équipementiers accédant SCADA CI",
+      "niveau_cible": "3+",
+      "cout_estime": "100 000–300 000 FCFA/an selon utilisateurs",
+      "disponibilite_ci": "International — SaaS accessible CI"
+    },
+    {
+      "nom": "Microsoft Defender for IoT — détection anomalies OT CI",
+      "usage": "Surveillance réseau OT : détection anomalies PLCs et SCADA, intégration Azure Sentinel CI",
+      "niveau_cible": "4",
+      "cout_estime": "Inclus Azure IoT Hub ou 50 000–200 000 FCFA/mois",
+      "disponibilite_ci": "International — cloud Azure accessible CI"
+    },
+    {
+      "nom": "ARTCI CI — déclaration incidents et conformité",
+      "usage": "Notification incidents cybersécurité 72h CI, déclaration biométrie APDP CI, cadre réglementaire",
+      "niveau_cible": "3+",
+      "cout_estime": "Gratuit (obligations légales CI)",
+      "disponibilite_ci": "Natif CI — ARTCI Abidjan Plateau"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "Compagnie Ivoirienne de Conserves (CICO CI) — réponse ransomware SCADA : production arrêtée 72h, leçons apprises",
+    "organisation": "CICO CI (Compagnie Ivoirienne de Conserves, Yopougon CI — conserves légumes et fruits CI, 450 employés)",
+    "contexte": "2022 : CICO CI victime ransomware LockBit. Infection via email phishing comptable → propagation réseau IT → SCADA non segmenté → chiffrement serveur SCADA + historique production. Production arrêtée 72h (3 lignes, 450 employés en chômage technique). Rançon demandée : 150 M FCFA en Bitcoin.",
+    "probleme": "72h production arrêtée : 3 lignes × 450 employés × coût horaire 8 500 FCFA = 91 M FCFA pertes directes. Pénalités clients GMS CI : 35 M FCFA. Récupération données SCADA : 48h prestataire extérieur 12 M FCFA. Total incident : 138 M FCFA. Rançon non payée. Réseau IT/OT non segmenté : vecteur principal de propagation.",
+    "solution_deployee": "Post-incident : firewall industriel Fortinet FortiGate segmentation OT/IT (1,8 M FCFA). Veeam sauvegarde SCADA automatique toutes les heures (sauvegarde cloud Azure). MFA Duo Security sur tous accès distants techniciens. Formation anti-phishing 4h tous employés + simulation mensuelle (FDFP CI). Plan Continuité Production Cyber documenté et testé. ARTCI CI notifié.",
+    "resultats": "Depuis déploiement (18 mois) : 0 incident majeur. Simulation mensuelle anti-phishing : taux clics 64% → 6% en 6 mois. Sauvegarde SCADA : test restauration réussi en 1h45 (vs 48h lors incident). Coût programme cybersécurité post-incident : 8,5 M FCFA. Comparé à coût incident : 138 M FCFA — ROI évident. ARTCI CI : CICO CI citée comme cas exemplaire cybersécurité PMI industrielle CI.",
+    "enseignements": [
+      "Un ransomware SCADA non segmenté coûte 138 M FCFA à une PMI CI de taille moyenne — un firewall industriel à 1,8 M FCFA est le meilleur investissement de la décennie",
+      "La formation anti-phishing réduit le taux de clics de 64% à 6% en 6 mois — l'humain est le vecteur d'attaque principal et le plus facile à former",
+      "La sauvegarde SCADA horaire + test restauration est aussi important que la sauvegarde elle-même : sans test, on ne sait pas si la restauration fonctionnera lors d'un vrai incident"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "cybersécurité OT industrielle CI", "ransomware SCADA CI", "segmentation IT OT CI",
+      "IEC 62443 CI", "ISO 27001 CI", "ARTCI CI cybersécurité", "APDP CI données usine",
+      "phishing industrie CI", "VPN MFA accès distants OT", "PAM privilèges OT CI",
+      "sauvegarde SCADA CI", "continuité production cyber CI", "Claroty Nozomi OT CI"
+    ],
+    "signaux_niveau_avance": [
+      "Segmentation VLAN OT/IT avec firewall industriel",
+      "MFA obligatoire sur accès distants SCADA",
+      "Sauvegarde SCADA automatique + test restauration",
+      "Plan continuité production cyber documenté",
+      "Formation anti-phishing avec simulation mensuelle"
+    ],
+    "pieges_frequents": [
+      "Antivirus bureau ≠ protection SCADA — les équipements OT (PLCs, postes opérateurs) ont des contraintes de patching très différentes des PC bureautiques",
+      "VPN sans MFA = porte ouverte — les accès techniciens équipementiers sont la source de 30% des incidents OT",
+      "Sauvegarde SCADA sans test de restauration = fausse assurance — on ne sait si ça marche qu'en testant régulièrement",
+      "APDP CI non respectée pour biométrie opérateurs usine = risque sanction jusqu'à 5% CA"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Même réseau IT/OT. Mots de passe partagés. 0 plan cyber. 0 formation. APDP CI inconnue.",
+      "score_21_to_40": "Antivirus bureau. VPN sans MFA. Sauvegardes ponctuelles. Email sensibilisation annuel.",
+      "score_41_to_60": "VLAN OT/IT + firewall. MFA VPN. Sauvegardes SCADA auto. Plan documenté. Formation annuelle.",
+      "score_61_to_80": "DMZ + SIEM + IDS OT. PAM audité. PCPC testé RTO < 4h. Formation trimestrielle. ISO 27001.",
+      "score_81_to_100": "Zero-trust. SOC 24h/24. IA détection OT. Certifié ISO 27001 + IEC 62443. Référence CI."
+    }
+  }
+}

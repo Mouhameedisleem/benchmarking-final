@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "axis": "MODELE_OP",
+    "sub_axis": "Innovation",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Lab Innovation bancaire — espace dédié à l'expérimentation fintech",
+      "description": "Les banques africaines leaders créent des labs d'innovation internes (espaces physiques + équipes dédiées) pour expérimenter de nouvelles offres financières en dehors des contraintes du cœur de métier bancaire, en partenariat avec des startups locales.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "25 % des grandes banques africaines ont un lab innovation actif (Partech Africa 2024)",
+      "source": "Partech Africa Tech Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Co-innovation avec les fintechs africaines — partenariats vs acquisition",
+      "description": "Plutôt que d'acquérir des fintechs (coûteux et risqué), les banques UEMOA privilégient les partenariats de co-innovation : accès aux APIs bancaires, distribution via le réseau bancaire, co-développement de produits ciblant les non-bancarisés.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "60 % des innovations bancaires africaines proviennent de partenariats avec des fintechs (Partech 2024)",
+      "source": "Partech Africa Tech Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Innovation frugale — solutions adaptées aux contraintes UEMOA",
+      "description": "L'innovation bancaire en UEMOA doit fonctionner sur réseau 2G/3G intermittent, sur des smartphones d'entrée de gamme (< 100 €) et pour des clients avec un faible niveau de littératie financière. Les solutions importées d'Europe ou d'Asie échouent si elles ne sont pas adaptées à ces contraintes.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "100 % des innovations bancaires réussies en UEMOA sont adaptées au contexte local (GSMA 2024)",
+      "source": "GSMA Mobile Money Innovation Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Sandbox réglementaire BCEAO — expérimentation encadrée des innovations financières",
+      "description": "Le sandbox BCEAO (actif depuis 2022) permet aux banques et fintechs de tester des innovations financières (BNPL, crédit digital, DeFi encadrée) pendant 12-24 mois avec une réglementation allégée. 15 innovations ont été approuvées depuis 2022.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "15 innovations approuvées dans le sandbox BCEAO depuis 2022 (BCEAO 2024)",
+      "source": "BCEAO Rapport Sandbox Réglementaire 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Outils de Design Thinking / UX Research",
+      "category": "Innovation centrée utilisateur",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Miro (Design Thinking)", "Figma (Prototypage)", "UserTesting", "Maze", "IDEO Design Kit"]
+    },
+    {
+      "name": "Plateforme de gestion de l'innovation",
+      "category": "Pilotage du pipeline d'innovation",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Brightidea", "Hype Innovation", "IdeaScale", "Spigit (Planview)", "Microsoft Viva Goals + Ideas"]
+    },
+    {
+      "name": "Environnement Sandbox technique",
+      "category": "Test et prototypage d'innovations",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["AWS Sandbox Financial Services", "Azure Dev/Test Labs", "Temenos Sandbox Banking", "Mambu Sandbox", "API Sandbox GIM-UEMOA"]
+    },
+    {
+      "name": "IA Générative pour l'innovation bancaire",
+      "category": "Accélérateur d'innovation produit",
+      "maturity_stage": "Émergence",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Anthropic Claude API (conseil bancaire)", "OpenAI GPT-4 (analyse documents)", "Google Gemini (multimodal)", "IBM watsonx.ai (compliance)", "Kasisto KAI (banking NLP)"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "BNI Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Lab Innovation BNI : 5 partenariats avec startups ivoiriennes actifs, pilote BNPL marchand (paiement en 3x), chatbot WhatsApp en test, participation au sandbox BCEAO",
+        "differentiator": "Première banque publique ivoirienne à créer un lab d'innovation dédié avec budget identifié — modèle pionnier pour les banques d'État africaines",
+        "source": "BNI CI Rapport Annuel 2023 / APBEF-CI Innovation Banking Awards"
+      },
+      {
+        "organisation": "Orange Bank Africa CI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Innovation continue via Orange Innovation Africa : collaboration avec les startups lauréates Orange Fab CI, pilotes BNPL et micro-assurance mobile",
+        "differentiator": "Accès à l'écosystème d'innovation Orange Group (30 M€ investis/an en R&D Afrique) et à Orange Fab (accélérateur startups africaines) — avantage structurel unique",
+        "source": "Orange Bank Africa Rapport 2023 / Orange Innovation Africa Report"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Ecobank Fintech Challenge annuel (9 000+ startups participantes, 25 intégrations commerciales), partenariats co-innovation avec 15 fintechs africaines, Lab Digital Accra",
+        "differentiator": "Ecobank Fintech Challenge : la plus grande compétition fintech africaine, générant 15 M$ de revenus additionnels via les 25 startups intégrées à l'offre Ecobank",
+        "source": "Ecobank Fintech Challenge Report 2023 / Ecobank Annual Report 2023"
+      },
+      {
+        "organisation": "Attijariwafa Bank",
+        "country": "Maroc / Afrique de l'Ouest",
+        "key_practice": "Attijari Innovation Lab : 10 M€ investis/an, partenariats avec 20 fintechs africaines, participation sandbox BCEAO via la filiale Mali, programme d'intrapreneuriat annuel",
+        "differentiator": "Premier groupe bancaire africain francophone à investir > 10 M€/an dans son lab innovation avec des KPIs publiés (nombre de POCs, taux de passage en production)",
+        "source": "Attijariwafa Bank Digital Report 2023 / Attijari Innovation Lab Annual Report"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "JPMorgan Chase",
+        "country": "USA",
+        "key_practice": "Méthode Working Backwards : toute innovation commence par un communiqué de presse fictif décrivant la valeur client, 15 Mds$ investis en tech/an, 50 000 ingénieurs",
+        "differentiator": "JPMorgan est la plus grande fintech du monde qui se passe être une banque — modèle d'organisation qui met l'innovation client au centre de chaque décision technologique",
+        "source": "JPMorgan Annual Report 2023 / JPMorgan Technology Investment Strategy"
+      },
+      {
+        "organisation": "BBVA",
+        "country": "Espagne / Global",
+        "key_practice": "BBVA Ventures : 250 M$ investis dans des fintechs mondiales, BBVA Open Innovation : 4 labs dans 4 continents, 100+ POCs lancés/an, 30 % taux de passage en production",
+        "differentiator": "BBVA est la seule banque avec un fonds de VC dédié aux fintechs (250 M$) ET un programme d'open innovation — modèle d'innovation ambidextre banque-fintech",
+        "source": "BBVA Annual Report 2023 / BBVA Open Innovation Report 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune activité d'innovation. Suivi passif des tendances fintech. Pas de budget innovation. Pas de partenariat startups. Réponse réactive aux disruptions.",
+    "level_2_developing": "Participation à des hackathons externes. Quelques POCs sans suite. Pas de lab innovation. Budget innovation non identifié. Pas de processus de validation des innovations.",
+    "level_3_defined": "Lab innovation ou cellule dédiée. Budget innovation identifié (> 3 % du budget IT). Partenariats actifs avec 2+ startups. Participation au sandbox BCEAO. MVPs testés avec vrais clients.",
+    "level_4_managed": "Programme d'innovation structuré avec pipeline et KPIs. Fintech Challenge ou programme d'accélération propre. Open Banking API exposées. 3+ innovations lancées en production.",
+    "level_5_optimizing": "Écosystème d'innovation mature. BaaS comme modèle d'innovation ouvert. IA générative dans les services bancaires. BNPL ou nouveaux produits crédit lancés. 5+ innovations/an en production."
+  },
+
+  "regulations": [
+    {
+      "name": "Regulatory Sandbox BCEAO",
+      "issuing_body": "BCEAO",
+      "scope": "Banques et fintechs innovantes en zone UEMOA",
+      "key_requirement": "Dossier de candidature, périmètre limité (nombre de clients, montants), rapport d'expérimentation trimestriel, validation BCEAO avant passage en production commerciale",
+      "compliance_deadline": "En vigueur (2022)",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Instruction BCEAO sur les établissements de crédit et innovations digitales",
+      "issuing_body": "BCEAO",
+      "scope": "Banques proposant des services innovants de crédit ou de paiement",
+      "key_requirement": "Validation préalable BCEAO pour tout nouveau service financier digital, agrément complémentaire si nécessaire, test auprès d'un échantillon limité de clients avant déploiement national",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Syndrome du POC cemetery — POCs qui ne passent jamais en production",
+      "description": "Les banques UEMOA lancent de nombreux POCs qui ne passent jamais en production à cause de la rigidité des processus d'approbation, du manque de ressources de déploiement et de l'absence de critères de passage en production définis dès le départ.",
+      "severity": "Élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Définir dès le départ les critères de passage en production (réglementation, scalabilité, intégration core banking, business case) et allouer les ressources de déploiement avant le lancement du POC."
+    },
+    {
+      "title": "Innovation sans validation réglementaire — retrait forcé du service",
+      "description": "Lancer un service bancaire innovant (crédit digital, BNPL, wallet) sans validation préalable de la BCEAO expose à un retrait forcé du service, des amendes et une atteinte grave à la réputation de la banque.",
+      "severity": "Très élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Engager systématiquement la BCEAO en amont via le sandbox réglementaire pour toute innovation financière et documenter la conformité avant tout lancement commercial."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "BNPL ivoirien — nouveau marché crédit consommation de 300 Mds FCFA",
+      "description": "Le BNPL adapté à l'Afrique (paiement en 3x via mobile money, crédit marchand instantané) adresse le marché du crédit à la consommation informel (tontines, crédit boutiquier). La première banque ivoirienne à lancer un BNPL conforme BCEAO capture un avantage compétitif de 18-24 mois.",
+      "impact_level": "Très élevé",
+      "time_to_value": "18-36 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Sandbox BCEAO — tester 2-3 innovations/an avec risque réglementaire minimal",
+      "description": "Le sandbox BCEAO est une opportunité sous-exploitée : les banques qui l'utilisent testent leurs innovations avec une protection réglementaire pendant 12-24 mois. C'est le meilleur moyen de valider une innovation avant de lever les fonds nécessaires à son industrialisation.",
+      "impact_level": "Élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Programme d'investissement innovation",
+      "acquirer_or_investor": "IFC, Proparco, DEG",
+      "target": "Fintechs africaines partenaires des banques UEMOA",
+      "amount": "Divers (50-200 M$)",
+      "date": "2022-2024",
+      "strategic_rationale": "Soutenir l'écosystème fintech africain francophone qui co-innove avec les banques traditionnelles sur les segments non-bancarisés — impact et rendement combinés",
+      "source": "IFC Africa Fintech Investment Report 2024 / Proparco Rapport Annuel 2023"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Ecobank",
+    "pays": "Pan-Afrique / UEMOA",
+    "technologie": "Ecobank Fintech Challenge — écosystème d'open innovation bancaire africain",
+    "description": "Ecobank organise depuis 2017 le Ecobank Fintech Challenge, compétition annuelle qui identifie les meilleures innovations fintech africaines. Les lauréats obtiennent un accès aux APIs Ecobank, une distribution sur 33 marchés et un co-financement. En 6 éditions, 9 000+ startups ont participé, 25 ont été intégrées à l'offre Ecobank, générant 15 M$ de revenus additionnels. Le challenge couvre les thèmes de l'inclusion financière, du crédit digital, des paiements et de la conformité RegTech. Ce programme positionne Ecobank comme plateforme d'innovation de référence en Afrique subsaharienne et permet d'accéder à l'innovation fintech sans les risques d'une acquisition.",
+    "resultats": "9 000+ startups participantes · 25 intégrations commerciales · 15 M$ revenus additionnels · 33 marchés de distribution · Référence innovation bancaire africaine",
+    "source": "Ecobank Fintech Challenge Report 2023 / African Banker Innovation Awards 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité innovation — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "Budget innovation identifié (> 3 % budget IT)", "Lab innovation actif avec équipe dédiée", "Partenariats fintechs formalisés (> 2)", "Participation sandbox BCEAO", "Innovations lancées en production (> 2/an)"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "Partiel", "✗", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'innovation est une question de survie pour les banques UEMOA. Wave a capturé 60 % du marché sénégalais en 3 ans avec une offre innovante. Les banques qui n'innovent pas seront reléguées au rôle d'infrastructures de second plan derrière les fintechs. Le Regulatory Sandbox BCEAO offre un cadre sécurisé pour expérimenter — il est sous-utilisé car peu de banques ivoiriennes ont des équipes dédiées à l'innovation.",
+    "maturity_max_description": "Programme d'innovation bancaire mature avec lab dédié et budget > 3 % du budget IT. Partenariats actifs avec 5+ fintechs locales. Participation au sandbox BCEAO sur 2+ innovations. IA générative dans les services bancaires. BNPL ou crédit instantané lancé. Open Banking APIs exposées. 5+ innovations en production par an. KPIs innovation publiés annuellement.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune innovation. Réponse réactive aux fintechs. Pas de budget. Pas de partenariats.",
+      "score_21_to_40": "POCs sans suite. Hackathons externes. Pas de lab. Budget non identifié.",
+      "score_41_to_60": "Lab ou cellule dédiée. Budget identifié. 2+ partenariats startups. Sandbox BCEAO. MVPs testés.",
+      "score_61_to_80": "Programme structuré. Fintech challenge. Open Banking APIs. 3+ innovations en production.",
+      "score_81_to_100": "Écosystème mature. BaaS ouvert. GenAI services. BNPL lancé. 5+ innovations/an en production."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur sa maturité en innovation dans le contexte bancaire UEMOA. Analyse l'existence d'un budget d'innovation dédié, d'un lab ou cellule innovation avec des ressources dédiées, les partenariats fintechs formalisés, la participation au sandbox réglementaire BCEAO et le nombre d'innovations effectivement lancées en production commerciale.",
+    "key_questions_for_llm": [
+      "Un budget d'innovation bancaire dédié (distinct du budget IT courant) est-il alloué et consommé annuellement, représentant au moins 3 % du budget IT total ?",
+      "Un lab innovation, une cellule fintech ou un espace d'expérimentation est-il actif avec des ressources humaines et matérielles dédiées (pas une équipe virtuelle) ?",
+      "Des partenariats formalisés avec des startups fintech locales (accès API, co-développement, distribution) sont-ils actifs et documentés ?",
+      "La banque a-t-elle participé ou envisage-t-elle de participer au Regulatory Sandbox de la BCEAO pour tester des innovations financières dans un cadre réglementaire sécurisé ?",
+      "Combien d'innovations (nouveaux produits ou services digitaux) ont été lancées en production commerciale au cours des 12 derniers mois, avec des résultats mesurables ?"
+    ]
+  }
+}

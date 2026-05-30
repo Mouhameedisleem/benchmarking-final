@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "axis": "CANAUX",
+    "sub_axis": "Selfcare client",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Selfcare bancaire — résolution autonome des demandes sans passage en agence",
+      "description": "Les clients bancaires africains cherchent à résoudre leurs problèmes (blocage carte, plafond de virement, changement de coordonnées) sans se déplacer en agence. Les banques qui offrent un selfcare complet réduisent leur coût de service de 60 % et améliorent le NPS de 20 points.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "55 % des clients bancaires africains préfèrent résoudre leurs problèmes en selfcare si disponible (Accenture 2024)",
+      "source": "Accenture Banking Consumer Study Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Chatbot bancaire IA — résolution automatisée des demandes courantes",
+      "description": "Les chatbots bancaires IA (NLP/LLM) résolvent 60-80 % des demandes courantes sans intervention humaine : consultation de solde, mini-relevé, blocage/déblocage de carte, réclamation sur transaction. Le temps de résolution passe de 48h à quelques secondes.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "20 % des banques africaines ont un chatbot IA opérationnel (McKinsey Africa 2024)",
+      "source": "McKinsey State of AI in African Banking 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Gestion de carte en selfcare — blocage et paramétrage mobile",
+      "description": "Le blocage de carte en cas de perte ou de fraude est le cas d'usage selfcare le plus critique. Les clients qui ne peuvent pas bloquer leur carte depuis l'app appellent le centre de contact en urgence, saturant les lignes et retardant la résolution.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "40 % des apps bancaires africaines permettent le blocage de carte en selfcare (Forrester Africa 2024)",
+      "source": "Forrester Banking App Features Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "FAQ intelligente et base de connaissance IA — réduction des contacts centre",
+      "description": "Les banques leaders déploient des FAQ dynamiques alimentées par l'IA qui détectent l'intention du client et proposent la réponse exacte à sa question, réduisant les contacts entrants inutiles de 30-40 %.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "25 % des grandes banques africaines ont une FAQ IA opérationnelle (IDC Africa 2024)",
+      "source": "IDC Africa Customer Self-Service Banking 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Chatbot Bancaire IA / NLP",
+      "category": "Selfcare conversationnel",
+      "maturity_stage": "Croissance en Afrique",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Kasisto KAI Banking", "IBM Watson Financial Services", "Google CCAI FSI", "Microsoft Azure Bot Framework", "Avaamo Banking"]
+    },
+    {
+      "name": "Portail Selfcare Client Bancaire",
+      "category": "Selfcare digital en ligne",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Backbase Selfcare", "Salesforce Experience Cloud Banking", "Temenos Digital Banking", "Oracle Banking Digital Experience", "Finastra Fusion Digital Banking"]
+    },
+    {
+      "name": "Gestion de Carte Mobile",
+      "category": "Selfcare carte bancaire",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en CI",
+      "leading_vendors": ["Marqeta Card Management", "Temenos Card Management", "Entrust Card Lifecycle", "Thales / Gemalto Card Management", "i2c Card Platform"]
+    },
+    {
+      "name": "IVR Intelligent / Voicebot Bancaire",
+      "category": "Selfcare vocal",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Nuance (Microsoft) Banking IVR", "Google CCAI Voice", "Avaya Conversational AI", "Genesys AI Banking", "Amazon Connect Financial Services"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Société Générale Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Blocage/déblocage carte depuis l'app mobile SGCI, chatbot WhatsApp pour les demandes courantes, centre de contact digitalisé avec IVR",
+        "differentiator": "Premier réseau bancaire ivoirien à offrir le blocage de carte 24/7 depuis l'application mobile — cas d'usage selfcare le plus valorisé par les clients",
+        "source": "SGCI Rapport Annuel 2023 / APBEF-CI Satisfaction Client 2023"
+      },
+      {
+        "organisation": "Ecobank Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Ecobank App : blocage carte, réclamations en selfcare, suivi dossier crédit, chatbot Ellie disponible sur l'app et WhatsApp",
+        "differentiator": "Chatbot Ellie (Ecobank) : premier chatbot bancaire panafricain déployé dans 15 pays CI inclus — résolution de 65 % des demandes sans agent",
+        "source": "Ecobank Annual Report 2023 / Ecobank Digital Banking Report"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Ellie AI : chatbot NLP disponible sur Ecobank App, WhatsApp et USSD dans 15 pays africains, 65 % des demandes résolues sans agent humain",
+        "differentiator": "Ellie AI — premier chatbot bancaire africain multilingue (anglais, français, portugais) avec NPS selfcare de 42 en 2023",
+        "source": "Ecobank Ellie AI Report 2023 / Ecobank Annual Report 2023"
+      },
+      {
+        "organisation": "Standard Bank",
+        "country": "Afrique du Sud / Afrique de l'Ouest",
+        "key_practice": "Selfcare 90 % des demandes traitables sans agence : ouverture/fermeture compte, blocage carte, réclamations, changement PIN, virements",
+        "differentiator": "90 % des opérations réalisables en selfcare — objectif affiché et mesuré dans le rapport annuel Standard Bank 2023",
+        "source": "Standard Bank Annual Report 2023 / Standard Bank Digital Self-Service Report"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Amazon / Alexa for Banking",
+        "country": "USA",
+        "key_practice": "35 % des contacts clients Amazon résolus en selfcare, intelligence artificielle prédictive pour anticiper les besoins avant la demande",
+        "differentiator": "Modèle de référence : 35 % des contacts résolus en selfcare grâce au machine learning — objectif adopté par les banques digitales mondiales",
+        "source": "Amazon Annual Report 2023 / Forrester Amazon Customer Service Report"
+      },
+      {
+        "organisation": "Nubank",
+        "country": "Brésil",
+        "key_practice": "100 % des opérations en selfcare via l'app, 0 appel téléphonique nécessaire, NPS de 87 grâce au selfcare complet",
+        "differentiator": "Nubank a supprimé le besoin d'appeler un centre de contact : 100 % des demandes traitées en selfcare in-app avec un NPS de 87",
+        "source": "Nubank Annual Report 2023 / Bain & Company Nubank NPS Study"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Zéro selfcare. Le client doit se déplacer en agence ou appeler pour toute demande. Pas de gestion de carte en ligne. Pas de FAQ en ligne. Réclamations uniquement physiques.",
+    "level_2_developing": "FAQ statique sur le site web. Consultation de solde en selfcare (app ou USSD). Pas de blocage carte en ligne. Réclamations par email seulement. Selfcare très limité.",
+    "level_3_defined": "Blocage carte en selfcare via app ou appel IVR. Réclamations en ligne trackées. FAQ structurée. Changement de coordonnées en selfcare. Chatbot basique (réponses pré-programmées).",
+    "level_4_managed": "Chatbot NLP résolvant 50 %+ des demandes. Blocage/déblocage carte, plafonds, réclamations 100 % en selfcare. Portail selfcare complet. IVR intelligent. NPS selfcare mesuré.",
+    "level_5_optimizing": "Chatbot IA résolvant 70 %+ des demandes. Selfcare proactif (alertes avant que le client n'appelle). 90 %+ opérations sans agence. Selfcare multicanal (app + WhatsApp + USSD + vocal)."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction BCEAO — délai de traitement des réclamations clients",
+      "issuing_body": "BCEAO",
+      "scope": "Toutes les banques UEMOA",
+      "key_requirement": "Les réclamations clients doivent être traitées dans un délai maximum de 30 jours. Un canal de réclamation accessible doit être disponible (physique ET digital).",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Obligation de blocage d'urgence des moyens de paiement",
+      "issuing_body": "BCEAO / GIM-UEMOA",
+      "scope": "Toutes les banques émettant des cartes de paiement",
+      "key_requirement": "Un mécanisme de blocage d'urgence de carte (disponible 24/7) doit être accessible au client, sans délai d'attente",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Absence de blocage carte 24/7 — fraude non stoppée la nuit et le weekend",
+      "description": "En Côte d'Ivoire, les fraudes par clonage de carte se produisent souvent la nuit ou le weekend. Une banque sans selfcare de blocage carte oblige le client à attendre l'ouverture de l'agence, permettant à la fraude de se poursuivre.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Déployer en urgence le blocage/déblocage de carte en selfcare sur l'app mobile et par USSD, disponible 24h/24, 7j/7, sans intervention de l'agence."
+    },
+    {
+      "title": "Chatbot bancaire mal configuré — erreurs de réponse et atteinte à la confiance",
+      "description": "Un chatbot bancaire qui donne des informations incorrectes sur les soldes, les produits ou les procédures peut causer une perte financière client et une atteinte grave à la confiance envers la banque.",
+      "severity": "Élevé",
+      "likelihood": "Élevée lors du déploiement",
+      "mitigation": "Déployer le chatbot en mode supervisé (human-in-the-loop) pendant les 3 premiers mois, avec escalade automatique vers un agent humain dès que la confidence score est < 80 %."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Blocage carte selfcare — réduction des appels urgents de 40 %",
+      "description": "Le blocage de carte représente 30-40 % des appels urgents au centre de contact bancaire. Le déployer en selfcare app réduira ces appels de 40 %, libérant les agents pour les demandes à haute valeur ajoutée.",
+      "impact_level": "Élevé",
+      "time_to_value": "3-6 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Chatbot IA WhatsApp — selfcare conversationnel sur le canal principal",
+      "description": "Un chatbot IA sur WhatsApp (canal utilisé par 90 % des clients CI) résout les 5 demandes les plus fréquentes (solde, mini-relevé, blocage carte, info produit, réclamation simple) sans développement d'app dédiée.",
+      "impact_level": "Très élevé",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Partenariat technologique",
+      "acquirer_or_investor": "Ecobank",
+      "target": "Kasisto KAI Banking — déploiement chatbot Ellie dans 15 pays",
+      "amount": "Partenariat commercial (multi-M$)",
+      "date": "2020-2023",
+      "strategic_rationale": "Déployer un chatbot bancaire IA multilingue (français, anglais, portugais) dans 15 filiales africaines pour résoudre 65 % des demandes clients sans agent humain",
+      "source": "Kasisto Case Study Ecobank 2023 / Ecobank Annual Report 2023"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Ecobank — Chatbot Ellie",
+    "pays": "Pan-Afrique / UEMOA",
+    "technologie": "Chatbot IA Ellie — selfcare bancaire conversationnel panafricain",
+    "description": "Ecobank a déployé son chatbot IA 'Ellie' (powered by Kasisto KAI) en 2020, disponible sur l'application Ecobank, WhatsApp et le site web dans 15 pays africains dont la Côte d'Ivoire. Ellie comprend les questions en français, anglais et portugais. Elle résout 65 % des demandes sans intervention humaine : consultation de solde, mini-relevé des 5 dernières transactions, information produits, blocage de carte, et déclaration de réclamation. En 2023 : 2,5 millions d'interactions/mois, NPS selfcare de 42, réduction de 35 % des appels centre de contact. Les agents humains se concentrent sur les demandes complexes et la vente.",
+    "resultats": "2,5M interactions/mois · 65 % demandes résolues sans agent · NPS selfcare 42 · Appels centre de contact -35 % · 15 pays · 3 langues",
+    "source": "Kasisto Case Study Ecobank 2023 / Ecobank Annual Report 2023 / Ecobank Digital Banking Awards",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité selfcare client — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "Blocage carte 24/7 selfcare", "Chatbot NLP opérationnel", "Réclamations 100 % en ligne", "Selfcare taux résolution > 50 %", "NPS selfcare mesuré"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "✗", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Le selfcare bancaire est devenu un droit implicite pour les clients africains exposés à Wave et Orange Money, qui résolvent tout depuis l'app. Une banque dont le client doit se déplacer pour bloquer une carte volée en 2024 subit une atteinte grave à sa réputation. Le déploiement d'un selfcare minimal (blocage carte, consultation solde, réclamation en ligne) est un prérequis de base, pas un différenciateur.",
+    "maturity_max_description": "Chatbot IA résolvant 70 %+ des demandes (consultation, blocage carte, réclamations simples, info produits). Selfcare multicanal (app + WhatsApp + USSD). 90 %+ des opérations courantes réalisables sans agence. NPS selfcare > 45 mesuré mensuellement. Selfcare proactif (notifications avant que le client n'appelle). Escalade fluide vers un agent humain quand nécessaire.",
+    "scoring_rubric": {
+      "score_1_to_20": "Zéro selfcare. Agence ou appel obligatoire pour tout. Pas de blocage carte en ligne. Réclamations physiques.",
+      "score_21_to_40": "FAQ statique. Consultation solde. Pas de blocage carte en ligne. Réclamations par email. Selfcare très limité.",
+      "score_41_to_60": "Blocage carte app ou IVR. Réclamations en ligne trackées. FAQ structurée. Chatbot basique. Selfcare partiel.",
+      "score_61_to_80": "Chatbot NLP 50 %+ résolution. Blocage/déblocage/plafonds selfcare. Portail complet. NPS selfcare mesuré.",
+      "score_81_to_100": "Chatbot IA 70 %+ résolution. 90 %+ ops sans agence. Selfcare proactif. Multicanal. NPS > 45."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur la maturité de son selfcare client dans le contexte bancaire UEMOA. Analyse la disponibilité du blocage de carte en selfcare 24/7, le déploiement d'un chatbot IA pour les demandes courantes, la possibilité de déposer des réclamations en ligne, et le taux de résolution des demandes sans intervention humaine.",
+    "key_questions_for_llm": [
+      "Le blocage et le déblocage de carte bancaire sont-ils disponibles 24h/24, 7j/7 en selfcare via l'application mobile ou l'USSD, sans nécessiter d'appel à la banque ?",
+      "Un chatbot ou assistant virtuel résout-il automatiquement les demandes clients courantes (consultation, mini-relevé, information produits) sans intervention d'un agent humain ?",
+      "Les clients peuvent-ils déposer et suivre leurs réclamations entièrement en ligne (app, web, WhatsApp) sans se déplacer en agence ?",
+      "Quel est le taux de résolution en selfcare (demandes résolues sans agent humain) et est-il mesuré régulièrement ?",
+      "Un mécanisme d'escalade fluide vers un agent humain est-il disponible quand le selfcare ne suffit pas, avec continuité du contexte de la conversation ?"
+    ]
+  }
+}

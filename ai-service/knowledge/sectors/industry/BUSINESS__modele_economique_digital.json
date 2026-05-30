@@ -1,0 +1,284 @@
+{
+  "secteur": "industrie",
+  "axe": "BUSINESS",
+  "sous_axe": "modele_economique_digital",
+  "label": "Modèle économique digital industriel",
+  "description": "Capacité des entreprises industrielles à faire évoluer leur modèle économique grâce au digital : passage de la vente de produits à la vente de services (servitisation), revenus récurrents (maintenance-as-a-service, qualité-as-a-service), plateformes industrielles B2B, et exploitation des données de production comme actif économique dans le contexte CI.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Industrie CI : modèle économique dominant = vente de produits (commodités) — marges faibles, compétition prix",
+      "Servitisation CI naissante : quelques grandes industries CI (SUCAF CI, SIFCA CI) proposent des services associés mais c'est rare",
+      "Industrie cacao CI : pression marges — transformateurs CI coincés entre prix fèves (BOURSE CACAO CI) et prix beurre/poudre (marché international)",
+      "DRC (Différentiel de Revenus sur Cacao CI) : mécanisme CI garantie prix minimum — fenêtre pour services à valeur ajoutée",
+      "Données industrielles CI comme actif : données qualité, traçabilité EUDR, certifications — sous-valorisées",
+      "Modèle MaaS (Maintenance-as-a-Service) CI : quelques acteurs émergent — Schneider Electric CI, Siemens CI en mode subscription"
+    ],
+    "acteurs_cles": [
+      "Conseil Café-Cacao CI — régulation prix cacao CI, DRC, traçabilité exportateurs",
+      "APEX-CI — export industries CI, certifications valeur ajoutée (bio, commerce équitable, EUDR)",
+      "CEPICI — investissements nouvelles industries CI (ZES), modèles économiques émergents",
+      "Schneider Electric CI — EcoStruxure MaaS CI : maintenance équipements électriques industriels subscription",
+      "Siemens CI — maintenance prédictive as-a-service pour grandes industries CI",
+      "BCEAO — réglementation paiements récurrents B2B UEMOA (facturation subscription)"
+    ],
+    "reglementation_locale": [
+      "DGI CI Loi 2022-974 : facturation électronique obligatoire — facilite modèles subscription et paiements récurrents",
+      "Conseil Café-Cacao CI Loi 2012-236 : régulation prix cacao CI, traçabilité exportateurs — opportunité services traçabilité premium",
+      "Code des Investissements CI (Loi 2012-487) : avantages fiscaux nouvelles industries — applicable nouveaux modèles économiques",
+      "BCEAO Instruction 008-05-2015 : services de paiement UEMOA — facturation récurrente B2B (Mobile Money CI, virement UEMOA)",
+      "ISO 45001 / ISO 14001 : certifications HSE industries CI — opportunité services ESG as-a-service",
+      "OHADA : protection contrats service longue durée (MaaS, SaaS industriel) entre entreprises CI"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Modèle économique 100% vente de produits, prix au poids ou au volume. Aucune réflexion sur les services. Aucune différenciation par la valeur ajoutée. Marges soumises à la seule compétition prix.",
+      "indicateurs": [
+        "CA 100% vente produits — prix marché ou prix négocié transactionnel",
+        "0 service associé — ni maintenance, ni consulting, ni formation",
+        "Marge brute < 15% (pression prix commodités CI)",
+        "0 réflexion sur servitisation ou revenus récurrents",
+        "0 exploitation données production comme actif"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Quelques services basiques (formation opérateurs clients, SAV pièces détachées). Notion de valeur ajoutée reconnue mais non monétisée. Réflexion en cours sur différenciation. Aucun modèle récurrent formalisé.",
+      "indicateurs": [
+        "Formation clients sur utilisation produits — gratuite, non facturée",
+        "SAV pièces détachées réactif — délai > 72h, pas de SLA",
+        "Valeur ajoutée reconnue mais non chiffrée ni monétisée",
+        "Aucun modèle subscription ni revenus récurrents",
+        "Données production non partagées ni valorisées économiquement"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Contrats de service maintenus (maintenance préventive, contrôle qualité). Premières offres de valeur ajoutée facturées (certification, formation). Différenciation par la traçabilité (EUDR, commerce équitable). Revenus services 5-15% CA.",
+      "indicateurs": [
+        "Contrats maintenance préventive équipements clients — facturés",
+        "Services formation et certification facturés : 5-15% CA",
+        "Traçabilité EUDR / certifications bio/équitable CI : premium prix +8-15%",
+        "SLA SAV formalisé : délai 24h, taux résolution 85%+",
+        "Données qualité partagées clients (CoA numérique) — différenciation marché"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "Modèle servitisé : 'performance-as-a-service'. Maintenance prédictive en subscription (MaaS CI). Qualité garantie contractuellement (pay-per-outcome). Données industrielles valorisées auprès de clients et partenaires. Revenus récurrents 20-35% CA.",
+      "indicateurs": [
+        "MaaS (Maintenance-as-a-Service) : subscription mensuelle — capteurs IoT + intervention prédictive",
+        "Pay-per-outcome : facturation à la tonne de qualité garantie — non à la tonne livrée",
+        "Données traçabilité EUDR vendues comme service premium à exportateurs CI",
+        "Portail client data : analyses qualité en temps réel — abonnement mensuel",
+        "Revenus récurrents : 20-35% CA — prévisibilité améliorée"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Plateforme industrielle B2B CI. Revenus récurrents > 40% CA. IA optimisation production vendue as-a-service aux concurrents ou fournisseurs. Écosystème d'acteurs autour de la plateforme. Modèle économique digital référence Afrique de l'Ouest.",
+      "indicateurs": [
+        "Plateforme industrielle B2B CI : autres industries paient pour accéder données ou services",
+        "IA optimisation production vendue as-a-service à 3+ clients CI",
+        "Revenus récurrents > 40% CA — flux prévisibles et marges supérieures",
+        "Écosystème : 5+ partenaires intégrés à la plateforme (fournisseurs, clients, logistiques)",
+        "Référence modèle économique digital industriel UEMOA — publication CEPICI"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Quelle part de votre CA provient de services (maintenance, formation, certification, data) vs vente pure de produits ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "0% — 100% vente produits transactionnelle"},
+        {"valeur": 2, "label": "< 5% — quelques services gratuits ou ponctuels"},
+        {"valeur": 3, "label": "5-15% CA — contrats service et certifications facturés"},
+        {"valeur": 4, "label": "20-35% CA — MaaS, pay-per-outcome, données premium"},
+        {"valeur": 5, "label": "> 40% CA — plateforme industrielle B2B CI"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Proposez-vous des contrats de maintenance-as-a-service (MaaS) avec IoT prédictif à vos clients ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — aucun service maintenance proposé"},
+        {"valeur": 2, "label": "SAV réactif non contractualisé — sur demande client"},
+        {"valeur": 3, "label": "Contrats maintenance préventive facturés — visites planifiées"},
+        {"valeur": 4, "label": "MaaS IoT : subscription mensuelle + prédictif capteurs"},
+        {"valeur": 5, "label": "Plateforme MaaS CI : 10+ clients, IA prédictive, SLA 99,5%"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Monétisez-vous vos données de traçabilité ou de qualité (EUDR, certifications bio) comme service premium ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — données non partagées"},
+        {"valeur": 2, "label": "CoA envoyé sur demande — gratuit"},
+        {"valeur": 3, "label": "Traçabilité EUDR : premium prix +8-15% sur vente produit"},
+        {"valeur": 4, "label": "Portail data traçabilité vendu en abonnement à exportateurs CI"},
+        {"valeur": 5, "label": "Plateforme données CI : 5+ clients payants — données traçabilité EUDR"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Avez-vous des revenus récurrents (subscription, SaaS, MaaS) formalisés ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — 0 revenu récurrent"},
+        {"valeur": 2, "label": "Contrats annuels vague — renouvellement incertain"},
+        {"valeur": 3, "label": "Contrats service récurrents : 5-15% CA prévisibles"},
+        {"valeur": 4, "label": "Revenus récurrents 20-35% CA — MaaS + data premium"},
+        {"valeur": 5, "label": "Revenus récurrents > 40% CA — plateforme industrielle"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "Part CA services vs produits",
+      "MaaS / maintenance subscription",
+      "Monétisation données traçabilité",
+      "Revenus récurrents formalisés",
+      "Plateforme industrielle B2B"
+    ],
+    "lignes": [
+      {
+        "organisation": "PMI CI (< 50 employés)",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "100% vente produits, 0 service, 0 données valorisées, 0 récurrent, 0 plateforme"
+      },
+      {
+        "organisation": "Industrie moyenne CI (50-200 employés)",
+        "scores": [2, 2, 2, 2, 1],
+        "note_globale": 2,
+        "commentaire": "< 5% services gratuits, SAV réactif, CoA gratuit, contrats informels"
+      },
+      {
+        "organisation": "SUCAF CI",
+        "scores": [3, 3, 3, 3, 2],
+        "note_globale": 3,
+        "commentaire": "10% CA services (formation, maintenance GMS), traçabilité premium, contrats annuels"
+      },
+      {
+        "organisation": "SIFCA CI",
+        "scores": [4, 4, 4, 4, 3],
+        "note_globale": 4,
+        "commentaire": "25% CA services, MaaS IoT Schneider CI, data EUDR premium, revenus récurrents 28%"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "Schneider Electric CI — EcoStruxure MaaS industries CI",
+      "part_de_marche_estimee": "Leader MaaS équipements industriels CI",
+      "forces": ["EcoStruxure IoT maintenance prédictive CI", "Subscription mensuelle entreprises CI", "SLA 24h Abidjan", "Données énergie valorisées"],
+      "faiblesses": ["Limité équipements Schneider CI uniquement", "Coût subscription élevé PMI CI"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "OLAM Agri Africa — modèle traçabilité data premium (cacao, anacarde)",
+      "part_de_marche_estimee": "Leader modèle économique data traçabilité agricole Afrique",
+      "forces": ["Données traçabilité EUDR vendues comme service", "Premium prix certifications", "Plateforme data fournisseurs Afrique"],
+      "faiblesses": ["Concurrence directe transformateurs CI", "Modèle conçu en dehors CI"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "Siemens Xcelerator — plateforme industrielle as-a-service",
+      "part_de_marche_estimee": "Leader mondial plateforme industrie as-a-service",
+      "forces": ["MaaS complet : maintenance, énergie, qualité", "Marketplace partenaires industriels", "IA production as-a-service", "Présence bureau CI"],
+      "faiblesses": ["Coût inaccessible PMI CI", "Modèle conçu pays industrialisés", "Complexité implémentation CI"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Schneider Electric EcoStruxure CI — MaaS énergie et maintenance",
+      "usage": "Maintenance prédictive IoT en subscription : équipements électriques industriels CI",
+      "niveau_cible": "3+",
+      "cout_estime": "500 000–3 000 000 FCFA/an subscription selon taille usine CI",
+      "disponibilite_ci": "Natif CI — Schneider Electric bureau Abidjan CI"
+    },
+    {
+      "nom": "Odoo CI — module subscription et revenus récurrents",
+      "usage": "Gestion contrats MaaS, facturation récurrente, portail client abonnés",
+      "niveau_cible": "3+",
+      "cout_estime": "800 000–2 500 000 FCFA/an (partenaires Odoo CI Abidjan)",
+      "disponibilite_ci": "International — partenaires Odoo CI disponibles"
+    },
+    {
+      "nom": "APEX-CI certifications premium — bio, commerce équitable, EUDR CI",
+      "usage": "Certifications permettant premium prix à l'export : bio CI, Rainforest Alliance, EUDR compliant",
+      "niveau_cible": "3+",
+      "cout_estime": "Certifications : 2 000 000–8 000 000 FCFA selon organisme (Bureau Veritas CI, SGS CI)",
+      "disponibilite_ci": "Natif CI — organismes certification présents Abidjan"
+    },
+    {
+      "nom": "Power BI + Azure IoT Hub — plateforme data industrielle CI",
+      "usage": "Data platform industrielle CI : données capteurs + qualité + traçabilité — vendues en portail client abonnés",
+      "niveau_cible": "4",
+      "cout_estime": "Azure IoT Hub : 50 000–200 000 FCFA/mois + Power BI Embedded",
+      "disponibilite_ci": "International — cloud Azure accessible CI"
+    },
+    {
+      "nom": "Conseil Café-Cacao CI — services traçabilité DRC",
+      "usage": "Accréditation exportateur CI : accès mécanismes DRC et traçabilité cacao — modèle premium exportation",
+      "niveau_cible": "3+",
+      "cout_estime": "Cotisation exportateurs CI (variable selon tonnage)",
+      "disponibilite_ci": "Natif CI — Conseil Café-Cacao Abidjan Plateau"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "Chocolaterie Céleste CI — passage de vente fèves cacao à services traçabilité EUDR premium",
+    "organisation": "Chocolaterie Céleste CI (industrie transformation cacao CI, Yamoussoukro — 8 000 tonnes fèves/an)",
+    "contexte": "Chocolaterie Céleste CI : transformateur cacao CI de taille moyenne. Vend 100% de sa production (liqueur de cacao, beurre, poudre) à des exportateurs CI et importateurs européens. Marges : 8-12% sur un marché cacao très compétitif. Entrée en vigueur EUDR (Règlement EU déforestation) 2025 : les acheteurs européens exigent traçabilité géospatiale parcelles fournisseurs.",
+    "probleme": "EUDR : sans traçabilité géospatiale, les exportateurs européens ne peuvent plus acheter le cacao CI à partir de 2025 — perte potentielle 100% des clients européens. Coût mise en conformité : estimé 150 M FCFA pour Céleste CI seule. Opportunité identifiée : 12 autres PMI cacao CI dans la même situation.",
+    "solution_deployee": "Investissement traçabilité géospatiale EUDR (GPS parcelles 850 fournisseurs, app mobile collecte données, base données APEX-CI). Décision stratégique : ne pas absorber le coût seul — lancer 'Traçabilité Céleste CI as-a-Service' pour les 12 autres PMI cacao CI. Plateforme traçabilité EUDR : 65 M FCFA (vs 150 M FCFA en silo). Facturation service : 18 000 FCFA/tonne traitée aux 12 clients PMI cacao CI.",
+    "resultats": "Propre conformité EUDR : atteinte 8 mois avant deadline. Revenus service traçabilité : 12 clients × 3 500 tonnes moyennes × 18 000 FCFA = 756 M FCFA/an nouveaux. Coût plateforme amorti en 1 mois. Marge totale entreprise : 8% → 22% (service traçabilité marge 68%). 3 clients européens récupérés qui avaient suspendu achats. Modèle présenté APEX-CI comme cas d'usage EUDR CI — 4 nouvelles PMI cacao intéressées.",
+    "enseignements": [
+      "Les contraintes réglementaires (EUDR CI) sont les meilleures opportunités de servitisation — la conformité à soi seul est un coût, vendue comme service c'est un business",
+      "Le passage de 'transformateur cacao CI' à 'opérateur plateforme traçabilité cacao CI' change radicalement la structure des marges — de 8% à 22%",
+      "Mutualiser une infrastructure CI coûteuse entre 12 PMI et la vendre en service divise le coût par 12 et crée une source de revenus récurrents"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "servitisation industrielle CI", "MaaS maintenance as-a-service", "revenus récurrents industrie",
+      "traçabilité EUDR service premium", "données industrielles valorisées", "subscription industrielle CI",
+      "pay-per-outcome", "plateforme industrielle B2B", "modèle économique digital industrie CI",
+      "Conseil Café-Cacao CI", "APEX-CI certifications premium", "Schneider EcoStruxure CI MaaS"
+    ],
+    "signaux_niveau_avance": [
+      "Revenus services > 10% CA formalisés",
+      "Contrats MaaS avec SLA client",
+      "Traçabilité EUDR vendue comme service",
+      "Données production monétisées auprès de tiers",
+      "Revenus récurrents > 20% CA prévisibles"
+    ],
+    "pieges_frequents": [
+      "SAV réactif gratuit ≠ MaaS — la maintenance sur appel non contractualisée n'est pas un service récurrent",
+      "Certification bio/EUDR ≠ service — la certification donne un premium sur le produit, pas un revenu de service distinct",
+      "Données non partagées = actif inexploité — les données qualité et traçabilité CI valent des milliards non capturés",
+      "Revenus services = formations gratuites 'pour fidéliser' — sans facturation, c'est du coût déguisé"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "100% vente produits commodités. 0 service. 0 récurrent. Marge < 15%. 0 données valorisées.",
+      "score_21_to_40": "< 5% services gratuits. SAV réactif. CoA gratuit. Contrats informels. 0 platform.",
+      "score_41_to_60": "5-15% CA services facturés. Maintenance préventive. Traçabilité premium prix. SLA formalisé.",
+      "score_61_to_80": "20-35% CA récurrent. MaaS IoT. Data premium vendue. Pay-per-outcome. Portail abonnés.",
+      "score_81_to_100": "Plateforme industrielle B2B CI. > 40% CA récurrent. IA as-a-service. Référence UEMOA."
+    }
+  }
+}

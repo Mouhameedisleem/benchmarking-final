@@ -65,7 +65,10 @@ public class CompanyController {
     @GetMapping("/{id}/ai-questions")
     @PreAuthorize("hasAnyRole('ADMIN', 'CONSULTANT')")
     public ResponseEntity<java.util.Map<String, Object>> getAiQuestions(@PathVariable Long id) {
-        return ResponseEntity.ok(companyService.generateAiQuestions(id));
+        return ResponseEntity.ok()
+                .header("Cache-Control", "no-store, no-cache, must-revalidate")
+                .header("Pragma", "no-cache")
+                .body(companyService.generateAiQuestions(id));
     }
 
     @GetMapping("/{id}/sector-questions")

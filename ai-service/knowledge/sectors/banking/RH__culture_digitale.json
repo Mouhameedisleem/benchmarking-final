@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "axis": "RH",
+    "sub_axis": "Culture digitale",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Culture fintech interne — attirer et retenir les talents digitaux dans les banques",
+      "description": "Les ingénieurs et data scientists africains préfèrent rejoindre les fintechs (Wave, Flutterwave, Chipper Cash) plutôt que les banques traditionnelles perçues comme bureaucratiques. Les banques qui créent une culture innovante, agile et tech-first retiennent 40 % plus de talents digitaux.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "35 % des banques africaines ont un programme de marque employeur digital actif (LinkedIn Africa 2024)",
+      "source": "LinkedIn Africa Talent Trends Banking 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Digital literacy bancaire — formation de l'ensemble des collaborateurs",
+      "description": "La transformation digitale échoue quand les collaborateurs non-IT (conseillers clientèle, directeurs d'agence, back-office) résistent aux nouveaux outils. Les banques qui forment 100 % de leurs collaborateurs aux bases du digital avancent 3× plus vite dans leur transformation.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "40 % des banques africaines ont un programme de digital literacy entreprise (EY Africa 2024)",
+      "source": "EY Africa Workforce Transformation Banking 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Banquier digital — reconversion des conseillers d'agence vers des rôles digitaux",
+      "description": "La digitalisation des transactions réduit les tâches de guichet mais crée de nouveaux besoins : conseillers digitaux, analystes data, développeurs mobiles. Les banques UEMOA doivent reconvertir leurs collaborateurs agence vers ces nouveaux rôles plutôt que de recruter en externe.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "20 % des banques africaines ont un programme de reconversion interne formalisé (Deloitte 2024)",
+      "source": "Deloitte Africa Banking Talent Transformation 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Incentives digitaux — récompenser l'adoption des outils digitaux par les équipes",
+      "description": "Les banques leaders lient les primes des conseillers bancaires et directeurs d'agence à des KPIs digitaux : taux d'activation mobile banking, NPS digital, taux d'ouverture de compte digitale. Ces incentives accélèrent la transition culturelle.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "25 % des banques africaines ont intégré des KPIs digitaux dans les objectifs individuels (McKinsey 2024)",
+      "source": "McKinsey Africa Banking Culture Change 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Plateforme LMS / E-learning Banking",
+      "category": "Formation digitale des collaborateurs",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Cornerstone OnDemand Banking", "Workday Learning", "SAP SuccessFactors Learning", "Docebo", "360Learning (France)"]
+    },
+    {
+      "name": "Outils de collaboration digitale",
+      "category": "Culture de travail digital",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne",
+      "leading_vendors": ["Microsoft 365 Teams", "Google Workspace", "Slack", "Zoom", "Notion"]
+    },
+    {
+      "name": "Plateforme de marque employeur",
+      "category": "Attraction talents digitaux",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["LinkedIn Talent Solutions", "Glassdoor", "Indeed Employer Branding", "Welcome to the Jungle", "Jobboard Africa (Afrique)"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Société Générale Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Programme de formation digitale SG Groupe déployé en CI, 100 % des collaborateurs formés aux bases digitales en 2022, KPIs digitaux intégrés aux objectifs annuels",
+        "differentiator": "Bénéficie de la plateforme e-learning SG School of Banking déployée dans 60 pays — 200+ modules de formation digitale accessibles à tous les collaborateurs CI",
+        "source": "SGCI Rapport Annuel 2023 / SG Group HR Report 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Ecobank University Digital : plateforme e-learning bancaire panafricaine, 15 000 collaborateurs formés au digital en 2023, hackathons internes annuels",
+        "differentiator": "Ecobank University — seule université corporate bancaire africaine avec un curriculum digital complet accessible à 33 filiales en 3 langues",
+        "source": "Ecobank Annual Report 2023 / Ecobank University Digital Report"
+      },
+      {
+        "organisation": "Standard Bank",
+        "country": "Afrique du Sud / Pan-Afrique",
+        "key_practice": "Standard Bank Digital Academies : 4 académies (Data, Cloud, Agile, Cybersécurité), 8 000 collaborateurs formés/an, partenariats Coursera et Pluralsight",
+        "differentiator": "Programme de reconversion le plus structuré d'Afrique subsaharienne : 800 conseillers d'agence reconvertis en analystes data et conseillers digitaux en 2023",
+        "source": "Standard Bank Annual Report 2023 / Standard Bank Learning & Development Report"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "DBS Bank",
+        "country": "Singapour",
+        "key_practice": "22 000 employés formés à l'IA et au digital banking, DBS-Coursera partnership, 40 heures de formation/an/employé obligatoires",
+        "differentiator": "DBS a transformé 22 000 banquiers traditionnels en 'digital bankers' en 3 ans — le programme de transformation culturelle le plus ambitieux du secteur bancaire asiatique",
+        "source": "DBS Annual Report 2023 / DBS-Coursera Partnership Report"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucun programme de culture digitale. Résistance forte au changement. Formation digitale absente. IT perçue comme un département support. Pas de marque employeur digital.",
+    "level_2_developing": "Quelques formations digitales ad hoc. Awareness campaigns basiques. Outils de collaboration traditionnels. Pas de KPIs digitaux dans les objectifs. Recrutement digital non différencié.",
+    "level_3_defined": "Programme de digital literacy structuré pour tous les collaborateurs. LMS déployé. KPIs digitaux dans les objectifs des managers. Collaboration via Microsoft Teams ou Google Workspace. Premiers hackathons internes.",
+    "level_4_managed": "80 %+ des collaborateurs formés au digital. Champions digitaux dans chaque agence. KPIs digitaux dans tous les objectifs individuels. Académies digitales spécialisées. Marque employeur digitale active.",
+    "level_5_optimizing": "Culture digitale institutionnalisée. 100 % formation digitale continue. Reconversion interne systématique. Attracts top digital talent. KPIs digitaux = 50 %+ des objectifs. Hackathons trimestriels. Intrapreneuriat actif."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction BCEAO sur la formation continue des collaborateurs bancaires",
+      "issuing_body": "BCEAO",
+      "scope": "Toutes les banques UEMOA",
+      "key_requirement": "Les collaborateurs bancaires occupant des fonctions de conformité, risque et contrôle interne doivent suivre des formations continues documentées et certifiées",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Fuite des talents digitaux vers les fintechs — creusement du déficit de compétences",
+      "description": "Les ingénieurs logiciels, data scientists et product managers africains préfèrent les fintechs qui offrent des salaires compétitifs, du télétravail et une culture innovante. Sans programme de rétention ciblé, les banques perdront leurs meilleurs talents digitaux.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Créer des parcours de carrière digitaux différenciés, des niveaux de rémunération compétitifs avec les fintechs pour les profils techniques, et une culture d'innovation interne mesurable (hackathons, publications, brevets)."
+    },
+    {
+      "title": "Résistance au changement des directeurs d'agence — blocage de la transformation",
+      "description": "Les directeurs d'agence dont le bonus dépend du volume de transactions en agence ont un intérêt à freiner le digital. Cette résistance passive (décourager les clients d'utiliser l'app) peut ralentir de 50 % le programme de transformation.",
+      "severity": "Élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Aligner les incentives des directeurs d'agence sur les KPIs digitaux (taux activation mobile, NPS digital, ouvertures de compte digitales) plutôt que sur le volume transactions en agence."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Partenariats universités africaines — pipeline de talents digitaux bancaires",
+      "description": "Nouer des partenariats avec l'INPHB, l'INP-HB, l'UVCI et les grandes écoles de gestion ivoiriennes pour créer des programmes de formation bancaire digital, des stages structurés et des offres d'emploi ciblées — construire un pipeline de talents à faible coût.",
+      "impact_level": "Élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Partenariat formation",
+      "acquirer_or_investor": "DBS Bank",
+      "target": "Coursera — programme de formation digital banking",
+      "amount": "Partenariat pluriannuel",
+      "date": "2020-2023",
+      "strategic_rationale": "Former 22 000 collaborateurs DBS aux compétences digitales (IA, data, cloud, agilité) via Coursera avec des parcours certifiants adaptés au secteur bancaire",
+      "source": "DBS-Coursera Partnership Report 2023 / DBS Annual Report 2023"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Standard Bank Africa",
+    "pays": "Afrique du Sud / Pan-Afrique",
+    "technologie": "Standard Bank Digital Academies — reconversion de 800 conseillers d'agence en 2023",
+    "description": "Face à la baisse de fréquentation des agences, Standard Bank a lancé en 2021 ses 4 Digital Academies (Data Science, Cloud Engineering, Agile Delivery, Cybersécurité). Le programme forme les collaborateurs bancaires existants (conseillers, back-office) vers des rôles digitaux. En 2023 : 8 000 collaborateurs formés/an dans 20 pays africains, 800 conseillers reconvertis en data analysts et conseillers digitaux, 40 % d'économies sur le recrutement externe de profils digitaux. Le programme a réduit le taux de rotation des talents digitaux de 28 % à 15 %. Standard Bank publie annuellement son 'Digital Skills Dividend' mesurant le ROI de la formation.",
+    "resultats": "8 000 formés/an · 800 reconversions · Recrutement externe -40 % · Rotation talents 28 % → 15 % · 20 pays couverts",
+    "source": "Standard Bank Annual Report 2023 / Standard Bank Digital Learning Report 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité culture digitale — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "Programme digital literacy entreprise", "LMS déployé et utilisé", "KPIs digitaux dans objectifs individuels", "Académie/programme reconversion digitale", "Marque employeur digitale active"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "✗", "✗", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La culture digitale est le facteur le plus négligé et le plus critique de la transformation bancaire en UEMOA. Les outils digitaux ne servent à rien si les collaborateurs résistent à les utiliser ou à les promouvoir. Lier les primes des directeurs d'agence aux KPIs digitaux est la transformation la plus impactante qu'une banque UEMOA puisse réaliser rapidement — et elle ne coûte rien en investissement SI.",
+    "maturity_max_description": "100 % des collaborateurs formés au digital avec LMS actif. KPIs digitaux représentant 50 %+ des objectifs individuels. Académies digitales spécialisées reconvertissant les collaborateurs. Champions digitaux dans chaque agence. Marque employeur attractivant les talents tech. Hackathons trimestriels. Programme d'intrapreneuriat actif.",
+    "scoring_rubric": {
+      "score_1_to_20": "Pas de culture digitale. Résistance forte. Pas de formation. IT = département support. Pas de marque employeur.",
+      "score_21_to_40": "Formations ad hoc. Awareness basique. Outils traditionnels. Pas de KPIs digitaux. Recrutement non différencié.",
+      "score_41_to_60": "Programme digital literacy. LMS déployé. KPIs digitaux managers. Microsoft Teams/Google. Hackathons pilotes.",
+      "score_61_to_80": "80 %+ formés. Champions digitaux. KPIs tous. Académies spécialisées. Marque employeur active.",
+      "score_81_to_100": "Culture institutionnalisée. 100 % formation continue. Reconversion systématique. Top talent attirés. KPIs 50 %+."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur sa maturité en culture digitale dans le contexte bancaire UEMOA. Analyse l'existence d'un programme de digital literacy pour tous les collaborateurs, l'intégration de KPIs digitaux dans les objectifs individuels, la présence d'académies de formation digitale et la capacité à attirer les talents tech.",
+    "key_questions_for_llm": [
+      "Un programme de formation à la culture et aux outils digitaux existe-t-il pour l'ensemble des collaborateurs, pas seulement pour l'IT ?",
+      "Une plateforme LMS (Learning Management System) est-elle déployée avec des modules de formation digitale bancaire accessibles à tous ?",
+      "Des KPIs digitaux (taux d'activation mobile banking, NPS digital, part de transactions digitales) sont-ils intégrés dans les objectifs individuels des directeurs d'agence et des conseillers ?",
+      "Un programme de reconversion ou d'académie digitale existe-t-il pour former les collaborateurs bancaires vers des rôles digitaux (data analyst, conseiller digital, product manager) ?",
+      "La banque dispose-t-elle d'une stratégie de marque employeur digitale pour attirer des profils techniques (développeurs, data scientists, UX designers) ?"
+    ]
+  }
+}

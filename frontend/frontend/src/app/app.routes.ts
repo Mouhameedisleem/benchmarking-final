@@ -34,6 +34,7 @@ import { UserDetailsComponent } from './features/users/user-details/user-details
 import { ScoreResultComponent } from './features/results/score-result/score-result.component';
 import { ReportGeneratorComponent } from './features/reports/report-generator/report-generator.component';
 import { ConsultantReviewComponent } from './features/evaluations/consultant-review/consultant-review.component';
+import { ActionPlanComponent } from './features/action-plan/action-plan.component';
 
 // Guards
 import { AuthGuard } from './core/guards/auth.guard';
@@ -75,6 +76,19 @@ export const routes: Routes = [
   {
     path: 'consultant/frameworks',
     component: ConsultantFrameworksComponent,
+    canActivate: [AuthGuard, RoleGuard],
+    data: { roles: ['CONSULTANT', 'ADMIN'] }
+  },
+  {
+    path: 'consultant/action-plan/:evaluationId',
+    component: ActionPlanComponent,
+    canActivate: [AuthGuard, RoleGuard],
+    data: { roles: ['CONSULTANT', 'ADMIN'] }
+  },
+  {
+    path: 'consultant/rapport',
+    loadComponent: () => import('./features/reports/consultant-rapport/consultant-rapport.component')
+      .then(m => m.ConsultantRapportComponent),
     canActivate: [AuthGuard, RoleGuard],
     data: { roles: ['CONSULTANT', 'ADMIN'] }
   },

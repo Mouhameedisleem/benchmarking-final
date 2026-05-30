@@ -1,0 +1,286 @@
+{
+  "secteur": "btp",
+  "axe": "IT_DATA",
+  "sous_axe": "socle_it",
+  "label": "Socle IT et infrastructure numérique BTP",
+  "description": "Capacité à disposer d'une infrastructure IT robuste et adaptée aux contraintes des chantiers BTP en Côte d'Ivoire : connectivité 4G/fibre chantier, postes de travail BIM (PC haute performance), tablettes durciées IP65, onduleurs CIE CI, routeurs 4G Peplink, MDM Microsoft Intune et cloud Microsoft 365/Azure PCP MENA CI.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Chantiers CI : absence de fibre — dépendance 4G Orange CI / MTN CI / Moov Africa CI — réseau variable selon localisation",
+      "Coupures CIE CI : fréquentes sur chantiers CI (2-6h/jour en zone péri-urbaine) — onduleurs et groupes électrogènes obligatoires",
+      "PC BIM CI : Revit 2024 + Autodesk exige 32 Go RAM min, GPU NVIDIA RTX — PC bureau standard CI insuffisant",
+      "Tablettes grand public (Samsung Tab) : IP non adapté chantier CI (poussière, eau, chutes) — TCO supérieur aux durciées sur 3 ans",
+      "Connectivité BIM 360 / Procore CI : besoin 10 Mbps upstream stable pour sync maquettes BIM > 500 Mo",
+      "IT shadow BTP CI : licences Revit piratées sur chantiers — risque juridique et sécurité (malware)",
+      "PCP MENA CI (Microsoft Cloud pour les marchés publics CI) : conformité stockage données projets État CI"
+    ],
+    "acteurs_cles": [
+      "Orange CI / MTN CI / Moov Africa CI — opérateurs télécoms CI : 4G chantier, routeurs SIM",
+      "CIE CI — Compagnie Ivoirienne d'Électricité : alimentation électrique chantiers, coupures gestion",
+      "Microsoft CI — partenaires M365 / Azure : déploiements cloud BTP CI",
+      "Dell CI / HP CI — revendeurs PC BIM CI haute performance",
+      "Durabook / Panasonic — tablettes durciées IP65 chantier CI",
+      "Peplink / Cradlepoint — routeurs 4G multi-SIM chantier CI",
+      "ARTCI CI — réglementation SI et télécommunications CI"
+    ],
+    "reglementation_locale": [
+      "ARTCI CI : réglementation opérateurs télécoms CI — QoS 4G, couverture nationale",
+      "PCP MENA CI (Microsoft) : hébergement données projets État CI conformes — cloud souverain CI",
+      "APDP CI Loi 2013-450 : localisation données personnelles CI — cloud étranger soumis à accord transfert",
+      "BNETD CI Directive BIM 2023 : projets CI > 5 Mds FCFA — CDE (Common Data Environment) obligatoire",
+      "Code du Commerce CI : facturation et archivage électronique conformes — durée 10 ans OHADA",
+      "Douanes CI : importation matériel IT — droits douane 5-20% valeur déclarée (impacte TCO matériel)"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Infrastructure IT minimale ou inexistante. PC bureau standard sans capacité BIM. Partage WiFi box personnelle sur chantier. Aucun onduleur. Tablettes grand public endommagées régulièrement. Données sur clé USB.",
+      "indicateurs": [
+        "PC bureau 8 Go RAM — Revit ne fonctionne pas correctement ou pas installé",
+        "WiFi chantier : partage 4G smartphone du chef de chantier",
+        "0 onduleur — coupures CIE CI = pertes de données régulières",
+        "Tablettes Samsung Tab non durciées — 2+ remplacements/an par chantier",
+        "Données projets : clé USB et email — aucun serveur ni cloud"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Quelques PC capables de faire tourner Revit (16 Go RAM). WiFi partage box 4G. Onduleurs ponctuels sur serveur bureau. Tablettes grand public protégées par coques. Serveur NAS local au bureau. Aucun MDM.",
+      "indicateurs": [
+        "2-3 PC 16 Go RAM Revit — partagés entre ingénieurs BIM",
+        "Box 4G Orange CI sur chantier — débit insuffisant pour sync BIM 360",
+        "Onduleur sur serveur bureau uniquement — chantiers sans protection",
+        "Tablettes avec coques renforcées — 1 remplacement/an estimé",
+        "NAS bureau local — aucune sauvegarde automatique, aucun accès chantier"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Postes BIM dédiés (32 Go RAM, GPU NVIDIA). Routeurs 4G Peplink chantier pour connexion stable BIM 360. Tablettes durciées IP65 par chef de chantier. Onduleurs chantier pour équipements réseau. Cloud Microsoft 365 déployé. MDM Intune basique.",
+      "indicateurs": [
+        "PC BIM 32 Go RAM + GPU NVIDIA RTX — 1/ingénieur BIM",
+        "Routeur 4G Peplink chantier : 20+ Mbps stable, failover SIM Orange CI/MTN CI",
+        "Tablettes Durabook R8 ou Panasonic FZ-G2 IP65 — 0 remplacement en 18 mois",
+        "Onduleurs chantier : routeurs et PC chantier protégés CIE CI coupures",
+        "M365 déployé + MDM Intune : gestion centralisée parc tablettes et smartphones"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "Infrastructure IT BTP haute disponibilité. PC workstations BIM (64 Go RAM, dual GPU). Routeurs Peplink SD-WAN multi-opérateurs. Tablettes durciées 4G toute la flotte chantier. Azure cloud BTP CI PCP MENA. MDM Intune complet avec MAM. Sauvegarde cloud automatique chantier temps réel.",
+      "indicateurs": [
+        "Workstations BIM 64 Go RAM + dual GPU NVIDIA RTX CI : rendu BIM 4D/5D fluide",
+        "SD-WAN Peplink Balance : Orange CI + MTN CI + VSAT backup — 99,5% uptime",
+        "100% flotte chantier tablettes durciées IP65 4G — MDM Intune géré centralement",
+        "Azure CI PCP MENA : données BIM 360 et projets État CI hébergées souverain",
+        "Sauvegarde automatique toutes les heures — RTO < 4h, RPO < 1h"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Infrastructure IT BTP de niveau international. Edge computing chantier (serveur local mini-PC pour BIM hors ligne). 5G chantier pilote ARTCI CI. Infrastructure as Code (IaC). Zéro incident IT non anticipé. Référence infrastructure IT BTP CI.",
+      "indicateurs": [
+        "Edge computing chantier : mini-serveur NUC local — BIM offline sync automatique",
+        "5G chantier pilote ARTCI CI (disponibilité 2025-2026 CI)",
+        "Infrastructure as Code (Terraform CI) — déploiement chantier < 2h",
+        "SLA IT interne : 99,9% uptime — 0 incident chantier non anticipé en 12 mois",
+        "Référence infrastructure BTP CI ARTCI CI — publication étude de cas"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Quelles sont les caractéristiques de vos postes de travail BIM ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "PC bureau standard 8 Go RAM — Revit ne tourne pas correctement"},
+        {"valeur": 2, "label": "PC 16 Go RAM — Revit lent, partagé entre ingénieurs"},
+        {"valeur": 3, "label": "PC dédié BIM 32 Go RAM + GPU NVIDIA — 1/ingénieur BIM"},
+        {"valeur": 4, "label": "Workstation 64 Go RAM + dual GPU — rendu BIM 4D/5D fluide"},
+        {"valeur": 5, "label": "Workstation + edge computing chantier — BIM offline synchronisé"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Comment assurez-vous la connectivité réseau sur vos chantiers CI ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Partage 4G smartphone chef de chantier"},
+        {"valeur": 2, "label": "Box 4G Orange CI — débit insuffisant pour sync BIM"},
+        {"valeur": 3, "label": "Routeur 4G Peplink chantier — 20+ Mbps stable"},
+        {"valeur": 4, "label": "SD-WAN Peplink multi-opérateurs CI — 99,5% uptime"},
+        {"valeur": 5, "label": "SD-WAN + 5G pilote ARTCI CI + VSAT backup — 99,9% uptime"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Quels types de tablettes utilisez-vous sur vos chantiers ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Pas de tablettes — papier uniquement"},
+        {"valeur": 2, "label": "Tablettes grand public (Samsung Tab) — remplacées régulièrement"},
+        {"valeur": 3, "label": "Tablettes durciées IP65 (Durabook R8 ou Panasonic FZ-G2)"},
+        {"valeur": 4, "label": "100% flotte durciées IP65 4G — MDM Intune centralisé"},
+        {"valeur": 5, "label": "Durciées + edge computing local chantier — BIM offline"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Comment protégez-vous votre infrastructure contre les coupures CIE CI ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Pas de protection — pertes de données régulières"},
+        {"valeur": 2, "label": "Onduleur sur serveur bureau uniquement"},
+        {"valeur": 3, "label": "Onduleurs chantier + groupe électrogène — réseau protégé"},
+        {"valeur": 4, "label": "UPS + générateur + sauvegarde cloud automatique < 1h"},
+        {"valeur": 5, "label": "Infrastructure redondante : RTO < 1h, RPO < 15 min, 0 perte données"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "PC BIM haute performance",
+      "Connectivité chantier stable",
+      "Tablettes durciées IP65",
+      "Protection coupures CIE CI",
+      "Cloud et MDM déployés"
+    ],
+    "lignes": [
+      {
+        "organisation": "PME BTP CI classe D-E",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "PC standard, WiFi smartphone, tablettes grand public cassées, 0 onduleur, 0 cloud"
+      },
+      {
+        "organisation": "SETIMA CI",
+        "scores": [2, 2, 2, 2, 2],
+        "note_globale": 2,
+        "commentaire": "PC 16 Go partagés, box 4G, tablettes coques, onduleur bureau, NAS local"
+      },
+      {
+        "organisation": "SATCI CI",
+        "scores": [4, 4, 4, 3, 4],
+        "note_globale": 4,
+        "commentaire": "Workstations BIM, Peplink SD-WAN, Durabook R8 100%, onduleurs chantier, M365+Intune"
+      },
+      {
+        "organisation": "COLAS CI",
+        "scores": [5, 4, 5, 5, 5],
+        "note_globale": 5,
+        "commentaire": "Workstations dual GPU, SD-WAN multi-SIM, durciées 100%, UPS + GE, Azure PCP MENA CI"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "Orange Business CI — connectivité chantier BTP CI",
+      "part_de_marche_estimee": "45% connectivité entreprise BTP CI",
+      "forces": ["Meilleure couverture 4G CI (88% territoire)", "Routeurs 4G professionnels Orange Business", "SLA entreprise disponible CI", "Fibre dédiée chantiers Abidjan"],
+      "faiblesses": ["Zones rurales CI : couverture 4G limitée", "Coût SLA entreprise élevé PME BTP"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "Peplink (distributeur Afrique de l'Ouest) — SD-WAN chantier",
+      "part_de_marche_estimee": "Référence routeurs SD-WAN BTP Afrique",
+      "forces": ["Multi-SIM Orange CI + MTN CI + Moov CI failover", "Robustesse chantier (IP67, température tropicale)", "Déploiement < 30 min", "Gestion cloud Peplink InControl2"],
+      "faiblesses": ["Prix élevé unitaire (300 000–600 000 FCFA/routeur)", "SAV CI limité — retour usine"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "Microsoft Azure / M365 — cloud BTP CI",
+      "part_de_marche_estimee": "Leader cloud BTP mondial",
+      "forces": ["PCP MENA CI : conformité données État CI", "Intune MDM chantier", "SharePoint GED BIM", "Teams + BIM 360 intégration"],
+      "faiblesses": ["Coût USD — change FCFA", "Latence Azure Europe vs CI (< 200ms acceptable BIM 360)", "Dépendance internet stable CI"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Peplink Balance 20X — routeur SD-WAN chantier CI",
+      "usage": "Connectivité chantier stable multi-SIM (Orange CI + MTN CI), failover automatique, VPN",
+      "niveau_cible": "3+",
+      "cout_estime": "350 000–600 000 FCFA/unité",
+      "disponibilite_ci": "International — distributeurs CI (Côte d'Ivoire Télécom partenaires)"
+    },
+    {
+      "nom": "Durabook R8 — tablette durcie IP65 chantier CI",
+      "usage": "Tablette chantier résistante : IP65 poussière/eau, chutes 1,8m, Procore/BatiScript CI",
+      "niveau_cible": "3+",
+      "cout_estime": "350 000–500 000 FCFA/unité (vs Samsung Tab 180 000 FCFA × 3 remplacements)",
+      "disponibilite_ci": "International — importé CI, disponible via distributeurs IT Abidjan"
+    },
+    {
+      "nom": "Microsoft Intune MDM — gestion parc IT chantier CI",
+      "usage": "MDM centralisé tablettes et smartphones : déploiement apps, effacement distant, politique BYOD",
+      "niveau_cible": "3+",
+      "cout_estime": "Inclus M365 Business Premium (150 000–300 000 FCFA/user/an)",
+      "disponibilite_ci": "International — partenaires Microsoft CI"
+    },
+    {
+      "nom": "Dell Precision 5680 / HP ZBook Fury — PC BIM chantier CI",
+      "usage": "Workstation BIM : 32-64 Go RAM, NVIDIA RTX 3000 Ada, Revit + Navisworks fluide",
+      "niveau_cible": "3+",
+      "cout_estime": "1 500 000–3 000 000 FCFA/unité",
+      "disponibilite_ci": "International — importé CI (Dell Direct CI, HP revendeurs Abidjan)"
+    },
+    {
+      "nom": "APC Smart-UPS 1500VA — onduleur chantier CI",
+      "usage": "Protection coupures CIE CI : routeur + PC chantier — 30 min autonomie mini",
+      "niveau_cible": "3+",
+      "cout_estime": "150 000–300 000 FCFA/unité",
+      "disponibilite_ci": "International — disponible CI (Schneider Electric CI distributeurs)"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "SATCI CI — infrastructure IT chantier : tablettes Durabook R8 + Peplink SD-WAN 8 chantiers simultanés",
+    "organisation": "SATCI CI (Société Africaine de Travaux de Construction et d'Ingénierie, Abidjan) — 8 chantiers résidentiels simultanés CI",
+    "contexte": "2022 : SATCI CI déploie Procore sur 8 chantiers simultanés Abidjan. Infrastructure initiale : tablettes Samsung Tab S7 (180 000 FCFA/unité), WiFi box 4G, PC bureau 16 Go partagés. Problèmes : 2 tablettes Samsung cassées/chantier en 9 mois (eau, poussière, chutes), débit 4G insuffisant pour sync Procore (photos 4K + maquettes BIM), coupures CIE CI 3-4h/jour sur chantiers Yopougon.",
+    "probleme": "Coût remplacement tablettes : 2 Samsung Tab × 8 chantiers × 180 000 FCFA × 9 mois = 2,88 M FCFA/an. Pertes données coupures CIE CI : 2 rapports journaliers perdus/semaine. Sync Procore : timeout fréquent — 38% des uploads photos échouent. Chef de chantier sans tablette = retour au papier.",
+    "solution_deployee": "Tablettes Durabook R8 IP65 (420 000 FCFA/unité) × 16 unités (2/chantier). Routeurs Peplink Balance 20X × 8 chantiers (2 SIM : Orange CI + MTN CI failover automatique). APC Smart-UPS 1000VA × 8 chantiers (routeur + PC chantier protégés). MDM Microsoft Intune : gestion centralisée 16 tablettes — déploiement Procore, MAM, effacement distant. PC BIM Dell Precision 5680 32 Go RAM × 4 ingénieurs BIM bureau.",
+    "resultats": "Tablettes Durabook R8 : 0 remplacement en 18 mois (vs 2,88 M FCFA/an Samsung Tab). TCO Durabook < Samsung Tab sur 3 ans (même prix achat, 0 remplacement). Connectivité Peplink : 99,2% uptime chantier (vs 71% box 4G). Uploads Procore : timeout 38% → 2%. Coupures CIE CI : 0 perte de données (UPS 30 min + sauvegarde cloud auto). Adoption Procore : 72% utilisateurs actifs (tablettes fiables = adoption chantier réelle). MDM Intune : déploiement app nouvelle version = 4h (vs 2 jours manuel). Économie totale infrastructure vs situation initiale : 3,8 M FCFA/an.",
+    "enseignements": [
+      "Une tablette grand public sur chantier CI coûte plus cher qu'une durcie sur 3 ans — le prix achat initial est trompeur",
+      "Le Peplink SD-WAN multi-SIM est le seul moyen fiable d'avoir 20+ Mbps stable sur chantier CI — aucune SIM seule ne garantit ce débit",
+      "L'onduleur APC sur chantier CI est la meilleure assurance contre les coupures CIE CI : 150 000 FCFA pour protéger des données représentant des mois de travail"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "tablettes durciées IP65", "Durabook", "Panasonic FZ-G2", "PC BIM 32 Go", "GPU NVIDIA RTX",
+      "Peplink SD-WAN", "routeur 4G chantier CI", "Orange CI MTN CI connectivité",
+      "MDM Intune", "Microsoft 365", "Azure PCP MENA CI", "onduleur CIE CI",
+      "coupures électricité chantier CI", "edge computing chantier", "infrastructure IT BTP CI"
+    ],
+    "signaux_niveau_avance": [
+      "Workstations BIM 32+ Go RAM + GPU dédiées",
+      "Peplink SD-WAN multi-SIM 99%+ uptime chantier",
+      "100% tablettes durciées IP65 sur flotte chantier",
+      "MDM Intune centralisé parc complet",
+      "Sauvegarde cloud auto + RTO < 4h"
+    ],
+    "pieges_frequents": [
+      "Tablettes avec coque renforcée ≠ tablettes durciées IP65 — IP65 signifie test pluie et poussière normalisé",
+      "Box 4G personnelle chantier ≠ infrastructure réseau — débit non garanti, pas de failover",
+      "NAS local bureau ≠ infrastructure cloud — aucun accès chantier, aucune redondance",
+      "PC 16 Go partagés déclarés 'PC BIM' — Revit 2024 + Navisworks nécessite 32 Go minimum en conditions réelles"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "PC standard 8 Go, WiFi smartphone, tablettes grand public cassées, 0 onduleur, données clé USB.",
+      "score_21_to_40": "PC 16 Go partagés, box 4G, tablettes coques, onduleur bureau seul, NAS local bureau.",
+      "score_41_to_60": "PC BIM 32 Go GPU, Peplink 4G, tablettes durciées IP65, onduleurs chantier, M365 + Intune basique.",
+      "score_61_to_80": "Workstations 64 Go, SD-WAN multi-SIM, 100% durciées, UPS + sauvegarde cloud auto, MDM Intune complet.",
+      "score_81_to_100": "Edge computing chantier, 5G pilote, IaC déploiement, SLA 99,9%, 0 incident non anticipé — référence CI."
+    }
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "meta": {
+    "secteur": "education",
+    "axe": "OFFRES",
+    "sous_axe": "offres_digitales",
+    "titre": "Offres de formation digitales dans l'enseignement en Côte d'Ivoire",
+    "description": "Conception et commercialisation d'offres de formation nativement digitales : MOOC, SPOC, programmes hybrides, micro-certifications, bootcamps en ligne, formations B2B/B2G et badges numériques reconnus par MESRS CI et CAMES.",
+    "version": "1.0",
+    "date_mise_a_jour": "2025-01-01",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "La Côte d'Ivoire connaît une double pression sur le système éducatif : d'un côté, 47% de taux de scolarisation secondaire et un accès limité à l'enseignement supérieur physique (capacité d'accueil : 180 000 places pour 350 000 bacheliers annuels) ; de l'autre, une pénurie critique de compétences numériques (1 200 postes Data/IA non pourvus, 3 500 postes cybersécurité — ARTCI 2024). Les offres de formation digitales représentent une réponse structurelle à ces deux enjeux, en augmentant l'accès (UVCI CI : 45K apprenants dans 20 pays) et en alignant les compétences sur les besoins du marché ivoirien. Le FDFP CI (28 Mds FCFA/an) et les entreprises CI financent une part croissante de ces formations.",
+    "chiffres_cles": [
+      "UVCI CI : 45 000 apprenants dans 20 pays, 100% digital natif, coût 185K FCFA/an vs. 650K université physique CI",
+      "Déficit capacité supérieur CI : 350 000 bacheliers/an vs. 180 000 places disponibles",
+      "Pénurie compétences numériques CI : 1 200 postes Data/IA non pourvus (ARTCI 2024)",
+      "FDFP CI : 28 Mds FCFA/an finançant formations professionnelles continues, dont 35% formations digitales en 2024",
+      "Marché EdTech Afrique subsaharienne : 2,3 Mds USD en 2024, TCAM 18% jusqu'en 2028",
+      "Taux complétion MOOC Afrique subsaharienne : 12% (moyenne) vs. 67% UVCI CI (avec accompagnement tuteur)"
+    ],
+    "acteurs_cles": [
+      "MESRS CI — accréditation des programmes de formation supérieure (délai 6-18 mois)",
+      "CAMES — reconnaissance des diplômes dans l'espace UEMOA (15 pays)",
+      "FDFP CI — financement formations professionnelles continues (agrément bisannuel)",
+      "MENA CI — validation des programmes de formation continue (lycées professionnels CI)",
+      "ARTCI — partenariats programmes compétences numériques (initiative Écoles Connectées CI)",
+      "AUF (Agence Universitaire de la Francophonie) — co-accréditation et mutualisation ressources"
+    ]
+  },
+  "enjeux_cles": [
+    {
+      "enjeu": "Accélérer le délai d'accréditation des nouvelles offres digitales",
+      "description": "Le délai d'accréditation MESRS CI (6-18 mois) est incompatible avec la vitesse d'évolution du marché (l'IA générative a créé 200 nouveaux métiers en 18 mois). Les établissements utilisent des voies alternatives : micro-certifications non diplômantes (délai 2 mois), partenariats avec organismes certifiants internationaux (CISCO, Microsoft, AWS), ou programmes sous accréditation provisoire MESRS CI.",
+      "impact": "Réduction du time-to-market des nouvelles filières numériques"
+    },
+    {
+      "enjeu": "Améliorer le taux de complétion des formations en ligne",
+      "description": "Le taux de complétion moyen des MOOC en Afrique subsaharienne est de 12% (vs. 67% pour l'UVCI CI avec tuteurs). L'accompagnement humain digital (tuteur WhatsApp, coaching mensuel, communautés d'apprenants) est le principal levier différenciant.",
+      "impact": "Un taux de complétion > 60% est critique pour la valeur perçue et la réputation académique"
+    },
+    {
+      "enjeu": "Développer les offres B2B et B2G pour les entreprises et administrations CI",
+      "description": "Les entreprises ivoiriennes (Orange CI, MTN CI, NSIA, SIB) et les administrations (DGFP CI, MENA CI) financent la montée en compétences digitales de leurs équipes. Les offres sur mesure (SPOC, bootcamps intra-entreprise) représentent une opportunité de revenus récurrents et stables.",
+      "impact": "Diversification des revenus et alignement offre/besoins marché CI"
+    },
+    {
+      "enjeu": "Garantir la reconnaissance CAMES et MESRS CI des certifications digitales",
+      "description": "Pour les apprenants CI, la reconnaissance officielle d'un programme est critique pour l'employabilité et la progression de carrière. Les micro-certifications non reconnues CAMES sont perçues comme insuffisantes par les employeurs du secteur public ivoirien.",
+      "impact": "Différenciation des offres reconnues vs. non reconnues sur le marché CI"
+    },
+    {
+      "enjeu": "Adapter les offres aux contraintes de connectivité CI",
+      "description": "18% des écoles CI ont accès à internet (2024). Les offres digitales doivent intégrer des modes dégradés : contenus téléchargeables (app offline 30 jours UVCI CI), formats légers (vidéos H.265 à 150 Kbps), SMS comme canal backup pour les relances.",
+      "impact": "Extension de l'accès aux apprenants en zones semi-urbaines et rurales CI"
+    }
+  ],
+  "niveau_maturite": {
+    "description": "Échelle de maturité des offres digitales pour les établissements d'enseignement CI",
+    "niveaux": [
+      {
+        "niveau": 1,
+        "label": "Absence",
+        "description": "Aucune offre de formation digitale. Enseignement exclusivement en présentiel, aucun contenu en ligne, pas de plateforme LMS. Offre non accessible hors campus."
+      },
+      {
+        "niveau": 2,
+        "label": "Complémentaire",
+        "description": "Quelques ressources digitales en complément du présentiel (Moodle avec PDF/vidéos de cours). Pas de programme 100% en ligne, pas de certification digitale dédiée. Formation hybride non structurée."
+      },
+      {
+        "niveau": 3,
+        "label": "Hybride structuré",
+        "description": "Programmes hybrides formellement accrédités MESRS CI (30-50% en ligne). Micro-certifications partenaires (CISCO Networking Academy, Microsoft Learn). Offres B2B ponctuelles pour 1-2 entreprises CI. Taux complétion 40-55%."
+      },
+      {
+        "niveau": 4,
+        "label": "Digital leader",
+        "description": "Programmes 100% en ligne accrédités CAMES (diplômes reconnus UEMOA). Catalogue de 10+ formations digitales distinctes. Offres B2B/B2G structurées avec accords-cadres entreprises CI. Taux complétion > 60%. Application mobile offline. Revenue mix digital > 30%."
+      },
+      {
+        "niveau": 5,
+        "label": "Excellence EdTech",
+        "description": "Plateforme EdTech propriétaire exportée dans 5+ pays UEMOA. IA personnalisation parcours (adaptive learning). Co-certifications CAMES + Google/Microsoft/AWS. Open Badges interopérables (IMS Global). B2B/B2G > 40% du CA. Taux complétion > 70%. Expansion continentale africaine."
+      }
+    ]
+  },
+  "indicateurs_cles": [
+    {
+      "kpi": "Nombre de programmes 100% en ligne accrédités",
+      "definition": "Nombre de formations diplômantes ou certifiantes entièrement en ligne disposant d'une accréditation officielle (MESRS CI, CAMES, ou organisme certifiant reconnu CI)",
+      "unite": "programmes",
+      "benchmark_ci": "UVCI CI : 12 programmes accrédités — secteur éducation CI moyen : 1-2",
+      "cible_sectorielle": "> 5 programmes accrédités (universités) / > 2 (établissements privés)",
+      "source": "Annuaire MESRS CI 2024 + CAMES"
+    },
+    {
+      "kpi": "Taux de complétion des formations en ligne",
+      "definition": "Part des apprenants inscrits ayant complété l'intégralité du programme et obtenu leur certification",
+      "unite": "%",
+      "benchmark_ci": "MOOC non accompagnés CI : 12% — UVCI CI (avec tuteurs) : 67%",
+      "cible_sectorielle": "> 60% (avec accompagnement tuteur structuré)",
+      "source": "Rapport AUF EdTech Afrique francophone 2024 + UVCI CI"
+    },
+    {
+      "kpi": "Part du CA issue des offres digitales",
+      "definition": "Pourcentage du chiffre d'affaires total de l'établissement généré par les formations en ligne, hybrides et micro-certifications",
+      "unite": "%",
+      "benchmark_ci": "UVCI CI : 92% (digital-native) — secteur éducation privé CI : 8% — universités publiques CI : < 2%",
+      "cible_sectorielle": "> 25% d'ici 2027 pour les établissements en transition",
+      "source": "Rapport financier UVCI CI 2024 + enquête MESRS CI"
+    },
+    {
+      "kpi": "Taux d'employabilité post-formation digitale (6 mois)",
+      "definition": "Part des diplômés des formations digitales ayant trouvé un emploi ou obtenu une promotion dans les 6 mois suivant l'obtention de la certification",
+      "unite": "%",
+      "benchmark_ci": "UVCI CI : 74% — Pigier CI formations digitales : 81% — universités publiques CI : 54%",
+      "cible_sectorielle": "> 75% (indicateur MESRS CI accréditation)",
+      "source": "Enquête insertion professionnelle MESRS CI 2024"
+    },
+    {
+      "kpi": "Nombre d'apprenants B2B/B2G actifs",
+      "definition": "Nombre d'apprenants inscrits dans le cadre de partenariats avec des entreprises ou administrations CI (financement employeur ou FDFP CI)",
+      "unite": "apprenants",
+      "benchmark_ci": "UVCI CI : 4 800 apprenants B2G (DGFP CI) — GTIM CI : 2 200 B2B (Orange CI, banques)",
+      "cible_sectorielle": "> 500 apprenants B2B/B2G actifs pour être stratégiquement significatif",
+      "source": "Rapport UVCI CI 2024 + GTIM CI"
+    }
+  ],
+  "zoom_sur": {
+    "organisation": "UVCI CI (Université Virtuelle de Côte d'Ivoire)",
+    "titre": "Certification 'Data & IA Appliquée CI' — 450 diplômés en 1 an, 82% recrutés",
+    "contexte": "En 2023, l'ARTCI publie son rapport identifiant 1 200 postes Data/IA non pourvus en Côte d'Ivoire. L'UVCI CI, en partenariat avec Orange CI, MTN CI et la SIB (Société Ivoirienne de Banque), conçoit en 12 semaines (sprint agile) une certification professionnelle 6 mois de 'Data & IA Appliquée au Contexte Ivoirien'. Budget de conception : 8,5 M FCFA, cofinancé à 40% par les entreprises partenaires.",
+    "solution": "Programme 100% en ligne de 6 mois (180 heures) : 12 modules (Python data science, ML appliqué, Power BI, éthique IA APDP CI, cas métiers CI Telecom/Finance/Agriculture). Format : 3 modules de 2 semaines chacun + 1 projet de certification avec mentor professionnel CI. Financement : 285 000 FCFA (remboursable FDFP CI à 50-80%), micro-prêt Orange Money CI disponible. Tuteurs : 8 data scientists CI issus d'Orange CI, MTN CI, Société Générale CI et NSIA Assurances. Accès app offline UVCI CI (contenus téléchargeables 30 jours). Accréditation MESRS CI provisoire (6 mois) obtenue en 8 semaines grâce au track fast-track nouvelles filières numériques.",
+    "resultats": {
+      "avant": "Pénurie 1 200 profils Data/IA CI non pourvus (ARTCI 2023), aucune formation CI spécialisée contexte ivoirien, formations Coursera en anglais peu adaptées, coût 120-450 USD inaccessible sans financement",
+      "apres": "Session 1 (2024) : 450 inscrits (objectif 200, dépassé 2,25x), taux complétion 71%, 82% recrutés ou promus dans les 3 mois post-certification, salaire médian +35% pour les apprenants en emploi, 68% des inscrits remboursés FDFP CI, 3 inscrits ont lancé une startup data CI, NPS programme 84/100, liste d'attente 620 personnes pour session 2"
+    },
+    "lessons_learned": "Le facteur différenciant versus Coursera/edX est l'ancrage dans le contexte ivoirien : cas pratiques sur données CI (Orange Money, Coris Bank, LONACI), tuteurs issus des entreprises partenaires, et financement FDFP CI. La vitesse de conception (12 semaines) n'a été possible que grâce à la co-création avec les entreprises partenaires qui ont fourni les données et les cas métiers.",
+    "contact_reference": "Direction des Programmes UVCI CI — programmes@uvci.edu.ci"
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif offres digitales — établissements enseignement CI et références",
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "type": "National — leader",
+        "programmes_en_ligne": "12 accrédités MESRS CI + 3 micro-certifications",
+        "taux_completion": "67% (avec tuteurs)",
+        "offre_b2b_b2g": "Oui (B2G DGFP CI : 4 800 apprenants, B2B : 850 apprenants)",
+        "reconnaissance": "MESRS CI + CAMES + partenariats Google/CISCO",
+        "score_estime": "85/100"
+      },
+      {
+        "organisation": "GTIM CI (Groupe Techniques Industrielles et Management)",
+        "type": "National — privé B2B",
+        "programmes_en_ligne": "4 certifications digitales (blended learning 60% en ligne)",
+        "taux_completion": "78% (cohortes petites, 15-25 personnes)",
+        "offre_b2b_b2g": "Principal (30% CA Orange CI, banques CI, multinationales)",
+        "reconnaissance": "Agrément FDFP CI + certifications partenaires (PMI, ISO)",
+        "score_estime": "72/100"
+      },
+      {
+        "organisation": "Pigier CI (Abidjan)",
+        "type": "National — privé grande école",
+        "programmes_en_ligne": "3 programmes hybrides (40% en ligne) + 2 MBA blended",
+        "taux_completion": "82% (suivi Salesforce CRM)",
+        "offre_b2b_b2g": "Partielle (conventions RH entreprises CI pour salariés en formation)",
+        "reconnaissance": "MESRS CI + réseau Pigier international France",
+        "score_estime": "68/100"
+      },
+      {
+        "organisation": "ALX Africa (CI/Abidjan)",
+        "type": "Régional — Africa leaders",
+        "programmes_en_ligne": "6 programmes 100% en ligne (Tech, Leadership, Business)",
+        "taux_completion": "58% (modèle ISA intensif, taux élevé d'abandon intentionnel)",
+        "offre_b2b_b2g": "Non (B2C uniquement, ISA — Income Share Agreement)",
+        "reconnaissance": "Non accrédité CAMES (reconnaissance employeurs tech uniquement)",
+        "score_estime": "74/100"
+      },
+      {
+        "organisation": "Coursera (San Francisco, USA)",
+        "type": "International — leader mondial",
+        "programmes_en_ligne": "7 000+ cours, 800+ spécialisations, 30+ diplômes en ligne",
+        "taux_completion": "47% (moyenne mondiale) — 12% Afrique subsaharienne (sans tuteur local)",
+        "offre_b2b_b2g": "Oui (Coursera for Business — 300+ entreprises africaines)",
+        "reconnaissance": "Partenariats universités rang mondial (Stanford, Yale, IBM, Google)",
+        "score_estime": "92/100"
+      }
+    ]
+  },
+  "bonnes_pratiques": [
+    {
+      "pratique": "Co-concevoir les offres digitales avec les entreprises destinatrices",
+      "description": "Impliquer les DRH et responsables formation des entreprises CI (Orange, MTN, banques, agro-industrie) dès la conception du programme : définition des cas pratiques, fourniture des données d'entraînement, engagement de recrutement pré-certification. Réduit le délai de conception et garantit l'adéquation offre/emploi.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Intégrer un accompagnement tuteur structuré pour dépasser 60% de complétion",
+      "description": "Le taux de complétion moyen des MOOC non accompagnés en Afrique est de 12%. L'UVCI CI atteint 67% avec 1 tuteur pour 25 apprenants, une session synchrone hebdomadaire de 1h sur WhatsApp/Zoom, et des alertes automatiques EWS à J+7 sans connexion.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Obtenir l'agrément FDFP CI pour permettre le financement employeur",
+      "description": "L'agrément FDFP CI (renouvellement bisannuel) est le sésame pour que les entreprises CI financent les formations de leurs employés (50-80% de remboursement). Sans agrément, l'offre B2B est quasi impossible pour les PME CI qui n'ont pas de budget formation propre.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Adapter les formats aux contraintes de connectivité CI (offline, SMS, vidéo légère)",
+      "description": "Proposer les contenus en téléchargement offline (30 jours minimum), utiliser le format vidéo H.265 à 150 Kbps minimum pour les zones 3G, et intégrer le SMS comme canal de relance pour les apprenants inactifs. UVCI CI : 23% des sessions vidéo vues en mode offline.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Viser la co-accréditation CAMES pour la portabilité UEMOA",
+      "description": "Une accréditation CAMES permet à un diplôme CI d'être reconnu dans les 15 pays UEMOA, élargissant le marché potentiel de 26M (CI) à 130M+ (UEMOA). L'UVCI CI a obtenu 3 accréditations CAMES entre 2022 et 2024.",
+      "priorite": "Moyenne"
+    }
+  ],
+  "pieges_a_eviter": [
+    {
+      "piege": "Lancer un programme digital sans accréditation MESRS CI préalable",
+      "consequence": "Les diplômes non accrédités ne sont pas reconnus par les employeurs du secteur public CI (Fonction Publique, MESRS CI). Risque de non-remboursement FDFP CI et perte de confiance des apprenants après l'obtention d'un diplôme non reconnu.",
+      "recommandation": "Utiliser le track fast-track MESRS CI pour les filières numériques (8-12 semaines) ou lancer sous forme de micro-certification non diplômante en attendant l'accréditation"
+    },
+    {
+      "piege": "Utiliser uniquement des cas pratiques et données internationales",
+      "consequence": "Les apprenants CI peinent à transférer des apprentissages basés sur des données US ou européennes à leur contexte professionnel ivoirien. Taux d'abandon multiplié par 2 vs. formations avec cas CI (enquête AUF 2024).",
+      "recommandation": "Intégrer au minimum 60% de cas pratiques sur des entreprises et données CI/UEMOA dans tout programme digital destiné au marché ivoirien"
+    },
+    {
+      "piege": "Négliger le module d'initiation numérique pour les apprenants non-natifs digitaux",
+      "description": "40% des apprenants CI entrant dans une formation digitale pour la première fois n'ont jamais utilisé un LMS. Sans module d'initiation (2-4h), le taux d'abandon en semaine 1 dépasse 35%.",
+      "recommandation": "Intégrer un module obligatoire d'accueil digital (navigation LMS, app offline, premier devoir) avant le début du contenu disciplinaire"
+    },
+    {
+      "piege": "Sous-dimensionner le ratio tuteurs/apprenants",
+      "consequence": "Un ratio de 1 tuteur pour 100+ apprenants (modèle MOOC pur) produit un taux de complétion < 20% en Afrique subsaharienne. L'économie générée par l'absence de tuteurs est détruite par la faible valeur perçue et les remboursements demandés.",
+      "recommandation": "Maintenir un ratio de 1 tuteur pour 20-30 apprenants maximum pour les formations certifiantes CI"
+    }
+  ],
+  "roadmap": {
+    "titre": "Roadmap développement offres digitales — établissement d'enseignement CI",
+    "phases": [
+      {
+        "phase": "Phase 1 — Première offre digitale (Mois 1-6)",
+        "actions": [
+          "Identification du segment prioritaire (B2C grand public, B2B entreprises CI, ou B2G administration)",
+          "Co-conception d'un premier programme pilote avec 2-3 entreprises ou administrations CI partenaires",
+          "Dépôt dossier accréditation MESRS CI (track fast-track numérique) et agrément FDFP CI",
+          "Déploiement LMS Moodle avec app offline et contenus vidéo H.265 optimisés"
+        ],
+        "budget_indicatif": "8 - 20 M FCFA (conception + accréditation + plateforme)"
+      },
+      {
+        "phase": "Phase 2 — Passage à l'échelle (Mois 7-18)",
+        "actions": [
+          "Lancement commercial auprès des entreprises CI (B2B) et DGFP CI (B2G)",
+          "Mise en place du dispositif tuteurs et EWS (Early Warning System) apprenants à risque",
+          "Extension catalogue : 3-5 programmes supplémentaires co-conçus avec partenaires",
+          "Dossier co-accréditation CAMES pour expansion UEMOA"
+        ],
+        "budget_indicatif": "15 - 40 M FCFA (scaling équipe tuteurs + marketing B2B + CAMES)"
+      },
+      {
+        "phase": "Phase 3 — Expansion et différenciation (Mois 19-36)",
+        "actions": [
+          "Application mobile propre avec offline 30 jours et notifications push adaptatives",
+          "Adaptive learning (personnalisation parcours par IA sur historique xAPI)",
+          "Open Badges IMS Global pour micro-certifications partageables LinkedIn",
+          "Expansion 3+ pays UEMOA (UCAD Dakar, Université de Thiès, UAO en partenariat)"
+        ],
+        "budget_indicatif": "30 - 80 M FCFA (app mobile + IA adaptive + expansion régionale)"
+      }
+    ]
+  },
+  "ressources": {
+    "formations": [
+      "FDFP CI — financement formations EdTech pour formateurs et concepteurs pédagogiques (50-80%)",
+      "IFC World Bank — programme EdTech Africa pour entrepreneurs éducation numérique",
+      "AUF — appels à projets numériques universitaires (financement partiel conception programmes)"
+    ],
+    "outils_recommandes": [
+      "Moodle (open source) — LMS standard CI/UEMOA, app offline, LTI, xAPI, support AUF",
+      "H5P — création contenus interactifs intégrables Moodle (gratuit, OAPI-compatible CC-BY-SA)",
+      "Open edX — plateforme MOOC scalable pour > 10 000 apprenants simultanés",
+      "Articulate Storyline — création e-learning SCORM/xAPI professionnel (licence 1 450 USD/an)"
+    ],
+    "references_reglementaires": [
+      "MESRS CI — procédure accréditation formations supérieures (incluant track fast-track numérique 2023)",
+      "CAMES — guide accréditation diplômes espace UEMOA (commission.cames.org)",
+      "FDFP CI — cahier des charges agrément organismes de formation (fdfp.ci)",
+      "APDP CI — Loi 2013-450 (données apprenants, xAPI, analytics comportements LMS)",
+      "ARTCI — réglementation publicité ciblée mineurs (Meta Ads, TikTok Ads pour recrutement apprenants)"
+    ]
+  },
+  "ai_context": {
+    "scoring_dimension": "Maturité des offres de formation digitales dans les établissements d'enseignement",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune offre digitale : enseignement exclusivement en présentiel, aucun LMS, aucun contenu en ligne, aucune certification digitale. Offre non accessible hors campus physique.",
+      "score_21_to_40": "Quelques ressources digitales en complément du présentiel (Moodle avec PDF/vidéos), mais aucun programme 100% en ligne accrédité. Pas d'offre B2B/B2G structurée. Taux de complétion non mesuré.",
+      "score_41_to_60": "1-3 programmes hybrides formellement accrédités MESRS CI, micro-certifications partenaires (CISCO/Microsoft), offres B2B ponctuelles. Taux complétion 40-55%, LMS avec app offline basique.",
+      "score_61_to_80": "5+ programmes 100% en ligne accrédités CAMES/MESRS CI, agrément FDFP CI, offres B2B/B2G structurées avec accords-cadres. Taux complétion > 60% grâce aux tuteurs. Revenue digital > 25%. App mobile offline.",
+      "score_81_to_100": "Plateforme EdTech exportée dans 3+ pays UEMOA, IA adaptive learning, Open Badges IMS Global, co-certifications Google/Microsoft/AWS, B2B/B2G > 40% du CA, taux complétion > 70%, expansion continentale africaine."
+    },
+    "questions_discriminantes": [
+      "Combien de programmes de formation 100% en ligne disposez-vous d'une accréditation officielle MESRS CI ou CAMES ?",
+      "Quel est votre taux de complétion moyen pour vos formations digitales ?",
+      "Disposez-vous de l'agrément FDFP CI permettant à vos apprenants de bénéficier du remboursement des formations ?",
+      "Avez-vous des accords-cadres avec des entreprises ou administrations CI pour former leurs équipes (B2B/B2G) ?",
+      "Vos contenus en ligne sont-ils accessibles en mode offline (téléchargeables) pour pallier les coupures de connectivité CI ?"
+    ],
+    "signaux_avances": [
+      "Co-certifications avec des entreprises tech mondiales (Google, Microsoft, CISCO, AWS) reconnues en CI",
+      "Open Badges IMS Global interopérables partageables sur LinkedIn par les apprenants CI",
+      "Adaptive learning IA personnalisant les parcours selon l'historique xAPI de chaque apprenant",
+      "Revenue B2B/B2G représentant plus de 40% du chiffre d'affaires de formation",
+      "Accréditation CAMES permettant la reconnaissance du diplôme dans les 15 pays UEMOA"
+    ]
+  }
+}

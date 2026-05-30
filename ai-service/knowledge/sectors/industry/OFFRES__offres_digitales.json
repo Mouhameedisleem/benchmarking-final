@@ -1,0 +1,246 @@
+{
+  "axe": "OFFRES",
+  "sous_axe": "Offres digitales",
+  "secteur": "industrie",
+  "description": "Offres digitales dans l'industrie ivoirienne : digitalisation du catalogue produits, services à valeur ajoutée numérique (traçabilité EUDR, certifications en ligne, e-commande B2B), et nouvelles offres basées sur les données de production.",
+  "maturite_niveaux": {
+    "initial": "Catalogue produits uniquement sur papier ou en PDF non structuré. Aucune commande en ligne. Pas de documentation numérique accessible aux clients. Tout passe par commercial/téléphone.",
+    "en_developpement": "Catalogue PDF envoyé par email sur demande. Quelques fiches techniques disponibles sur le site web. Commandes par email sans système structuré.",
+    "structure": "Catalogue en ligne structuré avec fiches produits téléchargeables (CoA, fiches de sécurité). Formulaire de commande en ligne. Accès portail clients pour suivi des commandes.",
+    "avance": "Portail B2B complet : commande en ligne, suivi livraison en temps réel, documentation EUDR accessible, factures électroniques DGI CI. Services associés numérisés : rapports d'analyse qualité, certifications ISO.",
+    "optimise": "Offres de services digitaux différenciées : traçabilité EUDR as-a-service, analytics performance matières premières, optimisation recette basée sur données, co-développement produits avec clients sur plateforme collaborative."
+  },
+  "questions_diagnostic": [
+    {
+      "id": "OFFRES_offres_digitales_Q1",
+      "question": "Votre catalogue de produits industriels est-il accessible en ligne avec fiches techniques complètes (CoA, fiches sécurité, certifications, données nutritionnelles pour agro) ?",
+      "type": "choix_unique",
+      "options": ["Non, catalogue uniquement sur demande au commercial", "PDF non structuré envoyé par email", "Site web avec fiches téléchargeables mais non actualisées", "Portail produits en ligne actualisé avec recherche et filtres", "Portail dynamique avec personnalisation client, accès certifications par lot, données EUDR"],
+      "poids": 20
+    },
+    {
+      "id": "OFFRES_offres_digitales_Q2",
+      "question": "Proposez-vous à vos clients industriels la commande en ligne (B2B e-commerce ou portail de commande) ?",
+      "type": "choix_unique",
+      "options": ["Non, commandes uniquement par téléphone/email/fax", "Formulaire email structuré", "Portail commande basique (saisie en ligne)", "Portail B2B complet avec catalogue, devis, validation commande", "EDI ou API pour commandes automatisées depuis le système ERP du client"],
+      "poids": 20
+    },
+    {
+      "id": "OFFRES_offres_digitales_Q3",
+      "question": "Proposez-vous des services de traçabilité digitale (EUDR, origine géospatiale, certifications) comme composante de votre offre commerciale ?",
+      "type": "choix_unique",
+      "options": ["Non, pas de traçabilité proposée aux clients", "Documentation papier sur demande", "Certificats d'origine numérisés en PDF", "Portail traçabilité client avec données EUDR accessible par commande", "EUDR as-a-service : traçabilité complète géospatiale, dossier de conformité exporté, API clients"],
+      "poids": 25
+    },
+    {
+      "id": "OFFRES_offres_digitales_Q4",
+      "question": "Émettez-vous des factures électroniques conformes à la réglementation DGI CI (Loi 2022-974) ?",
+      "type": "choix_unique",
+      "options": ["Non, factures papier uniquement", "Factures PDF par email (non certifiées)", "Factures électroniques via logiciel comptable CI", "Factures électroniques intégrées ERP avec envoi automatique", "E-facture certifiée DGI CI avec archivage légal 10 ans et EDI clients"],
+      "poids": 20
+    },
+    {
+      "id": "OFFRES_offres_digitales_Q5",
+      "question": "Proposez-vous à vos clients des rapports de qualité/analyses digitaux (résultats de laboratoire, données de process) accessibles en ligne ?",
+      "type": "choix_unique",
+      "options": ["Non, rapports papier ou PDF non structurés", "PDF rapport labo envoyé par email post-livraison", "Accès portail client avec historique des rapports par lot", "Rapports automatisés depuis le LIMS (Système de Gestion de Labo) accessibles temps réel", "Données process et qualité accessibles via API client pour intégration dans leur système"],
+      "poids": 15
+    }
+  ],
+  "pratiques_recommandees": [
+    {
+      "titre": "Portail B2B client avec documentation EUDR par lot",
+      "description": "Créer un portail client sécurisé (Odoo Portal ou développement sur mesure) permettant aux clients acheteurs de cacao CI, anacarde, huile de palme de télécharger, pour chaque lot commandé : CoA, certificat d'origine, données EUDR (coordonnées GPS parcelles fournisseurs, déclarations de diligence raisonnée). C'est un différenciateur compétitif majeur pour vendre aux multinationales soumises au règlement EUDR 2025.",
+      "priorite": "haute",
+      "effort": "élevé",
+      "impact": "très fort"
+    },
+    {
+      "titre": "E-facture DGI CI conforme Loi 2022-974",
+      "description": "Configurer le système ERP pour émettre des factures électroniques conformes aux exigences DGI CI : format structuré (XML ou PDF/A signé), archivage 10 ans, numérotation séquentielle, TVA CI correcte (18%). Utiliser les intégrateurs agréés DGI CI (Nexah CI, GF2I CI) pour la connexion au système de déclaration. Obligation légale 2024-2025 pour les entreprises industrielles CI.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Catalogue produits numérique avec fiches techniques vivantes",
+      "description": "Maintenir un catalogue numérique actualisé sur le site web avec : fiches techniques téléchargeables (CoA type, valeurs nutritionnelles moyennes pour agro-industrie, fiches sécurité MSDS), certifications ISO 9001/22000 avec dates de validité, accréditations EUDR et Conseil Café-Cacao CI. Format adapté aux acheteurs multinationales : fiches en français ET en anglais.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Rapports de laboratoire digitaux via LIMS",
+      "description": "Déployer un LIMS (Laboratory Information Management System) ou intégrer les résultats du laboratoire interne dans le portail client. Les acheteurs B2B industriels (Nestlé CI, Barry Callebaut, Olam) ont besoin des résultats d'analyse (humidité, teneur en graisse, contaminants) pour leurs propres systèmes qualité. La transmission automatique via portail ou API remplace les PDF manuels.",
+      "priorite": "moyenne",
+      "effort": "élevé",
+      "impact": "fort"
+    },
+    {
+      "titre": "EUDR as-a-service pour clients importateurs",
+      "description": "Pour les industries CI ayant atteint la maturité EUDR, monétiser la traçabilité géospatiale en proposant un service 'EUDR-ready supply chain' : le client importateur européen reçoit automatiquement le dossier de conformité EUDR complet pour chaque livraison, prêt à déposer sur le portail DUE (Due Diligence Européen). Tarification : supplément 2-5% sur le prix de la tonne. Avantage compétitif fort sur les concurrents non-conformes.",
+      "priorite": "moyenne",
+      "effort": "élevé",
+      "impact": "très fort"
+    }
+  ],
+  "outils_solutions": [
+    {
+      "categorie": "Portail B2B et e-commerce industriel",
+      "solutions": [
+        {
+          "nom": "Odoo eCommerce B2B",
+          "description": "Module e-commerce B2B intégré Odoo ERP. Portail client avec catalogue, commandes, factures, tracking. Synergie native avec Odoo Manufacturing et Inventory. Adapté PME industrielles CI.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Inclus dans Odoo Enterprise ou ~500 000 FCFA/an module"
+        },
+        {
+          "nom": "Magento B2B / WooCommerce B2B",
+          "description": "Plateformes e-commerce adaptables au B2B industriel. Nécessitent développement spécifique mais très flexibles. Hébergeable chez OrangeBusiness CI.",
+          "pertinence_locale": "haute",
+          "cout_estime": "2-8 M FCFA développement + maintenance"
+        }
+      ]
+    },
+    {
+      "categorie": "Facturation électronique CI",
+      "solutions": [
+        {
+          "nom": "Nexah CI (intégrateur DGI CI agréé)",
+          "description": "Solution de facturation électronique certifiée DGI CI. Conforme Loi 2022-974. API pour intégration ERP. Archivage légal intégré. Présence locale CI avec support.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Variable selon volume factures + abonnement"
+        },
+        {
+          "nom": "Sage Comptabilité CI + module e-facture",
+          "description": "Si Sage Comptabilité déjà déployé, le module e-facture permet la conformité DGI CI sans changement de logiciel.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Inclus ou module additionnel Sage"
+        }
+      ]
+    },
+    {
+      "categorie": "LIMS (gestion labo qualité)",
+      "solutions": [
+        {
+          "nom": "LIMS LabWare / LabVantage",
+          "description": "Solutions LIMS standards pour les industries agro-alimentaires CI. Gestion des analyses, CoA automatisés, intégration portail client. Pertinent pour les industries exportatrices.",
+          "pertinence_locale": "moyenne",
+          "cout_estime": "10-30 M FCFA selon périmètre"
+        },
+        {
+          "nom": "Module Qualité Odoo",
+          "description": "Gestion simplifiée de la qualité et des CoA dans Odoo. Alternative économique au LIMS dédié pour les PME industrielles CI.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Inclus dans Odoo Enterprise"
+        }
+      ]
+    }
+  ],
+  "indicateurs_cles": [
+    {
+      "nom": "Taux de commandes reçues via portail B2B",
+      "description": "Pourcentage des commandes B2B passées via le portail digital (vs. téléphone/email)",
+      "unite": "%",
+      "cible_sectorielle": ">50% dans les 18 mois post-déploiement"
+    },
+    {
+      "nom": "Délai de mise à disposition documentation EUDR",
+      "description": "Temps entre la livraison et la mise à disposition du dossier EUDR complet sur le portail client",
+      "unite": "heures",
+      "cible_sectorielle": "<4 heures (idéalement automatique à la livraison)"
+    },
+    {
+      "nom": "Taux d'adoption e-facture",
+      "description": "Pourcentage des factures émises au format électronique conforme DGI CI",
+      "unite": "%",
+      "cible_sectorielle": "100% (obligation légale)"
+    },
+    {
+      "nom": "NPS clients sur l'expérience digitale",
+      "description": "Net Promoter Score des clients B2B spécifiquement sur les services digitaux (portail, documentation, traçabilité)",
+      "unite": "score -100 à +100",
+      "cible_sectorielle": ">40"
+    }
+  ],
+  "reglementations_normes": [
+    {
+      "nom": "DGI CI Loi 2022-974 — e-facture",
+      "description": "Obligation de facturation électronique pour les entreprises industrielles CI au-delà de certains seuils de CA. Format structuré, archivage 10 ans, connexion au système DGI CI requis. Non-conformité : pénalités fiscales.",
+      "organisme": "DGI CI",
+      "obligatoire": true
+    },
+    {
+      "nom": "EUDR Règlement EU 2023/1115",
+      "description": "Pour les industries exportant vers l'UE des produits à base de cacao, café, soja, huile de palme, bois : obligation de fournir des données géospatiales et une déclaration de diligence raisonnée. Les offres digitales doivent intégrer cette documentation comme composante standard.",
+      "organisme": "Union Européenne",
+      "obligatoire": true
+    },
+    {
+      "nom": "GUCE CI (Guichet Unique du Commerce Extérieur)",
+      "description": "Pour les exportations, les documents commerciaux (certificats d'origine, documents douaniers) sont dématérialisés via le GUCE CI. Les portails B2B export doivent être compatibles avec les formats GUCE CI.",
+      "organisme": "GUCE CI / DGI CI",
+      "obligatoire": true
+    }
+  ],
+  "comparatif_organisations": {
+    "description": "Comparaison de la maturité des offres digitales dans les industries ivoiriennes exportatrices",
+    "lignes": [
+      {
+        "organisation": "TRITURAF CI (huile palme)",
+        "portail_b2b": "Portail commandes + EUDR docs",
+        "e_facture": "Nexah CI conforme DGI",
+        "tracabilite_eudr": "Portail géospatial clients",
+        "rapports_qualite": "LIMS intégré portail",
+        "niveau_global": "Avancé"
+      },
+      {
+        "organisation": "SIC-CACAO CI",
+        "portail_b2b": "Portail commandes basique",
+        "e_facture": "Sage e-facture",
+        "tracabilite_eudr": "PDF CoA par email",
+        "rapports_qualite": "Rapports PDF automatisés",
+        "niveau_global": "Structuré"
+      },
+      {
+        "organisation": "PME conserverie Abidjan",
+        "portail_b2b": "Non",
+        "e_facture": "Non (papier)",
+        "tracabilite_eudr": "Non",
+        "rapports_qualite": "Papier laboratoire",
+        "niveau_global": "Initial"
+      },
+      {
+        "organisation": "CIPA CI (anacarde)",
+        "portail_b2b": "Odoo Portal complet",
+        "e_facture": "Intégrée Odoo DGI CI",
+        "tracabilite_eudr": "EUDR as-a-service déployé",
+        "rapports_qualite": "Odoo Qualité + portail",
+        "niveau_global": "Avancé"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "Chocolaterie Céleste CI — EUDR as-a-service : supplément 4% sur le prix du cacao et contrat Barry Callebaut",
+    "contexte": "Chocolaterie Céleste CI, PME de transformation du cacao en demi-produits (masse de cacao, beurre de cacao, poudre) basée à Abidjan-Yopougon, 95 employés, 180 fournisseurs de cacao dans les régions de San Pedro et Abengourou. CA 2023 : 3,8 Mds FCFA, dont 65% export UE (France, Belgique, Suisse).",
+    "probleme": "En 2024, Barry Callebaut (client européen principal, 40% du CA export) a conditionné le renouvellement du contrat 2025 à la fourniture de dossiers EUDR complets par livraison : données GPS de chaque parcelle fournisseur, certification forêt protégée, déclaration de diligence raisonnée. Céleste CI avait 6 mois pour se conformer.",
+    "solution": "Développement d'un portail EUDR as-a-service en 5 mois (partenariat avec un cabinet IT ivoirien spécialisé) : (1) Collecte GPS de 180 fournisseurs via application mobile terrain (agents de collecte) — intégration Google Maps et Conseil Café-Cacao CI ; (2) Portail client (accès sécurisé par commande) : téléchargement du dossier EUDR complet en 1 clic (PDF + données JSON pour portail DUE européen) ; (3) Automatisation depuis Odoo : à chaque lot produit, génération automatique du dossier EUDR associé. Investissement total : 12,5 M FCFA.",
+    "resultats": "Contrat Barry Callebaut renouvelé et augmenté de 35% (+756 M FCFA CA). Supplément EUDR négocié : +4% sur le prix de la tonne (argument différenciateur : 'seul fournisseur CI avec portail EUDR automatisé'). 3 nouveaux clients européens attirés par la démonstration du portail au SALON DU CHOCOLAT Paris 2024 — CA additionnel potentiel 1,1 Md FCFA. Coût par dossier EUDR généré : <500 FCFA (vs. 8 000-12 000 FCFA en préparation manuelle). ROI en 4 mois."
+  },
+  "ai_context": {
+    "focus_llm": "Évaluer la capacité de l'industrie ivoirienne à transformer ses contraintes réglementaires (EUDR, DGI CI e-facture) en avantages compétitifs via des offres digitales différenciées. La traçabilité EUDR est un levier de valeur ajoutée majeur pour accéder aux marchés européens — les industries CI qui la maîtrisent peuvent facturer un supplément et sécuriser des contrats long terme.",
+    "pieges_a_eviter": [
+      "Ne pas traiter l'EUDR uniquement comme une contrainte : c'est aussi une opportunité commerciale (supplément prix, accès marché UE sécurisé, différenciation vs. concurrents non-conformes)",
+      "Ne pas oublier la DGI CI Loi 2022-974 : la facturation électronique n'est pas optionnelle au-delà des seuils légaux",
+      "Éviter de recommander des portails B2B complexes à des entreprises n'ayant pas encore de présence digitale basique — séquencer l'approche (d'abord le catalogue en ligne, puis la commande, puis l'EUDR)",
+      "Ne pas négliger l'anglais dans les documentations B2B : les acheteurs des multinationales anglophone-africaines en CI (Olam, Cargill, Sucafina) lisent en anglais"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune offre digitale. Catalogue papier uniquement. Commandes par téléphone. Aucune documentation numérique accessible aux clients. Factures papier.",
+      "score_21_to_40": "Quelques PDF disponibles par email. Pas de portail client. Facturation partielle par email non certifiée. Aucune traçabilité EUDR numérique.",
+      "score_41_to_60": "Catalogue en ligne avec fiches téléchargeables. Formulaire de commande digital. E-facture DGI CI en cours de déploiement. Portail client basique.",
+      "score_61_to_80": "Portail B2B complet opérationnel. E-facture 100% conforme DGI CI. Documentation EUDR accessible par commande. Rapports qualité automatisés.",
+      "score_81_to_100": "Offres digitales différenciées : EUDR as-a-service avec valeur ajoutée commerciale, API clients pour intégration ERP, analytics matières premières partagées. Supplément prix négocié sur les services digitaux. NPS digital >50."
+    }
+  }
+}

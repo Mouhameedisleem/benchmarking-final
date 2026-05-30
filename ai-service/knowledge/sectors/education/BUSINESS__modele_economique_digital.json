@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "BUSINESS",
+    "sub_axis": "modele_economique_digital",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Modèles de revenus hybrides : freemium, abonnement et B2B corporate learning",
+      "description": "Les établissements d'enseignement CI diversifient leurs revenus au-delà des frais de scolarité traditionnels : (1) Freemium MOOC (accès cours gratuit, certificat payant), (2) Abonnements B2B corporate learning (forfait annuel pour formation continue des salariés), (3) Contrats de formation gouvernementale (FDFP CI — Fonds de Développement de la Formation Professionnelle). En Côte d'Ivoire, les revenus B2B représentent 35% du CA des établissements privés leaders (Pigier, GTIM) vs. 8% en 2018.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "35%",
+      "source": "MESRS CI / Rapport Marché Formation CI 2024",
+      "year": 2024
+    },
+    {
+      "title": "Modèle pay-per-outcome (paiement sur résultats) et ISA dans l'éducation africaine",
+      "description": "L'Income Share Agreement (ISA) — paiement de la formation sur les revenus futurs — se développe en Afrique : ALX Africa CI, Andela (formation développeurs), Decagon (Nigeria). En Côte d'Ivoire, le FDFP CI co-finance des formations courtes pour les salariés des entreprises (remboursement jusqu'à 80% des frais de formation). L'UVCI explore un modèle de bourse remboursable conditionnelle (paiement uniquement si insertion à salaire > 400K FCFA/mois) pour ses masters professionnels.",
+      "impact_level": "medium",
+      "horizon": "short_term",
+      "adoption_rate": "12%",
+      "source": "ALX Africa / UVCI Rapport Modèle Économique 2025",
+      "year": 2025
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "Plateforme de gestion des revenus et facturation éducative (ERP Education)",
+      "category": "ERP / Fintech Éducation",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "Pigier CI (Salesforce + Stripe CI), UVCI (module Moodle Commerce), 25% établissements privés CI avec facturation digitale complète",
+      "leading_vendors": ["Salesforce Education Cloud (billing)", "PowerSchool Finance", "Ellucian Finance", "Flywire (paiements internationaux éducation)", "Stripe (EdTech)"]
+    },
+    {
+      "name": "Plateforme FDFP et gestion des demandes de remboursement formation",
+      "category": "GRH / Formation Professionnelle",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "100% des opérateurs de formation agréés CI utilisent le portail FDFP en ligne (depuis 2022)",
+      "leading_vendors": ["Portail FDFP CI (SI propre)", "Talentsoft (HRIS intégré FDFP)", "SAP SuccessFactors Learning", "Cornerstone OnDemand", "360Learning"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Groupe GTIM (Grandes écoles TIM)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Modèle économique hybride : frais scolarité (55% CA), B2B corporate learning Orange CI/MTN CI/banques (30% CA), contrats FDFP CI formation professionnelle (15% CA), plateforme en ligne GTIM Digital (abonnement 25 000 FCFA/mois pour alumni), partenariats Microsoft Education et Google for Education (subventions équipements)",
+        "differentiator": "Premier groupe éducatif CI à avoir atteint 30% de CA en B2B corporate learning — contrats pluriannuels avec 45 entreprises CI pour la formation de leurs cadres (Orange CI : 850 salariés formés/an, NSIA : 620 salariés/an)",
+        "source": "GTIM Rapport Annuel 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank Learning Institute (ELI)",
+        "country": "Togo / Côte d'Ivoire / Ghana / Nigeria (panafricain)",
+        "key_practice": "Modèle corporate learning interne : plateforme LMS Cornerstone (20 000 employés Ecobank formés/an, 35 pays), micro-certifications internes (banque digitale, AML/KYC, risk), partenariats Coursera Business et LinkedIn Learning, budget formation 2,5% masse salariale (benchmark BCEAO : 1,5%)",
+        "differentiator": "Plus grande plateforme corporate learning bancaire UEMOA — Cornerstone LMS : 450 000 heures de formation en ligne/an, taux de complétion 74%, coût par heure formation -68% vs. présentiel seul",
+        "source": "Ecobank Annual Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Coursera for Business / Coursera for Campus",
+        "country": "États-Unis (présence globale dont CI)",
+        "key_practice": "Modèle B2B2C : licences annuelles entreprises (500-50 000 USD/an selon taille), licences universités (accès catalogue 7 000 cours pour étudiants), revenus partagés avec universités partenaires (Google, Yale, IBM créateurs de cours), abonnement individuel Coursera Plus (399 USD/an) — 1,3 Mds USD de CA global 2024",
+        "differentiator": "Leader mondial modèle B2B corporate learning éducatif — 1 300 entreprises clientes (Fortune 500 + PME), 6 900 universités partenaires, 142M apprenants inscrits, modèle de revenus le plus diversifié de l'EdTech mondiale",
+        "source": "Coursera Annual Report 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Revenus 100% frais de scolarité (paiement annuel en espèces ou chèque), aucun canal de paiement digital, aucune diversification revenus, dépendance totale à l'effectif scolaire.",
+    "level_2_developing": "Paiement mobile money disponible (Orange Money/MTN MoMo), quelques contrats de formation ponctuelle B2B, inscription FDFP CI en cours, aucun modèle d'abonnement ou freemium.",
+    "level_3_defined": "Agrément FDFP CI actif (15-25% CA), portail d'inscription et de paiement en ligne, facturation digitale pour les entreprises B2B, paiement en plusieurs fois via mobile money, modèle économique documenté.",
+    "level_4_managed": "Revenus B2B > 25% CA (contrats pluriannuels entreprises), abonnement corporate learning (forfait annuel), pilote ISA ou bourse remboursable, analytics revenus par filière/canal, diversification 3 sources de revenus.",
+    "level_5_optimizing": "Modèle économique multi-sources equilibré (scolarité < 50% CA), freemium MOOC avec conversion premium, ISA en production, marketplace de cours tiers, partenariats Microsoft/Google/Cisco générateurs de revenus, CA digital > 40% total."
+  },
+  "regulations": [
+    {
+      "name": "FDFP CI — Fonds de Développement de la Formation Professionnelle",
+      "authority": "FDFP (Fonds de Développement de la Formation Professionnelle de Côte d'Ivoire)",
+      "description": "Le FDFP CI collecte une taxe de formation professionnelle (1,2% de la masse salariale pour les entreprises > 10 salariés) et la redistribue en remboursements de formation pour les salariés des entreprises cotisantes. Les opérateurs de formation souhaitant bénéficier du financement FDFP doivent obtenir l'agrément FDFP (dossier technique, inspections) et soumettre leurs programmes au catalogue FDFP. Le FDFP rembourse 50-80% des frais de formation selon le programme. En 2024, le FDFP CI a financé 245 000 formations pour 12 000 entreprises — un marché de 28 Mds FCFA.",
+      "compliance_deadline": "Renouvellement agrément FDFP : bisannuel",
+      "impact_on_sector": "L'agrément FDFP est un avantage commercial décisif pour les établissements privés CI — ouvre l'accès au marché B2B de la formation professionnelle continue (28 Mds FCFA/an) et permet de facturer 1,5 à 2x le tarif particulier aux entreprises"
+    },
+    {
+      "name": "BCEAO — Réglementation des paiements mobiles pour les frais de scolarité",
+      "authority": "BCEAO (Banque Centrale des États de l'Afrique de l'Ouest)",
+      "description": "La directive BCEAO sur les services de paiement électronique (2015, révisée 2022) s'applique aux établissements d'enseignement CI collectant des frais de scolarité via mobile money (Orange Money, MTN MoMo, Wave). Les établissements doivent : disposer d'un compte de collecte (merchant account) homologué par la BCEAO, afficher les frais de transaction (0-1,5%), émettre des reçus électroniques, et déclarer les flux > 500K FCFA par transaction à la cellule anti-blanchiment CI. Les ISA et bourse remboursables nécessitent un cadre juridique spécifique (contrat de prêt étudiant validé par le Ministère CI des Finances).",
+      "compliance_deadline": "En vigueur (directive BCEAO 2022)",
+      "impact_on_sector": "Conditionne la mise en place de paiements digitaux pour les frais de scolarité — l'obtention d'un merchant account mobile money BCEAO est un prérequis pour accepter Orange Money, MTN MoMo et Wave en toute conformité"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Dépendance excessive aux financements FDFP et risque de variation budgétaire",
+      "description": "En Côte d'Ivoire, plusieurs établissements de formation privés ont développé une dépendance au FDFP (jusqu'à 45% de leur CA). Or, le budget FDFP est soumis aux variations de la masse salariale formelle CI et aux décisions politiques de redistribution. En 2023, le FDFP CI a réduit ses remboursements de 18% suite à une réforme des critères d'éligibilité — 35 opérateurs de formation CI ont vu leur CA baisser de 20-30%. Les établissements avec CA FDFP > 30% sont exposés à un risque de liquidité en cas de modification réglementaire.",
+      "severity": "high",
+      "likelihood": "medium",
+      "mitigation": "Diversifier les sources de revenus pour limiter la dépendance FDFP à < 25% du CA : développer les inscriptions individuelles (marketing digital), ouvrir de nouvelles filières courtes attractives pour les particuliers, développer les partenariats internationaux (bourses AUF, BAD, BM pour formations en ligne) — GTIM CI a ramené sa dépendance FDFP de 42% (2021) à 28% (2024) par diversification"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Plateforme de formation en ligne B2G (Business-to-Government) pour les fonctionnaires CI",
+      "description": "L'État de Côte d'Ivoire consacre 22 Mds FCFA/an à la formation des fonctionnaires (DGFP 2024), dont seulement 35% est effectivement réalisé faute de prestataires suffisants. Un opérateur de formation agréé FDFP proposant une plateforme e-learning pour fonctionnaires (gestion publique, numérique, langues, éthique) avec interface dédiée DGFP pourrait accéder à 8-12 Mds FCFA de marché annuel inexploité. L'UVCI est en discussion avec la DGFP pour un partenariat exclusif sur ce segment.",
+      "impact_level": "high",
+      "time_to_value": "1-2 ans",
+      "prerequisite_maturity": "Niveau 3 — LMS opérationnel + agrément FDFP + interface API compatible SI État CI"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "GTIM CI — Partenariat Microsoft Education + levée fonds BEI Education",
+      "montant": "2,8 Mds FCFA (investissement expansion + digital)",
+      "investisseurs": ["Microsoft (subventions Education)", "BEI (ligne crédit éducation Afrique)", "Actionnaires fondateurs GTIM"],
+      "annee": 2024,
+      "description": "GTIM CI a signé un partenariat stratégique Microsoft Education permettant : accès gratuit Microsoft 365 Education pour 8 500 étudiants (valeur 180M FCFA/an), certification Microsoft Office Specialist intégrée au cursus (6 filières), co-investissement BEI 2,8 Mds FCFA pour ouverture de 2 nouveaux campus (San-Pédro et Bouaké), développement plateforme GTIM Digital (abonnement corporate learning). Les certifications Microsoft génèrent une revenu partagé avec Microsoft sur chaque examen payant."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Modèle économique freemium MOOC + abonnement B2G (formation fonctionnaires CI)",
+    "description": "L'UVCI a progressivement diversifié son modèle économique au-delà des frais de scolarité étudiants classiques. En 2023-2024, l'UVCI a lancé : (1) Freemium MOOC : accès gratuit aux cours (audit), certificat payant (15 000-45 000 FCFA selon niveau) ; (2) Abonnement B2G (Business-to-Government) : partenariat DGFP (Direction Générale de la Fonction Publique CI) pour la formation en ligne de 12 000 fonctionnaires (contrat 3 Mds FCFA/an, 40h de formation en ligne obligatoires/fonctionnaire) ; (3) Partenariat AUF (Agence Universitaire de la Francophonie) pour la création de 50 cours co-brandés utilisables dans les 130 universités AUF ; (4) Contrats FDFP CI pour les formations courtes sectorielles (santé, finance, agriculture — 450M FCFA/an). Le tout financé sans hausse des frais de scolarité étudiants (maintenus à 185 000 FCFA/an vs. 650 000 FCFA moyenne universités CI privées).",
+    "resultats": "Diversification revenus : frais scolarité 58% CA (vs. 85% en 2021), B2G DGFP 22%, FDFP 10%, AUF + autres 10%. CA total UVCI : 8,2 Mds FCFA 2024 (+65% vs. 2021, 4,9 Mds FCFA). Autofinancement atteint : 92% (vs. 55% en 2021 — dépendance État CI réduite). MOOC freemium : 28 000 auditeurs gratuits dont 12% convertis en payants certificat (vs. benchmark secteur 3-5%). Satisfaction fonctionnaires CI formés B2G : 76/100.",
+    "source": "UVCI Rapport Financier 2024 / DGFP CI",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif maturité modèle économique digital — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "Part revenus B2B/B2G (%)", "Paiement mobile money", "Agrément FDFP CI", "Modèle freemium / ISA"],
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "valeurs": ["42% (B2G DGFP + FDFP + AUF)", "Oui (Orange Money + MTN)", "Oui (formations courtes)", "Freemium MOOC (12% conversion)"]
+      },
+      {
+        "organisation": "GTIM CI",
+        "valeurs": ["30% (B2B Orange CI, banques)", "Oui (multi-opérateurs)", "Oui (28% CA)", "Non (frais classiques)"]
+      },
+      {
+        "organisation": "UFHB Abidjan",
+        "valeurs": ["Non (public, État CI)", "Partiel (services scolarité)", "Non (public)", "Non"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue la diversification du modèle économique digital dans le secteur éducation CI : part des revenus B2B/B2G, présence d'abonnements corporate learning, agrément FDFP CI, paiement mobile money multi-opérateurs, freemium MOOC, ou modèles ISA — et conformité BCEAO pour les paiements collectés.",
+    "maturity_max_description": "Établissement éducatif CI avec modèle économique diversifié : frais scolarité < 50% CA, B2B/B2G corporate learning > 25%, freemium MOOC actif (taux conversion > 8%), agrément FDFP CI, paiement mobile money multi-opérateurs conforme BCEAO, pilote ISA ou bourse remboursable, CA digital > 40%.",
+    "scoring_rubric": {
+      "score_1_to_20": "Revenus 100% frais scolarité en espèces/chèque, aucun canal digital, aucune diversification, pas d'agrément FDFP.",
+      "score_21_to_40": "Paiement mobile money disponible, quelques contrats B2B ponctuels, inscription FDFP en cours, aucun modèle freemium.",
+      "score_41_to_60": "Agrément FDFP actif (15-25% CA), portail paiement en ligne, facturation B2B, 2-3 sources de revenus, modèle économique documenté.",
+      "score_61_to_80": "B2B > 25% CA (contrats pluriannuels), abonnement corporate learning, pilote ISA ou freemium, analytics revenus, 3-4 sources diversifiées.",
+      "score_81_to_100": "Frais scolarité < 50%, freemium MOOC (conversion > 8%), ISA en production, marketplace, partenariats industriels générateurs de revenus, CA digital > 40%."
+    },
+    "prompt_injection_context": "Secteur éducation CI : FDFP CI finance 28 Mds FCFA/an de formations professionnelles (agrément indispensable). BCEAO réglemente les paiements mobile money pour frais de scolarité (merchant account obligatoire). L'UVCI est le modèle B2G de référence CI (partenariat DGFP 3 Mds FCFA/an). Le marché B2G formation fonctionnaires CI (22 Mds FCFA/an, 35% non réalisé) est une opportunité majeure.",
+    "key_questions_for_llm": [
+      "Quelle est la structure de vos revenus : quelle proportion vient des frais de scolarité vs. B2B (entreprises) vs. B2G (État/fonctionnaires) vs. autres sources ?",
+      "Disposez-vous de l'agrément FDFP CI pour accéder aux financements de formation professionnelle des entreprises ivoiriennes ?",
+      "Votre système de paiement est-il accessible via mobile money (Orange Money, MTN MoMo, Wave) en conformité avec la réglementation BCEAO ?",
+      "Avez-vous un modèle freemium, d'abonnement corporate ou d'ISA (Income Share Agreement) dans votre offre de formation ?",
+      "Disposez-vous de contrats pluriannuels avec des entreprises ou des institutions publiques pour la formation continue de leurs salariés ou agents ?"
+    ]
+  }
+}

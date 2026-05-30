@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "secteur": "education",
+    "axe": "OFFRES",
+    "sous_axe": "open_platform",
+    "titre": "Plateforme ouverte et écosystème EdTech en Côte d'Ivoire",
+    "description": "Ouverture des plateformes pédagogiques via APIs LTI/xAPI, partage de ressources éducatives libres (OER) sous licence CC-BY-SA, mutualisation d'infrastructure LMS pour l'espace UEMOA, Open Data éducation CI et construction d'un écosystème EdTech partenaire.",
+    "version": "1.0",
+    "date_mise_a_jour": "2025-01-01",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "La stratégie de plateforme ouverte dans l'éducation ivoirienne émerge sous trois formes complémentaires : (1) l'ouverture technique — interopérabilité LTI (Learning Tools Interoperability) et xAPI entre LMS, outils tiers et LRS (Learning Record Store) ; (2) l'ouverture des ressources — partage de contenus pédagogiques sous licences CC-BY-SA entre universités UEMOA via l'AUF ; (3) l'ouverture des données — Open Data Éducation CI (portail MENA CI 2024) et données anonymisées pour la recherche. L'UVCI CI joue un rôle de hub régional, en hébergeant des universités CAMES partenaires sur son infrastructure Moodle multi-tenant, bénéficiant en retour de ressources mutualisées et d'économies d'échelle.",
+    "chiffres_cles": [
+      "UVCI CI : 8 outils LTI intégrés (Turnitin, Zoom, QuestionWell, Teams, H5P, Wooclap, Padlet, Mentimeter)",
+      "45 modules CC-BY-SA partagés par UVCI CI avec 8 universités partenaires CAMES (UCAD Dakar, USTA-L Lomé, UAO)",
+      "MENA CI Open Data Éducation CI : portail lancé en 2024, 38 jeux de données ouverts (taux scolarisation, résultats examens, infrastructures)",
+      "AUF Afrique de l'Ouest : 28 universités membres, réseau partage OER 15 000 ressources libres",
+      "Marché global Ed-API (interfaces éducatives) : 1,2 Mds USD en 2024, TCAM 22% (IMS Global)",
+      "12 universités CI utilisent Moodle (standard de facto) facilitant l'interopérabilité LTI de l'écosystème"
+    ],
+    "acteurs_cles": [
+      "UVCI CI — hub régional plateforme ouverte (Moodle + LTI + xAPI + CC-BY-SA)",
+      "AUF (Agence Universitaire de la Francophonie) — mutualisation OER et hébergement Moodle universiés francophones",
+      "IMS Global / 1EdTech — standards LTI, xAPI, Open Badges pour interopérabilité mondiale",
+      "MENA CI — portail Open Data Éducation CI (données ouvertes secteur primaire/secondaire)",
+      "OAPI — protection propriété intellectuelle ressources pédagogiques numériques CI",
+      "APDP CI — cadre légal Open Data (anonymisation, consentement apprenants)"
+    ]
+  },
+  "enjeux_cles": [
+    {
+      "enjeu": "Interopérabilité LTI entre outils pédagogiques et LMS ivoiriens",
+      "description": "Le standard LTI (IMS Global) permet à tout outil tiers (simulation, évaluation, visioconférence) de s'intégrer nativement dans un LMS Moodle sans développement spécifique. Seuls les établissements maîtrisant LTI 1.3 peuvent accéder à l'écosystème complet d'outils EdTech modernes.",
+      "impact": "Accès à un écosystème de 500+ outils certifiés LTI sans développement sur mesure"
+    },
+    {
+      "enjeu": "Mutualisation des ressources pédagogiques sous licence libre en UEMOA",
+      "description": "La création de contenus pédagogiques numériques de qualité est coûteuse (8-25 M FCFA par module complet). La mutualisation sous licence CC-BY-SA entre universités CAMES permet de diviser ces coûts par le nombre de partenaires tout en augmentant la qualité.",
+      "impact": "Réduction du coût de conception de 60-75% par module pour les universités partenaires"
+    },
+    {
+      "enjeu": "Open Data éducation CI pour la recherche et la politique publique",
+      "description": "Le portail Open Data MENA CI (2024) publie des données anonymisées sur le système éducatif ivoirien. Les établissements qui contribuent à ces données participent à la co-construction de la politique éducative nationale et renforcent leur légitimité institutionnelle.",
+      "impact": "Meilleure allocation des ressources publiques et renforcement de la réputation institutionnelle"
+    },
+    {
+      "enjeu": "Écosystème EdTech partenaire autour des LMS ivoiriens",
+      "description": "Les éditeurs EdTech (H5P, Wooclap, Turnitin) développent des intégrations LTI prioritairement pour les plateformes à grande audience. En atteignant une masse critique d'utilisateurs (UVCI CI : 45K apprenants), les établissements CI deviennent attractifs pour ces partenariats.",
+      "impact": "Accès prioritaire aux nouvelles fonctionnalités des éditeurs EdTech et tarifs préférentiels"
+    },
+    {
+      "enjeu": "Infrastructure LMS mutualisée comme service pour les petites universités CI/UEMOA",
+      "description": "Les petites universités et instituts CI (< 5 000 étudiants) n'ont pas les moyens de maintenir une infrastructure Moodle sécurisée et scalable. Un modèle LMS-as-a-Service (LMSaaS) porté par l'UVCI CI ou l'AUF permet de démocratiser l'accès à ces technologies.",
+      "impact": "Extension de l'accès au numérique éducatif à 20+ institutions CI actuellement non équipées"
+    }
+  ],
+  "niveau_maturite": {
+    "description": "Échelle de maturité plateforme ouverte pour les établissements d'enseignement CI",
+    "niveaux": [
+      {
+        "niveau": 1,
+        "label": "Fermé",
+        "description": "Plateforme LMS isolée sans intégration externe. Aucun outil LTI tiers. Ressources pédagogiques propriétaires non partagées (tous droits réservés). Aucune contribution Open Data. Écosystème partenaire inexistant."
+      },
+      {
+        "niveau": 2,
+        "label": "Partiel",
+        "description": "1-2 intégrations LTI basiques (Zoom ou Teams uniquement). Quelques ressources partagées par email entre collègues sans licence formelle. Aucune API publique. Données éducatives non publiées."
+      },
+      {
+        "niveau": 3,
+        "label": "Structuré",
+        "description": "3-5 outils LTI intégrés dans le LMS, licences CC-BY-SA formalisées pour les ressources partagées, participation au réseau AUF (partage OER), contribution ponctuelle au portail Open Data MENA CI."
+      },
+      {
+        "niveau": 4,
+        "label": "Ouvert",
+        "description": "6+ outils LTI certifiés 1.3 intégrés, LRS xAPI déployé pour les analytics inter-outils, 20+ modules sous CC-BY-SA partagés avec 3+ universités partenaires, API LMS documentée ouverte aux partenaires, contribution régulière Open Data MENA CI, Open Badges IMS Global."
+      },
+      {
+        "niveau": 5,
+        "label": "Hub régional",
+        "description": "Infrastructure LMS mutualisée pour 5+ universités UEMOA (LMSaaS), marketplace d'applications LTI propriétaire pour l'écosystème CI/UEMOA, 50+ ressources OER co-créées et partagées CAMES, API publique documentée avec 100+ appels/mois par des tiers, reconnaissance AUF comme nœud EdTech Afrique francophone."
+      }
+    ]
+  },
+  "indicateurs_cles": [
+    {
+      "kpi": "Nombre d'outils LTI certifiés intégrés dans le LMS",
+      "definition": "Nombre d'applications tierces intégrées via le standard LTI 1.3 (IMS Global) dans la plateforme LMS principale de l'établissement",
+      "unite": "outils",
+      "benchmark_ci": "UVCI CI : 8 outils — secteur éducation CI moyen : 1-2 (Zoom/Teams uniquement)",
+      "cible_sectorielle": "> 5 outils LTI certifiés pour être considéré comme une plateforme ouverte",
+      "source": "Inventaire LTI UVCI CI 2024 + enquête MESRS CI"
+    },
+    {
+      "kpi": "Nombre de modules OER partagés sous licence CC-BY-SA",
+      "definition": "Nombre de modules pédagogiques complets (> 10h de contenu) publiés sous licence Creative Commons permettant leur réutilisation et adaptation par d'autres institutions",
+      "unite": "modules",
+      "benchmark_ci": "UVCI CI : 45 modules — UFHB : 3 modules — secteur éducation CI moyen : 0",
+      "cible_sectorielle": "> 10 modules CC-BY-SA (seuil reconnaissance AUF 'partenaire actif')",
+      "source": "Rapport AUF Partage OER Afrique francophone 2024"
+    },
+    {
+      "kpi": "Taux de réutilisation des ressources partagées",
+      "definition": "Ratio entre le nombre de fois où les ressources OER publiées par l'établissement ont été utilisées/adaptées par des institutions tierces et le nombre de ressources publiées",
+      "unite": "ratio (x fois)",
+      "benchmark_ci": "UVCI CI : 3,8x (45 modules réutilisés par 8 universités CAMES) — secteur CI : non mesuré",
+      "cible_sectorielle": "> 2x (chaque module réutilisé au moins 2 fois par des tiers)",
+      "source": "Rapport interne UVCI CI 2024 + statistiques AUF"
+    },
+    {
+      "kpi": "Nombre d'institutions partenaires connectées via API/LTI",
+      "definition": "Nombre d'institutions tierces (universités, entreprises, administrations) accédant aux ressources ou services de la plateforme via une API documentée ou protocole LTI",
+      "unite": "institutions",
+      "benchmark_ci": "UVCI CI : 8 universités CAMES + 3 entreprises CI — secteur CI : 0-1",
+      "cible_sectorielle": "> 5 institutions partenaires connectées",
+      "source": "Direction Partenariats UVCI CI 2024"
+    },
+    {
+      "kpi": "Jeux de données ouverts publiés (Open Data CI)",
+      "definition": "Nombre de jeux de données éducatives anonymisées publiés sur le portail Open Data MENA CI ou sur le site de l'institution sous licence ouverte (CC0, CC-BY)",
+      "unite": "datasets",
+      "benchmark_ci": "MENA CI portail 2024 : 38 datasets nationaux — contribution universités CI : < 5% des institutions",
+      "cible_sectorielle": "> 3 datasets publiés annuellement (taux réussite, insertion, satisfaction)",
+      "source": "Portail Open Data MENA CI 2024"
+    }
+  ],
+  "zoom_sur": {
+    "organisation": "UVCI CI (Université Virtuelle de Côte d'Ivoire)",
+    "titre": "UVCI Hub EdTech UEMOA : 8 universités partenaires sur infrastructure mutualisée",
+    "contexte": "En 2021, 8 universités membres du réseau CAMES en Afrique francophone (UCAD Dakar, USTA-L Lomé, UAO Bouaké, Université de Thiès, Université de Ziguinchor, UNSTIM Bénin, UAC Bénin, Université de Kara Togo) cherchaient à déployer des cours en ligne mais manquaient de l'infrastructure technique et de l'expertise Moodle. L'UVCI CI proposait un modèle LMSaaS (LMS as a Service) basé sur son infrastructure Moodle AWS multi-tenant, permettant à chaque partenaire d'avoir son espace branded tout en partageant les coûts d'infrastructure.",
+    "solution": "Programme 'UVCI Hub UEMOA' lancé en 2022 : (1) hébergement Moodle multi-tenant AWS pour 8 universités partenaires (espaces isolés mais infrastructure partagée) ; (2) catalogue 45 modules CC-BY-SA partagés librement — chaque partenaire peut adapter et republier ; (3) LRS xAPI mutualisé (AWS S3) pour analytics apprenants agrégés au niveau régional ; (4) réseau de 280 tuteurs UVCI CI disponibles pour les universités partenaires (tarif mutualisé) ; (5) licence LTI collective pour 5 outils (Turnitin, H5P, Wooclap, Mentimeter, QuestionWell) négociée au volume (tarif -45% vs. licences individuelles).",
+    "resultats": {
+      "avant": "8 universités partenaires sans LMS opérationnel, coût individuel déploiement Moodle estimé à 15-25 M FCFA par institution, 0 ressource OER partagée entre elles, aucune économie d'échelle sur licences LTI",
+      "apres": "12 000 apprenants supplémentaires sur l'infrastructure UVCI CI (hors apprenants UVCI propres), économie 18 M FCFA/an pour les partenaires (infrastructure + licences mutualisées), 45 modules CC-BY-SA librement utilisables et adaptés 171 fois au total (3,8x de réutilisation), citation UVCI CI 'meilleure pratique EdTech Afrique francophone' dans rapport AUF 2024, tarif licences LTI -45% grâce au volume, rapport AUF cité dans dossier accréditation CAMES de 5 universités partenaires"
+    },
+    "lessons_learned": "La gouvernance du LMS mutualisé a nécessité une charte claire : qui peut modifier les paramètres globaux, comment sont gérées les montées de version Moodle, que se passe-t-il si un partenaire cesse de cotiser. La charte technique UVCI Hub (2022) définit ces règles et a évité 3 conflits potentiels en 2 ans. Le partage OER est plus facile que prévu une fois la licence CC-BY-SA formalisée : la résistance des enseignants à partager leurs cours s'efface quand ils voient leurs ressources citées dans les rapports d'autres universités.",
+    "contact_reference": "Direction Partenariats UVCI CI — partenariats@uvci.edu.ci"
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif plateforme ouverte — établissements enseignement CI et références",
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "type": "National — leader",
+        "outils_lti": "8 outils LTI 1.3 certifiés",
+        "oer_cc_by_sa": "45 modules (réutilisés 3,8x par 8 universités CAMES)",
+        "lmsaas_partenaires": "8 universités hébergées",
+        "open_data": "Contribution portail MENA CI (3 datasets anonymisés 2024)",
+        "open_badges": "Pilote Open Badges IMS Global (3 micro-certifications 2024)",
+        "score_estime": "84/100"
+      },
+      {
+        "organisation": "UFHB (Université FHB Abidjan)",
+        "type": "National — université publique",
+        "outils_lti": "2 outils (Zoom + Teams uniquement)",
+        "oer_cc_by_sa": "3 modules (non formalisés, partage email)",
+        "lmsaas_partenaires": "0",
+        "open_data": "Non (données non publiées)",
+        "open_badges": "Non",
+        "score_estime": "22/100"
+      },
+      {
+        "organisation": "INPHB Yamoussoukro",
+        "type": "National — grande école publique",
+        "outils_lti": "3 outils (Zoom, Teams, CISCO Webex)",
+        "oer_cc_by_sa": "6 modules ingénierie (réseau CAMES ingénieurs)",
+        "lmsaas_partenaires": "0",
+        "open_data": "Non",
+        "open_badges": "CISCO Networking Academy badges (non IMS Global)",
+        "score_estime": "38/100"
+      },
+      {
+        "organisation": "Université de Lomé (Togo)",
+        "type": "Régional — référence UEMOA",
+        "outils_lti": "5 outils LTI (programme AUF numérique)",
+        "oer_cc_by_sa": "28 modules (réseau AUF Afrique de l'Ouest)",
+        "lmsaas_partenaires": "2 instituts hébergés",
+        "open_data": "Contribution portail Open Data Éducation Togo",
+        "open_badges": "Oui (partenariat 1EdTech Afrique francophone)",
+        "score_estime": "68/100"
+      },
+      {
+        "organisation": "Open edX / edX (USA)",
+        "type": "International — référence mondiale",
+        "outils_lti": "500+ outils LTI certifiés dans l'écosystème",
+        "oer_cc_by_sa": "10 000+ ressources OER (MIT OCW intégré)",
+        "lmsaas_partenaires": "200+ institutions hébergées (Fullstack deployments)",
+        "open_data": "Oui (datasets recherche éducative Open edX)",
+        "open_badges": "Standard de référence Open Badges 2.0 et 3.0",
+        "score_estime": "97/100"
+      }
+    ]
+  },
+  "bonnes_pratiques": [
+    {
+      "pratique": "Rejoindre le réseau AUF comme première étape de l'ouverture",
+      "description": "L'adhésion au réseau AUF (Agence Universitaire de la Francophonie) donne accès à une infrastructure Moodle hébergée, 15 000 ressources OER partagées, des licences LTI collectives et un réseau de 1 000+ universités francophones. Coût d'adhésion modeste pour les universités CI.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Formaliser les licences CC-BY-SA avant tout partage de ressources",
+      "description": "Le partage informel de ressources pédagogiques expose l'établissement à des conflits de propriété intellectuelle (OAPI). La licence CC-BY-SA prémunit contre ces risques tout en permettant la réutilisation libre. Ajouter systématiquement la mention CC-BY-SA dans les métadonnées Moodle de chaque ressource.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Déployer le LRS xAPI pour centraliser les analytics multi-outils",
+      "description": "Un LRS (Learning Record Store) compatible xAPI agrège les données d'apprentissage de tous les outils LTI (Turnitin, H5P, Wooclap) dans un seul entrepôt analytique. Cela donne une vue 360° de l'apprenant impossible avec un LMS seul. Solutions AWS S3 + SCORM Cloud LRS ou Watershed LRS.",
+      "priorite": "Moyenne"
+    },
+    {
+      "pratique": "Négocier les licences LTI en consortium pour obtenir des tarifs -30-50%",
+      "description": "Les licences Turnitin, Wooclap, H5P Pro ou QuestionWell sont 30-50% moins chères lorsqu'elles sont négociées en groupe (10+ établissements). L'UVCI CI coordonne ce consortium pour les universités CI/UEMOA via le réseau AUF.",
+      "priorite": "Moyenne"
+    },
+    {
+      "pratique": "Contribuer au portail Open Data MENA CI pour renforcer la légitimité institutionnelle",
+      "description": "La publication de données anonymisées (taux de réussite par filière, insertion professionnelle, satisfaction apprenants) sur le portail Open Data MENA CI renforce la transparence et positionne l'établissement comme acteur de confiance aux yeux des bailleurs et accréditations MESRS CI.",
+      "priorite": "Moyenne"
+    }
+  ],
+  "pieges_a_eviter": [
+    {
+      "piege": "Partager des ressources pédagogiques contenant des données d'apprenants sans anonymisation",
+      "consequence": "Violation APDP CI Loi 2013-450 et atteinte à la vie privée des étudiants. Les cas pratiques, études de cas et données d'évaluation contenant des informations nominatives ne peuvent être partagés qu'après anonymisation complète.",
+      "recommandation": "Processus d'anonymisation systématique avant publication OER, et vérification que les vidéos de cours ne captent pas d'étudiants identifiables sans consentement écrit"
+    },
+    {
+      "piege": "Intégrer des outils LTI non certifiés IMS Global 1.3",
+      "consequence": "Les outils LTI 1.1 (version ancienne) sont moins sécurisés et perdent le support des éditeurs. Risque de vulnérabilité d'injection de contenu non autorisé dans le LMS. La migration LTI 1.1 → 1.3 est coûteuse si l'outil est profondément intégré.",
+      "recommandation": "Vérifier la certification LTI 1.3 sur le registre IMS Global avant toute intégration, et ne déployer que des outils certifiés"
+    },
+    {
+      "piege": "Ouvrir l'API LMS sans politique de sécurité et de quotas",
+      "consequence": "Une API LMS sans authentification OAuth 2.0 et sans limitation de débit (rate limiting) expose les données de 45 000 apprenants. Incident documenté : scraping données UFHB via API non sécurisée (2022, 12 000 emails/numéros de téléphone apprenants exposés).",
+      "recommandation": "Implémenter OAuth 2.0 + rate limiting (100 req/min max) + journalisation complète des accès API conformément à l'APDP CI"
+    },
+    {
+      "piege": "Mutualiser l'infrastructure LMS sans gouvernance formelle",
+      "consequence": "Les conflits sur les mises à jour Moodle, la politique de sécurité partagée, ou les responsabilités en cas d'incident (downtime, breach) sont sources de litiges coûteux entre partenaires sans charte préalable.",
+      "recommandation": "Rédiger une charte technique et juridique du LMS mutualisé avant l'onboarding de tout partenaire (gouvernance, SLA, exit clause, responsabilité APDP CI)"
+    }
+  ],
+  "roadmap": {
+    "titre": "Roadmap plateforme ouverte — établissement d'enseignement CI",
+    "phases": [
+      {
+        "phase": "Phase 1 — Ouverture LTI et OER (Mois 1-6)",
+        "actions": [
+          "Adhésion au réseau AUF et accès aux ressources OER partagées (15 000 ressources)",
+          "Intégration de 3-5 outils LTI 1.3 prioritaires (H5P, Wooclap, Turnitin ou équivalents)",
+          "Formalisation licences CC-BY-SA pour les ressources pédagogiques existantes",
+          "Contribution de 3 premiers modules CC-BY-SA au réseau AUF"
+        ],
+        "budget_indicatif": "2 - 5 M FCFA (licences LTI collectives + développement CC-BY-SA)"
+      },
+      {
+        "phase": "Phase 2 — LRS et Partenariats (Mois 7-15)",
+        "actions": [
+          "Déploiement LRS xAPI (SCORM Cloud ou Watershed LRS) pour analytics multi-outils",
+          "Ouverture API LMS documentée pour 2-3 partenaires institutionnels (OAuth 2.0)",
+          "Contribution Open Data MENA CI (publication 3 jeux de données anonymisés)",
+          "Négociation licences LTI en consortium (5+ établissements CI)"
+        ],
+        "budget_indicatif": "4 - 10 M FCFA (LRS + sécurité API + développement partenariats)"
+      },
+      {
+        "phase": "Phase 3 — Hub Régional (Mois 16-30)",
+        "actions": [
+          "Lancement LMSaaS pour 3-5 petites universités CI/UEMOA (modèle UVCI Hub)",
+          "Open Badges IMS Global pour les micro-certifications de l'établissement",
+          "Marketplace OER propre (catalogue ressources de l'établissement, filtrable, adaptable)",
+          "Accréditation AUF comme 'nœud numérique régional' (reconnaissance formelle)"
+        ],
+        "budget_indicatif": "10 - 25 M FCFA (infrastructure LMSaaS + marketplace OER + Open Badges)"
+      }
+    ]
+  },
+  "ressources": {
+    "formations": [
+      "AUF — ateliers LTI et OER pour universités francophones (Paris, Dakar, Abidjan — subventionnés)",
+      "IMS Global (1EdTech) — formation certification LTI 1.3 et Open Badges (en ligne, payant)",
+      "FDFP CI — financement formation compétences EdTech pour équipes techniques (agrément requis)"
+    ],
+    "outils_recommandes": [
+      "Moodle 4.x — LMS open source standard CI, support LTI 1.3 natif, multi-tenant",
+      "H5P — contenus interactifs OER intégrables (gratuit, CC-BY-SA, 50+ types de contenu)",
+      "SCORM Cloud (Rustici Software) — LRS xAPI SaaS pour analytics multi-outils",
+      "Canvass Credentials (anciennement Badgr) — plateforme Open Badges IMS Global",
+      "Wooclap — interactions pédagogiques en temps réel, LTI 1.3, tarif UEMOA disponible"
+    ],
+    "references_reglementaires": [
+      "IMS Global / 1EdTech — standards LTI 1.3, xAPI, Open Badges (imsglobal.org)",
+      "AUF — charte partage OER Afrique francophone et réseau universités partenaires (auf.org)",
+      "MENA CI — portail Open Data Éducation CI (données.education.ci — 38 datasets 2024)",
+      "OAPI — protection propriété intellectuelle œuvres numériques et logiciels CI (oapi.int)",
+      "APDP CI — Loi 2013-450 (anonymisation données OER, sécurité API LMS, consentement)"
+    ]
+  },
+  "ai_context": {
+    "scoring_dimension": "Maturité de l'ouverture de la plateforme pédagogique et de l'écosystème EdTech",
+    "scoring_rubric": {
+      "score_1_to_20": "Plateforme LMS complètement fermée : aucun outil LTI tiers, ressources propriétaires non partagées (tous droits réservés), aucune API, aucune contribution Open Data, aucun partenaire connecté.",
+      "score_21_to_40": "1-2 intégrations LTI basiques (Zoom ou Teams uniquement), quelques ressources partagées informellement sans licence CC-BY-SA, aucune API publique documentée, données éducatives non publiées.",
+      "score_41_to_60": "3-5 outils LTI 1.3 intégrés, licences CC-BY-SA formalisées, participation au réseau AUF avec 5-10 modules OER partagés, contribution ponctuelle Open Data MENA CI.",
+      "score_61_to_80": "6+ outils LTI certifiés, LRS xAPI déployé, 20+ modules CC-BY-SA avec taux de réutilisation > 2x, API LMS documentée ouverte à 3+ partenaires, Open Badges IMS Global, contribution régulière Open Data.",
+      "score_81_to_100": "Hub régional LMSaaS pour 5+ universités UEMOA, marketplace OER propre, 50+ ressources co-créées CAMES, API publique avec 100+ appels/mois tiers, reconnaissance AUF nœud EdTech Afrique francophone, Open Badges interopérables portables LinkedIn."
+    },
+    "questions_discriminantes": [
+      "Combien d'outils pédagogiques tiers (Turnitin, H5P, Wooclap, etc.) sont intégrés dans votre LMS via le standard LTI 1.3 ?",
+      "Avez-vous publié des ressources pédagogiques sous licence CC-BY-SA permettant leur réutilisation par d'autres institutions ?",
+      "Disposez-vous d'un LRS (Learning Record Store) xAPI pour centraliser les analytics de tous vos outils pédagogiques ?",
+      "Des institutions tierces (universités, entreprises) accèdent-elles à votre plateforme via une API documentée ?",
+      "Contribuez-vous au portail Open Data MENA CI ou publiez-vous des données éducatives anonymisées en accès libre ?"
+    ],
+    "signaux_avances": [
+      "Infrastructure LMS mutualisée proposée comme service à d'autres institutions CI/UEMOA (LMSaaS)",
+      "LRS xAPI centralisant les données de 6+ outils LTI pour analytics apprenants 360°",
+      "Open Badges IMS Global pour les micro-certifications, partageables sur LinkedIn par les apprenants",
+      "Taux de réutilisation des modules OER partagés supérieur à 3x par des institutions partenaires",
+      "Reconnaissance formelle AUF comme nœud numérique régional Afrique de l'Ouest"
+    ]
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "axis": "MARKETING_DIGITAL",
+    "sub_axis": "Marketing digital",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "IA générative pour la création de contenu marketing à grande échelle",
+      "description": "Les outils IA (Jasper, ChatGPT, Adobe Firefly) génèrent des textes, images et vidéos marketing en quelques secondes, permettant une personnalisation à grande échelle et réduisant les coûts de production de 60-80 %.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "73 % des marketeurs utilisent l'IA générative pour le contenu (HubSpot State of Marketing 2024)",
+      "source": "HubSpot State of Marketing Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Marketing automation — nurturing et conversion à grande échelle",
+      "description": "Les plateformes de marketing automation (HubSpot, Marketo, Brevo) automatisent les campagnes d'email, SMS et push notification en fonction du comportement client, augmentant les taux de conversion de 3-5×.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "67 % des organisations utilisent une plateforme de marketing automation (Forrester 2024)",
+      "source": "Forrester Marketing Automation Wave 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Social Commerce — achat direct sur les réseaux sociaux",
+      "description": "TikTok Shop, Instagram Shopping et WhatsApp Catalog permettent l'achat sans quitter les applications sociales. En Afrique de l'Ouest, WhatsApp est le principal canal de découverte et de vente informelle.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "54 % des acheteurs africains ont acheté via les réseaux sociaux (Hootsuite Africa 2024)",
+      "source": "Hootsuite Digital 2024 Africa Report",
+      "year": "2024"
+    },
+    {
+      "title": "First-Party Data — fin des cookies tiers",
+      "description": "La disparition des cookies tiers (Google Chrome 2024) force les organisations à construire leur propre base de données clients first-party via des programmes de fidélité, formulaires et interactions directes.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "65 % des marketeurs ont initié une stratégie first-party data (Google/Ipsos 2024)",
+      "source": "Google / Ipsos Digital Marketing Study 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Plateforme de Marketing Automation",
+      "category": "Automatisation des campagnes",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne en Afrique",
+      "leading_vendors": ["HubSpot", "Marketo (Adobe)", "Brevo (ex-Sendinblue)", "Mailchimp", "Klaviyo"]
+    },
+    {
+      "name": "SEO & SEM (Search Engine Marketing)",
+      "category": "Acquisition via la recherche",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne",
+      "leading_vendors": ["Google Ads", "SEMrush", "Ahrefs", "Moz", "Google Search Console"]
+    },
+    {
+      "name": "Social Media Management",
+      "category": "Gestion des réseaux sociaux",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne à élevée",
+      "leading_vendors": ["Hootsuite", "Sprout Social", "Buffer", "Meta Business Suite", "TikTok for Business"]
+    },
+    {
+      "name": "Analytics Marketing & Attribution",
+      "category": "Mesure et optimisation",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["Google Analytics 4", "Adobe Analytics", "Mixpanel", "Amplitude", "Hotjar"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Présence active sur Facebook, Instagram et WhatsApp, campagnes Google Ads mensuelles avec suivi ROI",
+        "differentiator": "Premier acteur sectoriel à déployer une plateforme de marketing automation avec séquences email personnalisées",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Jumia",
+        "country": "Pan-Afrique",
+        "key_practice": "Marketing data-driven : segmentation ML sur 10M+ clients, personnalisation des emails à 97 % de taux d'ouverture",
+        "differentiator": "40 % des revenus Jumia générés par des campagnes marketing automation entièrement personnalisées",
+        "source": "Jumia Annual Report 2023 / Jumia Marketing Tech Blog"
+      },
+      {
+        "organisation": "MTN Group",
+        "country": "Pan-Afrique",
+        "key_practice": "Marketing automation sur 21 pays avec segmentation comportementale et campagnes USSD personnalisées",
+        "differentiator": "Taux de conversion campagne MoMo 3× supérieur via la personnalisation comportementale ML",
+        "source": "MTN Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Netflix",
+        "country": "USA",
+        "key_practice": "100 % des communications marketing personnalisées par IA : miniatures, emails, recommandations push",
+        "differentiator": "A/B testing permanent sur 1 000+ variantes de miniatures pour maximiser le taux de clic par profil",
+        "source": "Netflix Technology Blog 2023 / Fast Company 2024"
+      },
+      {
+        "organisation": "HubSpot",
+        "country": "USA",
+        "key_practice": "Inbound Marketing à grande échelle : 1M+ articles de blog, 2M abonnés newsletter, 200M visiteurs/mois",
+        "differentiator": "Le contenu éducatif gratuit (HubSpot Academy) génère 60 % des leads commerciaux — marketing sans publicité payante",
+        "source": "HubSpot Annual Report 2023 / Semrush Traffic Analysis"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune présence digitale. Pas de site web. Pas de réseaux sociaux. Marketing uniquement traditionnel (bouche-à-oreille, affichage). Aucune mesure du ROI marketing.",
+    "level_2_developing": "Présence sur 1-2 réseaux sociaux sans stratégie. Site web statique. Quelques campagnes email sans segmentation. Pas de marketing automation. ROI non mesuré.",
+    "level_3_defined": "Stratégie de contenu digital documentée. Google Ads / Social Ads avec suivi de conversion. Email marketing segmenté. Analytics web déployé. KPIs marketing définis.",
+    "level_4_managed": "Marketing automation opérationnel. SEO structuré avec objectifs de trafic. Campagnes multicanales cohérentes. Attribution ROI multi-touch. A/B testing régulier.",
+    "level_5_optimizing": "Hyper-personnalisation IA sur tous les canaux. Marketing automation avancé avec scoring leads. First-Party Data Strategy. Social Commerce actif. ROAS > 4× mesuré en continu."
+  },
+
+  "regulations": [
+    {
+      "name": "Loi n°2013-450 — Données marketing et consentement",
+      "issuing_body": "République de Côte d'Ivoire / ARTCI",
+      "scope": "Organisations collectant des données pour des usages marketing",
+      "key_requirement": "Consentement explicite pour l'envoi de communications marketing, droit de désabonnement immédiat",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.artci.ci"
+    },
+    {
+      "name": "Loi n°2016-412 relative au commerce électronique",
+      "issuing_body": "République de Côte d'Ivoire",
+      "scope": "Organisations pratiquant le e-commerce et le marketing en ligne",
+      "key_requirement": "Loyauté de la publicité, mentions légales, transparence des prix et des conditions",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.gouv.ci"
+    },
+    {
+      "name": "Politique de publicité de Meta / Google",
+      "issuing_body": "Meta Platforms / Google",
+      "scope": "Annonceurs sur Facebook, Instagram, Google Ads",
+      "key_requirement": "Transparence des publicités politiques, interdiction de certains ciblages sensibles, règles de contenu",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.facebook.com/policies/ads"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Dépendance aux plateformes publicitaires — risque de concentration",
+      "description": "Une dépendance à 100 % à Google Ads ou Facebook Ads expose l'organisation aux variations tarifaires, changements d'algorithme et potentielles suspensions de compte.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Diversifier les canaux d'acquisition (SEO organique, email, WhatsApp), développer une base de données first-party et une audience owned indépendante."
+    },
+    {
+      "title": "ROI marketing non mesuré — dépenses non optimisées",
+      "description": "Sans attribution correcte des conversions, les budgets marketing sont alloués aux canaux les plus visibles et non aux plus efficaces, pouvant gaspiller 40-60 % des dépenses.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Déployer Google Analytics 4 avec suivi des conversions, définir des UTM standards pour toutes les campagnes et mettre en place un rapport ROAS mensuel."
+    },
+    {
+      "title": "Réputation en ligne — crise virale sur les réseaux sociaux",
+      "description": "Un bad buzz sur les réseaux sociaux peut détruire des années de capital marque en 24 heures. La vitesse de réaction est critique pour limiter les dégâts.",
+      "severity": "Élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Mettre en place une veille sociale (Mention, Google Alerts), définir une procédure de crise avec temps de réponse < 2h et former les équipes à la communication de crise."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "WhatsApp Marketing — canal à coût marginal nul et forte ouverture",
+      "description": "Les messages WhatsApp Business ont un taux d'ouverture de 98 % vs 20 % pour l'email. Avec 95 % de pénétration en Afrique de l'Ouest, c'est le canal marketing le plus efficace de la région.",
+      "impact_level": "Très élevé",
+      "time_to_value": "1-3 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Inbound Marketing — génération de leads par le contenu",
+      "description": "Un blog avec 50+ articles optimisés SEO génère un trafic qualifié croissant sans coût marginal par visiteur, créant un actif marketing à long terme vs les publicités payantes.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Marketing automation — nurturing des prospects à grande échelle",
+      "description": "Un pipeline de nurturing automatisé sur 30-90 jours augmente le taux de conversion de 3-5× en accompagnant les prospects dans leur décision d'achat sans effort manuel.",
+      "impact_level": "Élevé",
+      "time_to_value": "3-6 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Adobe",
+      "target": "Marketo",
+      "amount": "4,75 Mds$",
+      "date": "2018",
+      "strategic_rationale": "Intégrer la plateforme de marketing automation B2B leader dans la suite Adobe Experience Cloud",
+      "source": "Adobe Press Release 2018"
+    },
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Intuit",
+      "target": "Mailchimp",
+      "amount": "12 Mds$",
+      "date": "2021",
+      "strategic_rationale": "Démocratiser le marketing automation pour les PMEs et intégrer les données financières et marketing",
+      "source": "Intuit Press Release 2021"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Netflix",
+    "pays": "USA",
+    "technologie": "Hyper-personnalisation marketing — 1 500 variantes de miniatures par film",
+    "description": "Netflix a transformé le marketing en un moteur de personnalisation IA à grande échelle. Chaque abonné voit une miniature différente pour le même film, choisie par l'IA en fonction de son historique de visionnage. Netflix réalise 1 000+ A/B tests simultanément sur ses emails, miniatures et recommandations. 80 % des visionnages proviennent des recommandations algorithmiques, pas de la recherche. Les emails Netflix ont un taux d'ouverture de 60 % vs 20 % industrie, grâce à des objets générés par IA personnalisés. Le coût d'acquisition client est 5× inférieur à la moyenne industrie grâce à cette personnalisation.",
+    "resultats": "80 % des visionnages via recommandation · 60 % taux d'ouverture email · 1 500 variantes miniatures par film · CAC 5× inférieur industrie · 270M abonnés",
+    "source": "Netflix Technology Blog 2023 / Wired Magazine 2024",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité marketing digital — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "Présence sociale active et stratégique", "Google/Social Ads avec suivi ROI", "Marketing automation déployé", "Analytics web avec conversion tracking", "Contenu SEO structuré"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "Partiel", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["Partiel", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Le marketing digital est le moteur de croissance de toute organisation dans un monde où les clients découvrent, évaluent et achètent en ligne. En Afrique de l'Ouest, les réseaux sociaux (Facebook, WhatsApp, TikTok) sont les premiers canaux de découverte des marques. Les organisations qui maîtrisent l'attribution ROI et la personnalisation gagnent des parts de marché de façon structurelle.",
+    "maturity_max_description": "Stratégie marketing digital complète avec SEO, SEM, Social Media et email. Marketing automation avec séquences de nurturing personnalisées. Hyper-personnalisation IA des communications. Attribution ROI multi-touch. A/B testing continu. ROAS > 4× sur tous les canaux payants. First-Party Data Strategy active.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune présence digitale. Marketing uniquement traditionnel. Aucune mesure du ROI.",
+      "score_21_to_40": "Présence sociale basique. Site web statique. Quelques emails sans segmentation. ROI non mesuré.",
+      "score_41_to_60": "Stratégie contenu documentée. Google/Social Ads avec suivi conversion. Analytics déployé. KPIs définis.",
+      "score_61_to_80": "Marketing automation opérationnel. SEO structuré. Multicanal cohérent. Attribution ROI. A/B testing.",
+      "score_81_to_100": "Hyper-personnalisation IA. Automation avancée. First-Party Data. Social commerce. ROAS > 4× mesuré."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur sa maturité en marketing digital. Analyse la présence et l'activité sur les réseaux sociaux, l'utilisation de Google Ads ou Social Ads avec suivi du ROI, le déploiement d'une plateforme de marketing automation, la qualité de l'analytics web avec conversion tracking et l'existence d'une stratégie de contenu SEO.",
+    "key_questions_for_llm": [
+      "L'organisation dispose-t-elle d'une présence active et stratégique sur les réseaux sociaux pertinents pour sa cible ?",
+      "Des campagnes Google Ads ou Social Ads sont-elles actives avec un suivi du ROI et du ROAS ?",
+      "Une plateforme de marketing automation est-elle déployée pour automatiser les campagnes email et SMS ?",
+      "L'analytics web est-il configuré avec le suivi des conversions et des KPIs marketing mesurés régulièrement ?",
+      "L'organisation produit-elle du contenu digital régulier (blog, vidéo, infographie) avec une stratégie SEO définie ?"
+    ]
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "secteur": "btp",
+  "axe": "MODELE_OP",
+  "sous_axe": "simplification",
+  "label": "Simplification des processus opérationnels BTP",
+  "description": "Capacité à identifier et éliminer les activités sans valeur ajoutée dans les processus BTP (retravaux, déplacements inutiles, double saisie, gestion papier) par le lean construction, la digitalisation des workflows et l'automatisation des tâches répétitives en Côte d'Ivoire.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Retravaux BTP CI : 8–15% du coût total projet estimés en retravaux (non-conformités, plans obsolètes, mauvaise coordination)",
+      "Double saisie omniprésente : rapports journaliers papier → ressaisie Excel → ressaisie ERP — 3h/jour chef de chantier CI moyen",
+      "Déplacements bureau↔chantier CI : Abidjan embouteillages — 2–3h aller-retour DT non numérisée = 4–6h/document",
+      "Situations de travaux mensuelles : processus CI 8–15 jours pour validation paiement sous-traitants — cash flow critique PME BTP",
+      "CCAG CI Cahier des Clauses Administratives Générales : lourdeur administrative marchés publics BTP CI",
+      "Lean Construction adoption naissante CI : Last Planner System (LPS), Takt Planning — COLAS CI pionnier"
+    ],
+    "acteurs_cles": [
+      "CNBTP CI — Conseil National du Bâtiment et des Travaux Publics : formations lean BTP, agréments",
+      "BNETD CI — MOA délégué État CI : processus réception travaux publics, PV numériques",
+      "AGEROUTE CI — Agence de Gestion des Routes : processus surveillance routière, réception travaux",
+      "FDFP CI — Fonds de Développement de la Formation Professionnelle : financement formations lean/digital BTP",
+      "Orange Money CI / Wave CI — paiements mobile money sous-traitants journaliers",
+      "ARTCI CI — réglementation plateformes numériques CI"
+    ],
+    "reglementation_locale": [
+      "CCAG CI Décret 2009-260 : processus contractuels marchés publics BTP CI — délais réglementés",
+      "Code du Travail CI Loi 2015-532 : temps travail, heures supplémentaires — optimisation plannings",
+      "CNSS CI : déclarations sociales mensuelles — simplification via Sage Paie CI / télédéclaration CNSS",
+      "Loi CI 2017-771 : valeur juridique PV numériques et signatures électroniques — réception travaux sans papier",
+      "FDFP CI Décret 96-287 : financement formations lean/BIM à 70-80% pour entreprises cotisantes",
+      "Loi CI n°2018-570 VEFA : processus remise en mains propres digitaux — PV réception électronique"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Processus 100% papier. Rapports journaliers manuscrits. Situations de travaux Word/Excel imprimées. Aucun lean construction. Retravaux fréquents sans mesure. Déplacements systématiques pour validation de documents.",
+      "indicateurs": [
+        "Rapports journaliers 100% papier — ressaisie systématique",
+        "Situations de travaux : Word imprimé → circuit signataires papier → 10-15 jours",
+        "Taux retravaaux non mesuré — estimé > 12% du coût projet",
+        "0 formation lean construction reçue par l'encadrement",
+        "Déplacements bureau↔chantier : > 3h/semaine par ingénieur pour validation seule"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Rapports journaliers Excel partiellement remplis sur PC bureau. Situations de travaux Excel. Quelques notions lean sans implémentation. Taux retravaaux mesuré ponctuellement. Déplacements toujours fréquents.",
+      "indicateurs": [
+        "Rapports journaliers Excel — ressaisie depuis notes papier chantier",
+        "Situations de travaux Excel — délai validation 7-10 jours",
+        "Taux retravaux mesuré une fois — non suivi en continu",
+        "1 encadrant formé lean — pas appliqué systématiquement",
+        "Email utilisé pour DT mais impression fréquente pour signature"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Rapports journaliers sur tablette (Procore ou BatiScript CI). Situations de travaux générées automatiquement depuis avancement réel. Lean Last Planner System déployé. Taux retravaux suivi mensuellement. Signatures électroniques PV réception.",
+      "indicateurs": [
+        "Rapports journaliers tablette : saisie directe chantier → 0 ressaisie",
+        "Situations de travaux auto-générées depuis avancement Procore — délai validation < 5 jours",
+        "LPS (Last Planner System) déployé : PPC > 70%, look-ahead 3 semaines",
+        "Taux retravaux suivi mensuel : < 8% du coût projet",
+        "PV réception BatiScript CI — signature électronique DocuSign CI — 0 impression"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "Élimination systématique double saisie : une source de vérité (BIM/ERP) pour toutes les données projet. Lean Construction structuré (LPS + Takt Planning + EVA). Délai situations de travaux < 48h. Taux retravaux < 5%. Paiements sous-traitants < 24h via Mobile Money CI.",
+      "indicateurs": [
+        "0 double saisie : BIM 5D → ERP → situations de travaux automatiques",
+        "Takt Planning déployé : zones de chantier séquencées, flux continu",
+        "Délai situations de travaux : < 48h (validation mobile)",
+        "Taux retravaux : < 5% coût projet — suivi hebdomadaire",
+        "Paiements sous-traitants < 24h : Orange Money Business CI ou Wave CI"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Processus BTP entièrement lean-digitaux : zéro papier, zéro double saisie, zéro délai de validation > 24h. IA prédictive retravaux. Paiements temps réel. Benchmark lean BTP CI publié. Modèle référence Afrique de l'Ouest.",
+      "indicateurs": [
+        "Taux retravaaux < 2% — IA prédictive détection risque non-conformité pré-coulage",
+        "Délai validation situations de travaux : < 4h (workflow mobile entièrement automatisé)",
+        "Paiements sous-traitants temps réel : API Mobile Money CI intégrée ERP",
+        "0 déplacement pour validation document — 100% signature électronique Loi CI 2017-771",
+        "Benchmark lean BTP CI publié annuellement — référence CNBTP CI"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Comment sont produits vos rapports journaliers de chantier ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Manuscrits sur papier — ressaisie bureau ensuite"},
+        {"valeur": 2, "label": "Excel rempli au bureau depuis notes papier chantier"},
+        {"valeur": 3, "label": "Tablette chantier — application dédiée (Procore, BatiScript)"},
+        {"valeur": 4, "label": "Tablette chantier → ERP automatique — 0 ressaisie"},
+        {"valeur": 5, "label": "Capteurs IoT + IA — rapport auto-généré, validé chef de chantier"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Quel est le délai moyen de validation de vos situations de travaux mensuelles ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "> 15 jours — circuit papier multi-signataires"},
+        {"valeur": 2, "label": "8-15 jours — Excel email avec circuit validation"},
+        {"valeur": 3, "label": "4-7 jours — workflow digital partiel"},
+        {"valeur": 4, "label": "< 48h — workflow mobile automatisé"},
+        {"valeur": 5, "label": "< 4h — auto-généré BIM + validation mobile ERP"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Avez-vous déployé des méthodes lean construction (Last Planner System, Takt Planning) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — planning Gantt classique uniquement"},
+        {"valeur": 2, "label": "Notions lean connues — aucune implémentation formelle"},
+        {"valeur": 3, "label": "LPS déployé sur certains chantiers — PPC mesuré"},
+        {"valeur": 4, "label": "LPS + Takt Planning systématiques — EVA mensuel"},
+        {"valeur": 5, "label": "Lean Construction natif + IA prédictive — benchmark CI publié"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Comment payez-vous vos sous-traitants et ouvriers journaliers ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Espèces — délai 15-30 jours après réception situation"},
+        {"valeur": 2, "label": "Chèque ou virement bancaire — délai 7-15 jours"},
+        {"valeur": 3, "label": "Virement bancaire + Mobile Money CI ponctuel — délai 3-7 jours"},
+        {"valeur": 4, "label": "Orange Money Business CI / Wave CI — délai < 24h automatisé"},
+        {"valeur": 5, "label": "API Mobile Money CI intégrée ERP — paiement temps réel validation"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "Digitalisation rapports journaliers",
+      "Délai situations de travaux",
+      "Lean Construction déployé",
+      "Taux retravaux mesuré",
+      "Paiements sous-traitants digitaux"
+    ],
+    "lignes": [
+      {
+        "organisation": "PME BTP CI classe D-E",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "100% papier, délais 15+ jours, aucun lean, retravaux non mesurés, espèces"
+      },
+      {
+        "organisation": "SETIMA CI",
+        "scores": [3, 3, 2, 3, 3],
+        "note_globale": 3,
+        "commentaire": "BatiScript CI déployé, délai 5-7 jours, lean partiel, retravaux suivi mensuel"
+      },
+      {
+        "organisation": "SATCI CI",
+        "scores": [4, 4, 3, 4, 4],
+        "note_globale": 4,
+        "commentaire": "Procore tablettes, délai < 48h, LPS 8 chantiers, retravaux < 5%, Mobile Money CI"
+      },
+      {
+        "organisation": "COLAS CI",
+        "scores": [5, 5, 5, 5, 4],
+        "note_globale": 5,
+        "commentaire": "BIM 5D→ERP auto, délai < 4h, LPS+Takt+EVA, retravaux < 2%, paiements quasi-temps réel"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "COLAS CI — Lean Construction BTP CI",
+      "part_de_marche_estimee": "Référence lean BTP CI",
+      "forces": ["Groupe Bouygues — méthodes lean groupe", "Ingénieurs Lean formés France", "PPC > 85% sur projets CI", "Benchmark interne partagé CNBTP CI"],
+      "faiblesses": ["Méthodes groupe parfois inadaptées contexte CI", "Taille groupe — PME locales ne peuvent pas dupliquer directement"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "Lean Construction Institute Afrique Francophone (LCIAF)",
+      "part_de_marche_estimee": "Association formations lean BTP francophone",
+      "forces": ["Certifications LPS adaptées contexte africain", "Réseau 6 pays UEMOA", "Formations en français et langues locales"],
+      "faiblesses": ["Présence CI encore faible", "Peu de cas études locaux disponibles"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "Procore Technologies — plateforme gestion chantier",
+      "part_de_marche_estimee": "Leader mondial plateformes BTP",
+      "forces": ["Rapports journaliers tablette", "Workflow situations de travaux intégré", "RFI et PV réception numériques", "API ERP native SAP/Oracle"],
+      "faiblesses": ["Coût USD — impact change FCFA", "Formation longue PME CI", "Support francophone limité CI"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Procore — rapports journaliers tablette",
+      "usage": "Saisie directe chantier tablette, 0 ressaisie, workflow validation automatisé",
+      "niveau_cible": "3+",
+      "cout_estime": "600 000–2 000 000 FCFA/an selon taille",
+      "disponibilite_ci": "International — accès 4G CI, support partenaires locaux"
+    },
+    {
+      "nom": "BatiScript CI — PV réception et situation de travaux",
+      "usage": "Réception VEFA numérique, situations de travaux auto, signature électronique CI",
+      "niveau_cible": "3+",
+      "cout_estime": "300 000–800 000 FCFA/an",
+      "disponibilite_ci": "International francophone — utilisé CI par promoteurs VEFA"
+    },
+    {
+      "nom": "Last Planner System (LPS) — méthode lean",
+      "usage": "Planning collaboratif chantier, PPC hebdomadaire, look-ahead 3-6 semaines",
+      "niveau_cible": "3+",
+      "cout_estime": "Formation 400 000–800 000 FCFA (FDFP CI remboursable)",
+      "disponibilite_ci": "Méthode universelle — formateurs CNBTP CI disponibles"
+    },
+    {
+      "nom": "Orange Money Business CI / Wave CI API",
+      "usage": "Paiements sous-traitants et journaliers < 24h, intégration ERP, rapprochement auto",
+      "niveau_cible": "3+",
+      "cout_estime": "0,5–1% par transaction (inclus frais API)",
+      "disponibilite_ci": "Natif CI — Orange Money Business et Wave for Business"
+    },
+    {
+      "nom": "Microsoft Power Automate — workflows validation",
+      "usage": "Automatisation circuits de signature, alertes délais, situations de travaux auto-générées",
+      "niveau_cible": "4",
+      "cout_estime": "Inclus Microsoft 365 Business (100 000–250 000 FCFA/user/an)",
+      "disponibilite_ci": "International — inclus M365 déjà déployé CI"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "AGEROUTE CI — Lean Digital : situations de travaux automatisées routes nationales",
+    "organisation": "AGEROUTE CI (Agence de Gestion et d'Entretien des Routes, Abidjan)",
+    "contexte": "Programme entretien routes nationales CI : 28 chantiers simultanés, 45 entreprises sous-traitantes, situations de travaux mensuelles papier. Délai moyen validation situations : 14 jours → retards de paiement systématiques → conflits sous-traitants → arrêts chantier.",
+    "probleme": "14 jours de délai validation = cash flow bloqué sous-traitants PME CI. Taux retravaux 11% estimé (non mesuré). 3 arrêts chantier majeurs en 2022 pour non-paiement. Ressaisie triple : rapport papier → Excel → SAP AGEROUTE CI.",
+    "solution_deployee": "Déploiement Procore tablettes Durabook R8 chefs de chantier AGEROUTE CI. Situations de travaux auto-générées depuis avancement Procore → validation mobile DT → virement Orange Money Business CI sous-traitants. Formation LPS 18 ingénieurs AGEROUTE CI (FDFP CI financement 75%).",
+    "resultats": "Délai situations de travaux : 14 jours → 2,5 jours (-82%). Taux retravaux mesuré : 11% → 6,2% en 12 mois (-44%). 0 arrêt chantier non-paiement en 18 mois post-déploiement. Paiements sous-traitants : délai 14j → Orange Money CI < 24h. PPC chantiers avec LPS : 58% → 79% en 6 mois. Déplacements bureau↔chantier DT : -68%. Économie estimée retravaux réduits : 420 M FCFA sur portefeuille 2023.",
+    "enseignements": [
+      "Le délai de paiement est la première cause d'arrêt chantier BTP CI — Mobile Money CI < 24h résout 80% des conflits sous-traitants",
+      "L'auto-génération situations de travaux depuis l'avancement réel Procore élimine 3 ressaisies et 11 jours de délai en une seule action",
+      "LPS financé FDFP CI à 75% rend le lean accessible aux PME BTP CI — le ROI est positif dès le 2e chantier"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "lean construction", "Last Planner System", "LPS", "PPC", "taux retravaux", "double saisie",
+      "situations de travaux", "rapports journaliers tablette", "Procore", "BatiScript CI",
+      "zéro papier", "signature électronique", "Mobile Money CI paiements", "délai validation",
+      "Takt Planning", "EVA", "simplification processus BTP"
+    ],
+    "signaux_niveau_avance": [
+      "Taux retravaux mesuré et < 5%",
+      "Situations de travaux validées < 48h",
+      "LPS + Takt Planning déployés",
+      "0 double saisie — BIM/ERP source unique",
+      "Paiements sous-traitants < 24h Mobile Money CI"
+    ],
+    "pieges_frequents": [
+      "Confondre 'utiliser Excel' avec 'digitaliser' — Excel maintient la double saisie",
+      "LPS déclaré mais PPC non mesuré — sans indicateur, ce n'est pas du lean",
+      "Délai situations de travaux compté depuis envoi — non depuis validation et paiement",
+      "Taux retravaux non mesuré = déclaration niveau 1 même si l'entreprise se croit à niveau 3"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "100% papier. Ressaisie triple systématique. Aucun lean. Retravaux non mesurés. Paiements espèces 15+ jours.",
+      "score_21_to_40": "Excel partiels. Délai situations 8-15 jours. Lean non déployé. Retravaux ponctuel. Virements bancaires 7-15 jours.",
+      "score_41_to_60": "Tablettes chantier. Situations < 7 jours. LPS partiel, PPC mesuré. Retravaux < 8%. Mobile Money CI ponctuel.",
+      "score_61_to_80": "0 ressaisie, BIM→ERP auto. Délai < 48h. LPS+Takt systématiques. Retravaux < 5%. Paiements Mobile Money CI < 24h.",
+      "score_81_to_100": "Retravaux < 2% IA prédictive. Délai < 4h. Lean natif. Paiements temps réel API. Benchmark CI publié — référence CNBTP CI."
+    }
+  }
+}

@@ -15,6 +15,17 @@ interface Framework {
   focus: string;
   maturityLevels: MaturityLevel[];
   domains: { name: string; criteria: string[] }[];
+  custom?: boolean;
+}
+
+interface NewFrameworkForm {
+  name: string;
+  authority: string;
+  category: string;
+  focus: string;
+  domainName: string;
+  domainCriteria: string;
+  domains: { name: string; criteria: string[] }[];
 }
 
 const FRAMEWORKS: Framework[] = [
@@ -325,6 +336,16 @@ const SECTOR_MAP: { sector: string; icon: string; frameworks: string[] }[] = [
 
     ::-webkit-scrollbar { width:5px; }
     ::-webkit-scrollbar-thumb { background:#d1d5db; border-radius:10px; }
+
+    .modal-backdrop-custom {
+      position:fixed; inset:0; background:rgba(0,0,0,.45);
+      z-index:1040; backdrop-filter:blur(2px);
+    }
+    .modal-custom {
+      position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
+      width:min(600px,92vw); z-index:1050;
+      max-height:90vh; overflow:hidden; display:flex; flex-direction:column;
+    }
   `],
   template: `
     <div class="container-fluid py-4 px-4" style="max-width:1400px;margin:auto;">
@@ -362,9 +383,14 @@ const SECTOR_MAP: { sector: string; icon: string; frameworks: string[] }[] = [
               </div>
             </div>
           </div>
-          <a routerLink="/consultant/dashboard" class="btn btn-light btn-sm rounded-pill px-3 align-self-start">
-            <i class="fas fa-arrow-left me-1"></i>Dashboard
-          </a>
+          <div class="d-flex gap-2 align-self-start">
+            <button class="btn btn-light btn-sm rounded-pill px-3" (click)="openAddModal()">
+              <i class="fas fa-plus me-1"></i>Ajouter une base de connaissance
+            </button>
+            <a routerLink="/consultant/dashboard" class="btn btn-light btn-sm rounded-pill px-3">
+              <i class="fas fa-arrow-left me-1"></i>Dashboard
+            </a>
+          </div>
         </div>
       </div>
 
@@ -569,15 +595,155 @@ const SECTOR_MAP: { sector: string; icon: string; frameworks: string[] }[] = [
       </div>
 
     </div>
+
+    <!-- ── Modal: Ajouter une base de connaissance ── -->
+    <div *ngIf="showAddModal" class="modal-backdrop-custom" (click)="closeAddModal()"></div>
+    <div *ngIf="showAddModal" class="modal-custom card border-0 shadow-lg rounded-4">
+      <div class="card-body p-0">
+
+        <!-- Modal header -->
+        <div class="p-4 rounded-top-4 text-white"
+             style="background:linear-gradient(135deg,#1e1b4b,#3730a3);">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-3">
+              <div class="bg-white bg-opacity-20 rounded-3 p-2">
+                <i class="fas fa-plus-circle fa-lg"></i>
+              </div>
+              <div>
+                <div class="fw-bold fs-5">Ajouter une base de connaissance</div>
+                <div class="opacity-75 small">Créer un référentiel personnalisé</div>
+              </div>
+            </div>
+            <button class="btn btn-sm bg-white bg-opacity-20 text-white border-0 rounded-circle"
+                    style="width:32px;height:32px;" (click)="closeAddModal()">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Modal body -->
+        <div class="p-4" style="max-height:65vh;overflow-y:auto;">
+
+          <!-- Nom -->
+          <div class="mb-3">
+            <label class="form-label fw-semibold small">Nom du référentiel *</label>
+            <input type="text" class="form-control"
+                   placeholder="Ex : Framework ISO 9001"
+                   [(ngModel)]="newFw.name">
+          </div>
+
+          <!-- Source / Autorité -->
+          <div class="mb-3">
+            <label class="form-label fw-semibold small">Source / Autorité *</label>
+            <input type="text" class="form-control"
+                   placeholder="Ex : Organisation Internationale de Normalisation"
+                   [(ngModel)]="newFw.authority">
+          </div>
+
+          <!-- Catégorie -->
+          <div class="mb-3">
+            <label class="form-label fw-semibold small">Catégorie</label>
+            <select class="form-select" [(ngModel)]="newFw.category">
+              <option value="Stratégie">Stratégie</option>
+              <option value="Processus">Processus</option>
+              <option value="Sécurité">Sécurité</option>
+              <option value="Gouvernance IT">Gouvernance IT</option>
+              <option value="Innovation">Innovation</option>
+              <option value="Benchmarking">Benchmarking</option>
+              <option value="Réglementaire">Réglementaire</option>
+              <option value="Pratiques">Pratiques</option>
+              <option value="Technologies">Technologies</option>
+              <option value="Personnalisé">Personnalisé</option>
+            </select>
+          </div>
+
+          <!-- Description -->
+          <div class="mb-4">
+            <label class="form-label fw-semibold small">Description / Objectif *</label>
+            <textarea class="form-control" rows="3"
+                      placeholder="Décrivez l'objectif et le périmètre de ce référentiel…"
+                      [(ngModel)]="newFw.focus"></textarea>
+          </div>
+
+          <!-- Domaines -->
+          <div class="mb-3">
+            <div class="fw-semibold small mb-2 d-flex align-items-center gap-2">
+              <i class="fas fa-th-list text-primary"></i>
+              Domaines d'évaluation
+            </div>
+
+            <!-- Domaines déjà ajoutés -->
+            <div *ngFor="let d of newFw.domains; let i = index"
+                 class="card border-0 rounded-3 mb-2 p-3"
+                 style="background:#f8fafc;">
+              <div class="d-flex align-items-start justify-content-between">
+                <div>
+                  <div class="fw-semibold small">{{ d.name }}</div>
+                  <div class="text-muted small mt-1">
+                    {{ d.criteria.length }} critère(s) : {{ d.criteria.slice(0,2).join(', ') }}{{ d.criteria.length > 2 ? '…' : '' }}
+                  </div>
+                </div>
+                <button class="btn btn-sm btn-outline-danger rounded-circle p-0"
+                        style="width:26px;height:26px;"
+                        (click)="removeDomain(i)">
+                  <i class="fas fa-times" style="font-size:11px;"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Formulaire ajout domaine -->
+            <div class="card border rounded-3 p-3" style="border-style:dashed !important;">
+              <div class="mb-2">
+                <input type="text" class="form-control form-control-sm"
+                       placeholder="Nom du domaine (ex : Gouvernance)"
+                       [(ngModel)]="newFw.domainName">
+              </div>
+              <div class="mb-2">
+                <textarea class="form-control form-control-sm" rows="3"
+                          placeholder="Critères d'évaluation (un par ligne)"
+                          [(ngModel)]="newFw.domainCriteria"></textarea>
+              </div>
+              <button class="btn btn-outline-primary btn-sm rounded-pill px-3"
+                      [disabled]="!newFw.domainName.trim()"
+                      (click)="addDomain()">
+                <i class="fas fa-plus me-1"></i>Ajouter ce domaine
+              </button>
+            </div>
+          </div>
+
+          <!-- Error -->
+          <div *ngIf="addError" class="alert alert-danger py-2 small mt-2">
+            <i class="fas fa-exclamation-circle me-1"></i>{{ addError }}
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="p-4 border-top d-flex gap-2 justify-content-end">
+          <button class="btn btn-outline-secondary rounded-pill px-4" (click)="closeAddModal()">
+            Annuler
+          </button>
+          <button class="btn btn-primary rounded-pill px-4" (click)="saveNewFramework()">
+            <i class="fas fa-save me-1"></i>Enregistrer
+          </button>
+        </div>
+
+      </div>
+    </div>
+
   `
 })
 export class ConsultantFrameworksComponent implements OnInit {
-  frameworks = FRAMEWORKS;
+  frameworks = [...FRAMEWORKS];
   sectorMap  = SECTOR_MAP;
   search = '';
   activeCategory = 'ALL';
   selected: Framework | null = null;
   openDomains = new Set<number>();
+
+  // Modal state
+  showAddModal = false;
+  addError = '';
+  newFw: NewFrameworkForm = this.emptyForm();
 
   categories = [
     { label: 'Tous',           value: 'ALL',            color: '#374151' },
@@ -589,10 +755,84 @@ export class ConsultantFrameworksComponent implements OnInit {
     { label: 'Benchmarking',   value: 'Benchmarking',   color: '#7c3aed' },
     { label: 'Réglementaire',  value: 'Réglementaire',  color: '#b91c1c' },
     { label: 'Pratiques',      value: 'Pratiques',      color: '#0891b2' },
-    { label: 'Technologies',   value: 'Technologies',   color: '#059669' }
+    { label: 'Technologies',   value: 'Technologies',   color: '#059669' },
+    { label: 'Personnalisé',   value: 'Personnalisé',   color: '#64748b' }
   ];
 
-  ngOnInit() {}
+  ngOnInit() {
+    const stored = localStorage.getItem('custom_frameworks');
+    if (stored) {
+      try {
+        const custom: Framework[] = JSON.parse(stored);
+        this.frameworks = [...FRAMEWORKS, ...custom];
+      } catch {}
+    }
+  }
+
+  private emptyForm(): NewFrameworkForm {
+    return { name: '', authority: '', category: 'Personnalisé', focus: '', domainName: '', domainCriteria: '', domains: [] };
+  }
+
+  openAddModal() {
+    this.newFw = this.emptyForm();
+    this.addError = '';
+    this.showAddModal = true;
+  }
+
+  closeAddModal() {
+    this.showAddModal = false;
+  }
+
+  addDomain() {
+    const name = this.newFw.domainName.trim();
+    if (!name) return;
+    const criteria = this.newFw.domainCriteria
+      .split('\n')
+      .map(l => l.trim())
+      .filter(l => l.length > 0);
+    this.newFw.domains.push({ name, criteria });
+    this.newFw.domainName = '';
+    this.newFw.domainCriteria = '';
+  }
+
+  removeDomain(i: number) {
+    this.newFw.domains.splice(i, 1);
+  }
+
+  saveNewFramework() {
+    this.addError = '';
+    if (!this.newFw.name.trim()) { this.addError = 'Le nom est obligatoire.'; return; }
+    if (!this.newFw.authority.trim()) { this.addError = 'La source est obligatoire.'; return; }
+    if (!this.newFw.focus.trim()) { this.addError = 'La description est obligatoire.'; return; }
+
+    const CATEGORY_COLORS: Record<string, string> = {
+      'Stratégie': '#6366f1', 'Processus': '#059669', 'Sécurité': '#dc2626',
+      'Gouvernance IT': '#d97706', 'Innovation': '#0891b2', 'Benchmarking': '#7c3aed',
+      'Réglementaire': '#b91c1c', 'Pratiques': '#0891b2', 'Technologies': '#059669',
+      'Personnalisé': '#64748b'
+    };
+
+    const fw: Framework = {
+      key: 'CUSTOM_' + Date.now(),
+      name: this.newFw.name.trim(),
+      authority: this.newFw.authority.trim(),
+      category: this.newFw.category,
+      categoryColor: CATEGORY_COLORS[this.newFw.category] ?? '#64748b',
+      icon: 'fas fa-book',
+      iconBg: 'linear-gradient(135deg,#64748b,#94a3b8)',
+      focus: this.newFw.focus.trim(),
+      maturityLevels: [],
+      domains: this.newFw.domains,
+      custom: true
+    };
+
+    this.frameworks = [...this.frameworks, fw];
+
+    const custom = this.frameworks.filter(f => f.custom);
+    localStorage.setItem('custom_frameworks', JSON.stringify(custom));
+
+    this.showAddModal = false;
+  }
 
   get filtered(): Framework[] {
     return this.frameworks.filter(fw => {

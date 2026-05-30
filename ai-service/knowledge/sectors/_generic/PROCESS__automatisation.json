@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "axis": "PROCESS",
+    "sub_axis": "Automatisation",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Hyperautomatisation — convergence RPA, IA et BPM",
+      "description": "Gartner classe l'hyperautomatisation comme tendance N°1 depuis 2020 : combinaison de RPA, IA cognitive (NLP, vision), process mining et BPM pour automatiser toute tâche automatisable.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "85 % des grandes entreprises prévoient d'augmenter leur budget RPA (Gartner 2024)",
+      "source": "Gartner Top Strategic Technology Trends 2024",
+      "year": "2024"
+    },
+    {
+      "title": "IA générative dans l'automatisation des processus documentaires",
+      "description": "Les LLMs automatisent la lecture, classification et extraction de données dans les documents non structurés (contrats, factures, formulaires), remplaçant la saisie manuelle.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "60 % des projets RPA intègrent désormais un composant GenAI (Forrester 2024)",
+      "source": "Forrester RPA & AI Market 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Low-code / No-code workflow automation",
+      "description": "Les plateformes d'automatisation low-code (Power Automate, Zapier, Make) permettent aux équipes métier d'automatiser leurs propres processus sans développement IT.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "70 % des flux automatisés créés par des non-développeurs d'ici 2026 (Gartner)",
+      "source": "Gartner Low-Code Development Forecast 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Automatisation intelligente des décisions (decision automation)",
+      "description": "Les moteurs de règles et les modèles ML automatisent les décisions répétitives (scoring, approbation, routage), réduisant le temps de traitement de 70-90 %.",
+      "impact_level": "Élevé",
+      "horizon": "6-18 mois",
+      "adoption_rate": "50 % des processus décisionnels automatisables d'ici 2025 (McKinsey)",
+      "source": "McKinsey Automation Report 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "RPA — Robotic Process Automation",
+      "category": "Automatisation tâches répétitives",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne en Afrique",
+      "leading_vendors": ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"]
+    },
+    {
+      "name": "OCR & IDP (Intelligent Document Processing)",
+      "category": "Traitement documentaire",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["ABBYY", "Kofax", "Google Document AI", "AWS Textract"]
+    },
+    {
+      "name": "Workflow & BPM automation",
+      "category": "Orchestration processus",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne",
+      "leading_vendors": ["Camunda", "Pega", "Appian", "ServiceNow", "Kissflow"]
+    },
+    {
+      "name": "Decision Management Systems",
+      "category": "Automatisation décisions",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["IBM ODM", "FICO Blaze Advisor", "Drools", "Corticon"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Automatisation des flux de facturation et de reporting via Power Automate ou équivalent",
+        "differentiator": "Premier acteur sectoriel à déployer un robot RPA sur un processus back-office critique",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Equity Bank",
+        "country": "Kenya",
+        "key_practice": "Automatisation complète de l'onboarding client via IA KYC + scoring en temps réel",
+        "differentiator": "Traitement de 10M transactions/jour sans intervention manuelle sur 90 % des cas",
+        "source": "Equity Bank Annual Report 2023"
+      },
+      {
+        "organisation": "Standard Bank",
+        "country": "Afrique du Sud",
+        "key_practice": "200+ robots RPA UiPath déployés sur les processus de réconciliation et reporting réglementaire",
+        "differentiator": "Réduction de 60 % du coût back-office sur les processus automatisés",
+        "source": "Standard Bank Technology Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Tesla",
+        "country": "USA",
+        "key_practice": "Hyper-automation Gigafactory — 1000+ robots Kuka, jumeau numérique, back-office RPA",
+        "differentiator": "Coût de production divisé par 4 en 5 ans via automatisation systématique",
+        "source": "Tesla Impact Report 2023"
+      },
+      {
+        "organisation": "HSBC",
+        "country": "Royaume-Uni",
+        "key_practice": "700 robots RPA + IA cognitive pour KYC, réconciliation et reporting réglementaire",
+        "differentiator": "1 500 ETP libérés, réaffectés à des tâches à valeur ajoutée",
+        "source": "HSBC Annual Report 2023 / UiPath Case Study"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune automatisation. Tous les processus sont manuels. Fort risque d'erreur humaine. Pas d'outil de workflow.",
+    "level_2_developing": "Quelques macros Excel ou scripts ponctuels. Pas de RPA structuré. Automatisation limitée à des tâches isolées.",
+    "level_3_defined": "Premier déploiement RPA sur des processus cibles. OCR utilisé pour les documents. Workflow digital pour les approbations.",
+    "level_4_managed": "Plusieurs robots RPA en production. IA cognitive intégrée (NLP, vision). Taux d'automatisation > 50 % des tâches répétitives mesurées.",
+    "level_5_optimizing": "Hyperautomatisation : RPA + IA + BPM + process mining intégrés. Décision automatisée sur 80 %+ des cas standards. Centre d'excellence automatisation actif."
+  },
+
+  "regulations": [
+    {
+      "name": "Règlement eIDAS (signatures électroniques)",
+      "issuing_body": "Union Européenne",
+      "scope": "Automatisation impliquant des signatures et identités électroniques",
+      "key_requirement": "Signature électronique qualifiée pour les actes à valeur légale dans les processus automatisés",
+      "compliance_deadline": "En vigueur (eIDAS 2.0 en cours de déploiement)",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation"
+    },
+    {
+      "name": "Cadre réglementaire ARTCI sur la dématérialisation",
+      "issuing_body": "ARTCI — Côte d'Ivoire",
+      "scope": "Dématérialisation des documents administratifs et commerciaux",
+      "key_requirement": "Valeur probante des documents électroniques, archivage conforme, signature électronique",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.artci.ci"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Automatisation de processus mal cartographiés",
+      "description": "Automatiser un processus défectueux accélère les erreurs. Le principe 'garbage in, garbage out' s'applique : sans cartographie préalable, le RPA amplifie les problèmes existants.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Toujours cartographier (BPMN) et optimiser un processus avant de l'automatiser."
+    },
+    {
+      "title": "Maintenance et gouvernance des robots RPA",
+      "description": "Les robots RPA cassent à chaque changement d'interface ou de logiciel sous-jacent. Sans équipe de maintenance dédiée, le ROI s'érode rapidement.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Créer un Centre d'Excellence RPA avec gouvernance des robots, tests de régression et procédures de reprise."
+    },
+    {
+      "title": "Résistance des équipes à l'automatisation",
+      "description": "La crainte de suppression de postes génère une résistance active qui sabote les projets RPA. 40 % des projets RPA échouent pour des raisons humaines (McKinsey).",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Communiquer sur la réaffectation (pas suppression) des ETP libérés et impliquer les équipes dans la conception."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Libérer les équipes pour des tâches à valeur ajoutée",
+      "description": "Chaque ETP libéré par l'automatisation peut être réaffecté à des tâches relationnelles, analytiques ou commerciales générant 3-5× plus de valeur.",
+      "impact_level": "Très élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Réduction des erreurs et des risques opérationnels",
+      "description": "Les processus automatisés réduisent le taux d'erreur de 80-95 % vs traitement manuel, améliorant la conformité réglementaire et la qualité de service.",
+      "impact_level": "Élevé",
+      "time_to_value": "3-9 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Service 24/7 sans coût marginal",
+      "description": "L'automatisation permet de traiter les demandes clients en dehors des heures ouvrées, améliorant la satisfaction sans augmenter les effectifs.",
+      "impact_level": "Élevé",
+      "time_to_value": "3-6 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Introduction en bourse",
+      "acquirer_or_investor": "Marché public",
+      "target": "UiPath",
+      "amount": "Valorisation 35 Mds$ (IPO 2021)",
+      "date": "2021",
+      "strategic_rationale": "Leader mondial de la RPA, financement de l'expansion vers l'hyperautomatisation et l'IA cognitive",
+      "source": "UiPath IPO Prospectus 2021"
+    },
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Automation Anywhere",
+      "target": "FortressIQ",
+      "amount": "Non divulgué",
+      "date": "2022",
+      "strategic_rationale": "Intégrer le process mining dans la plateforme RPA pour identifier automatiquement les processus à automatiser",
+      "source": "Automation Anywhere Press Release 2022"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Tesla",
+    "pays": "USA",
+    "technologie": "Hyper-automation Gigafactory — robots + IA vision + RPA back-office intégré",
+    "description": "Tesla a poussé l'automatisation à l'extrême dans ses Gigafactories : 1 000+ robots Kuka sur chaque ligne assemblage, pilotés par un jumeau numérique en temps réel. Le back-office est automatisé via RPA (commandes, facturation, supply chain). Le superordinateur Dojo entraîne les modèles IA qui détectent les défauts à la microseconde. Résultat : le coût de production du Model 3 a été divisé par 4 en 5 ans, passant de 84 000$ à moins de 20 000$.",
+    "resultats": "Coût production -75 % en 5 ans · 95 % des tâches répétitives automatisées · Délai livraison -40 % · Défauts qualité -60 %",
+    "source": "Tesla Impact Report 2023 / MIT Manufacturing Summit 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité automatisation des processus — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "RPA déployé", "OCR / traitement documents auto", "Décision automatisée", "Traitement 24/7 sans agent", "IA cognitive intégrée"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "Partiel"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'automatisation des processus est le levier de productivité le plus immédiat de la transformation digitale. Le ROI d'un projet RPA bien ciblé est typiquement atteint en 6 à 12 mois avec des gains de 40 à 80 % sur les coûts de traitement.",
+    "maturity_max_description": "Hyperautomatisation déployée : RPA + IA cognitive + process mining + BPM intégrés. Centre d'Excellence Automatisation actif. Taux d'automatisation > 80 % des tâches répétitives. Décision automatisée sur les cas standards. Service 24/7 sans intervention manuelle.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune automatisation. Processus 100 % manuels. Pas de workflow digital ni d'outil RPA.",
+      "score_21_to_40": "Quelques macros ou scripts ponctuels. Pas de RPA structuré. Automatisation très partielle.",
+      "score_41_to_60": "Premier déploiement RPA sur processus cibles. OCR utilisé. Workflow digital pour approbations.",
+      "score_61_to_80": "Plusieurs robots en production. IA cognitive intégrée. Taux automatisation > 50 % des tâches répétitives.",
+      "score_81_to_100": "Hyperautomatisation. Centre d'Excellence actif. Automatisation > 80 %. Service 24/7. Décision IA intégrée."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur sa maturité d'automatisation des processus. Analyse le déploiement RPA, l'utilisation de l'OCR et de l'IA cognitive, le taux d'automatisation des tâches répétitives, la capacité de service 24/7 et l'existence d'un Centre d'Excellence Automatisation.",
+    "key_questions_for_llm": [
+      "L'organisation a-t-elle déployé des robots RPA sur des processus opérationnels identifiés ?",
+      "L'OCR ou le traitement intelligent de documents est-il utilisé pour réduire la saisie manuelle ?",
+      "Des décisions répétitives (approbation, scoring, routage) sont-elles automatisées ?",
+      "Le service peut-il fonctionner 24/7 sans intervention humaine sur les cas standards ?",
+      "Existe-t-il un Centre d'Excellence ou une équipe dédiée à la gouvernance de l'automatisation ?"
+    ]
+  }
+}

@@ -13,6 +13,7 @@ import com.iabenchmark.model.Questionnaire;
 import com.iabenchmark.model.QuestionnaireMode;
 import com.iabenchmark.model.Role;
 import com.iabenchmark.model.User;
+import com.iabenchmark.repository.ActionPlanRepository;
 import com.iabenchmark.repository.CompanyRepository;
 import com.iabenchmark.repository.EvaluationRepository;
 import com.iabenchmark.repository.QuestionnaireRepository;
@@ -32,6 +33,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.UUID;
 
 @Service
@@ -40,6 +42,7 @@ public class CompanyService {
     private final UserRepository userRepository;
     private final EvaluationRepository evaluationRepository;
     private final QuestionnaireRepository questionnaireRepository;
+    private final ActionPlanRepository actionPlanRepository;
     private final QuestionnaireService questionnaireService;
     private final EmailService emailService;
     private final PasswordEncoder passwordEncoder;
@@ -58,6 +61,7 @@ public class CompanyService {
                           UserRepository userRepository,
                           EvaluationRepository evaluationRepository,
                           QuestionnaireRepository questionnaireRepository,
+                          ActionPlanRepository actionPlanRepository,
                           QuestionnaireService questionnaireService,
                           EmailService emailService,
                           PasswordEncoder passwordEncoder) {
@@ -65,6 +69,7 @@ public class CompanyService {
         this.userRepository = userRepository;
         this.evaluationRepository = evaluationRepository;
         this.questionnaireRepository = questionnaireRepository;
+        this.actionPlanRepository = actionPlanRepository;
         this.questionnaireService = questionnaireService;
         this.emailService = emailService;
         this.passwordEncoder = passwordEncoder;
@@ -94,7 +99,7 @@ public class CompanyService {
         applyRequest(company, request);
 
         if (currentUser.getRole() == Role.ADMIN && request.getConsultantId() != null) {
-            userRepository.findById(request.getConsultantId()).ifPresent(company::setConsultant);
+            userRepository.findById(Objects.requireNonNull(request.getConsultantId())).ifPresent(company::setConsultant);
         } else if (currentUser.getRole() == Role.CONSULTANT) {
             company.setConsultant(currentUser);
         }
@@ -111,7 +116,7 @@ public class CompanyService {
 
         applyRequest(company, request);
         if (request.getConsultantId() != null) {
-            userRepository.findById(request.getConsultantId()).ifPresent(company::setConsultant);
+            userRepository.findById(Objects.requireNonNull(request.getConsultantId())).ifPresent(company::setConsultant);
         }
         return toResponse(companyRepository.save(company));
     }
@@ -124,12 +129,99 @@ public class CompanyService {
         requestBody.put("country", company.getCountry());
         requestBody.put("company_size", company.getSize());
         requestBody.put("language", "fr");
-        requestBody.put("num_questions", 28);
+        requestBody.put("num_questions", 27);
 
-        ResponseEntity<Map<String, Object>> aiResponse = restTemplate.postForEntity(
-                aiServiceUrl + "/api/ai/generate-questionnaire", requestBody,
-                (Class<Map<String, Object>>) (Class<?>) Map.class);
-        return aiResponse.getBody();
+        try {
+            ResponseEntity<Map<String, Object>> aiResponse = restTemplate.postForEntity(
+                    aiServiceUrl + "/api/ai/generate-questionnaire", requestBody,
+                    (Class<Map<String, Object>>) (Class<?>) Map.class);
+            Map<String, Object> body = aiResponse.getBody();
+            if (body != null) {
+                body.put("aiAvailable", true);
+                return body;
+            }
+        } catch (Exception ignored) {
+            // AI service is down — fall through to fallback
+        }
+
+        // Fallback: use sector questions from the database
+        List<QuestionResponse> sectorQs = getSectorQuestions(companyId);
+        List<Map<String, Object>> fallbackQuestions;
+        if (!sectorQs.isEmpty()) {
+            fallbackQuestions = new ArrayList<>();
+            for (int i = 0; i < sectorQs.size(); i++) {
+                QuestionResponse q = sectorQs.get(i);
+                Map<String, Object> qMap = new HashMap<>();
+                qMap.put("text", q.getText());
+                qMap.put("axis", q.getAxis().name());
+                qMap.put("sub_axis", q.getSubAxis() != null ? q.getSubAxis() : "Général");
+                qMap.put("weight", q.getWeight() != null ? q.getWeight() : 3);
+                qMap.put("display_order", i + 1);
+                qMap.put("options", q.getOptions() != null ? q.getOptions() : List.of());
+                fallbackQuestions.add(qMap);
+            }
+        } else {
+            fallbackQuestions = buildDefaultQuestions();
+        }
+
+        Map<String, Object> result = new HashMap<>();
+        result.put("questions", fallbackQuestions);
+        result.put("aiAvailable", false);
+        result.put("source", sectorQs.isEmpty() ? "default" : "sector");
+        return result;
+    }
+
+    private List<Map<String, Object>> buildDefaultQuestions() {
+        record Q(String text, String axis, String subAxis) {}
+        List<Q> defaults = List.of(
+            new Q("Votre stratégie de transformation digitale est-elle formalisée et partagée ?",           "BUSINESS",               "Stratégie"),
+            new Q("Vos processus métier sont-ils documentés et optimisés ?",                               "BUSINESS",               "Processus métier"),
+            new Q("Utilisez-vous des indicateurs digitaux pour piloter votre activité ?",                  "BUSINESS",               "Pilotage"),
+            new Q("Votre offre produits/services intègre-t-elle une dimension digitale ?",                 "BUSINESS",               "Offre"),
+            new Q("Vos processus opérationnels sont-ils automatisés ?",                                    "PROCESS",                "Automatisation"),
+            new Q("Avez-vous mis en place une gestion de la qualité numérique ?",                          "PROCESS",                "Qualité"),
+            new Q("Vos processus de décision s'appuient-ils sur des données en temps réel ?",             "PROCESS",                "Décision"),
+            new Q("La gestion documentaire est-elle dématérialisée ?",                                    "PROCESS",                "Dématérialisation"),
+            new Q("Votre infrastructure SI est-elle adaptée aux besoins actuels ?",                       "INFORMATION_SYSTEM",     "Infrastructure"),
+            new Q("Utilisez-vous des solutions cloud pour vos applications métier ?",                     "INFORMATION_SYSTEM",     "Cloud"),
+            new Q("La sécurité des systèmes d'information est-elle gérée activement ?",                   "INFORMATION_SYSTEM",     "Sécurité"),
+            new Q("Vos systèmes sont-ils intégrés et interopérables ?",                                   "INFORMATION_SYSTEM",     "Intégration"),
+            new Q("Utilisez-vous des canaux digitaux pour distribuer vos produits/services ?",            "CANAUX_DISTRIBUTION",    "Canaux digitaux"),
+            new Q("Votre site web est-il optimisé pour la conversion client ?",                           "CANAUX_DISTRIBUTION",    "Web"),
+            new Q("Proposez-vous une application mobile à vos clients ?",                                 "CANAUX_DISTRIBUTION",    "Mobile"),
+            new Q("Vos canaux digitaux et physiques sont-ils intégrés (omnicanal) ?",                     "CANAUX_DISTRIBUTION",    "Omnicanal"),
+            new Q("Menez-vous des campagnes marketing digitales ciblées ?",                               "MARKETING_COMMUNICATION","Marketing digital"),
+            new Q("Analysez-vous les données clients pour personnaliser vos communications ?",            "MARKETING_COMMUNICATION","Personnalisation"),
+            new Q("Votre présence sur les réseaux sociaux est-elle active et mesurée ?",                  "MARKETING_COMMUNICATION","Social media"),
+            new Q("Mesurez-vous le retour sur investissement de vos actions marketing digitales ?",       "MARKETING_COMMUNICATION","ROI"),
+            new Q("Vos collaborateurs bénéficient-ils de formations aux outils digitaux ?",              "RH_CULTURE_DIGITALE",    "Formation"),
+            new Q("La culture digitale est-elle intégrée dans vos processus RH ?",                       "RH_CULTURE_DIGITALE",    "Culture"),
+            new Q("Disposez-vous de profils digitaux au sein de vos équipes ?",                          "RH_CULTURE_DIGITALE",    "Compétences"),
+            new Q("La direction impulse-t-elle la transformation digitale ?",                            "RH_CULTURE_DIGITALE",    "Leadership"),
+            new Q("Proposez-vous des services/produits nativement digitaux ?",                           "OFFRES_DIGITALES",       "Offres digitales"),
+            new Q("Vos offres s'appuient-elles sur des données et l'IA ?",                               "OFFRES_DIGITALES",       "Data & IA"),
+            new Q("Votre modèle économique intègre-t-il des revenus digitaux ?",                         "OFFRES_DIGITALES",       "Modèle économique"),
+            new Q("Innover digitalement fait-il partie de votre stratégie produit ?",                    "OFFRES_DIGITALES",                 "Innovation"),
+            new Q("Vos processus métier clés sont-ils automatisés de bout en bout (0 ressaisie) ?",      "MODELE_OPERATIONNEL_INNOVATION",   "Automatisation"),
+            new Q("Une gouvernance digitale et une politique de conformité sont-elles formalisées ?",    "MODELE_OPERATIONNEL_INNOVATION",   "Gouvernance"),
+            new Q("Des initiatives d'innovation digitale (IoT, IA) sont-elles engagées ?",              "MODELE_OPERATIONNEL_INNOVATION",   "Innovation"),
+            new Q("L'infrastructure IT est-elle fiable, redondante et disponible en permanence ?",      "IT_DATA",                          "Socle IT"),
+            new Q("Des outils d'analyse de données et d'aide à la décision sont-ils déployés ?",        "IT_DATA",                          "Data & Analytics"),
+            new Q("Une gouvernance des données (qualité, sécurité, valorisation) est-elle définie ?",   "IT_DATA",                          "Gouvernance données")
+        );
+        List<Map<String, Object>> result = new ArrayList<>();
+        for (int i = 0; i < defaults.size(); i++) {
+            Q q = defaults.get(i);
+            Map<String, Object> qMap = new HashMap<>();
+            qMap.put("text", q.text());
+            qMap.put("axis", q.axis());
+            qMap.put("sub_axis", q.subAxis());
+            qMap.put("weight", 3);
+            qMap.put("display_order", i + 1);
+            qMap.put("options", List.of());
+            result.add(qMap);
+        }
+        return result;
     }
 
     @Transactional(readOnly = true)
@@ -223,16 +315,25 @@ public class CompanyService {
 
         Questionnaire saved = questionnaireRepository.save(questionnaire);
 
-        // Regenerate contextual AI options in background — doesn't block the HTTP response
-        final Long savedId = saved.getId();
-        Thread optionsThread = new Thread(() -> {
-            try {
-                Thread.sleep(300); // Let the transaction commit first
-                questionnaireService.regenerateOptions(savedId);
-            } catch (Exception ignored) {}
+        // Regenerate contextual AI options in background if any question has missing/generic options
+        boolean hasGenericOptions = saved.getQuestions().stream().anyMatch(q -> {
+            String opts = q.getOptionsJson();
+            if (opts == null || opts.isBlank() || opts.equals("[]")) return true;
+            return opts.contains("Aucun dispositif ou outil en place")
+                || opts.contains("Premiers essais isolés, sans processus établi")
+                || opts.contains("Pratiques partiellement formalisées, adoption en cours");
         });
-        optionsThread.setDaemon(true);
-        optionsThread.start();
+        if (hasGenericOptions) {
+            final Long savedId = saved.getId();
+            Thread optionsThread = new Thread(() -> {
+                try {
+                    Thread.sleep(500);
+                    questionnaireService.regenerateOptions(savedId);
+                } catch (Exception ignored) {}
+            });
+            optionsThread.setDaemon(true);
+            optionsThread.start();
+        }
 
         // Send credentials by email — if SMTP fails, the setup still succeeds
         String emailStatus = "Questionnaire enregistré.";
@@ -256,23 +357,29 @@ public class CompanyService {
     public void deleteCompany(Long id) {
         Company company = findCompany(id);
 
-        // Delete evaluations (cascades to EvaluationAnswer)
         List<Evaluation> evaluations = evaluationRepository.findByCompanyId(id);
-        evaluationRepository.deleteAll(evaluations);
 
-        // Delete questionnaires linked to this company (cascades to questions)
+        // 1. Delete action plans before evaluations (FK: action_plan.evaluation_id → evaluations.id)
+        for (Evaluation evaluation : evaluations) {
+            actionPlanRepository.deleteByEvaluationId(evaluation.getId());
+        }
+
+        // 2. Delete evaluations (cascades to EvaluationAnswer via JPA cascade)
+        evaluationRepository.deleteAll(Objects.requireNonNull(evaluations));
+
+        // 3. Delete questionnaires linked to this company (cascades to questions)
         List<Questionnaire> questionnaires = questionnaireRepository.findByCompanyIdOrderByCreatedAtDesc(id);
-        questionnaireRepository.deleteAll(questionnaires);
+        questionnaireRepository.deleteAll(Objects.requireNonNull(questionnaires));
 
-        // Delete users attached to this company
+        // 4. Delete users attached to this company
         List<User> users = userRepository.findByCompanyId(id);
-        userRepository.deleteAll(users);
+        userRepository.deleteAll(Objects.requireNonNull(users));
 
-        companyRepository.delete(company);
+        companyRepository.delete(Objects.requireNonNull(company));
     }
 
     private Company findCompany(Long id) {
-        return companyRepository.findById(id)
+        return companyRepository.findById(Objects.requireNonNull(id))
                 .orElseThrow(() -> new EntityNotFoundException("Company not found with id: " + id));
     }
 

@@ -1,0 +1,284 @@
+{
+  "secteur": "industrie",
+  "axe": "CANAUX_DISTRIBUTION",
+  "sous_axe": "canaux_experience_client",
+  "label": "Canaux de distribution et expérience client industrielle",
+  "description": "Capacité des entreprises industrielles à digitaliser leurs canaux de distribution et améliorer l'expérience de leurs clients B2B : portail de commandes en ligne, suivi de livraisons en temps réel, documentation numérique (CoA, fiches techniques, EUDR), visibilité stock disponible et gestion des litiges de manière digitale dans le contexte industriel CI.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Distribution industrie CI : dominée par représentants commerciaux terrain — coût élevé, couverture géographique limitée CI",
+      "Clients B2B industries CI : GMS Abidjan (Carrefour, Prosuma), multinationales (Nestlé, Unilever), exportateurs, industries locales",
+      "Délais livraison GMS CI : fenêtres de livraison strictes 6h-12h — ponctualité mesurée numériquement par Carrefour CI",
+      "Documentation technique CI : CoA, fiches de données sécurité (FDS), certificats APEX-CI — exigés immédiatement par clients internationaux",
+      "TMS (Transport Management System) CI : gestion livraisons industries CI — peu déployés, trajets Abidjan-périphérie-intérieur CI",
+      "Traçabilité livraison CI : GPS camions de livraison — clients GMS et exportateurs exigent numéros de suivi"
+    ],
+    "acteurs_cles": [
+      "Carrefour CI / Prosuma CI / Sococé CI — GMS donneurs d'ordre : exigences EDI, fenêtres livraison, ponctualité",
+      "APEX-CI — documentation export : certificats numériques, fiches produits pour acheteurs internationaux",
+      "Barry Callebaut CI / Cargill CI — multinationales cacao CI : portails fournisseurs, documentation traçabilité",
+      "Bolloré Transport CI / SDV CI — logistique livraisons industrielles CI",
+      "Orange Money CI / Wave CI — paiements B2B rapides clients CI",
+      "PAA CI (Port Autonome d'Abidjan) — export maritime industries CI"
+    ],
+    "reglementation_locale": [
+      "APEX-CI : documentation export numérique obligatoire — CoA, certificat phytosanitaire, certificat origine CI",
+      "DGI CI Loi 2022-974 : e-facture obligatoire — intégrée au canal de distribution client",
+      "Code Commerce CI : délais de paiement B2B — 60 jours maximum légalement CI",
+      "EUDR Règlement EU 2023/1115 : documentation traçabilité dans le flux de livraison — obligatoire cacao CI",
+      "ISO 9001:2015 Art. 8.6 : libération produits — documentation qualité dans canal de distribution",
+      "Loi CI 2017-771 : valeur juridique bons de livraison numériques et signatures électroniques CI"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Distribution 100% physique via représentants. Bons de livraison papier. Aucun suivi livraison. Documentation (CoA, FDS) envoyée par courrier. Facturation différée par courrier. Réclamations verbales sans suivi.",
+      "indicateurs": [
+        "Distribution : représentants terrain uniquement — aucun canal numérique",
+        "Bons de livraison papier — doubles manuels",
+        "0 suivi livraison numérique — client appelle pour savoir où est sa commande",
+        "CoA et FDS : envoyés par courrier 3-5 jours après livraison",
+        "Réclamations verbales — aucun suivi formalisé ni SLA"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Email pour commandes et documentation. PDF CoA envoyés par email sur demande. Quelques clients sur portail donneur imposé. Factures PDF email. Suivi livraison par téléphone. Aucun TMS.",
+      "indicateurs": [
+        "Commandes par email PDF — ressaisie ERP manuelle",
+        "CoA PDF envoyés par email sur demande (délai 1-3j)",
+        "Facturation PDF email — délai paiement 45-60j",
+        "Suivi livraison : appel chauffeur — aucune visibilité numérique",
+        "0 TMS ni GPS flotte — positionnement camions inconnu"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Portail B2B commandes et suivi. CoA disponibles en ligne immédiatement. GPS flotte livraisons. e-facture DGI CI conforme. Délai réclamation < 48h via ticketing. Documentation EUDR disponible en ligne.",
+      "indicateurs": [
+        "Portail B2B : 60%+ commandes en ligne, suivi statut temps réel",
+        "CoA disponibles en ligne par lot numéro — accès immédiat client",
+        "GPS flotte : tracking livraisons temps réel — notification client",
+        "e-facture DGI CI intégrée — délai paiement < 30 jours",
+        "Documentation EUDR cacao en ligne : accessible clients exportateurs CI"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "Expérience client B2B digitale complète. TMS intégré ERP avec track & trace. Portail self-service : commandes, historique, réclamations, CoA, EUDR. EDI multi-clients. Alertes proactives délais. NPS > 60.",
+      "indicateurs": [
+        "TMS intégré ERP : track & trace livraisons temps réel, ETA précis client",
+        "Portail client B2B self-service complet : 80%+ interactions sans appel",
+        "EDI intégré 5+ clients CI : commandes, confirmations, factures automatiques",
+        "Alertes proactives : SMS/email client si retard livraison prévu avant l'heure",
+        "NPS clients B2B > 60 — mesuré trimestriellement"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Plateforme distribution industrielle CI. IA prédiction ETA et disponibilité stock. Open data traçabilité EUDR partagée avec acheteurs EU. NPS > 75. Référence expérience client B2B industriel CI.",
+      "indicateurs": [
+        "IA prédiction ETA : livraisons avec précision ±30 min — intégration trafic Abidjan temps réel",
+        "Open data EUDR : API données traçabilité partagée acheteurs EU en temps réel",
+        "Stock disponible temps réel en ligne : clients voient disponibilité avant de commander",
+        "NPS > 75 — benchmark international fournisseurs industriels B2B",
+        "Référence expérience client B2B industriel CI — publication APEX-CI / CCI-CI"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Vos clients B2B peuvent-ils passer et suivre leurs commandes en ligne ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — représentants terrain uniquement"},
+        {"valeur": 2, "label": "Email PDF — ressaisie manuelle dans ERP"},
+        {"valeur": 3, "label": "Portail B2B : 60%+ commandes en ligne, suivi statut temps réel"},
+        {"valeur": 4, "label": "Portail self-service complet : commandes, CoA, EUDR, réclamations — 80%+ sans appel"},
+        {"valeur": 5, "label": "Plateforme IA : stock temps réel, ETA ±30 min, open data EUDR EU"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Avez-vous un système GPS de suivi en temps réel de vos livraisons ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — appel chauffeur pour savoir où est la livraison"},
+        {"valeur": 2, "label": "GPS personnel chauffeur partagé WhatsApp — non professionnel"},
+        {"valeur": 3, "label": "GPS flotte : tracking temps réel + notification client"},
+        {"valeur": 4, "label": "TMS intégré ERP : track & trace, ETA précis, alertes proactives retard"},
+        {"valeur": 5, "label": "IA ETA ±30 min avec trafic Abidjan temps réel — 0 retard non notifié"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Vos clients ont-ils accès immédiatement à la documentation (CoA, EUDR, FDS) en ligne ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — envoi courrier 3-5 jours après livraison"},
+        {"valeur": 2, "label": "PDF email sur demande — délai 1-3 jours"},
+        {"valeur": 3, "label": "CoA et EUDR disponibles en ligne par numéro de lot — accès immédiat"},
+        {"valeur": 4, "label": "Documentation complète en ligne : CoA, EUDR, FDS, certificats APEX-CI"},
+        {"valeur": 5, "label": "Open data EUDR API : acheteurs EU connectent leurs systèmes directement"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Mesurez-vous la satisfaction de vos clients B2B (NPS, CSAT) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — aucune mesure satisfaction"},
+        {"valeur": 2, "label": "Retours informels commerciaux — non systématique"},
+        {"valeur": 3, "label": "NPS ou CSAT trimestriel — score > 40, revue direction"},
+        {"valeur": 4, "label": "NPS > 60 mesuré trimestriellement — intégré KPIs direction"},
+        {"valeur": 5, "label": "NPS > 75 — benchmark international, alertes NPS < seuil"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "Portail B2B commandes",
+      "GPS tracking livraisons",
+      "Documentation CoA/EUDR en ligne",
+      "e-facture DGI CI",
+      "NPS clients B2B"
+    ],
+    "lignes": [
+      {
+        "organisation": "PMI CI (< 50 employés)",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "Représentants terrain, 0 GPS, CoA courrier, factures papier, 0 NPS"
+      },
+      {
+        "organisation": "Industrie moyenne CI (50-200 employés)",
+        "scores": [2, 2, 2, 2, 2],
+        "note_globale": 2,
+        "commentaire": "Email commandes, GPS WhatsApp, CoA email sur demande, PDF email, retours informels"
+      },
+      {
+        "organisation": "SUCAF CI",
+        "scores": [3, 3, 3, 4, 3],
+        "note_globale": 3,
+        "commentaire": "Portail GMS CI, GPS flotte, CoA en ligne, e-facture CI, NPS 45/100"
+      },
+      {
+        "organisation": "SIFCA CI",
+        "scores": [5, 4, 5, 4, 4],
+        "note_globale": 5,
+        "commentaire": "Portail self-service complet, TMS intégré, EUDR open data, e-facture EDI, NPS 68/100"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "APEX-CI — portail documentation export et traçabilité CI",
+      "part_de_marche_estimee": "Référence documentation export industrielle CI",
+      "forces": ["Certificats numériques export CI", "Documentation EUDR CI en cours", "Guichet unique exportateurs", "Réseau acheteurs internationaux"],
+      "faiblesses": ["Orienté export — pas canal distribution domestique", "Adoption PMI CI lente"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "Bolloré Logistics Africa — TMS et distribution industrielle Afrique",
+      "part_de_marche_estimee": "Leader logistique et TMS industriel Afrique francophone",
+      "forces": ["TMS Africa track & trace", "Réseau 32 pays Afrique", "EDI clients industriels", "GPS flotte CI"],
+      "faiblesses": ["Coût élevé logistique Bolloré CI", "Orienté export maritime — moins distribution locale CI"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "SAP S/4HANA SD (Sales & Distribution) + TMS — distribution industrielle",
+      "part_de_marche_estimee": "Leader mondial ERP distribution industrielle",
+      "forces": ["Portail client SAP", "TMS intégré", "EDI universel", "Track & trace natif"],
+      "faiblesses": ["Coût très élevé", "Déploiement 12-18 mois", "Inaccessible PMI CI"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Odoo CI — portail client B2B et distribution",
+      "usage": "Portail commandes B2B, suivi livraisons, CoA disponibles, e-facture DGI CI intégrée",
+      "niveau_cible": "3+",
+      "cout_estime": "800 000–2 500 000 FCFA/an (partenaires Odoo CI Abidjan)",
+      "disponibilite_ci": "International — partenaires Odoo CI disponibles"
+    },
+    {
+      "nom": "Fleet GPS CI (OpenGTS / Wialon) — suivi flotte livraisons CI",
+      "usage": "GPS tracking camions livraisons CI : temps réel, notification clients, rapport ponctualité",
+      "niveau_cible": "3+",
+      "cout_estime": "50 000–150 000 FCFA/véhicule/an (abonnement SaaS)",
+      "disponibilite_ci": "International — solutions GPS disponibles CI (Wialon CI partenaires)"
+    },
+    {
+      "nom": "APEX-CI portail exportateurs — documentation et certifications",
+      "usage": "CoA numériques, certificats phytosanitaires, EUDR documentation — accès clients internationaux",
+      "niveau_cible": "3+",
+      "cout_estime": "Cotisation APEX-CI exportateurs CI",
+      "disponibilite_ci": "Natif CI — APEX-CI Abidjan Plateau"
+    },
+    {
+      "nom": "Freshdesk CI — ticketing réclamations clients B2B",
+      "usage": "Gestion réclamations industriels CI : SLA 24h, escalade, NPS intégré",
+      "niveau_cible": "3+",
+      "cout_estime": "100 000–300 000 FCFA/an (SaaS)",
+      "disponibilite_ci": "International — SaaS accessible CI"
+    },
+    {
+      "nom": "Samsara / Geotab — TMS flotte industrielle CI",
+      "usage": "TMS avancé : ETA précis, intégration ERP, alertes proactives, analytics flotte CI",
+      "niveau_cible": "4",
+      "cout_estime": "100 000–300 000 FCFA/véhicule/an",
+      "disponibilite_ci": "International — SaaS cloud accessible CI"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "CIPA CI (Compagnie Ivoirienne de Production Alimentaire) — portail B2B + GPS livraisons : NPS 28→62",
+    "organisation": "CIPA CI (production condiments et épices industriels, Yopougon CI — 850 tonnes/mois, 42 clients GMS et industries CI)",
+    "contexte": "CIPA CI : fournisseur condiments (cube Maggi CI alternatif, épices mélangées) pour GMS Abidjan et industries agro-alimentaires. Distribution via 4 représentants terrain. Problème : Carrefour CI et Prosuma CI imposent nouvelles exigences 2022 : fenêtres livraison 7h-9h, suivi GPS obligatoire, CoA en ligne, e-facture DGI CI. Sans conformité : exclusion rayon dans 6 mois.",
+    "probleme": "4 représentants terrain couvrent mal Abidjan — 12% commandes perdues faute de contact. CoA : envoi postal 3-5 jours (délai inacceptable Carrefour CI). 0 GPS flotte — ponctualité livraisons 68% (objectif Carrefour CI : 95%). e-facture DGI CI non déployée — risque exclusion rayon CI.",
+    "solution_deployee": "Portail B2B Odoo CI : commandes en ligne 24h/24, catalogue produits avec CoA téléchargeables immédiatement, statut livraison. GPS Wialon × 6 camions : tracking temps réel, notification SMS clients à départ et 30 min avant livraison. e-facture DGI CI Odoo intégrée. Freshdesk CI ticketing réclamations SLA 24h.",
+    "resultats": "Portail B2B : 0% → 71% commandes en ligne en 4 mois. CoA en ligne : délai 3-5j → instantané. Ponctualité livraisons : 68% → 96% (objectif Carrefour CI 95% atteint). e-facture DGI CI : conforme — exclusion rayon évitée. Commandes perdues : 12% → 2% (portail 24h/24). NPS clients GMS CI : 28 → 62/100 en 8 mois. Délai paiement GMS CI : 45j → 25j (e-facture). Représentants terrain : 4 → 2 (couvrent zones non digitalisées) — économie 8 M FCFA/an.",
+    "enseignements": [
+      "Les GMS CI (Carrefour, Prosuma) imposent maintenant le digital comme condition d'accès rayon — CoA en ligne et GPS obligatoires sont des critères de qualification fournisseur",
+      "La ponctualité de livraison CI mesurée numériquement (GPS + portail) est un avantage concurrentiel fort : 96% vs standard marché CI 70-75%",
+      "Un portail B2B CI 24h/24 récupère 10% de commandes perdues la nuit et le week-end — des revenus totalement invisibles à une force de vente terrain"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "portail B2B industriel CI", "commandes en ligne B2B CI", "GPS suivi livraisons CI",
+      "CoA en ligne numérique CI", "documentation EUDR en ligne CI", "e-facture DGI CI distribution",
+      "TMS industriel CI", "ponctualité livraisons GMS CI", "NPS clients B2B industrie CI",
+      "Carrefour CI fournisseur", "APEX-CI documentation export", "track and trace CI"
+    ],
+    "signaux_niveau_avance": [
+      "Portail B2B avec 60%+ commandes en ligne",
+      "GPS suivi livraisons temps réel + notifications clients",
+      "CoA disponibles en ligne par numéro de lot",
+      "e-facture DGI CI intégrée conforme",
+      "NPS B2B mesuré > 40/100"
+    ],
+    "pieges_frequents": [
+      "GPS personnel WhatsApp chauffeur ≠ GPS flotte professionnel — sans plateforme dédiée, la donnée est non exploitable et non auditable",
+      "CoA envoyé par email ≠ CoA en ligne — Carrefour CI et acheteurs EU exigent un accès portail par numéro de lot, pas un email",
+      "Portail B2B créé mais non utilisé par clients = portail décoratif — sans formation client et incitation, l'adoption est < 10%",
+      "e-facture = PDF email = non-conformité DGI CI — la loi exige un format certifié DGI CI connecté au portail fiscal"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Représentants terrain. BL papier. 0 GPS. CoA courrier. Factures papier. 0 NPS.",
+      "score_21_to_40": "Email commandes. GPS WhatsApp. CoA email délai. PDF email. Retours informels.",
+      "score_41_to_60": "Portail B2B 60%+. GPS flotte. CoA en ligne. e-facture CI. NPS > 40.",
+      "score_61_to_80": "TMS intégré ERP. Portail self-service 80%+. EUDR en ligne. EDI 5+. NPS > 60.",
+      "score_81_to_100": "IA ETA ±30 min. Open data EUDR API. Stock temps réel. NPS > 75. Référence CI."
+    }
+  }
+}

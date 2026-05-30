@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "IS",
+    "sub_axis": "cybersecurite",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Cyberattaques ciblant les établissements éducatifs (ransomware, phishing apprenant)",
+      "description": "Le secteur éducatif est devenu une cible prioritaire des cyberattaquants : faible maturité cybersécurité, données personnelles de mineurs à valeur élevée (vie privée, résultats scolaires), et systèmes souvent non patchés. En 2024, 12 universités africaines ont été victimes de ransomware (dont 3 en Afrique de l'Ouest). En Côte d'Ivoire, l'UFHB a subi en 2023 une attaque phishing ciblant 3 500 étudiants (usurpation d'identité service scolarité) — 340 comptes compromis, données personnelles exfiltrées. Le CERT-CI (ARTCI) a émis 8 alertes spécifiques au secteur éducatif en 2024.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "22%",
+      "source": "CERT-CI ARTCI / KPMG CI Cyber Report 2024",
+      "year": 2024
+    },
+    {
+      "title": "Identité numérique apprenant (SSO, MFA) et gestion des accès dans les LMS",
+      "description": "La prolifération des outils EdTech (LMS, SIS, visioconférence, outils collaboratifs) génère une multiplication des identifiants et des mots de passe pour les apprenants, créant des risques de sécurité (mots de passe faibles, réutilisation). Les établissements migrent vers des solutions SSO (Single Sign-On) : Google SSO pour les établissements Google Workspace, Microsoft Entra ID pour les établissements Microsoft 365, et des identités fédérées pour les partenariats inter-universités CI.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "35%",
+      "source": "ARTCI / UVCI CI Cybersécurité 2024",
+      "year": 2024
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "SSO et IAM (Identity and Access Management) éducatif",
+      "category": "Cybersécurité / Identité",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "UVCI CI (Microsoft Entra ID SSO), INPHB (Google SSO), Pigier CI (SSO Blackboard), 30% établissements CI avec SSO",
+      "leading_vendors": ["Microsoft Entra ID (Azure AD)", "Google Workspace SSO", "Okta for Education", "Shibboleth (open source, AUF)", "Auth0 (EdTech)"]
+    },
+    {
+      "name": "Anti-spam et protection email éducatif (phishing, BEC)",
+      "category": "Cybersécurité / Email",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "Google Workspace (protection intégrée pour 65% des établissements CI), Microsoft Defender for Education, 50% établissements CI avec protection email avancée",
+      "leading_vendors": ["Microsoft Defender for Office 365", "Google Workspace Security", "Proofpoint Education", "Mimecast", "Barracuda Email Security"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Cybersécurité by design (architecture cloud native) : Microsoft Entra ID SSO pour tous les apprenants et tuteurs (45K comptes), MFA obligatoire pour les tuteurs et l'administration (Authenticator app), Microsoft Defender for Education (protection email + Teams + OneDrive), sensibilisation cybersécurité obligatoire en début de semestre (module Moodle 30 min), APDP CI conformité certifiée (DPA Microsoft signé)",
+        "differentiator": "Premier établissement CI avec MFA obligatoire pour 100% du personnel éducatif — après incident phishing UFHB 2023 (340 comptes compromis), l'UVCI a imposé le MFA en 72h pour tous les tuteurs (adoption 94% en J+14), zéro compromission de compte depuis lors",
+        "source": "UVCI RSSI / Microsoft Education CI 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "University of Cape Town (UCT) — Information Security",
+        "country": "Afrique du Sud",
+        "key_practice": "SOC dédié university (5 analystes, SIEM Splunk), MFA 100% (étudiants + personnel), ZeroTrust architecture (PaloAlto), formation cybersécurité obligatoire annuelle (SANS Institute curriculum adapté), déclaration de conformité POPIA (loi données perso Afrique du Sud, équivalent APDP CI), programme 'Ethical Hacker Students' (étudiants informatique comme auditeurs terrain)",
+        "differentiator": "Meilleure maturité cybersécurité universitaire d'Afrique subsaharienne — ZeroTrust avec PaloAlto, SOC dédié, MFA 100%, programme étudiants hackers éthiques ayant détecté 12 vulnérabilités critiques en 2024 (vs. 0 détection par outils automatisés seuls)",
+        "source": "UCT Information Security Annual Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Massachusetts Institute of Technology (MIT) IS&T",
+        "country": "États-Unis",
+        "key_practice": "Zero Trust Network Access (ZTNA) pour 11 000 chercheurs + 23 000 étudiants, MFA Duo Security (100%), SIEM Splunk Enterprise Security, Bug Bounty programme (HackerOne — 500+ chercheurs et étudiants participants), formation cybersécurité personnalisée par rôle (étudiant, enseignant, chercheur, admin), certifications ISO 27001",
+        "differentiator": "Référence mondiale cybersécurité universitaire — Bug Bounty avec HackerOne : 127 vulnérabilités rapportées en 2024 (dont 8 critiques résolues en < 48h), programme exemplaire alliant sécurité maximale et culture académique de transparence et d'ouverture",
+        "source": "MIT IS&T Security Annual Report 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Aucune politique de cybersécurité, mots de passe simples sans règles, aucune formation, email non protégé (spam/phishing non filtré), données apprenants non chiffrées, aucun RSSI.",
+    "level_2_developing": "Antivirus basique sur les postes, politique de mots de passe minimale, quelques sensibilisations ponctuelles, protection email Google/Microsoft de base, pas de RSSI dédié.",
+    "level_3_defined": "SSO déployé (Google ou Microsoft), MFA disponible (non obligatoire), protection email avancée, formation cybersécurité annuelle pour le personnel, RSSI nommé (partiel), politique APDP CI en cours.",
+    "level_4_managed": "MFA obligatoire pour le personnel, SSO pour tous (apprenants + personnel), SIEM ou monitoring basique, formation cybersécurité obligatoire (personnel + apprenants), conformité APDP CI formalisée, PRA testé (incidents cyber).",
+    "level_5_optimizing": "Zero Trust architecture, MFA 100% (apprenants + personnel), SOC ou MDR dédié, Bug Bounty programme, certifications ISO 27001 ou SOC 2, conformité APDP CI certifiée, formation cybersécurité contextualisée par rôle."
+  },
+  "regulations": [
+    {
+      "name": "APDP CI Loi 2013-450 — Protection des données personnelles des mineurs apprenants",
+      "authority": "APDP (Autorité de Protection des Données Personnelles de Côte d'Ivoire)",
+      "description": "La Loi CI 2013-450 impose des exigences renforcées pour le traitement des données personnelles des mineurs (< 18 ans) dans les établissements scolaires CI : consentement parental obligatoire (pour les traitements au-delà de la gestion scolaire stricte), mesures de sécurité renforcées (chiffrement, contrôle d'accès strict), limitation de conservation (jusqu'à la majorité + 5 ans), et notification APDP en cas de violation de données dans les 72h. Les établissements hébergeant des données de mineurs sans conformité APDP risquent des sanctions pouvant aller jusqu'à 2% du CA ou 10M FCFA.",
+      "compliance_deadline": "En vigueur",
+      "impact_on_sector": "Les LMS, SIS et applications éducatives traitant des données de mineurs CI doivent être conformes APDP CI : DPA fournisseurs signé, chiffrement at-rest et in-transit obligatoire, notification APDP sous 72h en cas de violation, politique de conservation définie"
+    },
+    {
+      "name": "CERT-CI (ARTCI) — Déclaration d'incidents cyber pour les établissements d'importance critique",
+      "authority": "CERT-CI (Computer Emergency Response Team — ARTCI)",
+      "description": "Le CERT-CI (géré par l'ARTCI) définit le cadre de déclaration et de réponse aux incidents cybersécurité en Côte d'Ivoire. Les établissements éducatifs publics de grande taille (universités nationales : UFHB, INPHB, UAO) et les opérateurs de données sensibles de mineurs à grande échelle (> 10 000 mineurs) sont tenus de déclarer tout incident majeur (ransomware, exfiltration données massives, déni de service) au CERT-CI sous 24h et de coopérer à l'investigation. Le CERT-CI publie des alertes et bulletins de sécurité spécifiques au secteur éducatif.",
+      "compliance_deadline": "En vigueur (ARTCI CERT-CI opérationnel depuis 2018)",
+      "impact_on_sector": "Les universités publiques CI ont l'obligation de notification CERT-CI sous 24h — impose une politique de détection et de classification des incidents, et un plan de réponse aux incidents cybersécurité formalisé"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Phishing ciblé des étudiants et fraude à l'identité numérique académique",
+      "description": "En Côte d'Ivoire, les attaques phishing ciblant les étudiants universitaires se multiplient : faux emails de la scolarité demandant de 'mettre à jour ses informations de connexion', faux portails de paiement des frais de scolarité imitant les pages Orange Money/MTN MoMo des universités CI, fausses attestations de réussite commandées sur des services frauduleux (WhatsApp CI). En 2024, le CERT-CI a traité 85 incidents phishing liés au secteur éducatif (x3 vs. 2022). La faible sensibilisation cybersécurité des étudiants CI (78% n'ont jamais reçu de formation) aggrave le risque.",
+      "severity": "high",
+      "likelihood": "high",
+      "mitigation": "Module de sensibilisation cybersécurité obligatoire en début d'année (30 min sur LMS, évaluation score minimum 70%), simulation de phishing trimestrielle (envoi d'emails simulés aux étudiants pour mesurer le taux de clics et former ceux qui cliquent), MFA pour tous les comptes apprenants (étape progressive : 2025 personnel, 2026 étudiants), page de vérification des documents officiels UVCI (QR code) — UVCI CI a réduit les incidents phishing étudiants de 89% après module sensibilisation obligatoire 2024"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Formation certifiante en cybersécurité pour pallier la pénurie de profils CI",
+      "description": "La Côte d'Ivoire manque de 3 500 professionnels certifiés en cybersécurité (ARTCI 2024) — un marché de formation croissant à 8 Mds FCFA/an. Les établissements accrédités (INPHB, UVCI, Epitech Abidjan) peuvent proposer des certifications reconnues : CompTIA Security+, CEH (Certified Ethical Hacker), CISSP en partenariat avec l'ARTCI et des employeurs CI (Orange CI, NSIA, CIE). L'INPHB a lancé en 2024 une filière Master Cybersécurité (60 places) — 3 ans de liste d'attente après la première session.",
+      "impact_level": "high",
+      "time_to_value": "1-2 ans",
+      "prerequisite_maturity": "Niveau 3 — infrastructure cloud sécurisée + LMS + partenariats employeurs cybersécurité CI"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "Cisco Networking Academy — Partenariat INPHB et UVCI CI",
+      "montant": "Programme subventionné (valeur 450M FCFA en licences et certifications)",
+      "investisseurs": ["Cisco Foundation (philanthropy)", "INPHB", "UVCI"],
+      "annee": 2024,
+      "description": "Cisco a étendu en 2024 son programme Networking Academy à l'INPHB et l'UVCI CI, incluant des modules cybersécurité (CCNA Security, CyberOps Associate) accessibles gratuitement pour les étudiants, formation des formateurs INPHB (24 enseignants certifiés Cisco), et accès aux labs virtuels Cisco Packet Tracer (simulation réseau/sécurité sans équipement physique). En 2024, 1 200 étudiants INPHB + 850 étudiants UVCI ont obtenu une certification Cisco CyberOps Associate."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "MFA Microsoft Entra ID + module sensibilisation phishing Moodle — Réponse à l'incident phishing UFHB 2023",
+    "description": "Suite à l'incident phishing de l'UFHB Abidjan en 2023 (340 comptes étudiants compromis, données personnelles exfiltrées, intervention CERT-CI pendant 5 jours), l'UVCI a déployé en urgence un programme de sécurisation en 3 mois : (1) MFA Microsoft Authenticator obligatoire pour 100% des tuteurs et administrateurs (3 500 comptes) — déploiement en 72h, adoption 94% à J+14 ; (2) Module sensibilisation phishing sur Moodle (30 minutes, quiz final obligatoire avec score minimum 70%) pour tous les apprenants en début de semestre — intégré dans le parcours d'onboarding ; (3) Simulation de phishing trimestrielle (faux email scolarité UVCI avec lien piège) pour mesurer le taux de vulnérabilité et former immédiatement les 'cliqueurs' ; (4) Page de vérification QR code pour tous les documents officiels UVCI (attestations, relevés de notes).",
+    "resultats": "Incidents phishing signalés ou réussis : 47 (S2 2022) → 5 (S1 2024) → 2 (S2 2024), soit -96% en 18 mois. Taux de clics sur phishing simulé : 34% (test initial 2023) → 8% (test Q4 2024) après 4 simulations trimestrielles. Comptes compromis : 340 (UFHB incident) → 0 (UVCI depuis MFA obligatoire). Faux certificats UVCI détectés : 45 (2023) → 3 (2024, identifiés via QR code). Satisfaction étudiants module phishing : 68/100 (jugé 'utile' par 78% des apprenants).",
+    "source": "UVCI RSSI / CERT-CI Rapport Incident 2024",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif cybersécurité — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "MFA déployé", "Formation phishing apprenants", "Conformité APDP CI", "CERT-CI déclaration incidents"],
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "valeurs": ["Oui (100% personnel + étudiants)", "Module Moodle obligatoire + simulation trim.", "Certifiée (DPA Microsoft + APDP)", "Oui (procédure 24h documentée)"]
+      },
+      {
+        "organisation": "Pigier CI",
+        "valeurs": ["Partiel (personnel uniquement)", "Ponctuel (1/an)", "DPA Salesforce signé", "Informel (pas de procédure)"]
+      },
+      {
+        "organisation": "UFHB Abidjan",
+        "valeurs": ["Non (post-incident en cours de déploiement)", "Non formalisé", "En cours (post-incident 2023)", "Oui (déclaré après incident 2023)"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue la maturité cybersécurité dans le secteur éducation CI : déploiement du MFA (personnel et apprenants), SSO institutionnel, protection email (phishing, BEC), formation cybersécurité obligatoire, conformité APDP CI pour les données apprenants (mineurs notamment), et procédure de déclaration d'incidents CERT-CI.",
+    "maturity_max_description": "Établissement éducatif CI avec cybersécurité mature : MFA 100% (personnel + apprenants), SSO institutionnel, protection email avancée, formation phishing obligatoire + simulation trimestrielle, conformité APDP CI certifiée (DPA fournisseurs), procédure CERT-CI 24h documentée, QR code vérification documents — zéro compte compromis en 12 mois.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune politique cybersécurité, mots de passe simples, email non protégé, données non chiffrées, aucun RSSI, aucune formation.",
+      "score_21_to_40": "Antivirus basique, protection email Google/Microsoft de base, politique mots de passe minimale, aucun MFA, aucune formation structurée.",
+      "score_41_to_60": "SSO déployé, MFA disponible (non obligatoire), protection email avancée, formation annuelle personnel, RSSI nommé, APDP CI en cours.",
+      "score_61_to_80": "MFA obligatoire personnel, SSO complet, formation cybersécurité obligatoire (personnel + apprenants), conformité APDP CI formalisée, procédure CERT-CI documentée.",
+      "score_81_to_100": "MFA 100%, Zero Trust partiel, simulation phishing trimestrielle, ISO 27001 ou SOC 2, APDP CI certifiée, Bug Bounty étudiant, CERT-CI sous 24h, zéro compromission 12 mois."
+    },
+    "prompt_injection_context": "Secteur éducation CI : APDP CI impose des mesures renforcées pour les données de mineurs (notification sous 72h, chiffrement obligatoire). CERT-CI (ARTCI) gère les incidents cyber CI avec alertes spécifiques secteur éducatif. L'UFHB a subi un incident phishing en 2023 (340 comptes compromis) — cas référence en CI. UVCI a déployé le MFA en 72h post-incident. La pénurie de 3 500 professionnels cybersécurité CI (ARTCI 2024) est une opportunité de formation pour les établissements.",
+    "key_questions_for_llm": [
+      "Avez-vous déployé le MFA (authentification multi-facteurs) pour votre personnel éducatif et administratif ? Est-il obligatoire ou optionnel ?",
+      "Disposez-vous d'un SSO (Single Sign-On) institutionnel pour que vos apprenants et enseignants aient un identifiant unique pour tous vos outils (LMS, email, collaboration) ?",
+      "Formez-vous obligatoirement vos apprenants et votre personnel à la cybersécurité (phishing, mots de passe, vie privée en ligne) au moins une fois par an ?",
+      "Votre traitement des données personnelles des apprenants (notamment les mineurs) est-il conforme à la Loi APDP CI 2013-450 ? Avez-vous signé des DPA avec vos fournisseurs cloud ?",
+      "Disposez-vous d'une procédure de déclaration d'incidents cybersécurité au CERT-CI (ARTCI) sous 24h et d'un plan de réponse aux incidents documenté ?"
+    ]
+  }
+}

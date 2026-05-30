@@ -1,0 +1,238 @@
+{
+  "meta": {
+    "axis": "RH_DIGITAL",
+    "sub_axis": "Collaboratif digital",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Asynchronous-first — communication décalée comme norme",
+      "description": "Les organisations distribuées adoptent la communication asynchrone (Loom, Notion, Confluence) comme canal principal, réduisant les réunions synchrones de 50 % et augmentant la productivité.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "62 % des équipes distribuées adoptent l'async-first (GitLab Remote Work Report 2024)",
+      "source": "GitLab Remote Work Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "AI-powered meeting assistants — comptes rendus automatiques",
+      "description": "Les assistants IA (Microsoft Copilot, Otter.ai, Fireflies.ai) transcrivent, résument et extraient les actions des réunions en temps réel, éliminant 80 % du travail de compte rendu manuel.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "45 % des organisations utilisent un assistant IA de réunion (Gartner 2024)",
+      "source": "Gartner Collaboration Technology Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Knowledge Management — capitalisation du savoir collectif",
+      "description": "Les wikis d'entreprise (Confluence, Notion, Guru) centralisent le savoir collectif, réduisant le temps de recherche d'information de 35 % et accélérant l'onboarding des nouveaux collaborateurs.",
+      "impact_level": "Élevé",
+      "horizon": "6-18 mois",
+      "adoption_rate": "68 % des grandes entreprises ont un wiki interne (Atlassian State of Teams 2024)",
+      "source": "Atlassian State of Teams Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Équipes distribuées cross-frontières — collaboration internationale",
+      "description": "La normalisation du travail à distance permet de constituer des équipes avec des experts de différents pays, accédant à des talents auparavant inaccessibles géographiquement.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "45 % des nouvelles embauches dans la tech sont des rôles full-remote (LinkedIn Jobs 2024)",
+      "source": "LinkedIn Global Talent Trends 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Plateformes de collaboration unifiée",
+      "category": "Travail d'équipe digital",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne à élevée",
+      "leading_vendors": ["Microsoft Teams", "Slack", "Google Chat", "Cisco Webex", "Discord (tech teams)"]
+    },
+    {
+      "name": "Outils de documentation et wiki",
+      "category": "Gestion des connaissances",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne",
+      "leading_vendors": ["Notion", "Confluence (Atlassian)", "Coda", "GitBook", "SharePoint"]
+    },
+    {
+      "name": "Outils de tableau blanc virtuel",
+      "category": "Créativité et co-création",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["Miro", "Figma FigJam", "Mural", "Microsoft Whiteboard"]
+    },
+    {
+      "name": "Gestion de projet visuelle",
+      "category": "Coordination d'équipe",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne",
+      "leading_vendors": ["Jira", "Asana", "Monday.com", "Trello", "ClickUp"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Teams/Slack déployé pour toute la communication interne, wiki Notion ou Confluence pour la documentation",
+        "differentiator": "Premier acteur sectoriel à adopter une politique 'réunion-by-exception' avec des guidelines de communication asynchrone",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Andela",
+        "country": "Pan-Afrique (fondée au Nigeria)",
+        "key_practice": "Organisation 100 % distribuée sur 100+ pays — modèle de référence du travail collaboratif africain à distance",
+        "differentiator": "Ingénieurs africains collaborant avec des équipes mondiales sur une plateforme asynchrone-first avec zéro bureaux physiques",
+        "source": "Andela Annual Report 2023 / TechCabal Africa Tech Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "GitLab",
+        "country": "USA",
+        "key_practice": "1 500 collaborateurs dans 65 pays sans aucun bureau — all-remote depuis 2015",
+        "differentiator": "GitLab Handbook (2 500 pages publiques) — la documentation la plus complète au monde sur le travail distribué",
+        "source": "GitLab Remote Work Report 2023 / GitLab Handbook"
+      },
+      {
+        "organisation": "Automattic (WordPress.com)",
+        "country": "USA",
+        "key_practice": "1 900 collaborateurs dans 90 pays sans bureau central — communication 100 % textuelle et async",
+        "differentiator": "P2 (blog interne) comme canal de communication principal : tout est écrit, rien n'est dit dans des réunions",
+        "source": "Automattic Remote Culture Blog 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Communication 100 % email et réunions physiques. Pas d'outils collaboratifs. Documents partagés par email. Aucune trace écrite des décisions.",
+    "level_2_developing": "Quelques outils de messagerie instantanée (WhatsApp pro). Partage de fichiers en réseau. Pas de wiki ni de gestion de projet digitale. Réunions non structurées.",
+    "level_3_defined": "Plateforme de collaboration unifiée (Teams, Slack). Gestion de projet digitale (Jira, Asana). Wiki interne en place. Réunions vidéo standard. Partage documentaire cloud.",
+    "level_4_managed": "Communication async-first formalisée. Wiki riche et bien maintenu. Whiteboard virtuel pour le co-design. Réunions avec ordre du jour et compte rendu systématiques. IA pour les comptes rendus.",
+    "level_5_optimizing": "Collaboration distribuée globale sans friction. Assistant IA dans toutes les réunions. Knowledge graph de l'entreprise. Mesure de la qualité collaborative. Équipes cross-frontières efficaces."
+  },
+
+  "regulations": [
+    {
+      "name": "Code du travail — droit à la déconnexion",
+      "issuing_body": "République de Côte d'Ivoire / France (référence)",
+      "scope": "Organisations pratiquant le télétravail ou le travail flexible",
+      "key_requirement": "Garantir le droit à la déconnexion des collaborateurs hors heures de travail, policy de communication respectueuse",
+      "compliance_deadline": "Recommandation / En vigueur selon pays",
+      "source_url": "https://www.emploi.gouv.ci"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Silos informationnels malgré les outils collaboratifs",
+      "description": "Avoir Teams ET Slack ET email ET WhatsApp sans règles claires crée une fragmentation de l'information pire que sans outils, avec une surcharge cognitive pour les collaborateurs.",
+      "severity": "Élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Définir une policy de communication claire : un seul canal par type d'usage (urgent, projet, social, documentaire)."
+    },
+    {
+      "title": "Réunionite — prolifération de réunions inutiles",
+      "description": "Les outils de videoconférence facilitent les réunions ad-hoc, créant une surcharge de réunions qui fragmente la journée et détruit la productivité des experts.",
+      "severity": "Élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Adopter une culture 'meeting-by-exception' avec des templates async (Loom, document partagé) pour les sujets non-urgents."
+    },
+    {
+      "title": "Perte de savoir tacite lors du turnover",
+      "description": "Sans knowledge management structuré, chaque départ d'un collaborateur fait perdre des connaissances critiques (procédures, décisions, contexte) irremplaçables.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Institutionnaliser la documentation dans le wiki (chaque projet → une page, chaque décision → une note), avec exit interviews documentées."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Accès à des talents africains de la diaspora via le travail distribué",
+      "description": "Le travail distribué permet de recruter des experts africains de la diaspora (Europe, USA) qui apportent des compétences mondiales avec une affinité culturelle locale.",
+      "impact_level": "Élevé",
+      "time_to_value": "3-12 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Réduction des coûts immobiliers via le travail hybride",
+      "description": "Une politique de travail hybride à 60 % remote permet de réduire les surfaces de bureau de 30-40 %, libérant un capital significatif pour d'autres investissements.",
+      "impact_level": "Moyen",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 4"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Atlassian",
+      "target": "Loom",
+      "amount": "975 M$",
+      "date": "2023",
+      "strategic_rationale": "Intégrer la communication vidéo asynchrone dans la suite collaborative Jira/Confluence",
+      "source": "Atlassian Press Release 2023"
+    },
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Salesforce",
+      "target": "Slack",
+      "amount": "27,7 Mds$",
+      "date": "2021",
+      "strategic_rationale": "Créer la plateforme de travail digital de référence en intégrant la collaboration en temps réel au CRM",
+      "source": "Salesforce Press Release 2021"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "GitLab",
+    "pays": "USA",
+    "technologie": "All-Remote Organization — 1 500 collaborateurs dans 65 pays sans aucun bureau",
+    "description": "GitLab est la plus grande organisation entièrement distribuée au monde. Sans aucun bureau physique, 1 500 collaborateurs dans 65 pays collaborent via un système de documentation radical : tout est écrit dans le GitLab Handbook (2 500 pages publiques). Les décisions sont prises en async via Issues et Merge Requests. Les réunions sont limitées et enregistrées. GitLab a publié 100 % de son manuel de management en open source, devenant la référence mondiale du travail distribué. L'organisation a réalisé son IPO en 2021 à 11 Mds$ de valorisation.",
+    "resultats": "1 500 personnes · 65 pays · 0 bureau physique · 2 500 pages de Handbook public · IPO 11 Mds$ · Référence mondiale travail distribué",
+    "source": "GitLab Remote Work Report 2024 / GitLab Handbook (handbook.gitlab.com)",
+    "annee": "2024"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité collaboratif digital — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "Plateforme collaboration unifiée (Teams/Slack)", "Wiki interne documenté", "Gestion projet digitale", "Communication async formalisée", "IA pour comptes rendus"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "Partiel", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La collaboration digitale efficace est le multiplicateur de productivité des équipes modernes. Les organisations qui standardisent leur communication (un canal par usage, async-first, wiki riche) réduisent leur charge cognitive et accélèrent la prise de décision. En Afrique, Teams et WhatsApp Business sont les canaux adoptés en premier.",
+    "maturity_max_description": "Plateforme collaborative unifiée (Teams ou Slack). Wiki interne riche et maintenu. Gestion de projet digitale (Jira/Asana). Communication async-first avec policy documentée. IA pour les comptes rendus automatiques. Mesure de la qualité collaborative.",
+    "scoring_rubric": {
+      "score_1_to_20": "Communication 100 % email et réunions physiques. Pas d'outils collaboratifs. Aucune trace des décisions.",
+      "score_21_to_40": "Messagerie instantanée basique. Partage fichiers réseau. Pas de wiki ni gestion projet. Réunions non structurées.",
+      "score_41_to_60": "Collaboration unifiée (Teams/Slack). Gestion projet digitale. Wiki en place. Vidéoconférence standard.",
+      "score_61_to_80": "Async-first formalisé. Wiki riche. Whiteboard virtuel. Réunions structurées. IA pour comptes rendus.",
+      "score_81_to_100": "Collaboration distribuée globale. Knowledge graph. Mesure qualité collaborative. Équipes cross-frontières."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur la maturité de sa collaboration digitale. Analyse l'utilisation d'une plateforme de collaboration unifiée (Teams, Slack), l'existence d'un wiki interne bien documenté, la gestion de projet digitale, la formalisation d'une communication asynchrone et l'utilisation d'IA pour les comptes rendus de réunions.",
+    "key_questions_for_llm": [
+      "Une plateforme de collaboration unifiée (Microsoft Teams, Slack) est-elle le canal principal de communication interne ?",
+      "L'organisation dispose-t-elle d'un wiki ou knowledge base interne (Confluence, Notion) documentant les processus et décisions ?",
+      "Les projets sont-ils gérés via des outils digitaux (Jira, Asana, Monday.com) avec suivi en temps réel ?",
+      "Une politique de communication asynchrone est-elle définie pour limiter les réunions non nécessaires ?",
+      "L'IA est-elle utilisée pour générer des comptes rendus et extraire les actions des réunions automatiquement ?"
+    ]
+  }
+}

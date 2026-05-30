@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "IT_DATA",
+    "sub_axis": "socle_it",
+    "sector": "energie",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Architecture IT/OT convergente et réseau SDN pour smart grid",
+      "description": "La convergence IT/OT (Information Technology / Operational Technology) est le chantier majeur des distributeurs d'énergie : les systèmes SCADA/EMS/DMS (OT) doivent s'intégrer avec les ERP/CRM/BI (IT) tout en maintenant une isolation de sécurité stricte. Les réseaux de communication SCADA évoluent vers des architectures SDN (Software-Defined Networking) et des protocoles standardisés IEC 61968/61970 (CIM - Common Information Model) pour l'interopérabilité. En Côte d'Ivoire, CIE migre progressivement vers une architecture IT/OT convergente sur son réseau 225kV/90kV.",
+      "impact_level": "high",
+      "horizon": "short_term",
+      "adoption_rate": "28%",
+      "source": "CIGRE Afrique / ANARE-CI 2025",
+      "year": 2025
+    },
+    {
+      "title": "ERP énergie unifié et modernisation du socle applicatif legacy",
+      "description": "Les distributeurs UEMOA opèrent souvent sur des ERP disparates et vieillissants (Oracle Utilities 2005, SAP IS-U 2008, billing maison), créant des silos de données et des coûts de maintenance élevés. La tendance est à l'unification sur des plateformes ERP énergie modernes (SAP S/4HANA Utilities, Oracle Utilities Cloud, Salesforce Energy Cloud) avec une architecture microservices et des APIs standardisées. CIE a lancé en 2024 un programme de modernisation Oracle Utilities (billing, field service) sur 3 ans.",
+      "impact_level": "high",
+      "horizon": "short_term",
+      "adoption_rate": "22%",
+      "source": "Gartner Utilities Transformation 2025",
+      "year": 2025
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "SCADA/EMS/DMS/NMS — Supervision réseau électrique",
+      "category": "OT / Supervision Réseau",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "CIE : Siemens SCADA réseau 225kV/90kV/15kV (Abidjan), 100% du réseau HTB supervisé",
+      "leading_vendors": ["Siemens SCADA/EMS", "ABB Network Manager", "GE Grid Solutions (ALSTOM)", "OSIsoft PI (AVEVA)", "Schneider Electric EcoStruxure"]
+    },
+    {
+      "name": "ERP Utilities (Billing, Asset Management, Field Service)",
+      "category": "ERP / Applications Métier",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "CIE : Oracle Utilities CCS (billing 2,8M clients), IBM Maximo (assets), en cours de modernisation",
+      "leading_vendors": ["Oracle Utilities (Cloud CCS)", "SAP IS-U / S4HANA Utilities", "Salesforce Energy Cloud", "Itineris (PME utilities)", "ClickSoftware (field service)"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "CIE (Compagnie Ivoirienne d'Électricité)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Socle IT/OT CIE : Siemens SCADA réseau HTB/HTA, Oracle Utilities CCS (billing 2,8M clients, en modernisation Cloud 2024-2027), IBM Maximo EAM (4 500 transformateurs, 1 800 techniciens), Power BI (reporting IQS + management), Microsoft 365 (12 000 comptes), réseau MPLS OT dédié isolé réseau IT, SOC hybride IT/OT (2024)",
+        "differentiator": "Socle IT/OT le plus mature du secteur électricité CI — Oracle Utilities CCS garantit 99,95% disponibilité billing pour 2,8M clients, Siemens SCADA permet supervision temps réel 100% réseau HTB 225kV",
+        "source": "CIE DSI — Architecture SI 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "ENEO Cameroun",
+        "country": "Cameroun",
+        "key_practice": "SAP IS-U (billing 1,2M clients), Schneider Electric EcoStruxure SCADA (réseau Douala/Yaoundé), déploiement SAP S/4HANA Utilities (2023-2025), intégration ENEO App (Orange Money + MTN) via middleware MuleSoft, datacenter primaire Douala + DR Yaoundé",
+        "differentiator": "Premier distributeur Afrique centrale à migrer vers SAP S/4HANA Utilities Cloud (2024) — architecture cible microservices permettant des intégrations mobiles money en < 2 semaines vs. 6 mois avant",
+        "source": "ENEO / SAP Case Study 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Enedis (France — filiale EDF)",
+        "country": "France",
+        "key_practice": "Architecture IT/OT convergente : SCADA Siemens (réseau 700K km HTA/BTA), SAP IS-U billing 37M clients, plateforme Linky AMI (35M compteurs communiquants), DataHub national énergie (données consommation nationalisées), cloud hybride AWS + datacenter propres, zero-trust architecture IT/OT",
+        "differentiator": "Leader mondial architecture smart grid IT/OT — Linky : 35M compteurs AMI communicants avec DataHub centralisé national géré par Enedis pour 37M clients, premier réseau zero-trust IT/OT au monde (certification ISO 27001 + IEC 62443)",
+        "source": "Enedis Rapport Annuel 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Systèmes legacy isolés (billing papier ou fichiers Excel, SCADA basique sans historian, maintenance sur bons papier), pas d'intégration entre systèmes, aucun datacenter dédié, serveurs physiques obsolètes.",
+    "level_2_developing": "SCADA réseau HTB opérationnel, ERP billing basique (Oracle/SAP vieillissant), intégrations point-à-point ad hoc, datacenter physique unique sans PRA, Wi-Fi agences sans segmentation.",
+    "level_3_defined": "SCADA + EMS/DMS réseau intégrés, ERP billing stable avec interfaces CRM/mobile money, datacenter primaire + DR basique (RPO < 24h, RTO < 8h), réseau OT isolé VLAN, EAM assets déployé.",
+    "level_4_managed": "Architecture IT/OT convergente avec isolation sécurisée (DMZ OT), ERP modulaire avec APIs REST documentées, cloud hybride (on-premise OT + cloud IT), AMI partiellement intégré au billing, monitoring IT/OT 24/7 (NOC/SOC).",
+    "level_5_optimizing": "Architecture IT/OT zero-trust, ERP Utilities Cloud (Oracle/SAP S/4HANA natif cloud), AMI 100% intégré (billing temps réel), Digital Twin réseau connecté au SCADA, SOC hybride IT/OT certifié IEC 62443, RPO < 1h RTO < 2h pour systèmes critiques."
+  },
+  "regulations": [
+    {
+      "name": "IEC 62351 — Cybersécurité des protocoles de communication OT réseau électrique",
+      "authority": "IEC (International Electrotechnical Commission) / ANARE-CI",
+      "description": "La norme IEC 62351 définit les exigences de sécurité pour les protocoles de communication des systèmes SCADA et de contrôle réseau électrique (IEC 60870-5-101/104, IEC 61850, DNP3). Elle couvre l'authentification, le chiffrement, la gestion des certificats et la surveillance des communications OT. ANARE-CI recommande l'alignement IEC 62351 pour les systèmes SCADA des distributeurs CI dans son guide de cybersécurité OT 2024.",
+      "compliance_deadline": "Recommandation ANARE-CI 2024 (pas encore obligatoire)",
+      "impact_on_sector": "Nécessite une mise à niveau des communications SCADA CI (migration DNP3 non chiffré vers IEC 61850 sécurisé) — investissement estimé 450M FCFA pour CIE réseau HTB"
+    },
+    {
+      "name": "Loi CI 2013-546 — Protection des infrastructures critiques (électricité)",
+      "authority": "Ministère de l'Intérieur CI / Ministère des Mines et de l'Énergie",
+      "description": "La loi CI 2013-546 classe les infrastructures électriques critiques (centrales, postes HTB 225kV, SCADA) comme Opérateurs d'Importance Vitale (OIV). Les OIV énergie CI doivent : notifier les incidents de sécurité sous 24h à l'ANSSI-CI, maintenir un Plan de Continuité d'Activité (PCA) validé, réaliser des audits de sécurité annuels. CIE a le statut OIV depuis 2015 et soumet son PCA annuellement au Ministère.",
+      "compliance_deadline": "En vigueur (révision 2025 prévue)",
+      "impact_on_sector": "Oblige à des architectures IT/OT résilientes (PRA testé, RPO/RTO définis), des audits de sécurité annuels (incluant tests d'intrusion OT), et une notification d'incidents sous 24h"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Dépendance à un SCADA propriétaire unique et risque de fin de support fournisseur",
+      "description": "En Côte d'Ivoire, CIE opère son réseau HTB/HTA sur un SCADA Siemens installé en 2012 et partiellement mis à jour en 2019. Ce système propriétaire à fort niveau de personnalisation CI crée une dépendance critique : fin de support Siemens prévue pour certains modules en 2027, coûts de maintenance +35%/an, difficulté à intégrer de nouveaux équipements (AMI, IoT transformateurs) via APIs standardisées. Un bug critique non patchable exposerait le réseau 225kV d'Abidjan (1,2M clients) à un risque de coupure majeure.",
+      "severity": "critical",
+      "likelihood": "medium",
+      "mitigation": "Initier un programme de modernisation SCADA progressif (phased upgrade vs. big bang) : maintien noyau Siemens stable, ajout d'une couche d'abstraction API (middleware IEC 61968 CIM) pour nouvelles intégrations, migration progressive modules non critiques vers solutions ouvertes (AVEVA OSIsoft PI) — budget estimé 2,5 Mds FCFA sur 4 ans"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Urbanisation du SI énergie CI via cloud Oracle Utilities",
+      "description": "La migration du billing CIE vers Oracle Utilities Cloud (en cours 2024-2027) permettrait : facturation en temps réel sur données AMI (vs. estimation mensuelle actuelle), intégration native multi-canal (app, USSD, Wave, Orange Money), scalabilité automatique (pics de rechargements après pannes), coût de maintenance -40% vs. on-premise. Cette urbanisation SI est le prérequis à toutes les offres digitales avancées (TOU, EaaS, marketplace énergie) nécessitant un billing temps réel.",
+      "impact_level": "high",
+      "time_to_value": "3-5 ans",
+      "prerequisite_maturity": "Niveau 3 — ERP billing stable + équipe IT capable de gérer une migration cloud complexe"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "Oracle Utilities Cloud — Contrat CIE modernisation SI énergie",
+      "montant": "3,5 Mds FCFA (contrat 5 ans, environ 5,3M EUR)",
+      "investisseurs": ["CIE (autofinancement)", "BEI (Banque Européenne d'Investissement — ligne crédit transformation digitale CI)"],
+      "annee": 2024,
+      "description": "CIE a signé en 2024 un contrat de modernisation de son SI énergie avec Oracle Utilities Cloud (CCS - Customer Care & Billing Cloud) couvrant : migration billing 2,8M clients vers cloud (SaaS), intégration AMI (250K compteurs 2025-2027), portail client self-service, APIs REST ouvertes (partenaires mobile money, agents tiers). Intégrateur : Wipro CI + équipes CIE DSI. Durée : 2024-2027. Financement partiel via ligne BEI digitalisation infrastructures CI."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "CIE (Compagnie Ivoirienne d'Électricité)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Migration SOC hybride IT/OT — Supervision unifiée sécurité réseau électrique et SI corporate",
+    "description": "En 2024, CIE a créé un SOC (Security Operations Center) hybride couvrant à la fois le SI IT (ERP Oracle, Microsoft 365, API Gateway, CRM) et les systèmes OT (SCADA Siemens, réseau MPLS HTB, PLCs transformateurs 225kV). Architecture : SIEM Splunk ingérant les logs IT (Microsoft Sentinel) + logs OT (Siemens SCADA historian + Claroty réseau OT), 8 analystes SOC en 2x8h, playbooks d'incident spécifiques IT et OT (procédure isolation segment OT sans coupure réseau). Technologie Claroty déployée sur 85 actifs OT supervisés (PLCs, RTUs, interfaces HMI). Le SOC dispose d'une runbook de coordination CERT-CI (ARTCI) pour les incidents critiques réseau électrique.",
+    "resultats": "En 8 mois d'opération : 847 alertes traitées (dont 12 incidents critiques OT, 3 remontés à ANARE-CI et CERT-CI). Temps de détection moyen (MTTD) : 18 minutes (objectif < 30 min atteint). Temps de réponse moyen (MTTR) : 2h45 pour incidents OT (vs. aucun KPI avant SOC). Faux positifs OT : 23% (en diminution — modèle IA tuné sur baseline comportemental Siemens SCADA CI). Aucun incident réseau électrique causé par une intrusion cyber depuis création SOC (vs. 1 incident suspicion 2023). Budget SOC : 650M FCFA/an (ROI estimé via pannes cyber évitées : 3,8x).",
+    "source": "CIE CISO / Claroty Case Study CI 2024",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif maturité socle IT — Secteur Énergie Côte d'Ivoire",
+    "colonnes": ["organisation", "SCADA / supervision réseau", "ERP billing clients", "Architecture cloud", "SOC cybersécurité"],
+    "lignes": [
+      {
+        "organisation": "CIE CI",
+        "valeurs": ["Siemens SCADA HTB/HTA (2012, upgrade 2019)", "Oracle Utilities CCS (migration cloud 2024-27)", "Cloud hybride en cours", "SOC hybride IT/OT (2024)"]
+      },
+      {
+        "organisation": "BBOXX CI",
+        "valeurs": ["BBOXX OS cloud (IoT PAYG)", "Billing PAYG SaaS (BBOXX cloud)", "Cloud natif AWS (100%)", "SOC externalisé (AWS GuardDuty)"]
+      },
+      {
+        "organisation": "ADER CI",
+        "valeurs": ["Pas de SCADA (mini-grids décentralisés)", "SI public SIGFP", "On-premise (SI État CI)", "CERT-CI (ARTCI)"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue la robustesse du socle IT/OT énergie : maturité du SCADA réseau, état de l'ERP billing (legacy vs. cloud), niveau d'intégration IT/OT, sécurité de l'architecture (isolation OT, SOC), et conformité aux normes IEC 62351 / IEC 62443 / Loi OIV CI.",
+    "maturity_max_description": "Distributeur énergie CI avec architecture IT/OT zero-trust : SCADA moderne IEC 61850, ERP Utilities Cloud en production, AMI 100% intégré billing temps réel, SOC hybride IT/OT certifié IEC 62443, RPO < 1h RTO < 2h, conformité OIV CI validée annuellement — pilotage réseau 100% temps réel.",
+    "scoring_rubric": {
+      "score_1_to_20": "Systèmes legacy isolés (billing Excel/papier, SCADA basique non connecté ERP), aucun datacenter dédié, sécurité inexistante, aucun PCA validé.",
+      "score_21_to_40": "SCADA réseau HTB opérationnel isolé, ERP billing legacy stable, intégrations point-à-point, datacenter unique sans DR, réseau OT non segmenté.",
+      "score_41_to_60": "SCADA + EMS intégrés, ERP avec APIs partielles, datacenter + DR basique (RPO < 24h), réseau OT isolé VLAN, EAM assets déployé, mais pas de SOC.",
+      "score_61_to_80": "Architecture IT/OT convergente sécurisée (DMZ OT), ERP cloud hybride, AMI partiellement intégré, SOC 24/7 (IT seul ou hybride), audits OIV CI conformes.",
+      "score_81_to_100": "Zero-trust IT/OT, ERP Utilities Cloud natif, AMI 100% billing temps réel, SOC hybride IT/OT certifié IEC 62443, Digital Twin connecté SCADA, RPO < 1h RTO < 2h."
+    },
+    "prompt_injection_context": "Secteur énergie CI : CIE a le statut OIV (Opérateur d'Importance Vitale) et doit soumettre son PCA annuellement. La Loi CI 2013-546 impose des audits de sécurité annuels et une notification d'incidents sous 24h à l'ANSSI-CI. La norme IEC 62351 est recommandée par ANARE-CI pour les systèmes SCADA. Distinguer SI IT (Oracle, Microsoft, CRM) et systèmes OT (SCADA, PLCs, réseau MPLS dédié) avec leurs exigences de sécurité distinctes.",
+    "key_questions_for_llm": [
+      "Quel est l'état de votre SCADA réseau électrique ? Est-il intégré à votre ERP billing et à vos outils de gestion terrain (EAM) ?",
+      "Votre ERP billing (Oracle/SAP/autre) est-il en cours de modernisation vers le cloud ? Quel est votre RPO/RTO pour les systèmes critiques ?",
+      "Votre réseau OT (SCADA, PLCs) est-il physiquement ou logiquement isolé de votre réseau IT corporate ? Disposez-vous d'un SOC couvrant les deux domaines ?",
+      "Êtes-vous classé Opérateur d'Importance Vitale (OIV) par la Loi CI 2013-546 ? Votre PCA est-il testé et validé annuellement ?",
+      "Alignez-vous vos communications SCADA sur les normes IEC 62351 / IEC 61850 ? Avez-vous un programme de modernisation de votre OT ?"
+    ]
+  }
+}

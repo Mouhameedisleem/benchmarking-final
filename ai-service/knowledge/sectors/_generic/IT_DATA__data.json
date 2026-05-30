@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "axis": "IT_DATA",
+    "sub_axis": "Data & Intelligence Artificielle",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Generative AI en production — passage du POC au déploiement réel",
+      "description": "Après 2 ans d'expérimentation, les organisations déploient massivement l'IA générative en production : assistants internes, génération de contenu, code, analyse de données — avec des ROI mesurés de 20-40 %.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "65 % des grandes entreprises ont au moins un use case GenAI en production (McKinsey 2024)",
+      "source": "McKinsey Global State of AI 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Data Lakehouse — architecture unifiée pour l'analytique et le ML",
+      "description": "Le Data Lakehouse (Databricks Delta Lake, AWS Lake Formation) unifie le stockage des données brutes (lake) et structurées (warehouse) en une seule plateforme, simplifiant l'architecture et réduisant les coûts de 30-50 %.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "42 % des nouvelles architectures data sont Lakehouse (Databricks State of Data + AI 2024)",
+      "source": "Databricks State of Data + AI 2024",
+      "year": "2024"
+    },
+    {
+      "title": "MLOps — industrialisation du Machine Learning",
+      "description": "Le MLOps (ML + DevOps) industrialise le cycle de vie des modèles ML : versioning, monitoring des performances, détection de drift, réentraînement automatique — transformant les POCs en systèmes robustes en production.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "38 % des équipes data ont une pratique MLOps formalisée (Gartner 2024)",
+      "source": "Gartner Machine Learning Trends 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Responsible AI — IA explicable, équitable et auditée",
+      "description": "La réglementation croissante (EU AI Act, RGPD) et les attentes sociétales forcent les organisations à développer des pratiques d'IA responsable : explicabilité des modèles, détection des biais, auditabilité des décisions.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "73 % des organisations considèrent la Responsible AI comme priorité (Deloitte 2024)",
+      "source": "Deloitte Responsible AI Survey 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Plateforme Data & AI (Lakehouse)",
+      "category": "Stockage et traitement unifié des données",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible en Afrique",
+      "leading_vendors": ["Databricks", "Snowflake", "Azure Synapse Analytics", "Google BigQuery", "AWS Glue + S3"]
+    },
+    {
+      "name": "MLOps Platform",
+      "category": "Industrialisation du Machine Learning",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["MLflow", "AWS SageMaker", "Azure ML", "Google Vertex AI", "Kubeflow"]
+    },
+    {
+      "name": "IA Générative & LLM",
+      "category": "Intelligence artificielle générative",
+      "maturity_stage": "Émergence rapide",
+      "adoption_in_sector": "Faible mais croissante",
+      "leading_vendors": ["OpenAI GPT-4", "Anthropic Claude", "Google Gemini", "Meta Llama", "Mistral AI"]
+    },
+    {
+      "name": "Business Intelligence & Analytics",
+      "category": "Analyse et visualisation",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne",
+      "leading_vendors": ["Power BI", "Tableau", "Looker (Google)", "Metabase (open-source)", "Apache Superset"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Data warehouse déployé, dashboards BI pour le management, premiers modèles ML en production (scoring, segmentation)",
+        "differentiator": "Premier acteur sectoriel à déployer un assistant IA interne (basé sur un LLM) pour les équipes opérationnelles",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Safaricom",
+        "country": "Kenya",
+        "key_practice": "Data lake M-Pesa analysant 50M transactions/jour, modèles ML scoring crédit (M-Shwari) et fraude en temps réel",
+        "differentiator": "Scoring de crédit instantané basé sur 200+ variables comportementales M-Pesa — décision en 3 secondes pour 1M+ clients",
+        "source": "Safaricom Technology Report 2023 / M-Pesa Annual Report 2023"
+      },
+      {
+        "organisation": "Flutterwave",
+        "country": "Nigeria",
+        "key_practice": "Modèles ML de détection de fraude analysant 140M+ transactions, précision 99,8 %",
+        "differentiator": "IA de fraud detection qui évolue en temps réel, réduisant les pertes liées à la fraude de 85 % en 2 ans",
+        "source": "Flutterwave Tech Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Google DeepMind",
+        "country": "USA / UK",
+        "key_practice": "AlphaFold2 : structure de 200M protéines prédites — accélération de la recherche médicale de 10-50 ans",
+        "differentiator": "IA qui résout des problèmes scientifiques que l'humanité n'avait pas résolus en 50 ans de recherche conventionnelle",
+        "source": "DeepMind AlphaFold Report 2023 / Nature 2023"
+      },
+      {
+        "organisation": "Databricks",
+        "country": "USA",
+        "key_practice": "Lakehouse Platform unifiant data engineering, analytics et ML pour 10 000+ entreprises",
+        "differentiator": "DBRX : LLM open-source surpassant GPT-3.5 — démocratisation de l'IA pour les entreprises sans OpenAI",
+        "source": "Databricks Annual Report 2023 / State of Data + AI 2024"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Données en silos dans des fichiers Excel. Aucune infrastructure data. Pas de BI ni d'analytics. Décisions basées uniquement sur l'intuition. Aucune utilisation de l'IA.",
+    "level_2_developing": "Rapports manuels depuis les systèmes. Pas de data warehouse. Quelques tableaux de bord basiques. Qualité des données non maîtrisée. Pas de modèles ML.",
+    "level_3_defined": "Data warehouse déployé. Dashboards BI pour le management. Équipe data dédiée (1-3 personnes). Quelques analyses descriptives régulières. Premiers usages de ML basiques.",
+    "level_4_managed": "Data platform (warehouse + lake). BI self-service accessible aux métiers. 3-5 modèles ML en production (scoring, segmentation, fraude). Data Quality framework. Reporting réglementaire automatisé.",
+    "level_5_optimizing": "Lakehouse ou Data Mesh. 10+ modèles ML en production. Analytics temps réel. IA générative intégrée aux outils métier. MLOps opérationnel. Responsible AI framework. Data Catalog complet."
+  },
+
+  "regulations": [
+    {
+      "name": "Loi n°2013-450 — Protection des données dans les traitements IA",
+      "issuing_body": "République de Côte d'Ivoire / ARTCI",
+      "scope": "Organisations utilisant des données personnelles pour l'entraînement de modèles IA",
+      "key_requirement": "Consentement pour l'utilisation des données personnelles en ML, minimisation des données, durée de conservation",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.artci.ci"
+    },
+    {
+      "name": "EU AI Act — Systèmes IA à risque élevé",
+      "issuing_body": "Union Européenne",
+      "scope": "Organisations déployant des IA pour le crédit, le recrutement, la santé, la sécurité",
+      "key_requirement": "Registre des systèmes IA, évaluation des risques, supervision humaine, transparence et explicabilité",
+      "compliance_deadline": "2025-2026 (entrée en vigueur progressive)",
+      "source_url": "https://artificialintelligenceact.eu"
+    },
+    {
+      "name": "Directives BCEAO sur le scoring crédit algorithmique",
+      "issuing_body": "BCEAO",
+      "scope": "Institutions financières utilisant des modèles algorithmiques pour l'octroi de crédit",
+      "key_requirement": "Explicabilité des décisions de crédit automatisées, droit à l'explication pour le client, supervision des modèles",
+      "compliance_deadline": "En cours de finalisation",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Hallucinations IA — confiance excessive dans les sorties des LLMs",
+      "description": "Les modèles génératifs (GPT, Claude, Gemini) produisent des réponses confiantes mais factuellement incorrectes. Une utilisation sans validation humaine peut induire des décisions basées sur des données erronées.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Implémenter des mécanismes de vérification (RAG avec sources vérifiées), former les utilisateurs aux limites des LLMs et maintenir la supervision humaine sur les décisions critiques."
+    },
+    {
+      "title": "Biais dans les modèles ML — discrimination algorithmique",
+      "description": "Les modèles ML entraînés sur des données historiquement biaisées perpétuent et amplifient des discriminations (genre, géographie, ethnie) dans les décisions automatisées (crédit, recrutement, assurance).",
+      "severity": "Très élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Auditer régulièrement les modèles pour les biais, utiliser des datasets diversifiés, maintenir une supervision humaine sur les décisions à fort impact et documenter les limitations."
+    },
+    {
+      "title": "Fuite de données dans les LLMs publics",
+      "description": "L'envoi de données confidentielles (contrats, données clients, code propriétaire) vers des LLMs publics (ChatGPT free, Claude.ai) constitue une fuite de données potentiellement irréversible.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Déployer des LLMs on-premise ou via des API avec contrats de confidentialité, former les collaborateurs aux données qu'ils ne peuvent pas partager avec des IA publiques."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "IA générative pour augmenter la productivité de 20-40 %",
+      "description": "Les assistants IA (Copilot, Claude, Gemini) augmentent la productivité des équipes de connaissance de 20-40 % sur les tâches de rédaction, analyse, résumé et code — ROI parmi les plus élevés de l'histoire de l'IT.",
+      "impact_level": "Très élevé",
+      "time_to_value": "3-12 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Scoring prédictif — réduction des risques de 30-60 %",
+      "description": "Les modèles ML de scoring (crédit, fraude, churn) réduisent les pertes de 30-60 % vs les méthodes actuarielles classiques, avec un délai de décision en millisecondes vs jours.",
+      "impact_level": "Très élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Personnalisation ML — augmentation des revenus de 20-35 %",
+      "description": "Les moteurs de recommandation ML (Amazon : 35 % du CA, Netflix : 80 % des visionnages) personnalisent chaque interaction, générant des revenus additionnels significatifs sur la base clients existante.",
+      "impact_level": "Très élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Investors (a16z, Tiger Global, Greenoaks)",
+      "target": "Databricks",
+      "amount": "1,6 Mds$ (Series H)",
+      "date": "2023",
+      "strategic_rationale": "Développer la plateforme Lakehouse unifiée Data + AI et concurrencer Snowflake sur l'analytique et le ML",
+      "source": "Databricks Press Release 2023"
+    },
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Microsoft",
+      "target": "OpenAI (partenariat exclusif)",
+      "amount": "13 Mds$ (total investi)",
+      "date": "2019-2024",
+      "strategic_rationale": "Intégrer les capacités GPT-4/o dans l'ensemble de la suite Microsoft (Azure, M365, GitHub Copilot)",
+      "source": "Microsoft / OpenAI Partnership 2019-2024"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Safaricom",
+    "pays": "Kenya",
+    "technologie": "ML sur M-Pesa — scoring crédit en 3 secondes pour 1M+ clients sur données comportementales",
+    "description": "Safaricom a transformé les données comportementales de ses 50M utilisateurs M-Pesa en intelligence artificielle à impact direct. Le service M-Shwari accorde des crédits en 3 secondes en analysant 200+ variables comportementales (fréquence de transactions, montants, patterns, réseau social digital). Sans historique bancaire traditionnel, M-Shwari a accordé des crédits à 25M de Kenyans non-bankés. Le modèle de fraude analyse 50M transactions/jour en temps réel. Le data lake M-Pesa est la plus grande base de données comportementales d'Afrique de l'Est.",
+    "resultats": "25M crédits accordés à des non-bankés · Décision en 3 secondes · 200+ variables ML · 50M transactions/jour analysées · Fraude -70 % · Portefeuille micro-crédit > 1 Md$",
+    "source": "Safaricom Technology Report 2023 / M-Pesa Annual Report 2023 / IBM Think 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité Data & IA — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "Data warehouse ou lake déployé", "Dashboards BI pour le management", "Modèles ML en production", "IA générative utilisée", "Data Quality framework"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✓", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La data et l'IA sont le moteur de la prochaine vague de différenciation concurrentielle. Les organisations qui maîtrisent leurs données et déploient l'IA en production surperforment leurs concurrents de 23 % (McKinsey 2024). En Afrique de l'Ouest, l'IA appliquée au scoring de crédit, à la détection de fraude et à la personnalisation représente des opportunités transformationnelles immédiates.",
+    "maturity_max_description": "Data platform unifiée (Lakehouse ou Data Mesh). BI self-service pour les métiers. 10+ modèles ML en production. Analytics temps réel sur les flux critiques. IA générative intégrée aux outils métier. MLOps opérationnel. Responsible AI framework. Data Catalog complet. Data Quality framework avec métriques mesurées.",
+    "scoring_rubric": {
+      "score_1_to_20": "Données en silos Excel. Aucune infrastructure data. Pas de BI ni d'analytics. Aucune IA.",
+      "score_21_to_40": "Rapports manuels. Pas de DWH. Quelques dashboards basiques. Pas de ML.",
+      "score_41_to_60": "Data warehouse. BI management. Équipe data dédiée. Premières analyses ML basiques.",
+      "score_61_to_80": "Data platform. BI self-service. 3-5 modèles ML en production. Data Quality. Reporting réglementaire auto.",
+      "score_81_to_100": "Lakehouse ou Data Mesh. 10+ ML en production. Analytics temps réel. GenAI intégré. MLOps. Responsible AI."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur la maturité de sa gestion des données et de son utilisation de l'IA. Analyse l'existence d'une infrastructure data (warehouse, lake), la disponibilité de dashboards BI pour le management, le déploiement de modèles ML en production, l'utilisation de l'IA générative dans les processus métier et la qualité du framework de gouvernance des données.",
+    "key_questions_for_llm": [
+      "L'organisation dispose-t-elle d'un data warehouse ou data lake comme infrastructure centralisée pour l'analytique ?",
+      "Des dashboards BI sont-ils accessibles au management pour piloter la performance en temps réel ou mensuel ?",
+      "Des modèles de machine learning sont-ils déployés en production sur des cas d'usage métier (scoring, fraude, segmentation) ?",
+      "L'IA générative (LLMs) est-elle utilisée dans les processus internes (rédaction, analyse, code, service client) ?",
+      "Un framework de qualité des données est-il en place avec des métriques de qualité mesurées et des propriétaires de données désignés ?"
+    ]
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "axis": "CANAUX_DISTRIBUTION",
+    "sub_axis": "Selfcare client",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "IA générative dans le selfcare — résolution autonome des demandes",
+      "description": "Les agents IA génératifs (GPT-4, Claude) peuvent désormais résoudre 70 % des demandes clients de façon autonome sans escalade humaine, réduisant les coûts de service client de 50 %.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "45 % des organisations déploient l'IA générative dans le service client (Gartner 2024)",
+      "source": "Gartner Customer Service & Support Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Selfcare proactif — prévenir avant que le client demande",
+      "description": "Les organisations matures anticipent les besoins clients (notification de facture, rappel d'échéance, alerte solde) avant même que le client contacte le service client, réduisant les contacts entrants de 30 %.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "55 % des leaders du service client ont un programme proactif (Forrester 2024)",
+      "source": "Forrester Customer Experience Index 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Vidéo selfcare et tutoriels interactifs",
+      "description": "Les tutoriels vidéo et guides interactifs (Loom, Intercom) permettent aux clients de résoudre eux-mêmes des problèmes complexes (configuration, dépannage) sans contacter le support.",
+      "impact_level": "Moyen",
+      "horizon": "6-18 mois",
+      "adoption_rate": "62 % des clients préfèrent résoudre eux-mêmes avant de contacter le support (Zendesk 2024)",
+      "source": "Zendesk Customer Experience Trends Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Voice selfcare — USSD et IVR intelligent",
+      "description": "En Afrique de l'Ouest, l'USSD reste le canal selfcare dominant pour les populations sans smartphone. Les IVR intelligents avec NLP permettent une navigation vocale naturelle.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "80 % des transactions mobile en Afrique restent sur USSD (GSMA 2024)",
+      "source": "GSMA Mobile Economy Sub-Saharan Africa 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Portail Selfcare & Espace Client",
+      "category": "Selfcare digital",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne",
+      "leading_vendors": ["Salesforce Experience Cloud", "ServiceNow CSM", "Zendesk", "Freshdesk", "Liferay"]
+    },
+    {
+      "name": "Chatbot IA & Agent conversationnel",
+      "category": "Support automatisé",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible en Afrique",
+      "leading_vendors": ["Intercom", "Drift", "Zendesk AI", "Ada", "Botpress"]
+    },
+    {
+      "name": "Base de connaissance & FAQ intelligente",
+      "category": "Selfcare informationnel",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne",
+      "leading_vendors": ["Zendesk Guide", "Confluence", "Notion", "Guru", "Document360"]
+    },
+    {
+      "name": "USSD Platform & IVR",
+      "category": "Selfcare vocal et textuel",
+      "maturity_stage": "Mature (marché africain)",
+      "adoption_in_sector": "Élevée en Afrique",
+      "leading_vendors": ["Africa's Talking", "Infobip", "Twilio", "AT&T USSD", "Huawei USSD Gateway"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Espace client web/mobile avec consultation de solde, historique, réclamations en ligne",
+        "differentiator": "Taux de résolution selfcare > 50 % pour les demandes standard, mesuré et publié",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Orange Money",
+        "country": "Afrique de l'Ouest",
+        "key_practice": "USSD *144# + App Orange Money : 100 % des transactions en selfcare, aucune agence nécessaire",
+        "differentiator": "5 millions de transactions USSD par jour en selfcare total, 0 intervention humaine sur les transactions",
+        "source": "Orange Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Amazon",
+        "country": "USA",
+        "key_practice": "70 % des demandes clients résolues en selfcare via 'Mes commandes', retours automatiques, FAQ IA",
+        "differentiator": "Self-service return initié en 3 clics, remboursement en 24h sans contact humain dans 80 % des cas",
+        "source": "Amazon Customer Service Report 2023 / Forrester CX Index"
+      },
+      {
+        "organisation": "Zendesk",
+        "country": "USA",
+        "key_practice": "Plateforme selfcare : base de connaissance + chatbot IA résolvant 60 % des tickets sans agent humain",
+        "differentiator": "IA qui apprend de chaque interaction pour améliorer en continu le taux de résolution autonome",
+        "source": "Zendesk CX Trends Report 2024"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucun selfcare. Toutes les demandes passent par le call center ou l'agence physique. Temps d'attente élevé. Coût de service client non optimisé.",
+    "level_2_developing": "FAQ statique sur le site web. Formulaire de contact en ligne. Aucun suivi de demande en temps réel. Aucune résolution autonome.",
+    "level_3_defined": "Espace client avec consultation de compte, historique et demandes en ligne. Chatbot basique pour les questions fréquentes. USSD opérationnel si applicable.",
+    "level_4_managed": "Chatbot IA résolvant 40 %+ des demandes. Base de connaissance riche et searchable. Suivi des demandes en temps réel. Notifications proactives. Taux selfcare mesuré.",
+    "level_5_optimizing": "Agent IA générative résolvant 70 %+ des demandes. Selfcare proactif anticipant les besoins. Taux de résolution > 70 % sans intervention humaine. NPS selfcare > 50."
+  },
+
+  "regulations": [
+    {
+      "name": "Loi n°2016-886 relative à la protection du consommateur",
+      "issuing_body": "République de Côte d'Ivoire",
+      "scope": "Toutes les organisations fournissant des biens ou services aux consommateurs",
+      "key_requirement": "Voie de recours accessible, délai de traitement des réclamations, information claire sur les droits",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.gouv.ci"
+    },
+    {
+      "name": "Directives BCEAO sur la protection des utilisateurs de services financiers",
+      "issuing_body": "BCEAO",
+      "scope": "Institutions financières et opérateurs de monnaie mobile en zone UEMOA",
+      "key_requirement": "Canal de réclamation accessible, délai de traitement < 72h, transparence des frais",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Chatbot frustrant — pire qu'une absence de selfcare",
+      "description": "Un chatbot incapable de résoudre les problèmes réels et qui renvoie systématiquement vers un agent humain dégrade l'expérience client et génère de la frustration additionnelle.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Commencer par des cas d'usage simples et bien définis, mesurer le taux de résolution et améliorer en continu avant d'étendre le périmètre."
+    },
+    {
+      "title": "Accessibilité numérique insuffisante — exclusion des clients non-digitaux",
+      "description": "Un selfcare 100 % digital exclut les clients âgés ou peu alphabétisés numériquement. La suppression des canaux traditionnels crée un risque réglementaire et réputationnel.",
+      "severity": "Moyen",
+      "likelihood": "Moyenne",
+      "mitigation": "Maintenir des canaux alternatifs (USSD, téléphone, agence) pour les segments non-digitaux tout en développant le selfcare digital."
+    },
+    {
+      "title": "Données selfcare non exploitées pour l'amélioration",
+      "description": "Les interactions selfcare génèrent des données précieuses sur les points de friction client. Ne pas analyser ces données manque l'opportunité d'amélioration continue.",
+      "severity": "Moyen",
+      "likelihood": "Élevée",
+      "mitigation": "Mettre en place un dashboard d'analyse des interactions selfcare avec identification automatique des points de friction récurrents."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Réduction drastique du coût de service client",
+      "description": "Chaque interaction déportée vers le selfcare coûte 0,25€ vs 5-10€ en contact humain. Un taux de selfcare de 60 % sur 1M de contacts génère 3-5M€ d'économies annuelles.",
+      "impact_level": "Très élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Disponibilité 24/7 sans coût additionnel",
+      "description": "Le selfcare digital permet de servir les clients à toute heure, y compris les nuits et week-ends, sans personnel additionnel, augmentant la satisfaction des clients actifs hors heures ouvrées.",
+      "impact_level": "Élevé",
+      "time_to_value": "3-6 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Données comportementales pour la personnalisation",
+      "description": "Les interactions selfcare révèlent les besoins latents des clients (produits consultés, questions posées), permettant des recommandations personnalisées et des opportunités de cross-sell.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Zendesk",
+      "target": "Klaus",
+      "amount": "70 M$",
+      "date": "2024",
+      "strategic_rationale": "Intégrer l'assurance qualité IA pour analyser et améliorer automatiquement les interactions selfcare",
+      "source": "Zendesk Press Release 2024"
+    },
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Investors (Tiger Global, Sequoia)",
+      "target": "Ada (plateforme chatbot IA)",
+      "amount": "130 M$ (Series C)",
+      "date": "2021",
+      "strategic_rationale": "Développer l'agent IA selfcare capable de résoudre 70 %+ des demandes sans intervention humaine",
+      "source": "Ada Press Release 2021"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Amazon",
+    "pays": "USA",
+    "technologie": "Self-Service Excellence — 70 % des demandes résolues sans agent humain",
+    "description": "Amazon a transformé le service client en investissant massivement dans le selfcare intelligent. La page 'Mes commandes' permet de gérer retours, remboursements, modifications de livraison et réclamations en 3 clics maximum. L'IA prédit les problèmes potentiels (retard de livraison) et notifie proactivement le client avec une solution avant même qu'il contacte le support. Alexa résout les questions courantes vocalement. Le taux de résolution selfcare dépasse 70 %, permettant à Amazon de traiter des milliards d'interactions annuelles avec un coût unitaire marginal.",
+    "resultats": "70 % résolution selfcare · 3 clics pour un retour · Notification proactive sur 90 % des incidents · Coût service client -60 % en 5 ans",
+    "source": "Amazon Customer Service Report 2023 / Forrester Self-Service Excellence Awards 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité selfcare client — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "Espace client en ligne", "Chatbot IA opérationnel", "USSD / canal alternatif", "Taux selfcare > 40 %", "Notifications proactives"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "✗", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["Partiel", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Le selfcare digital est l'investissement à ROI le plus rapide dans la transformation de l'expérience client. Chaque interaction déportée vers le selfcare réduit les coûts et améliore la disponibilité. En Afrique de l'Ouest, l'USSD reste incontournable pour une couverture universelle, mais la transition vers l'app mobile progresse rapidement avec la démocratisation des smartphones.",
+    "maturity_max_description": "Espace client complet avec toutes les transactions en selfcare. Agent IA générative résolvant 70 %+ des demandes. USSD ou équivalent pour la couverture universelle. Notifications proactives anticipant les besoins. Taux de résolution selfcare mesuré et amélioré en continu. NPS selfcare > 50.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucun selfcare. 100 % des demandes en contact humain. Coût service client non optimisé.",
+      "score_21_to_40": "FAQ statique et formulaire de contact. Aucune résolution autonome. Pas de suivi en ligne.",
+      "score_41_to_60": "Espace client avec consultation et demandes en ligne. Chatbot basique. USSD si applicable.",
+      "score_61_to_80": "Chatbot IA résolvant 40 %+ des demandes. Base connaissance riche. Notifications proactives. Taux mesuré.",
+      "score_81_to_100": "Agent IA résolvant 70 %+. Selfcare proactif. Taux > 70 %. NPS selfcare > 50. Amélioration continue."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur la maturité de son selfcare client digital. Analyse la complétude de l'espace client en ligne, le déploiement d'un chatbot IA avec un taux de résolution autonome mesuré, la disponibilité d'un canal alternatif (USSD) pour les populations non-digitales, et l'existence de notifications proactives.",
+    "key_questions_for_llm": [
+      "L'organisation dispose-t-elle d'un espace client permettant aux clients de gérer eux-mêmes leurs demandes courantes en ligne ?",
+      "Un chatbot ou agent IA est-il opérationnel avec un taux de résolution autonome mesuré ?",
+      "Un canal alternatif (USSD, IVR intelligent) est-il disponible pour les clients sans smartphone ou connexion internet ?",
+      "Des notifications proactives informent-elles les clients avant qu'ils aient besoin de contacter le service client ?",
+      "Le taux de résolution selfcare est-il mesuré, publié et utilisé pour l'amélioration continue ?"
+    ]
+  }
+}

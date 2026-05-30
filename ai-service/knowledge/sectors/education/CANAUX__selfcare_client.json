@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "CANAUX",
+    "sub_axis": "selfcare_client",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Portail apprenant self-service complet (inscription, notes, certificats, paiements en autonomie)",
+      "description": "Les établissements éducatifs déploient des portails apprenant self-service permettant d'effectuer toutes les démarches administratives sans passer par le guichet : inscription, changement de cours, téléchargement de relevés de notes, demande d'attestation, paiement des frais, consultation du planning et des résultats. En Côte d'Ivoire, l'UVCI propose un portail 100% self-service (30 jours, 24/7) depuis 2022. Les lycées publics CI ne disposent pas encore de tels portails — le MENA CI déploie en 2024 un portail minimum pour les 200 lycées pilotes.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "35%",
+      "source": "UVCI / MENA CI Portail Apprenant 2024",
+      "year": 2024
+    },
+    {
+      "title": "Chatbot IA apprenant 24/7 et déflexion des demandes de support administratif",
+      "description": "Les chatbots LLM remplacent progressivement les FAQ statiques dans les établissements éducatifs : un chatbot IA peut répondre aux 200 questions les plus fréquentes (dates d'examens, modalités de paiement, contacts enseignants, procédures de recours) en langage naturel, en français et en langues locales, 24/7. En Côte d'Ivoire, l'UVCI CI (chatbot WhatsApp Business, 45% déflexion) et Pigier CI ont déployé des chatbots éducatifs. Le potentiel de déflexion est estimé à 60-70% des demandes administratives répétitives.",
+      "impact_level": "high",
+      "horizon": "short_term",
+      "adoption_rate": "20%",
+      "source": "UVCI CI / Pigier CI Rapports Chatbot 2024",
+      "year": 2024
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "Portail apprenant self-service (SIS portal)",
+      "category": "SIS / Self-service",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "UVCI CI (portail Moodle + module SIS custom), Pigier CI (Salesforce Experience Cloud), UFHB (portail notes partiels), 30% établissements CI",
+      "leading_vendors": ["Salesforce Experience Cloud (Education)", "Ellucian Self-Service", "PowerSchool (portail parents/élèves)", "Canvas Student App", "Moodle App"]
+    },
+    {
+      "name": "Chatbot éducatif IA (LLM sur FAQ institution)",
+      "category": "IA / Support Apprenant",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "UVCI CI (chatbot WhatsApp Infobip Flow, 45% déflexion), Pigier CI (chatbot Messenger, 30% déflexion), 15% établissements CI",
+      "leading_vendors": ["Infobip Flow Builder (WhatsApp)", "ManyChat (chatbot éducatif)", "Landbot", "Drift Education", "IBM watsonx Assistant Education"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Portail apprenant UVCI 100% self-service : consultation notes et résultats (temps réel post-délibération), téléchargement attestations et relevés (PDF signé électroniquement, instantané), paiement mobile money (Orange/MTN/Wave), modification de filière (délai 24h), contact tuteur (messagerie LMS interne), consultation historique paiements. Chatbot WhatsApp Business (85 questions fréquentes, déflexion 45%, escalade humaine pour les cas complexes).",
+        "differentiator": "Le portail apprenant le plus complet de CI — zéro déplacement physique requis pour toutes les démarches administratives courantes (30 actions disponibles en self-service 24/7), chatbot WhatsApp avec déflexion 45% permettant à 2 agents de gérer 45K étudiants (vs. 8 agents estimés sans chatbot)",
+        "source": "UVCI Rapport Self-service 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "University of Ghana Legon — Student Portal",
+        "country": "Ghana",
+        "key_practice": "Portail UG (Academics, Finance, Accommodation, Health) : inscription cours en ligne, paiement frais (Mobile Money MTN/Vodafone), certificats académiques en ligne (tampons numériques), plan de campus interactif (localisation salles), chatbot UG Assistant (500+ questions fréquentes, déflexion 58%), intégration MyMtnMomo et Vodafone Cash",
+        "differentiator": "Portail le plus complet d'Afrique de l'Ouest anglophone — chatbot UG Assistant 58% déflexion, 88% des démarches administratives réalisables en self-service sans visite physique (vs. 22% avant portail), satisfaction administrative 76/100 (vs. 41/100 avant)",
+        "source": "University of Ghana Annual Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Arizona State University (ASU) MyASU",
+        "country": "États-Unis",
+        "key_practice": "MyASU : portail apprenant ultra-complet (120 actions self-service), chatbot Sunny IA (LLM OpenAI, 2M conversations/an, 78% résolution sans agent), recommandations de cours personnalisées (ML), prédiction date de diplomation, bourse/aide financière calculée en temps réel, MyASU app (iOS/Android, 250K téléchargements), intégration Apple Pay/Google Pay pour tous les paiements",
+        "differentiator": "Le portail self-service universitaire le plus avancé au monde — chatbot Sunny : 2M conversations/an, 78% de résolution automatique, 120 actions self-service, économie 85 agents admin grâce au self-service + chatbot, CSAT 82/100",
+        "source": "ASU Annual Report / EdTech Digest 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Aucun self-service digital, toutes les démarches au guichet (horaires limités), aucun portail, résultats affichés sur panneau papier, attestations en 15-30 jours.",
+    "level_2_developing": "Portail basique (consultation des notes en ligne), quelques formulaires PDF téléchargeables, paiement mobile money possible mais sans intégration SIS, aucun chatbot.",
+    "level_3_defined": "Portail apprenant (notes, emploi du temps, historique paiements), téléchargement automatique des attestations (< 24h), chatbot FAQ basique (réponses statiques), 5-10 actions self-service.",
+    "level_4_managed": "Portail self-service 20+ actions (inscription, paiement, changement de cours, attestation instantanée), chatbot IA (LLM, déflexion > 35%), app mobile, disponible 24/7, satisfaction self-service > 65%.",
+    "level_5_optimizing": "Self-service complet 30+ actions (zéro déplacement pour démarches courantes), chatbot IA 24/7 (déflexion > 60%, LLM multilingue français + langues locales CI), recommandations personnalisées (cours, filières, bourses), CSAT > 78, conformité APDP CI."
+  },
+  "regulations": [
+    {
+      "name": "MENA CI — Droit d'accès des apprenants à leurs données académiques (délai 15 jours)",
+      "authority": "MENA (Ministère de l'Éducation Nationale et de l'Alphabétisation)",
+      "description": "La réglementation MENA CI garantit aux apprenants le droit d'accès à leurs données académiques (notes, relevés de notes, attestations de scolarité) dans un délai de 15 jours maximum suivant la demande. Un portail self-service permettant un accès instantané aux données dépasse largement cette exigence et représente la meilleure pratique. Les établissements qui ne respectent pas ce délai de 15 jours sont exposés à des réclamations auprès du MENA CI (Division de la Qualité de l'Éducation).",
+      "compliance_deadline": "En vigueur",
+      "impact_on_sector": "Le portail self-service est le moyen le plus sûr de respecter le délai de 15 jours MENA CI — un accès instantané 24/7 garantit structurellement la conformité réglementaire"
+    },
+    {
+      "name": "APDP CI — Droits des apprenants sur leurs données personnelles (accès, rectification, suppression)",
+      "authority": "APDP (Autorité de Protection des Données Personnelles de Côte d'Ivoire)",
+      "description": "La Loi APDP CI 2013-450 confère aux apprenants des droits sur leurs données personnelles : droit d'accès (consulter les données les concernant), droit de rectification (corriger des erreurs), droit d'opposition (s'opposer à certains traitements), et droit à l'effacement (sous conditions). Les établissements doivent répondre à ces demandes dans un délai de 30 jours. Un portail self-service intégrant ces fonctions APDP (accès aux données personnelles, demande de rectification, historique des traitements) constitue la meilleure pratique de conformité.",
+      "compliance_deadline": "En vigueur",
+      "impact_on_sector": "Les portails self-service doivent inclure une section 'Mes données personnelles' permettant à l'apprenant de consulter et de demander la rectification/suppression de ses données conformément à l'APDP CI"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Exclusion des apprenants non-digitaux (feature phone, zones sans internet) du self-service",
+      "description": "En Côte d'Ivoire, 28% des étudiants universitaires utilisent encore des feature phones (sans smartphone) et 35% des étudiants ruraux ont un accès internet limité (< 200 MB/semaine). Un portail self-service 100% web ou app smartphone exclut structurellement ces populations, les forçant à recourir aux guichets physiques (s'ils sont maintenus) ou à rester sans accès à leurs données académiques. Ce risque d'exclusion numérique est particulièrement aigu pour l'UVCI CI dont 32% des étudiants sont en zones rurales.",
+      "severity": "high",
+      "likelihood": "high",
+      "mitigation": "Développer des canaux alternatifs USSD (consultation notes et solde scolarité via *XXX#) et SMS (envoi automatique des résultats et relevés simplifiés) pour les apprenants feature phone, maintenir un guichet physique minimum (3 jours/semaine pour l'UVCI Abidjan) avec SLA allégé, et proposer des points d'accès WiFi dans les CNF AUF pour les étudiants ruraux — UVCI CI : 72% des demandes traitées en self-service, 21% via chatbot WhatsApp, 7% restants via guichet ou email"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Self-service orientation post-diplôme et matching emploi IA pour les alumni CI",
+      "description": "Un portail alumni avec self-service IA permettrait aux diplômés CI de : (1) accéder à leur portfolio de compétences (cours + badges + projets) dès la diplomation, (2) recevoir des recommandations d'emploi personnalisées (ML matching profil × offres partenaires employeurs CI), (3) déposer leur CV et recevoir des alertes offres en temps réel, (4) mettre à jour leur profil professionnel (LinkedIn-like interne). L'INPHB dispose de 35 000 alumni ingénieurs dont seulement 12% actifs sur la plateforme actuelle — un self-service alumni IA pourrait multiplier ce taux par 4 en 12 mois.",
+      "impact_level": "medium",
+      "time_to_value": "1-2 ans",
+      "prerequisite_maturity": "Niveau 3 — portail self-service actif + CRM alumni de base + partenariats employeurs CI"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "Salesforce.org — Licences Salesforce Experience Cloud Education (programme Power of Us)",
+      "montant": "Programme subventionné (valeur 650M FCFA en licences pour 5 établissements CI)",
+      "investisseurs": ["Salesforce.org (philanthropie Salesforce)"],
+      "annee": 2024,
+      "description": "Salesforce.org a étendu son programme Power of Us (licences gratuites pour ONG et éducation) à 5 établissements d'enseignement CI en 2024 : Pigier CI (100% commercial), UVCI CI (semi-public), ISM Abidjan, HEC Abidjan, et ESC Abidjan. Chaque établissement bénéficie de 10 licences Salesforce Education Cloud gratuites (portail apprenant, CRM, analytics) et de 400h de formation certifiante Trailhead. Pigier CI a déployé Salesforce Experience Cloud comme portail apprenant self-service (NPS 74/100)."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Portail self-service Moodle + Chatbot WhatsApp Business Infobip — Zéro déplacement physique pour 95% des démarches",
+    "description": "L'UVCI a transformé son service administratif apprenant en 2022-2024 par le déploiement d'un portail self-service complet. Les 30 actions self-service disponibles incluent : (1) consultation et téléchargement des résultats (PDF instantané, QR code vérification) ; (2) téléchargement des relevés de notes et attestations de scolarité (généré en < 1 minute) ; (3) paiement des frais de scolarité (Orange Money / MTN MoMo / Wave, reçu automatique) ; (4) modification de filière ou de spécialisation (workflow automatique → validation tuteur sous 24h) ; (5) demande de transfert de dossier vers une autre université (formulaire numérique avec suivi) ; (6) consultation du planning et des emplois du temps (personnalisé par filière). Le chatbot WhatsApp Business UVCI répond à 85 questions fréquentes, avec une escalade automatique vers un agent humain si le score de confiance < 70% ou si la demande implique une décision académique.",
+    "resultats": "Actions traitées en self-service : 72% du total (vs. 18% en 2021). Chatbot WhatsApp : 4 200 conversations/mois dont 45% résolues entièrement automatiquement. Volume appels téléphoniques administration : -68% (2 000/mois → 640/mois). Délai délivrance attestations : 30 jours (2021) → instantané (2024). Satisfaction administrative (self-service specifically) : 79/100. Agents administration nécessaires : 4 (vs. 12 estimés sans self-service + chatbot pour 45K étudiants). APDP CI : section 'Mes données personnelles' intégrée au portail (accès, rectification, historique traitements) — déclaration APDP validée 2024.",
+    "source": "UVCI Rapport Administration Numérique 2024",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif self-service apprenant — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "Actions self-service disponibles", "Chatbot IA déflexion", "Délai attestations", "Conformité APDP CI self-service"],
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "valeurs": ["30 actions (24/7, 100% en ligne)", "WhatsApp 45% déflexion", "Instantané (PDF signé)", "Oui (section données perso)"]
+      },
+      {
+        "organisation": "Pigier CI",
+        "valeurs": ["15 actions (Salesforce Experience Cloud)", "Chatbot Messenger 30% déflexion", "< 24h (semi-auto)", "DPA Salesforce signé"]
+      },
+      {
+        "organisation": "UFHB Abidjan",
+        "valeurs": ["5 actions (notes consultation)", "Non", "15-30 jours (manuel)", "Non (en cours)"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue le self-service apprenant dans le secteur éducation CI : nombre d'actions disponibles en self-service (portail 24/7), présence d'un chatbot IA (taux de déflexion), délai de délivrance des documents (attestations, relevés), conformité APDP CI (section données personnelles dans le portail), et accessibilité pour les apprenants non-digitaux (USSD/SMS).",
+    "maturity_max_description": "Établissement éducatif CI avec self-service complet : 30+ actions disponibles en ligne 24/7, chatbot IA WhatsApp (> 50% déflexion, LLM multilingue), attestations et relevés instantanés (PDF signé), section APDP CI 'Mes données' dans le portail, canaux alternatifs USSD/SMS pour feature phones — 80%+ des démarches sans déplacement physique.",
+    "scoring_rubric": {
+      "score_1_to_20": "Toutes les démarches au guichet physique (horaires limités), aucun portail digital, résultats affichés sur panneau papier, attestations en 15-30 jours.",
+      "score_21_to_40": "Portail notes basique, quelques formulaires PDF, paiement mobile money sans intégration SIS, aucun chatbot, attestations semi-manuelles.",
+      "score_41_to_60": "Portail 5-10 actions (notes, emploi du temps, paiements), chatbot FAQ statique, attestations < 24h, conformité APDP CI partielle.",
+      "score_61_to_80": "Portail 15-25 actions self-service, chatbot IA > 35% déflexion, attestations instantanées, section APDP CI, app mobile, disponible 24/7.",
+      "score_81_to_100": "30+ actions self-service, chatbot LLM > 50% déflexion, attestations instantanées PDF signé, section APDP CI complète, USSD/SMS pour feature phones, CSAT > 78."
+    },
+    "prompt_injection_context": "Secteur éducation CI : MENA CI impose l'accès aux données académiques en < 15 jours (self-service = conformité structurelle). APDP CI requiert une section 'Mes données personnelles' dans le portail (droit d'accès, rectification, suppression). UVCI CI est le modèle self-service (30 actions, chatbot 45% déflexion, attestations instantanées). 28% des étudiants CI sont sur feature phone — alternatives USSD/SMS obligatoires pour l'inclusion.",
+    "key_questions_for_llm": [
+      "Combien d'actions administratives vos apprenants peuvent-ils effectuer en self-service (sans passer par le guichet) ? Votre portail est-il accessible 24h/24 et 7j/7 ?",
+      "Avez-vous un chatbot IA répondant aux questions fréquentes des apprenants ? Quel est son taux de déflexion (questions résolues sans agent humain) ?",
+      "Vos attestations de scolarité et relevés de notes sont-ils disponibles instantanément en self-service (PDF signé électroniquement) ? Respectez-vous le délai MENA CI de 15 jours ?",
+      "Votre portail inclut-il une section permettant aux apprenants d'accéder à leurs données personnelles et de demander leur rectification/suppression conformément à la Loi APDP CI 2013-450 ?",
+      "Proposez-vous des alternatives USSD ou SMS pour les apprenants utilisant des feature phones (sans smartphone) ou en zones à faible connectivité ?"
+    ]
+  }
+}

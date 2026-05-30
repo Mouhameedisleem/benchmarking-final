@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "BUSINESS",
+    "sous_axe": "modele_economique_digital",
+    "titre": "Modèle économique digital dans le BTP en Côte d'Ivoire",
+    "description": "Émergence de nouveaux modèles de revenus digitaux dans le secteur BTP CI : Facility Management as-a-Service (FMaaS) via IoT, maintenance préventive prédictive, plateformes PropTech immobilières, financement digital du logement (mobile money, BHCI digital), marketplace BTP B2B et SIGMAP DGMP CI comme vecteur de croissance.",
+    "version": "1.0",
+    "date_mise_a_jour": "2025-01-01",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "Le secteur BTP ivoirien génère l'essentiel de ses revenus via des modèles traditionnels : contrats à prix forfaitaire ou bordereau de prix unitaire pour la construction neuve, rémunération des bureaux d'études à l'heure ou au pourcentage. Les modèles économiques récurrents (maintenance, exploitation, services digitaux) restent sous-développés. Or, le parc immobilier abidjanais (900 000 logements, 2 millions de m² de bureaux) représente un gisement d'affaires de Facility Management estimé à 350 Mds FCFA/an, largement non capturé par les entreprises CI. La digitalisation crée de nouveaux modèles : maintenance préventive IoT, plateformes PropTech (immobilier en ligne), financement mobile money du logement, et marketplace BTP mettant en relation MOA et entreprises.",
+    "chiffres_cles": [
+      "Parc immobilier Abidjan : 900 000 logements, 2 M m² bureaux — marché Facility Management estimé 350 Mds FCFA/an",
+      "PropTech CI : 12 plateformes immobilières en ligne actives (2024), trafic combiné 850 000 visites/mois",
+      "BHCI (Banque de l'Habitat CI) : 45 000 dossiers/an — 35% des dossiers instruits avec pièces numérisées (2024)",
+      "Marché maintenance préventive IoT bâtiment CI : estimé 45 Mds FCFA/an (quasi-non capturé par acteurs CI)",
+      "SIGMAP DGMP CI : 45% des marchés publics BTP dématérialisés — objectif 80% d'ici 2026",
+      "CIE CI : factures énergétiques entreprises —  15-22% d'économies potentielles avec gestion intelligente (IoT) selon études SETIMA CI"
+    ],
+    "acteurs_cles": [
+      "SETIMA CI — facility management bâtiments commerciaux et industriels Abidjan",
+      "BHCI (Banque de l'Habitat CI) — financement logements, conditionnement à la dématérialisation des dossiers",
+      "DGMP CI — plateforme SIGMAP (marchés publics BTP dématérialisés)",
+      "CIE / SODECI CI — partenaires FM pour la gestion énergie et eau des bâtiments CI",
+      "Orange Money CI / MTN MoMo / Wave CI — paiements acomptes et loyers immobiliers",
+      "APDP CI — données personnelles dans les plateformes PropTech et FM (Loi 2013-450)"
+    ]
+  },
+  "enjeux_cles": [
+    {
+      "enjeu": "Développer la maintenance préventive as-a-Service (MPaaS) via IoT",
+      "description": "La maintenance corrective (réparer quand ça tombe en panne) coûte en moyenne 3-5x plus cher que la maintenance préventive. Les capteurs IoT (température, humidité, consommation électrique, vibrations équipements CVC) permettent de détecter les anomalies avant la panne. Le modèle MPaaS (abonnement mensuel par immeuble) génère des revenus récurrents prévisibles pour les entreprises FM CI.",
+      "impact": "Réduction des coûts de maintenance de 30-40% pour les clients et revenus récurrents stables pour l'entreprise FM"
+    },
+    {
+      "enjeu": "Capter le marché PropTech (plateformes immobilières en ligne)",
+      "description": "850 000 visites/mois sur les plateformes PropTech CI (immobilier.ci, mafamilleci.com, afribaba.ci/immobilier) témoignent d'une demande forte pour la recherche de logements en ligne. Les promoteurs et agences immobilières CI capturant ce trafic avec des offres adaptées (visite virtuelle 3D, devis en ligne) convertissent 3-5x plus que ceux opérant uniquement en agence physique.",
+      "impact": "Réduction du coût d'acquisition client de 180 000 à 45 000 FCFA et multiplication des leads qualifiés"
+    },
+    {
+      "enjeu": "Intégrer le financement mobile money dans les transactions immobilières",
+      "description": "Le paiement d'acomptes de logements (10-30% du prix), de loyers mensuels et de charges de copropriété via Orange Money CI, MTN MoMo ou Wave CI accélère le cycle de transaction et réduit les impayés. La BHCI expérimente un parcours de demande de crédit immobilier partiellement digitalisé (pièces numérisées, scoring automatique de dossier).",
+      "impact": "Réduction du délai d'encaissement des acomptes de 30 jours à 24h et diminution des impayés de 25%"
+    },
+    {
+      "enjeu": "Créer une marketplace BTP B2B pour la mise en relation MOA/entreprises",
+      "description": "Les PME BTP CI de classe D-E manquent de visibilité auprès des maîtres d'ouvrage privés (industriels, promoteurs immobiliers, hôteliers). Une marketplace BTP CI (profils d'entreprises vérifiés CNBTP CI, appels d'offres privés publiés, notation après chantier) comblerait ce déficit et permettrait aux PME CI de se développer au-delà de leur réseau relationnel local.",
+      "impact": "Augmentation de 30-50% du nombre d'appels d'offres auxquels peuvent accéder les PME BTP CI"
+    },
+    {
+      "enjeu": "Monétiser les données de gestion de bâtiment (analytics immeuble)",
+      "description": "Les données collectées par les capteurs FM IoT (consommation énergétique, taux d'occupation, qualité de l'air, température) ont une valeur commerciale pour les propriétaires (rapport ESG, optimisation baux) et pour les bailleurs (diagnostic immeuble avant financement). Le partage de ces données agrégées et anonymisées (conformité APDP CI) peut devenir une source de revenus additionnelle.",
+      "impact": "Nouveau flux de revenus : rapports analytiques immeuble vendus aux propriétaires et investisseurs CI"
+    }
+  ],
+  "niveau_maturite": {
+    "description": "Échelle de maturité modèle économique digital pour les entreprises BTP CI",
+    "niveaux": [
+      {
+        "niveau": 1,
+        "label": "Transactionnel",
+        "description": "Modèle 100% traditionnel : revenus uniquement sur la construction neuve (contrats forfaitaires ou BPU), pas de revenus récurrents, aucune offre digitale, aucune plateforme PropTech, paiements en espèces ou chèque."
+      },
+      {
+        "niveau": 2,
+        "label": "Services basiques",
+        "description": "Quelques contrats de maintenance corrective post-livraison, présence sur 1-2 plateformes PropTech CI comme annonceur basique, paiements Orange Money ponctuels (acomptes), facturation Excel ou logiciel comptable basique."
+      },
+      {
+        "niveau": 3,
+        "label": "Digital partiel",
+        "description": "Contrats FM avec clause de maintenance préventive (annuelle), présence PropTech active (fiches produits, photos professionnelles, visite 360°), paiements mobile money systématiques pour acomptes et loyers, facturation électronique (Sage ou équivalent), dossiers BHCI partiellement numérisés."
+      },
+      {
+        "niveau": 4,
+        "label": "Revenus récurrents digitaux",
+        "description": "Modèle MPaaS opérationnel (contrats abonnement FM IoT sur 20+ immeubles), PropTech with visite virtuelle 3D BIM, mobile money intégré (Orange Money CI API) pour tout le cycle de paiement, marketplace BTP B2B actif, analytics immeuble vendus en rapport mensuel aux propriétaires."
+      },
+      {
+        "niveau": 5,
+        "label": "Plateforme BTP CI",
+        "description": "Plateforme numérique dominante : marketplace BTP CI (500+ entreprises référencées), SaaS FM IoT (50+ immeubles sous contrat), PropTech leader CI (100 000+ visites/mois), financement digital logement intégré (partenariat BHCI), revenus digitaux > 30% du CA total, data analytics immeuble monétisés."
+      }
+    ]
+  },
+  "indicateurs_cles": [
+    {
+      "kpi": "Part des revenus récurrents (maintenance, abonnements FM) dans le CA total",
+      "definition": "Pourcentage du chiffre d'affaires annuel de l'entreprise BTP provenant de contrats récurrents (maintenance, FM, abonnements SaaS IoT) par opposition aux revenus de construction neuve (one-shot)",
+      "unite": "%",
+      "benchmark_ci": "PME BTP CI : < 5% de revenus récurrents — SETIMA CI (FM) : 68% — entreprises FM France BTP : 35-45%",
+      "cible_sectorielle": "> 20% de revenus récurrents (objectif résilience financière secteur CI)",
+      "source": "CNBTP CI + rapport SETIMA CI 2024"
+    },
+    {
+      "kpi": "Nombre d'immeubles sous contrat FM IoT (MPaaS)",
+      "definition": "Nombre d'immeubles (bureaux, commerces, résidences) sous contrat de maintenance préventive as-a-Service avec supervision IoT temps réel",
+      "unite": "immeubles",
+      "benchmark_ci": "SETIMA CI : 45 immeubles sous contrat MPaaS (2024) — secteur FM CI hors SETIMA : < 20 immeubles IoT",
+      "cible_sectorielle": "> 50 immeubles pour être un acteur FM IoT crédible sur le marché CI",
+      "source": "Rapport commercial SETIMA CI 2024"
+    },
+    {
+      "kpi": "Taux de conversion leads PropTech en signatures de compromis",
+      "definition": "Part des prospects ayant contacté un promoteur ou agence via une plateforme PropTech CI (immobilier.ci, afribaba.ci) qui signent effectivement un compromis de vente ou un bail dans les 90 jours",
+      "unite": "%",
+      "benchmark_ci": "PropTech CI avec visite 360° : 4,2% de conversion — sans visite virtuelle : 1,5%",
+      "cible_sectorielle": "> 4% (avec visite virtuelle et suivi CRM automatisé)",
+      "source": "Benchmark plateformes PropTech CI 2024"
+    },
+    {
+      "kpi": "Taux de dossiers BHCI acceptés sans déplacement physique",
+      "definition": "Part des dossiers de financement immobilier instruits par la BHCI sans que le demandeur ait besoin de se déplacer physiquement à l'agence (dépôt de pièces en ligne, scoring automatique partiel)",
+      "unite": "%",
+      "benchmark_ci": "BHCI pilote digital 2024 : 35% des pièces reçues numériquement — objectif BHCI 2026 : 70%",
+      "cible_sectorielle": "> 50% (réduction temps instruction 25 → 10 jours)",
+      "source": "BHCI rapport digital 2024"
+    },
+    {
+      "kpi": "Économies énergie générées par la gestion FM IoT (% réduction facture CIE)",
+      "definition": "Réduction de la consommation électrique facturée par la CIE CI pour les immeubles sous contrat FM IoT comparée à la consommation baseline pré-déploiement IoT",
+      "unite": "% de réduction",
+      "benchmark_ci": "Immeubles bureaux Abidjan sous FM IoT SETIMA CI : -18 à -24% facture CIE (2024)",
+      "cible_sectorielle": "> -15% de réduction facture CIE (ROI contrat MPaaS positif dès mois 8)",
+      "source": "SETIMA CI rapport performance FM IoT 2024"
+    }
+  ],
+  "zoom_sur": {
+    "organisation": "SETIMA CI (Société d'Études et de Travaux Immobiliers en Masse d'Abidjan)",
+    "titre": "MPaaS — Maintenance Préventive as-a-Service IoT : 45 immeubles, -35% coûts, -22% énergie",
+    "contexte": "En 2020, SETIMA CI, spécialisée dans le facility management d'immeubles commerciaux et industriels à Abidjan, réalisait 95% de son CA sur des interventions correctives : appel du client (panne climatisation, ascenseur bloqué, fuite eau), déplacement d'un technicien, réparation, facturation. Ce modèle générait un CA volatile (dépendant des pannes), une équipe de 45 techniciens sous-utilisés certains mois et saturés d'autres, et une insatisfaction client chronique (délais d'intervention 24-48h en cas de panne critique).",
+    "solution": "Transformation vers un modèle MPaaS (Maintenance Préventive as-a-Service) en 3 phases : (1) équipement de 45 immeubles partenaires avec des capteurs IoT Schneider Electric EcoStruxure (capteurs de température/humidité CVC, compteurs d'énergie sous-comptage, détecteurs vibrations ascenseurs, capteurs pression SODECI eau) — 28-85 capteurs par immeuble selon la surface ; (2) plateforme de supervision centralisée SETIMA CI (tableau de bord opérateur, alertes automatiques WhatsApp + email quand anomalie détectée, rapport mensuel propriétaire) ; (3) conversion des clients de contrats correctifs vers des abonnements MPaaS mensuels (immeuble 2 000 m² bureaux : 450 000 FCFA/mois vs. 650 000 FCFA/mois de coûts correctifs historiques).",
+    "resultats": {
+      "avant": "CA 95% correctif (volatile), délai intervention client 24-48h panne critique, coûts maintenance corrective clients +38% vs. préventif estimé, facture CIE des immeubles non optimisée, 45 techniciens sous-utilisés (60% de temps productif), NPS clients FM : 28/100",
+      "apres": "68% du CA SETIMA CI en revenus récurrents MPaaS (2024), 45 immeubles sous contrat IoT actif, délai détection anomalie 15 min (vs. appel client après panne déclarée), réduction pannes majeures -58% sur le parc MPaaS, économies énergie clients -18 à -24% (CIE), coûts maintenance clients -35%, NPS clients FM 28 → 64/100 (+36 pts), techniciens : temps productif 60% → 88%, CA SETIMA CI +42% en 3 ans sans recrutement supplémentaire"
+    },
+    "lessons_learned": "La conversion des clients du modèle correctif vers MPaaS a nécessité une démonstration de ROI chiffrée par immeuble : SETIMA CI a calculé le coût moyen des interventions correctives des 12 derniers mois pour chaque prospect MPaaS et montré que l'abonnement MPaaS serait moins cher dès le mois 6-8. La résistance des propriétaires d'immeubles à 'payer chaque mois même sans panne' a été la principale objection — levée par la garantie contractuelle de délai d'intervention < 4h (vs. 24-48h en correctif).",
+    "contact_reference": "Direction Commerciale SETIMA CI — Abidjan Marcory Zone 4"
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif modèle économique digital — entreprises BTP/FM CI et références",
+    "lignes": [
+      {
+        "organisation": "SETIMA CI",
+        "type": "National — leader FM digital",
+        "modele_recurrent": "MPaaS IoT (68% du CA en abonnements FM)",
+        "proptech": "Non (B2B FM uniquement)",
+        "mobile_money": "Oui (Orange Money CI pour paiements abonnements FM)",
+        "marketplace": "Non",
+        "analytique_monetisee": "Rapports mensuels performance immeuble (inclus abonnement)",
+        "score_estime": "72/100"
+      },
+      {
+        "organisation": "SATCI CI",
+        "type": "National — promoteur immobilier",
+        "modele_recurrent": "Charges de copropriété (modèle basique non digital)",
+        "proptech": "Présence plateformes PropTech CI (visite 360° en cours)",
+        "mobile_money": "Oui (Orange Money CI pour acomptes — 45% des paiements)",
+        "marketplace": "Non",
+        "analytique_monetisee": "Non",
+        "score_estime": "38/100"
+      },
+      {
+        "organisation": "Agence Immobilière CI type (agrégat)",
+        "type": "National — agences immobilières",
+        "modele_recurrent": "Commission à la transaction (3-5% du prix)",
+        "proptech": "Présence partielle plateformes PropTech CI",
+        "mobile_money": "Ponctuel (non systématique)",
+        "marketplace": "Non",
+        "analytique_monetisee": "Non",
+        "score_estime": "22/100"
+      },
+      {
+        "organisation": "Vinci Facilities Maroc",
+        "type": "Régional — référence FM Afrique francophone",
+        "modele_recurrent": "FMaaS (80% du CA en contrats récurrents FM IoT)",
+        "proptech": "Partenariat VINCI Immobilier (visite 3D BIM standard)",
+        "mobile_money": "Virement SEPA + mobile payment Maroc",
+        "marketplace": "Extranet sous-traitants VINCI (marketplace interne B2B)",
+        "analytique_monetisee": "Rapport ESG immeuble vendu aux propriétaires (15 000-45 000 MAD/an)",
+        "score_estime": "83/100"
+      },
+      {
+        "organisation": "Jones Lang LaSalle — JLL (USA/Global)",
+        "type": "International — référence mondiale FM digital",
+        "modele_recurrent": "IFM (Integrated Facilities Management) — SaaS Corrigo (JLL Technologies)",
+        "proptech": "Plateforme JLL Spark (PropTech investissements) + visite 3D VR",
+        "mobile_money": "Global payments (multi-devises, ACH, SWIFT)",
+        "marketplace": "JLL Marketplace (50 000+ fournisseurs FM référencés)",
+        "analytique_monetisee": "JLL Azara (analytics immeuble SaaS — 5 USD/m²/mois)",
+        "score_estime": "97/100"
+      }
+    ]
+  },
+  "bonnes_pratiques": [
+    {
+      "pratique": "Convertir les clients vers des contrats FM récurrents en démontrant le ROI par immeuble",
+      "description": "Calculer pour chaque prospect MPaaS le coût historique des interventions correctives des 12 derniers mois et montrer que l'abonnement est moins cher dès le mois 6-8 tout en garantissant un délai d'intervention < 4h. Cette approche commerciale basée sur les données est la plus efficace sur le marché CI.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Intégrer Orange Money CI dans le cycle de paiement immobilier",
+      "description": "Le paiement d'acomptes de logement, de loyers mensuels et de charges via Orange Money CI (API Business) accélère l'encaissement (24h vs. 30 jours pour virement bancaire BCEAO) et réduit les impayés. Orange Money CI supporte des transactions jusqu'à 2 M FCFA — suffisant pour les acomptes de logements moyens CI.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Publier sur les plateformes PropTech CI avec visites virtuelles 360°",
+      "description": "Le taux de conversion des annonces immobilières CI avec visite 360° est 2,8x supérieur aux annonces photos seules. Une visite 360° se réalise avec un appareil photo Ricoh Theta SC2 (200 000 FCFA) ou en sous-traitant à un prestataire CI (80 000-150 000 FCFA/bien). ROI positif dès la première transaction supplémentaire générée.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Utiliser les données FM IoT pour produire des rapports ESG immeuble pour les propriétaires",
+      "description": "Les grandes entreprises multinationales implantées en CI (Orange CI, MTN CI, SGBCI, Nestlé CI) ont des obligations de reporting ESG (émissions carbone, consommation eau, énergie) pour leurs sièges et usines. Un rapport mensuel FM IoT (consommation CIE/SODECI, émissions carbone calculées, taux d'occupation) a une valeur commerciale directe auprès de ces clients.",
+      "priorite": "Moyenne"
+    },
+    {
+      "pratique": "Référencer son entreprise sur SIGMAP DGMP CI pour accéder aux marchés publics en ligne",
+      "description": "Les marchés publics BTP CI > 25 M FCFA passent sur SIGMAP. Les entreprises non référencées SIGMAP manquent les marchés publics — un marché de 1 800 Mds FCFA/an en CI. Délai de référencement SIGMAP : 5-10 jours. Exige : agrément CNBTP CI valide + documents juridiques (extrait RCCM, attestation CNPS CI, attestation DGI CI).",
+      "priorite": "Haute"
+    }
+  ],
+  "pieges_a_eviter": [
+    {
+      "piege": "Vendre du MPaaS IoT sans infrastructure réseau fiable sur le site client",
+      "consequence": "Des capteurs IoT installés dans un immeuble à faible couverture réseau mobile (bâtiment profond, sous-sol) transmettent de manière intermittente — rendant le tableau de bord FM inutilisable et générant des alertes fantômes. Résultat : perte du client et mauvaise réputation.",
+      "recommandation": "Effectuer un audit de couverture réseau (SIM Orange CI / MTN CI) avant installation IoT, et prévoir un répéteur LoRaWAN si nécessaire (coût : 350 000-800 000 FCFA/immeuble)"
+    },
+    {
+      "piege": "Collecter des données de comportement des occupants via IoT sans information APDP CI",
+      "consequence": "Les données de présence (capteurs PIR, caméras comptage), de comportement (fréquence d'utilisation des sanitaires, café) sont des données personnelles au sens de l'APDP CI Loi 2013-450. Leur collecte sans information des occupants et sans déclaration APDP CI est illégale.",
+      "recommandation": "Afficher une notice d'information APDP CI visible dans chaque espace équipé de capteurs. Déclarer le traitement à l'APDP CI. Anonymiser toutes les données dans les rapports partagés avec les propriétaires"
+    },
+    {
+      "piege": "Proposer des prix de MPaaS sans étude préalable du parc équipements de l'immeuble",
+      "consequence": "Un immeuble avec des équipements CVC vieux de 15 ans, des ascenseurs hors normes et une installation électrique non conforme génère des alertes IoT en permanence et nécessite 3x plus d'interventions que prévu. L'abonnement MPaaS vendu à prix fixe devient déficitaire.",
+      "recommandation": "Réaliser un audit technique complet de l'immeuble (état CVC, ascenseurs, électricité, plomberie) avant toute proposition MPaaS. Intégrer une clause de révision du prix si l'état technique est inférieur au standard attendu"
+    },
+    {
+      "piege": "Négliger la conformité DGI CI et CNPS CI pour les plateformes marketplace BTP",
+      "consequence": "Une marketplace BTP CI qui met en relation des artisans sans vérifier leurs agréments CNBTP CI, leurs attestations CNPS CI et leurs numéros DGI CI engage la responsabilité de la plateforme en cas de litige (travail non déclaré, accident du travail non couvert). Le CNBTP CI peut retirer l'agrément aux entreprises ne respectant pas ces exigences.",
+      "recommandation": "Vérifier et afficher sur chaque profil de la marketplace : agrément CNBTP CI (classe A-E), attestation CNPS CI < 3 mois, numéro DGI CI. Désactiver automatiquement les profils aux documents expirés"
+    }
+  ],
+  "roadmap": {
+    "titre": "Roadmap modèle économique digital — entreprise BTP/FM CI",
+    "phases": [
+      {
+        "phase": "Phase 1 — Revenus récurrents basiques (Mois 1-6)",
+        "actions": [
+          "Conversion des contrats correctifs existants vers des contrats de maintenance préventive annuels",
+          "Intégration Orange Money CI / Wave CI pour les paiements (acomptes, loyers, charges FM)",
+          "Référencement SIGMAP DGMP CI et actualisation des agréments CNBTP CI",
+          "Présence PropTech CI avec fiches produits et photos professionnelles"
+        ],
+        "budget_indicatif": "1 - 4 M FCFA (mobile money API + SIGMAP + PropTech)"
+      },
+      {
+        "phase": "Phase 2 — MPaaS IoT et PropTech digital (Mois 7-18)",
+        "actions": [
+          "Équipement de 10-20 immeubles pilotes avec capteurs IoT (audit technique préalable)",
+          "Plateforme de supervision FM centralisée (tableau de bord + alertes + rapports clients)",
+          "Visites virtuelles 360° pour toutes les offres immobilières > 50 M FCFA",
+          "Partenariat BHCI pour le parcours digital de financement immobilier (dossier numérisé)"
+        ],
+        "budget_indicatif": "15 - 45 M FCFA (capteurs IoT + plateforme FM + visite 360°)"
+      },
+      {
+        "phase": "Phase 3 — Plateforme et analytics (Mois 19-36)",
+        "actions": [
+          "Extension MPaaS à 50+ immeubles sous contrat IoT",
+          "Rapport ESG immeuble mensuel vendu aux propriétaires (nouvelle ligne de revenus)",
+          "Visite virtuelle 3D BIM pour les programmes immobiliers neufs",
+          "Marketplace BTP CI (si stratégie plateforme retenue) — 200+ entreprises référencées"
+        ],
+        "budget_indicatif": "30 - 80 M FCFA (extension IoT + analytics + marketplace)"
+      }
+    ]
+  },
+  "ressources": {
+    "formations": [
+      "CNBTP CI — formation SIGMAP et marchés publics BTP dématérialisés (Abidjan, 1 jour, 40 000 FCFA)",
+      "Schneider Electric CI — formation EcoStruxure IoT FM (partenaire SETIMA CI, sessions Abidjan)",
+      "FDFP CI — financement formation gestion numérique et FM pour entreprises BTP agréées",
+      "IFC PropTech — formation digital real estate Afrique (webinaires en ligne IFC)"
+    ],
+    "outils_recommandes": [
+      "Schneider Electric EcoStruxure — plateforme IoT FM bâtiment (partenaire local CI)",
+      "Orange Money CI API (Business) — intégration paiements immobiliers et FM",
+      "Ricoh Theta SC2 (200 000 FCFA) — photo 360° pour PropTech CI (autoportant, facile d'utilisation)",
+      "SIGMAP DGMP CI — plateforme marchés publics BTP CI (sigmap.gouv.ci)",
+      "HubSpot CRM Free — suivi prospects PropTech et clients FM (gratuit jusqu'à 1M contacts)"
+    ],
+    "references_reglementaires": [
+      "BHCI — cahier des charges financement immobilier et dossier numérique (bhci.ci)",
+      "DGMP CI — procédure référencement SIGMAP et agréments marchés publics BTP",
+      "APDP CI — Loi 2013-450 (IoT bâtiment, données présence/comportement, rapport ESG anonymisé)",
+      "CNBTP CI — conditions d'agrément classe A-E (ccbtp.ci)",
+      "BCEAO — réglementation mobile money CI (plafonds Orange Money, MTN MoMo, Wave CI)"
+    ]
+  },
+  "ai_context": {
+    "scoring_dimension": "Maturité du modèle économique digital dans les entreprises BTP",
+    "scoring_rubric": {
+      "score_1_to_20": "Modèle 100% transactionnel : revenus uniquement sur la construction neuve forfaitaire, aucun revenu récurrent, aucune plateforme PropTech, paiements en espèces ou chèque, aucune présence SIGMAP.",
+      "score_21_to_40": "Quelques contrats de maintenance corrective, présence basique sur 1 plateforme PropTech CI, paiements Orange Money ponctuels, SIGMAP utilisée uniquement sur obligation, facturation Excel.",
+      "score_41_to_60": "Contrats FM préventifs annuels, présence PropTech active avec visite 360°, mobile money systématique pour acomptes/loyers, SIGMAP maîtrisée, facturation électronique.",
+      "score_61_to_80": "MPaaS IoT opérationnel (20+ immeubles), visite 3D BIM pour programmes neufs, mobile money intégré API, marketplace BTP actif, rapports FM vendus aux propriétaires, revenus récurrents > 20% du CA.",
+      "score_81_to_100": "Plateforme numérique dominante : MPaaS IoT 50+ immeubles, PropTech leader CI, marketplace 200+ entreprises, financement digital BHCI intégré, analytics ESG immeuble monétisés, revenus digitaux > 30% du CA."
+    },
+    "questions_discriminantes": [
+      "Quelle part de votre chiffre d'affaires annuel provient de contrats récurrents (maintenance, FM, abonnements) plutôt que de projets de construction neuve one-shot ?",
+      "Proposez-vous une offre de Maintenance Préventive as-a-Service (MPaaS) avec supervision IoT pour les immeubles de vos clients ?",
+      "Intégrez-vous Orange Money CI ou Wave CI comme mode de paiement principal pour les acomptes, loyers et charges de votre portefeuille immobilier ?",
+      "Êtes-vous référencé sur la plateforme SIGMAP de la DGMP CI pour soumissionner aux marchés publics BTP dématérialisés ?",
+      "Produisez-vous des rapports de performance énergétique ou ESG pour les propriétaires des immeubles que vous gérez ?"
+    ],
+    "signaux_avances": [
+      "MPaaS IoT déployé sur 50+ immeubles avec tableau de bord FM centralisé et alertes automatiques",
+      "Revenus récurrents (abonnements FM, maintenance préventive) représentant plus de 30% du CA annuel",
+      "Rapports ESG immeuble vendus aux propriétaires comme service additionnel valorisé (revenus récurrents analytics)",
+      "Partenariat formalisé avec BHCI pour l'instruction de dossiers de financement immobilier entièrement numérisés",
+      "Marketplace BTP CI opérationnel avec 200+ entreprises référencées CNBTP CI et notation post-chantier"
+    ]
+  }
+}

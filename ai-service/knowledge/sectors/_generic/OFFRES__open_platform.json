@@ -1,0 +1,246 @@
+{
+  "meta": {
+    "axis": "OFFRES_SERVICES_DIGITAUX",
+    "sub_axis": "Open Platform & Écosystème",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Platform Economy — la plateforme comme modèle dominant",
+      "description": "Les entreprises les plus valorisées au monde (Apple, Google, Amazon, Meta) sont des plateformes qui connectent des producteurs et des consommateurs via des effets de réseau, sans posséder les actifs traditionnels.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "7 des 10 entreprises les plus valorisées au monde sont des plateformes (Forbes 2024)",
+      "source": "Forbes Global 2000 / Gartner Platform Strategy 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Open Banking & Open Insurance — ouverture réglementaire des données",
+      "description": "Les réglementations Open Banking (PSD2, BCEAO) imposent l'ouverture des APIs permettant à des tiers d'accéder aux données clients avec consentement, créant un écosystème de services innovants.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "100 % des banques européennes (PSD2), 30 % en Afrique (BCEAO 2024)",
+      "source": "BCEAO Digital Finance Policy Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "SuperApp — agrégation de services en une application",
+      "description": "La stratégie SuperApp (WeChat en Chine, Gojek en Asie du Sud-Est, MoMo en Afrique) agrège des dizaines de services (paiement, taxi, livraison, santé) dans une application unique avec un compte unifié.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "Modèle dominant en Asie, 5-10 ans de retard en Afrique (McKinsey 2024)",
+      "source": "McKinsey SuperApp Africa Potential Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Marketplace B2B — plateforme de mise en relation professionnelle",
+      "description": "Les marketplaces B2B (Alibaba, Amazon Business, Faire) digitalisent la chaîne d'approvisionnement et créent de nouveaux canaux de distribution pour les PMEs qui n'ont pas leur propre réseau commercial.",
+      "impact_level": "Élevé",
+      "horizon": "12-36 mois",
+      "adoption_rate": "67 % des achats B2B passeront par des marketplaces digitales d'ici 2026 (Gartner 2024)",
+      "source": "Gartner B2B Digital Commerce Survey 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Plateforme de Marketplace",
+      "category": "Architecture de plateforme",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en Afrique",
+      "leading_vendors": ["Mirakl", "Shopify (B2C)", "Magento", "Sharetribe", "CS-Cart"]
+    },
+    {
+      "name": "API Developer Portal",
+      "category": "Ouverture de l'écosystème",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en Afrique",
+      "leading_vendors": ["Apigee (Google)", "AWS API Gateway + Portal", "Azure APIM Developer Portal", "SwaggerHub", "Stoplight"]
+    },
+    {
+      "name": "Identity & Consent Management pour l'Open API",
+      "category": "Sécurité de l'écosystème",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["ForgeRock", "PingFederate", "Okta", "Auth0", "Keycloak (open-source)"]
+    },
+    {
+      "name": "Revenue Share & Billing Platform",
+      "category": "Monétisation de l'écosystème",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["Stripe Connect", "Adyen Marketplace", "Zuora", "Chargebee", "PayPal for Marketplaces"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Portail partenaires avec APIs documentées, intégrations avec 10+ partenaires tiers",
+        "differentiator": "Premier acteur sectoriel à créer un écosystème partenaire formel avec revenue sharing documenté",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "MTN MoMo",
+        "country": "Pan-Afrique",
+        "key_practice": "MoMo API exposée à 100 000+ développeurs — plateforme de paiement devenue infrastructure digitale africaine",
+        "differentiator": "30 % des revenus MoMo générés par l'écosystème partenaire tiers — du canal au réseau d'effets",
+        "source": "MTN Annual Report 2023 / MTN MoMo Developer Portal"
+      },
+      {
+        "organisation": "Jumia",
+        "country": "Pan-Afrique",
+        "key_practice": "Marketplace e-commerce : 100 000+ vendeurs tiers, logistique Jumia, paiement JumiaPay intégrés",
+        "differentiator": "Plateforme qui génère 60 % de son GMV via des vendeurs tiers — sans posséder les stocks",
+        "source": "Jumia Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Apple",
+        "country": "USA",
+        "key_practice": "App Store : 2 millions d'applications, 500 millions d'utilisateurs/semaine, 30 % de commission",
+        "differentiator": "Effets de réseau croisés : chaque nouvel app attire des utilisateurs, chaque utilisateur attire des développeurs",
+        "source": "Apple Annual Report 2023"
+      },
+      {
+        "organisation": "Amazon",
+        "country": "USA",
+        "key_practice": "Amazon Marketplace : 60 % des ventes via vendeurs tiers, AWS comme infrastructure ouverte à tous",
+        "differentiator": "Flywheel : plus de vendeurs → plus de sélection → plus de clients → plus de vendeurs (croissance exponentielle)",
+        "source": "Amazon Annual Report 2023 / AWS re:Invent 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucun écosystème partenaire. Offres fermées sans intégration tierce. Pas d'API externe. Distribution uniquement directe.",
+    "level_2_developing": "Quelques partenariats bilatéraux informels. Intégrations ponctuelles sans gouvernance. Pas de portail développeur. Revenue sharing non structuré.",
+    "level_3_defined": "APIs partenaires documentées. Portail développeur basique. 10+ partenaires intégrés formellement. Accord de revenue sharing documenté.",
+    "level_4_managed": "Plateforme ouverte avec 50+ partenaires actifs. Developer Experience soignée. SDK disponibles. Analytics de l'écosystème. Revenu partenaires > 10 % du CA.",
+    "level_5_optimizing": "Effets de réseau actifs. SuperApp ou Marketplace multi-services. Open API + sandbox. 100+ partenaires. Revenu écosystème > 30 %. Gouvernance des partenaires mature."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction BCEAO sur l'interopérabilité des paiements",
+      "issuing_body": "BCEAO",
+      "scope": "Institutions financières et opérateurs monnaie mobile en UEMOA",
+      "key_requirement": "Ouverture des APIs de paiement pour l'interopérabilité entre systèmes, standardisation GIM-UEMOA",
+      "compliance_deadline": "En vigueur (2022)",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Loi n°2016-412 relative au commerce électronique",
+      "issuing_body": "République de Côte d'Ivoire",
+      "scope": "Opérateurs de marketplace et plateformes de commerce électronique",
+      "key_requirement": "Responsabilité des opérateurs de plateforme, transparence des conditions pour les vendeurs, protection des acheteurs",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.gouv.ci"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Désintermédiation par les partenaires — risque de cannibalisation",
+      "description": "Les partenaires intégrés à la plateforme peuvent, une fois qu'ils ont accès à la base clients, développer leurs propres canaux directs et court-circuiter la plateforme.",
+      "severity": "Élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Conserver une couche de valeur unique (données, distribution, marque) que les partenaires ne peuvent pas répliquer seuls. Contractualiser les clauses de non-concurrence."
+    },
+    {
+      "title": "Qualité de l'écosystème partenaire — risque de réputation",
+      "description": "Un partenaire de mauvaise qualité intégré dans la plateforme dégrade l'expérience client et entache la réputation de la plateforme, même si la faute est du partenaire.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Définir des critères de qualification stricts pour les partenaires, maintenir un processus de certification et un monitoring de la qualité des services partenaires."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Effets de réseau — croissance exponentielle sans CAPEX linéaire",
+      "description": "Une plateforme avec effets de réseau croisés (producteurs ↔ consommateurs) croît exponentiellement : chaque nouveau partenaire attire de nouveaux clients et vice-versa.",
+      "impact_level": "Très élevé",
+      "time_to_value": "18-36 mois",
+      "prerequisite_maturity": "Niveau 4"
+    },
+    {
+      "title": "Revenus passifs via la commission sur les transactions partenaires",
+      "description": "Une plateforme qui prend une commission de 10-30 % sur les transactions des partenaires génère des revenus passifs croissants sans coût de delivery additionnel.",
+      "impact_level": "Très élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Investors (Andreessen Horowitz, Tiger Global)",
+      "target": "Mirakl (plateforme marketplace)",
+      "amount": "555 M$ (Series D)",
+      "date": "2021",
+      "strategic_rationale": "Développer la plateforme SaaS permettant aux grandes entreprises de lancer leurs propres marketplaces",
+      "source": "Mirakl Press Release 2021"
+    },
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Shopify",
+      "target": "Deliverr",
+      "amount": "2,1 Mds$",
+      "date": "2022",
+      "strategic_rationale": "Intégrer la logistique dans la plateforme Shopify pour créer un écosystème complet pour les vendeurs",
+      "source": "Shopify Press Release 2022"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "MTN MoMo",
+    "pays": "Afrique / Pan-africain",
+    "technologie": "Open Platform — API MoMo exposée à 100 000+ développeurs, 30 % des revenus via l'écosystème",
+    "description": "MTN MoMo a transformé son service de mobile money en plateforme ouverte en exposant ses APIs à plus de 100 000 développeurs via le MTN Developer Portal. Des milliers d'applications (e-commerce, santé, agriculture, éducation) se sont intégrées à MoMo comme système de paiement. Ce faisant, MTN a créé un effet de réseau : chaque intégration partenaire augmente la valeur de MoMo pour ses utilisateurs. 30 % des revenus MoMo proviennent désormais de l'écosystème partenaire. Le MoMo API génère plus de 5 milliards de dollars de volume de transactions annuelles via les partenaires.",
+    "resultats": "100 000+ développeurs · 30 % revenus via partenaires · 5 Mds$ volume transactions partenaires · 21 pays · Modèle ouvert copié par Airtel et Zamtel",
+    "source": "MTN Annual Report 2023 / MTN Developer Portal Statistics 2024",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité open platform & écosystème — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "APIs partenaires documentées", "Portail développeur actif", "10+ partenaires intégrés", "Revenue sharing formalisé", "Revenu écosystème > 10 %"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La stratégie de plateforme ouverte est le levier de croissance le plus puissant à long terme. En créant un écosystème où les partenaires créent de la valeur pour les clients finaux, l'organisation devient une infrastructure indispensable plutôt qu'un simple fournisseur. En Afrique de l'Ouest, MTN MoMo et Orange Money ont réussi cette transformation en devenant la couche de paiement de l'économie digitale.",
+    "maturity_max_description": "Plateforme ouverte avec 100+ partenaires actifs. Developer Experience soignée avec SDK et sandbox. Analytics de l'écosystème. Open Banking ou Open API conforme à la réglementation. Effets de réseau actifs. Revenu écosystème > 30 %. Gouvernance des partenaires mature.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucun écosystème partenaire. Offres fermées. Pas d'API externe. Distribution uniquement directe.",
+      "score_21_to_40": "Quelques partenariats informels. Intégrations ponctuelles sans gouvernance. Pas de portail développeur.",
+      "score_41_to_60": "APIs partenaires documentées. Portail développeur basique. 10+ partenaires formels. Revenue sharing documenté.",
+      "score_61_to_80": "Plateforme 50+ partenaires. Developer Experience. SDK. Analytics écosystème. Revenu partenaires > 10 %.",
+      "score_81_to_100": "Effets de réseau actifs. SuperApp/Marketplace. Open API + sandbox. 100+ partenaires. Revenu écosystème > 30 %."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur la maturité de sa stratégie de plateforme ouverte et d'écosystème partenaire. Analyse l'existence d'APIs partenaires documentées, la qualité du portail développeur, le nombre de partenaires intégrés, la formalisation du revenue sharing et la part du revenu généré via l'écosystème partenaire.",
+    "key_questions_for_llm": [
+      "L'organisation expose-t-elle des APIs documentées permettant à des partenaires tiers d'intégrer ses services ?",
+      "Un portail développeur est-il disponible avec documentation, sandbox et support pour les partenaires ?",
+      "Combien de partenaires tiers sont-ils formellement intégrés avec un accord de revenue sharing documenté ?",
+      "Les revenus générés via l'écosystème partenaire sont-ils mesurés et représentent-ils plus de 10 % du chiffre d'affaires ?",
+      "L'organisation a-t-elle une stratégie de plateforme ou de marketplace formalisée avec des KPIs d'écosystème définis ?"
+    ]
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "IS",
+    "sous_axe": "integration_api",
+    "version": "1.0",
+    "langue": "fr",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "Le secteur BTP CI fonctionne avec une multitude d'outils déconnectés : logiciel de devis (Excel ou ERP), logiciel de dessin (AutoCAD, Revit), logiciel de chantier (Procore, Fieldwire), ERP comptable (Sage, SAP), application mobile terrain, plateforme SIGMAP DGMP CI. L'absence d'intégration entre ces outils crée des doubles saisies, des erreurs de resynchronisation et une perte de temps significative. L'API SIGMAP DGMP CI (pour l'automatisation des soumissions), les API Orange Money CI (paiements sous-traitants), et les APIs BIM (IFC, COBie) offrent des opportunités d'intégration à fort ROI pour le secteur BTP CI.",
+    "chiffres_cles": [
+      "< 5% des entreprises BTP CI ont intégré leurs logiciels via des APIs",
+      "Double saisie des données entre outils BTP : estimée à 3-5 heures/semaine/collaborateur",
+      "Erreurs de resynchronisation manuelle entre logiciels BTP : cause de 15-20% des litiges financiers",
+      "SIGMAP DGMP CI : API REST disponible pour intégration ERP (peu utilisée par les entreprises CI)",
+      "Orange Money CI API : disponible pour automatisation paiements fournisseurs BTP (moins de 10 M FCFA)"
+    ],
+    "specificites_locales": [
+      "SIGMAP DGMP CI : API REST pour soumission dématérialisée et suivi marchés (documentation technique DGMP CI)",
+      "Orange Money CI / MTN MoMo CI / Wave CI : APIs paiement mobile pour règlements sous-traitants et ouvriers",
+      "LBTP CI : API résultats essais matériaux en cours de déploiement (portail numérique 2024)",
+      "ARTCI CI : réglementation APIs IoT et données chantier (interconnexion capteurs et plateformes cloud)",
+      "APDP CI Loi 2013-450 : APIs échangeant des données personnelles doivent être conformes (consentement, sécurisation)"
+    ]
+  },
+  "definition_axe": {
+    "titre": "Intégration et APIs dans le secteur BTP",
+    "description": "Capacité de l'entreprise BTP à interconnecter ses systèmes et outils via des APIs et des intégrations pour éliminer les doubles saisies, automatiser les flux de données entre les outils (ERP ↔ logiciel chantier ↔ SIGMAP ↔ comptabilité ↔ paiements) et créer un écosystème numérique cohérent. L'intégration BTP couvre le lien ERP-chantier, l'intégration BIM-coûts (5D), les APIs paiement mobile CI (sous-traitants, ouvriers) et l'interconnexion avec les plateformes étatiques CI (SIGMAP, LBTP CI, BNETD CI).",
+    "perimetre": [
+      "Intégration ERP ↔ logiciel chantier : transfert automatique des bons de commande, situations, factures",
+      "Intégration BIM (Revit/IFC) ↔ ERP : BIM 5D pour le suivi des coûts par lot de travaux",
+      "API SIGMAP DGMP CI : soumission et suivi des AO depuis l'ERP de l'entreprise",
+      "APIs paiement mobile CI (Orange Money, MTN MoMo, Wave) : règlements automatiques sous-traitants",
+      "Intégration IoT chantier ↔ plateforme analytique : capteurs → dashboard sans saisie manuelle",
+      "API LBTP CI : résultats essais matériaux intégrés automatiquement aux rapports qualité chantier"
+    ],
+    "technologies_cles": [
+      "REST APIs / Webhooks — standard d'intégration entre outils BTP cloud (Procore, Autodesk, SAP)",
+      "IFC (Industry Foundation Classes) — format ouvert d'échange BIM entre logiciels (Revit, Archicad, etc.)",
+      "Procore Connect / Autodesk Platform Services — marketplace d'intégrations pour outils BTP",
+      "Power Automate / Zapier / Make (Integromat) — iPaaS pour intégrations no-code entre outils BTP CI",
+      "Orange Money CI API — paiement mobile B2B pour sous-traitants et fournisseurs BTP",
+      "Sage API / SAP BAPI — intégrations ERP comptable avec systèmes opérationnels BTP"
+    ]
+  },
+  "enjeux_specifiques": {
+    "enjeux": [
+      {
+        "titre": "Élimination de la double saisie entre logiciels BTP",
+        "description": "Un bon de commande saisi dans le logiciel chantier est ressaisi manuellement dans l'ERP comptable. Une situation de travaux calculée dans Excel est retapée dans la facture. Ces doubles saisies représentent 3-5 heures/semaine/collaborateur et sont source d'erreurs (montants incorrects, factures manquantes). L'intégration via API entre le logiciel chantier et l'ERP comptable élimine ces saisies redondantes.",
+        "impact": "Économie 3-5h/semaine/collaborateur, réduction erreurs de facturation de 60-70%"
+      },
+      {
+        "titre": "Intégration BIM 5D pour le contrôle des coûts en temps réel",
+        "description": "Le BIM 5D lie le modèle 3D (Revit) aux coûts (ERP) : chaque objet BIM est associé à un coût budgeté et à un coût réel via l'ERP. L'intégration technique (API Revit ↔ SAP ou Oracle) permet de visualiser l'avancement financier par zone et par lot directement sur le modèle 3D. Différenciant pour les grands projets publics CI (BNETD CI, BAD).",
+        "impact": "Visibilité coûts par zone bâtiment ou tronçon routier en temps réel, réduction des dépassements locaux non détectés"
+      },
+      {
+        "titre": "Paiement automatique des sous-traitants et ouvriers via Mobile Money CI",
+        "description": "Les paiements BTP aux sous-traitants et ouvriers CI passent encore largement par les agences bancaires (virements lents, files d'attente) ou par cash (risque vol, fraude). L'intégration des APIs Orange Money CI / MTN MoMo CI / Wave CI dans l'ERP BTP permet l'automatisation des virements : situation de travaux validée → paiement automatique le jour même au sous-traitant.",
+        "impact": "Délai de paiement sous-traitants 30-60 jours → 1-3 jours, fidélisation sous-traitants, réduction du cash"
+      }
+    ]
+  },
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Inexistant",
+      "description": "Aucune intégration entre les logiciels BTP. Chaque outil fonctionne en silos. Toutes les données sont saisies manuellement dans chaque système. Partage d'informations uniquement par email ou imprimés. Aucune API utilisée.",
+      "signes_distinctifs": [
+        "Plans AutoCAD/Revit sur PC isolé, métrés ressaisis dans Excel, Excel ressaisi dans ERP",
+        "Bon de commande papier, ressaisi dans comptabilité par l'assistante",
+        "Situation de travaux calculée dans Excel, retapée dans le logiciel de facturation",
+        "Résultats LBTP CI reçus par email PDF, retranscrits manuellement dans le rapport chantier",
+        "Paiements sous-traitants : virement bancaire physique avec ordres de paiement papier"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Premières intégrations manuelles ou semi-automatiques : export CSV depuis un outil, import dans un autre. Quelques macros Excel pour automatiser les transferts. Pas encore d'API mais réduction de certaines saisies redondantes. SIGMAP utilisé sans intégration ERP.",
+      "signes_distinctifs": [
+        "Export CSV depuis Procore → import dans Sage (semi-automatique, hebdomadaire)",
+        "Macros Excel pour consolider les situations de travaux vers la facturation",
+        "SIGMAP DGMP CI utilisé manuellement, sans lien avec l'ERP ou la GED",
+        "Paiements Orange Money CI utilisés manuellement depuis l'application (sans API)",
+        "IFC exporté depuis Revit pour partage avec BET, sans intégration ERP"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Intégrations API entre les principaux systèmes BTP. Procore/Fieldwire intégré à l'ERP comptable (Sage CI ou SAP) pour les bons de commande et situations. Power Automate pour les flux documentaires. API Orange Money CI pour certains paiements fournisseurs.",
+      "signes_distinctifs": [
+        "Intégration Procore ↔ Sage CI via API : bons de commande et situations synchronisés automatiquement",
+        "Power Automate : workflow de validation bon de commande → ERP → email approbation → paiement",
+        "API Orange Money CI : paiement automatique sous-traitants sur validation situation mensuelle",
+        "SharePoint intégré à Teams : documents chantier accessibles directement depuis Teams",
+        "SIGMAP partiellement intégré via Power Automate pour la génération des dossiers AO"
+      ]
+    },
+    "niveau_4": {
+      "label": "Optimisé",
+      "description": "Écosystème numérique intégré : ERP cloud ↔ BIM 360 ↔ logiciel chantier ↔ IoT ↔ comptabilité ↔ paiements mobiles CI. BIM 5D opérationnel. Intégration API LBTP CI (résultats essais automatiques). SIGMAP entièrement intégré à l'ERP pour soumissions et suivi marchés.",
+      "signes_distinctifs": [
+        "ERP cloud (SAP S/4HANA) intégré à BIM 360, Procore et comptabilité en flux unique",
+        "BIM 5D : Revit ↔ SAP via API — coûts budgetés/réalisés par objet BIM en temps réel",
+        "IoT chantier → Azure IoT Hub → Power BI : flux automatique sans saisie manuelle",
+        "API LBTP CI : résultats essais injectés automatiquement dans le rapport qualité chantier",
+        "API Orange Money / MTN MoMo / Wave CI : paiements automatiques J+1 sur validation ERP"
+      ]
+    },
+    "niveau_5": {
+      "label": "Différenciant",
+      "description": "Intégration en temps réel de tout l'écosystème BTP CI et externe (BNETD CI, SIGMAP, LBTP CI, mobile money CI). Plateforme d'intégration (iPaaS) gérée centralement. APIs ouvertes pour les partenaires (sous-traitants, fournisseurs, maîtres d'ouvrage). Architecture microservices. Participation à l'écosystème BTP digital CI (Open BIM).",
+      "signes_distinctifs": [
+        "iPaaS (Integration Platform as a Service) : gestion centralisée de toutes les intégrations BTP",
+        "APIs ouvertes pour partenaires : sous-traitants connectés à l'ERP via portail API self-service",
+        "Intégration temps réel BNETD CI : données projets publiées directement sur portail BNETD",
+        "Open BIM : IFC utilisé comme format d'échange standard avec tous les partenaires CI",
+        "Contribution à l'écosystème BTP digital CI : partage d'APIs avec CNBTP CI et BNETD CI"
+      ]
+    }
+  },
+  "indicateurs_cles": {
+    "indicateurs": [
+      {
+        "nom": "Taux de saisie manuelle éliminée",
+        "definition": "Pourcentage des flux de données entre systèmes BTP automatisés par API (vs. saisie manuelle ou export/import CSV)",
+        "unite": "%",
+        "cible_sectorielle": "> 70% des flux de données inter-systèmes automatisés via API",
+        "frequence_mesure": "Semestrielle"
+      },
+      {
+        "nom": "Délai de synchronisation entre systèmes",
+        "definition": "Délai maximal acceptable entre la création d'un événement dans un système (bon de commande, situation) et son apparition dans le système cible (ERP, comptabilité)",
+        "unite": "heures",
+        "cible_sectorielle": "< 1 heure pour les flux critiques (situations de travaux, bons de commande)",
+        "frequence_mesure": "Par flux intégré"
+      },
+      {
+        "nom": "Délai de paiement sous-traitants",
+        "definition": "Délai moyen entre validation de la situation mensuelle du sous-traitant et virement effectif sur son compte",
+        "unite": "jours",
+        "cible_sectorielle": "< 5 jours (vs. 30-60 jours sans intégration paiement mobile CI)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Taux d'erreurs de facturation",
+        "definition": "Pourcentage des factures émises avec erreurs dues à des saisies manuelles incorrectes (montants erronés, références manquantes)",
+        "unite": "%",
+        "cible_sectorielle": "< 2% d'erreurs de facturation (vs. 8-15% sans intégration ERP-chantier)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Nombre d'intégrations API actives",
+        "definition": "Nombre de flux de données automatisés via API entre les systèmes BTP (ERP, chantier, BIM, IoT, paiement, SIGMAP)",
+        "unite": "nombre",
+        "cible_sectorielle": "> 5 intégrations API actives pour une entreprise BTP avec ERP",
+        "frequence_mesure": "Annuelle"
+      }
+    ]
+  },
+  "bonnes_pratiques": {
+    "pratiques": [
+      {
+        "titre": "Commencer par l'intégration ERP ↔ logiciel chantier",
+        "description": "La première intégration à fort ROI pour une PME BTP CI est le lien entre le logiciel de gestion chantier (Procore, Fieldwire) et l'ERP comptable (Sage CI, SAP Business One). La plupart de ces outils proposent des connecteurs natifs ou via Zapier/Make. Objectif : les bons de commande validés dans Procore créent automatiquement des lignes dans Sage CI sans resaisie.",
+        "benefice": "Économie 3-5h/semaine sur la double saisie, réduction erreurs facturation de 60-70%"
+      },
+      {
+        "titre": "Intégrer l'API Orange Money CI pour les paiements sous-traitants",
+        "description": "Utiliser l'API Orange Money Business CI (contact partenaire Orange CI) pour automatiser les virements aux sous-traitants et fournisseurs de moins de 10 M FCFA par virement : situation mensuelle validée dans ERP → trigger API Orange Money → paiement instantané sur compte OM du sous-traitant. Conforme BCEAO (paiements mobile money UEMOA) et APDP CI.",
+        "benefice": "Paiement J+1 au lieu de J+30-60, fidélisation sous-traitants, réduction cash sur chantier, traçabilité DGMP CI"
+      },
+      {
+        "titre": "Utiliser le format IFC pour l'interopérabilité BIM",
+        "description": "Exiger le format IFC (Industry Foundation Classes, norme ISO 16739) pour tous les échanges BIM avec les BET, sous-traitants et maîtres d'ouvrage. IFC est lisible par tous les logiciels BIM (Revit, ArchiCAD, Tekla Structures, BIM 360 Viewer) sans licence spécifique. Pour les projets publics CI, le BNETD CI tend à imposer l'IFC pour les maquettes BIM des projets d'État.",
+        "benefice": "Interopérabilité totale entre partenaires BTP CI, réduction des conversions manuelles et pertes de données BIM"
+      },
+      {
+        "titre": "Power Automate pour les intégrations no-code entre outils Microsoft",
+        "description": "Utiliser Microsoft Power Automate (inclus Microsoft 365 Business) pour créer des flux automatisés entre SharePoint (GED plans), Teams (communication chantier), Email (notifications maître d'ouvrage), Excel (données chantier) et les applications tierces (Procore, Procore, Sage CI). Interface no-code accessible aux responsables administratifs BTP CI sans compétence IT avancée.",
+        "benefice": "Intégrations déployées en semaines sans développement informatique, coût marginal si Microsoft 365 déjà déployé"
+      },
+      {
+        "titre": "Documenter les APIs avec un catalogue d'intégrations",
+        "description": "Maintenir un catalogue simple des intégrations en place (Google Sheet ou Notion) : systèmes source et cible, données échangées, fréquence, propriétaire technique, date de dernière vérification. Indispensable pour maintenir les intégrations lors des mises à jour des logiciels (breaking changes APIs).",
+        "benefice": "Résilience des intégrations dans le temps, diagnostic rapide en cas de panne d'un flux automatisé"
+      }
+    ]
+  },
+  "ecueils_frequents": {
+    "ecueils": [
+      {
+        "titre": "Intégrations fragiles cassées à chaque mise à jour logicielle",
+        "description": "Les intégrations API développées artisanalement (scripts Python, macros Excel) se cassent fréquemment lors des mises à jour des logiciels BTP (Procore, Sage, etc.) car elles dépendent de structures internes non documentées. Une intégration cassée peut bloquer l'ensemble du flux financier chantier.",
+        "solution": "Privilégier les connecteurs natifs certifiés (Procore Connect, Autodesk Platform Services) ou les iPaaS (Zapier, Make) qui maintiennent les connecteurs lors des mises à jour des logiciels partenaires"
+      },
+      {
+        "titre": "Synchronisation de données personnelles sans conformité APDP CI",
+        "description": "Les intégrations qui transfèrent des données personnelles (données ouvriers entre logiciel chantier et ERP RH, données clients VEFA entre CRM et comptabilité) doivent être conformes à l'APDP CI Loi 2013-450. Un flux API non conforme expose l'entreprise à des sanctions.",
+        "solution": "Cartographier les données personnelles transitant par chaque API, documenter dans le registre des traitements APDP CI, sécuriser les transmissions (HTTPS/TLS, authentification token)"
+      },
+      {
+        "titre": "Intégrer avant de standardiser les données",
+        "description": "Si les données dans les différents systèmes BTP ne sont pas standardisées (codes projets différents dans l'ERP et le logiciel chantier, noms fournisseurs différents), les intégrations API créent des données incohérentes dans le système de destination.",
+        "solution": "Standardiser d'abord les référentiels de données (code projet, code fournisseur, nomenclature lots de travaux) dans tous les systèmes avant de déployer les intégrations API"
+      }
+    ]
+  },
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau d'intégration et d'APIs BTP entre organisations représentatives",
+    "lignes": [
+      {
+        "organisation": "COLAS CI",
+        "profil": "Filiale Bouygues Construction, ERP SAP S/4HANA intégré groupe",
+        "niveau_maturite": 4,
+        "points_forts": "Écosystème SAP intégré (ERP ↔ BIM 360 ↔ Procore ↔ comptabilité), API SIGMAP CI intégrée dans SAP, paiements Mobile Money CI via API Orange Business CI, IFC standard pour tous les échanges BIM",
+        "points_faibles": "Intégrations groupe parfois inadaptées aux spécificités CI (APIs locales CI moins prioritaires pour DSI Paris), délais d'adaptation aux nouvelles APIs CI",
+        "initiatives_notables": "Intégration API LBTP CI portail numérique : résultats essais injectés automatiquement dans SAP QM (Quality Management) — pilote en cours"
+      },
+      {
+        "organisation": "BNETD CI",
+        "profil": "Agence étatique CI, plateforme GEOPROJET CI avec APIs partenaires",
+        "niveau_maturite": 3,
+        "points_forts": "API GEOPROJET CI : intégration SIGMAP DGMP CI et données financières projets, APIs BNETD CI accessibles aux entreprises BTP CI partenaires pour suivi projets",
+        "points_faibles": "Intégrations internes BNETD CI encore partielles (ERP interne non entièrement intégré à GEOPROJET), API LBTP CI non encore opérationnelle",
+        "initiatives_notables": "Portail API BNETD CI (2024) : accès données projets infrastructure CI pour entreprises et bailleurs de fonds (BAD, BM, AFD)"
+      },
+      {
+        "organisation": "SATCI CI",
+        "profil": "Promoteur immobilier CI, gestion VEFA multi-chantiers",
+        "niveau_maturite": 2,
+        "points_forts": "Export CSV Procore → import Sage CI (semi-automatique), API Orange Money CI pour paiements artisans (< 1 M FCFA), SharePoint-Teams intégration Microsoft native",
+        "points_faibles": "Aucune intégration API native entre Procore et Sage (export/import manuel), BIM non intégré à l'ERP, SIGMAP DGMP CI non intégré",
+        "initiatives_notables": "Projet d'intégration Procore ↔ Sage 100 Cloud CI via connecteur Make.com (pilote en cours sur 2 chantiers)"
+      },
+      {
+        "organisation": "PME BTP CI classe C-D",
+        "profil": "Entreprise BTP locale 20-100 employés",
+        "niveau_maturite": 1,
+        "points_forts": "Peu de systèmes à intégrer (simplicité), flexibilité manuelle",
+        "points_faibles": "Saisies manuelles multiples, données incohérentes entre les systèmes, aucune API utilisée, paiements exclusivement par virement bancaire traditionnel ou cash",
+        "initiatives_notables": "Utilisation informelle de Zapier ou Make par quelques PME BTP CI pour des flux simples (formulaire Google → email → WhatsApp)"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "SETIMA CI — Intégration Mobile Money CI pour le paiement automatisé des sous-traitants BTP",
+    "contexte": "SETIMA CI (Société d'Études et de Travaux Immobiliers et de Maintenance de Côte d'Ivoire) gère 45 immeubles en contrats de maintenance (FM) et réalise des travaux de rénovation avec 38 artisans et sous-traitants BTP CI réguliers (plombiers, électriciens, peintres, climatisation). Le processus de paiement des sous-traitants se faisait via virements bancaires manuels, nécessitant 8-12 jours de traitement (validation, ordre de virement banque, délai exécution BNI/NSIA CI). Les petits artisans préféraient le cash (présents au bureau pour retirer), créant un risque sécurité.",
+    "probleme": "Délai paiement artisans : 30-45 jours après achèvement des travaux (délai inacceptable pour les petits artisans CI). Cash en caisse : risque de vol, comptabilité opaque. Erreurs de virement : 12% des virements manuels comportaient des erreurs (montants, références). 8 artisans avaient cessé de travailler avec SETIMA CI sur la dernière année pour cause de retards de paiement. Comptabilité : rapprochement manuel paiements/factures prenait 3 jours/mois.",
+    "solution_deployee": "Intégration API Orange Money Business CI dans l'ERP Sage 100 CI de SETIMA CI : travaux réceptionnés (BatiScript CI) → validation responsable → trigger API Orange Money → virement automatique compte OM artisan en temps réel. Formation comptable et responsable technique. Accord cadre avec Orange CI pour les volumes de virements. Signature numérique des bordereaux de paiement (conformité Loi CI 2017-771). Extension Wave CI API pour les artisans sans compte Orange Money.",
+    "resultats": {
+      "delai_paiement": "30-45 jours → 1 jour après validation (J+1 garanti pour les artisans OM/Wave CI)",
+      "erreurs_virement": "12% → 0,3% d'erreurs (montant ERP = montant virement automatique)",
+      "artisans_fideaux": "8 artisans perdus sur la période précédente → 2 départs uniquement pour raisons personnelles sur l'année suivante",
+      "cash_caisse": "Cash hebdomadaire artisans : 4 500 000 FCFA → 0 FCFA (100% mobile money)",
+      "rapprochement_comptable": "3 jours/mois → 2 heures/mois grâce à la traçabilité automatique API OM",
+      "satisfaction_artisans": "NPS artisans SETIMA CI sur les paiements : 18 → 72/100"
+    },
+    "enseignements": "L'API Orange Money Business CI nécessite un contrat Orange CI Entreprise (contact Orange Business Services CI). Le principal obstacle a été la résistance initiale de quelques artisans sans smartphone ou sans compte OM — résolu par l'onboarding Orange Money CI sur site (équipe Orange CI déplacée pour la création de comptes). L'extension Wave CI a été ajoutée pour couvrir les artisans avec Wave (20% des artisans SETIMA CI)."
+  },
+  "ai_context": {
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune intégration entre les systèmes BTP. Toutes les données saisies manuellement dans chaque outil. Partage uniquement par email ou papier. Aucune API utilisée. Paiements uniquement par virement bancaire traditionnel ou cash.",
+      "score_21_to_40": "Premières intégrations semi-automatiques (export CSV, macros Excel). SIGMAP utilisé manuellement. Paiements Orange Money CI manuels depuis l'application. Quelques réductions de saisies redondantes sans API réelle.",
+      "score_41_to_60": "Intégrations API entre principaux systèmes (ERP ↔ chantier). Power Automate pour flux documentaires. API Orange Money CI pour paiements fournisseurs. IFC pour échanges BIM. SIGMAP partiellement intégré.",
+      "score_61_to_80": "Écosystème intégré (ERP cloud ↔ BIM 360 ↔ chantier ↔ IoT ↔ paiements CI). BIM 5D opérationnel. API LBTP CI résultats essais. SIGMAP entièrement intégré. Conformité APDP CI des APIs.",
+      "score_81_to_100": "iPaaS centralisé gérant toutes les intégrations. APIs ouvertes pour partenaires (portail self-service). Intégration temps réel BNETD CI et écosystème BTP CI. Open BIM IFC standard. Contribution à l'écosystème digital BTP CI."
+    },
+    "questions_cles_diagnostic": [
+      "Vos logiciels de chantier et de comptabilité échangent-ils des données automatiquement via API ou procédez-vous à des saisies manuelles ou des imports CSV ?",
+      "Avez-vous intégré l'API Orange Money / MTN MoMo / Wave CI pour les paiements automatiques de vos sous-traitants ?",
+      "Votre compte SIGMAP DGMP CI est-il connecté à votre ERP pour la génération automatique des dossiers AO ?",
+      "Utilisez-vous le format IFC pour les échanges BIM avec vos partenaires BET et sous-traitants ?",
+      "Combien d'heures par semaine vos équipes passent-elles à ressaisir des informations d'un logiciel à l'autre ?"
+    ],
+    "pieges_evaluation": [
+      "Ne pas confondre les exports CSV périodiques avec de vraies intégrations API temps réel",
+      "Vérifier que les 'intégrations' mentionnées sont réellement opérationnelles et utilisées régulièrement (pas juste un projet en cours)",
+      "Distinguer les intégrations des filiales de groupes internationaux (héritées du groupe) des intégrations développées localement par des PME BTP CI"
+    ]
+  },
+  "ressources": {
+    "references_reglementaires": [
+      "BCEAO — Réglementation paiements mobile money UEMOA (Orange Money, MTN MoMo, Wave CI)",
+      "ARTCI CI — Réglementation APIs IoT et interconnexion systèmes d'information CI",
+      "APDP CI Loi 2013-450 — Conformité des APIs échangeant des données personnelles",
+      "SIGMAP DGMP CI — Documentation API REST pour intégration ERP (site dgmp.gouv.ci)",
+      "ISO 16739 (IFC) — Norme internationale d'échange BIM (Open BIM)"
+    ],
+    "outils_recommandes": [
+      "Microsoft Power Automate — iPaaS no-code pour intégrations entre outils Microsoft et tiers",
+      "Make.com (Integromat) / Zapier — iPaaS pour intégrations no-code PME BTP CI",
+      "Procore Connect / Autodesk Platform Services — Marketplace intégrations certifiées BTP",
+      "Orange Money Business API CI — Paiements automatisés sous-traitants et fournisseurs BTP",
+      "IFC format ouvert (buildingSMART) — Interopérabilité BIM sans dépendance logicielle"
+    ],
+    "formations_certifications": [
+      "Orange Business Services CI — Formation API Mobile Money Business pour intégrateurs BTP CI",
+      "Microsoft Power Platform — Certification Power Automate pour intégrations no-code",
+      "buildingSMART International — Certification IFC et Open BIM pour interopérabilité BTP",
+      "DGMP CI — Formation utilisation API SIGMAP pour entreprises BTP CI"
+    ]
+  }
+}

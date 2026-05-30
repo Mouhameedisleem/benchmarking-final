@@ -1,0 +1,56 @@
+{
+  "meta": { "axis": "CANAUX", "sub_axis": "Canaux & Expérience Client", "sector": "telecom", "language": "fr", "version": "1.0", "last_updated": "2026-05" },
+  "trends": [
+    { "title": "Super-app télécom — consolider tous les services dans une seule application abonné", "description": "Les opérateurs leaders (Safaricom, MTN) développent des super-apps qui centralisent tous les services : gestion du compte, recharge, mobile money, contenu, service client, B2B. Pour l'abonné UEMOA, une seule application remplace le déplacement en agence, le call center et plusieurs applications séparées. La super-app est le canal d'avenir.", "impact_level": "Très élevé", "horizon": "12-36 mois", "adoption_rate": "35 % des opérateurs africains ont une application mobile avec > 1M MAU (GSMA 2024)", "source": "GSMA Digital Channels Telecom Africa 2024", "year": "2024" },
+    { "title": "Service client omnicanal — cohérence entre l'agence, le call center, WhatsApp et l'app", "description": "Les abonnés UEMOA contactent l'opérateur via multiple canaux (agence, call center *123#, WhatsApp, app, chatbot) et attendent une continuité de leur historique entre les canaux. Un abonné qui a signalé une panne par WhatsApp ne devrait pas avoir à la re-expliquer en agence le lendemain — cela nécessite un CRM omnicanal unifié.", "impact_level": "Élevé", "horizon": "12-24 mois", "adoption_rate": "25 % des opérateurs africains ont un CRM omnicanal unifié (GSMA 2024)", "source": "GSMA CX Benchmark Telecom Africa 2024", "year": "2024" }
+  ],
+  "key_technologies": [
+    { "name": "Application mobile télécom (super-app)", "category": "Canal digital principal abonné", "maturity_stage": "Mature", "adoption_in_sector": "Haute en UEMOA pour les grands opérateurs", "leading_vendors": ["Custom React Native / Flutter", "Amdocs Digital Channels", "Comviva Mobiquity", "Oracle Digital Experience Telecom"] },
+    { "name": "CRM omnicanal télécom (unifier app, call center, agence, WhatsApp)", "category": "Gestion relation abonné", "maturity_stage": "Mature", "adoption_in_sector": "Faible en UEMOA — silos fréquents", "leading_vendors": ["Salesforce Telecom Cloud", "Microsoft Dynamics 365 Telco", "Ericsson BSCS CRM", "Amdocs CES", "Zoho CRM Telecom"] }
+  ],
+  "market_leaders": {
+    "national": [{ "organisation": "Orange Côte d'Ivoire", "country": "Côte d'Ivoire", "key_practice": "Application 'My Orange CI' : 5 M utilisateurs actifs. Recharge, consultation solde, paiements Orange Money, portail offres, ticket service client. Call center 90002 intégré avec CRM. 450 agences physiques. Chatbot WhatsApp pour les demandes fréquentes (solde, offres, signalement panne).", "differentiator": "My Orange CI avec 5 millions d'utilisateurs actifs est la plus grande application télécom d'Afrique de l'Ouest francophone — permettant à Orange de traiter 60 % des demandes abonnés sans contact humain, réduisant les coûts de service client de 35 %", "source": "Orange CI Rapport Digital 2023" }],
+    "regional": [{ "organisation": "Safaricom Kenya", "country": "Kenya", "key_practice": "My Safaricom App : 8 M MAU. Télécom + M-Pesa + contenu + B2B dans une seule app. NPS app +62. 15 déploiements/semaine. WhatsApp Business intégré pour le service client avec réponses automatisées. 95 % des réclamations résolues au premier contact (tous canaux).", "differentiator": "My Safaricom App a atteint 8 millions d'utilisateurs actifs mensuels — soit 40 % de la base abonnés Safaricom — et est classée dans le top 5 des applications les plus utilisées au Kenya, devant WhatsApp pour certains segments", "source": "Safaricom Annual Report 2023" }],
+    "international": [{ "organisation": "T-Mobile USA", "country": "USA", "key_practice": "T-Mobile App : gestion complète du compte, support IA, 'Fix it Myself' pour les pannes basiques. 'Team of Experts' : chaque client a une équipe dédiée accessible via l'app — fin du call center anonyme. NPS +35. Churn < 1 %/mois.", "differentiator": "Le modèle 'Team of Experts' de T-Mobile — où chaque abonné a une équipe dédiée accessible via l'app — a éliminé l'anonymat du call center et réduit le churn à < 1 %, prouvant que la personnalisation du service client est le meilleur outil de fidélisation", "source": "T-Mobile Annual Report 2023" }]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Canaux uniquement physiques (agences) et téléphoniques. Pas d'application. Pas de CRM unifié. NPS non mesuré. Service client réactif.",
+    "level_2_developing": "Site web + application basique (recharge, solde). Call center avec CRM basique. WhatsApp informel. Pas d'omnicanalité.",
+    "level_3_defined": "Application mobile fonctionnelle (1-3M MAU). CRM call center. Chatbot WhatsApp basique. NPS trimestriel. Multi-canal partiel.",
+    "level_4_managed": "Application (3-8M MAU) avec services complets. CRM omnicanal partiel. WhatsApp Business intégré. NPS mensuel > +20. Self-service 50 %+.",
+    "level_5_optimizing": "Super-app (> 8M MAU). CRM omnicanal complet. IA service client. NPS > +40. Self-service > 70 %. Résolution 1er contact > 90 %."
+  },
+  "regulations": [],
+  "risks": [{ "title": "Coupures réseau — l'ennemi n°1 de la satisfaction client dans les télécoms UEMOA", "description": "Les coupures et dégradations de réseau (particulièrement en saison des pluies où les interruptions de fibre et d'électricité augmentent) sont la principale cause de réclamations et de churn dans les opérateurs UEMOA. Une application mobile aussi bien conçue soit-elle ne peut pas compenser une qualité de réseau insuffisante.", "severity": "Très élevé", "likelihood": "Très élevée", "mitigation": "Investissements réseau prioritaires dans les zones urbaines à forte densité. Notification proactive des abonnés en cas de panne (WhatsApp + SMS) avant les réclamations. Programme d'indemnisation automatique pour les pannes > 4h (crédit airtime ou data)." }],
+  "opportunities": [{ "title": "App télécom comme super-app de services — intégrer santé, éducation, commerce dans l'app opérateur", "description": "Une application télécom qui intègre des services tiers (téléconsultation médicale, cours en ligne, marketplace) crée un engagement quotidien bien au-delà de la gestion du forfait. Des abonnés qui utilisent l'app quotidiennement pour des services diversifiés ont un churn 4× inférieur. C'est le modèle de WeChat en Chine adapté au contexte UEMOA.", "impact_level": "Très élevé", "time_to_value": "18-36 mois", "prerequisite_maturity": "Niveau 3" }],
+  "ma_and_fundraising": [],
+  "zoom_case_study": { "entreprise": "Safaricom My Safaricom App — 8M MAU, super-app, NPS +62, 15 déploiements/semaine", "pays": "Kenya", "technologie": "React Native (iOS/Android) + Salesforce CRM omnicanal + WhatsApp Business API + GitLab CI/CD", "description": "My Safaricom App est l'application la plus utilisée du Kenya dans sa catégorie. L'histoire de sa transformation : en 2019, l'app avait 1 M d'utilisateurs et se limitait à la recharge et la consultation du solde. Entre 2020 et 2023, Safaricom a transformé l'app en super-app via des sprints agiles bimensuels, intégrant progressivement : M-Pesa et tous ses services (Fuliza, Savings, Global), gestion du compte et des offres, contenu Songa (musique streaming), Enterprise self-care, service client avec chat en direct et ticketing. L'intégration CRM Salesforce permet à un agent du call center de voir en temps réel l'historique de l'abonné (toutes les interactions app, WhatsApp, agence et téléphone). En 2023 : 8 M utilisateurs actifs mensuels (+700 % vs 2019), NPS in-app de +62, 72 % des demandes résolues sans agent humain, 15 mises à jour par semaine sans downtime grâce au CI/CD.", "resultats": "8M MAU (+700 % depuis 2019) · NPS app +62 · 72 % résolution sans agent · 15 mises à jour/semaine · CRM Salesforce omnicanal · M-Pesa intégré · Contenu + Enterprise", "source": "Safaricom Annual Report 2023 / React Native Safaricom Tech Blog 2023", "annee": "2023" },
+  "comparatif_organisations": {
+    "titre": "Maturité canaux & expérience client — benchmark opérateurs télécoms UEMOA",
+    "colonnes": ["Organisation", "Application mobile (> 2M MAU)", "CRM omnicanal unifié", "WhatsApp Business intégré", "Self-service > 50 % transactions", "NPS > +20 mesuré mensuellement"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "Partiel", "Partiel", "Partiel", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["Partiel", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "L'expérience client est un différenciateur concurrentiel clé dans le secteur télécom UEMOA où les produits (voix, data, MoMo) sont difficiles à différencier. L'application mobile est le canal pivot : une app avec 5M+ MAU réduit structurellement le churn, améliore le NPS et réduit les coûts de service client. La transition vers l'omnicanalité (CRM unifié) est le prochain niveau — encore peu répandu en UEMOA.",
+    "maturity_max_description": "Super-app opérateur avec 5M+ utilisateurs actifs mensuels intégrant télécom, mobile money, contenu et services tiers. CRM omnicanal unifiant les interactions app, WhatsApp, agence et call center. NPS > +30 mesuré et piloté mensuellement. Self-service > 70 % des transactions. Chatbot IA 24/7 résolvant > 70 % des demandes. Résolution au premier contact > 90 %.",
+    "scoring_rubric": {
+      "score_1_to_20": "Canaux physiques et téléphone uniquement. Pas d'app. Pas de CRM. NPS non mesuré.",
+      "score_21_to_40": "App basique. Call center CRM. WhatsApp informel. Pas d'omnicanalité.",
+      "score_41_to_60": "App fonctionnelle 1-3M MAU. CRM call center. WhatsApp Business basique. NPS trimestriel.",
+      "score_61_to_80": "App 3-8M MAU complète. CRM omnicanal partiel. WhatsApp intégré. NPS mensuel > +20. Self-service 50 %.",
+      "score_81_to_100": "Super-app > 8M MAU. CRM omnicanal complet. IA service. NPS > +40. Self-service > 70 %."
+    },
+    "prompt_injection_context": "Cet opérateur télécom est évalué sur sa maturité canaux & expérience client dans le contexte UEMOA. Analyse l'application mobile (MAU), le CRM omnicanal, WhatsApp Business, le self-service et le NPS.",
+    "key_questions_for_llm": [
+      "L'opérateur dispose-t-il d'une application mobile avec un nombre significatif d'utilisateurs actifs mensuels (> 1M MAU) et des fonctionnalités complètes (MoMo, gestion compte, service client) ?",
+      "Un CRM omnicanal unifiant les interactions via app, WhatsApp, call center et agences est-il opérationnel pour les équipes de service client ?",
+      "WhatsApp Business est-il utilisé comme canal de service client avec des réponses automatisées et une escalade vers des agents humains pour les cas complexes ?",
+      "Quel pourcentage des demandes abonnés est traité en self-service (sans contact avec un agent humain) ?",
+      "Le NPS est-il mesuré régulièrement et supérieur à +20 — et est-il utilisé comme KPI de pilotage par la direction ?"
+    ]
+  }
+}

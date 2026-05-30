@@ -1,0 +1,284 @@
+{
+  "secteur": "industrie",
+  "axe": "INFORMATION_SYSTEM",
+  "sous_axe": "integration_api",
+  "label": "Intégration et API industrielle",
+  "description": "Capacité des entreprises industrielles à intégrer leurs systèmes OT et IT via des API et protocoles standards : intégration SCADA-MES-ERP (OPC-UA, MQTT, REST), EDI avec donneurs d'ordre et GMS CI, APIs paiements Mobile Money CI (Orange Money, Wave CI) pour fournisseurs, et connexions SIGMAP DGMP CI pour marchés publics industriels CI.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Silos systèmes industrie CI : ERP (SAP/Odoo), SCADA (Siemens/Schneider), MES (Odoo/SIMATIC), APS (planification) — rarement intégrés entre eux",
+      "OPC-UA : standard d'intégration OT moderne — passerelle PLCs héritage vers systèmes modernes CI",
+      "MQTT / REST APIs : protocoles IoT industriel CI — capteurs → cloud Azure IoT Hub",
+      "EDI donneurs d'ordre CI : Barry Callebaut, Cargill, GMS Carrefour CI — EDIFACT ou XML commandes",
+      "Orange Money Business CI / Wave for Business CI : paiements fournisseurs ruraux CI (cacao, anacarde) — APIs M2M",
+      "Douanes CI GUCE : API dématérialisée dédouanement matières importées — connexion ERP CI"
+    ],
+    "acteurs_cles": [
+      "GUCE CI — Guichet Unique du Commerce Extérieur : API dédouanement import/export industries CI",
+      "Barry Callebaut CI / Cargill CI — EDI fournisseurs cacao CI : exigences intégration commandes",
+      "Carrefour CI / Prosuma CI — EDI fournisseurs GMS : commandes, livraisons, factures",
+      "Orange Business CI / Wave for Business CI — APIs paiements fournisseurs ruraux CI",
+      "DGI CI — API facturation électronique obligatoire (Loi 2022-974) : connexion ERP",
+      "SIGMAP DGMP CI — API marchés publics CI : appels d'offres, soumissions dématérialisées"
+    ],
+    "reglementation_locale": [
+      "DGI CI Loi 2022-974 : facturation électronique obligatoire — API DGI CI connectée ERP",
+      "GUCE CI Arrêté 2015-118 : dédouanement dématérialisé import CI — API intégrée ERP/TMS",
+      "BCEAO Instruction 008-05-2015 : APIs paiements Mobile Money CI — Orange Money Business, Wave CI",
+      "SIGMAP DGMP CI : API marchés publics — appels d'offres, résultats, notifications automatiques",
+      "APEX-CI : API certifications export CI (certificats phytosanitaires, origine numériques)",
+      "Loi CI 2017-771 : valeur juridique transactions électroniques CI — EDI, API, e-factures"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Aucune intégration entre systèmes. ERP, SCADA et MES fonctionnent en silos. Données transférées manuellement ou par clé USB. Commandes par téléphone. Paiements fournisseurs en espèces ou chèque. Double saisie systématique.",
+      "indicateurs": [
+        "ERP, SCADA, MES : 0 connexion entre systèmes — silos complets",
+        "Transfert données : clé USB ou ressaisie manuelle",
+        "Commandes fournisseurs/clients : téléphone ou visite physique",
+        "Paiements fournisseurs ruraux CI : espèces ou chèques — délai 15-30j",
+        "0 API ni EDI — aucune intégration externe"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Email utilisé pour commandes et factures. Export CSV manuel SCADA vers Excel. Quelques intégrations imposées par donneurs d'ordre. Paiements Mobile Money CI ponctuels non automatisés. ERP et SCADA toujours en silos.",
+      "indicateurs": [
+        "Commandes par email PDF — ressaisie manuelle dans ERP",
+        "Export CSV SCADA manuel vers Excel — 1 fois/semaine",
+        "Portail fournisseur donneur d'ordre imposé (Barry Callebaut, Cargill) — utilisé passivement",
+        "Mobile Money CI ponctuel — pas d'API M2M ni automatisation",
+        "0 connexion ERP ↔ SCADA ↔ MES"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Passerelle OPC-UA SCADA → MES automatique. EDI ou portail B2B avec 2+ donneurs d'ordre. API DGI CI e-facture opérationnelle. Orange Money Business CI API paiements fournisseurs ruraux. GUCE CI connexion ERP partielle.",
+      "indicateurs": [
+        "OPC-UA ou MQTT : SCADA → MES/ERP en temps réel — 0 ressaisie",
+        "EDI ou API : 2+ donneurs d'ordre CI (Barry Callebaut / Carrefour CI) intégrés",
+        "API DGI CI e-facture : facturation électronique intégrée ERP — Loi 2022-974",
+        "Orange Money Business CI API : paiements fournisseurs ruraux < 24h",
+        "GUCE CI API partielle : bulletins douane numériques intégrés ERP"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "Intégration OT/IT complète via OPC-UA et REST APIs. EDI multi-donneurs d'ordre automatique. API APEX-CI certifications export. GUCE CI intégration complète TMS. Toutes transactions financières CI via API (Mobile Money, virement UEMOA). 0 ressaisie.",
+      "indicateurs": [
+        "OPC-UA / REST : SCADA → MES → ERP → BI — chaîne complète 0 ressaisie",
+        "EDI intégré 5+ donneurs d'ordre CI : commandes auto-traitées dans ERP",
+        "API APEX-CI : certificats export auto-générés depuis données ERP",
+        "GUCE CI intégration complète : dédouanement automatisé TMS ↔ GUCE CI",
+        "0 paiement manuel : Mobile Money CI API + virement BCEAO UEMOA automatique"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Plateforme d'intégration industrielle CI. API ouvertes pour fournisseurs et clients. EUDR data exchange API avec acheteurs EU. Microservices architecture. Référence intégration industrielle UEMOA.",
+      "indicateurs": [
+        "API marketplace industrielle CI : fournisseurs et clients connectent leurs ERP via API ouvertes",
+        "EUDR data exchange API : données géospatiales partagées automatiquement acheteurs EU",
+        "Architecture microservices : déploiement continu, 0 downtime intégration",
+        "iPaaS (Mulesoft ou Azure Integration Services) : orchestration tous flux CI",
+        "Référence intégration industrielle UEMOA — publication ARTCI CI / FIPA CI"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Votre SCADA/MES est-il intégré à votre ERP (transfert automatique de données de production) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — silos complets, clé USB ou ressaisie manuelle"},
+        {"valeur": 2, "label": "Export CSV manuel SCADA → Excel → ERP — hebdomadaire"},
+        {"valeur": 3, "label": "OPC-UA ou MQTT : SCADA → MES/ERP en temps réel automatique"},
+        {"valeur": 4, "label": "Intégration complète OT/IT : chaîne SCADA → MES → ERP → BI sans ressaisie"},
+        {"valeur": 5, "label": "Architecture microservices : APIs ouvertes, EUDR exchange, 0 downtime"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Avez-vous des intégrations EDI ou API avec vos donneurs d'ordre (Barry Callebaut, GMS CI) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — commandes par téléphone ou visite"},
+        {"valeur": 2, "label": "Email PDF + portail donneur d'ordre utilisé passivement"},
+        {"valeur": 3, "label": "EDI ou API avec 2 donneurs d'ordre CI intégrés dans ERP"},
+        {"valeur": 4, "label": "EDI 5+ donneurs d'ordre CI : commandes auto-traitées ERP"},
+        {"valeur": 5, "label": "API marketplace : fournisseurs et clients connectent leurs ERP directement"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Utilisez-vous les APIs Mobile Money CI (Orange Money Business, Wave CI) pour payer vos fournisseurs ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — espèces ou chèques, délai 15-30 jours"},
+        {"valeur": 2, "label": "Mobile Money CI ponctuel non automatisé — délai 3-7 jours"},
+        {"valeur": 3, "label": "Orange Money Business CI API : paiements fournisseurs ruraux < 24h"},
+        {"valeur": 4, "label": "0 paiement manuel : toutes transactions via API Mobile Money CI + virement UEMOA"},
+        {"valeur": 5, "label": "Paiements temps réel automatiques + API EUDR data exchange acheteurs EU"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Êtes-vous connecté à l'API DGI CI pour la facturation électronique (Loi 2022-974) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — factures papier ou Word uniquement"},
+        {"valeur": 2, "label": "PDF email — pas encore connecté API DGI CI"},
+        {"valeur": 3, "label": "API DGI CI e-facture intégrée ERP — Loi 2022-974 conforme"},
+        {"valeur": 4, "label": "e-facture DGI CI + EDI donneurs d'ordre + API APEX-CI — 0 document papier"},
+        {"valeur": 5, "label": "Toutes APIs réglementaires CI intégrées : DGI + GUCE + APEX-CI + SIGMAP"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "Intégration SCADA-MES-ERP",
+      "EDI donneurs d'ordre CI",
+      "API Mobile Money CI paiements",
+      "API DGI CI e-facture",
+      "API GUCE CI dédouanement"
+    ],
+    "lignes": [
+      {
+        "organisation": "PMI CI (< 50 employés)",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "Silos complets, 0 EDI, espèces fournisseurs, factures papier, 0 dédouanement numérique"
+      },
+      {
+        "organisation": "Industrie moyenne CI (50-200 employés)",
+        "scores": [2, 2, 2, 2, 2],
+        "note_globale": 2,
+        "commentaire": "CSV manuel SCADA, portail donneur imposé, Mobile Money ponctuel, PDF email"
+      },
+      {
+        "organisation": "SUCAF CI",
+        "scores": [3, 3, 3, 3, 3],
+        "note_globale": 3,
+        "commentaire": "OPC-UA SCADA→SAP, EDI 3 GMS CI, Orange Money Business API, DGI CI conforme, GUCE partiel"
+      },
+      {
+        "organisation": "SIFCA CI",
+        "scores": [5, 5, 5, 4, 5],
+        "note_globale": 5,
+        "commentaire": "Intégration OT/IT complète, EDI 8 donneurs d'ordre, 0 paiement manuel, EUDR API, GUCE intégré TMS"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "Orange Business CI — API Mobile Money Business et M2M IoT CI",
+      "part_de_marche_estimee": "Leader APIs paiements B2B et IoT CI",
+      "forces": ["Orange Money Business CI API", "SIM M2M IoT CI", "SLA entreprise", "SDK documenté CI"],
+      "faiblesses": ["Coût API mobile money CI (0,5-1,5% par transaction)", "Support API parfois lent"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "Sage X3 Africa (Sage Afrique) — ERP avec intégrations SCADA/MES Afrique",
+      "part_de_marche_estimee": "Leader ERP industriel PME Afrique francophone",
+      "forces": ["Intégrations SCADA via OPC-UA", "EDI natif", "API Mobile Money UEMOA", "Présence CI partenaires"],
+      "faiblesses": ["Moins complet que SAP S/4HANA pour grandes industries", "Coût intégrations personnalisées"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "SAP Integration Suite (BTP) — intégration enterprise industrielle",
+      "part_de_marche_estimee": "Leader mondial intégration enterprise industrielle",
+      "forces": ["Connecteurs SCADA natifs SAP", "EDI universel SAP Ariba", "API REST/SOAP", "Azure IoT intégré"],
+      "faiblesses": ["Coût très élevé (> 20 M FCFA/an)", "Complexité déploiement CI", "Sur-mesure grands groupes"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Kepware OPC-UA Server — passerelle SCADA vers ERP CI",
+      "usage": "Connecter PLCs/SCADA (Siemens, Schneider, Allen-Bradley) vers MES/ERP via OPC-UA",
+      "niveau_cible": "3+",
+      "cout_estime": "500 000–2 000 000 FCFA selon nombre drivers PLCs",
+      "disponibilite_ci": "International — intégrateurs OT/IT disponibles CI"
+    },
+    {
+      "nom": "Orange Money Business CI API — paiements fournisseurs ruraux",
+      "usage": "Paiements fournisseurs cacao/anacarde ruraux CI < 24h : API REST, intégration ERP Odoo/SAP",
+      "niveau_cible": "3+",
+      "cout_estime": "0,5–1,5% par transaction + intégration API 500 000–1 500 000 FCFA",
+      "disponibilite_ci": "Natif CI — Orange Business CI Abidjan, SDK documenté"
+    },
+    {
+      "nom": "Odoo CI module EDI — intégration donneurs d'ordre",
+      "usage": "EDI commandes GMS CI et multinationales : EDIFACT ou XML intégré ERP Odoo CI",
+      "niveau_cible": "3+",
+      "cout_estime": "800 000–2 500 000 FCFA/an ERP + intégration EDI 1–3 M FCFA",
+      "disponibilite_ci": "International — partenaires Odoo CI Abidjan"
+    },
+    {
+      "nom": "API DGI CI e-facture — conformité Loi 2022-974",
+      "usage": "Facturation électronique obligatoire CI : API DGI CI intégrée ERP, archivage fiscal 10 ans",
+      "niveau_cible": "3+",
+      "cout_estime": "Intégration ERP par éditeur certifié DGI CI : 500 000–2 000 000 FCFA",
+      "disponibilite_ci": "Natif CI — liste éditeurs certifiés DGI CI disponible"
+    },
+    {
+      "nom": "Azure Integration Services — iPaaS orchestration CI",
+      "usage": "Orchestration toutes intégrations CI : SCADA, ERP, EDI, Mobile Money, EUDR data — hub central",
+      "niveau_cible": "4-5",
+      "cout_estime": "100 000–500 000 FCFA/mois selon volume transactions",
+      "disponibilite_ci": "International — cloud Azure accessible CI, partenaires Microsoft CI"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "Société Ivoirienne d'Emballage Industriel (SIEI CI) — intégration OPC-UA + Orange Money API : 0 ressaisie, paiements fournisseurs < 4h",
+    "organisation": "SIEI CI (Société Ivoirienne d'Emballage Industriel, Yopougon CI — emballages carton, plastique pour industries CI)",
+    "contexte": "SIEI CI : fournisseur emballages pour 28 clients industriels CI (SUCAF CI, Nestlé CI, Unilever CI). SCADA Schneider EcoStruxure 4 lignes impression. ERP Odoo CI. 45 fournisseurs matières premières (papier, encres) dont 12 ruraux CI payés en Mobile Money CI. Problème : ressaisie SCADA → Odoo (3h/jour 1 ingénieur). Paiements fournisseurs ruraux : virement bancaire 15-30 jours → conflits réguliers.",
+    "probleme": "Ressaisie quotidienne 3h = 780h/an ingénieur × 35 000 FCFA/h = 27 M FCFA/an. Paiements fournisseurs ruraux 15-30j → 3 arrêts livraison matières/an (stock-out). Erreurs ressaisie : 8% données production erronées dans Odoo → décisions qualité incorrectes.",
+    "solution_deployee": "Kepware OPC-UA Server : PLCs Schneider Modicon → Odoo Manufacturing CI via REST API (MQTT topic par ligne). Orange Money Business CI API intégrée Odoo CI : déclenchement paiement automatique à validation bon de livraison. API DGI CI e-facture intégrée Odoo CI : facturation clients automatique. Formation 2 techniciens CI OPC-UA (INP-HB CI stage + FDFP CI).",
+    "resultats": "Ressaisie SCADA → Odoo : 3h → 0h/jour (-100%) — données temps réel. Erreurs données : 8% → 0,3%. Paiements fournisseurs ruraux : 15-30j → < 4h via Orange Money Business CI API. Stock-outs matières : 3/an → 0/an. e-facture DGI CI : délai paiement clients industriels CI 45j → 22j. Économies totales : 27 M FCFA ressaisie + 18 M FCFA stock-outs + accélération cash = 52 M FCFA/an. Coût intégration : 4,5 M FCFA — ROI en 5 semaines.",
+    "enseignements": [
+      "OPC-UA comme passerelle SCADA vers ERP est le ROI le plus rapide de l'industrie CI : 3h de ressaisie quotidienne × 250j/an = 750h ingénieur récupérées en une seule intégration",
+      "Orange Money Business CI API résout le problème de paiement fournisseurs ruraux CI qui est le frein numéro 1 aux approvisionnements réguliers — 0 fournisseur n'arrête une livraison à 4h de délai",
+      "L'API DGI CI e-facture réduit les délais de paiement clients de 45j à 22j — la conformité légale améliore directement le BFR (Besoin en Fonds de Roulement) CI"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "OPC-UA SCADA MES ERP CI", "intégration OT IT CI", "MQTT IoT industriel CI",
+      "EDI donneurs d'ordre CI", "Orange Money Business CI API", "Wave for Business CI API",
+      "API DGI CI e-facture", "GUCE CI dédouanement API", "APEX-CI API export CI",
+      "SIGMAP CI API marchés publics", "ressaisie zéro industrie CI", "iPaaS orchestration CI"
+    ],
+    "signaux_niveau_avance": [
+      "OPC-UA ou MQTT SCADA → ERP opérationnel",
+      "EDI ou API avec 2+ donneurs d'ordre CI",
+      "Orange Money Business CI API paiements automatiques",
+      "API DGI CI e-facture conforme Loi 2022-974",
+      "0 ressaisie entre systèmes OT et IT"
+    ],
+    "pieges_frequents": [
+      "Export CSV manuel SCADA hebdomadaire ≠ intégration — c'est du copier-coller automatisé, pas de l'intégration temps réel",
+      "Portail donneur d'ordre utilisé passivement ≠ EDI — saisir des commandes dans le portail d'un client c'est de la ressaisie, pas de l'intégration",
+      "Mobile Money CI ponctuel ≠ API automatisée — sans trigger automatique à validation bon de livraison, c'est manuel",
+      "Factures PDF email ≠ conformité DGI CI Loi 2022-974 — la loi exige un format certifié DGI CI, pas un PDF"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Silos complets. Clé USB/ressaisie. Commandes téléphone. Espèces fournisseurs. 0 API.",
+      "score_21_to_40": "CSV manuel SCADA. Email PDF. Portail donneur passif. Mobile Money ponctuel.",
+      "score_41_to_60": "OPC-UA SCADA→ERP. EDI 2 donneurs CI. Orange Money API. DGI CI conforme. GUCE partiel.",
+      "score_61_to_80": "Intégration OT/IT complète. EDI 5+. 0 paiement manuel. EUDR API. GUCE intégré.",
+      "score_81_to_100": "API marketplace industrielle. Microservices. EUDR exchange EU. iPaaS. Référence UEMOA."
+    }
+  }
+}

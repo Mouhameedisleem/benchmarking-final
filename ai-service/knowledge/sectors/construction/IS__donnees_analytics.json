@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "IS",
+    "sous_axe": "donnees_analytics",
+    "version": "1.0",
+    "langue": "fr",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "Le secteur BTP CI génère des données massives mais peu exploitées : métrés et devis (centaines de lignes par chantier), suivi d'avancement journalier, bons de livraison matériaux, pointages main-d'œuvre, rapports d'essais LBTP CI, ordres de service, situations de travaux. La plupart de ces données restent dans des fichiers Excel non consolidés ou des archives papier. L'exploitation analytique de ces données permettrait d'optimiser la productivité, d'anticiper les dépassements, d'améliorer les devis futurs et de benchmarker les chantiers entre eux.",
+    "chiffres_cles": [
+      "Un chantier BTP CI de 500 M FCFA génère ~50 000 lignes de données (métrés, bons livraison, pointages)",
+      "< 5% des entreprises BTP CI exploitent analytiquement leurs données historiques de chantier",
+      "Amélioration précision devis par analytics historique : 15-25% réduction des écarts devis/réalisé",
+      "Taux d'utilisation de BI (Business Intelligence) dans le BTP CI : estimé < 3%",
+      "Données BIM : un modèle Revit complexe contient 50 000 à 500 000 objets paramétriques exploitables"
+    ],
+    "specificites_locales": [
+      "BNETD CI : rapports de suivi standardisés avec données d'avancement par projet (base de données nationale)",
+      "SIGMAP DGMP CI : données historiques AO et attribution marchés (accessible pour benchmarking)",
+      "LBTP CI : base de données résultats essais matériaux CI (béton, sol, bitume) — référentiel qualité",
+      "APDP CI Loi 2013-450 : encadrement de l'exploitation analytique des données personnelles chantier",
+      "OHADA : exigences comptables et de reporting créant des données financières chantier structurées"
+    ]
+  },
+  "definition_axe": {
+    "titre": "Données et analytique dans le secteur BTP",
+    "description": "Capacité de l'entreprise BTP à collecter, structurer, analyser et exploiter ses données opérationnelles pour améliorer la performance de ses chantiers et de son business. L'analytique BTP couvre le benchmarking des coûts et productivités entre chantiers, la prédiction des dépassements budgétaires/délais, l'optimisation des devis à partir de l'historique, le suivi qualité par analyses statistiques (contrôle qualité béton LBTP CI), et l'exploitation des données BIM pour la simulation et l'optimisation.",
+    "perimetre": [
+      "Consolidation et structuration des données chantier (métrés, coûts, avancement, qualité)",
+      "Tableau de bord BI (Power BI, Tableau) : KPIs chantiers en temps réel",
+      "Analytics historique : benchmarking coûts/productivité entre chantiers passés",
+      "Prédictif : modèles de prévision dépassements coûts/délais à partir des données chantier",
+      "Exploitation données BIM (Revit QTO, COBie) pour la simulation et le control des coûts",
+      "Analyse données qualité LBTP CI : contrôle statistique qualité béton, tendances"
+    ],
+    "technologies_cles": [
+      "Power BI / Tableau — BI dashboard KPIs chantier et analytics BTP",
+      "Autodesk Revit QTO / Navisworks Manage — Extraction analytique données BIM (quantités, coûts 5D)",
+      "Python (Pandas, Scikit-learn) / R — Modèles prédictifs dépassements chantier BTP",
+      "SAP Analytics Cloud — BI intégré ERP pour PME/grandes entreprises BTP",
+      "Excel Power Query + Power Pivot — Analytics avancé accessible aux PME BTP CI sans code",
+      "Google Looker Studio (gratuit) — Alternative Power BI pour PME BTP CI à budget limité"
+    ]
+  },
+  "enjeux_specifiques": {
+    "enjeux": [
+      {
+        "titre": "Amélioration de la précision des devis grâce aux données historiques",
+        "description": "Les entreprises BTP CI sous-estiment régulièrement leurs devis (pour remporter les AO) puis dépassent les budgets sur le chantier. L'exploitation des données historiques (coûts réels par lot de travaux sur les chantiers passés) permet de calibrer les coefficients de prix et de prédire les risques de dépassement dès la phase de chiffrage.",
+        "impact": "Réduction des dépassements budgétaires de 20-35%, amélioration de la marge nette BTP"
+      },
+      {
+        "titre": "Détection précoce des dépassements par modèles prédictifs",
+        "description": "La Earned Value Analysis (EVA / Valeur Acquise) appliquée aux chantiers BTP CI permet de prédire en milieu de chantier le coût final et la date de fin réels à partir des performances à date. Sans analytics, les dépassements ne sont détectés qu'à la fin, quand il est trop tard pour agir.",
+        "impact": "Détection dépassements 3-6 semaines à l'avance, capacité d'action corrective précoce"
+      },
+      {
+        "titre": "Exploitation des données BIM pour la gestion des actifs",
+        "description": "Les maquettes BIM livrées à la fin des chantiers (BIM As-Built) contiennent des données précieuses pour la gestion future du bâtiment (matériaux utilisés, réseaux techniques, équipements, durées de vie). L'exploitation de ces données (format COBie) par les propriétaires CI pour leur Facility Management (FM) est encore rarissime.",
+        "impact": "Valeur ajoutée différenciante pour les promoteurs BTP CI qui livrent un BIM As-Built exploitable"
+      }
+    ]
+  },
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Inexistant",
+      "description": "Aucune collecte structurée de données. Données dans des fichiers Excel non standardisés, papier ou dans les têtes des chefs de chantier. Aucun tableau de bord. Décisions prises à l'intuition sans base analytique. Pas de traçabilité des coûts réels par poste.",
+      "signes_distinctifs": [
+        "Données chantier dans des fichiers Excel ad hoc, non standardisés entre chantiers",
+        "Aucun tableau de bord : performance évaluée lors des réunions mensuelles verbalement",
+        "Coûts réels par lot de travaux non tracés (enveloppe globale uniquement)",
+        "Décisions de devis basées sur l'expérience du chef de projet sans base de données",
+        "Données qualité LBTP CI dans des classeurs papier non analysés statistiquement"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Quelques tableaux Excel de suivi standardisés entre chantiers. Premiers graphiques de suivi d'avancement. Base de données devis informelle (prix de référence dans la tête des estimateurs). Aucun outil BI dédié.",
+      "signes_distinctifs": [
+        "Tableau Excel standardisé de suivi coûts/avancement commun à tous les chantiers",
+        "Graphiques d'avancement (S-curve) produits manuellement pour les réunions MO",
+        "Base de prix Excel partagée entre estimateurs (catalogue prix unitaires CI)",
+        "Quelques analyses ad hoc post-chantier (comparaison devis/réalisé sur 1-2 postes)",
+        "Résultats LBTP CI compilés dans un tableau Excel centralisé"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Tableau de bord BI (Power BI, Looker Studio) connecté aux données chantier. Analyse EVA (Earned Value Analysis) sur les chantiers principaux. Base de données historique devis/réalisé alimentée après chaque chantier. Exploitation partielle des données BIM pour les métrés.",
+      "signes_distinctifs": [
+        "Power BI ou Looker Studio : dashboard KPIs chantiers actualisé hebdomadairement",
+        "EVA sur les chantiers > 200 M FCFA : SPI, CPI, EAC calculés automatiquement",
+        "Base de données historique : coûts réalisés par poste sur les 10-15 derniers chantiers",
+        "BIM QTO : métrés automatiques extraits de Revit pour les chantiers BIM-ready",
+        "Analytics qualité LBTP CI : graphiques de tendance résistance béton par lot"
+      ]
+    },
+    "niveau_4": {
+      "label": "Optimisé",
+      "description": "Analytics avancé : modèles prédictifs de dépassement (ML) entraînés sur les données historiques CI. BI temps réel connecté à l'ERP et aux capteurs IoT chantier. Exploitation complète données BIM 5D (coûts). Benchmarking systématique inter-chantiers. Analytics conformes APDP CI.",
+      "signes_distinctifs": [
+        "Modèle ML prédiction dépassements : entraîné sur 30+ chantiers CI, précision > 75%",
+        "BI temps réel : ERP + IoT engins + application chantier → dashboard actualisé daily",
+        "BIM 5D : lien Revit ↔ ERP pour suivi coûts automatique par lot de travaux en temps réel",
+        "Benchmarking inter-chantiers automatisé : productivité, coûts, qualité comparés",
+        "Analytics données personnelles conformes APDP CI (agrégation anonymisée)"
+      ]
+    },
+    "niveau_5": {
+      "label": "Différenciant",
+      "description": "Analytics prédictifs et prescriptifs sur toute la chaîne de valeur BTP. IA pour l'optimisation des devis en temps réel (prix du marché CI intégrés). Exploitation BIM As-Built pour le Facility Management digital. Publication de benchmarks sectoriels CI. Données ouvertes contribuant au développement BTP CI.",
+      "signes_distinctifs": [
+        "Optimisation devis par IA : suggestions de prix unitaires basées sur marché CI temps réel + historique",
+        "BIM As-Built COBie livré systématiquement aux clients pour le Facility Management",
+        "Plateforme analytics partagée avec les sous-traitants CI pour amélioration collaborative",
+        "Publication de benchmarks anonymisés secteur BTP CI (contribution CNBTP CI / BNETD CI)",
+        "Jumeaux numériques exploités pour simulation pré-chantier et optimisation de conception"
+      ]
+    }
+  },
+  "indicateurs_cles": {
+    "indicateurs": [
+      {
+        "nom": "Précision des devis (écart devis/réalisé)",
+        "definition": "Écart moyen en % entre le coût estimé au devis initial et le coût final réalisé, sur le portefeuille des 12 derniers mois",
+        "unite": "%",
+        "cible_sectorielle": "Écart < ±10% (vs. ±25-40% sans analytics historique en CI)",
+        "frequence_mesure": "Par chantier achevé"
+      },
+      {
+        "nom": "Couverture analytics des chantiers actifs",
+        "definition": "Pourcentage des chantiers actifs suivis dans un tableau de bord analytique (Power BI ou équivalent)",
+        "unite": "%",
+        "cible_sectorielle": "> 80% des chantiers > 100 M FCFA suivis en analytique",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "CPI (Cost Performance Index) moyen du portefeuille",
+        "definition": "Indice de performance coût EVA moyen sur l'ensemble des chantiers actifs. CPI > 1 = sous budget, < 1 = dépassement",
+        "unite": "ratio (sans unité)",
+        "cible_sectorielle": "CPI > 0,95 (moins de 5% de dépassement budgétaire en moyenne)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Délai de production des rapports d'avancement",
+        "definition": "Temps nécessaire pour produire le rapport mensuel d'avancement (coûts, délais, qualité) à destination du maître d'ouvrage",
+        "unite": "heures",
+        "cible_sectorielle": "< 4 heures (automatisation BI) vs. 2-3 jours manuels",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Taux d'exploitation des données BIM pour les métrés",
+        "definition": "Pourcentage des métrés réalisés par extraction automatique BIM (Revit QTO) sur total métrés de l'entreprise",
+        "unite": "%",
+        "cible_sectorielle": "> 50% des métrés sur projets BIM depuis extraction automatique Revit",
+        "frequence_mesure": "Par projet"
+      }
+    ]
+  },
+  "bonnes_pratiques": {
+    "pratiques": [
+      {
+        "titre": "Construire une base de données historique devis/réalisé",
+        "description": "Après chaque chantier achevé, réaliser une analyse devis/réalisé par lot de travaux (gros œuvre, charpente, électricité, plomberie, finitions) et alimenter une base de données historique partagée entre les estimateurs. Format simple : Excel structuré avec 15-20 colonnes (type travaux, zone géographique CI, durée, coût/m², productivité, facteurs de risque). À partir de 10-15 chantiers historiques, les estimateurs peuvent calibrer leurs coefficients de prix.",
+        "benefice": "Réduction écart devis/réalisé de 25-40% à ±10-15%, amélioration de la marge nette BTP"
+      },
+      {
+        "titre": "Déployer Power BI connecté aux données ERP/chantier",
+        "description": "Connecter Power BI (inclus Microsoft 365 Business) aux sources de données existantes (Excel de suivi, ERP, logiciel chantier) pour créer un tableau de bord automatique : avancement physique/financier, CPI (EVA), qualité (taux NC), sécurité (TF), prévision date de fin. Actualisation automatique. Partage avec la direction et le maître d'ouvrage via lien Power BI en lecture seule.",
+        "benefice": "Décisions basées sur les données (data-driven), réduction délai rapport 3j → 2h, visibilité direction"
+      },
+      {
+        "titre": "Appliquer l'Earned Value Analysis (EVA) sur les grands chantiers",
+        "description": "Mettre en place l'EVA (Valeur Acquise) sur tous les chantiers > 200 M FCFA : définir le Baseline (BAC), mesurer la Valeur Acquise hebdomadairement (% avancement × budget), calculer CPI et SPI, projeter l'EAC (Estimated At Completion). En cas de CPI < 0,90 sur 3 semaines consécutives, déclencher automatiquement une revue de chantier avec plan correctif.",
+        "benefice": "Détection dépassements 4-8 semaines à l'avance, réduction des surprises en fin de chantier"
+      },
+      {
+        "titre": "Exploiter les données BIM pour le benchmarking des coûts",
+        "description": "Extraire automatiquement depuis Revit (QTO Quantities) les métrés par lot de travaux et les comparer avec les données historiques de la base coûts. Sur les grands projets BIM, le BIM 5D (lien Revit ↔ ERP) permet de suivre automatiquement le coût réel vs. le coût estimé par lot et par zone de bâtiment.",
+        "benefice": "Précision des métrés +40%, suivi coûts par zone temps réel, valeur ajoutée BIM pour le client"
+      },
+      {
+        "titre": "Analytics qualité LBTP CI pour le contrôle statistique",
+        "description": "Centraliser tous les résultats d'essais LBTP CI (résistance béton, CBR sol, cohésion bitume) dans une base de données avec visualisation graphique (cartes de contrôle SPC). Identifier les tendances de dérive de qualité avant que les résultats passent hors spécifications. Corrélation avec les fournisseurs de matériaux pour identifier les sources de non-conformité.",
+        "benefice": "Détection précoce des dérives qualité, réduction des reprises coûteuses, conformité BNETD CI"
+      }
+    ]
+  },
+  "ecueils_frequents": {
+    "ecueils": [
+      {
+        "titre": "Données non standardisées entre chantiers",
+        "description": "Si chaque chef de chantier utilise un format Excel différent pour le suivi des coûts, il est impossible de consolider et d'analyser les données de manière cohérente. Le tableau de bord BI ne peut pas fonctionner sans données standardisées.",
+        "solution": "Définir un format de données chantier standard (colonnes, codes WBS, nomenclature) obligatoire sur tous les chantiers avant de construire le BI. Standardiser d'abord, automatiser ensuite."
+      },
+      {
+        "titre": "Construire un tableau de bord que personne ne regarde",
+        "description": "De nombreuses PME BTP CI déploient Power BI mais les tableaux de bord ne sont pas consultés régulièrement car ils ne répondent pas aux vraies questions des décideurs (directeur technique, directeur financier).",
+        "solution": "Co-construire les dashboards avec les décideurs BTP CI : commencer par 5-7 KPIs essentiels, tester pendant 1 mois avec les utilisateurs, ajuster avant de complexifier"
+      },
+      {
+        "titre": "Exploiter des données personnelles sans conformité APDP CI",
+        "description": "Les analytics sur les données de pointage des ouvriers, de géolocalisation des travailleurs ou de biométrie chantier constituent des traitements de données personnelles soumis à l'APDP CI. Une analytics non déclarée expose l'entreprise à des sanctions.",
+        "solution": "Anonymiser les données personnelles dans les analyses agrégées, déclarer les traitements analytiques de données personnelles à l'APDP CI"
+      }
+    ]
+  },
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau d'exploitation analytique des données BTP entre organisations représentatives",
+    "lignes": [
+      {
+        "organisation": "BNETD CI",
+        "profil": "MOA délégué État CI, base de données projets d'infrastructure nationale",
+        "niveau_maturite": 3,
+        "points_forts": "Base de données nationale projets infrastructure CI, tableau de bord GEOPROJET CI (KPIs avancement projets), benchmarking coûts infrastructure publique CI, rapports semestriels analytiques au Gouvernement CI",
+        "points_faibles": "Analytics non temps réel (rapports mensuels/trimestriels), peu d'analyse prédictive, données BIM non exploitées analytiquement",
+        "initiatives_notables": "Base de données coûts unitaires infrastructure CI (référentiel national pour devis marchés publics BTP)"
+      },
+      {
+        "organisation": "COLAS CI",
+        "profil": "Filiale Bouygues Construction, ERP SAP S/4HANA avec analytics groupe",
+        "niveau_maturite": 4,
+        "points_forts": "SAP Analytics Cloud intégré à S/4HANA, EVA sur tous les chantiers > 500 M FCFA, BIM 5D suivi coûts temps réel, benchmarking inter-projets groupe Bouygues CI-Maroc-France",
+        "points_faibles": "Analytics groupe (Paris) peu adaptés aux spécificités CI, données locales sous-exploitées vs. reporting groupe",
+        "initiatives_notables": "Modèle ML prédiction dépassements CI entraîné sur 25 chantiers historiques CI (précision 78%)"
+      },
+      {
+        "organisation": "SATCI CI",
+        "profil": "Promoteur immobilier CI, 800-1200 logements/an",
+        "niveau_maturite": 2,
+        "points_forts": "Tableau Excel standardisé suivi coûts/avancement, analyse devis/réalisé post-chantier réalisée, quelques graphiques pour réunions maître d'ouvrage",
+        "points_faibles": "Aucun outil BI dédié, pas d'EVA, données BIM non exploitées analytiquement, historique non consolidé",
+        "initiatives_notables": "Projet Power BI en cours de déploiement pour les 6 chantiers actifs (prévu fin 2025)"
+      },
+      {
+        "organisation": "PME BTP CI classe D-E",
+        "profil": "Petite entreprise BTP locale, marchés < 50 M FCFA",
+        "niveau_maturite": 1,
+        "points_forts": "Données simples = peu de complexité analytique à gérer",
+        "points_faibles": "Aucune donnée structurée, décisions à l'intuition, impossibilité d'améliorer les devis sans base historique, rentabilité chantiers opaque",
+        "initiatives_notables": "Usage d'Excel de base pour le suivi des coûts, sans standardisation ni analyse comparative"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "COLAS CI — Déploiement EVA et analytics prédictifs sur le chantier échangeur de Marcory (Abidjan)",
+    "contexte": "COLAS CI a remporté en 2022 un marché de construction de l'échangeur de Marcory (Abidjan), infrastructure routière de 28 Mds FCFA en zone urbaine dense. La complexité technique (déviations de réseaux, fondations profondes, circulation maintenue) et la pression politique (délai électoral) rendaient la gestion analytique de la performance critique. COLAS CI a déployé pour la première fois en CI son système EVA complet avec reporting mensuel automatisé à AGEROUTE CI.",
+    "probleme": "À M+4, sans analytics, le chantier présentait des signaux d'alarme non formalisés : ralentissement du gros-œuvre piliers, surcoût matériaux (acier Chine pénurie 2022), sous-performance équipe fondations spéciales. Sans EVA, la projection du coût final (EAC) était impossible. AGEROUTE CI demandait un rapport mensuel d'avancement détaillé que COLAS CI produisait en 4-5 jours de travail manuel.",
+    "solution_deployee": "Déploiement EVA complet avec SAP Analytics Cloud intégré à S/4HANA : budget par lots (BAC), mesure hebdomadaire valeur acquise, calcul automatique CPI/SPI/EAC. Dashboard Power BI partagé avec AGEROUTE CI en lecture seule (actualisation hebdomadaire automatique). Modèle ML prédiction dépassements (basé sur 18 chantiers COLAS CI/Afrique historiques). Formation équipe chantier (5 personnes) sur les concepts EVA. Rapport mensuel AGEROUTE CI généré automatiquement en 2h.",
+    "resultats": {
+      "detection_depassement": "Dépassement gros-œuvre piliers détecté à M+5 (CPI lot = 0,82) → action corrective M+6 (renfort équipe + sous-traitant spécialisé) → CPI redressé à 0,94 à M+9",
+      "delai_rapport_mensuel": "4-5 jours → 2 heures (-90%) pour le rapport AGEROUTE CI",
+      "precision_eac": "EAC à M+6 : 29,8 Mds FCFA (vs. BAC 28 Mds = +6,4%). Réalisé final : 29,4 Mds (+5%). Précision prédiction EVA : ±1,4% sur le coût final",
+      "satisfaction_ageroute": "NPS AGEROUTE CI sur la qualité du reporting : 42 → 78/100",
+      "economies_action_corrective": "Action corrective M+6 sur gros-œuvre piliers : économie estimée 850 M FCFA vs. scénario sans EVA (détection tardive M+18 trop coûteuse à corriger)",
+      "gain_temps_reporting": "2 cadres libérés 3 jours/mois pour des tâches à valeur ajoutée (vs. production manuelle rapport)"
+    },
+    "enseignements": "L'EVA nécessite une définition rigoureuse des lots de travaux (WBS) et de leurs pondérations budgétaires avant le début du chantier. Sur les chantiers CI où les plans changent fréquemment (avenants), maintenir la cohérence du Baseline EVA est le principal défi. L'EAC EVA s'est avéré bien plus précis que les estimations humaines du directeur de chantier (±1,4% vs. ±15% estimation humaine)."
+  },
+  "ai_context": {
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune donnée structurée ni analytics. Décisions à l'intuition. Fichiers Excel ad hoc non standardisés. Aucun tableau de bord. Coûts réels par poste non tracés. Aucune base historique devis/réalisé.",
+      "score_21_to_40": "Quelques tableaux Excel standardisés. Graphiques d'avancement manuels pour réunions MO. Base de prix informelle. Analyses ad hoc post-chantier ponctuelles. Résultats LBTP CI compilés manuellement.",
+      "score_41_to_60": "Tableau de bord BI (Power BI ou Looker Studio) connecté aux données chantier. EVA sur grands chantiers. Base de données historique devis/réalisé alimentée. BIM QTO partiel. Analytics qualité LBTP CI.",
+      "score_61_to_80": "Analytics avancés : modèles prédictifs dépassements. BI temps réel ERP+IoT. BIM 5D suivi coûts automatique. Benchmarking inter-chantiers systématique. Conformité APDP CI des analytics.",
+      "score_81_to_100": "Analytics prédictifs et prescriptifs sur toute la chaîne de valeur BTP. IA optimisation devis. BIM As-Built COBie pour FM. Benchmarks sectoriels CI publiés. Jumeaux numériques pour simulation et optimisation."
+    },
+    "questions_cles_diagnostic": [
+      "Avez-vous une base de données historique des coûts réels par lot de travaux sur vos chantiers passés ?",
+      "Utilisez-vous la méthode EVA (Earned Value Analysis) pour piloter vos chantiers en cours ?",
+      "Disposez-vous d'un tableau de bord BI (Power BI, Tableau ou autre) pour le suivi de vos chantiers ?",
+      "Vos métrés sont-ils extraits automatiquement depuis vos maquettes BIM ou calculés manuellement ?",
+      "Combien de temps faut-il pour produire votre rapport mensuel d'avancement pour le maître d'ouvrage ?"
+    ],
+    "pieges_evaluation": [
+      "Ne pas confondre la présence d'Excel avec des analytics structurés — beaucoup de PME BTP CI ont des fichiers Excel non consolidés entre chantiers",
+      "Vérifier que le tableau de bord BI est réellement utilisé pour les décisions et non juste produit pour les réunions",
+      "Distinguer les analytics groupe des filiales internationales (souvent de niveau 4) de la réalité des PME BTP CI locales"
+    ]
+  },
+  "ressources": {
+    "references_reglementaires": [
+      "BNETD CI — Référentiel de rapportage analytique projets d'infrastructure publique CI",
+      "APDP CI Loi 2013-450 — Encadrement exploitation analytique données personnelles chantier",
+      "LBTP CI — Base de données résultats essais matériaux BTP CI (référentiel qualité)",
+      "SIGMAP DGMP CI — Données historiques marchés publics BTP CI (benchmarking coûts)"
+    ],
+    "outils_recommandes": [
+      "Microsoft Power BI — BI dashboard KPIs chantier (inclus Microsoft 365 Business)",
+      "Google Looker Studio (gratuit) — Alternative Power BI pour PME BTP CI budget limité",
+      "Autodesk Revit QTO / Navisworks — Extraction analytique données BIM (quantités, coûts 5D)",
+      "SAP Analytics Cloud — BI intégré ERP pour moyennes et grandes entreprises BTP CI",
+      "Python (Pandas, Scikit-learn) — Modèles prédictifs dépassements pour data scientists BTP"
+    ],
+    "formations_certifications": [
+      "PMI — Certification Earned Value Management (EVM) pour chefs de projet BTP",
+      "Microsoft Power BI Data Analyst — Certification BI pour responsables analytics BTP CI",
+      "Autodesk Certified — BIM 5D et analytics coûts depuis maquettes Revit",
+      "CNBTP CI — Formation analyse de données et reporting chantier BTP CI"
+    ]
+  }
+}

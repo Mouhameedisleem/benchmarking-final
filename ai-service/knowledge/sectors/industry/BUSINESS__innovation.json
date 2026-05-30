@@ -1,0 +1,284 @@
+{
+  "secteur": "industrie",
+  "axe": "BUSINESS",
+  "sous_axe": "innovation",
+  "label": "Innovation industrielle et R&D",
+  "description": "Capacité des entreprises industrielles à innover technologiquement et à développer de nouveaux produits ou procédés : R&D formalisée, innovation procédés (automatisation, robotisation), innovation produit (formulation, emballage), valorisation ressources locales CI (cacao, anacarde, hévéa, palmier), et co-innovation avec INP-HB CI et centres de recherche UEMOA.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Innovation industrielle CI : essentiellement incrémentale — amélioration procédés existants plutôt que R&D fondamentale",
+      "Valorisation produits locaux CI : 1er producteur mondial cacao (2,2 Mt/an) — taux transformation locale seulement 33% (objectif 50% PND CI)",
+      "Anacarde CI : 1er producteur mondial (900 000 t/an) — transformation locale < 15% — enjeu majeur industrialisation CI",
+      "INP-HB Yamoussoukro : université technologique CI — partenariats R&D industrie (SUCAF CI, SIFCA CI, NESTLE CI)",
+      "FONIJ CI (Fonds National pour l'Innovation et la Jeunesse) : financement startups industrie CI",
+      "OAPI (Organisation Africaine Propriété Intellectuelle) : dépôt brevets innovations industrielles CI — 17 pays membres"
+    ],
+    "acteurs_cles": [
+      "INP-HB Yamoussoukro — Institut National Polytechnique Félix Houphouët-Boigny : R&D industrielle CI",
+      "CNRA CI — Centre National de Recherche Agronomique : innovations agro-industrielles (cacao, café, palmier CI)",
+      "LBTP CI — innovation matériaux construction CI",
+      "OAPI — Organisation Africaine de la Propriété Intellectuelle : brevets innovations CI",
+      "FONIJ CI / CEPICI — financement innovations industrielles startups CI",
+      "Nestlé CI / Unilever CI — grandes entreprises avec R&D locale (formulations adaptées CI/UEMOA)"
+    ],
+    "reglementation_locale": [
+      "OAPI Accord de Bangui révisé 1999 : propriété intellectuelle innovations industrielles CI — 17 pays membres",
+      "Code des Investissements CI (Loi 2012-487) : exonérations fiscales R&D industries CI — jusqu'à 5 ans",
+      "FDFP CI Décret 96-287 : financement formations R&D et innovation industrielle CI à 70-80%",
+      "CNRA CI / FIRCA CI : financement R&D agro-industrielle (Fonds Interprofessionnel pour la Recherche et le Conseil Agricoles)",
+      "ISO 9001:2015 Art. 6.3 : planification changements — innovations doivent être documentées et maîtrisées",
+      "PND CI 2021-2025 : objectif taux transformation cacao 50% — financement pilotes transformation locale"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Aucune activité R&D. Production d'un produit unique non différencié. Procédés figés depuis des années. Aucun budget innovation. Aucune veille technologique. Pas de partenariat académique.",
+      "indicateurs": [
+        "0 budget R&D — innovation = accident",
+        "Produit unique non différencié — aucune extension gamme en 3+ ans",
+        "Procédés identiques depuis > 5 ans sans amélioration documentée",
+        "0 veille technologique formelle",
+        "0 partenariat INP-HB CI ni CNRA CI"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Quelques améliorations procédés informelles. Veille technologique par lecture de revues sectorielles. Essais produits ponctuels non documentés. Aucun dépôt de brevet. Budget innovation dans 'frais divers'.",
+      "indicateurs": [
+        "Améliorations procédés informelles — non documentées",
+        "Veille sectorielle : 1-2 personnes lisent des revues — non structurée",
+        "Essais nouveaux produits ponctuels — non documentés, non conformes ISO",
+        "0 brevet OAPI déposé",
+        "Budget R&D estimatif dans 'frais généraux'"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Budget R&D dédié 1-3% CA. Partenariat INP-HB CI ou CNRA CI formalisé. 1+ nouveau produit ou procédé lancé par an. Fiches de développement produit documentées. Veille technologique organisée. Dossier OAPI en cours.",
+      "indicateurs": [
+        "Budget R&D dédié 1-3% CA — ligne budgétaire isolée",
+        "Partenariat INP-HB CI ou CNRA CI : 1+ projet R&D formel/an",
+        "1+ nouveau produit ou amélioration procédé lancé/an documenté",
+        "Fiches développement produit conformes ISO 9001 : spécifications, essais, validation",
+        "Dossier OAPI en cours ou 1+ brevet déposé"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "R&D industrielle structurée. Laboratoire interne ou partenaire CNRA CI / INP-HB CI. 3+ nouveaux produits/procédés par an. Pipeline innovation géré. Valorisation produits locaux CI (cacao, anacarde, hévéa). 2+ brevets OAPI. Budget R&D 3-5% CA.",
+      "indicateurs": [
+        "Laboratoire R&D interne ou partenariat exclusif CNRA CI / INP-HB CI",
+        "Pipeline innovation géré : 10+ projets à différents stades",
+        "3+ nouveaux produits/procédés lancés par an — avec mesure ROI",
+        "Valorisation produits locaux CI : transformation cacao/anacarde/hévéa innovante",
+        "2+ brevets OAPI déposés — portefeuille propriété intellectuelle CI"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Champion innovation industrielle CI. Joint-venture R&D avec partenaires internationaux. Plateforme open innovation (startups CI + multinationales). Valorisation intégrale cacao/anacarde CI (zéro déchet). Référence innovation industrie UEMOA.",
+      "indicateurs": [
+        "Joint-venture R&D international : INP-HB CI + université étrangère ou multinationale",
+        "Open innovation : 5+ startups CI intégrées au pipeline R&D",
+        "Valorisation intégrale : 100% sous-produits industriels transformés — zéro déchet",
+        "5+ brevets OAPI actifs — licensing à d'autres industries UEMOA",
+        "Référence innovation industrielle UEMOA — publications, prix sectoriels CI"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Disposez-vous d'un budget R&D/innovation dédié et tracé ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — 0 budget R&D"},
+        {"valeur": 2, "label": "Innovation dans 'frais divers' — non isolé"},
+        {"valeur": 3, "label": "Budget R&D dédié 1-3% CA — ligne budgétaire isolée"},
+        {"valeur": 4, "label": "Budget R&D 3-5% CA + financement CNRA CI / FIRCA CI"},
+        {"valeur": 5, "label": "Budget R&D 5%+ CA + joint-venture international + open innovation"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Avez-vous des partenariats R&D formalisés avec INP-HB CI, CNRA CI ou équivalent ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — aucun partenariat académique"},
+        {"valeur": 2, "label": "Contacts informels — pas de convention signée"},
+        {"valeur": 3, "label": "Partenariat INP-HB CI ou CNRA CI : 1+ projet R&D formel/an"},
+        {"valeur": 4, "label": "Laboratoire partagé ou exclusif CNRA CI / INP-HB CI"},
+        {"valeur": 5, "label": "Joint-venture R&D international — INP-HB CI + partenaire étranger"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Valorisez-vous les ressources agro-industrielles locales CI (cacao, anacarde, hévéa, palmier) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — 0 valorisation locale, revente matière brute"},
+        {"valeur": 2, "label": "Transformation primaire basique — sans différenciation"},
+        {"valeur": 3, "label": "1+ produit transformé innovant lancé sur base matière locale CI"},
+        {"valeur": 4, "label": "Valorisation avancée : 3+ produits transformés, sous-produits récupérés"},
+        {"valeur": 5, "label": "Valorisation intégrale zéro déchet — brevets OAPI, licensing UEMOA"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Avez-vous déposé des brevets ou protections de propriété intellectuelle (OAPI) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — aucune démarche PI"},
+        {"valeur": 2, "label": "Notions d'OAPI — aucune démarche engagée"},
+        {"valeur": 3, "label": "1 brevet OAPI déposé ou dossier en cours"},
+        {"valeur": 4, "label": "2+ brevets OAPI actifs — portefeuille PI structuré"},
+        {"valeur": 5, "label": "5+ brevets OAPI + licensing actif à d'autres industries UEMOA"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "Budget R&D dédié",
+      "Partenariat INP-HB / CNRA CI",
+      "Nouveaux produits lancés/an",
+      "Valorisation matières locales CI",
+      "Brevets OAPI"
+    ],
+    "lignes": [
+      {
+        "organisation": "PMI CI (< 50 employés)",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "0 R&D, 0 partenariat, produit unique figé, 0 valorisation, 0 brevet"
+      },
+      {
+        "organisation": "Industrie moyenne CI (50-200 employés)",
+        "scores": [2, 2, 2, 2, 1],
+        "note_globale": 2,
+        "commentaire": "Améliorations informelles, contacts INP-HB informels, 1-2 essais/an, valorisation basique"
+      },
+      {
+        "organisation": "SUCAF CI",
+        "scores": [3, 3, 3, 3, 2],
+        "note_globale": 3,
+        "commentaire": "Budget R&D 2% CA, partenariat INP-HB CI, 2 produits/an, mélasse valorisée, 1 brevet"
+      },
+      {
+        "organisation": "SIFCA CI",
+        "scores": [5, 5, 5, 5, 4],
+        "note_globale": 5,
+        "commentaire": "Budget R&D 5% CA, labo partagé CNRA CI, 5+ produits/an, valorisation intégrale palmier, 4 brevets OAPI"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "SIFCA CI / CIL — innovation agro-industrielle CI (palm oil, hévéa)",
+      "part_de_marche_estimee": "Leader innovation agro-industrielle CI",
+      "forces": ["Labo R&D interne + CNRA CI partenariat", "Valorisation intégrale palmier CI", "4+ brevets OAPI", "INP-HB CI partenaire industriel de référence"],
+      "faiblesses": ["Secteur agro uniquement", "Modèle groupe international CI — non réplicable PMI"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "OLAM Agri Africa — innovation transformation agricole Afrique",
+      "part_de_marche_estimee": "Leader transformation anacarde et cacao Afrique",
+      "forces": ["R&D transformation anacarde CI", "Valorisation coque anacarde (CNSL)", "Partenariats universités Afrique", "Brevets transformation tropicaux"],
+      "faiblesses": ["Concurrence directe industries CI locales", "Ressources R&D concentrées Singapore"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "Nestlé CI — R&D produits adaptés marché UEMOA",
+      "part_de_marche_estimee": "Leader R&D produits alimentaires adaptés CI",
+      "forces": ["Centre R&D Abidjan CI (formulations UEMOA)", "Fortification nutriments locaux", "Partenariats INP-HB CI", "Budget R&D 1,5 Md FCFA/an CI"],
+      "faiblesses": ["R&D propriétaire — non partageable PMI CI", "Axé marché de masse UEMOA"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "INP-HB Yamoussoukro — partenariat R&D industrielle CI",
+      "usage": "Convention R&D formalisée : stages ingénieurs, projets fin d'études, labo partagé",
+      "niveau_cible": "3+",
+      "cout_estime": "Convention INP-HB CI : 2 000 000–8 000 000 FCFA/an selon périmètre",
+      "disponibilite_ci": "Natif CI — INP-HB Yamoussoukro"
+    },
+    {
+      "nom": "CNRA CI — recherche agro-industrielle CI",
+      "usage": "R&D transformation cacao, café, palmier, anacarde — variétés améliorées, procédés",
+      "niveau_cible": "3+",
+      "cout_estime": "Convention CNRA CI : 1 000 000–5 000 000 FCFA/an",
+      "disponibilite_ci": "Natif CI — CNRA Adiopodoumé CI"
+    },
+    {
+      "nom": "OAPI — dépôt brevet innovations industrielles CI",
+      "usage": "Protection propriété intellectuelle innovations procédés et produits CI — 17 pays membres",
+      "niveau_cible": "3+",
+      "cout_estime": "200 000–500 000 FCFA par brevet (dépôt OAPI via mandataires CI)",
+      "disponibilite_ci": "Natif UEMOA — OAPI Yaoundé, mandataires PI Abidjan disponibles"
+    },
+    {
+      "nom": "FIRCA CI — financement R&D agro-industrielle",
+      "usage": "Fonds Interprofessionnel Recherche Agricole CI : cofinancement projets R&D transformation",
+      "niveau_cible": "3+",
+      "cout_estime": "Financement jusqu'à 70% projet R&D agro-industriel CI",
+      "disponibilite_ci": "Natif CI — FIRCA Abidjan"
+    },
+    {
+      "nom": "PLM (Product Lifecycle Management) — Siemens Teamcenter ou PTC Windchill",
+      "usage": "Gestion cycle de vie produit : formule, spécifications, évolutions, traçabilité R&D",
+      "niveau_cible": "4",
+      "cout_estime": "5 000 000–20 000 000 FCFA implémentation selon périmètre",
+      "disponibilite_ci": "International — partenaires PLM disponibles CI (Siemens bureau CI)"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "Société de Transformation de la Noix de Cajou (STNC CI) — innovation procédé anacarde : valorisation coque CNSL",
+    "organisation": "STNC CI (Société de Transformation de la Noix de Cajou, San Pedro CI) — 4e plus grande unité transformation anacarde CI",
+    "contexte": "CI : 1er producteur mondial anacarde (900 000 t/an), taux transformation locale < 15%. STNC CI transforme 25 000 t/an → amandes cajou. Sous-produit : coque anacarde (LCC/CNSL, Cashew Nut Shell Liquid) — 30% du poids total — valorisée à 0 FCFA, incinérée.",
+    "probleme": "Perte économique coque anacarde : 7 500 tonnes/an incinérées. CNSL = produit chimique industriel (résines, frictions, peintures, bio-carburant) — prix marché 350 FCFA/kg. Partenariat INP-HB CI inexistant. 0 brevet. Budget R&D = 0.",
+    "solution_deployee": "Partenariat INP-HB CI Yamoussoukro (convention 3 M FCFA/an) + financement FIRCA CI (70%). Pilote extraction CNSL : presse mécanique froide (technologie adaptée au CI par INP-HB CI). Dépôt brevet OAPI : procédé extraction CNSL froid adapté anacarde CI (mandataire PI Abidjan). Lancement filiale CNSL-CI : commercialisation CNSL aux industries de peintures CI et à l'export.",
+    "resultats": "CNSL valorisé : 7 500 t/an × 350 FCFA/kg = 2,625 Mds FCFA revenus nouveaux. Marge CNSL : 42% (matière première à coût nul). Coût programme R&D total : 25 M FCFA (INP-HB CI + FIRCA CI) — ROI en 11 jours de vente CNSL. Brevet OAPI déposé : protège procédé CI dans 17 pays UEMOA. 3 emplois ingénieurs CI créés. Référence CNRA CI / APEX-CI : cas d'usage valorisation intégrale anacarde CI.",
+    "enseignements": [
+      "Les sous-produits industriels CI (coque anacarde, cosse cacao, bagasse canne) représentent des milliards de FCFA de revenus non capturés — la R&D de valorisation est l'investissement le plus rentable du secteur",
+      "INP-HB CI + FIRCA CI peuvent financer jusqu'à 70% d'un projet R&D agro-industriel CI — le coût net pour l'entreprise est minimal",
+      "Un brevet OAPI à 300 000 FCFA protège l'innovation dans 17 pays — c'est le meilleur ROI de toute dépense juridique possible pour une PMI CI"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "R&D industrielle CI", "innovation procédé", "INP-HB Yamoussoukro", "CNRA CI",
+      "FIRCA CI financement R&D", "OAPI brevet CI", "valorisation cacao anacarde hévéa",
+      "transformation locale CI", "CNSL cajou CI", "open innovation CI",
+      "pipeline innovation", "PLM produit", "nouveau produit lancé"
+    ],
+    "signaux_niveau_avance": [
+      "Budget R&D dédié > 1% CA avec suivi",
+      "Partenariat INP-HB CI ou CNRA CI formalisé",
+      "1+ brevet OAPI déposé",
+      "Valorisation sous-produits industriels CI",
+      "3+ nouveaux produits/procédés lancés par an"
+    ],
+    "pieges_frequents": [
+      "Améliorations procédés informelles ≠ R&D — sans documentation et budget dédié, ce n'est pas mesurable",
+      "Contacts INP-HB CI sans convention ≠ partenariat — un email d'un professeur n'est pas de la R&D formalisée",
+      "Acheter un équipement plus performant ≠ innovation — c'est un investissement en capital, pas de la R&D",
+      "Valorisation ressources locales CI = vendre matière brute à meilleur prix — non, c'est transformer pour monter en valeur"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "0 R&D, procédés figés, produit unique non différencié, 0 partenariat, 0 brevet.",
+      "score_21_to_40": "Améliorations informelles, contacts INP-HB CI informels, essais ponctuels non documentés.",
+      "score_41_to_60": "Budget R&D 1-3% CA, partenariat INP-HB/CNRA CI formel, 1+ produit/an, 1 brevet OAPI.",
+      "score_61_to_80": "Labo R&D dédié, 3+ produits/an, valorisation matières locales CI, 2+ brevets OAPI.",
+      "score_81_to_100": "Joint-venture international, open innovation CI, valorisation intégrale, 5+ brevets OAPI, référence UEMOA."
+    }
+  }
+}

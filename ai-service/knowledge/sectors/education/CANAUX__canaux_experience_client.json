@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "CANAUX",
+    "sub_axis": "canaux_experience_client",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Omnicanal éducatif : du campus physique à l'app mobile, WhatsApp et LMS",
+      "description": "Les établissements éducatifs CI gèrent désormais l'expérience apprenant sur 5-7 canaux simultanés : campus physique, portail web, LMS, app mobile, WhatsApp Business, SMS, et réseaux sociaux (Facebook, Instagram, TikTok). En CI, WhatsApp est le canal de communication le plus utilisé entre étudiants et établissements (78% des étudiants CI préfèrent WhatsApp pour les questions rapides — ARTCI 2024). Les établissements leaders (Pigier CI, UVCI) ont une stratégie omnicanal cohérente avec des temps de réponse définis par canal.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "45%",
+      "source": "ARTCI / UVCI Rapport Canaux 2024",
+      "year": 2024
+    },
+    {
+      "title": "Classes virtuelles immersives et expériences d'apprentissage synchrones enrichies",
+      "description": "La visioconférence basique (Zoom, Teams) évolue vers des expériences d'apprentissage synchrones enrichies : tableaux blancs collaboratifs (Miro, FigJam), salles de sous-groupes automatisées (breakout rooms IA), présence VR en classe virtuelle (Meta Horizon Workrooms pour les cours qui le nécessitent), polling et quiz en temps réel (Mentimeter, Slido). En Côte d'Ivoire, l'UVCI propose des cours synchrones Zoom 2h/semaine complémentaires aux cours asynchrones Moodle, avec Mentimeter pour l'engagement en temps réel.",
+      "impact_level": "medium",
+      "horizon": "short_term",
+      "adoption_rate": "30%",
+      "source": "AUF / UVCI CI Rapport Cours Synchrones 2024",
+      "year": 2024
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "WhatsApp Business API pour communication institutionnelle éducation",
+      "category": "Messagerie / Communication",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "UVCI CI (chatbot WhatsApp Business 45% déflexion), Pigier CI (WhatsApp broadcasts programmés), 55% établissements privés CI",
+      "leading_vendors": ["WhatsApp Business API (Meta)", "Twilio WhatsApp CI", "Infobip (WhatsApp Business Africa)", "MessageBird", "Vonage (WhatsApp API)"]
+    },
+    {
+      "name": "Classes virtuelles enrichies (Zoom + outils engagement temps réel)",
+      "category": "EdTech / Visioconférence",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "UVCI CI (Zoom + Mentimeter), INPHB (Microsoft Teams + Miro), Pigier CI (Zoom + Kahoot!), 65% établissements CI",
+      "leading_vendors": ["Zoom for Education", "Microsoft Teams Education", "Google Meet for Education", "Mentimeter", "Kahoot! for Education"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Stratégie omnicanal UVCI : LMS Moodle (cours asynchrones, canal principal), Zoom (cours synchrones 2h/semaine, intégré LTI Moodle), WhatsApp Business chatbot (FAQ scolarité 45% déflexion + broadcasts annonces officielles à 45K étudiants), app mobile UVCI offline (cours + notifications), SMS automatiques (résultats, relances paiements), portail web (scolarité, paiements), email institutionnel Microsoft 365",
+        "differentiator": "Couverture omnicanal la plus complète du secteur éducatif CI — 7 canaux gérés avec charte de réponse (WhatsApp Business : < 2h ouvrées, SMS résultats : < 5 min post-délibération, Zoom : 2h hebdomadaires par filière), SLA par canal respecté à 94% en 2024",
+        "source": "UVCI Rapport Canaux Communication 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Strathmore University Nairobi",
+        "country": "Kenya",
+        "key_practice": "Expérience apprenant omnicanal premium : app Strathmore (cours, emploi du temps, notes, campus map, événements), WhatsApp Business (tuteur dédié par classe sur WhatsApp Groups — 1 tuteur/30 étudiants), classe virtuelle Teams avec sous-groupes IA (Breakout Rooms automatiques selon les préférences d'apprentissage), portail parents (notification résultats + paiements M-Pesa temps réel), NPS omnicanal trimestriel",
+        "differentiator": "Expérience apprenant la plus intégrée d'Afrique de l'Est — app mobile avec 85% d'utilisateurs actifs quotidiens (vs. 35% benchmark LMS Afrique), WhatsApp Groups tuteur : 1 groupe/classe avec SLA réponse 4h max, NPS global 79/100",
+        "source": "Strathmore University Annual Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "edX (2U) — Expérience apprenant en ligne premium",
+        "country": "États-Unis",
+        "key_practice": "Expérience omnicanal apprenant : LMS (cours asynchrones), live sessions (classes virtuelles synchrones hebdomadaires avec experts industrie), communauté Discord par cohorte (pair learning asynchrone), app mobile (cours offline + notifications push), LinkedIn intégration (partage automatique certifications), email nurturing automatique (8 séquences personnalisées selon progression)",
+        "differentiator": "Leader mondial expérience apprenant en ligne — Discord par cohorte : engagement communautaire +38% vs. forums LMS seuls, LinkedIn intégration : 75% des certifications partagées immédiatement (visibilité employeurs), taux d'achèvement 2x benchmark MOOC grâce au mix omnicanal",
+        "source": "edX / 2U Annual Report 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Canal unique (campus physique), aucun canal digital, communication par affichage papier uniquement, aucune application, aucun email institutionnel.",
+    "level_2_developing": "Email institutionnel (sans charte de réponse), présence Facebook non gérée, WhatsApp informel (numéros personnels des enseignants), pas de portail apprenant ni app.",
+    "level_3_defined": "Portail apprenant (notes, emploi du temps), LMS actif, WhatsApp Business (annonces officielles), email institutionnel avec SLA basique (< 48h), SMS résultats automatiques.",
+    "level_4_managed": "Omnicanal 5+ canaux avec charte de réponse (SLA par canal), chatbot WhatsApp Business (déflexion > 30%), app mobile, classes virtuelles enrichies (Mentimeter, Kahoot!), NPS omnicanal mesuré.",
+    "level_5_optimizing": "Omnicanal 7+ canaux avec SLA automatisés (chatbot IA + humain), app mobile (offline + notifications push personnalisées), classe virtuelle immersive (VR/AR pour cas pratiques), NPS > 75 omnicanal, personnalisation du canal selon le profil apprenant (ML canal préféré)."
+  },
+  "regulations": [
+    {
+      "name": "ARTCI — Réglementation des communications électroniques à caractère commercial éducatif",
+      "authority": "ARTCI (Autorité de Régulation des Télécommunications / TIC de Côte d'Ivoire)",
+      "description": "Les communications électroniques à caractère commercial des établissements éducatifs CI (emails marketing, SMS promotionnels, messages WhatsApp de prospection) sont soumises à la réglementation ARTCI : obligation de consentement préalable (opt-in) pour les communications marketing, droit de désabonnement immédiat (opt-out), interdiction des communications non sollicitées aux mineurs. La distinction est faite entre communications 'service' (résultats, inscriptions, annonces administratives — sans opt-in requis) et communications 'commerciales' (promotions, nouvelles filières — opt-in obligatoire).",
+      "compliance_deadline": "En vigueur",
+      "impact_on_sector": "Les établissements CI doivent segmenter leurs bases de contacts (apprenants actuels = service vs. prospects = commercial) et gérer les consentements ARTCI pour leurs campagnes WhatsApp/SMS/email marketing — sous peine de plaintes ARTCI pouvant entraîner des blocages de leurs numéros WhatsApp Business"
+    },
+    {
+      "name": "APDP CI — Consentement pour les canaux de communication digitaux et données de contact",
+      "authority": "APDP (Autorité de Protection des Données Personnelles de Côte d'Ivoire)",
+      "description": "La collecte des données de contact des apprenants (numéro de téléphone, email, profil WhatsApp) pour les communications institutionnelles requiert un traitement conforme à la Loi APDP CI 2013-450 : finalité explicite (communication académique vs. marketing), durée de conservation limitée (pendant la scolarité + 3 ans), droit d'opposition, et interdiction de cession à des tiers sans consentement. Les numéros de téléphone des mineurs collectés pour les notifications parents sont soumis à des règles plus strictes.",
+      "compliance_deadline": "En vigueur",
+      "impact_on_sector": "Les établissements doivent documenter la base juridique de chaque canal de communication (contact nécessaire à l'exécution du service éducatif = base légale suffisante sans consentement explicite, pour la communication académique)"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Infobésité et fatigue des apprenants face à la multiplication des canaux",
+      "description": "En Côte d'Ivoire, des établissements communiquent sur 6-8 canaux simultanés (LMS, email, WhatsApp Groups, Facebook page, SMS, affichage physique, Instagram, TikTok) sans charte de cohérence : le même message est répété 4 fois sur 4 canaux (LMS + email + WhatsApp + SMS), ou pire, des messages contradictoires sont envoyés sur des canaux différents. En 2024, 65% des étudiants CI déclarent recevoir 'trop de communications' de leurs établissements (enquête ARTCI). L'infobésité génère une 'désinformation par bruit' : les informations importantes (changements d'emploi du temps, résultats, urgences) se noient dans le flux.",
+      "severity": "medium",
+      "likelihood": "high",
+      "mitigation": "Créer une charte de communication omnicanal claire : définir le canal principal de chaque type de message (résultats → SMS uniquement, urgences → SMS + push app, annonces → LMS + email hebdomadaire digest), limiter le nombre de messages WhatsApp à 3/semaine maximum, désactiver les canaux redondants — UVCI CI a réduit le volume de communications de 35% tout en augmentant l'ouverture des emails de 22% (filtre signal/bruit amélioré)"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "TikTok et Instagram Reels pour l'engagement des apprenants Gen Z CI",
+      "description": "En Côte d'Ivoire, 78% des 18-25 ans utilisent TikTok quotidiennement (ARTCI 2024), 65% Instagram. Les établissements éducatifs CI qui publient des contenus pédagogiques courts sur TikTok ('micro-lessons', quiz TikTok, témoignages alumni 60 secondes) génèrent un engagement 5x supérieur aux publications Facebook longues. ALX Africa CI a acquis 45% de ses inscrits 2024 via TikTok et Instagram (contenu authentique de leurs apprenants). L'enjeu est de transformer ces canaux en outil de recrutement ET de pédagogie complémentaire.",
+      "impact_level": "medium",
+      "time_to_value": "< 1 an",
+      "prerequisite_maturity": "Niveau 2 — équipe communication avec compétences contenu vidéo court"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "Infobip — Partenariat UVCI CI et 12 universités UEMOA (WhatsApp Business éducation)",
+      "montant": "320M FCFA (contrat annuel messages WhatsApp Business)",
+      "investisseurs": ["UVCI (client)", "AUF (coordination contrat groupé)"],
+      "annee": 2024,
+      "description": "L'AUF a négocié un contrat groupé avec Infobip (opérateur WhatsApp Business API) pour 12 universités UEMOA dont l'UVCI CI, offrant un tarif préférentiel sur les messages WhatsApp Business (0,02 EUR/message vs. 0,06 EUR tarif standard). L'UVCI envoie via Infobip : notifications résultats (45K étudiants), relances paiements, alertes urgences, et ses broadcasts officiels. Le chatbot UVCI (développé sur Infobip Flow Builder) traite 4 200 conversations/mois."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "Pigier Côte d'Ivoire",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Stratégie omnicanal Pigier CI — WhatsApp Business + Salesforce + Zoom + SMS pour l'expérience apprenant premium",
+    "description": "Pigier CI a déployé en 2023 une stratégie omnicanal structurée autour de 6 canaux intégrés dans Salesforce Education Cloud (CRM central) : (1) WhatsApp Business (annonces officielles + groupes classe avec tuteur référent, 1 groupe/promotion) ; (2) Zoom intégré Blackboard LMS (cours synchrones 4h/semaine, enregistrements automatiques disponibles J+1 sur LMS) ; (3) App Pigier (emploi du temps, notes, devoirs, paiements) avec notifications push personnalisées (par filière, par niveau) ; (4) SMS automatiques (résultats examens en < 5 min post-saisie, rappels paiements J-3) ; (5) Email (newsletters hebdomadaires, communications administratives) ; (6) Portail web self-service (attestations, relevés, changements de cours). Charte de réponse : WhatsApp tuteur < 4h ouvrées, administration < 24h.",
+    "resultats": "NPS global omnicanal : 74/100 (en hausse de 18 points depuis déploiement 2023). Taux d'engagement WhatsApp groupes classe : 89% de présence active (vs. 45% emails institutionnels avant). Temps de réponse administration WhatsApp : 2h15 en moyenne (vs. 48h email avant). Inscriptions attribuables aux réseaux sociaux (Instagram + TikTok) : 28% des nouvelles inscriptions 2024 (vs. 12% en 2022). Taux de désabonnement email : 2,1% (vs. 8,5% avant segmentation APDP CI académique vs. marketing).",
+    "source": "Pigier CI Rapport Marketing et Expérience Apprenant 2024",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif canaux expérience apprenant — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "Canaux actifs", "Chatbot WhatsApp", "NPS omnicanal", "SLA réponse WhatsApp"],
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "valeurs": ["7 canaux (LMS, Zoom, WhatsApp, App, SMS, Email, Web)", "Oui (45% déflexion, 4 200 conv/mois)", "72/100 (semestriel)", "< 2h ouvrées (charte)"]
+      },
+      {
+        "organisation": "Pigier CI",
+        "valeurs": ["6 canaux (LMS, Zoom, WhatsApp, App, SMS, Email)", "Non (conseiller humain WhatsApp)", "74/100 (trimestriel)", "< 4h ouvrées (charte)"]
+      },
+      {
+        "organisation": "UFHB Abidjan",
+        "valeurs": ["3 canaux (campus, email, Facebook non géré)", "Non", "Non mesuré", "Aucun SLA défini"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue la stratégie omnicanal dans le secteur éducation CI : nombre de canaux actifs (LMS, app mobile, WhatsApp Business, SMS, email, classes virtuelles), présence d'un chatbot WhatsApp pour la déflexion, SLA par canal définis et respectés, NPS omnicanal mesuré, et conformité ARTCI/APDP CI pour les communications électroniques.",
+    "maturity_max_description": "Établissement éducatif CI avec stratégie omnicanal complète : 7+ canaux actifs avec charte de réponse (SLA par canal), chatbot WhatsApp Business (> 40% déflexion), app mobile offline + notifications push personnalisées, classes virtuelles enrichies (Mentimeter, Kahoot!), NPS > 74 omnicanal, conformité ARTCI/APDP CI communications — canal principal défini par type de message.",
+    "scoring_rubric": {
+      "score_1_to_20": "Canal unique (campus physique), aucun digital, affichage papier, aucune app ni email institutionnel.",
+      "score_21_to_40": "Email institutionnel (sans SLA), Facebook non géré, WhatsApp informel (numéros perso), aucun portail apprenant.",
+      "score_41_to_60": "Portail apprenant + LMS + WhatsApp Business (broadcasts), email avec SLA basique (< 48h), SMS résultats automatiques, classes virtuelles basiques.",
+      "score_61_to_80": "5+ canaux avec charte de réponse, chatbot WhatsApp > 30% déflexion, app mobile, classes virtuelles enrichies (Mentimeter), NPS omnicanal mesuré.",
+      "score_81_to_100": "7+ canaux, SLA automatisés (chatbot IA), app offline + push personnalisées, NPS > 74, conformité ARTCI/APDP CI, ML canal préféré par profil apprenant."
+    },
+    "prompt_injection_context": "Secteur éducation CI : WhatsApp est le canal préféré de 78% des étudiants CI (ARTCI 2024). ARTCI impose le consentement opt-in pour les communications commerciales (prospection) et le droit d'opt-out. APDP CI conditionne la collecte et l'utilisation des données de contact. UVCI est le modèle omnicanal éducatif CI (7 canaux, chatbot WhatsApp 45% déflexion). Les établissements doivent distinguer communications 'service' (sans opt-in) et communications 'commerciales' (opt-in obligatoire).",
+    "key_questions_for_llm": [
+      "Sur quels canaux communiquez-vous avec vos apprenants (LMS, WhatsApp Business, app mobile, SMS, email, classes virtuelles) ? Avez-vous une charte de réponse avec des SLA définis par canal ?",
+      "Utilisez-vous WhatsApp Business API pour vos communications institutionnelles ? Avez-vous un chatbot automatisant les réponses aux questions fréquentes ?",
+      "Vos communications sur WhatsApp/SMS/email respectent-elles les règles ARTCI (opt-in pour le marketing, opt-out immédiat) et APDP CI ?",
+      "Proposez-vous des classes virtuelles enrichies (outils d'engagement en temps réel comme Mentimeter, Kahoot!, tableaux blancs collaboratifs) au-delà de la visioconférence basique ?",
+      "Mesurez-vous le NPS global de votre expérience apprenant sur l'ensemble de vos canaux de communication ? Quel est votre score actuel ?"
+    ]
+  }
+}

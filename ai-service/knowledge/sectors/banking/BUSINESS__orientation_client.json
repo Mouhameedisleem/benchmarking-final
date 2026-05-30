@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "axis": "BUSINESS",
+    "sub_axis": "Orientation client",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Expérience bancaire sans friction — le zéro effort comme standard",
+      "description": "Les clients bancaires UEMOA comparent désormais leur banque à Wave (ouverture de compte en 5 min) et aux GAFA. Toute friction dans le parcours client (délai d'attente en agence, formulaires papier) est perçue comme une défaillance.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "78 % des clients bancaires africains prêts à changer de banque pour une meilleure expérience digitale (Accenture 2024)",
+      "source": "Accenture Banking Consumer Study Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Hyper-personnalisation bancaire — offres basées sur le profil transactionnel",
+      "description": "Les banques leaders utilisent l'analyse des données transactionnelles pour proposer des offres proactives (crédit pré-approuvé, épargne automatique, assurance contextuelle) au bon moment, via le bon canal.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "55 % des clients bancaires attendent des recommandations proactives personnalisées (Deloitte Africa 2024)",
+      "source": "Deloitte Banking Consumer Study Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Protection du consommateur bancaire — réglementation BCEAO renforcée",
+      "description": "La BCEAO renforce les exigences de protection des consommateurs : transparence des frais, délai de traitement des réclamations, droit au remboursement. Les banques doivent digitaliser et accélérer leur processus de gestion des réclamations.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "100 % des banques UEMOA concernées par les nouvelles directives BCEAO sur la protection du consommateur",
+      "source": "BCEAO Instruction sur la protection des consommateurs de services financiers 2023",
+      "year": "2023"
+    },
+    {
+      "title": "NPS et CX bancaire — mesure systématique de la satisfaction",
+      "description": "Le Net Promoter Score devient un KPI de direction dans les banques africaines leaders. Les banques avec NPS > 40 génèrent 1,5× plus de recommandations et ont un taux d'attrition 30 % plus faible.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "45 % des banques africaines mesurent le NPS régulièrement (KPMG Africa Banking 2024)",
+      "source": "KPMG Africa Banking Report 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "CRM Bancaire",
+      "category": "Gestion de la relation client",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne en UEMOA",
+      "leading_vendors": ["Salesforce Financial Services Cloud", "Microsoft Dynamics 365 Banking", "Oracle CX Banking", "Temenos CRM", "SAP Banking CRM"]
+    },
+    {
+      "name": "Digital Onboarding & eKYC",
+      "category": "Acquisition client sans agence",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible en CI",
+      "leading_vendors": ["Smile Identity (Afrique)", "Onfido", "Jumio", "Trulioo", "Sumsub"]
+    },
+    {
+      "name": "Plateforme de gestion des réclamations",
+      "category": "Service après-vente bancaire",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["Zendesk for Banking", "ServiceNow FSM", "Freshdesk", "Pegasystems", "Salesforce Service Cloud"]
+    },
+    {
+      "name": "Chatbot & Voicebot bancaire",
+      "category": "Assistance client digitale 24/7",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["IBM Watson Assistant Banking", "Google CCAI", "Microsoft Bot Framework", "Avaamo", "Kasisto (KAI Banking)"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Société Générale Côte d'Ivoire (SGCI)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Programme Relation Client formalisé, NPS mesuré trimestriellement, gestionnaire dédié pour les clients Premium",
+        "differentiator": "Premier réseau bancaire ivoirien à déployer un chatbot WhatsApp pour les questions courantes clients",
+        "source": "SGCI Rapport Annuel 2023 / APBEF-CI Classement Satisfaction 2023"
+      },
+      {
+        "organisation": "BOA Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Segmentation client granulaire (masse, PME, corporate, agricole), offres adaptées à chaque segment",
+        "differentiator": "Couverture rurale la plus dense du réseau bancaire ivoirien — 120+ agences permettant la proximité client",
+        "source": "BOA CI Rapport Annuel 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique / UEMOA",
+        "key_practice": "Ecobank NPS Program : mesure du NPS dans 33 pays, programme Voice of Customer unifié, résolution client < 48h",
+        "differentiator": "Customer Experience Index Ecobank : premier groupe bancaire africain à publier ses scores CX pays par pays",
+        "source": "Ecobank Annual Report 2023 / Ecobank CX Report"
+      },
+      {
+        "organisation": "Standard Bank",
+        "country": "Afrique du Sud / Afrique de l'Ouest",
+        "key_practice": "Human-Centred Design appliqué à tous les nouveaux produits bancaires, NPS > 50 dans 15 pays",
+        "differentiator": "Standard Bank Design Lab : 50 designers UX dédiés à l'expérience bancaire sur 20 marchés africains",
+        "source": "Standard Bank Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "DBS Bank",
+        "country": "Singapour",
+        "key_practice": "NPS de 67 (vs moyenne industrie : 15), 1 000+ points de personnalisation par client via IA",
+        "differentiator": "DBS Joy : IA qui anticipe les besoins financiers du client avant qu'il n'en soit conscient lui-même",
+        "source": "DBS Annual Report 2023 / Forrester CX Index Banking 2024"
+      },
+      {
+        "organisation": "USAA (USA)",
+        "country": "USA",
+        "key_practice": "NPS de 73 (le plus élevé du secteur bancaire mondial), satisfaction client 98 %",
+        "differentiator": "Modèle coopératif bancaire où chaque collaborateur est aussi client — alignement parfait des intérêts",
+        "source": "USAA Annual Report 2023 / Forrester Banking CX Rankings 2024"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune mesure de satisfaction client. Service client uniquement en agence. Réclamations gérées manuellement sans suivi. Pas de CRM. Segmentation client absente.",
+    "level_2_developing": "Enquête de satisfaction annuelle. CRM basique. Service client téléphonique. Délai de traitement des réclamations > 15 jours. Segmentation masse/PME/corporate basique.",
+    "level_3_defined": "NPS mesuré régulièrement (> trimestriel). CRM déployé avec historique client unifié. Service multicanal (tel, email, app). Délai réclamations < 5 jours. Segmentation fine avec offres dédiées.",
+    "level_4_managed": "NPS > 30. Personnalisation basée sur les données transactionnelles. Chatbot bancaire opérationnel. Onboarding digital partiel. Voice of Customer formalisé. Résolution client < 48h.",
+    "level_5_optimizing": "NPS > 50. Hyper-personnalisation IA. Onboarding 100 % digital eKYC. Anticipation des besoins financiers. Customer effort score mesuré. Réclamations résolues en < 24h via selfcare."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction BCEAO sur la protection des utilisateurs de services financiers",
+      "issuing_body": "BCEAO",
+      "scope": "Toutes les banques et établissements financiers en zone UEMOA",
+      "key_requirement": "Transparence des frais et commissions, délai de traitement des réclamations < 30 jours, canal de réclamation accessible",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Loi n°2016-886 relative à la protection du consommateur (CI)",
+      "issuing_body": "République de Côte d'Ivoire",
+      "scope": "Toutes les organisations fournissant des services aux consommateurs en CI",
+      "key_requirement": "Information claire des clients sur les droits, voie de recours accessible, protection contre les pratiques abusives",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.gouv.ci"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Churn client vers les fintechs — attrition silencieuse",
+      "description": "Les clients ne ferment pas toujours leur compte bancaire — ils l'utilisent moins. L'attrition silencieuse (réduction de l'utilisation) est difficile à détecter sans suivi proactif des comportements transactionnels.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Déployer des modèles de prédiction du churn sur les données transactionnelles, déclencher des actions proactives de rétention dès les premiers signaux de désengagement."
+    },
+    {
+      "title": "Réclamations clients non résolues — risque réglementaire BCEAO",
+      "description": "La BCEAO surveille les délais de traitement des réclamations. Un volume élevé de réclamations non résolues dans les délais peut déclencher un contrôle sur place et des sanctions.",
+      "severity": "Élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Digitaliser le processus de réclamation avec tracking en temps réel, alertes automatiques sur les délais et reporting mensuel à la direction."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Onboarding digital — acquisition de 100 000+ clients sans coût d'agence",
+      "description": "L'ouverture de compte 100 % digitale (eKYC conforme BCEAO) réduit le coût d'acquisition de 15 000 FCFA (agence) à 2 000 FCFA (digital), permettant d'adresser des segments auparavant non-rentables.",
+      "impact_level": "Très élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Crédit pré-approuvé basé sur les données transactionnelles",
+      "description": "Proposer proactivement un crédit pré-approuvé aux clients dont le profil transactionnel le justifie augmente le taux d'activation du crédit de 3-5× vs la démarche traditionnelle à l'initiative du client.",
+      "impact_level": "Très élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Ecobank",
+      "target": "Partenariat Mastercard pour la digitalisation de l'expérience client",
+      "amount": "Partenariat stratégique",
+      "date": "2023",
+      "strategic_rationale": "Intégrer les outils Mastercard d'expérience client digitale (tokenisation, paiements sans contact) dans l'écosystème Ecobank",
+      "source": "Ecobank/Mastercard Press Release 2023"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Ecobank",
+    "pays": "Pan-Afrique / UEMOA",
+    "technologie": "Voice of Customer Program — NPS unifié sur 33 marchés africains",
+    "description": "Ecobank a déployé un programme Voice of Customer unifié sur ses 33 filiales africaines. Chaque interaction client génère une enquête NPS automatique (via SMS, app ou email). Les données sont consolidées en temps réel dans un dashboard exécutif unique accessible au CEO et aux DSI pays. Les agents ont un score de satisfaction individuel visible. Les filiales avec NPS < 25 déclenchent automatiquement un plan d'amélioration. Résultat : NPS groupe passé de 12 à 38 en 3 ans. Le taux d'attrition a baissé de 18 % à 11 %.",
+    "resultats": "NPS 12 → 38 en 3 ans · Attrition -38 % · 33 pays couverts · Dashboard temps réel · Agents scorés individuellement",
+    "source": "Ecobank Annual Report 2023 / Ecobank CX Excellence Award 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité orientation client — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "NPS mesuré régulièrement", "CRM déployé et unifié", "Onboarding digital disponible", "Chatbot bancaire 24/7", "Délai réclamation < 5 jours"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "✗", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'orientation client est le principal différenciateur des banques UEMOA en 2024. Les clients comparent désormais leur banque à Wave et Orange Money. Toute banque qui ne mesure pas son NPS, ne résout pas les réclamations en < 5 jours et n'offre pas d'onboarding digital perd des clients au profit des fintechs mobiles.",
+    "maturity_max_description": "NPS > 50 mesuré et publié. CRM unifié avec vue 360° client. Onboarding 100 % digital eKYC conforme BCEAO. Chatbot bancaire 24/7 résolvant 60 %+ des demandes. Personnalisation IA des offres. Délai réclamations < 24h. Voice of Customer structuré avec boucle d'amélioration continue.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune mesure satisfaction. Service client uniquement en agence. Réclamations manuelles sans suivi.",
+      "score_21_to_40": "Enquête satisfaction annuelle. CRM basique. Service tel. Délai réclamation > 15 jours.",
+      "score_41_to_60": "NPS régulier. CRM déployé. Service multicanal. Délai réclamation < 5 jours. Segmentation fine.",
+      "score_61_to_80": "NPS > 30. Personnalisation données. Chatbot opérationnel. Onboarding digital partiel. < 48h résolution.",
+      "score_81_to_100": "NPS > 50. Hyper-personnalisation IA. Onboarding eKYC complet. Anticipation besoins. < 24h réclamation."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur son orientation client dans le secteur bancaire UEMOA. Analyse la mesure régulière du NPS, le déploiement d'un CRM unifié, la disponibilité d'un onboarding digital conforme BCEAO, l'existence d'un chatbot bancaire 24/7 et le délai de traitement des réclamations.",
+    "key_questions_for_llm": [
+      "Le Net Promoter Score (NPS) est-il mesuré régulièrement (au moins trimestriellement) et partagé avec la direction ?",
+      "Un CRM est-il déployé avec une vue unifiée 360° de chaque client sur tous les canaux (agence, app, call center) ?",
+      "Un processus d'onboarding digital (ouverture de compte en ligne avec eKYC) est-il disponible et conforme à la réglementation BCEAO ?",
+      "Un chatbot ou assistant virtuel bancaire est-il disponible 24/7 pour répondre aux questions courantes des clients ?",
+      "Quel est le délai moyen de traitement des réclamations clients et est-il conforme aux exigences BCEAO (< 30 jours) ?"
+    ]
+  }
+}

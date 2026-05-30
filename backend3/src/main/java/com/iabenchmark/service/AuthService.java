@@ -16,6 +16,7 @@ import com.iabenchmark.repository.UserRepository;
 import com.iabenchmark.security.JwtUtils;
 import com.iabenchmark.security.UserDetailsImpl;
 import jakarta.persistence.EntityNotFoundException;
+import java.util.Objects;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -81,7 +82,7 @@ public class AuthService {
         );
 
         if (request.getCompanyId() != null) {
-            Company company = companyRepository.findById(request.getCompanyId())
+            Company company = companyRepository.findById(Objects.requireNonNull(request.getCompanyId()))
                     .orElseThrow(() -> new EntityNotFoundException("Company not found with id: " + request.getCompanyId()));
             user.setCompany(company);
         }

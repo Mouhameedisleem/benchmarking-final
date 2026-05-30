@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "CANAUX",
+    "sous_axe": "canaux_experience_client",
+    "version": "1.0",
+    "langue": "fr",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "L'expérience client dans le BTP CI est traditionnellement limitée : les promoteurs immobiliers et entreprises BTP interagissent avec leurs clients (acquéreurs VEFA, maîtres d'ouvrage privés, collectivités) principalement par téléphone et réunions physiques. Le suivi de chantier est opaque (le client découvre les retards lors des visites), les documents contractuels sont échangés par courrier physique, et la communication post-livraison est inexistante ou réactive (après réclamation). La PropTech CI (visites virtuelles 360°, portails clients, applications mobile suivi VEFA) crée de nouvelles attentes chez les acquéreurs CI, notamment les membres de la diaspora.",
+    "chiffres_cles": [
+      "68% des acquéreurs VEFA CI ne reçoivent aucune communication proactive sur l'avancement de leur chantier",
+      "72% des réclamations client BTP CI portent sur le manque de transparence et de communication",
+      "Taux de référencement client (bouche à oreille) BTP CI : 65% des ventes immobilières (canal principal)",
+      "Acquéreurs CI diaspora : estimés à 35-40% des acquéreurs VEFA Abidjan (besoins digitaux élevés)",
+      "NPS moyen secteur immobilier CI : 22/100 (très faible, potentiel d'amélioration majeur)"
+    ],
+    "specificites_locales": [
+      "Loi CI n°2018-570 VEFA : droits des acquéreurs (garantie d'achèvement, suivi travaux), transparence imposée",
+      "BHCI CI : financement logements VEFA, les acquéreurs BHCI exigent des justificatifs d'avancement",
+      "Diaspora CI : acquéreurs à distance (France, USA, Canada) nécessitant des canaux 100% digitaux",
+      "APDP CI Loi 2013-450 : protection données personnelles acquéreurs dans les portails clients",
+      "Usage mobile CI : 85% des interactions digitales CI se font sur smartphone (Android dominant)"
+    ]
+  },
+  "definition_axe": {
+    "titre": "Canaux et expérience client dans le BTP",
+    "description": "Capacité de l'entreprise BTP à concevoir et déployer des canaux de communication et d'interaction client qui améliorent l'expérience tout au long du parcours client : avant-vente (visite virtuelle, documentation commerciale digitale), contractualisation (signature électronique, espace client), suivi de chantier (mises à jour proactives, photos, accès portail), réception (dématérialisée, levée de réserves numérique) et après-livraison (service après-vente digital, garanties). Particulièrement critique pour les promoteurs immobiliers VEFA CI.",
+    "perimetre": [
+      "Avant-vente : visites virtuelles 360°, maquettes 3D interactives, documentation commerciale digitale",
+      "Contractualisation : signature électronique (Loi CI 2017-771), espace client sécurisé",
+      "Suivi de chantier : portail client avec photos hebdomadaires, jalon de livraison, notifications push",
+      "Réception : visite de réception dématérialisée, levée de réserves numérique (BatiScript CI)",
+      "Après-livraison : plateforme SAV digitale, garantie décennale numérique, manuel de résidence digital",
+      "Communication multicanale : email, SMS, WhatsApp Business, application mobile, portail web"
+    ],
+    "technologies_cles": [
+      "Matterport / Kuula — Visites virtuelles 360° appartements et maisons VEFA CI",
+      "Revit + TwinMotion / Enscape — Rendus 3D et visites interactives depuis maquette BIM",
+      "DocuSign / Yousign — Signature électronique contrats VEFA (Loi CI 2017-771)",
+      "Applications mobiles custom ou Glide / Bubble — Portail client suivi chantier VEFA CI (Android-first)",
+      "WhatsApp Business API / Twilio — Notifications proactives avancement chantier sur WhatsApp",
+      "BatiScript CI — Réception et levée de réserves numérique avec portail acquéreur"
+    ]
+  },
+  "enjeux_specifiques": {
+    "enjeux": [
+      {
+        "titre": "Transparence du suivi de chantier pour les acquéreurs VEFA",
+        "description": "La Loi CI n°2018-570 VEFA impose des droits de suivi aux acquéreurs. En pratique, la plupart des promoteurs CI ne communiquent que sur les jalons de paiement (appels de fonds) sans informer les acquéreurs de l'avancement réel des travaux. Un portail client avec photos hebdomadaires et jalon de progression réduit drastiquement les réclamations et renforce la confiance.",
+        "impact": "Réduction réclamations client de 60-70%, NPS +25-35 pts, fidélisation et recommandation"
+      },
+      {
+        "titre": "Canaux digitaux pour la diaspora CI",
+        "description": "Les acquéreurs de la diaspora ivoirienne (France, USA, Canada, Côte d'Ivoire hors Abidjan) représentent 35-40% des acheteurs VEFA à Abidjan. Ces acquéreurs ne peuvent pas visiter physiquement le chantier et attendent des canaux 100% digitaux : visites virtuelles avant achat, signature électronique du contrat VEFA, portail de suivi chantier, réception par procuration numérique.",
+        "impact": "Accès à 35-40% supplémentaires d'acquéreurs potentiels (diaspora), différenciation concurrentielle"
+      },
+      {
+        "titre": "Dématérialisation du processus de réception VEFA",
+        "description": "La réception d'un appartement VEFA en CI implique une visite physique, un constat de réserves à la main, un PV papier signé manuellement, puis des délais de levée de réserves souvent de 30-60 jours. La dématérialisation (BatiScript CI, application mobile photos géolocalisées, PV électronique Loi CI 2017-771) améliore drastiquement l'expérience de livraison.",
+        "impact": "Expérience livraison transformée, réduction réserves non résolues de 70%, NPS livraison +40 pts"
+      }
+    ]
+  },
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Inexistant",
+      "description": "Communication client uniquement par téléphone et réunions physiques. Pas de portail client, pas d'email professionnel, pas de documentation commerciale digitale. Le client ne reçoit aucune mise à jour proactive sur l'avancement de son chantier. Processus de réception entièrement papier.",
+      "signes_distinctifs": [
+        "Contact client uniquement par téléphone et visites de chantier physiques",
+        "Documentation commerciale : plans papier et brochures imprimées",
+        "Aucune mise à jour proactive chantier : le client appelle pour s'informer",
+        "Contrats VEFA signés physiquement au bureau (parfois notaire mobile)",
+        "PV de réception papier manuscrit, délai levée réserves non suivi"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Email professionnel pour la communication client. PDF des plans envoyés par email. Groupe WhatsApp par résidence pour les mises à jour. Quelques photos de chantier partagées par WhatsApp. Pas encore de portail dédié ni de signature électronique.",
+      "signes_distinctifs": [
+        "Email professionnel : envoi PDF plans, contrats et avenants par email",
+        "Groupe WhatsApp résidence : photos chantier partagées manuellement 1x/semaine",
+        "Site web vitrine avec galerie photos projets (non interactif)",
+        "Quelques visites 360° Matterport sur les appartements témoins uniquement",
+        "Contrats VEFA encore physiques mais scan PDF envoyé au client"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Portail client web ou application mobile pour le suivi de chantier (avancement en %, photos hebdomadaires, jalons de paiement). Signature électronique des contrats et avenants. Visites virtuelles 360° sur tous les types d'appartements. Processus de réception partiellement dématérialisé.",
+      "signes_distinctifs": [
+        "Portail client web (ou app mobile) : avancement, photos, documents, jalons paiement",
+        "Signature électronique DocuSign ou équivalent sur contrats VEFA (Loi CI 2017-771)",
+        "Visites virtuelles 360° Matterport sur tous les types d'appartements",
+        "Notifications proactives : SMS ou email sur franchissement des jalons chantier",
+        "Réception dématérialisée : BatiScript CI, photos géolocalisées, PV PDF signé électroniquement"
+      ]
+    },
+    "niveau_4": {
+      "label": "Optimisé",
+      "description": "Expérience client digitale complète et personnalisée. Application mobile propre avec notifications push temps réel. Jumeau numérique interactif de l'appartement (visite 3D depuis BIM). SAV post-livraison digital. NPS mesuré après chaque jalon. Programme de fidélisation acquéreurs.",
+      "signes_distinctifs": [
+        "Application mobile branded : suivi temps réel, photos 3x/semaine, chat avec chef de projet",
+        "Jumeau numérique BIM : visite 3D interactive de l'appartement en cours de construction",
+        "SAV post-livraison digital : déclaration sinistre, suivi intervention, garantie décennale numérique",
+        "NPS mesuré après chaque jalon (contrat, toiture, livraison, 6 mois post-livraison)",
+        "Programme ambassadeur : clients satisfaits recommandent et reçoivent une récompense"
+      ]
+    },
+    "niveau_5": {
+      "label": "Différenciant",
+      "description": "Expérience client omnicanale et prédictive. IA pour personnaliser la communication (préférences canal, fréquence). Configuration digitale de l'appartement (choix matériaux en 3D interactif). Communauté résidence digitale. Manuel de résidence intelligent (QR codes). Certification NF Habitat ou équivalent.",
+      "signes_distinctifs": [
+        "Configuration appartement en ligne : choix carrelage, peinture, sanitaires en 3D temps réel",
+        "IA personnalisation communication : fréquence et canal adaptés aux préférences de chaque acquéreur",
+        "Communauté résidence digitale : app résidents, syndic digital, informations de quartier",
+        "Manuel de résidence intelligent : QR codes sur chaque équipement → notice maintenance",
+        "Certification NF Habitat (ou équivalent CI) basée sur l'expérience client mesurée"
+      ]
+    }
+  },
+  "indicateurs_cles": {
+    "indicateurs": [
+      {
+        "nom": "NPS acquéreurs VEFA",
+        "definition": "Net Promoter Score mesuré auprès des acquéreurs à la livraison de leur bien immobilier",
+        "unite": "score /100",
+        "cible_sectorielle": "NPS > 50/100 (vs. 22/100 moyen secteur immobilier CI)",
+        "frequence_mesure": "À chaque livraison + 6 mois post-livraison"
+      },
+      {
+        "nom": "Taux d'adoption du portail client",
+        "definition": "Pourcentage des acquéreurs ayant activé et utilisant régulièrement (minimum 1x/mois) le portail ou l'application de suivi chantier",
+        "unite": "%",
+        "cible_sectorielle": "> 70% des acquéreurs actifs sur le portail (objectif ambitieux diaspora incluse)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Nombre d'appels entrants pour suivi chantier",
+        "definition": "Nombre d'appels reçus par le service client portant sur le suivi de l'avancement du chantier (indicateur du besoin d'information non satisfait par le portail)",
+        "unite": "appels/mois",
+        "cible_sectorielle": "< 20% du niveau initial (portail doit absorber 80% des demandes suivi chantier)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Délai moyen levée des réserves post-réception",
+        "definition": "Délai moyen entre la réception (avec réserves constatées) et la levée complète des réserves par le promoteur",
+        "unite": "jours",
+        "cible_sectorielle": "< 15 jours (vs. 45-90 jours processus papier sans suivi numérique)",
+        "frequence_mesure": "Par livraison"
+      },
+      {
+        "nom": "Taux de signature électronique des contrats VEFA",
+        "definition": "Part des contrats VEFA et avenants signés électroniquement (conformité Loi CI 2017-771)",
+        "unite": "%",
+        "cible_sectorielle": "> 80% des contrats VEFA signés électroniquement",
+        "frequence_mesure": "Mensuelle"
+      }
+    ]
+  },
+  "bonnes_pratiques": {
+    "pratiques": [
+      {
+        "titre": "Portail client 'Mon Projet BTP CI' avec mise à jour photos hebdomadaires",
+        "description": "Déployer un portail client simple (accessible en 2 clics depuis mobile Android) avec : photos de chantier chaque semaine (3-5 photos géolocalisées automatiquement), avancement en % par lot, prochains jalons (toiture, second œuvre, peintures, livraison), documents contractuels, et messagerie directe avec le chef de projet. Notification push automatique à chaque nouvelle photo ou avancement.",
+        "benefice": "Réduction appels suivi chantier -70%, NPS +25-35 pts, confiance acquéreurs diaspora"
+      },
+      {
+        "titre": "Visite virtuelle 360° avant achat (Matterport ou équivalent)",
+        "description": "Réaliser des visites virtuelles 360° Matterport de l'appartement témoin et de chaque type d'appartement (T2, T3, T4). Intégrer sur le site web du promoteur et partager par lien WhatsApp aux prospects. Pour les grandes résidences, créer une visite virtuelle de l'environnement (piscine, parking, espaces verts). Coût Matterport CI : ~150 000-300 000 FCFA par appartement.",
+        "benefice": "Ventes à la diaspora multipliées, réduction des visites physiques inutiles, décisions d'achat accélérées"
+      },
+      {
+        "titre": "Signature électronique VEFA conforme Loi CI 2017-771",
+        "description": "Déployer DocuSign ou Yousign pour la signature électronique des contrats VEFA, avenants et PV de réception. Vérifier la conformité avec la Loi CI 2017-771 (horodatage certifié, archivage légal). Pour les clients sans smartphone, prévoir un processus hybride (signature numérique lors du rendez-vous en agence sur tablette). Informer le notaire CI de la valeur légale des documents électroniques.",
+        "benefice": "Signature en 24h au lieu de 5-10 jours de navette courrier, diaspora non bloquée, 100% légal CI"
+      },
+      {
+        "titre": "Processus de réception numérique avec BatiScript CI",
+        "description": "Lors de la visite de réception, utiliser BatiScript CI (tablette) pour noter chaque réserve avec photo géolocalisée et description vocale. Génération automatique du PV de réception PDF signé électroniquement sur place par l'acquéreur et le représentant du promoteur. Suivi numérique de la levée de chaque réserve avec notification SMS acquéreur à chaque réserve levée.",
+        "benefice": "Réduction réserves non levées -70%, délai levée réserves 45 jours → 12 jours, expérience livraison transformée"
+      },
+      {
+        "titre": "Communication proactive par WhatsApp Business API",
+        "description": "Envoyer automatiquement par WhatsApp Business (API officielle Orange CI / Meta) des messages proactifs aux acquéreurs : démarrage des fondations, fin du gros-œuvre, pose de la toiture, début du second œuvre, peintures terminées, appartement prêt pour livraison. Messages en français avec photo jointe. Taux d'ouverture WhatsApp CI : 85% (vs. 25% pour les emails).",
+        "benefice": "Taux d'ouverture messages proactifs x3 vs. email, expérience émotionnelle positive à chaque jalon"
+      }
+    ]
+  },
+  "ecueils_frequents": {
+    "ecueils": [
+      {
+        "titre": "Portail client créé mais jamais mis à jour",
+        "description": "Les promoteurs CI créent un portail client mais arrêtent de le mettre à jour après 2-3 mois faute de processus intégré. Les acquéreurs abandonnent le portail et reviennent aux appels téléphoniques. Pire qu'un portail absent : un portail abandonné.",
+        "solution": "Intégrer la mise à jour portail dans le processus chantier hebdomadaire (responsabilité chef de chantier, non optionnelle). Automatiser au maximum : synchronisation photos depuis l'application mobile chantier vers le portail."
+      },
+      {
+        "titre": "Visite virtuelle de mauvaise qualité créant des attentes déçues",
+        "description": "Des visites virtuelles 360° de mauvaise qualité (appartement non meublé, éclairage défaillant, prise de vue amateur) peuvent créer des déceptions à la livraison si le bien réel est différent de la représentation virtuelle.",
+        "solution": "Investir dans une visite virtuelle de qualité professionnelle (prestataire Matterport CI certifié), inclure une mention légale sur les éléments non contractuels (mobilier non inclus), réaliser la visite sur un appartement témoin réel achevé"
+      },
+      {
+        "titre": "Négliger l'expérience client des maîtres d'ouvrage publics (BNETD CI, AGEROUTE CI)",
+        "description": "Le concept d'expérience client est souvent limité aux promoteurs immobiliers VEFA. Les maîtres d'ouvrage publics (BNETD CI, AGEROUTE CI, collectivités) ont aussi des attentes d'expérience : transparence sur l'avancement, qualité des rapports, réactivité aux demandes. La négligence de ces clients peut se traduire par une non-attribution lors des AO suivants.",
+        "solution": "Appliquer les mêmes principes d'expérience client (portail suivi, rapports proactifs, réactivité) pour les maîtres d'ouvrage publics — adapter le canal (portail institutionnel, rapport mensuel structuré BNETD CI)"
+      }
+    ]
+  },
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau d'expérience client digitale BTP entre organisations représentatives",
+    "lignes": [
+      {
+        "organisation": "SATCI CI",
+        "profil": "Promoteur immobilier CI, logements résidentiels VEFA, 800-1200 logements/an",
+        "niveau_maturite": 3,
+        "points_forts": "Portail client 'Mon Projet SATCI CI' actif, visites 360° sur tous types d'appartements, signature DocuSign contrats VEFA, BatiScript CI réception, NPS livraison 52/100",
+        "points_faibles": "Application mobile non disponible (web uniquement), communication WhatsApp encore manuelle, SAV post-livraison papier",
+        "initiatives_notables": "Programme diaspora CI : visite virtuelle + signature électronique = vente complète sans déplacement — 28% des ventes SATCI CI en 2024"
+      },
+      {
+        "organisation": "COLAS CI (activité immobilière via filiale)",
+        "profil": "Groupes BTP CI avec activités promoteur, bâtiments commerciaux et résidentiels",
+        "niveau_maturite": 3,
+        "points_forts": "Rendus BIM TwinMotion pour les clients maîtres d'ouvrage publics, portail suivi chantier pour BNETD CI et AGEROUTE CI, rapports automatiques hebdomadaires",
+        "points_faibles": "Expérience client orientée B2B (MOA) plutôt que B2C (acquéreurs), moins développé sur le segment résidentiel privé",
+        "initiatives_notables": "Portail AGEROUTE CI : tableau de bord temps réel avancement autoroute Y2T accessible au MO et au Ministère des Transports CI"
+      },
+      {
+        "organisation": "Groupe Immobilier Palm CI (promoteur résidentiel)",
+        "profil": "Promoteur immobilier émergent CI, cible classe moyenne abidjanaise et diaspora",
+        "niveau_maturite": 4,
+        "points_forts": "Application mobile branded Android/iOS, configuration appartement en ligne (choix finitions), WhatsApp Business API automatisé, NPS livraison 67/100, 40% ventes diaspora",
+        "points_faibles": "Coût développement application élevé pour leur taille, maintenance difficile, SAV digital encore perfectible",
+        "initiatives_notables": "Configurateur 3D appartement en ligne : choix carrelage, peinture, sanitaires avec simulation rendu réaliste — délai décision client réduit de 40%"
+      },
+      {
+        "organisation": "PME BTP CI (sous-traitant, entrepreneur)",
+        "profil": "Petite entreprise BTP locale, client = maître d'ouvrage direct ou promoteur",
+        "niveau_maturite": 1,
+        "points_forts": "Proximité et réactivité avec le client (petite structure)",
+        "points_faibles": "Communication uniquement téléphonique et physique, aucun document digital, aucun suivi chantier proactif, PV de réception papier",
+        "initiatives_notables": "Usage WhatsApp personnel pour partager photos de chantier (non structuré, non professionnel)"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "SATCI CI — Portail client 'Mon Projet SATCI CI' : transformation de l'expérience acquéreur VEFA",
+    "contexte": "SATCI CI (Société Africaine de Travaux et de Constructions Immobilières de Côte d'Ivoire) est l'un des principaux promoteurs immobiliers CI avec 800-1 200 logements VEFA par an à Abidjan (Cocody, Plateau, Yopougon). Face à un NPS de 28/100 à la livraison (forte insatisfaction sur le manque de transparence et les retards), SATCI CI a lancé en 2022 le portail client 'Mon Projet SATCI CI' pour transformer l'expérience acquéreur tout au long du parcours de construction.",
+    "probleme": "150 appels téléphoniques/mois reçus par le service client pour des demandes de suivi d'avancement. NPS livraison 28/100. Litiges post-livraison sur les réserves non levées : 9% des livraisons. 35% des acquéreurs de la diaspora ne pouvaient pas signer le contrat VEFA sans se déplacer physiquement à Abidjan. Délai moyen de levée des réserves : 48 jours (réserves perdues dans les dossiers papier).",
+    "solution_deployee": "Portail web responsive 'Mon Projet SATCI CI' (mobile-first Android) : photos chantier 2x/semaine géolocalisées, avancement % par lot, jalons de paiement, documents contractuels, messagerie chef de projet. Signature DocuSign sur contrats VEFA et avenants. Visites Matterport 360° sur les 4 types d'appartements du catalogue. BatiScript CI pour la réception avec PV électronique partagé instantanément dans le portail. Notifications WhatsApp Business automatiques aux jalons clés (fondations, toiture, livraison).",
+    "resultats": {
+      "appels_suivi": "150 → 42 appels/mois suivi chantier (-72%)",
+      "nps_livraison": "28 → 52/100 NPS livraison (+24 pts)",
+      "litiges_reserves": "9% → 4,2% de livraisons avec litige réserves",
+      "signature_electronique": "28 jours → 2,5 jours délai signature contrat VEFA (DocuSign)",
+      "adoption_portail": "68% des acquéreurs actifs mensuellement sur le portail",
+      "ventes_diaspora": "22% → 35% des ventes SATCI CI réalisées avec acquéreurs diaspora (sans déplacement physique)"
+    },
+    "enseignements": "Le facteur d'adoption clé du portail était la qualité et la régularité des photos (2x/semaine minimum). Quand la mise à jour photos a été suspendue pendant 3 semaines sur un chantier (chef de chantier absent), le NPS du portail a chuté de 15 points. La mise à jour photos doit être un processus non négociable, intégré dans les responsabilités du chef de chantier."
+  },
+  "ai_context": {
+    "scoring_rubric": {
+      "score_1_to_20": "Communication client uniquement par téléphone et réunions physiques. Aucun portail client. Documentation commerciale papier. Aucune mise à jour proactive sur l'avancement du chantier. Contrats et PV de réception papier.",
+      "score_21_to_40": "Email professionnel et groupes WhatsApp pour les mises à jour chantier. PDF plans partagés par email. Quelques visites 360° sur les appartements témoins. Signature contrats encore physique.",
+      "score_41_to_60": "Portail client avec photos hebdomadaires et avancement %. Signature électronique contrats VEFA. Visites 360° sur tout le catalogue. Réception dématérialisée BatiScript CI. Notifications proactives jalons clés.",
+      "score_61_to_80": "Application mobile branded avec notifications push temps réel. Jumeau numérique BIM interactif. SAV post-livraison digital. NPS mesuré à chaque jalon. Programme de fidélisation acquéreurs actif.",
+      "score_81_to_100": "Configuration appartement en ligne (choix finitions 3D). IA personnalisation communication. Communauté résidence digitale. Manuel résidence intelligent QR codes. Certification qualité expérience client mesurée."
+    },
+    "questions_cles_diagnostic": [
+      "Vos acquéreurs VEFA ont-ils accès à un portail pour suivre l'avancement de leur chantier ?",
+      "Proposez-vous des visites virtuelles 360° de vos appartements ? Sur quels supports ?",
+      "Vos contrats VEFA et PV de réception sont-ils signés électroniquement ? (conformité Loi CI 2017-771)",
+      "Quel est votre NPS mesuré à la livraison de vos logements ?",
+      "Quel pourcentage de vos ventes provient d'acquéreurs de la diaspora ? Peuvent-ils acheter sans se déplacer ?"
+    ],
+    "pieges_evaluation": [
+      "Ne pas se limiter aux promoteurs immobiliers : évaluer aussi l'expérience des maîtres d'ouvrage publics (BNETD CI, AGEROUTE CI) pour les entreprises de travaux",
+      "Vérifier que le portail client déclaré est réellement actif et mis à jour régulièrement (pas juste créé puis abandonné)",
+      "Distinguer l'expérience client des grandes entreprises (souvent meilleure) de celle proposée par les PME BTP CI locales"
+    ]
+  },
+  "ressources": {
+    "references_reglementaires": [
+      "Loi CI n°2018-570 VEFA — Droits des acquéreurs, garantie d'achèvement, transparence avancement",
+      "Loi CI 2017-771 — Valeur juridique contrats électroniques, PV de réception numériques",
+      "BHCI CI — Exigences de suivi et de justification pour les logements financés BHCI",
+      "APDP CI Loi 2013-450 — Protection données personnelles acquéreurs dans les portails clients"
+    ],
+    "outils_recommandes": [
+      "Matterport / Kuula — Visites virtuelles 360° appartements VEFA CI",
+      "DocuSign / Yousign — Signature électronique contrats VEFA et PV de réception",
+      "BatiScript CI — Réception et levée de réserves numérique avec portail acquéreur",
+      "WhatsApp Business API (Meta/Orange CI) — Notifications proactives acquéreurs",
+      "Glide / Bubble — Création portail client no-code Android-first pour PME promoteurs CI"
+    ],
+    "formations_certifications": [
+      "BHCI CI — Formation accompagnement acquéreurs dans le processus VEFA digital",
+      "Meta Business — Formation WhatsApp Business API pour communication client BTP CI",
+      "Matterport Partner CI — Formation visite virtuelle 360° immobilier CI"
+    ]
+  }
+}

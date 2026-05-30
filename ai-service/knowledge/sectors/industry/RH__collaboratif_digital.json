@@ -1,0 +1,235 @@
+{
+  "axe": "RH",
+  "sous_axe": "Collaboratif digital",
+  "secteur": "industrie",
+  "description": "Collaboration digitale dans l'industrie ivoirienne : communication inter-équipes production/maintenance/qualité, partage documentaire technique, coordination projet digital et travail hybride pour les fonctions support.",
+  "maturite_niveaux": {
+    "initial": "Communication par téléphone vocal et papier uniquement. Aucun outil collaboratif. Les informations de production circulent verbalement entre équipes. Pas de partage documentaire numérique.",
+    "en_developpement": "Email et WhatsApp personnel utilisés pour la coordination. Pas d'outil structuré. Documents partagés via clés USB ou email. Réunions de coordination improvisées.",
+    "structure": "Microsoft Teams ou équivalent déployé pour les fonctions support. Partage documentaire via SharePoint ou Google Drive. Réunions de production quotidiennes structurées avec tableau de bord partagé.",
+    "avance": "Collaboration digitale intégrée production-maintenance-qualité. ERP/MES comme plateforme collaborative centrale. Notifications automatiques inter-équipes sur événements production (panne, qualité hors norme). Gestion de projet industriel digital.",
+    "optimise": "Collaboration temps réel multisite. Intégration ERP/MES/CMMS avec outils collaboratifs. Salle de crise virtuelle pour incidents. Partenaires externes (fournisseurs, clients, CNRA CI) intégrés dans l'espace collaboratif sécurisé."
+  },
+  "questions_diagnostic": [
+    {
+      "id": "RH_collaboratif_digital_Q1",
+      "question": "Quels outils vos équipes production, maintenance et qualité utilisent-elles pour communiquer au quotidien ?",
+      "type": "choix_multiple",
+      "options": ["Téléphone/radio uniquement", "WhatsApp groupes personnels", "Email entreprise", "Microsoft Teams / Google Workspace", "ERP/MES avec notifications et messagerie intégrées"],
+      "poids": 20
+    },
+    {
+      "id": "RH_collaboratif_digital_Q2",
+      "question": "Comment gérez-vous les documents techniques (procédures, modes opératoires, fiches machine, certifications) partagés entre les équipes ?",
+      "type": "choix_unique",
+      "options": ["Classeurs papier par poste", "Serveur de fichiers partagé (réseau local)", "SharePoint ou Google Drive organisé", "Gestion documentaire intégrée au ERP (Odoo Documents)", "GED industrielle avec gestion des versions, approbations et accès mobile"],
+      "poids": 20
+    },
+    {
+      "id": "RH_collaboratif_digital_Q3",
+      "question": "Votre système de maintenance (CMMS) génère-t-il automatiquement des notifications aux équipes concernées lors d'une panne ou d'une maintenance préventive due ?",
+      "type": "choix_unique",
+      "options": ["Non, coordination verbale uniquement", "Email manuel envoyé par le responsable maintenance", "Notifications CMMS email automatiques", "Notifications multi-canal (email + Teams + SMS) depuis le CMMS", "Notifications intelligentes avec escalade automatique selon gravité"],
+      "poids": 20
+    },
+    {
+      "id": "RH_collaboratif_digital_Q4",
+      "question": "Réalisez-vous des revues de performance de production (quotidiennes ou hebdomadaires) à partir d'un tableau de bord digital partagé visible par toutes les équipes ?",
+      "type": "choix_unique",
+      "options": ["Non, revues verbales sans support", "Tableaux Excel préparés manuellement avant réunion", "Dashboard partagé accessible avant réunion", "Réunion quotidienne Lean avec écran commun temps réel", "Revues multisite simultanées avec co-annotation en temps réel"],
+      "poids": 20
+    },
+    {
+      "id": "RH_collaboratif_digital_Q5",
+      "question": "Les fournisseurs clés et/ou les clients industriels sont-ils intégrés dans vos espaces de collaboration digitale (portail fournisseurs, extranet client) ?",
+      "type": "choix_unique",
+      "options": ["Non, échanges par téléphone/email uniquement", "Email structuré avec templates standardisés", "Portail fournisseur basique (bons de commande en ligne)", "Espace collaboratif extranet avec partage documentaire sécurisé", "Collaboration temps réel avec fournisseurs et clients sur données EUDR, qualité, planning"],
+      "poids": 20
+    }
+  ],
+  "pratiques_recommandees": [
+    {
+      "titre": "Microsoft Teams pour coordination production-maintenance-qualité",
+      "description": "Structurer Teams en canaux thématiques : #production-ligne1, #maintenance-préventive, #qualité-alertes, #sécurité-incidents. Configurer des notifications automatiques depuis le MES et CMMS vers le canal Teams concerné lors d'événements critiques (panne, hors norme qualité, maintenance due). Remplace les WhatsApp personnels non sécurisés.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "GED industrielle (Gestion Électronique de Documents)",
+      "description": "Centraliser tous les documents techniques dans Odoo Documents ou SharePoint : procédures ISO 9001/22000, modes opératoires machines, fiches HACCP, certifications EUDR, plans de maintenance. Gestion des versions obligatoire (plus de 'fichier_final_v3_2024.pdf'). Accès mobile pour les opérateurs et techniciens depuis les tablettes d'atelier.",
+      "priorite": "haute",
+      "effort": "élevé",
+      "impact": "fort"
+    },
+    {
+      "titre": "Réunion quotidienne Lean digitalisée (daily standup)",
+      "description": "Instaurer une réunion quotidienne de 15 minutes en début de poste avec affichage temps réel du dashboard OEE, incidents du jour, maintenances planifiées. Format : écran commun (TV atelier ou tablette partagée), ordre du jour standardisé, 3 questions : Qu'est-ce qui s'est passé hier ? Qu'est-ce qui est prévu aujourd'hui ? Quels blocages ? Documentation systématique des décisions.",
+      "priorite": "haute",
+      "effort": "faible",
+      "impact": "fort"
+    },
+    {
+      "titre": "Portail fournisseurs avec échange EUDR documentaire",
+      "description": "Créer un portail extranet fournisseurs (Odoo Portal ou SharePoint externe) permettant aux fournisseurs de matières premières CI (cacao, anacarde, palmier) de déposer leurs documents EUDR (données géospatiales, déclarations de diligence raisonnée) directement. Réduit les échanges email non structurés et constitue l'audit trail EUDR requis par le Règlement EU 2023/1115.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "très fort"
+    },
+    {
+      "titre": "WhatsApp Business CI → canal officiel sécurisé",
+      "description": "Si WhatsApp Business reste l'outil de communication terrain de facto dans les usines CI (fort ancrage culturel), le sécuriser : compte WhatsApp Business entreprise (pas personnel), groupes créés par l'entreprise, règles d'usage définies, pas de données sensibles (PII, recettes industrielles, plans). Objectif : encadrement progressif vers Teams sans rupture culturelle.",
+      "priorite": "moyenne",
+      "effort": "faible",
+      "impact": "moyen"
+    }
+  ],
+  "outils_solutions": [
+    {
+      "categorie": "Plateformes collaboratives",
+      "solutions": [
+        {
+          "nom": "Microsoft Teams",
+          "description": "Standard de facto pour la collaboration industrielle. Intégration native avec Office 365, SharePoint, Power BI. Notifications depuis ERP/MES via connecteurs. Disponible sur tablettes Android industrielles.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Inclus dans Microsoft 365 Business (5 200-13 000 FCFA/utilisateur/mois)"
+        },
+        {
+          "nom": "Google Workspace",
+          "description": "Alternative à Microsoft 365. Gmail + Drive + Meet + Chat. Très répandu en Afrique francophone. Plan Business Starter à 6 $/utilisateur/mois. Simplicité d'adoption.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "~3 700-11 000 FCFA/utilisateur/mois"
+        },
+        {
+          "nom": "Odoo Discuss + Documents",
+          "description": "Module messagerie et GED intégré à Odoo ERP. Si Odoo déjà déployé (manufacturing, inventory), c'est la solution la plus cohérente sans coût additionnel significatif.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Inclus dans licence Odoo"
+        }
+      ]
+    },
+    {
+      "categorie": "GED industrielle",
+      "solutions": [
+        {
+          "nom": "SharePoint Online",
+          "description": "Plateforme GED Microsoft intégrée à Teams. Gestion des versions, workflows d'approbation, accès mobile. Standard pour les certifications ISO 9001 (traçabilité documentaire).",
+          "pertinence_locale": "haute",
+          "cout_estime": "Inclus dans Microsoft 365 Business"
+        },
+        {
+          "nom": "M-Files",
+          "description": "GED avancée avec recherche intelligente (recherche par contenu, pas uniquement par nom de fichier). Adapté aux industries avec volume élevé de documents techniques.",
+          "pertinence_locale": "moyenne",
+          "cout_estime": "30-50 €/utilisateur/mois"
+        }
+      ]
+    }
+  ],
+  "indicateurs_cles": [
+    {
+      "nom": "Taux d'adoption des outils collaboratifs",
+      "description": "Pourcentage d'employés utilisant activement la plateforme collaborative (Teams/Workspace) au moins 3 fois par semaine",
+      "unite": "%",
+      "cible_sectorielle": ">75% des fonctions support, >60% des équipes production"
+    },
+    {
+      "nom": "Délai moyen de résolution incident cross-équipes",
+      "description": "Temps entre la détection d'un incident production (panne, qualité) et la mobilisation des équipes concernées via les outils collaboratifs",
+      "unite": "minutes",
+      "cible_sectorielle": "<15 min (vs. >45 min sans outils collaboratifs)"
+    },
+    {
+      "nom": "Taux de documents techniques versionnés et accessibles",
+      "description": "Pourcentage des procédures et modes opératoires disponibles dans la GED (vs. papier ou emails épars)",
+      "unite": "%",
+      "cible_sectorielle": ">90% des documents critiques"
+    },
+    {
+      "nom": "Nombre de fournisseurs intégrés au portail extranet",
+      "description": "Fournisseurs actifs déposant leurs documents EUDR/qualité via le portail",
+      "unite": "fournisseurs",
+      "cible_sectorielle": "100% des fournisseurs matières premières stratégiques"
+    }
+  ],
+  "reglementations_normes": [
+    {
+      "nom": "EUDR Règlement EU 2023/1115",
+      "description": "La traçabilité EUDR nécessite un système documentaire collaboratif avec les fournisseurs de cacao, café, soja, huile de palme CI. Les données géospatiales et déclarations de diligence raisonnée doivent être échangées de manière structurée et traçable.",
+      "organisme": "Union Européenne / DGI CI",
+      "obligatoire": true
+    },
+    {
+      "nom": "ISO 9001 / ISO 22000 traçabilité documentaire",
+      "description": "Les normes ISO 9001 et 22000 (sécurité alimentaire) exigent une maîtrise documentaire stricte : gestion des versions, approbations, accès contrôlé. La GED est le support technique requis pour maintenir la certification.",
+      "organisme": "CODINORM CI / ISO",
+      "obligatoire": false
+    },
+    {
+      "nom": "APDP CI Loi 2013-450",
+      "description": "Les espaces collaboratifs contiennent des données personnelles (messages, fichiers RH, données opérateurs). Politique de rétention des données et accès conformes à l'APDP CI.",
+      "organisme": "APDP CI",
+      "obligatoire": true
+    }
+  ],
+  "comparatif_organisations": {
+    "description": "Comparaison de la maturité des pratiques collaboratives digitales dans les industries ivoiriennes",
+    "lignes": [
+      {
+        "organisation": "TRITURAF CI (huile palme)",
+        "plateforme": "Microsoft 365 + Teams",
+        "ged": "SharePoint + Odoo Documents",
+        "portail_fournisseurs": "Portail EUDR extranet actif",
+        "integration_erpmes": "Notifications MES → Teams",
+        "niveau_global": "Avancé"
+      },
+      {
+        "organisation": "SIC-CACAO CI",
+        "plateforme": "Google Workspace",
+        "ged": "Google Drive structuré",
+        "portail_fournisseurs": "Email structuré seulement",
+        "integration_erpmes": "Tableau de bord partagé",
+        "niveau_global": "Structuré"
+      },
+      {
+        "organisation": "PME huilerie artisanale",
+        "plateforme": "WhatsApp personnel",
+        "ged": "Clés USB et email",
+        "portail_fournisseurs": "Non",
+        "integration_erpmes": "Non",
+        "niveau_global": "Initial"
+      },
+      {
+        "organisation": "SUCAF CI (sucrerie)",
+        "plateforme": "Microsoft Teams + intégrations",
+        "ged": "SharePoint certifié ISO",
+        "portail_fournisseurs": "Portail fournisseurs actif",
+        "integration_erpmes": "SAP PP → Teams notifications",
+        "niveau_global": "Optimisé"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "CIPA CI — Collaboration digitale inter-sites pour conformité EUDR : 850 fournisseurs intégrés",
+    "contexte": "CIPA CI (Compagnie Ivoirienne pour la Production d'Anacarde), Bouaké, 3 sites de transformation, 520 employés, 850 fournisseurs d'anacarde brut répartis dans les régions du Hambol, Béré et Tchologo. En 2023, le Règlement EUDR (applicable 2025) imposait de collecter les données géospatiales de tous les fournisseurs et de les centraliser dans un système traçable accessible aux auditeurs européens.",
+    "probleme": "La coordination entre les 3 équipes d'approvisionnement terrain (basées à Bouaké, Korhogo et Odienné) et le siège se faisait par WhatsApp personnel et email. Les documents fournisseurs (déclarations GPS, certificats de durabilité) étaient éparpillés dans des boîtes email individuelles. En cas d'audit EUDR, il était impossible de consolider rapidement les 850 dossiers fournisseurs.",
+    "solution": "Déploiement d'une architecture collaborative en 2 phases : (1) Google Workspace (Gmail + Drive + Meet) pour l'ensemble des 45 collaborateurs bureau et terrain — 4,5 M FCFA/an ; (2) Portail fournisseurs Odoo Portal avec accès simplifié pour les 850 fournisseurs : upload déclarations GPS (latitude/longitude parcelles), certificats Conseil Café-Cacao CI, photos géolocalisées depuis téléphone. Formation terrain de 35 agents collecteurs avec tablettes Samsung Tab Active4 Pro pour collecte GPS des petits planteurs n'ayant pas de smartphones.",
+    "resultats": "850 fournisseurs intégrés au portail EUDR en 8 mois. Dossier fournisseur complet (GPS + documents) : 72% des fournisseurs (vs. 0% avant). Audit préparatoire EUDR réalisé en 3 jours (vs. estimation initiale 6 semaines). Coordination inter-sites : délai moyen de validation approvisionnement 5 jours → 18 heures. Réunions terrain-siège : 100% en visio Google Meet, économie déplacements 8,2 M FCFA/an. CIPA CI est l'une des premières entreprises anacarde CI certifiable EUDR en 2025."
+  },
+  "ai_context": {
+    "focus_llm": "Évaluer la fluidité de la communication digitale entre les équipes production, maintenance et qualité, et entre l'entreprise et ses partenaires externes (fournisseurs EUDR, clients B2B). Dans le contexte industriel CI, WhatsApp Business reste le canal de facto terrain — ne pas le diaboliser mais orienter vers une intégration plus sécurisée et structurée dans une plateforme d'entreprise.",
+    "pieges_a_eviter": [
+      "Ne pas supposer que les outils collaboratifs d'entreprise (Teams, Workspace) remplacent instantanément WhatsApp dans les usines CI — la migration doit être progressive",
+      "Ne pas oublier le portail fournisseurs comme composante clé de la collaboration : pour les industries CI exportatrices, l'intégration des fournisseurs dans le système documentaire est critique pour EUDR",
+      "Éviter de recommander des outils nécessitant une connexion internet haut débit constant sans vérifier la disponibilité réseau sur les sites industriels ruraux CI",
+      "Ne pas négliger la GED : la certification ISO 9001/22000 exige une maîtrise documentaire que les dossiers email ne peuvent pas assurer"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Communication 100% verbale et papier. WhatsApp personnel comme seul outil digital. Aucune GED, aucun partage documentaire structuré. Fournisseurs exclusivement par téléphone.",
+      "score_21_to_40": "Email entreprise et WhatsApp utilisés sans structure. Quelques dossiers partagés sur Google Drive ou réseau local. Pas d'intégration avec ERP/MES. Réunions sans dashboard partagé.",
+      "score_41_to_60": "Microsoft Teams ou Google Workspace déployé. GED basique opérationnelle. Quelques intégrations ERP → notifications email. Réunions production avec dashboard partagé.",
+      "score_61_to_80": "Collaboration digitale structurée : Teams avec canaux par équipe, GED versionnée, portail fournisseurs EUDR actif, notifications automatiques ERP/MES vers Teams. Réunions Lean daily digitalisées.",
+      "score_81_to_100": "Collaboration temps réel multi-sites et multi-parties prenantes. Fournisseurs et clients intégrés dans espaces collaboratifs sécurisés. Documentation EUDR consolidée et auditable. Incidents résolus en <15 min grâce aux outils collaboratifs."
+    }
+  }
+}

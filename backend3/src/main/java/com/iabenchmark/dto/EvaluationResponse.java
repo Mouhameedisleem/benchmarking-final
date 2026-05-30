@@ -14,6 +14,7 @@ public class EvaluationResponse {
     private EvaluationStatus status;
     private Double globalScore;
     private MaturityLevel maturityLevel;
+    private MaturityLevel targetMaturityLevel;
     private List<AxisScoreResponse> scoresByAxis;
     private List<SubAxisScoreResponse> scoresBySubAxis;
     private List<AxisSynthesisResponse> synthesesByAxis;
@@ -52,6 +53,8 @@ public class EvaluationResponse {
     public EvaluationStatus getStatus() { return status; }
     public Double getGlobalScore() { return globalScore; }
     public MaturityLevel getMaturityLevel() { return maturityLevel; }
+    public MaturityLevel getTargetMaturityLevel() { return targetMaturityLevel; }
+    public void setTargetMaturityLevel(MaturityLevel targetMaturityLevel) { this.targetMaturityLevel = targetMaturityLevel; }
     public List<AxisScoreResponse> getScoresByAxis() { return scoresByAxis; }
     public List<SubAxisScoreResponse> getScoresBySubAxis() { return scoresBySubAxis; }
     public List<AxisSynthesisResponse> getSynthesesByAxis() { return synthesesByAxis; }

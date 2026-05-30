@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "OFFRES",
+    "sub_axis": "open_platform",
+    "sector": "energie",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "API ouvertes énergie et Open Energy Data",
+      "description": "Les distributeurs d'énergie ouvrent progressivement leurs APIs (données de consommation AMI, statut réseau, tarifs temps réel) à des tiers (startups énergie, agrégateurs, fournisseurs EaaS) pour créer des écosystèmes de services à valeur ajoutée. En Europe, la directive EU EED impose l'Open Energy Data. En Côte d'Ivoire, ANARE-CI travaille sur un cadre d'ouverture des données réseau pour les porteurs de projets mini-grids et les agrégateurs de flexibilité. CIE a ouvert une API Check Solde à 12K agents tiers en 2024.",
+      "impact_level": "high",
+      "horizon": "short_term",
+      "adoption_rate": "22%",
+      "source": "ANARE-CI Rapport Régulation 2025",
+      "year": 2025
+    },
+    {
+      "title": "Plateformes d'agrégation de flexibilité et Virtual Power Plant (VPP)",
+      "description": "Les Virtual Power Plants agrègent des ressources énergétiques distribuées (solaire + stockage + effacement industriel) et les pilotent collectivement via plateforme IA pour optimiser l'équilibre offre/demande réseau. En Afrique subsaharienne, des VPP mini-grids émergent : agrégation de 50-200 mini-grids solaires ADER CI pour constituer une capacité dispatchable. Le marché mondial VPP atteindra 5,9 Mds USD en 2028 (CAGR 21%).",
+      "impact_level": "medium",
+      "horizon": "medium_term",
+      "adoption_rate": "8%",
+      "source": "BloombergNEF VPP Africa 2025",
+      "year": 2025
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "API Gateway énergie (REST/MQTT) + portail développeur",
+      "category": "API Management / Open Data",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "15% des distributeurs CI avec API tiers documentée",
+      "leading_vendors": ["Kong Gateway", "Apigee (Google)", "AWS API Gateway", "MuleSoft", "WSO2"]
+    },
+    {
+      "name": "Plateforme VPP / DERMS (Distributed Energy Resource Management System)",
+      "category": "Energy Management / IA",
+      "maturity_stage": "emerging",
+      "adoption_in_sector": "Pilotes ADER CI 2024-2025, CIE étude faisabilité VPP Abidjan",
+      "leading_vendors": ["AutoGrid", "Siemens eDRMS", "Enbala (Generac)", "Opus One Solutions", "BBOXX Grid Manager"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "CIE (Compagnie Ivoirienne d'Électricité)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "API Check Solde ouverte à 12K agents tiers (Orange Money, MTN MoMo, Wave, fintech partenaires), portail développeur CIE API Marketplace (3 endpoints documentés : solde, paiement, historique), intégration Orange Money via API REST sécurisée OAuth 2.0",
+        "differentiator": "Premier distributeur CI à ouvrir une API commerciale à l'écosystème fintech — volume 2,8M appels API/mois via agents tiers, réduction 40% des transactions en agence physique",
+        "source": "CIE Rapport Annuel 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "ENGIE Energy Access (ex-FENIX)",
+        "country": "Ouganda / Zambie / Côte d'Ivoire",
+        "key_practice": "Plateforme ReadyPay OS ouverte à des partenaires tiers (assurance microfinance, extension crédit PAYG), API PAYG datawarehouse pour fintechs (score crédit basé historique paiements énergie), marketplace services (pompe eau, réfrigérateur) financés via crédit PAYG",
+        "differentiator": "Écosystème PAYG ouvert : 18 partenaires fintechs intégrés (assurance santé Bima, crédit FINCA) — revenu moyen par client +28% via services additionnels ecosystème",
+        "source": "ENGIE Energy Access Impact Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Tesla Energy (Autobidder + Virtual Power Plant)",
+        "country": "États-Unis / Australie",
+        "key_practice": "Plateforme Autobidder VPP : agrège des milliers de Powerwall résidentiels en ressource dispatchable, API ouverte aux gestionnaires de réseau (AEMO Australie), programme Tesla Electric (agrégation + revente flexibilité), 50K Powerwall dans VPP South Australia",
+        "differentiator": "Le plus grand VPP résidentiel au monde (50K unités Australie) — revenus partagés avec propriétaires Powerwall : 350 USD/an moyen, précision dispatch ±2% vs. forecast IA",
+        "source": "Tesla Energy / AEMO Virtual Power Plant Report 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Aucune API ouverte à des tiers, toutes les intégrations sont point-à-point bilatérales et non documentées, pas de portail développeur, données énergie fermées.",
+    "level_2_developing": "API interne documentée pour 1-2 partenaires clés (ex. opérateur mobile money principal), pas de portail développeur public, intégrations ad hoc non standardisées.",
+    "level_3_defined": "API REST documentée (Swagger/OpenAPI) pour paiements et consultation solde, portail développeur basique, authentification OAuth 2.0, 5-20 partenaires intégrés.",
+    "level_4_managed": "API Marketplace multi-endpoints (paiement, consommation AMI, statut réseau, tarifs), sandbox développeur, SLA contractuels API (99,5% uptime), 50+ partenaires tiers, monitoring usage API temps réel.",
+    "level_5_optimizing": "Plateforme Open Energy complète : données AMI agrégées anonymisées (open data), API VPP pour agrégateurs de flexibilité, marketplace services tiers (EaaS, assurance, crédit), revenu plateforme >15% du CA total."
+  },
+  "regulations": [
+    {
+      "name": "ARTCI — Cadre interopérabilité mobile money et API financières",
+      "authority": "ARTCI (Autorité de Régulation des Télécommunications / TIC de Côte d'Ivoire)",
+      "description": "L'ARTCI, en coordination avec BCEAO, régule l'interopérabilité des plateformes mobile money et impose des standards d'API pour les services de paiement. Les APIs de rechargement énergie via mobile money doivent respecter les standards BCEAO (norme SWIFT CI-Interop) et les règles ARTCI d'accès aux réseaux de paiement. La directive BCEAO 2020 sur l'interopérabilité des systèmes de paiement a rendu obligatoire l'interconnexion Orange/MTN/Wave — impactant directement les APIs de rechargement énergie.",
+      "compliance_deadline": "2023 (interopérabilité en vigueur)",
+      "impact_on_sector": "Les APIs de paiement énergie doivent être compatibles avec tous les opérateurs mobile money (Orange, MTN, Wave, Moov) via le switch BCEAO-CI interopérabilité"
+    },
+    {
+      "name": "ANARE-CI — Cadre accès tiers aux données réseau (en développement)",
+      "authority": "ANARE-CI (Autorité Nationale de Régulation de l'Électricité)",
+      "description": "ANARE-CI développe (2024-2026) un cadre réglementaire d'accès tiers aux données réseau électrique (Third Party Access - TPA), inspiré du modèle européen. Ce cadre permettra aux agrégateurs de flexibilité, fournisseurs EaaS et porteurs de projets mini-grids d'accéder aux données de consommation anonymisées AMI, aux données de capacité réseau et aux prévisions de production. Objectif : stimuler l'innovation sur l'écosystème énergie CI.",
+      "compliance_deadline": "2027 (cadre TPA prévu)",
+      "impact_on_sector": "Ouvrira un marché de services tiers énergie en CI — les distributeurs devront ouvrir des APIs standardisées aux agrégateurs certifiés ANARE-CI"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Sécurité des APIs énergie et risque de manipulation du réseau via tiers",
+      "description": "Les APIs ouvertes aux tiers sur les systèmes SCADA/OT d'un distributeur d'électricité représentent un vecteur d'attaque critique. Une API mal sécurisée permettant à un tiers de modifier des paramètres réseau (consigne transformateur, déclenchement disjoncteur) pourrait provoquer des coupures massives. En 2021, une API mal configurée d'un gestionnaire de réseau européen a permis une manipulation tarifaire par un agrégateur non autorisé (incident ACER EU).",
+      "severity": "critical",
+      "likelihood": "medium",
+      "mitigation": "Architecture API à deux vitesses : APIs commerciales (paiement, consommation) ouvertes aux tiers avec OAuth 2.0 + rate limiting ; APIs opérationnelles (SCADA, commandes réseau) strictement isolées en réseau OT séparé avec zéro accès tiers — conformément aux recommandations NERC CIP et ARTCI CERT-CI"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Plateforme de scoring crédit énergie pour l'inclusion financière UEMOA",
+      "description": "L'historique de paiements énergie (compteurs prépayés + PAYG) constitue un signal de scoring crédit alternatif pour les populations non-bancarisées UEMOA. En ouvrant une API d'historique paiements énergie aux fintechs (avec consentement APDP CI), les distributeurs CI pourraient alimenter des scores alternatifs BCEAO pour 2,8M de clients prépayés CIE, facilitant l'accès à des microcrédits, assurances et produits BCEAO. BBOXX CI a déjà monetisé ce modèle (partenariat Wave CI 2024).",
+      "impact_level": "high",
+      "time_to_value": "2-3 ans",
+      "prerequisite_maturity": "Niveau 3 — API paiements documentée + conformité APDP CI consentement"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "AutoGrid acquisition par Schneider Electric",
+      "montant": "Non divulgué (estimé 200-300M USD)",
+      "investisseurs": ["Schneider Electric"],
+      "annee": 2023,
+      "description": "Schneider Electric a acquis AutoGrid, leader des plateformes DERMS/VPP pour agrégation de flexibilité. Cette acquisition positionne Schneider comme acteur clé des plateformes open énergie en Afrique subsaharienne, où la société travaille avec ADER CI sur des projets mini-grids intelligents. En Côte d'Ivoire, Schneider a signé un MOU avec CIE pour tester la plateforme AutoGrid Flex sur 500 clients industriels Abidjan (pilote 2025)."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "CIE (Compagnie Ivoirienne d'Électricité)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "API Marketplace CIE — Ouverture API Check Solde + Paiement à l'écosystème fintech et agents tiers",
+    "description": "En 2023, CIE a lancé son API Marketplace permettant à des partenaires tiers (agents mobile money, fintech, supermarchés partenaires) d'intégrer directement les services de rechargement et consultation de solde compteur prépayé. Architecture : API Gateway Kong sur AWS, OAuth 2.0, documentation Swagger complète, sandbox de test disponible. 12 000 agents tiers (points de vente Orange Money, MTN MoMo, Wave, supermarchés Score/CDCI, stations Total) ont intégré l'API en 8 mois. L'API gère 3 endpoints : Check Solde (temps réel), Rechargement (token STS généré en < 3 secondes), Historique consommation (30 derniers jours).",
+    "resultats": "Volume API : 2,8 millions d'appels/mois à M+12 (vs. 0). Transactions en agence physique : -40% (désengorgement 120K visites/mois évitées). Part paiements digitaux via tiers API : 38% du total rechargements (vs. 22% avant API). Revenu partage commission agents tiers : 85M FCFA/mois pour CIE. Disponibilité API : 99,7% (SLA 99,5% contractuel respecté). Fraude STS tokens : 0 incident grâce à génération en temps réel côté CIE (token jamais exposé en clair via API).",
+    "source": "CIE Rapport Annuel 2024 / API Gateway Kong Case Study",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif maturité plateforme ouverte — Secteur Énergie Côte d'Ivoire",
+    "colonnes": ["organisation", "API tiers documentée", "Portail développeur", "Partenaires intégrés", "Open Data énergie"],
+    "lignes": [
+      {
+        "organisation": "CIE CI",
+        "valeurs": ["API REST OAuth 2.0 (3 endpoints)", "Swagger + sandbox", "12 000 agents tiers", "Non (données fermées)"]
+      },
+      {
+        "organisation": "BBOXX CI",
+        "valeurs": ["API PAYG ouverte fintechs", "Documentation partenaires", "18 fintechs (assurance, crédit)", "Anonymisé (partenaires score)"]
+      },
+      {
+        "organisation": "ADER CI",
+        "valeurs": ["Non (administration publique)", "Non", "Non", "Données subventions publiques"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue l'ouverture de la plateforme énergie aux tiers : présence d'APIs documentées (Swagger/OpenAPI), portail développeur, nombre de partenaires intégrés, gestion sécurité API (OAuth, rate limiting), et existence d'une stratégie open data énergie conformément au futur cadre ANARE-CI TPA.",
+    "maturity_max_description": "Distributeur énergie CI avec API Marketplace complet (paiement, AMI, réseau), portail développeur avec sandbox, 100+ partenaires fintechs intégrés, open data anonymisé conforme APDP CI, participation aux pilotes VPP ADER CI — revenus plateforme représentant >10% du CA.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune API ouverte, toutes intégrations bilatérales manuelles, données énergie fermées, aucun partenaire tiers intégré en self-service.",
+      "score_21_to_40": "API informelle avec 1-2 partenaires mobile money, non documentée publiquement, authentification basique, pas de sandbox.",
+      "score_41_to_60": "API REST documentée (Swagger), portail développeur basique, OAuth 2.0, 10-50 partenaires intégrés, monitoring API basique.",
+      "score_61_to_80": "API Marketplace multi-endpoints (paiement + consommation + statut), sandbox développeur, SLA contractuels, 50-200 partenaires, revenu partage commissions actif.",
+      "score_81_to_100": "Plateforme open énergie complète : AMI data API, VPP/DERMS API pour agrégateurs, open data conforme ANARE-CI TPA, marketplace services tiers, revenu plateforme >10% CA."
+    },
+    "prompt_injection_context": "Secteur énergie CI : CIE est le principal distributeur avec API commerciale ouverte. Les APIs opérationnelles (SCADA) doivent rester strictement isolées. Conformité ARTCI/BCEAO pour APIs de paiement. Futur cadre ANARE-CI TPA (2027) conditionnera l'open data réseau. Distinguer APIs commerciales (sécurité standard) et APIs OT (isolation totale).",
+    "key_questions_for_llm": [
+      "Disposez-vous d'une API documentée (Swagger/OpenAPI) permettant à des tiers d'accéder à vos services énergie (paiement, solde, consommation) ?",
+      "Avez-vous un portail développeur avec sandbox de test pour vos partenaires API ?",
+      "Combien de partenaires tiers ont intégré vos APIs ? Quel est votre processus d'onboarding partenaire ?",
+      "Comment sécurisez-vous vos APIs (OAuth 2.0, rate limiting, monitoring) tout en isolant les systèmes OT/SCADA ?",
+      "Participez-vous ou planifiez-vous de participer aux initiatives open data énergie (ANARE-CI TPA, ADER CI data sharing) ?"
+    ]
+  }
+}

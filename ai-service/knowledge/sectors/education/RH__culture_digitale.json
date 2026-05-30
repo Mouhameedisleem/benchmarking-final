@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "axis": "RH",
+    "sub_axis": "culture_digitale",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Développement des compétences numériques des enseignants (TICE) comme priorité RH",
+      "description": "La transformation digitale éducative repose sur les enseignants : un LMS déployé sans enseignants formés reste une coquille vide. En Côte d'Ivoire, le MENA CI a inscrit la formation TICE des enseignants comme priorité du PNDE CI 2022-2025 : objectif de former 12 000 enseignants du secondaire aux outils numériques d'ici 2025 (LMS, création de cours en ligne, évaluation digitale). En 2024, 6 800 enseignants CI ont été formés (56% de l'objectif). Les établissements privés leaders (INPHB, UVCI) ont des programmes de formation TICE annuels obligatoires.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "45%",
+      "source": "MENA CI PNDE / UVCI RH 2024",
+      "year": 2024
+    },
+    {
+      "title": "Résistance culturelle au 'cours magistral' et transition vers le pédagogique actif digital",
+      "description": "La culture pédagogique dominante en Côte d'Ivoire reste le cours magistral (transmission top-down) — 72% des enseignants du supérieur CI n'utilisent pas activement de méthodes participatives (sondages, quiz en ligne, discussions en ligne) selon MESRS 2024. La transition vers une pédagogie active digitale (flipped classroom, active learning, peer learning) nécessite un changement culturel profond, soutenu par des champions internes et une direction qui valorise l'innovation pédagogique.",
+      "impact_level": "high",
+      "horizon": "short_term",
+      "adoption_rate": "30%",
+      "source": "MESRS CI / AUF Rapport Pédagogie Numérique 2024",
+      "year": 2024
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "Plateformes de formation TICE pour enseignants (formation continue en ligne)",
+      "category": "Formation / TICE",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "MENA CI (France Compétences Digital, licence nationale), AUF (Moodle TICE, 2 500 enseignants CI formés/an), UVCI (auto-formation tuteurs — modules 4h TICE intégrés au LMS)",
+      "leading_vendors": ["AUF Formacsup (formation formateurs)", "Google for Education Training Center", "Microsoft Educator Center", "ISTE Certification (USA)", "Coursera Teacher (certif. pédagogie digitale)"]
+    },
+    {
+      "name": "Outils de pédagogie active digitale (Mentimeter, Padlet, Kahoot!, Miro)",
+      "category": "Active Learning / EdTech",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "INPHB (Mentimeter + Miro utilisés en cours), UVCI (Mentimeter cours synchrones Zoom), Pigier CI (Kahoot! + Padlet), 40% des enseignants formés CI",
+      "leading_vendors": ["Mentimeter (sondages temps réel)", "Kahoot! (quiz gamifié)", "Padlet (tableau collaboratif)", "Miro (tableau blanc digital)", "Jamboard Google (collaboratif)"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Programme 'Tuteur 2.0' : formation obligatoire annuelle de tous les tuteurs UVCI (3 jours — conception pédagogique en ligne, Moodle avancé, Articulate Rise, IA générative pour la création de cours), 12 champions digitaux internes (1/district régional CI), taux de maîtrise outils digitaux : 89% tuteurs (vs. 35% enseignants CI public), 'Digital Teaching Award UVCI' annuel (3 tuteurs primés pour innovation pédagogique)",
+        "differentiator": "La culture digitale enseignante la plus avancée du secteur éducatif CI — 100% des tuteurs UVCI formés annuellement aux outils digitaux (vs. 56% objectif MENA CI pour le public), 89% de maîtrise avancée, 12 innovations pédagogiques déployées à l'échelle depuis le programme champions en 2024",
+        "source": "UVCI Rapport RH et Formation 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "African Leadership University (ALU)",
+        "country": "Rwanda / Mauritius / Côte d'Ivoire (campus en ligne)",
+        "key_practice": "Faculté 100% formée pédagogie active (flipped classroom, problem-based learning, peer learning), zéro cours magistral institutionnel, 'Faculty Innovation Week' annuelle (40h de formation et d'expérimentation), reconnaissance de l'innovation pédagogique dans la grille de rémunération (prime 15% pour les facultés avec NPS > 80 de leurs cours), formation IA enseignant obligatoire 2024",
+        "differentiator": "Première université africaine à intégrer l'innovation pédagogique dans la rémunération — prime 15% sur salaire lié au NPS cours > 80 : 68% des facultés ALU ont atteint cet objectif en 2024 (vs. 0% en 2021), transformant la culture d'innovation pédagogique en KPI RH mesurable",
+        "source": "African Leadership University Annual Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Minerva University — Faculty Development",
+        "country": "États-Unis",
+        "k_practice": "Formation enseignante intensive 6 semaines avant premier cours (pédagogie active complète, usage Forum LMS, analyse learning analytics), évaluation enseignante hebdomadaire par les étudiants (NPS cours chaque semaine avec feedback structuré), coaching pédagogique individuel trimestriel (pair observer → feedback), culture 'expérimentation sans risque' (un enseignant peut tester un nouveau format sans autorisation préalable)",
+        "key_practice": "Formation enseignante intensive 6 semaines avant premier cours (pédagogie active complète, usage Forum LMS, analyse learning analytics), évaluation enseignante hebdomadaire par les étudiants (NPS cours chaque semaine avec feedback structuré), coaching pédagogique individuel trimestriel (pair observer → feedback), culture 'expérimentation sans risque' (un enseignant peut tester un nouveau format sans autorisation préalable)",
+        "differentiator": "Culture d'innovation pédagogique la plus forte au monde — NPS cours hebdomadaire + coaching trimestriel + 6 semaines de formation initiale = taux de satisfaction des cours 88% (vs. 55% benchmark université US), 0 cours magistral depuis création (2014), culture d'expérimentation institutionnalisée",
+        "source": "Minerva University Faculty Report 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Culture pédagogique 100% magistrale, aucune formation TICE des enseignants, outil numérique = PowerPoint uniquement, résistance active au changement, direction non engagée sur le digital.",
+    "level_2_developing": "Formation TICE ponctuelle (1-2 jours/an pour quelques enseignants volontaires), outils numériques utilisés par 20-30% des enseignants (sans cohérence), aucun champion digital identifié.",
+    "level_3_defined": "Formation TICE obligatoire annuelle pour 50%+ des enseignants, champions digitaux nommés par département, KPI de maîtrise outils (>50%), début de valorisation de l'innovation pédagogique (reconnaissance informelle).",
+    "level_4_managed": "Formation TICE obligatoire annuelle 100% enseignants, programme champions digitaux actif (1 champion/10 enseignants), DCI (Digital Culture Index) mesuré, reconnaissance formelle de l'innovation pédagogique (award, prime).",
+    "level_5_optimizing": "Culture digitale enseignante totale : formation IA obligatoire (LLM pédagogique), NPS cours hebdomadaire, coaching pédagogique individuel, innovation pédagogique dans la grille de rémunération, DCI > 70, 0 cours magistral sur les modules digitaux, culture d'expérimentation institutionnalisée."
+  },
+  "regulations": [
+    {
+      "name": "MENA CI — Formation TICE obligatoire pour les enseignants du secondaire (PNDE CI)",
+      "authority": "MENA (Ministère de l'Éducation Nationale et de l'Alphabétisation)",
+      "description": "Le PNDE CI 2022-2025 impose une formation TICE minimale pour tous les enseignants du secondaire CI : 40h de formation sur 3 ans (outils numériques pédagogiques, LMS basique, création de ressources numériques). Les enseignants formés reçoivent une attestation MENA CI TICE. Les établissements privés conventionnés doivent soumettre au MENA CI un rapport de formation TICE de leurs enseignants (taux de formation inclus dans l'évaluation d'accréditation). Le non-respect peut influencer le renouvellement du conventionnement.",
+      "compliance_deadline": "2025 (objectif 100% enseignants secondaire formés TICE)",
+      "impact_on_sector": "Les établissements privés doivent planifier et exécuter des programmes de formation TICE pour leurs enseignants (40h minimum sur 3 ans) et en documenter la réalisation pour le rapport MENA CI annuel"
+    },
+    {
+      "name": "CAMES — Standards de compétences numériques des enseignants du supérieur UEMOA",
+      "authority": "CAMES (Conseil Africain et Malgache pour l'Enseignement Supérieur)",
+      "description": "Le CAMES a publié en 2023 un référentiel de compétences numériques des enseignants du supérieur UEMOA (basé sur le cadre DigComp EU adapté au contexte africain francophone) : 5 domaines (information et données, communication digitale, création de contenu, sécurité, résolution de problèmes) avec 3 niveaux (débutant, intermédiaire, avancé). Les universités candidates à l'accréditation CAMES pour leurs formations hybrides ou en ligne doivent démontrer que > 60% de leur corps enseignant atteint le niveau 'intermédiaire' du référentiel CAMES DigComp.",
+      "compliance_deadline": "2024 (pour les accréditations CAMES nouvelles formations hybrides)",
+      "impact_on_sector": "Les universités CI visant l'accréditation CAMES pour leurs nouvelles formations hybrides doivent évaluer et certifier les compétences numériques de leur corps enseignant selon le référentiel CAMES DigComp"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Épuisement des enseignants face à la surcharge de la double maîtrise (contenu + digital)",
+      "description": "En Côte d'Ivoire, les enseignants doivent désormais maîtriser simultanément : leur discipline (expertise métier), la pédagogie (méthodes d'enseignement), ET les outils digitaux (LMS, Zoom, création de vidéos, quiz en ligne, outils IA). Cette triple compétence requise sans réduction de la charge de cours génère un épuisement : 65% des enseignants CI formés aux TICE déclarent utiliser moins d'outils digitaux 6 mois après la formation qu'à la fin de la formation (retour aux méthodes familières pour gérer la charge). La formation sans soutien continu (coaching, champions digitaux) a un effet limité dans le temps.",
+      "severity": "high",
+      "likelihood": "high",
+      "mitigation": "Réduire la charge de cours pendant la phase d'adoption digitale (ex. 10% de réduction pendant 1 semestre), fournir des outils clés en main pré-configurés (templates Moodle, quiz prêts à l'emploi, bibliothèque de ressources AUF), instaurer des 'heures de coaching digital' hebdomadaires avec les champions digitaux — UVCI CI a instauré 2h/semaine de coaching digital pour ses tuteurs (formation continue intégrée à la charge de travail)"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Certification CAMES DigComp comme avantage concurrentiel et levier de recrutement de talents",
+      "description": "Les établissements CI qui font certifier leur corps enseignant selon le référentiel CAMES DigComp (et l'affichent dans leur communication) bénéficient d'un avantage concurrentiel pour : (1) attirer les enseignants les plus qualifiés (une certification valorise le CV enseignant dans l'espace UEMOA), (2) convaincre les employeurs partenaires de la qualité des diplômés formés par des enseignants certifiés numériques, (3) accéder aux financements AUF et BAD réservés aux établissements certifiés DigComp CAMES. L'INPHB vise une certification 100% corps enseignant CAMES DigComp niveau intermédiaire d'ici 2026.",
+      "impact_level": "medium",
+      "time_to_value": "1-2 ans",
+      "prerequisite_maturity": "Niveau 3 — programme de formation TICE annuel en place + LMS opérationnel"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "AUF — Programme Formacsup (Formation des formateurs Afrique francophone)",
+      "montant": "1,8 Mds FCFA (programme 3 ans, 2024-2027, Afrique francophone dont CI)",
+      "investisseurs": ["AUF (Agence Universitaire de la Francophonie)", "AFD (Agence Française de Développement)", "Union Européenne (programme Erasmus+ Afrique)"],
+      "annee": 2024,
+      "description": "L'AUF a lancé le programme Formacsup pour former 5 000 formateurs d'enseignants du supérieur en Afrique francophone à la pédagogie numérique (LMS, IA générative, learning analytics, accessibilité numérique). En Côte d'Ivoire, 350 enseignants UFHB, INPHB et UVCI sont inclus dans le programme Formacsup 2024-2027. Formation en ligne (120h) + 2 regroupements présentiel (Abidjan Campus AUF) avec certification CAMES DigComp niveau intermédiaire à la clé."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Programme 'Tuteur 2.0' + Champions Digitaux — Développement de la culture digitale enseignante",
+    "description": "L'UVCI a développé en 2022-2024 le programme 'Tuteur 2.0' pour transformer la culture digitale de ses 85 tuteurs en ligne : (1) Formation initiale obligatoire 3 jours (conception pédagogique en ligne, Moodle avancé [création quiz, forums, activités], Articulate Rise [création e-learning], Zoom + Mentimeter [cours synchrones engageants], IA générative pour la création de QCM) ; (2) Formation continue : 6 modules de 2h/semestre (nouveaux outils, bonnes pratiques pédagogiques, analyse des learning analytics de leurs cours) ; (3) 12 Champions Digitaux UVCI (1 par grande filière) : tuteurs avancés formés 5 jours/an, mission : coaching pair-à-pair de leurs collègues tuteurs, test en avant-première des nouveaux outils UVCI avant déploiement généralisé ; (4) 'Digital Teaching Award UVCI' : 3 tuteurs primés annuellement pour innovation pédagogique (prime 500K FCFA + présentation à la conférence AUF).",
+    "resultats": "Taux de maîtrise outils LMS (évaluation annuelle) : 35% → 89% en 3 ans. Innovations pédagogiques déployées à l'échelle (issues de champions et tuteurs) : 12 en 2024 (vs. 1 en 2021). Taux de rétention des tuteurs formés (maîtrisant activement les outils 6 mois après formation) : 82% (vs. 35% sans coaching continu). NPS tuteurs sur leur propre développement professionnel UVCI : 78/100. Taux de complétion des cours créés par les tuteurs 'Tuteur 2.0' : 72% (vs. 58% pour les cours conçus par des tuteurs non formés). DCI (Digital Culture Index) tuteurs UVCI : 68/100 (objectif 70).",
+    "source": "UVCI Rapport Formation Tuteurs 2024 / AUF Formacsup",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif culture digitale enseignante — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "Formation TICE annuelle (%)", "Champions digitaux", "DCI enseignant", "Innovation pédagogique valorisée"],
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "valeurs": ["100% tuteurs (Tuteur 2.0)", "12 champions (1/filière)", "68/100 (objectif 70)", "Oui (Award 500K FCFA)"]
+      },
+      {
+        "organisation": "INPHB Yamoussoukro",
+        "valeurs": ["60% enseignants formés TICE", "5 champions (informatique, ingénierie)", "Non mesuré formellement", "Concours Innovation INPHB (reconnaissance)"]
+      },
+      {
+        "organisation": "Lycées publics CI",
+        "valeurs": ["56% objectif MENA 2025 (en cours)", "Programme MENA CI TICE (pilote)", "Non", "Non"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue la culture digitale du corps enseignant dans le secteur éducation CI : taux de formation TICE (conformité MENA CI PNDE 40h/3ans), présence d'un programme de champions digitaux, DCI (Digital Culture Index) enseignant, valorisation de l'innovation pédagogique (award, prime), et conformité au référentiel CAMES DigComp.",
+    "maturity_max_description": "Établissement éducatif CI avec culture digitale enseignante avancée : 100% des enseignants formés TICE annuellement (conformité MENA CI), programme champions digitaux actif (1/filière), DCI > 65, innovation pédagogique valorisée dans la rémunération, certification CAMES DigComp intermédiaire pour > 60% du corps enseignant — taux de maîtrise outils LMS > 80%.",
+    "scoring_rubric": {
+      "score_1_to_20": "Culture magistrale totale, aucune formation TICE, outil numérique = PowerPoint uniquement, résistance active, direction non engagée.",
+      "score_21_to_40": "Formation TICE ponctuelle (volontaires), 20-30% enseignants utilisent outils digitaux, aucun champion, non conforme MENA CI PNDE.",
+      "score_41_to_60": "Formation TICE 50%+ enseignants/an (partiel MENA CI), champions informels, KPI maîtrise outils, reconnaissance informelle innovation.",
+      "score_61_to_80": "Formation TICE 100% (conforme MENA CI), champions digitaux formels, DCI mesuré, award innovation, début certification CAMES DigComp.",
+      "score_81_to_100": "Formation IA obligatoire, NPS cours hebdomadaire, coaching pédagogique, innovation dans rémunération, DCI > 65, CAMES DigComp > 60%, 0 cours magistral."
+    },
+    "prompt_injection_context": "Secteur éducation CI : MENA CI impose 40h de formation TICE sur 3 ans pour les enseignants du secondaire (objectif 100% d'ici 2025 — à 56% en 2024). CAMES DigComp est requis pour l'accréditation des nouvelles formations hybrides UEMOA (> 60% corps enseignant niveau intermédiaire). UVCI est le modèle de culture digitale enseignante CI (89% maîtrise outils LMS, programme Tuteur 2.0 + 12 champions). La résistance culturelle au magistral est le frein principal en CI.",
+    "key_questions_for_llm": [
+      "Quel pourcentage de vos enseignants a reçu une formation TICE dans les 12 derniers mois ? Êtes-vous en conformité avec les objectifs MENA CI PNDE (40h sur 3 ans) ?",
+      "Avez-vous un programme de champions digitaux (enseignants référents formateurs de pairs) dans votre établissement ? Sont-ils reconnus formellement ?",
+      "Mesurez-vous la culture digitale de vos enseignants (DCI ou équivalent) et l'évolution de leur maîtrise des outils pédagogiques numériques au fil du temps ?",
+      "Valorisez-vous formellement l'innovation pédagogique de vos enseignants dans votre système de rémunération ou de reconnaissance (prix, prime, réduction de charge) ?",
+      "Votre corps enseignant a-t-il été évalué selon le référentiel CAMES DigComp ? Avez-vous l'ambition d'obtenir la certification pour > 60% de vos enseignants ?"
+    ]
+  }
+}

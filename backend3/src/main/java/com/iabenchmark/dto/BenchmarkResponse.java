@@ -1,6 +1,7 @@
 package com.iabenchmark.dto;
 
 import java.util.List;
+import java.util.Map;
 
 public class BenchmarkResponse {
 
@@ -15,6 +16,7 @@ public class BenchmarkResponse {
     private List<BenchmarkTrend> trends;
     private List<SectorLeader> sectorLeaders;
     private List<RoadmapPhase> improvementRoadmap;
+    private List<SubAxisBenchmark> subAxisBenchmarks;
     private List<String> keyInsights;
 
     // ── Nested classes ─────────────────────────────────────────────────────────
@@ -73,6 +75,7 @@ public class BenchmarkResponse {
         private String horizon;
         private String adoptionRate;
         private String source;
+        private String sourceUrl;
 
         public String getTitle() { return title; }
         public void setTitle(String v) { this.title = v; }
@@ -86,16 +89,22 @@ public class BenchmarkResponse {
         public void setAdoptionRate(String v) { this.adoptionRate = v; }
         public String getSource() { return source; }
         public void setSource(String v) { this.source = v; }
+        public String getSourceUrl() { return sourceUrl; }
+        public void setSourceUrl(String v) { this.sourceUrl = v; }
     }
 
     public static class SectorLeader {
+        private String level;
         private String company;
         private String country;
         private Integer estimatedScore;
         private String keyPractice;
         private String differentiator;
         private String source;
+        private String sourceUrl;
 
+        public String getLevel() { return level; }
+        public void setLevel(String v) { this.level = v; }
         public String getCompany() { return company; }
         public void setCompany(String v) { this.company = v; }
         public String getCountry() { return country; }
@@ -108,6 +117,8 @@ public class BenchmarkResponse {
         public void setDifferentiator(String v) { this.differentiator = v; }
         public String getSource() { return source; }
         public void setSource(String v) { this.source = v; }
+        public String getSourceUrl() { return sourceUrl; }
+        public void setSourceUrl(String v) { this.sourceUrl = v; }
     }
 
     public static class RoadmapPhase {
@@ -130,6 +141,58 @@ public class BenchmarkResponse {
         public void setTargetLevel(String v) { this.targetLevel = v; }
         public String getInvestmentLevel() { return investmentLevel; }
         public void setInvestmentLevel(String v) { this.investmentLevel = v; }
+    }
+
+    public static class SubAxisBenchmark {
+        private String axis;
+        private String subAxis;
+        private Double companyScore;
+        private List<Map<String, Object>> tendances;
+        private String analyseStatique;
+        private String maturiteMaximale;
+        private List<Map<String, Object>> cadreJuridique;
+        private List<Map<String, Object>> maLeveesFonds;
+        private List<Map<String, Object>> leadersNationaux;
+        private List<Map<String, Object>> leadersRegionaux;
+        private List<Map<String, Object>> leadersInternationaux;
+        private String analysePersonnalisee;
+        private Map<String, Object> zoomCaseStudy;
+        private Map<String, Object> comparatifOrganisations;
+        private List<Map<String, Object>> risques;
+        private List<Map<String, Object>> opportunites;
+
+        public String getAxis() { return axis; }
+        public void setAxis(String v) { this.axis = v; }
+        public String getSubAxis() { return subAxis; }
+        public void setSubAxis(String v) { this.subAxis = v; }
+        public Double getCompanyScore() { return companyScore; }
+        public void setCompanyScore(Double v) { this.companyScore = v; }
+        public List<Map<String, Object>> getTendances() { return tendances; }
+        public void setTendances(List<Map<String, Object>> v) { this.tendances = v; }
+        public String getAnalyseStatique() { return analyseStatique; }
+        public void setAnalyseStatique(String v) { this.analyseStatique = v; }
+        public String getMaturiteMaximale() { return maturiteMaximale; }
+        public void setMaturiteMaximale(String v) { this.maturiteMaximale = v; }
+        public List<Map<String, Object>> getCadreJuridique() { return cadreJuridique; }
+        public void setCadreJuridique(List<Map<String, Object>> v) { this.cadreJuridique = v; }
+        public List<Map<String, Object>> getMaLeveesFonds() { return maLeveesFonds; }
+        public void setMaLeveesFonds(List<Map<String, Object>> v) { this.maLeveesFonds = v; }
+        public List<Map<String, Object>> getLeadersNationaux() { return leadersNationaux; }
+        public void setLeadersNationaux(List<Map<String, Object>> v) { this.leadersNationaux = v; }
+        public List<Map<String, Object>> getLeadersRegionaux() { return leadersRegionaux; }
+        public void setLeadersRegionaux(List<Map<String, Object>> v) { this.leadersRegionaux = v; }
+        public List<Map<String, Object>> getLeadersInternationaux() { return leadersInternationaux; }
+        public void setLeadersInternationaux(List<Map<String, Object>> v) { this.leadersInternationaux = v; }
+        public String getAnalysePersonnalisee() { return analysePersonnalisee; }
+        public void setAnalysePersonnalisee(String v) { this.analysePersonnalisee = v; }
+        public Map<String, Object> getZoomCaseStudy() { return zoomCaseStudy; }
+        public void setZoomCaseStudy(Map<String, Object> v) { this.zoomCaseStudy = v; }
+        public Map<String, Object> getComparatifOrganisations() { return comparatifOrganisations; }
+        public void setComparatifOrganisations(Map<String, Object> v) { this.comparatifOrganisations = v; }
+        public List<Map<String, Object>> getRisques() { return risques; }
+        public void setRisques(List<Map<String, Object>> v) { this.risques = v; }
+        public List<Map<String, Object>> getOpportunites() { return opportunites; }
+        public void setOpportunites(List<Map<String, Object>> v) { this.opportunites = v; }
     }
 
     // ── Root getters/setters ───────────────────────────────────────────────────
@@ -156,6 +219,8 @@ public class BenchmarkResponse {
     public void setSectorLeaders(List<SectorLeader> v) { this.sectorLeaders = v; }
     public List<RoadmapPhase> getImprovementRoadmap() { return improvementRoadmap; }
     public void setImprovementRoadmap(List<RoadmapPhase> v) { this.improvementRoadmap = v; }
+    public List<SubAxisBenchmark> getSubAxisBenchmarks() { return subAxisBenchmarks; }
+    public void setSubAxisBenchmarks(List<SubAxisBenchmark> v) { this.subAxisBenchmarks = v; }
     public List<String> getKeyInsights() { return keyInsights; }
     public void setKeyInsights(List<String> v) { this.keyInsights = v; }
 }

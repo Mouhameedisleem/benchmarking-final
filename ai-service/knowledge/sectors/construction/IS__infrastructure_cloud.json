@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "IS",
+    "sous_axe": "infrastructure_cloud",
+    "version": "1.0",
+    "langue": "fr",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "L'infrastructure informatique du secteur BTP CI est largement sous-développée : la majorité des entreprises fonctionnent sans serveur (données sur PC individuels ou clé USB), sans système de sauvegarde fiable, et sans connectivité chantier structurée. Les quelques grands groupes (filiales internationales, agences étatiques) utilisent des ERP on-premise ou des solutions cloud groupe. La forte mobilité des chantiers (changement de site tous les 18-36 mois) rend le cloud particulièrement adapté au BTP. Le datacenter Orange CI à Abidjan et les offres cloud Azure/AWS avec points de présence West Africa créent les conditions pour une adoption accélérée.",
+    "chiffres_cles": [
+      "< 8% des entreprises BTP CI utilisent une solution cloud (hors email)",
+      "Taux de perte de données BTP CI : estimé 35% sur une période de 3 ans (PC perdus, disques durs défaillants)",
+      "Coût licence ERP on-premise BTP : 8-15 M FCFA/an pour une PME, vs. 2-4 M FCFA/an SaaS",
+      "Connectivité 4G Orange CI / MTN CI : couverture 78% zones urbaines (fiabilité variable chantier)",
+      "Datacenter Orange CI Abidjan : hébergement certifié Tier II, conforme PCP MENA CI"
+    ],
+    "specificites_locales": [
+      "ARTCI CI : obligation de localisation de certaines données (PCP MENA CI — données personnelles et données sensibles)",
+      "APDP CI Loi 2013-450 : encadrement transfert données hors UEMOA (données personnelles chantier)",
+      "Connectivité chantier : fibre optique absente sur chantiers ; 4G Orange CI ou MTN CI (parfois 3G en zones éloignées)",
+      "Coupures électriques CIE CI : uptime datacenter local ~95%, groupes électrogènes nécessaires",
+      "SIGMAP DGMP CI : accès cloud requis pour soumissions dématérialisées AO"
+    ]
+  },
+  "definition_axe": {
+    "titre": "Infrastructure cloud et systèmes d'information BTP",
+    "description": "Capacité de l'entreprise BTP à déployer une infrastructure informatique cloud adaptée à ses besoins de mobilité (multi-chantiers), de collaboration (sous-traitants, maître d'ouvrage) et de continuité d'activité. Le cloud BTP couvre le stockage et le partage de plans (BIM, PDF), les applications de gestion chantier SaaS, les ERP cloud, la messagerie professionnelle, la sauvegarde automatique des données de chantier et la gestion des accès mobiles depuis les chantiers CI.",
+    "perimetre": [
+      "Messagerie et productivité cloud : Microsoft 365 / Google Workspace pour les équipes BTP",
+      "Stockage et partage de plans : SharePoint, Google Drive, Autodesk BIM 360 (modèles Revit)",
+      "Applications SaaS chantier : Procore Cloud, Fieldwire, PlanGrid (accès mobile offline-first)",
+      "ERP cloud BTP : SAP S/4HANA Cloud, Oracle Cloud Construction, Sage 100 Construction Cloud",
+      "Sauvegarde et continuité : backup automatique données chantier, RTO/RPO définis",
+      "Accès mobile sécurisé : VPN, MDM (Mobile Device Management) pour tablettes et mobiles chantier"
+    ],
+    "technologies_cles": [
+      "Microsoft Azure West Africa (Johannesburg + Lagos nodes) — cloud enterprise pour BTP CI",
+      "Microsoft 365 / SharePoint — messagerie, stockage plans, collaboration équipes BTP",
+      "Autodesk BIM 360 / Autodesk Construction Cloud — cloud BIM pour partage maquettes Revit",
+      "Procore Cloud CI — gestion chantier SaaS avec mode offline mobile (4G/3G/WiFi)",
+      "Orange Cloud CI / Moov CI Cloud — hébergement cloud souverain Côte d'Ivoire",
+      "Cisco Meraki / Peplink — routeurs 4G multi-SIM pour connectivité chantier fiable"
+    ]
+  },
+  "enjeux_specifiques": {
+    "enjeux": [
+      {
+        "titre": "Mobilité et accès données entre chantiers",
+        "description": "Une entreprise BTP CI gère simultanément 3-10 chantiers en parallèle dans différentes villes (Abidjan, Bouaké, San-Pédro, Yamoussoukro). Sans infrastructure cloud centralisée, les données (plans, devis, situations de travaux, photos) sont dispersées sur les PC locaux de chaque site, rendant la supervision depuis le siège impossible.",
+        "impact": "Centralisation des données multi-chantiers, supervision à distance, réduction des déplacements direction"
+      },
+      {
+        "titre": "Continuité d'activité et protection des données",
+        "description": "La perte d'un PC ou d'un disque dur sur un chantier CI (vol, incendie, chute) peut faire perdre des mois de données (plans, métrés, situations). Sans sauvegarde cloud automatique, le risque de perte de données est élevé. La conformité APDP CI impose de plus une gestion sécurisée des données personnelles des employés et sous-traitants.",
+        "impact": "Protection contre la perte de données, conformité APDP CI, continuité d'activité"
+      },
+      {
+        "titre": "Collaboration avec maîtres d'ouvrage et sous-traitants",
+        "description": "Les projets BTP CI impliquent de nombreux acteurs (MOA, MOE, BET, contrôleur technique, sous-traitants, fournisseurs) qui doivent partager et collaborer sur les mêmes documents (plans, cahiers des charges, situations, PV). Un cloud documentaire partagé remplace l'échange d'emails avec fichiers joints non versionnés.",
+        "impact": "Version unique de la vérité, réduction des erreurs dues aux plans obsolètes, collaboration en temps réel"
+      }
+    ]
+  },
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Inexistant",
+      "description": "Données BTP stockées sur des PC individuels et des clés USB. Partage de plans par email (fichiers lourds). Aucune sauvegarde systématique. Pas d'outil collaboratif. Communication par téléphone et SMS. Infrastructure informatique absente ou minimale (un PC par chantier).",
+      "signes_distinctifs": [
+        "Plans et devis sur PC portables individuels, risque de perte total",
+        "Partage de plans par email (fichiers 50-150 Mo, versions non contrôlées)",
+        "Aucune sauvegarde : dernière sauvegarde inconnue ou jamais réalisée",
+        "Communication uniquement par téléphone, SMS et WhatsApp personnel",
+        "Aucun outil de messagerie professionnelle (pas de domaine email d'entreprise)"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Email professionnel sur domaine entreprise (Gmail Business ou Microsoft 365 de base). Google Drive ou Dropbox pour le partage de fichiers. Sauvegarde manuelle sur disque dur externe. Pas encore de plateforme chantier dédiée. Communication WhatsApp Business.",
+      "signes_distinctifs": [
+        "Domaine email entreprise (ex. @btpciexemple.ci), Google Workspace ou Microsoft 365 basique",
+        "Google Drive partagé pour les plans et documents chantier",
+        "Sauvegarde manuelle mensuelle sur disque dur externe",
+        "WhatsApp Business pour la communication chantier (non intégré aux systèmes)",
+        "Quelques logiciels installés localement (AutoCAD, MS Project) sans licence cloud"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Microsoft 365 complet (SharePoint, Teams) ou équivalent pour la collaboration documentaire. Application chantier SaaS (Procore, Fieldwire) avec mode offline. Sauvegarde cloud automatique quotidienne. MDM pour la gestion des tablettes chantier. Connectivité 4G routeur dédié sur les principaux chantiers.",
+      "signes_distinctifs": [
+        "Microsoft 365 complet : SharePoint pour GED plans, Teams pour communication chantier",
+        "Application chantier SaaS avec mode offline mobile (synchronisation 4G)",
+        "Sauvegarde cloud automatique quotidienne (Azure Backup ou équivalent)",
+        "Tablettes chantier gérées via MDM (Intune), applications d'entreprise déployées centralement",
+        "Routeur 4G dédié sur les chantiers > 100 M FCFA (Peplink ou Cisco Meraki)"
+      ]
+    },
+    "niveau_4": {
+      "label": "Optimisé",
+      "description": "Infrastructure cloud complète : ERP cloud + BIM 360 + logiciel chantier SaaS intégrés. Accès VPN sécurisé depuis tous les chantiers. RTO/RPO définis et testés. Hébergement conforme PCP MENA CI (données CI sur datacenter Orange CI ou équivalent). Conformité APDP CI documentée.",
+      "signes_distinctifs": [
+        "ERP cloud BTP (SAP S/4HANA Cloud, Oracle Cloud Construction) : données en temps réel",
+        "Autodesk BIM 360 / Construction Cloud : maquettes BIM accessibles depuis tous les chantiers",
+        "Infrastructure Zero Trust : MFA obligatoire, VPN pour accès système depuis chantier",
+        "RTO < 4 heures, RPO < 24 heures testé annuellement",
+        "Conformité PCP MENA CI et APDP CI documentée, DPO désigné"
+      ]
+    },
+    "niveau_5": {
+      "label": "Différenciant",
+      "description": "Infrastructure cloud intelligente avec edge computing sur chantier (traitement local IoT avant envoi cloud). IA pour l'optimisation des accès et de la bande passante (4G CI variable). Intégration en temps réel maître d'ouvrage sur portail cloud partagé. Zéro infrastructure on-premise. Certification ISO 27001.",
+      "signes_distinctifs": [
+        "Edge computing chantier : traitement local des données IoT (engins, capteurs) avant envoi cloud",
+        "IA gestion bande passante : priorisation des synchronisations critiques quand 4G CI faible",
+        "Portail cloud maître d'ouvrage : accès temps réel aux données de chantier (plans, avancement, photos)",
+        "Zero on-premise : 100% applications et données sur cloud (aucun serveur physique en entreprise)",
+        "Certification ISO 27001 : sécurité des systèmes d'information BTP"
+      ]
+    }
+  },
+  "indicateurs_cles": {
+    "indicateurs": [
+      {
+        "nom": "Taux de disponibilité des applications chantier",
+        "definition": "Pourcentage du temps où les applications clés (gestion chantier, ERP, BIM) sont accessibles depuis les chantiers CI",
+        "unite": "%",
+        "cible_sectorielle": "> 98% disponibilité (incluant mode offline pour zones sans 4G CI)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "RTO (Recovery Time Objective)",
+        "definition": "Temps maximal acceptable pour restaurer les systèmes après une panne ou perte de données",
+        "unite": "heures",
+        "cible_sectorielle": "RTO < 4 heures pour les systèmes critiques (ERP, plans BIM)",
+        "frequence_mesure": "Annuelle (test DR)"
+      },
+      {
+        "nom": "Taux d'utilisateurs avec accès cloud sécurisé",
+        "definition": "Pourcentage des collaborateurs BTP ayant accès aux données et applications d'entreprise depuis leurs appareils mobiles chantier",
+        "unite": "%",
+        "cible_sectorielle": "> 90% des chefs de chantier et conducteurs de travaux avec accès cloud mobile",
+        "frequence_mesure": "Trimestrielle"
+      },
+      {
+        "nom": "Coût IT par employé",
+        "definition": "Coût annuel total de l'infrastructure informatique (cloud, licences, matériel) divisé par le nombre d'employés",
+        "unite": "FCFA/employé/an",
+        "cible_sectorielle": "< 300 000 FCFA/employé/an (cloud SaaS vs. 500 000+ on-premise BTP CI)",
+        "frequence_mesure": "Annuelle"
+      },
+      {
+        "nom": "Conformité PCP MENA CI et APDP CI",
+        "definition": "Pourcentage des données BTP hébergées conformément aux exigences ARTCI (localisation CI) et APDP CI (données personnelles)",
+        "unite": "%",
+        "cible_sectorielle": "100% des données personnelles chantier conformes APDP CI Loi 2013-450",
+        "frequence_mesure": "Annuelle (audit)"
+      }
+    ]
+  },
+  "bonnes_pratiques": {
+    "pratiques": [
+      {
+        "titre": "Adopter Microsoft 365 comme socle cloud BTP",
+        "description": "Microsoft 365 (Teams, SharePoint, OneDrive, Exchange) offre un socle cloud complet et bien adapté au BTP : Teams pour la communication chantier (remplace WhatsApp Business pour les réunions), SharePoint pour la GED plans (versionning automatique), OneDrive pour la sauvegarde automatique PC. Disponible en Côte d'Ivoire via partenaires Microsoft CI. Tarif : 3 000-8 000 FCFA/utilisateur/mois selon la licence.",
+        "benefice": "Centralisation collaborative, sauvegarde automatique, conformité APDP CI (datacenter EU/Afrique)"
+      },
+      {
+        "titre": "Déployer des routeurs 4G multi-SIM sur les chantiers critiques",
+        "description": "Installer un routeur 4G multi-SIM (Peplink Balance ou Cisco Meraki MX) sur les chantiers > 100 M FCFA, avec deux cartes SIM (Orange CI + MTN CI) pour la redondance. En cas de défaillance d'un opérateur, le routeur bascule automatiquement. Réserver la bande passante pour les applications critiques (plans BIM, vidéoconférence maître d'ouvrage).",
+        "benefice": "Connectivité chantier fiable (+95% uptime vs. 70-80% SIM unique), accès cloud garanti"
+      },
+      {
+        "titre": "Autodesk BIM 360 pour le partage de maquettes BIM multi-acteurs",
+        "description": "Utiliser Autodesk BIM 360 (renommé Autodesk Construction Cloud) comme plateforme centrale de partage des maquettes Revit, plans AutoCAD et documents BIM. Accès par rôle pour les sous-traitants, le BET, le contrôleur technique et le maître d'ouvrage. Mode viewer gratuit pour les acteurs sans licence Revit complète.",
+        "benefice": "Version unique de la vérité sur les plans, réduction des erreurs dues aux plans obsolètes, collaboration multi-acteurs"
+      },
+      {
+        "titre": "Choisir un prestataire cloud avec hébergement CI pour la conformité PCP MENA",
+        "description": "Pour les données sensibles (données personnelles employés, données biométriques chantier), opter pour un hébergement en Côte d'Ivoire (Orange Cloud CI, datacenter Abidjan) ou en Afrique de l'Ouest conformément au PCP MENA CI (ARTCI). Vérifier avec l'APDP CI les exigences de localisation pour les données personnelles.",
+        "benefice": "Conformité PCP MENA CI et APDP CI, protection contre les sanctions (jusqu'à 50 M FCFA APDP CI)"
+      },
+      {
+        "titre": "MDM (Mobile Device Management) pour les tablettes chantier",
+        "description": "Déployer Microsoft Intune (inclus dans Microsoft 365 Business Premium) pour la gestion centralisée des tablettes chantier : déploiement automatique des applications d'entreprise, effacement à distance en cas de vol, VPN automatique pour accès aux systèmes internes. Former les chefs de chantier à l'usage des tablettes durciées (IP65 minimum pour chantier BTP CI : pluie, poussière).",
+        "benefice": "Sécurité des données sur les tablettes, déploiement centralisé des mises à jour, récupération en cas de vol"
+      }
+    ]
+  },
+  "ecueils_frequents": {
+    "ecueils": [
+      {
+        "titre": "Partager des plans via des liens Google Drive non sécurisés",
+        "description": "Les plans de chantier partagés avec des liens publics Google Drive (accessible à quiconque avec le lien) exposent des données confidentielles (métrés, coûts, implantations). Risque d'espionnage concurrentiel sur les AO.",
+        "solution": "Utiliser uniquement des partages nominatifs avec authentification obligatoire (Microsoft SharePoint avec comptes invités authentifiés ou Procore avec rôles définis)"
+      },
+      {
+        "titre": "Négliger le mode offline pour les zones sans 4G CI",
+        "description": "Les applications chantier qui ne fonctionnent qu'en ligne sont inutilisables sur les chantiers en zones rurales CI (autoroutes inter-villes, chantiers mines, zones côtières). Les équipes reviennent au papier.",
+        "solution": "Exiger le mode offline-first pour toute application chantier déployée (Procore, Fieldwire, BatiScript CI supportent le offline avec synchronisation 4G)"
+      },
+      {
+        "titre": "Confondre Google Drive personnel et cloud d'entreprise",
+        "description": "Beaucoup d'entreprises BTP CI stockent leurs données sur les Google Drive personnels de leurs employés. Quand un employé quitte l'entreprise, les données partent avec lui.",
+        "solution": "Migrer systématiquement vers un compte d'entreprise (Google Workspace ou Microsoft 365) avec administration centralisée par l'entreprise"
+      }
+    ]
+  },
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau d'infrastructure cloud et SI BTP entre organisations représentatives",
+    "lignes": [
+      {
+        "organisation": "COLAS CI",
+        "profil": "Filiale Bouygues Construction, DSI groupe centralisée Paris + déclinaison CI",
+        "niveau_maturite": 4,
+        "points_forts": "Infrastructure cloud groupe (Azure, Microsoft 365, SAP S/4HANA cloud), BIM 360 déployé, MDM pour 200+ appareils CI, conformité ISO 27001 groupe",
+        "points_faibles": "Dépendance aux décisions DSI groupe Paris (lenteur d'adaptation au contexte CI), coûts cloud groupe élevés",
+        "initiatives_notables": "Autodesk Construction Cloud déployé sur tous les projets CI > 1 Md FCFA depuis 2023"
+      },
+      {
+        "organisation": "BNETD CI",
+        "profil": "Agence étatique CI, DSI interne, hébergement datacenter Abidjan",
+        "niveau_maturite": 3,
+        "points_forts": "Datacenter propre à Abidjan (conforme PCP MENA CI), Microsoft 365 déployé, GEOPROJET CI sur cloud souverain",
+        "points_faibles": "Applications chantier partiellement cloud, ERP on-premise, mobilité chantier limitée",
+        "initiatives_notables": "Plateforme GEOPROJET CI : cloud souverain CI pour le suivi géoréférencé des projets d'infrastructure de l'État"
+      },
+      {
+        "organisation": "SATCI CI",
+        "profil": "Promoteur immobilier CI, 50-100 collaborateurs, multi-chantiers Abidjan",
+        "niveau_maturite": 3,
+        "points_forts": "Microsoft 365, Procore Cloud pour gestion chantier, sauvegarde Azure automatique, tablettes chantier",
+        "points_faibles": "ERP comptable encore on-premise (Sage CI on-premise), pas de BIM 360 (AutoCAD uniquement), conformité APDP CI partielle",
+        "initiatives_notables": "Migration en cours vers ERP cloud : Sage 100 Cloud Construction (déploiement prévu fin 2025)"
+      },
+      {
+        "organisation": "PME BTP CI classe C-D",
+        "profil": "Entreprise BTP locale 20-100 employés, marchés mixtes",
+        "niveau_maturite": 1,
+        "points_forts": "Agilité, pas de dépendance à des systèmes complexes",
+        "points_faibles": "Données sur PC individuels, partage WhatsApp/email, aucune sauvegarde, risque perte totale données",
+        "initiatives_notables": "Début adoption Google Workspace (email pro) sur pression partenaires et SIGMAP DGMP CI (besoin signature électronique)"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "SATCI CI — Migration cloud Microsoft 365 + Procore pour gestion multi-chantiers Abidjan",
+    "contexte": "SATCI CI gérait simultanément 6 chantiers résidentiels VEFA dans 4 communes d'Abidjan (Cocody, Plateau, Yopougon, Songon) totalisant 1 200 logements et 3 projets de bureaux. L'infrastructure IT reposait sur des PC bureautiques au siège, des clés USB pour le transfert de plans entre sites, et des emails avec pièces jointes de 50-100 Mo pour partager les plans avec les sous-traitants et le contrôleur technique. Le directeur technique perdait 15 heures/semaine en déplacements inter-chantiers pour récupérer des informations physiquement.",
+    "probleme": "Perte de 2 PC chantier en 12 mois (vol + chute), causant la perte de 3 mois de photos et de bilans chantier. Plans obsolètes utilisés par 3 sous-traitants différents (version non synchronisée). Délai envoi plans actualisés : 24-48 heures. Directeur technique : 15 h/semaine déplacements inter-chantiers pour accéder aux données. Aucune visibilité siège en temps réel sur l'avancement des 6 chantiers.",
+    "solution_deployee": "Migration Microsoft 365 Business Premium (Teams, SharePoint, OneDrive, Intune) pour 45 collaborateurs. Déploiement Procore Cloud pour les 6 chantiers avec tablettes Durabook durciées IP65 sous MDM Intune. Routeurs 4G Peplink Balance 310 5G (Orange CI + MTN CI) sur chaque chantier. Formation 2 jours chefs de chantier. SharePoint : bibliothèque de plans versionné par chantier, accès sous-traitants par comptes invités authentifiés. Sauvegarde Azure Backup automatique quotidienne.",
+    "resultats": {
+      "pertes_donnees": "Zéro perte de données depuis 18 mois (vs. 2 PC perdus en 12 mois avant)",
+      "delai_diffusion_plans": "Plans actualisés disponibles immédiatement pour tous acteurs (vs. 24-48h avant)",
+      "deplacements_directeur_technique": "15 h/semaine → 3 h/semaine (-80%) déplacements inter-chantiers",
+      "versions_plans_obsoletes": "Incidents plans obsolètes : 3 par mois → 0 (versionning SharePoint)",
+      "visibilite_siège": "Tableau de bord Procore : avancement 6 chantiers visible en temps réel depuis siège",
+      "cout_it": "Coût IT total : -28% (on-premise serveur + licences box → Microsoft 365 + Procore SaaS)"
+    },
+    "enseignements": "Le principal obstacle n'était pas technique mais culturel : les chefs de chantier CI utilisaient WhatsApp comme canal principal de communication avec les sous-traitants. L'adoption de Procore et Teams a nécessité 3 mois d'accompagnement avec un champion numérique désigné par chantier. Les tablettes durciées IP65 étaient indispensables pour les conditions de chantier BTP CI (poussière, pluie, chocs)."
+  },
+  "ai_context": {
+    "scoring_rubric": {
+      "score_1_to_20": "Données BTP sur PC individuels et clés USB. Partage par email avec fichiers en pièce jointe. Aucune sauvegarde systématique. Communication uniquement par téléphone/SMS. Aucun domaine email professionnel ni outil cloud.",
+      "score_21_to_40": "Email professionnel sur domaine entreprise. Google Drive ou Dropbox pour partage fichiers. Sauvegarde manuelle irrégulière. WhatsApp Business. Quelques logiciels locaux. Pas de plateforme chantier dédiée.",
+      "score_41_to_60": "Microsoft 365 ou Google Workspace complet. Application chantier SaaS avec mode offline. Sauvegarde cloud automatique quotidienne. MDM pour tablettes chantier. Routeurs 4G dédiés sur chantiers principaux.",
+      "score_61_to_80": "Infrastructure cloud complète intégrée (ERP cloud + BIM 360 + chantier SaaS). Accès VPN sécurisé depuis chantiers. RTO/RPO définis et testés. Conformité PCP MENA CI et APDP CI documentée. Zero Trust sécurité.",
+      "score_81_to_100": "Edge computing chantier + IA optimisation connectivité. Portail cloud maître d'ouvrage temps réel. Zero on-premise. Certification ISO 27001. Infrastructure entièrement mobile et résiliente adaptée aux contraintes CI."
+    },
+    "questions_cles_diagnostic": [
+      "Où sont stockées vos données de chantier (plans, photos, situations) ? PC locaux, serveur, cloud ?",
+      "Avez-vous une sauvegarde automatique de vos données ? Quand avez-vous testé la restauration pour la dernière fois ?",
+      "Vos équipes utilisent-elles des applications cloud sur tablette ou mobile sur les chantiers ?",
+      "Avez-vous une connectivité chantier dédiée (routeur 4G) ou dépendez-vous des mobiles personnels ?",
+      "Vos sous-traitants et votre maître d'ouvrage ont-ils accès à une plateforme documentaire commune ?"
+    ],
+    "pieges_evaluation": [
+      "Ne pas confondre l'utilisation de WhatsApp pour partager des plans avec une infrastructure cloud réelle",
+      "Vérifier que le 'cloud' mentionné n'est pas juste des Google Drive personnels non administrés par l'entreprise",
+      "Tester la réalité du mode offline : beaucoup d'applications déclarées 'cloud' ne fonctionnent pas sans internet en CI"
+    ]
+  },
+  "ressources": {
+    "references_reglementaires": [
+      "ARTCI CI / PCP MENA CI — Politique de Cybersécurité de l'État CI, localisation données",
+      "APDP CI Loi 2013-450 — Protection données personnelles, transferts hors UEMOA",
+      "ARTCI CI — Réglementation hébergement données et cloud souverain CI",
+      "ISO 27001:2022 — Sécurité des systèmes d'information (applicable BTP CI via CODINORM)"
+    ],
+    "outils_recommandes": [
+      "Microsoft 365 Business Premium — Suite cloud complète (Teams, SharePoint, Intune MDM)",
+      "Autodesk Construction Cloud / BIM 360 — Cloud BIM et gestion documentaire chantier",
+      "Procore Cloud / Fieldwire — Application gestion chantier SaaS avec mode offline",
+      "Peplink Balance 310 5G — Routeur 4G multi-SIM pour connectivité chantier BTP CI",
+      "Orange Cloud CI / Datacenter Abidjan — Hébergement souverain CI conforme PCP MENA"
+    ],
+    "formations_certifications": [
+      "Microsoft Certified: Azure Administrator — Cloud Azure pour responsables IT BTP CI",
+      "Procore Certification — Administration et déploiement Procore Cloud pour BTP",
+      "ARTCI CI — Formation réglementaire cloud et PCP MENA CI pour entreprises CI",
+      "APDP CI — Formation conformité données personnelles et cloud UEMOA"
+    ]
+  }
+}

@@ -8,12 +8,12 @@ import os
 from knowledge.frameworks import get_frameworks_for_sector, FRAMEWORKS
 from knowledge.sector_benchmarks import format_benchmark_for_prompt
 from knowledge.regulations import format_regulations_for_prompt
-from services.mistral_client import call_mistral, extract_json
+from services.llm_client import call_llm as call_groq, extract_json, TaskType
 
 
 class ScoringAgent:
     def __init__(self):
-        self.model = os.getenv("MISTRAL_MODEL", "mistral-large-latest")
+        self.model = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
 
     async def score(self, request: dict) -> dict:
         """
@@ -36,13 +36,14 @@ class ScoringAgent:
 
         # Use AI to produce richer scoring with explanations
         prompt = self._build_prompt(request, baseline, benchmark_context, regulations_context)
-        raw = await call_mistral(
+        raw = await call_groq(
             messages=[
                 {"role": "system", "content": self._system_prompt()},
                 {"role": "user", "content": prompt},
             ],
             temperature=0.2,
             model=self.model,
+            task=TaskType.SCORING,
         )
         data = extract_json(raw)
         return self._normalize(data, baseline, request)

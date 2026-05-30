@@ -1,0 +1,285 @@
+{
+  "secteur": "industrie",
+  "axe": "INFORMATION_SYSTEM",
+  "sous_axe": "donnees_analytics",
+  "label": "Données et analytique industrielle",
+  "description": "Capacité des entreprises industrielles à collecter, structurer et valoriser leurs données de production : données capteurs IoT (températures, pressions, vibrations), données MES/SCADA, historique qualité (lots, CoA, non-conformités), traçabilité EUDR cacao CI, et analytique prédictive pour optimiser la production et la maintenance dans le contexte industriel CI.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Données OT CI : énormes volumes non exploités dans grandes industries CI — SUCAF CI, SIFCA CI génèrent des millions de points de mesure non analysés",
+      "Historique qualité CI : CoA, résultats essais LBTP CI, traçabilité lots — sous-exploités pour amélioration continue",
+      "EUDR data CI : traçabilité géospatiale cacao CI obligatoire 2025 — données parcelles fournisseurs, lots, certifications",
+      "Données énergie CI : CIE CI facture globale vs analyse par ligne — millions FCFA gaspillés faute d'analytics",
+      "PMI CI : 0 data scientist — analytics industrielle inaccessible sans outils no-code (Power BI, Tableau)",
+      "Rendement matières CI : cacao, anacarde, hévéa — optimisation recettes depuis données MES = gains directs sur marges"
+    ],
+    "acteurs_cles": [
+      "Conseil Café-Cacao CI — données traçabilité EUDR obligatoires, DRC, certifications exportateurs",
+      "APEX-CI — données export CI : certifications, volumes, destinations — analytics sectorielles",
+      "CNBTP CI / CODINORM CI — données benchmarks industriels CI (coûts, rendements, qualité)",
+      "Microsoft CI — Power BI Pro et Azure analytics : démocratisation analytics industries CI",
+      "INP-HB Yamoussoukro — formations data science appliquée industrie CI, thèses partenariat",
+      "BCEAO CI — données financières entreprises CI, crédit campagne agroalimentaire"
+    ],
+    "reglementation_locale": [
+      "EUDR Règlement EU 2023/1115 : données géospatiales parcelles cacao CI obligatoires — deadline 2025",
+      "APDP CI Loi 2013-450 : données personnelles opérateurs usine — durée conservation limitée",
+      "OHADA Acte uniforme : archivage données comptables et production CI — 10 ans minimum",
+      "ISO 9001:2015 Art. 9.1 : données performance mesurées et analysées — registres obligatoires",
+      "Conseil Café-Cacao CI : données exportateurs cacao CI obligatoires — traçabilité lot intégrale",
+      "APEX-CI : données certifications export CI — GlobalGAP, Rainforest Alliance, EUDR — obligatoires"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Aucune donnée structurée. Production sur carnets papier. Qualité dans classeurs. Aucun historique exploitable. Décisions uniquement qualitatives. Aucun outil analytics.",
+      "indicateurs": [
+        "Données production : carnets papier archivés en cartons",
+        "Historique qualité : classeurs CoA papier — non exploitables",
+        "0 outil analytics — aucun graphique ni tableau de bord",
+        "Décisions production : intuition du responsable",
+        "0 data exploitable pour amélioration continue"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Excel de suivi production et qualité. Quelques graphiques manuels. Historique 1-2 ans en Excel. Aucun dashboard automatisé. Analyse ponctuelle sur demande. EUDR cacao non tracé.",
+      "indicateurs": [
+        "Suivi production Excel : données saisies manuellement après production",
+        "Graphiques Excel manuels : 2-3 KPIs suivis",
+        "Historique qualité Excel 1-2 ans — non structuré pour analyse",
+        "0 dashboard automatisé — rapport mensuel manuel 3h",
+        "Traçabilité EUDR cacao : 0 — risque perte clients EU 2025"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "ERP/MES avec données structurées par lot et ligne. Power BI dashboard production hebdomadaire. Traçabilité EUDR cacao déployée. Historique qualité 3 ans exploitable. Analyse Pareto non-conformités. Benchmark CNBTP CI.",
+      "indicateurs": [
+        "ERP/MES données structurées : lots, rendements, temps cycle — 3 ans historique",
+        "Power BI : 8+ KPIs production mis à jour quotidiennement",
+        "Traçabilité EUDR cacao CI : géolocalisation parcelles 80%+ fournisseurs",
+        "Analyse Pareto NC mensuelle : 80% causes identifiées et traitées",
+        "Benchmark externe : données CNBTP CI ou CODINORM CI comparées"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "Data lake industriel : MES + IoT capteurs + ERP + qualité. Analytics prédictive (ML pannes, rendements). EUDR traçabilité complète 100%. Power BI temps réel DG. Optimisation recettes depuis données historiques.",
+      "indicateurs": [
+        "Data lake Azure : SCADA + MES + IoT + ERP + qualité — source unique vérité",
+        "ML prédictif pannes : alertes J-7 avant défaillance capteurs IoT",
+        "EUDR CI : 100% fournisseurs géolocalisés, lot numérique bout-en-bout",
+        "Power BI DG temps réel : 15+ KPIs, alertes automatiques dépassements",
+        "Optimisation recettes ML : rendement matières +5-12% sur données historiques"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Jumeau numérique usine. IA optimisation production temps réel. Data commons sectoriel CI contribué. Analytics as-a-service pour fournisseurs CI. Open data EUDR certifié international. Référence data industrie UEMOA.",
+      "indicateurs": [
+        "Jumeau numérique : simulation temps réel — optimisation paramètres production en continu",
+        "IA optimisation : recettes auto-ajustées chaque lot — rendement matières maximisé",
+        "Data commons sectoriel CI : données anonymisées contribuées CNBTP CI / CODINORM CI",
+        "Analytics as-a-service : tableau de bord vendu en SaaS aux fournisseurs CI",
+        "Open data EUDR CI certifié : référence internationale traçabilité cacao UEMOA"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Comment stockez-vous et exploitez-vous vos données de production et de qualité ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Carnets papier — aucune donnée numérique exploitable"},
+        {"valeur": 2, "label": "Excel manuel — historique 1-2 ans non structuré"},
+        {"valeur": 3, "label": "ERP/MES structuré : historique 3 ans, Power BI 8+ KPIs"},
+        {"valeur": 4, "label": "Data lake MES+IoT+ERP — ML prédictif, Power BI temps réel DG"},
+        {"valeur": 5, "label": "Jumeau numérique — IA optimisation temps réel, data commons CI"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Avez-vous mis en place la traçabilité EUDR (géolocalisation parcelles) pour votre cacao CI ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non applicable (secteur non-cacao) / Non — 0 traçabilité EUDR"},
+        {"valeur": 2, "label": "Conscient EUDR — aucune action de traçabilité engagée"},
+        {"valeur": 3, "label": "Traçabilité EUDR 80%+ fournisseurs géolocalisés"},
+        {"valeur": 4, "label": "EUDR CI complet : 100% fournisseurs, lot numérique bout-en-bout"},
+        {"valeur": 5, "label": "Open data EUDR CI certifié international — référence UEMOA"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Utilisez-vous de l'analytique prédictive (ML) pour la maintenance ou l'optimisation de production ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — aucune analytics prédictive"},
+        {"valeur": 2, "label": "Analyse manuelle ponctuelle sur données Excel"},
+        {"valeur": 3, "label": "Analyse Pareto NC mensuelle — 80% causes identifiées"},
+        {"valeur": 4, "label": "ML prédictif pannes IoT + optimisation recettes depuis historique"},
+        {"valeur": 5, "label": "IA optimisation temps réel : recettes auto-ajustées chaque lot"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Disposez-vous d'un tableau de bord (Power BI, Tableau) automatisé pour la direction ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — réunions direction sur base estimations verbales"},
+        {"valeur": 2, "label": "Rapport Excel mensuel préparé manuellement en 3h+"},
+        {"valeur": 3, "label": "Power BI 8+ KPIs — mis à jour quotidiennement"},
+        {"valeur": 4, "label": "Power BI temps réel 15+ KPIs — alertes automatiques DG"},
+        {"valeur": 5, "label": "Dashboard IA — recommandations automatiques actions correctives"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "Données production structurées",
+      "Traçabilité EUDR cacao CI",
+      "Dashboard analytique automatisé",
+      "ML prédictif déployé",
+      "Data commons sectoriel"
+    ],
+    "lignes": [
+      {
+        "organisation": "PMI CI (< 50 employés)",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "Carnets papier, 0 EUDR, 0 dashboard, 0 ML, 0 partage sectoriel"
+      },
+      {
+        "organisation": "Industrie moyenne CI (50-200 employés)",
+        "scores": [2, 2, 2, 1, 1],
+        "note_globale": 2,
+        "commentaire": "Excel manuel, EUDR en cours, graphiques Excel, 0 ML, 0 données partagées"
+      },
+      {
+        "organisation": "SUCAF CI",
+        "scores": [4, 3, 4, 3, 2],
+        "note_globale": 3,
+        "commentaire": "ERP SAP données, EUDR 85% fournisseurs, Power BI RT, prédictif partiel, benchmark groupe"
+      },
+      {
+        "organisation": "SIFCA CI",
+        "scores": [5, 5, 5, 5, 4],
+        "note_globale": 5,
+        "commentaire": "Data lake Azure, EUDR 100% certifié, IA optimisation, jumeau numérique, contributions CNRA CI"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "Conseil Café-Cacao CI — plateforme traçabilité données exportateurs cacao",
+      "part_de_marche_estimee": "Unique base traçabilité cacao CI réglementée",
+      "forces": ["Données traçabilité CI réglementées", "DRC et certifications intégrées", "EUDR CI plateforme en cours", "Obligatoire exportateurs CI"],
+      "faiblesses": ["Orientation export — pas analytics interne PMI CI", "Mise à jour lente des fonctionnalités"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "OLAM Spice Hunter / Olam Food Ingredients — data analytics traçabilité cacao Afrique",
+      "part_de_marche_estimee": "Leader data traçabilité cacao/café Afrique",
+      "forces": ["Données géospatiales parcelles Afrique", "Plateforme EUDR opérationnelle", "Analytics rendements par région CI", "Blockchain traçabilité pilote"],
+      "faiblesses": ["Données propriétaires non partagées PMI CI", "Concurrent direct transformateurs CI"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "Microsoft Azure / Power BI — analytics industrielle cloud",
+      "part_de_marche_estimee": "Leader mondial analytics industrielle cloud",
+      "forces": ["Power BI no-code accessible PMI CI", "Azure IoT Hub + ML", "Azure Digital Twins jumeau numérique", "PCP MENA CI conformité"],
+      "faiblesses": ["Coût USD — change FCFA", "Formation requise CI", "Latence cloud Europe → CI"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Microsoft Power BI Pro — analytics industrielle no-code CI",
+      "usage": "Dashboard OEE, qualité, rendements, énergie — connecté MES/SCADA, alertes automatiques DG",
+      "niveau_cible": "3+",
+      "cout_estime": "Inclus M365 Business (8 USD/user/mois standalone)",
+      "disponibilite_ci": "International — cloud Microsoft accessible CI"
+    },
+    {
+      "nom": "Conseil Café-Cacao CI — plateforme traçabilité EUDR cacao",
+      "usage": "Traçabilité EUDR obligatoire cacao CI : géolocalisation parcelles, lot numérique, certification export",
+      "niveau_cible": "3+",
+      "cout_estime": "Cotisation exportateurs cacao CI (variable tonnage)",
+      "disponibilite_ci": "Natif CI — Conseil Café-Cacao Abidjan Plateau"
+    },
+    {
+      "nom": "Azure IoT Hub + Azure ML — data lake industriel CI",
+      "usage": "Collecte données capteurs IoT CI, ML prédictif pannes, optimisation recettes, Power BI intégré",
+      "niveau_cible": "4",
+      "cout_estime": "100 000–500 000 FCFA/mois selon volume données et modèles ML",
+      "disponibilite_ci": "International — cloud Azure accessible CI, partenaires Microsoft CI"
+    },
+    {
+      "nom": "APEX-CI — analytics données export certifications CI",
+      "usage": "Données certifications export CI : GlobalGAP, Rainforest Alliance, volumes, destinations",
+      "niveau_cible": "3+",
+      "cout_estime": "Cotisation exportateurs CI",
+      "disponibilite_ci": "Natif CI — APEX-CI Abidjan Plateau"
+    },
+    {
+      "nom": "Python / Jupyter (via INP-HB CI partenariat) — analytics avancée",
+      "usage": "Modèles ML optimisation recettes, prédiction pannes, analyse EUDR géospatiale — via stagiaires INP-HB CI",
+      "niveau_cible": "4-5",
+      "cout_estime": "Coût stage INP-HB CI : 120 000–200 000 FCFA/mois (vs 5 M FCFA consultant externe)",
+      "disponibilite_ci": "Natif CI — INP-HB Yamoussoukro (stages ingénieurs data science)"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "TRITURAF CI — data lake cacao + EUDR analytics : traçabilité 850 fournisseurs, Power BI rendements",
+    "organisation": "TRITURAF CI (filiale SIFCA, trituration fèves cacao, Abidjan San Pedro — 120 000 tonnes/an)",
+    "contexte": "TRITURAF CI : broyerie cacao pour export beurre, poudre, liqueur. 850 fournisseurs cacao CI (coopératives et GVC). Deadline EUDR 2025 : acheteurs EU (Barry Callebaut Europe) exigent données géospatiales parcelles. Historique qualité : 3 ans de CoA en PDF non exploitables. Rendement beurre cacao : variable de 28% à 33% selon lot — optimisation manuelle impossible.",
+    "probleme": "EUDR : 850 fournisseurs × parcelles géolocalisées = programme collecte données massif. 0 data exploitable sur 3 ans de CoA PDF. Rendement beurre 28-33% : 5 points de variation = 5% × 120 000 t × 1 800 FCFA/kg beurre = 10,8 Mds FCFA/an de valeur non optimisée.",
+    "solution_deployee": "Application mobile collecte EUDR (GPS parcelles + identité coopérative) déployée sur 850 fournisseurs via smartphones locaux. Azure IoT Hub : 24 capteurs broyeurs → data lake Azure. OCR + IA extraction données CoA PDF 3 ans → base structurée. Power BI : rendement beurre par lot, fournisseur, région CI temps réel. ML (Python INP-HB CI stagiaires) : modèle prédiction rendement beurre depuis composition fèves (humidité, pH, MG%) — précision ±1,2 points.",
+    "resultats": "EUDR CI : 850 fournisseurs géolocalisés en 4 mois — 100% conformité avant deadline. Acheteurs EU : 0 rupture contrats (vs 12 transformateurs CI ayant perdu contrats EU faute EUDR). CoA structurées : 36 mois d'historique analytiques en 6 semaines. Rendement beurre : 28-33% → optimisé à 31,8±0,4% grâce ML — valeur capturée 3,2 Mds FCFA/an. Power BI dashboard : rapport mensuel direction 3h → 20 min. Partenariat INP-HB CI : 2 stagiaires data science CI — coût 480 000 FCFA/an vs 6 M FCFA consultant.",
+    "enseignements": [
+      "L'EUDR CI est le projet analytics le plus urgent pour les transformateurs cacao CI : 12 entreprises CI ont perdu des contrats EU faute de traçabilité — les données géospatiales valent des milliards",
+      "1 point de rendement beurre cacao CI = 2,16 Mds FCFA/an sur 120 000 tonnes — un modèle ML à 480 000 FCFA (stagiaires INP-HB CI) optimise 3,2 Mds FCFA de valeur capturée",
+      "Les stagiaires INP-HB CI en data science sont la solution analytics la plus rentable pour PMI-GE CI : expertise mondiale, coût local, connaissance contexte CI"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "données industrielles CI", "traçabilité EUDR cacao CI", "analytics production CI",
+      "Power BI industriel CI", "data lake MES IoT CI", "ML prédictif pannes CI",
+      "optimisation recettes données CI", "rendement matières analytics CI",
+      "CoA structurés analytics", "Conseil Café-Cacao CI EUDR", "APEX-CI données export",
+      "historique qualité structuré CI", "INP-HB CI data science"
+    ],
+    "signaux_niveau_avance": [
+      "ERP/MES données structurées 3 ans exploitables",
+      "Power BI dashboard automatisé 8+ KPIs",
+      "Traçabilité EUDR cacao 80%+ fournisseurs",
+      "ML prédictif ou optimisation déployé",
+      "Décisions direction basées données temps réel"
+    ],
+    "pieges_frequents": [
+      "CoA en PDF = données non exploitables analytiquement — la traçabilité en PDF n'est pas des données structurées",
+      "Excel historique non structuré = archive sans valeur analytics — sans colonnes cohérentes par lot, l'IA ne peut pas l'exploiter",
+      "Traçabilité EUDR 'en cours' depuis 18 mois = risque perte clients EU en 2025 — l'EUDR a une deadline ferme",
+      "Power BI installé mais nourri manuellement = rapport Excel amélioré — sans connexion automatique MES/SCADA, ce n'est pas de l'analytics"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Carnets papier. 0 données numériques. 0 dashboard. 0 EUDR. Décisions intuitives.",
+      "score_21_to_40": "Excel manuel. Graphiques ponctuels. Historique non structuré. EUDR conscient sans action.",
+      "score_41_to_60": "ERP/MES structuré. Power BI 8+ KPIs. EUDR 80% fournisseurs. Pareto NC. Benchmark CI.",
+      "score_61_to_80": "Data lake IoT+MES+ERP. ML prédictif. EUDR 100%. Power BI RT. Optimisation recettes.",
+      "score_81_to_100": "Jumeau numérique. IA optimisation temps réel. Open data EUDR certifié. Data commons CI. Référence UEMOA."
+    }
+  }
+}

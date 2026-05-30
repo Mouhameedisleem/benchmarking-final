@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "axis": "OFFRES",
+    "sub_axis": "Plateforme ouverte",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Banking as a Service (BaaS) — la banque comme infrastructure pour les fintechs",
+      "description": "Les banques UEMOA peuvent exposer leurs capacités réglementées (licence bancaire, bilan, systèmes de paiement) via des APIs aux fintechs qui construisent des services financiers par-dessus. Ce modèle génère des revenus récurrents sans coût d'acquisition client supplémentaire.",
+      "impact_level": "Très élevé",
+      "horizon": "24-36 mois",
+      "adoption_rate": "8 % des banques africaines ont une offre BaaS formalisée (Fintech Africa 2024)",
+      "source": "Fintech Africa Open Banking Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Open Banking BCEAO — partage de données bancaires avec consentement client",
+      "description": "La BCEAO encourage l'interopérabilité des données financières. Les banques qui exposent des APIs de consultation de données clients (avec consentement) permettent aux fintechs de créer des agrégateurs financiers, des outils de PFM et des scoring alternatifs.",
+      "impact_level": "Élevé",
+      "horizon": "24-48 mois",
+      "adoption_rate": "Cadre réglementaire en cours de développement par la BCEAO",
+      "source": "BCEAO Feuille de Route Open Banking UEMOA 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Agent Banking as a Platform — réseau d'agents comme infrastructure de distribution",
+      "description": "Les banques UEMOA qui ont développé des réseaux d'agents bancaires physiques peuvent ouvrir ce réseau aux fintechs partenaires comme infrastructure de distribution physique — modèle déjà exploité par M-Pesa en Afrique de l'Est avec 500 000 agents.",
+      "impact_level": "Élevé",
+      "horizon": "24-36 mois",
+      "adoption_rate": "15 % des banques africaines ont ouvert leur réseau d'agents aux partenaires (GSMA 2024)",
+      "source": "GSMA State of the Industry Mobile Money Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Marketplace financière bancaire — agréger les offres de partenaires dans l'app",
+      "description": "Les banques construisent des marketplaces financières intégrées à leur app (assurances, prêts immobiliers, services d'investissement de partenaires) sans développer ces produits eux-mêmes, générant des revenus de commission tout en enrichissant l'expérience client.",
+      "impact_level": "Élevé",
+      "horizon": "24-36 mois",
+      "adoption_rate": "20 % des banques africaines leaders intègrent des produits partenaires dans leur app (Deloitte 2024)",
+      "source": "Deloitte Africa Open Banking Marketplace 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Plateforme BaaS / API Banking",
+      "category": "Banking as a Service",
+      "maturity_stage": "Émergence en Afrique",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Solarisbank", "Railsbank (Railsr)", "Mambu BaaS", "Thought Machine Vault", "Access Bank Hydrogen (Afrique)"]
+    },
+    {
+      "name": "Developer Portal / API Marketplace",
+      "category": "Exposition des APIs aux tiers",
+      "maturity_stage": "Croissance en Afrique",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["MuleSoft Anypoint Exchange", "Kong Konnect", "Apigee (Google) Portal", "SwaggerHub", "Ecobank API Portal (Afrique)"]
+    },
+    {
+      "name": "Plateforme Marketplace Financière",
+      "category": "Distribution de produits partenaires",
+      "maturity_stage": "Émergence en Afrique",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Backbase Marketplace", "Temenos Exchange", "Finastra FusionStore", "Plaid Marketplace", "Starling Marketplace (UK)"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Orange Bank Africa CI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "APIs Orange Money ouvertes aux marchands et fintechs via Orange Developer Hub, réseau d'agents Orange comme infrastructure bancaire ouverte",
+        "differentiator": "Première institution financière ivoirienne à opérer comme plateforme ouverte : 50 000+ marchands et 5 000 agents accèdent aux APIs Orange Money pour distribuer des services financiers",
+        "source": "Orange Developer Hub Africa 2024 / Orange Bank Africa Report 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Ecobank API Developer Portal avec 30+ APIs, 500+ partenaires fintechs intégrés, modèle BaaS embryonnaire en cours de structuration",
+        "differentiator": "Plateforme API la plus ouverte du secteur bancaire africain — 33 marchés accessibles via un unique Developer Portal avec sandbox et documentation complète",
+        "source": "Ecobank API Developer Portal 2024 / Ecobank Annual Report 2023"
+      },
+      {
+        "organisation": "Access Bank Nigeria — Hydrogen",
+        "country": "Nigeria / Afrique de l'Ouest",
+        "key_practice": "Hydrogen BaaS : filiale dédiée exposant les APIs Access Bank aux fintechs nigérianes et africaines — 200+ fintechs intégrées, revenus BaaS croissants",
+        "differentiator": "Premier groupe bancaire africain à créer une filiale BaaS séparée — Hydrogen est une fintech autonome construite sur le bilan Access Bank, modèle réplicable en UEMOA",
+        "source": "Access Bank Hydrogen Developer Portal 2024 / TechCabal Africa"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Starling Bank",
+        "country": "Royaume-Uni",
+        "key_practice": "Starling Marketplace : 50+ partenaires (assurances, crédits, pensions) intégrés dans l'app, BaaS générant 30 % des revenus, API first depuis la création",
+        "differentiator": "Starling a généré 60 M£ de revenus BaaS en 2023 — preuve qu'une banque peut monétiser son infrastructure aussi efficacement que ses produits propres",
+        "source": "Starling Bank Annual Report 2023"
+      },
+      {
+        "organisation": "BBVA Open Platform",
+        "country": "Espagne / Global",
+        "key_practice": "BBVA Open Platform : APIs bancaires disponibles dans 25 pays, Developer Portal global, 1 000+ développeurs utilisant les APIs BBVA, partenariats avec 300+ fintechs",
+        "differentiator": "BBVA est la première grande banque mondiale à avoir ouvert toutes ses capacités bancaires via des APIs en 2019 — modèle de référence pour l'open banking mondial",
+        "source": "BBVA Open Platform Developer Portal 2024 / BBVA Annual Report 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune API exposée aux tiers. Pas de Developer Portal. Modèle fermé exclusivement propriétaire. Intégrations uniquement avec les partenaires historiques via des connexions point-à-point.",
+    "level_2_developing": "Quelques APIs exposées à des partenaires stratégiques via des accords bilatéraux. Pas de Developer Portal public. Pas de sandbox. Documentation minimale. Pas de modèle BaaS.",
+    "level_3_defined": "APIs exposées aux partenaires via un portail avec documentation. Sandbox de test disponible. Intégrations mobile money et GIM-UEMOA via APIs standardisées. 5-10 partenaires actifs.",
+    "level_4_managed": "Developer Portal self-service avec sandbox public. 20+ APIs documentées OpenAPI. 30+ partenaires actifs. Premiers revenus générés via APIs tierces mesurés. Marketplace partenaires initiée.",
+    "level_5_optimizing": "BaaS plateforme complète. 30+ APIs en production. Developer Portal self-service avec onboarding < 1h. 100+ fintechs partenaires. Revenus BaaS représentant 10 %+ du total. Marketplace financière active."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction BCEAO sur l'externalisation et les partenariats avec les fintechs",
+      "issuing_body": "BCEAO",
+      "scope": "Banques exposant leurs APIs à des tiers ou déléguant des activités bancaires à des fintechs",
+      "key_requirement": "Notification préalable BCEAO, droit d'audit sur les partenaires tiers, contrats conformes aux standards prudentiels, responsabilité bancaire maintenue pour les activités déléguées",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Directive GIM-UEMOA sur l'interopérabilité",
+      "issuing_body": "GIM-UEMOA / BCEAO",
+      "scope": "Toutes les banques membres GIM-UEMOA",
+      "key_requirement": "Participation aux systèmes d'interopérabilité GIM-UEMOA, exposition des APIs de paiement selon les standards GIM",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.gimuemoa.org"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Fuite de la relation client vers la fintech partenaire — désintermédiation bancaire",
+      "description": "Une banque qui expose ses APIs à une fintech risque que cette fintech capte la relation client en créant une expérience supérieure par-dessus les APIs bancaires. La banque devient alors une infrastructure invisible sans relation directe avec le client final.",
+      "severity": "Élevé",
+      "likelihood": "Moyenne à long terme",
+      "mitigation": "Choisir soigneusement les cas d'usage BaaS (complémentaires plutôt que substituables), maintenir une relation directe avec les clients via ses propres canaux, et intégrer des clauses contractuelles sur la visibilité de la marque bancaire."
+    },
+    {
+      "title": "APIs mal sécurisées exposées à des partenaires — violation de données clients",
+      "description": "Un partenaire fintech qui accède aux APIs bancaires avec des droits mal calibrés peut extraire des données clients bien au-delà du périmètre autorisé, créant une violation de données avec obligation de notification à la BCEAO et à l'ARTCI.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée sans gouvernance API stricte",
+      "mitigation": "Implémenter OAuth 2.0 avec scopes granulaires pour chaque partenaire, réviser et révoquer régulièrement les accès, déployer une surveillance temps réel des appels API anormaux."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "BaaS UEMOA — être la banque infrastructure des 200+ fintechs africaines francophones",
+      "description": "Les 200+ fintechs actives en zone UEMOA ont besoin d'un bilan bancaire régulé pour opérer. La première banque UEMOA à lancer une plateforme BaaS complète capture ce marché et génère des revenus récurrents sans coût d'acquisition client : estimé à 15-25 Mds FCFA de revenus additionnels à 5 ans.",
+      "impact_level": "Très élevé",
+      "time_to_value": "24-48 mois",
+      "prerequisite_maturity": "Niveau 4"
+    },
+    {
+      "title": "Marketplace financière — enrichir l'offre sans développement produit",
+      "description": "Intégrer dans l'app bancaire des offres de partenaires (NSIA assurance, CGRAE prévoyance, Orange Money transfert diaspora) permet d'enrichir l'écosystème financier proposé aux clients et de générer des commissions de 3-10 % sans aucun développement produit interne.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Développement interne",
+      "acquirer_or_investor": "Access Bank Nigeria",
+      "target": "Hydrogen — filiale BaaS propriétaire",
+      "amount": "Investissement interne estimé 30 M$",
+      "date": "2022-2023",
+      "strategic_rationale": "Créer une entité BaaS séparée pour exposer les APIs Access Bank sans contraintes legacy, générant de nouveaux revenus via 200+ partenaires fintechs nigérianes et africaines",
+      "source": "Access Bank Annual Report 2023 / Hydrogen Developer Portal"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Starling Bank",
+    "pays": "Royaume-Uni",
+    "technologie": "Starling Marketplace + BaaS — plateforme ouverte bancaire générant 30 % des revenus",
+    "description": "Starling Bank a lancé son Marketplace en 2018 : un écosystème de 50+ partenaires financiers (assurances, prêts, pensions, comptabilité) intégrés dans l'app Starling. Simultanément, Starling a lancé son offre BaaS exposant son infrastructure aux néobanques européennes. En 2023 : le Marketplace génère 20 M£ de revenus commissions, le BaaS génère 60 M£ (30 % du revenu total). Les APIs Starling traitent 1 milliard de transactions/an via des partenaires. Starling est devenue profitable en 2022 grâce en partie à ces revenus de plateforme. Modèle adopté par 12 néobanques européennes et inspirant plusieurs banques africaines.",
+    "resultats": "50+ partenaires marketplace · 60 M£ revenus BaaS (30 % du total) · 1 Mds transactions/an via APIs · Profitable 2022 · Modèle adopté par 12 néobanques",
+    "source": "Starling Bank Annual Report 2023 / Forbes Starling BaaS Analysis / Financial Times",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité plateforme ouverte — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "Developer Portal public avec sandbox", "APIs documentées OpenAPI exposées (> 10)", "Partenaires fintechs actifs (> 10)", "Revenus APIs/BaaS mesurés", "Marketplace financière partenaires"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✗", "Partiel", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La plateforme ouverte est le modèle d'avenir des banques africaines : plutôt que de tout construire en interne, elles exposent leur infrastructure réglementée aux fintechs qui innovent plus vite. En UEMOA, Ecobank est en avance avec 30+ APIs et 500+ partenaires. Les banques ivoiriennes locales n'ont pas encore de Developer Portal public. La première banque CI à lancer un BaaS complet capture un marché de 200+ fintechs francophones.",
+    "maturity_max_description": "Developer Portal self-service avec sandbox et onboarding partenaire < 1h. 30+ APIs documentées OpenAPI en production. 100+ fintechs partenaires actives. Revenus BaaS représentant 10 %+ du total. Marketplace financière avec 10+ partenaires produits intégrés. Gouvernance API stricte (OAuth 2.0, monitoring temps réel, DLP).",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune API exposée. Modèle fermé propriétaire. Pas de Developer Portal. Pas de partenariats fintech.",
+      "score_21_to_40": "Quelques APIs partenaires bilatérales. Pas de portail. Pas de sandbox. Documentation minimale.",
+      "score_41_to_60": "APIs exposées via portail. Sandbox disponible. Documentation OpenAPI. 5-10 partenaires actifs.",
+      "score_61_to_80": "Developer Portal self-service. 20+ APIs. 30+ partenaires. Revenus APIs mesurés. Marketplace initiée.",
+      "score_81_to_100": "BaaS complet. 30+ APIs. 100+ fintechs. Revenus BaaS 10 %+ total. Marketplace 10+ partenaires."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur la maturité de sa plateforme ouverte dans le contexte bancaire UEMOA. Analyse la disponibilité d'un Developer Portal public avec sandbox, le nombre d'APIs exposées aux tiers, l'existence d'une offre BaaS formalisée et la présence d'une marketplace financière partenaires.",
+    "key_questions_for_llm": [
+      "Un Developer Portal public est-il disponible avec une documentation OpenAPI complète, un sandbox de test et un processus d'onboarding des partenaires fintechs ?",
+      "Des APIs bancaires standardisées sont-elles exposées aux partenaires tiers (fintechs, marchands, opérateurs) pour les fonctions de paiement, de compte ou de crédit ?",
+      "Une offre Banking as a Service (BaaS) formalisée est-elle disponible, permettant à des fintechs partenaires de construire des services financiers sur le bilan de la banque ?",
+      "Des revenus générés via les APIs ou le BaaS sont-ils mesurés et constitue-t-il un flux de revenus significatif et croissant pour la banque ?",
+      "Une marketplace financière intègre-t-elle dans l'application bancaire des produits et services de partenaires (assurances, investissements, services PME) générant des commissions ?"
+    ]
+  }
+}

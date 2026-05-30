@@ -1,0 +1,252 @@
+{
+  "meta": {
+    "axis": "IS",
+    "sub_axis": "Infrastructure & Cloud",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Cloud hybride bancaire — migration progressive du core banking legacy",
+      "description": "Les banques UEMOA migrent vers des architectures cloud hybrides : workloads non-sensibles (analytics, CRM, canaux digitaux) sur cloud public, core banking sur cloud privé ou on-premise. La migration complète du core banking prend 3-5 ans.",
+      "impact_level": "Très élevé",
+      "horizon": "24-48 mois",
+      "adoption_rate": "28 % des banques africaines ont une stratégie cloud documentée (Gartner Africa 2024)",
+      "source": "Gartner Financial Services Cloud Adoption Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Cloud-native core banking — remplacement du legacy COBOL/T24",
+      "description": "Les banques africaines leaders remplacent leurs core banking legacy (Temenos T24 gen1, FLEXCUBE) par des plateformes cloud-native (Mambu, Thought Machine Vault, 10x Banking) offrant une scalabilité à la demande et des mises à jour continues.",
+      "impact_level": "Très élevé",
+      "horizon": "36-60 mois",
+      "adoption_rate": "12 % des banques africaines ont migré vers un core banking cloud-native (Fintech Africa Report 2024)",
+      "source": "Fintech Africa Cloud Banking Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Résilience et PCA bancaire — exigences BCEAO RTO < 4h",
+      "description": "La BCEAO impose des exigences strictes de Plan de Continuité d'Activité (PCA) aux banques : RTO < 4h, RPO < 1h pour les systèmes critiques. Les banques doivent documenter et tester leur PCA annuellement sous contrôle de l'autorité de supervision.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "100 % des banques UEMOA soumises aux exigences PCA BCEAO",
+      "source": "BCEAO Instruction sur la Résilience Opérationnelle des Établissements de Crédit 2023",
+      "year": "2023"
+    },
+    {
+      "title": "Souveraineté des données bancaires — localisation UEMOA",
+      "description": "La BCEAO exige que les données bancaires des clients UEMOA soient hébergées sur le territoire de l'Union ou dans des pays offrant un niveau de protection équivalent. Cette exigence contraint les choix cloud des banques (AWS, Azure, Google Cloud hors UE déconseillés).",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "Obligation réglementaire applicable à 100 % des banques UEMOA",
+      "source": "BCEAO Instruction sur la Localisation des Données 2022",
+      "year": "2022"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Core Banking Cloud-Native",
+      "category": "Infrastructure bancaire nouvelle génération",
+      "maturity_stage": "Croissance en Afrique",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Mambu", "Thought Machine Vault", "10x Banking", "Temenos Infinity (SaaS)", "nCino"]
+    },
+    {
+      "name": "Cloud Hybride Bancaire",
+      "category": "Infrastructure cloud",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Microsoft Azure Banking", "AWS Financial Services", "Google Cloud for FSI", "IBM Cloud for Financial Services", "Oracle Cloud Banking"]
+    },
+    {
+      "name": "PCA / Disaster Recovery as a Service",
+      "category": "Résilience opérationnelle",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne",
+      "leading_vendors": ["Zerto", "Veeam", "IBM Resiliency Services", "AWS DRaaS", "Sungard AS"]
+    },
+    {
+      "name": "Datacenter Tier III Africain",
+      "category": "Hébergement souverain",
+      "maturity_stage": "Croissance en Afrique",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["RAXIO (Côte d'Ivoire)", "RACK CENTRE (Nigeria)", "Africa Data Centres", "MTN Business IDC", "CI-Telecom Data Center"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "BICICI (Filiale BNP Paribas CI)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Migration progressive vers Azure hébergé en Europe avec dérogation BCEAO documentée, PCA testé semestriellement avec RTO < 2h",
+        "differentiator": "Adossée à l'infrastructure BNP Paribas mondiale — 2 datacenters redondants, standards DORA européens appliqués en CI",
+        "source": "BICICI Rapport Annuel 2023 / APBEF-CI"
+      },
+      {
+        "organisation": "Société Générale Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Infrastructure SI mutualisée Société Générale Afrique, datacenter régional Casablanca avec PCA local CI",
+        "differentiator": "Standards SG France appliqués à la filiale ivoirienne — cybersécurité, PCA, gouvernance SI uniformisés groupe",
+        "source": "SGCI Rapport Annuel 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Ecobank Technology Centre (ETC) à Accra : datacenter groupe gérant l'infrastructure de 33 filiales, migration Temenos T24 vers SaaS",
+        "differentiator": "Première banque africaine à centraliser 100 % de son infrastructure SI dans un datacenter groupe unique — économies d'échelle massives",
+        "source": "Ecobank Annual Report 2023 / Ecobank Technology Report"
+      },
+      {
+        "organisation": "Attijariwafa Bank",
+        "country": "Maroc / Afrique de l'Ouest",
+        "key_practice": "Cloud hybride Microsoft Azure, migration core banking Temenos vers SaaS cloud en cours, 2 datacenters redondants Maroc + Afrique",
+        "differentiator": "Premier groupe bancaire africain à déployer Azure Open AI Services pour les modèles de risque crédit",
+        "source": "Attijariwafa Bank Digital Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "JPMorgan Chase",
+        "country": "USA",
+        "key_practice": "Multi-cloud (AWS, Azure, GCP) + cloud privé JPMorgan, 2 500 applications migrées vers cloud en 2023",
+        "differentiator": "JPMorgan Private Cloud : infrastructure propriétaire traitant 10 000 Mds$/jour avec 99,999 % de disponibilité",
+        "source": "JPMorgan Technology Annual Report 2023"
+      },
+      {
+        "organisation": "DBS Bank",
+        "country": "Singapour",
+        "key_practice": "99 % des workloads sur cloud (AWS + cloud privé), zéro datacenter physique propriétaire en 2022",
+        "differentiator": "Première grande banque au monde à éliminer ses datacenters propriétaires — modèle cloud-first total",
+        "source": "DBS Annual Report 2023 / AWS Case Study DBS"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Infrastructure on-premise 100 % avec serveurs vieillissants. Pas de PCA formalisé. RTO non mesuré. Pas de datacenter secondaire. Dépendance totale au core banking legacy sans stratégie de migration.",
+    "level_2_developing": "PCA documenté mais non testé. Datacenter secondaire basique. Core banking legacy maintenu. Quelques serveurs virtualisés. Pas de stratégie cloud. RTO > 24h en pratique.",
+    "level_3_defined": "PCA testé annuellement. Virtualisation serveurs > 70 %. Datacenter secondaire opérationnel. RTO < 8h. Premiers workloads cloud (messagerie, CRM). Stratégie cloud en cours de définition.",
+    "level_4_managed": "PCA testé semestriellement avec RTO < 4h conforme BCEAO. Cloud hybride opérationnel (canaux digitaux, analytics sur cloud). Infrastructure surveillée 24/7 avec NOC. Core banking maintenu, migration planifiée.",
+    "level_5_optimizing": "Cloud-native pour les canaux digitaux. Core banking cloud ou SaaS en cours de migration. RTO < 1h / RPO < 15 min. Infrastructure as Code. FinOps actif. Conformité souveraineté données BCEAO documentée."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction BCEAO sur la Sécurité et la Résilience des Systèmes d'Information",
+      "issuing_body": "BCEAO",
+      "scope": "Toutes les banques et établissements financiers UEMOA",
+      "key_requirement": "PCA documenté, testé annuellement, RTO < 4h / RPO < 1h pour systèmes critiques, rapport annuel à la BCEAO",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Instruction BCEAO sur la Localisation des Données",
+      "issuing_body": "BCEAO",
+      "scope": "Banques collectant et traitant des données de clients UEMOA",
+      "key_requirement": "Hébergement des données clients sur territoire UEMOA ou pays offrant protection équivalente, documentation des flux transfrontaliers",
+      "compliance_deadline": "En vigueur (2022)",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Politique SI BCEAO — Externalisation des services informatiques",
+      "issuing_body": "BCEAO",
+      "scope": "Banques externalisant des services SI critiques (cloud, sous-traitance)",
+      "key_requirement": "Notification préalable BCEAO, droit d'audit sur les prestataires cloud, contrats conformes aux standards prudentiels",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Non-conformité PCA — risque de sanction BCEAO lors des inspections",
+      "description": "La BCEAO inspecte régulièrement les PCA des banques. Un PCA non testé ou avec un RTO > 4h expose la banque à des mesures correctives obligatoires et des sanctions financières lors des missions de contrôle sur place.",
+      "severity": "Très élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Planifier des tests PCA semestriels avec documentation des résultats, mesurer le RTO réel à chaque test et corriger les écarts avant l'inspection BCEAO."
+    },
+    {
+      "title": "Lock-in cloud non-souverain — violation localisation données BCEAO",
+      "description": "Migrer vers AWS/Azure/GCP dans des régions hors UEMOA sans dérogation documentée expose la banque à une violation de l'instruction sur la localisation des données, avec obligation de rapatriement urgent des données.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Cartographier tous les flux de données vers le cloud, obtenir une dérogation formelle BCEAO pour les hébergements hors UEMOA, privilégier les datacenters africains certifiés (RAXIO CI, Rack Centre Nigeria)."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Datacenter mutualisé UEMOA — infrastructure partagée inter-banques",
+      "description": "La création d'un datacenter bancaire mutualisé (GIM-UEMOA ou banque centrale) permettrait de réduire les coûts d'infrastructure de 40-60 % tout en garantissant la souveraineté des données. Modèle déjà testé au Kenya (Kenya Bankers Association).",
+      "impact_level": "Élevé",
+      "time_to_value": "36-60 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "SaaS core banking — réduction TCO de 30 % vs on-premise",
+      "description": "Migrer le core banking vers un modèle SaaS (Mambu, Temenos SaaS) réduit le TCO de 30 % et élimine les coûts de maintenance de version, permettant des mises à jour continue sans fenêtre de maintenance.",
+      "impact_level": "Très élevé",
+      "time_to_value": "36-48 mois",
+      "prerequisite_maturity": "Niveau 4"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Investissement infrastructure",
+      "acquirer_or_investor": "IFC + DEG",
+      "target": "RAXIO Côte d'Ivoire — datacenter Tier III Abidjan",
+      "amount": "25 M$",
+      "date": "2023",
+      "strategic_rationale": "Premier datacenter Tier III en Côte d'Ivoire, offrant aux banques UEMOA un hébergement souverain conforme aux exigences BCEAO",
+      "source": "RAXIO Group Press Release 2023 / IFC Investment Report"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "DBS Bank",
+    "pays": "Singapour",
+    "technologie": "Migration cloud totale — élimination des datacenters propriétaires",
+    "description": "DBS Bank a entrepris en 2018 une migration cloud totale, transférant 99 % de ses workloads vers AWS et un cloud privé. En 2022, DBS a fermé ses derniers datacenters propriétaires. L'infrastructure cloud supporte 250+ applications critiques, 10 millions de transactions/jour, avec une disponibilité de 99,99 %. Le coût d'infrastructure a baissé de 40 %, la vitesse de déploiement de nouvelles fonctionnalités a été multipliée par 5 (de 6 mois à 6 semaines). DBS est désormais classée meilleure banque digitale mondiale (Global Finance 2024).",
+    "resultats": "99 % workloads cloud · Coûts -40 % · Déploiements 5× plus rapides · 0 datacenter propre · Meilleure banque digitale mondiale",
+    "source": "DBS Annual Report 2023 / AWS Case Study DBS / Global Finance Digital Banking Awards 2024",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité infrastructure cloud — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "PCA testé (RTO < 4h)", "Cloud hybride opérationnel", "Datacenter secondaire actif", "Virtualisation > 70 %", "Stratégie cloud documentée"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "✓", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'infrastructure cloud bancaire en UEMOA est freinée par deux contraintes majeures : la réglementation BCEAO sur la localisation des données et le manque de datacenters certifiés Tier III en Afrique de l'Ouest. L'ouverture de RAXIO CI en 2023 change la donne. Les banques qui ne planifient pas leur migration cloud risquent d'être incapables de déployer rapidement les services digitaux attendus par leurs clients.",
+    "maturity_max_description": "Infrastructure cloud hybride opérationnelle avec workloads digitaux sur cloud public et core banking sur cloud privé ou SaaS. PCA testé semestriellement avec RTO < 2h / RPO < 15 min. Conformité localisation données BCEAO documentée. Infrastructure as Code. NOC 24/7. FinOps actif avec optimisation des coûts cloud.",
+    "scoring_rubric": {
+      "score_1_to_20": "Infrastructure 100 % on-premise vieillissante. Pas de PCA testé. RTO non mesuré. Pas de stratégie cloud.",
+      "score_21_to_40": "PCA documenté non testé. Virtualisation partielle. Pas de cloud. Datacenter secondaire basique.",
+      "score_41_to_60": "PCA testé annuellement. RTO < 8h. Virtualisation > 70 %. Premiers workloads cloud non-critiques.",
+      "score_61_to_80": "PCA RTO < 4h conforme BCEAO. Cloud hybride canaux digitaux. NOC 24/7. Stratégie cloud documentée.",
+      "score_81_to_100": "Cloud-native canaux + SaaS core banking. RTO < 1h. IaC. FinOps. Souveraineté données BCEAO."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur sa maturité infrastructure cloud dans le contexte bancaire UEMOA. Analyse la conformité PCA (RTO < 4h exigé par BCEAO), l'état de la migration cloud (hybride vs on-premise), la souveraineté des données hébergées, et la modernisation de l'infrastructure core banking.",
+    "key_questions_for_llm": [
+      "Le Plan de Continuité d'Activité (PCA) est-il documenté, testé au moins annuellement, et le RTO réel est-il inférieur à 4 heures comme exigé par la BCEAO ?",
+      "Une stratégie cloud est-elle définie et des workloads bancaires sont-ils hébergés sur cloud public ou privé en production ?",
+      "Les données clients sont-elles hébergées sur le territoire UEMOA ou dans un pays ayant obtenu une dérogation formelle de la BCEAO ?",
+      "Un datacenter secondaire opérationnel garantit-il la continuité de service en cas de défaillance du site principal ?",
+      "Une migration du core banking legacy vers une plateforme cloud-native ou SaaS est-elle planifiée ou en cours ?"
+    ]
+  }
+}

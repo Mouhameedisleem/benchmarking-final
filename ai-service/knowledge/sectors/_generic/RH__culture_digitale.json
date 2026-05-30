@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "axis": "RH_DIGITAL",
+    "sub_axis": "Culture digitale",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "AI Literacy obligatoire — former tous les collaborateurs à l'IA",
+      "description": "Les organisations leaders rendent la formation à l'IA obligatoire pour 100 % des collaborateurs (pas seulement les équipes IT), créant une culture où chacun comprend les capacités et limites de l'IA.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "65 % des grandes entreprises ont un programme AI literacy (LinkedIn Learning Report 2024)",
+      "source": "LinkedIn Workplace Learning Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Digital Champions Network — diffuser la culture digitale",
+      "description": "Les organisations créent des réseaux d'ambassadeurs digitaux (Digital Champions) dans chaque département pour diffuser les nouvelles pratiques et accélérer l'adoption des outils.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "58 % des transformations digitales réussies utilisent un réseau d'ambassadeurs (McKinsey 2024)",
+      "source": "McKinsey Digital Transformation Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Psychological safety — condition préalable à l'expérimentation",
+      "description": "La transformation digitale requiert un droit à l'erreur institutionnalisé : les équipes qui n'osent pas expérimenter par peur de l'échec n'innovent pas. La sécurité psychologique est le prérequis culturel.",
+      "impact_level": "Élevé",
+      "horizon": "6-18 mois",
+      "adoption_rate": "70 % des leaders IT citent la culture comme premier obstacle à la transformation (Gartner 2024)",
+      "source": "Gartner CIO Agenda Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Upskilling massif — réorientation des compétences vs recrutement",
+      "description": "Face à la pénurie de talents digitaux, les organisations investissent dans l'upskilling interne (formation intensive) plutôt que dans le recrutement externe coûteux et aléatoire.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "94 % des DRH considèrent l'upskilling comme leur priorité n°1 (PwC CEO Survey 2024)",
+      "source": "PwC CEO Survey 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "LMS (Learning Management System)",
+      "category": "Formation et développement",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne en Afrique",
+      "leading_vendors": ["Cornerstone", "SAP SuccessFactors Learning", "Docebo", "Moodle (open-source)", "360Learning"]
+    },
+    {
+      "name": "Plateformes de micro-learning",
+      "category": "Formation courte et continue",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["LinkedIn Learning", "Coursera for Business", "Udemy Business", "Degreed", "Axonify"]
+    },
+    {
+      "name": "Outils de mesure de culture et d'engagement",
+      "category": "Mesure de la transformation culturelle",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["Culture Amp", "Peakon (Workday)", "Glint (LinkedIn)", "Qualtrics EmployeeXM"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Programme de formation digitale annuel, réseau de 10+ Digital Champions internes actifs",
+        "differentiator": "Premier acteur sectoriel à mesurer l'indice de maturité digitale des collaborateurs annuellement",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Ecobank Digital Academy : formation de 10 000 collaborateurs/an aux compétences digitales et IA",
+        "differentiator": "100 % des managers certifiés 'Digital Banking Foundation' avant toute promotion",
+        "source": "Ecobank Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Amazon",
+        "country": "USA",
+        "key_practice": "Amazon Upskilling 2025 : 300 000 collaborateurs formés aux compétences digitales et IA (2M$ investis)",
+        "differentiator": "Leadership Principles inclut explicitement 'Learn and Be Curious' — l'apprentissage continu comme valeur fondamentale",
+        "source": "Amazon Upskilling 2025 Report / CNBC 2024"
+      },
+      {
+        "organisation": "Google",
+        "country": "USA",
+        "key_practice": "20 % du temps dédié à l'apprentissage et à l'innovation personnelle pour tous les ingénieurs",
+        "differentiator": "Grow with Google : 6M+ de personnes formées aux compétences digitales depuis 2017",
+        "source": "Google Sustainability Report 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune formation digitale. Résistance au changement généralisée. Outils digitaux non utilisés. Culture 100 % traditionnelle. Aucune mesure d'adoption.",
+    "level_2_developing": "Quelques formations digitales ponctuelles. Utilisation limitée des outils. Pas d'ambassadeurs digitaux. Pas de mesure de l'adoption culturelle.",
+    "level_3_defined": "Programme de formation digitale annuel structuré. Quelques Digital Champions actifs. Politique d'expérimentation tolérée. Adoption des outils de base mesurée.",
+    "level_4_managed": "Culture digitale documentée et mesurée. Réseau d'ambassadeurs formalisé. Budget de formation digitale dédié. Upskilling lié aux évaluations de performance.",
+    "level_5_optimizing": "AI Literacy pour 100 % des collaborateurs. Apprentissage continu institutionnalisé. Psychological safety mesurée. Innovation culture métriquée. Transformation culturelle reconnue extérieurement."
+  },
+
+  "regulations": [
+    {
+      "name": "Code du travail ivoirien — Formation professionnelle",
+      "issuing_body": "République de Côte d'Ivoire / MEPS",
+      "scope": "Toutes les entreprises de plus de 10 salariés en Côte d'Ivoire",
+      "key_requirement": "Plan de formation annuel obligatoire, contribution à la formation professionnelle (1-2 % de la masse salariale)",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.emploi.gouv.ci"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Résistance culturelle — principal obstacle à la transformation digitale",
+      "description": "70 % des transformations digitales échouent à cause de la résistance humaine et culturelle, pas à cause des technologies. Le 'c'est comme ça qu'on a toujours fait' est le plus grand risque.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Investir autant dans le change management que dans la technologie : communication, formation, quick wins visibles, implication des managers."
+    },
+    {
+      "title": "Fuite des talents digitaux vers la concurrence",
+      "description": "Les profils digitaux qualifiés sont rares et très mobiles. Sans culture stimulante et investissement visible dans le développement des compétences, les talents quittent l'organisation.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Créer une culture d'apprentissage continu, des parcours de carrière clairs pour les profils digitaux et une proposition de valeur employeur différenciante."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Avantage concurrentiel par la culture d'innovation",
+      "description": "Les organisations avec une forte culture d'innovation digitale lancent 3× plus d'initiatives réussies que leurs concurrents, créant un avantage compétitif structurel et durable.",
+      "impact_level": "Très élevé",
+      "time_to_value": "12-36 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Réduction des coûts de recrutement via l'upskilling interne",
+      "description": "Former un collaborateur interne coûte 3-5× moins cher que recruter un expert externe, tout en renforçant la rétention et l'engagement.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "LinkedIn (Microsoft)",
+      "target": "Degreed",
+      "amount": "N/A (partenariat)",
+      "date": "2023",
+      "strategic_rationale": "Intégrer les plateformes de skill development dans l'écosystème professionnel LinkedIn pour l'upskilling continu",
+      "source": "LinkedIn Learning Press Release 2023"
+    },
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Investors (Andreessen Horowitz, etc.)",
+      "target": "360Learning",
+      "amount": "200 M$ (Series B)",
+      "date": "2021",
+      "strategic_rationale": "Développer le collaborative learning pour l'upskilling des équipes à grande échelle",
+      "source": "360Learning Press Release 2021"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Google",
+    "pays": "USA",
+    "technologie": "Culture d'apprentissage continu — 20 % du temps dédié à l'innovation et à l'apprentissage",
+    "description": "Google a institutionnalisé la culture digitale comme avantage compétitif. Les ingénieurs consacrent 20 % de leur temps à des projets personnels (origine de Gmail, Google Maps, AdSense). La plateforme Grow with Google a formé 6M+ personnes aux compétences digitales. Le programme AI Literacy est obligatoire pour tous les collaborateurs depuis 2023. Google mesure son 'learning agility index' annuellement. Chaque équipe a accès à des learning budgets individuels de 5 000$/an pour développer leurs compétences.",
+    "resultats": "6M+ personnes formées · 100 % AI Literacy · 20 % temps innovation · Gmail / Maps nés du 20 % · Score engagement collaborateurs #1 industrie tech",
+    "source": "Google Sustainability Report 2023 / Fortune Best Companies to Work For 2024",
+    "annee": "2024"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité culture digitale — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "Programme formation digitale structuré", "Réseau Digital Champions actif", "Budget formation digitale dédié", "Culture d'expérimentation tolérée", "AI Literacy déployé"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "Partiel", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La culture digitale est l'infrastructure invisible de toute transformation. Sans une culture qui embrasse l'apprentissage continu, l'expérimentation et le digital-first, les investissements technologiques sont sous-utilisés. 70 % des transformations digitales échouent à cause du facteur humain, pas technologique.",
+    "maturity_max_description": "AI Literacy obligatoire pour 100 % des collaborateurs. Réseau de Digital Champions formalisé. Budget de formation digitale dédié. Psychological safety mesurée. Upskilling continu institutionnalisé. Culture d'innovation mesurée et reconnue extérieurement.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune formation digitale. Résistance au changement généralisée. Culture 100 % traditionnelle.",
+      "score_21_to_40": "Quelques formations ponctuelles. Outils peu utilisés. Pas d'ambassadeurs. Adoption non mesurée.",
+      "score_41_to_60": "Programme formation annuel. Quelques Digital Champions. Expérimentation tolérée. Adoption mesurée.",
+      "score_61_to_80": "Culture digitale documentée. Réseau ambassadeurs. Budget dédié. Upskilling lié aux évaluations.",
+      "score_81_to_100": "AI Literacy 100 %. Apprentissage continu institutionnalisé. Psychological safety mesurée. Innovation culture."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur sa maturité culturelle digitale. Analyse l'existence d'un programme de formation digitale structuré, la présence d'un réseau d'ambassadeurs (Digital Champions), le budget dédié à la formation digitale, la tolérance à l'expérimentation et au droit à l'erreur, et le déploiement d'une formation AI Literacy.",
+    "key_questions_for_llm": [
+      "Un programme de formation digitale structuré est-il en place pour tous les collaborateurs ?",
+      "Existe-t-il un réseau de Digital Champions ou ambassadeurs digitaux actifs dans les différents départements ?",
+      "Un budget de formation digitale dédié est-il alloué annuellement et consommé ?",
+      "La culture organisationnelle tolère-t-elle l'expérimentation et le droit à l'erreur dans les initiatives digitales ?",
+      "Une formation AI Literacy (sensibilisation à l'intelligence artificielle) est-elle déployée pour les collaborateurs ?"
+    ]
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "meta": {
+    "axis": "IS",
+    "sub_axis": "Intégration & API",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Open Banking BCEAO — interopérabilité obligatoire des systèmes de paiement",
+      "description": "La BCEAO pousse l'interopérabilité des systèmes de paiement via GIM-UEMOA. Les banques doivent exposer des APIs standardisées pour les virements, consultations de solde et les paiements marchands, facilitant l'intégration avec les fintechs et les opérateurs mobile money.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "Directive d'interopérabilité GIM-UEMOA applicable à 100 % des banques membres",
+      "source": "GIM-UEMOA Directive Interopérabilité 2023 / BCEAO",
+      "year": "2023"
+    },
+    {
+      "title": "API-First banking — monétisation des capacités bancaires via APIs",
+      "description": "Les banques africaines leaders exposent leurs capacités (comptes, paiements, crédit, KYC) via des APIs pour les distribuer aux fintechs, super-apps et marchands. Ce modèle BaaS (Banking as a Service) génère de nouveaux revenus sans coût d'acquisition client.",
+      "impact_level": "Très élevé",
+      "horizon": "24-36 mois",
+      "adoption_rate": "20 % des grandes banques africaines ont une plateforme API ouverte aux tiers (Fintech Africa 2024)",
+      "source": "Fintech Africa Open Banking Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Intégration mobile money — connexion core banking / Orange Money / Wave / MTN",
+      "description": "L'intégration du core banking avec les plateformes mobile money (APIs Orange Money, Wave, MTN MoMo, Moov Money) est devenue critique pour permettre les virements banque-mobile, le rechargement de comptes et les remboursements de crédit via mobile.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "60 % des banques UEMOA ont une intégration mobile money partielle (BCEAO 2024)",
+      "source": "BCEAO Rapport sur les Systèmes de Paiement UEMOA 2024",
+      "year": "2024"
+    },
+    {
+      "title": "ISO 20022 — migration des messages financiers bancaires",
+      "description": "Le standard ISO 20022 remplace progressivement les messages SWIFT MT pour les paiements transfrontaliers. Les banques UEMOA doivent migrer leurs systèmes de paiement avant la date limite SWIFT de novembre 2025.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "SWIFT impose la coexistence ISO 20022 / MT jusqu'à novembre 2025, migration obligatoire ensuite",
+      "source": "SWIFT ISO 20022 Migration Programme 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "API Gateway Bancaire",
+      "category": "Exposition et sécurisation des APIs",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Kong for Banking", "AWS API Gateway", "MuleSoft Anypoint Banking", "Apigee (Google)", "Axway Amplify Banking"]
+    },
+    {
+      "name": "Middleware Bancaire / ESB",
+      "category": "Intégration core banking et systèmes périphériques",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne en UEMOA",
+      "leading_vendors": ["IBM MQ / Integration Bus", "Oracle SOA Suite", "MuleSoft", "TIBCO BusinessWorks", "WSO2 Banking"]
+    },
+    {
+      "name": "Plateforme Open Banking / BaaS",
+      "category": "Banking as a Service et distribution tierce",
+      "maturity_stage": "Émergence en Afrique",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Finicity (Mastercard)", "Plaid", "TrueLayer", "Yapily", "Access Bank Hydrogen"]
+    },
+    {
+      "name": "Hub Paiement Temps Réel",
+      "category": "Paiements instantanés et mobile money",
+      "maturity_stage": "Croissance en Afrique",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["Temenos Payments Hub", "Finastra Payments", "ACI Worldwide", "Volante Technologies", "Intellect Design (iPay)"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Orange Bank Africa (CI)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "APIs natives Orange Money intégrées au core banking, virage API-First total, onboarding clients via Orange Money sans agence",
+        "differentiator": "Seule banque ivoirienne construite nativement sur une API mobile money — avantage structurel d'intégration opérateur/banque",
+        "source": "Orange Bank Africa Rapport 2023 / Orange Money API Documentation"
+      },
+      {
+        "organisation": "NSIA Banque CI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Intégration core banking avec les APIs Orange Money et MTN MoMo, hub de paiement centralisé pour les remboursements crédit",
+        "differentiator": "Premier bancassureur ivoirien à intégrer les paiements de primes d'assurance via APIs mobile money",
+        "source": "NSIA Banque Rapport Annuel 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Ecobank API Developer Portal : 30+ APIs exposées (paiements, comptes, KYC, crédit), 500+ partenaires intégrés, 33 pays couverts",
+        "differentiator": "Seule banque africaine avec un API Developer Portal unifié couvrant 33 marchés africains — infrastructure critique pour les fintechs panafricaines",
+        "source": "Ecobank API Documentation 2024 / Ecobank Annual Report 2023"
+      },
+      {
+        "organisation": "Access Bank",
+        "country": "Nigeria / Afrique de l'Ouest",
+        "key_practice": "Hydrogen BaaS : plateforme exposant les APIs Access Bank aux fintechs nigérianes, 200+ fintechs intégrées",
+        "differentiator": "Première banque nigériane à créer une filiale BaaS dédiée à la monétisation de ses APIs — modèle pionnier en Afrique de l'Ouest",
+        "source": "Access Bank Hydrogen Developer Portal 2024 / TechCabal 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Stripe",
+        "country": "USA / Global",
+        "key_practice": "API-first par conception, 100 % de la valeur accessible via API, 12 000 intégrations actives, 99,99 % SLA",
+        "differentiator": "Standard de référence mondial pour les APIs fintech : documentation, sandbox, versioning, webhooks — modèle copié par toutes les banques digitales",
+        "source": "Stripe API Documentation 2024 / Stripe Annual Review 2023"
+      },
+      {
+        "organisation": "Starling Bank",
+        "country": "Royaume-Uni",
+        "key_practice": "API marketplace bancaire avec 50+ partenaires intégrés, modèle BaaS générant 30 % des revenus, 99,999 % uptime APIs",
+        "differentiator": "Starling Marketplace : première banque UK à monétiser son infrastructure via BaaS APIs, générant 60M£ de revenus BaaS en 2023",
+        "source": "Starling Bank Annual Report 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Intégrations point-à-point spaghetti. Pas d'API Gateway. Intégrations mobile money manuelles ou absentes. Pas de documentation API. Chaque intégration est un projet custom.",
+    "level_2_developing": "Quelques intégrations via middleware basique. Intégration mobile money pour 1-2 opérateurs. APIs internes non documentées. Pas d'API exposée aux tiers. Dépendance aux éditeurs pour les intégrations.",
+    "level_3_defined": "API Gateway déployé. Intégrations mobile money (Orange, MTN, Wave) opérationnelles. APIs internes documentées. Middleware centralisé. Premiers APIs exposés aux partenaires stratégiques.",
+    "level_4_managed": "Open Banking APIs exposées (paiements, comptes). Developer Portal actif. Intégrations ISO 20022 en cours. 10+ partenaires intégrés via APIs. SLAs APIs mesurés. Sandbox disponible.",
+    "level_5_optimizing": "BaaS plateforme avec 30+ APIs. Developer Portal self-service. 50+ partenaires fintechs intégrés. ISO 20022 compliant. API versioning et deprecation management. Revenus BaaS mesurés."
+  },
+
+  "regulations": [
+    {
+      "name": "Directive GIM-UEMOA sur l'interopérabilité des systèmes de paiement",
+      "issuing_body": "GIM-UEMOA / BCEAO",
+      "scope": "Toutes les banques membres du GIM-UEMOA",
+      "key_requirement": "Connexion aux systèmes GIM-UEMOA pour les virements interbancaires, participation à l'interopérabilité mobile money-banque",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.gimuemoa.org"
+    },
+    {
+      "name": "SWIFT ISO 20022 Migration",
+      "issuing_body": "SWIFT",
+      "scope": "Banques correspondantes SWIFT",
+      "key_requirement": "Migration des messages MT vers ISO 20022 pour les paiements transfrontaliers — coexistence jusqu'à novembre 2025, puis ISO 20022 obligatoire",
+      "compliance_deadline": "Novembre 2025",
+      "source_url": "https://www.swift.com/iso20022"
+    },
+    {
+      "name": "Instruction BCEAO sur la sécurité des APIs et des services en ligne",
+      "issuing_body": "BCEAO",
+      "scope": "Banques exposant des APIs aux tiers (fintechs, marchands, opérateurs)",
+      "key_requirement": "Authentification forte (OAuth 2.0 / FAPI), chiffrement TLS 1.3, audit trail des appels API, notification BCEAO pour les APIs exposées aux tiers",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "API bancaire non sécurisée — exposition des données clients aux tiers",
+      "description": "Une API bancaire mal sécurisée (authentification faible, absence de rate limiting, OWASP API Top 10) expose les données clients à des tiers non autorisés et entraîne une violation de données avec obligation de notification BCEAO.",
+      "severity": "Très élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Implémenter OAuth 2.0 avec FAPI pour toutes les APIs bancaires exposées, déployer un API Gateway avec rate limiting et détection d'anomalies, tester les APIs contre l'OWASP API Security Top 10 avant mise en production."
+    },
+    {
+      "title": "Fragmentation des intégrations mobile money — dette technique croissante",
+      "description": "Chaque opérateur mobile money (Orange, MTN, Wave, Moov) a sa propre API propriétaire. Les banques qui intègrent chacune en bilatéral créent une dette technique massive difficile à maintenir lors des évolutions d'API des opérateurs.",
+      "severity": "Élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Adopter un hub de paiement central qui abstrait les APIs des opérateurs mobile money et standardise les intégrations, réduisant de N intégrations bilatérales à 1 intégration hub."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "BaaS africain — monétiser l'infrastructure bancaire auprès des fintechs",
+      "description": "Les fintechs africaines ont besoin d'un bilan bancaire pour offrir des services financiers réglementés (crédit, collecte de dépôts). La première banque UEMOA à exposer une plateforme BaaS complète capture un revenu de distribution de 5-15 % sur chaque transaction fintech.",
+      "impact_level": "Très élevé",
+      "time_to_value": "18-36 mois",
+      "prerequisite_maturity": "Niveau 4"
+    },
+    {
+      "title": "API GIM-UEMOA — réduction des coûts de virement interbancaire de 60 %",
+      "description": "L'utilisation complète des APIs GIM-UEMOA pour les virements interbancaires (vs les circuits correspondants manuels) réduit le coût unitaire de traitement de 2 000 FCFA à 800 FCFA, améliorant la compétitivité tarifaire.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Développement interne",
+      "acquirer_or_investor": "Access Bank",
+      "target": "Hydrogen — plateforme BaaS propriétaire",
+      "amount": "Investissement interne estimé 20-30 M$",
+      "date": "2022-2023",
+      "strategic_rationale": "Créer une filiale BaaS séparée pour monétiser le bilan et les APIs Access Bank auprès de 200+ fintechs nigérianes sans contrainte du legacy",
+      "source": "Access Bank Annual Report 2023 / TechCabal Africa"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Ecobank",
+    "pays": "Pan-Afrique / UEMOA",
+    "technologie": "Ecobank API Developer Portal — open banking panafricain sur 33 marchés",
+    "description": "Ecobank a lancé son API Developer Portal en 2020, exposant progressivement 30+ APIs bancaires (comptes, paiements, KYC, transfer money) accessibles aux fintechs via une interface self-service. Le portail couvre 33 marchés africains avec un sandbox pour les tests. En 2023 : 500+ partenaires fintechs intégrés, 120M transactions/mois via APIs, 15 % des revenus du groupe générés via des canaux API tiers. Le portail a réduit le temps d'intégration partenaire de 6 mois (projet IT classique) à 3 semaines (self-service).",
+    "resultats": "30+ APIs exposées · 500+ partenaires fintechs · 120M transactions/mois · 15 % revenus via APIs · Intégration 3 semaines vs 6 mois",
+    "source": "Ecobank API Developer Portal 2024 / Ecobank Annual Report 2023 / Fintech Africa Awards 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité intégration & API — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "API Gateway déployé", "Intégration mobile money complète", "APIs exposées aux tiers", "Developer Portal actif", "ISO 20022 en cours"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'intégration API est le levier d'accélération le plus rapide pour les banques UEMOA. Une banque sans API Gateway en 2024 ne peut pas intégrer les fintechs partenaires, les opérateurs mobile money et les marchands dans des délais compétitifs. L'open banking BCEAO/GIM-UEMOA est une opportunité : les banques qui exposent leurs APIs en premier captent l'écosystème fintech local.",
+    "maturity_max_description": "API Gateway centralisé sécurisant toutes les APIs internes et exposées. Developer Portal self-service avec sandbox et documentation OpenAPI. 30+ APIs exposées aux partenaires. Intégration complète des 4 opérateurs mobile money CI. ISO 20022 conforme. Revenus BaaS mesurés. 50+ partenaires fintechs intégrés.",
+    "scoring_rubric": {
+      "score_1_to_20": "Intégrations point-à-point. Pas d'API Gateway. Intégration mobile money manuelle ou absente. Pas d'APIs exposées.",
+      "score_21_to_40": "Middleware basique. 1-2 opérateurs mobile money intégrés. Pas d'APIs tierces. Documentation absente.",
+      "score_41_to_60": "API Gateway déployé. Orange + MTN + Wave intégrés. APIs partenaires stratégiques. Documentation interne.",
+      "score_61_to_80": "Open Banking APIs exposées. Developer Portal actif. 10+ partenaires. ISO 20022 en cours. SLAs mesurés.",
+      "score_81_to_100": "BaaS 30+ APIs. Self-service portal. 50+ fintechs. ISO 20022 conforme. Revenus BaaS mesurés."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur sa maturité intégration et API dans le contexte bancaire UEMOA. Analyse l'existence d'un API Gateway centralisé, l'intégration complète des opérateurs mobile money (Orange, MTN, Wave, Moov), l'exposition d'APIs aux partenaires fintechs et la conformité ISO 20022.",
+    "key_questions_for_llm": [
+      "Un API Gateway centralisé est-il déployé pour sécuriser et gérer l'ensemble des APIs bancaires (internes et exposées aux tiers) ?",
+      "Les APIs des opérateurs mobile money présents en Côte d'Ivoire (Orange Money, MTN MoMo, Wave, Moov Money) sont-elles intégrées au core banking ?",
+      "Des APIs bancaires standardisées sont-elles exposées aux partenaires fintechs et marchands via un Developer Portal documenté ?",
+      "La migration vers le standard ISO 20022 pour les paiements SWIFT est-elle planifiée ou en cours, avec une date cible avant novembre 2025 ?",
+      "Un modèle BaaS (Banking as a Service) est-il en place ou en cours de développement pour distribuer les capacités bancaires aux partenaires tiers ?"
+    ]
+  }
+}

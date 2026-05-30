@@ -1,0 +1,247 @@
+{
+  "meta": {
+    "axis": "RH_DIGITAL",
+    "sub_axis": "Digitalisation RH",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "SIRH Cloud — digitalisation complète des processus RH",
+      "description": "Les SIRH cloud (Workday, SAP SuccessFactors) intègrent en un seul système la paie, la gestion des talents, le recrutement et la formation, remplaçant les processus manuels et les tableurs Excel.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "62 % des grandes entreprises ont un SIRH cloud (Sierra-Cedar HR Systems Survey 2024)",
+      "source": "Sierra-Cedar HR Systems Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "IA dans le recrutement — sourcing et présélection automatisés",
+      "description": "Les outils IA (HireVue, Eightfold.ai) analysent des milliers de CV en quelques secondes, réalisent des entretiens vidéo asynchrones notés par IA et réduisent le délai de recrutement de 60 %.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "67 % des recruteurs utilisent l'IA (LinkedIn Talent Solutions 2024)",
+      "source": "LinkedIn Talent Solutions Global Trends 2024",
+      "year": "2024"
+    },
+    {
+      "title": "People Analytics — décisions RH basées sur les données",
+      "description": "Les organisations leaders utilisent des modèles prédictifs pour anticiper le turnover, identifier les hauts potentiels et optimiser les plans de succession, remplaçant les décisions RH basées sur l'intuition.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "55 % des grandes entreprises ont une équipe People Analytics (Deloitte Human Capital Trends 2024)",
+      "source": "Deloitte Human Capital Trends 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Employee Self-Service — autonomisation des collaborateurs",
+      "description": "Les portails RH self-service (demande de congés, fiche de paie, formation, attestations) libèrent les équipes RH des tâches administratives pour se concentrer sur la valeur ajoutée stratégique.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "78 % des entreprises ont un portail self-service RH (ADP Research Institute 2024)",
+      "source": "ADP Research Institute HCM Survey 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "SIRH / HCM (Human Capital Management)",
+      "category": "Gestion intégrée des RH",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en Afrique",
+      "leading_vendors": ["Workday", "SAP SuccessFactors", "Oracle HCM", "Sage HR", "Odoo HR (open-source)"]
+    },
+    {
+      "name": "ATS (Applicant Tracking System)",
+      "category": "Recrutement digital",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne",
+      "leading_vendors": ["Greenhouse", "Lever", "SmartRecruiters", "Workable", "BambooHR"]
+    },
+    {
+      "name": "Paie digitale et compliance",
+      "category": "Administration RH",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne à élevée",
+      "leading_vendors": ["Sage Paie", "ADP", "PayFit", "Workday Payroll", "Odoo Payroll"]
+    },
+    {
+      "name": "People Analytics Platform",
+      "category": "RH data-driven",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["Visier", "Workday People Analytics", "SAP SuccessFactors Analytics", "IBM Watson Talent"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "SIRH déployé pour la paie et la gestion des congés, portail self-service RH pour les collaborateurs",
+        "differentiator": "Premier acteur sectoriel à digitaliser 100 % du processus de recrutement (ATS + entretiens vidéo)",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "SAP SuccessFactors déployé pour 15 000 collaborateurs dans 33 pays — gestion RH unifiée panafricaine",
+        "differentiator": "Plans de succession automatisés avec People Analytics identifiant les hauts potentiels dans 33 filiales",
+        "source": "Ecobank Annual Report 2023 / SAP Case Study"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Workday",
+        "country": "USA",
+        "key_practice": "SIRH cloud natif : paie, talent, learning, analytics intégrés — 10 000+ clients dans 175 pays",
+        "differentiator": "Continuous Listening : feedback collaborateur en temps réel intégré dans tous les flux RH",
+        "source": "Workday Annual Report 2023"
+      },
+      {
+        "organisation": "Unilever",
+        "country": "Royaume-Uni",
+        "key_practice": "IA dans le recrutement : 250 000 CV analysés/an par IA, délai de recrutement réduit de 75 %",
+        "differentiator": "HireVue : entretiens vidéo IA ont éliminé les biais inconscients — diversité +16 % dans les recrutements",
+        "source": "Unilever HR Technology Report 2023 / HireVue Case Study"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Paie manuelle ou logiciel local basique. Recrutement par annonce papier. Dossiers RH physiques. Aucun portail collaborateur. Reporting RH sur Excel.",
+    "level_2_developing": "Logiciel de paie basique. Excel pour la gestion des congés et absences. Recrutement via email. Pas de SIRH intégré. Peu de données RH agrégées.",
+    "level_3_defined": "SIRH déployé pour la paie et les congés. Portail self-service collaborateur. ATS pour le recrutement. Reporting RH mensuel automatisé.",
+    "level_4_managed": "SIRH complet (paie + talent + formation). Recrutement 100 % digitalisé. Plans de formation digitaux. People Analytics pour les décisions clés. Évaluations de performance en ligne.",
+    "level_5_optimizing": "IA dans le recrutement et la gestion des talents. Prédiction du turnover. Plans de succession data-driven. People Analytics avancé. Expérience collaborateur mesurée en continu."
+  },
+
+  "regulations": [
+    {
+      "name": "Code du travail ivoirien — Gestion du personnel",
+      "issuing_body": "République de Côte d'Ivoire / Ministère de l'Emploi",
+      "scope": "Toutes les entreprises de droit ivoirien",
+      "key_requirement": "Tenue des registres du personnel, bulletins de paie, déclarations CNPS, durée légale du travail",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.emploi.gouv.ci"
+    },
+    {
+      "name": "CNPS — Déclarations sociales dématérialisées",
+      "issuing_body": "Caisse Nationale de Prévoyance Sociale (Côte d'Ivoire)",
+      "scope": "Toutes les entreprises cotisantes à la CNPS",
+      "key_requirement": "Déclarations sociales électroniques obligatoires, paiement en ligne des cotisations",
+      "compliance_deadline": "En vigueur (dématérialisation progressive)",
+      "source_url": "https://www.cnps.ci"
+    },
+    {
+      "name": "Loi n°2013-450 — Données personnelles des collaborateurs",
+      "issuing_body": "République de Côte d'Ivoire / ARTCI",
+      "scope": "Organisations stockant des données personnelles de collaborateurs dans des SIRH",
+      "key_requirement": "Protection des données personnelles des employés, accès limité, durée de conservation définie",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.artci.ci"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Biais algorithmique dans le recrutement IA",
+      "description": "Les algorithmes de présélection de CV entraînés sur des données historiques peuvent reproduire et amplifier les biais de genre, d'origine ou de milieu social existants dans les recrutements passés.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Auditer régulièrement les algorithmes pour les biais, maintenir la décision humaine finale et documenter les critères de sélection objectifs."
+    },
+    {
+      "title": "Fuite de données sensibles de collaborateurs",
+      "description": "Les données RH (salaires, évaluations, informations médicales) sont parmi les plus sensibles. Une fuite peut créer des litiges sociaux, des conflits internes et des violations réglementaires.",
+      "severity": "Très élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Chiffrer les données RH sensibles, appliquer le principe de moindre privilège sur les accès SIRH et auditer les accès régulièrement."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Réduction des délais de recrutement de 60-75 %",
+      "description": "La digitalisation du recrutement (ATS + entretiens vidéo + IA de présélection) réduit le délai moyen de recrutement de 45 jours à 15 jours, permettant de sécuriser les talents avant les concurrents.",
+      "impact_level": "Très élevé",
+      "time_to_value": "3-12 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Conformité sociale automatisée — zéro risque de redressement",
+      "description": "Un SIRH avec module de paie à jour des réglementations CNPS et impôts ivoiriens calcule automatiquement les charges sociales et génère les déclarations, éliminant le risque de redressement.",
+      "impact_level": "Élevé",
+      "time_to_value": "3-6 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "SAP",
+      "target": "SuccessFactors",
+      "amount": "3,4 Mds$",
+      "date": "2012",
+      "strategic_rationale": "Intégrer la gestion cloud des talents à la suite ERP SAP pour créer un HCM complet",
+      "source": "SAP Press Release 2012"
+    },
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Investors (SoftBank, etc.)",
+      "target": "Workday",
+      "amount": "IPO 637 M$",
+      "date": "2012",
+      "strategic_rationale": "Développer la première suite HCM entièrement cloud-native pour les grandes entreprises mondiales",
+      "source": "Workday IPO Prospectus 2012"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Unilever",
+    "pays": "Royaume-Uni",
+    "technologie": "AI Recruitment — 250 000 candidats analysés par IA, délai de recrutement -75 %",
+    "description": "Unilever a transformé son recrutement en déployant HireVue, une plateforme d'entretiens vidéo analysés par IA. Le processus commence par un jeu en ligne analysant les aptitudes cognitives, suivi d'un entretien vidéo async noté par IA sur 50+ variables comportementales. L'IA présélectionne les 1 000 meilleurs candidats parmi 250 000 annuellement. Le délai de recrutement est passé de 4 mois à 3 semaines. La diversité des recrutements a augmenté de 16 % en éliminant les biais inconscients des recruteurs humains. L'organisation a économisé 50 000 heures de temps de recrutement par an.",
+    "resultats": "250 000 candidats/an · Délai -75 % (4 mois → 3 semaines) · Diversité +16 % · 50 000h économisées · Satisfaction candidat +90 %",
+    "source": "Unilever HR Technology Case Study 2023 / HireVue Impact Report 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité digitalisation RH — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "SIRH cloud déployé", "Paie digitale et conforme", "ATS pour le recrutement", "Portail self-service collaborateur", "People Analytics actif"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✓", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "Partiel", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La digitalisation RH libère les équipes RH des tâches administratives pour se concentrer sur les décisions stratégiques à valeur ajoutée (développement des talents, culture, engagement). En Afrique, la conformité sociale (CNPS, paie) reste le premier driver d'adoption d'un SIRH, avant la gestion des talents.",
+    "maturity_max_description": "SIRH cloud complet (paie, talent, learning, analytics). Recrutement 100 % digitalisé avec ATS et IA de présélection. Portail self-service collaborateur complet. People Analytics prédictif. Évaluations de performance en ligne. Déclarations CNPS automatisées.",
+    "scoring_rubric": {
+      "score_1_to_20": "Paie manuelle. Dossiers physiques. Recrutement papier. Aucun SIRH. Reporting RH sur Excel.",
+      "score_21_to_40": "Logiciel paie basique. Excel pour congés. Recrutement email. Pas de SIRH intégré.",
+      "score_41_to_60": "SIRH pour paie et congés. Portail self-service. ATS pour le recrutement. Reporting RH automatisé.",
+      "score_61_to_80": "SIRH complet. Recrutement 100 % digital. Plans formation digitaux. People Analytics pour les décisions clés.",
+      "score_81_to_100": "IA dans le recrutement et la gestion des talents. Prédiction turnover. Plans succession data-driven."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur la maturité de sa digitalisation RH. Analyse le déploiement d'un SIRH cloud, la digitalisation de la paie avec conformité automatisée, l'utilisation d'un ATS pour le recrutement, l'existence d'un portail self-service pour les collaborateurs et l'utilisation du People Analytics pour les décisions RH.",
+    "key_questions_for_llm": [
+      "Un SIRH cloud est-il déployé pour centraliser la gestion de la paie, des congés et des talents ?",
+      "La paie est-elle traitée par un logiciel conforme aux réglementations locales (CNPS, code du travail) avec déclarations automatisées ?",
+      "Un ATS (Applicant Tracking System) est-il utilisé pour digitaliser et suivre le processus de recrutement ?",
+      "Les collaborateurs disposent-ils d'un portail self-service pour gérer leurs demandes RH (congés, fiches de paie, formation) ?",
+      "Le People Analytics est-il utilisé pour prendre des décisions RH (prédiction de turnover, identification des hauts potentiels) ?"
+    ]
+  }
+}

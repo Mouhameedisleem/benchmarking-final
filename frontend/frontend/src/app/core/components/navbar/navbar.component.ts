@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, Router, NavigationEnd } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { catchError, distinctUntilChanged, of } from 'rxjs';
-import { AuthService } from '../../services/auth.service';  // Correction du chemin
-import { User } from '../../models/user.model';  // Correction du chemin
+import { catchError, distinctUntilChanged, of, Subscription } from 'rxjs';
+import { AuthService } from '../../services/auth.service';
+import { NotificationService, AppNotification } from '../../services/notification.service';
+import { User } from '../../models/user.model';
 import { environment } from '../../../../environments/environment';
 
 @Component({
@@ -14,17 +15,19 @@ import { environment } from '../../../../environments/environment';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
   currentUser: User | null = null;
   currentDate = new Date();
   breadcrumbs: { label: string; url: string }[] = [];
   isMenuOpen = false;
   questionnaireCompleted = false;
 
-  notifications: { title: string; subtitle: string; icon: string; iconBg: string }[] = [];
+  notifications: AppNotification[] = [];
+  private notifSub?: Subscription;
 
   constructor(
     private authService: AuthService,
+    private notificationService: NotificationService,
     private router: Router,
     private http: HttpClient
   ) {
@@ -43,13 +46,20 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.generateBreadcrumbs();
+
+    // Subscribe to live notification list
+    this.notifSub = this.notificationService.notifications$.subscribe(
+      notifs => { this.notifications = notifs; }
+    );
+
     this.authService.currentUser$.pipe(
       distinctUntilChanged((a, b) => a?.id === b?.id && a?.role === b?.role)
     ).subscribe(user => {
       if (user && (user.role === 'ADMIN' || user.role === 'CONSULTANT')) {
-        this.loadNotifications();
+        this.notificationService.connect();
       } else {
-        this.notifications = [];
+        this.notificationService.disconnect();
+        this.notificationService.clear();
       }
       if (user?.role === 'CLIENT' && user?.companyId) {
         this.http.get<any>(`${environment.apiUrl}/evaluations/latest?companyId=${user.companyId}`)
@@ -61,28 +71,14 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-  private loadNotifications(): void {
-    this.notifications = [
-      {
-        title: 'Nouvel utilisateur inscrit',
-        subtitle: 'En attente de validation',
-        icon: 'fas fa-user-plus text-warning',
-        iconBg: 'bg-warning bg-opacity-10'
-      },
-      {
-        title: 'Évaluation soumise',
-        subtitle: 'À traiter dès que possible',
-        icon: 'fas fa-clipboard-check text-success',
-        iconBg: 'bg-success bg-opacity-10'
-      },
-      {
-        title: 'Rapport disponible',
-        subtitle: 'Prêt à être téléchargé',
-        icon: 'fas fa-file-pdf text-primary',
-        iconBg: 'bg-primary bg-opacity-10'
-      }
-    ];
+  ngOnDestroy(): void {
+    this.notifSub?.unsubscribe();
+    this.notificationService.disconnect();
   }
+
+  get unreadCount(): number { return this.notificationService.unreadCount; }
+
+  onBellClick(): void { this.notificationService.markAllRead(); }
 
   /**
    * Vérifie si l'utilisateur est authentifié

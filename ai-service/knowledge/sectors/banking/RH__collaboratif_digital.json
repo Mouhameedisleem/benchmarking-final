@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "axis": "RH",
+    "sub_axis": "Collaboratif digital",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Collaboration inter-agences digitale — coordination réseau bancaire en temps réel",
+      "description": "Les banques UEMOA avec des réseaux de 30-100 agences coordonnent leurs activités via des outils digitaux (Teams, Slack) en remplacement des réunions physiques mensuelles. La cadence d'alignement passe de mensuelle à hebdomadaire ou quotidienne.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "30 % des banques africaines utilisent Teams ou Slack pour la coordination réseau (IDC Africa 2024)",
+      "source": "IDC Africa Banking Digital Workplace 2024",
+      "year": "2024"
+    },
+    {
+      "title": "GED collaborative — partage sécurisé de documents internes",
+      "description": "Les dossiers de crédit, les rapports de conformité et les audits internes transitent encore par email ou physiquement dans de nombreuses banques UEMOA. Le passage à une GED collaborative (SharePoint, Google Drive sécurisé) réduit les délais de traitement de 50 %.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "25 % des banques africaines ont une GED collaborative opérationnelle (Gartner Africa 2024)",
+      "source": "Gartner Content Services Banking Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Réunions hybrides sécurisées — conformité enregistrement vs confidentialité bancaire",
+      "description": "Les banques doivent gérer la tension entre l'enregistrement des réunions (productivité) et la confidentialité des discussions bancaires (données clients, stratégie). Les solutions de visioconférence bancaire certifiées (Microsoft Teams, Webex) résolvent cette tension avec des contrôles d'accès adaptés.",
+      "impact_level": "Moyen",
+      "horizon": "Immédiat",
+      "adoption_rate": "Adoption généralisée post-COVID dans les grandes banques africaines",
+      "source": "Cisco Webex Banking Africa Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Intranet bancaire collaboratif — portail employé comme hub d'information",
+      "description": "Un intranet bancaire moderne (SharePoint, Viva Connections) sert de portail unique pour les communications internes, les procédures, les formations, et les annonces de la direction — remplaçant les circulaires papier et les emails en cascade.",
+      "impact_level": "Moyen",
+      "horizon": "12-24 mois",
+      "adoption_rate": "20 % des banques africaines ont un intranet moderne actif (IDC Africa 2024)",
+      "source": "IDC Africa Intranet Banking 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Messagerie et visioconférence bancaire",
+      "category": "Collaboration temps réel",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne en UEMOA",
+      "leading_vendors": ["Microsoft Teams", "Cisco Webex for Banking", "Zoom", "Google Meet", "Slack (Salesforce)"]
+    },
+    {
+      "name": "GED collaborative / ECM",
+      "category": "Gestion documentaire collaborative",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Microsoft SharePoint + OneDrive", "Google Drive for Work", "Box for Financial Services", "OpenText Content Suite", "Hyland OnBase"]
+    },
+    {
+      "name": "Intranet / Portail Employé",
+      "category": "Communication interne et hub employé",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Microsoft Viva Connections + SharePoint", "Staffbase", "LumApps", "Simpplr", "Workplace from Meta (Banking)"]
+    },
+    {
+      "name": "Gestion de projets collaboratifs",
+      "category": "Coordination équipes distribuées",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["Microsoft Planner / Project", "Jira (Atlassian)", "Asana", "Monday.com", "Notion"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Société Générale Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Microsoft Teams déployé pour toutes les équipes, SharePoint pour la GED interne, réunions hybrides hebdomadaires direction-agences, intranet SG Connect adapté CI",
+        "differentiator": "SG Connect CI : intranet groupe localisé pour la CI permettant à chaque collaborateur d'accéder aux procédures, annonces et formations depuis n'importe quelle agence",
+        "source": "SGCI Rapport Annuel 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Microsoft Teams + SharePoint déployés dans 33 filiales, Ecobank Intranet Central pour les communications groupe, visioconférence obligatoire pour les réunions >100 km",
+        "differentiator": "Seule banque africaine avec un intranet collaboratif unifié couvrant 33 pays en 3 langues — coordination réseau panafricain quotidien sans déplacement",
+        "source": "Ecobank Annual Report 2023 / Microsoft Africa Ecobank Case Study"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Goldman Sachs",
+        "country": "USA",
+        "key_practice": "GS Engineering Platform : collaboration interne sur code et analyses via des outils propriétaires + Slack, 10 000 développeurs qui collaborent sur 1M lignes de code/semaine",
+        "differentiator": "Goldman Sachs a créé une plateforme de collaboration tech propriétaire gérant 1 million de lignes de code bancaire par semaine — référence en collaboration développeurs bancaires",
+        "source": "Goldman Sachs Annual Report 2023 / Goldman Sachs Engineering Blog"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Collaboration par email et téléphone uniquement. Réunions physiques mensuelles. GED absente (documents papier ou email). Pas d'intranet. Coordination réseau agences lente et fragmentée.",
+    "level_2_developing": "Email professionnel. Visioconférence ad hoc (Zoom, Teams non déployé). GED partielle sur serveur partagé. Pas d'intranet structuré. Réunions en présentiel dominantes.",
+    "level_3_defined": "Microsoft Teams ou Google Meet déployé pour tous. GED SharePoint ou Google Drive. Réunions hybrides normalisées. Intranet basique avec les procédures et annonces. Coordination réseau hebdomadaire digitale.",
+    "level_4_managed": "Teams/Meet + GED complète. Intranet actif avec communautés métier. Collaboration agences en temps réel. Gestion de projets collaborative (Jira, Planner). Onboarding collaborateur digitalisé.",
+    "level_5_optimizing": "Plateforme collaborative unifiée (Microsoft 365 complet + Viva). GED avec gestion du cycle de vie documentaire. Intranet personnalisé par rôle. IA pour résumé de réunions. Collaboration 100 % asynchrone possible."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction BCEAO sur la conservation des communications bancaires",
+      "issuing_body": "BCEAO",
+      "scope": "Banques utilisant des outils de communication digitale pour les décisions bancaires",
+      "key_requirement": "Les communications relatives aux décisions de crédit, de conformité et de gouvernance doivent être archivées de manière traçable et restituable lors des inspections",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Communications bancaires sensibles sur des canaux non sécurisés — violation BCEAO",
+      "description": "Des collaborateurs bancaires qui partagent des données clients, des dossiers de crédit ou des informations de conformité via WhatsApp personnel, Gmail ou d'autres canaux non sécurisés créent un risque de fuite de données et une violation de la réglementation BCEAO.",
+      "severity": "Élevé",
+      "likelihood": "Très élevée en UEMOA",
+      "mitigation": "Déployer et rendre obligatoire Microsoft Teams ou un équivalent sécurisé pour toutes les communications bancaires internes, bloquer le transfert de données vers des applications non autorisées via DLP (Data Loss Prevention)."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Réunions digitales réseau agences — économie de 50 000 € de déplacements/an",
+      "description": "Une banque avec 50 agences en CI organise en moyenne 2 réunions régionales/mois. La migration vers des réunions hebdomadaires digitales Teams réduit les coûts de déplacement de 50 000-80 000 € par an et améliore la cadence d'alignement (mensuelle → hebdomadaire).",
+      "impact_level": "Élevé",
+      "time_to_value": "1-3 mois",
+      "prerequisite_maturity": "Niveau 1"
+    }
+  ],
+
+  "ma_and_fundraising": [],
+
+  "zoom_case_study": {
+    "entreprise": "Ecobank Group",
+    "pays": "Pan-Afrique",
+    "technologie": "Microsoft 365 + Teams — collaboration bancaire panafricaine sur 33 marchés",
+    "description": "Ecobank a déployé Microsoft 365 et Teams dans 33 filiales africaines en 2021-2022, transformant la coordination d'un modèle de réunions physiques trimestrielles vers une collaboration digitale quotidienne. Chaque filiale dispose de canaux Teams dédiés par domaine métier (Crédit, Conformité, IT, RH). Les procédures opérationnelles sont stockées dans SharePoint avec contrôle de version. Les réunions de direction groupe (Accra) avec les directeurs pays se tiennent hebdomadairement en visioconférence. Résultats : délai de diffusion des circulaires de J+15 à J+1, économies de déplacements estimées à 2 M$/an, satisfaction collaborateurs +25 %.",
+    "resultats": "33 pays connectés · Circulaires J+15 → J+1 · Économies déplacements 2 M$/an · Satisfaction collabs +25 % · Réunions groupe hebdomadaires vs trimestrielles",
+    "source": "Microsoft Africa Case Study Ecobank 2023 / Ecobank Annual Report 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité collaboratif digital — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "Teams/Meet déployé pour tous", "GED collaborative opérationnelle", "Intranet actif avec procédures", "Réunions hybrides normalisées", "Communications sensibles sécurisées"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "Partiel", "✗", "Partiel", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La collaboration digitale bancaire en UEMOA est le levier de transformation le plus rapide et le moins coûteux. Déployer Microsoft Teams dans une banque de 500 collaborateurs prend 2 semaines et coûte moins de 20 € par collaborateur et par mois. L'impact est immédiat : les circulaires passent de J+15 à J+1, les réunions réseau de mensuelles à hebdomadaires, et les collaborateurs arrêtent d'envoyer des dossiers clients par email non chiffré.",
+    "maturity_max_description": "Suite Microsoft 365 complète (Teams, SharePoint, OneDrive, Viva) déployée pour tous les collaborateurs. GED avec contrôle de version et cycle de vie documentaire. Intranet personnalisé par rôle. Réunions hybrides et asynchrones normalisées. DLP bloquant les transferts de données vers des canaux non sécurisés. IA pour résumé et transcription des réunions.",
+    "scoring_rubric": {
+      "score_1_to_20": "Email et téléphone uniquement. Réunions physiques. GED absente. Pas d'intranet. WhatsApp personnel pour tout.",
+      "score_21_to_40": "Email pro. Visioconférence ad hoc. GED partielle sur serveur. Pas d'intranet structuré.",
+      "score_41_to_60": "Teams/Meet déployé. GED SharePoint. Réunions hybrides. Intranet basique. Procédures en ligne.",
+      "score_61_to_80": "Teams complet + GED. Intranet actif communautés. Collaboration agences temps réel. Gestion projets digitale.",
+      "score_81_to_100": "Microsoft 365 complet + Viva. GED cycle de vie. Intranet personnalisé. IA réunions. 100 % asynchrone possible."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur sa maturité en collaboration digitale dans le contexte bancaire UEMOA. Analyse le déploiement d'outils de collaboration (Teams, Slack), la disponibilité d'une GED collaborative sécurisée, l'existence d'un intranet actif et la sécurisation des communications internes bancaires.",
+    "key_questions_for_llm": [
+      "Un outil de collaboration et de visioconférence (Microsoft Teams, Google Meet ou équivalent) est-il déployé et utilisé par tous les collaborateurs pour les réunions et la communication interne ?",
+      "Une GED (Gestion Électronique de Documents) collaborative est-elle disponible pour partager et co-éditer les documents internes (procédures, rapports, dossiers) de manière sécurisée ?",
+      "Un intranet bancaire est-il actif et régulièrement mis à jour avec les procédures opérationnelles, les actualités et les annonces de la direction ?",
+      "Les communications relatives aux données clients, dossiers de crédit et sujets de conformité sont-elles réalisées exclusivement sur des canaux sécurisés professionnels (pas WhatsApp personnel ou Gmail) ?",
+      "La coordination entre les agences du réseau et le siège est-elle digitalisée avec des réunions hebdomadaires en visioconférence en complément ou en remplacement des déplacements physiques ?"
+    ]
+  }
+}

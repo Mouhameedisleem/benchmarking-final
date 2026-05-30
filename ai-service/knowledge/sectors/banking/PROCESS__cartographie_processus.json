@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "axis": "PROCESS",
+    "sub_axis": "Cartographie des processus",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Digitalisation des processus KYC — conformité BCEAO et réduction délais",
+      "description": "La BCEAO exige des procédures KYC documentées et traçables. Les banques leaders digitalisent leur processus KYC (ouverture de compte, mise à jour KYC périodique) avec des workflows numériques qui réduisent le délai d'ouverture de 15 jours à 48 heures.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "35 % des banques UEMOA ont un processus KYC partiellement digitalisé (BCEAO 2024)",
+      "source": "BCEAO Rapport sur la Conformité KYC 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Process Mining bancaire — découverte automatisée des inefficiences",
+      "description": "Les banques africaines leaders utilisent le process mining (Celonis, UiPath Process Mining) pour analyser automatiquement les logs de leurs core banking et CRM, identifiant les goulots d'étranglement invisibles dans les processus de crédit et de traitement des réclamations.",
+      "impact_level": "Élevé",
+      "horizon": "24-36 mois",
+      "adoption_rate": "8 % des banques africaines utilisent le process mining en production (Gartner 2024)",
+      "source": "Gartner Process Mining Financial Services 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Cartographie des processus de conformité — BCEAO et LCB-FT",
+      "description": "Les inspections BCEAO exigent une documentation des processus de conformité (KYC, LCB-FT, reporting prudentiel). Les banques sans cartographie formelle s'exposent à des demandes de mise en conformité urgentes lors des contrôles sur place.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "100 % des banques UEMOA soumises aux exigences de documentation des processus BCEAO",
+      "source": "BCEAO Mission de Contrôle Prudentiel 2024",
+      "year": "2024"
+    },
+    {
+      "title": "BPM bancaire — orchestration des processus métier multi-systèmes",
+      "description": "Les processus bancaires traversent de multiples systèmes (core banking, CRM, GED, solutions de crédit). Les plateformes BPM orchestrent ces flux et offrent une traçabilité complète requise par les auditeurs et la BCEAO.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "25 % des banques africaines ont une plateforme BPM déployée (IDC Africa 2024)",
+      "source": "IDC Africa Financial Services Technology 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "BPM / Workflow Bancaire",
+      "category": "Orchestration des processus métier",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Pega Banking Platform", "Appian for Banking", "IBM Business Automation", "Temenos Workflow", "Bizagi Banking"]
+    },
+    {
+      "name": "Process Mining Bancaire",
+      "category": "Analyse et optimisation des processus",
+      "maturity_stage": "Émergence",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Celonis Financial Services", "UiPath Process Mining", "SAP Signavio", "IBM Process Mining", "Minit (Microsoft)"]
+    },
+    {
+      "name": "GED / ECM Bancaire",
+      "category": "Gestion documentaire",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne en UEMOA",
+      "leading_vendors": ["OpenText Banking", "Microsoft SharePoint + Syntex", "Hyland OnBase Banking", "DocuWare", "M-Files"]
+    },
+    {
+      "name": "eKYC / Digital Onboarding",
+      "category": "Numérisation du processus KYC",
+      "maturity_stage": "Croissance en Afrique",
+      "adoption_in_sector": "Faible en CI",
+      "leading_vendors": ["Smile Identity (Afrique)", "Onfido", "Jumio", "Sumsub", "Trulioo"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Société Générale Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Processus KYC et crédit documentés et digitalisés selon les standards SG France, BPM Pega déployé pour le crédit corporate",
+        "differentiator": "Standards de cartographie des processus Société Générale Groupe appliqués en CI — niveau de maturité significativement supérieur aux banques locales",
+        "source": "SGCI Rapport Annuel 2023"
+      },
+      {
+        "organisation": "Coris Bank International CI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Cartographie des processus opérationnels réalisée en 2022, digitalisation du processus d'octroi crédit PME, GED documentaire déployée",
+        "differentiator": "Banque burkinabè ayant déployé la cartographie des processus dans toutes ses filiales UEMOA en 2022-2023",
+        "source": "Coris Bank Rapport Annuel 2023 / APBEF-CI"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Ecobank Process Standardisation Program : cartographie et standardisation de 200 processus opérationnels sur 33 filiales, workflow KYC unifié",
+        "differentiator": "Seul groupe bancaire africain à avoir standardisé ses processus opérationnels sur 33 marchés — conformité réglementaire et expérience client uniformisées",
+        "source": "Ecobank Annual Report 2023 / Ecobank Operations Report"
+      },
+      {
+        "organisation": "Standard Bank",
+        "country": "Afrique du Sud / Afrique de l'Ouest",
+        "key_practice": "Process Mining Celonis déployé sur les processus de crédit et réclamations, réduction délai crédit de 15 jours à 3 jours",
+        "differentiator": "Premier groupe bancaire africain à déployer Celonis à grande échelle — 40 processus minés, économies de 50 M$ identifiées",
+        "source": "Standard Bank Annual Report 2023 / Celonis Case Study Standard Bank"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "BBVA",
+        "country": "Espagne / Global",
+        "key_practice": "100 % des processus bancaires documentés en BPMN 2.0, process mining sur 100 % des processus critiques, temps d'ouverture compte réduit à 3 minutes",
+        "differentiator": "BBVA Process Factory : usine de transformation des processus avec 500 ingénieurs BPM dédiés — référence mondiale en excellence opérationnelle bancaire",
+        "source": "BBVA Annual Report 2023 / Celonis Case Study BBVA"
+      },
+      {
+        "organisation": "ING Bank",
+        "country": "Pays-Bas",
+        "key_practice": "Modèle Agile appliqué aux processus bancaires (squads dédiés à chaque processus), process mining UiPath sur les processus KYC et conformité",
+        "differentiator": "ING Process Lab : amélioration continue des processus par des squads autonomes mesurant chaque semaine l'impact de leurs changements",
+        "source": "ING Annual Report 2023 / McKinsey ING Agile Case Study"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune cartographie des processus. Procédures informelles transmises oralement. Pas de documentation KYC formalisée. Processus non traçables. Non-conformité latente aux exigences BCEAO.",
+    "level_2_developing": "Quelques procédures documentées sur papier ou Word. Cartographie partielle des processus critiques. KYC documenté mais non digitalisé. Pas de BPM. Difficultés lors des inspections BCEAO.",
+    "level_3_defined": "Cartographie des processus clés formalisée (BPMN ou équivalent). KYC et processus de conformité documentés et validés BCEAO. GED déployée. Premiers workflows digitaux. Revue annuelle des processus.",
+    "level_4_managed": "BPM déployé sur les processus critiques (crédit, KYC, réclamations). Process mining pilote. eKYC partiel. KPIs processus mesurés. Amélioration continue structurée. Conformité processus auditée.",
+    "level_5_optimizing": "Process mining en production sur 50+ processus. eKYC complet et conforme BCEAO. Automatisation des processus à faible valeur ajoutée. Optimisation continue basée sur données. Zéro processus papier."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction BCEAO sur les procédures KYC et LCB-FT",
+      "issuing_body": "BCEAO / GIABA",
+      "scope": "Toutes les banques UEMOA",
+      "key_requirement": "Documentation formalisée des procédures KYC, traçabilité des diligences KYC, mise à jour périodique des dossiers clients, conservation 10 ans",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Dispositif de contrôle interne BCEAO",
+      "issuing_body": "BCEAO",
+      "scope": "Toutes les banques UEMOA",
+      "key_requirement": "Documentation des processus de contrôle interne, cartographie des risques opérationnels, rapport annuel de contrôle interne remis à la BCEAO",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Processus KYC non documentés — non-conformité lors des inspections BCEAO",
+      "description": "La BCEAO effectue des missions de contrôle sur place qui vérifient la conformité des processus KYC et LCB-FT. L'absence de documentation formalisée des procédures expose la banque à des injonctions de mise en conformité et des sanctions financières.",
+      "severity": "Très élevé",
+      "likelihood": "Haute",
+      "mitigation": "Formaliser immédiatement les procédures KYC en procédures écrites validées par la Direction Conformité, déployer un workflow digital pour tracer chaque étape de la diligence KYC."
+    },
+    {
+      "title": "Processus non standardisés — variabilité de service entre agences",
+      "description": "Sans cartographie et standardisation des processus, chaque agence développe ses propres pratiques. Cette variabilité génère une expérience client incohérente et des risques opérationnels différenciés selon les agences.",
+      "severity": "Élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Cartographier et standardiser les processus front-office en commençant par les 10 processus les plus fréquents (ouverture compte, crédit conso, réclamation) et les déployer via des workflows digitaux uniformes."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "eKYC conforme BCEAO — ouverture de compte en 48h vs 15 jours",
+      "description": "La digitalisation du processus KYC (capture documents, reconnaissance biométrique, vérification Smile Identity) réduit le délai d'ouverture de compte de 15 jours à 48 heures et le coût de traitement de 8 000 à 2 000 FCFA.",
+      "impact_level": "Très élevé",
+      "time_to_value": "12-18 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Process Mining crédit — réduction du délai d'octroi de 15 à 3 jours",
+      "description": "Le process mining sur les données du core banking révèle que 60-70 % du délai d'octroi crédit est du temps d'attente entre étapes. L'identification et l'élimination de ces goulots réduit le délai d'octroi de 5× sans investissement SI majeur.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Partenariat technologique",
+      "acquirer_or_investor": "Standard Bank Africa",
+      "target": "Celonis — Process Mining",
+      "amount": "Partenariat commercial (multi-M$)",
+      "date": "2022",
+      "strategic_rationale": "Déployer Celonis pour miner 40 processus critiques (crédit, KYC, réclamations) sur 20 marchés africains — optimisation opérationnelle et conformité réglementaire",
+      "source": "Celonis Press Release Standard Bank 2022"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Standard Bank Africa",
+    "pays": "Afrique du Sud / Pan-Afrique",
+    "technologie": "Celonis Process Mining — optimisation des processus de crédit sur 20 marchés",
+    "description": "Standard Bank a déployé Celonis Process Mining sur ses processus de crédit retail et PME dans 20 pays africains. L'outil a analysé automatiquement 50 millions de cas de crédit sur 5 ans dans les logs du core banking. Résultats : 127 variantes du processus de crédit identifiées (vs 1 processus cible), 45 % du délai d'octroi identifié comme temps d'attente non-valeur ajoutée. En 18 mois post-déploiement : délai crédit réduit de 15 jours à 3 jours, NPS crédit +25 points, 50 M$ d'économies opérationnelles identifiées.",
+    "resultats": "127 variantes processus → 1 process cible · Délai crédit 15j → 3j · NPS crédit +25 · 50 M$ économies · 20 pays couverts",
+    "source": "Celonis Case Study Standard Bank 2023 / Standard Bank Annual Report 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité cartographie des processus — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "Processus clés documentés BPMN", "KYC digitalisé et traçable", "BPM déployé sur processus critiques", "Process mining actif", "Revue annuelle des processus"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "✗", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La cartographie des processus est un prérequis à toute transformation digitale bancaire en UEMOA. Sans documentation des processus, il est impossible d'automatiser, de mesurer ou de se conformer aux exigences BCEAO. Les inspections BCEAO pénalisent directement les banques sans documentation formalisée des procédures KYC et de contrôle interne.",
+    "maturity_max_description": "100 % des processus critiques cartographiés en BPMN 2.0 et documentés. eKYC conforme BCEAO avec traçabilité complète. BPM orchestrant les processus crédit, KYC et réclamations. Process mining en production sur 50+ processus. Amélioration continue basée sur données. Zéro processus papier pour les opérations courantes.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune cartographie. Procédures informelles. KYC non documenté. Non-conformité BCEAO latente.",
+      "score_21_to_40": "Procédures partielles sur papier/Word. KYC documenté non digitalisé. Pas de BPM. Difficultés aux inspections.",
+      "score_41_to_60": "Processus clés cartographiés BPMN. KYC documenté validé BCEAO. GED déployée. Premiers workflows digitaux.",
+      "score_61_to_80": "BPM sur processus critiques. Process mining pilote. eKYC partiel. KPIs processus mesurés. Revue annuelle.",
+      "score_81_to_100": "Process mining production. eKYC complet BCEAO. 50+ processus minés. Zéro papier opérations courantes."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur la maturité de sa cartographie des processus dans le contexte bancaire UEMOA. Analyse la formalisation des processus KYC et de conformité (exigés par BCEAO), le déploiement d'outils BPM, l'utilisation du process mining et la digitalisation des processus opérationnels.",
+    "key_questions_for_llm": [
+      "Les procédures KYC et LCB-FT sont-elles formalisées par écrit, validées par la Direction Conformité et traçables lors des inspections BCEAO ?",
+      "Les processus opérationnels clés (ouverture de compte, octroi crédit, traitement réclamations) sont-ils cartographiés en BPMN ou équivalent ?",
+      "Une plateforme BPM est-elle déployée pour orchestrer les workflows des processus critiques (crédit, KYC, réclamations) ?",
+      "Le process mining est-il utilisé pour analyser automatiquement les logs des systèmes et identifier les goulots d'étranglement dans les processus ?",
+      "La cartographie des processus est-elle révisée au moins annuellement pour intégrer les évolutions réglementaires et opérationnelles ?"
+    ]
+  }
+}

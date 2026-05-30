@@ -4,6 +4,7 @@ import com.iabenchmark.service.ReportService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import java.util.Objects;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +27,7 @@ public class ReportController {
             return ResponseEntity.ok()
                     .header(HttpHeaders.CONTENT_DISPOSITION,
                             "attachment; filename=\"rapport-maturite-" + evaluationId + ".pdf\"")
-                    .contentType(MediaType.APPLICATION_PDF)
+                    .contentType(Objects.requireNonNull(MediaType.APPLICATION_PDF))
                     .body(pdf);
         } catch (EntityNotFoundException e) {
             return ResponseEntity.notFound().build();

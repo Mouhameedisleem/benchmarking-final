@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "MODELE_OP",
+    "sub_axis": "gouvernance",
+    "sector": "energie",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Gouvernance data énergie et CDTO (Chief Digital & Technology Officer) secteur",
+      "description": "Le secteur énergie CI structure sa gouvernance digitale avec des rôles dédiés : CDO, CISO OT/IT, Data Stewards pour les données AMI. La gouvernance des données énergie (consommation, réseau, compteurs) prend une dimension réglementaire avec ANARE-CI qui exige des rapports IQS trimestriels fiables. CIE a créé en 2023 un comité de gouvernance digitale mensuel (CODIR Digital) incluant DSI, Directeur Opérations, DRH et Direction Clientèle, avec un tableau de bord de maturité digitale trimestriel.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "38%",
+      "source": "ANARE-CI / CIE Gouvernance Digitale 2024",
+      "year": 2024
+    },
+    {
+      "title": "ESG et gouvernance durabilité intégrée au pilotage énergie",
+      "description": "Les distributeurs d'énergie intègrent des indicateurs ESG (Environnemental, Social, Gouvernance) dans leurs tableaux de bord de pilotage : émissions CO2 évitées (mix renouvelable), taux électrification rurale (social), conformité ANARE-CI (gouvernance), pertes réseau (efficacité environnementale). En Côte d'Ivoire, les investisseurs institutionnels (IFC, PROPARCO, DEG) conditionnent leurs financements à des reportings ESG annuels certifiés pour les acteurs énergie.",
+      "impact_level": "high",
+      "horizon": "short_term",
+      "adoption_rate": "28%",
+      "source": "IFC / PROPARCO Rapport Financement Énergie CI 2025",
+      "year": 2025
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "GRC (Governance, Risk & Compliance) plateforme énergie",
+      "category": "Gouvernance / Compliance",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "25% des grands distributeurs UEMOA avec GRC intégré (ANARE-CI IQS + APDP CI)",
+      "leading_vendors": ["IBM OpenPages", "ServiceNow GRC", "RSA Archer", "MetricStream", "SAP GRC"]
+    },
+    {
+      "name": "Plateforme ESG reporting et pilotage durabilité",
+      "category": "ESG / Reporting",
+      "maturity_stage": "emerging",
+      "adoption_in_sector": "15% des acteurs énergie CI avec reporting ESG certifié (IFC, PROPARCO conditions)",
+      "leading_vendors": ["Workiva", "Salesforce Net Zero Cloud", "SAP Sustainability", "Microsoft Cloud for Sustainability", "Persefoni"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "CIE (Compagnie Ivoirienne d'Électricité)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "CODIR Digital mensuel (DSI + DG Opérations + DRH + Direction Clientèle), tableau de bord maturité digitale trimestriel (KPIs : DCI, SAIDI/SAIFI, NPS digital, taux dématérialisation), reporting ANARE-CI IQS automatisé depuis Power BI, Comité APDP CI (données AMI) trimestriel",
+        "differentiator": "Seul distributeur CI avec gouvernance digitale formalisée multi-directions — DCI (Digital Culture Index) comme KPI de pilotage RH, reporting IQS automatisé ANARE-CI éliminant les erreurs manuelles de saisie",
+        "source": "CIE Rapport Gouvernance 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "SENELEC (Société Nationale d'Électricité du Sénégal)",
+        "country": "Sénégal",
+        "key_practice": "Direction de la Transformation Digitale (DTD) autonome avec budget propre, Plan Stratégique Digital 2025-2028 (PSD), tableau de bord Balanced Scorecard digital (4 perspectives), reporting ESG certifié Global Reporting Initiative (GRI) annuel — 1ère entité électricité UEMOA certifiée GRI",
+        "differentiator": "Premier rapport de durabilité certifié GRI du secteur électricité UEMOA (2023) — gouvernance ESG reconnue par IFC comme référence Afrique de l'Ouest",
+        "source": "SENELEC Rapport Développement Durable 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Enel Group",
+        "country": "Italie / International",
+        "key_practice": "Gouvernance intégrée énergie/digital : CDO membre du Conseil d'Administration, OKR digitaux cascadés sur 65 000 collaborateurs (groupe), tableau de bord ESG temps réel (CO2, eau, biodiversité), rapport ESG intégré IFRS S1/S2 (premier grand groupe énergie), Data Governance Office avec 180 Data Stewards",
+        "differentiator": "Leader mondial gouvernance intégrée énergie-ESG-digital — 1er rapport IFRS S1/S2 certifié du secteur énergie mondial (2024), Data Governance avec 180 stewards garantissant qualité données pour 70M clients",
+        "source": "Enel Integrated Annual Report 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Aucune gouvernance digitale formalisée, décisions digitales ad hoc, pas de DSI dédié, conformité ANARE-CI gérée manuellement par comptabilité, aucune vision stratégique digital documentée.",
+    "level_2_developing": "DSI nommé avec équipe IT, reporting ANARE-CI semi-automatisé, comité IT mensuel sans représentation direction générale, stratégie digitale informelle non documentée.",
+    "level_3_defined": "CODIR Digital trimestriel (DSI + DG + Directions métier), stratégie digitale 3 ans documentée et validée, KPIs digitaux suivis (NPS, taux dématérialisation, SAIDI/SAIFI), conformité ANARE-CI et APDP CI intégrée.",
+    "level_4_managed": "CODIR Digital mensuel avec tableau de bord maturité digitale, CDO/CISO dédiés, OKR digitaux par direction, reporting ESG annuel, data governance avec Data Stewards par domaine (réseau, client, RH).",
+    "level_5_optimizing": "Gouvernance digitale intégrée au Conseil d'Administration, OKR digitaux cascadés sur tout le personnel, Data Governance Office dédié, rapport ESG certifié GRI/IFRS S1-S2, conformité ANARE-CI/APDP CI/ARTCI automatisée et en temps réel."
+  },
+  "regulations": [
+    {
+      "name": "ANARE-CI — Reporting IQS trimestriel et gouvernance qualité de service",
+      "authority": "ANARE-CI (Autorité Nationale de Régulation de l'Électricité)",
+      "description": "L'ANARE-CI impose aux distributeurs d'électricité un reporting trimestriel des Indicateurs de Qualité de Service (IQS) : SAIDI (durée moyenne interruption), SAIFI (fréquence interruption), CAIDI (durée moyenne par client), taux de satisfaction réclamations, délai raccordement. Ces données doivent être certifiées et transmises dans un format normé. Toute incohérence ou retard de transmission est sanctionné. Depuis 2024, ANARE-CI exige que les données IQS soient extraites directement des systèmes SCADA/NMS (pas de ressaisie manuelle).",
+      "compliance_deadline": "Trimestriel (en vigueur, automatisation SCADA requise dès 2024)",
+      "impact_on_sector": "Oblige à une gouvernance data rigoureuse : pipeline automatisé SCADA → NMS → reporting ANARE-CI, data quality certifiée, traçabilité complète des calculs IQS"
+    },
+    {
+      "name": "Code Gouvernance Entreprises CI (OHADA) + exigences IFC pour financements",
+      "authority": "OHADA / IFC / PROPARCO",
+      "description": "Les entités énergie CI recevant des financements IFC, PROPARCO ou DEG (investisseurs DFI) doivent se conformer aux Performance Standards IFC (PS1-PS8), incluant des systèmes de management ESG, un reporting annuel certifié par un tiers indépendant, et une gouvernance transparente (comité d'audit, politique anti-corruption). BBOXX CI, financé par Bamboo Capital et CDC Group, soumet un rapport ESG annuel certifié. CIE, partiellement financée via obligations vertes, suit le cadre OHADA amélioré.",
+      "compliance_deadline": "Annuel (conditions de financement DFI)",
+      "impact_on_sector": "La gouvernance ESG est un prérequis au financement institutionnel des projets énergie CI (mini-grids, AMI, renouvelables) — sans rapport ESG certifié, accès limité aux DFI et obligations vertes"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Fragmentation de la gouvernance IT/OT et angles morts de cybersécurité",
+      "description": "Dans le secteur énergie, la gouvernance est souvent séparée entre IT (DSI, ERP, CRM) et OT (SCADA, DCS, réseau électrique), avec deux organisations distinctes et des processus de gouvernance non coordonnés. Cette fragmentation crée des angles morts : un incident de cybersécurité sur le réseau OT peut ne pas être remonté au CODIR Digital pendant des jours faute de processus commun. En 2023, un opérateur UEMOA a subi une intrusion SCADA non détectée pendant 72h car le RSSI IT ignorait les logs OT.",
+      "severity": "critical",
+      "likelihood": "high",
+      "mitigation": "Créer un CISO unifié IT/OT avec reporting mensuel au CODIR, mettre en place un SOC hybride (IT+OT) avec règles de corrélation croisées, adopter un cadre de gouvernance unifié (NIST CSF + IEC 62443) — CIE CI a créé en 2024 un poste CISO unifié avec budget OT intégré au COMEX Sécurité"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Obligations vertes (Green Bonds) énergie CI conditionnées à la gouvernance ESG",
+      "description": "La Côte d'Ivoire développe son marché des obligations vertes (BRVMI — Bourse Régionale des Valeurs Mobilières) : CIE a émis en 2023 une obligation verte de 50 Mds FCFA pour financer des projets d'efficacité réseau et d'électrification rurale. Les investisseurs institutionnels (BRVM, IFC, PROPARCO) exigent un cadre de gouvernance ESG certifié (GRI ou ISSB) pour accéder à ces capitaux. Les acteurs énergie CI disposant d'une gouvernance ESG robuste peuvent lever des capitaux verts 15-20% moins chers que le marché traditionnel.",
+      "impact_level": "high",
+      "time_to_value": "2-3 ans",
+      "prerequisite_maturity": "Niveau 4 — CODIR Digital mensuel + Data Stewards + reporting ESG annuel"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "CIE Obligation Verte BRVM — Financement efficacité réseau et électrification rurale",
+      "montant": "50 Mds FCFA (environ 75M EUR)",
+      "investisseurs": ["Investisseurs institutionnels BRVM", "PROPARCO", "Fonds durables UEMOA"],
+      "annee": 2023,
+      "description": "CIE (Compagnie Ivoirienne d'Électricité) a émis la première obligation verte du secteur électricité en Côte d'Ivoire via la BRVM (Bourse Régionale des Valeurs Mobilières d'Abidjan). Le cadre d'obligation verte (Green Bond Framework) certifié par Vigeo Eiris couvre : réduction pertes réseau (objectif -21% à 15%), déploiement AMI (100K compteurs), électrification rurale ADER CI (50 villages). La gouvernance ESG inclut un rapport annuel d'allocation et d'impact certifié par PwC CI."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "CIE (Compagnie Ivoirienne d'Électricité)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "CODIR Digital + Tableau de bord Maturité Digitale — Gouvernance digitale formalisée",
+    "description": "En 2023, CIE a formalisé sa gouvernance digitale avec : (1) CODIR Digital mensuel co-présidé par le DG et le DSI, avec participation obligatoire des Directions Opérations, Clientèle, RH et Finance ; (2) Tableau de bord maturité digitale trimestriel (15 KPIs : DCI collaborateurs, taux dématérialisation, SAIDI/SAIFI, NPS digital, taux adoption app mobile, spend IT/CA, %) ; (3) Objectifs digitaux individuels pour les 45 cadres supérieurs (pondération 20% de la part variable) ; (4) Data Governance : nomination de 8 Data Stewards domaine (Réseau, Client, RH, Finance, Achats) avec responsabilité de la qualité et de la conformité APDP CI des données de leur domaine.",
+    "resultats": "Alignement stratégique : 100% des projets IT > 50M FCFA validés en CODIR Digital (vs. 35% avant — les autres étaient décidés en silos). Qualité des données IQS ANARE-CI : taux d'anomalies rapport trimestriel -85% (automatisation pipeline SCADA → Power BI). Engagement cadres : 78% des objectifs digitaux individuels atteints à fin 2024 (vs. 45% en 2022 sans objectifs formels). Budget IT maîtrisé : dépassement budget IT < 5% (vs. 23% avant gouvernance formelle). Score CODIR satisfaction gouvernance : 7,8/10.",
+    "source": "CIE Rapport Gouvernance et Transformation Digitale 2024",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif maturité gouvernance digitale — Secteur Énergie Côte d'Ivoire",
+    "colonnes": ["organisation", "CODIR Digital", "Data Governance", "Reporting ESG certifié", "Conformité ANARE-CI automatisée"],
+    "lignes": [
+      {
+        "organisation": "CIE CI",
+        "valeurs": ["Mensuel (DG + DSI + Dirs)", "8 Data Stewards domaine", "Obligation verte BRVM certifiée", "Pipeline SCADA → Power BI IQS"]
+      },
+      {
+        "organisation": "BBOXX CI",
+        "valeurs": ["Trimestriel (startup model)", "Data lake centralisé AWS", "Rapport ESG IFC/CDC annuel", "Régulation ADER CI (off-grid)"]
+      },
+      {
+        "organisation": "ADER CI",
+        "valeurs": ["Conseil Administration public", "SI publique SIGFP CI", "Rapport public annuel", "Auto-régulation publique"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue la qualité de la gouvernance digitale dans le secteur énergie CI : existence d'un CODIR Digital, présence d'un CDO/CISO, data governance (Data Stewards), conformité automatisée ANARE-CI (IQS pipeline), reporting ESG certifié, et objectifs digitaux individuels pour les cadres.",
+    "maturity_max_description": "Distributeur énergie CI avec gouvernance digitale intégrée : CODIR Digital mensuel multi-directions, CDO et CISO IT/OT dédiés, Data Governance Office (Data Stewards par domaine), reporting ANARE-CI IQS automatisé depuis SCADA, rapport ESG certifié GRI, obligations vertes BRVM — conformité totale ANARE-CI/APDP CI/ARTCI.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune gouvernance digitale formalisée, décisions IT ad hoc sans CODIR, conformité ANARE-CI manuelle, aucun CDO/CISO dédié, zéro reporting ESG.",
+      "score_21_to_40": "DSI nommé avec comité IT trimestriel, reporting ANARE-CI semi-automatisé, stratégie digitale informelle, aucun Data Steward.",
+      "score_41_to_60": "CODIR Digital trimestriel (DSI + quelques directions), KPIs digitaux définis, conformité ANARE-CI partiellement automatisée, début data governance.",
+      "score_61_to_80": "CODIR Digital mensuel multi-directions, CDO/CISO dédiés, Data Stewards par domaine, reporting ESG annuel, pipeline IQS partiellement automatisé.",
+      "score_81_to_100": "Gouvernance digitale CODIR mensuel, Data Governance Office complet, pipeline IQS 100% automatisé SCADA→ANARE-CI, rapport ESG certifié GRI/ISSB, obligations vertes BRVM, objectifs digitaux individuels cascadés."
+    },
+    "prompt_injection_context": "Secteur énergie CI : ANARE-CI impose un reporting IQS trimestriel certifié. Les financements DFI (IFC, PROPARCO) requièrent une gouvernance ESG conforme IFC Performance Standards. La gouvernance IT/OT doit être unifiée (CISO unique) pour éviter les angles morts cybersécurité. CIE est soumise à l'OHADA et à la supervision du Ministère des Mines et de l'Énergie CI.",
+    "key_questions_for_llm": [
+      "Disposez-vous d'un CODIR Digital formalisé avec des réunions régulières incluant la direction générale et les directions métier ?",
+      "Avez-vous un CDO ou CISO dédié ? La gouvernance IT et OT (SCADA) est-elle unifiée sous une même direction ?",
+      "Comment produisez-vous vos rapports IQS ANARE-CI ? Le pipeline est-il automatisé depuis les systèmes SCADA/NMS ?",
+      "Avez-vous un programme de Data Governance avec des Data Stewards responsables de la qualité des données par domaine ?",
+      "Produisez-vous un rapport ESG certifié (GRI, IFC PS, ISSB) ? Avez-vous ou envisagez-vous des obligations vertes via la BRVM ?"
+    ]
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "IS",
+    "sous_axe": "cybersecurite",
+    "version": "1.0",
+    "langue": "fr",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "Le secteur BTP CI est peu sensibilisé aux risques cyber alors qu'il traite des données sensibles : plans d'infrastructures critiques (routes, barrages, bâtiments administratifs), données financières des marchés publics (montants SIGMAP DGMP CI), données personnelles des travailleurs (biométrie chantier, coordonnées CNPS CI). Les menaces sont croissantes : phishing ciblé sur les processus AO, ransomware sur les fichiers CAD/BIM, arnaque au virement sur les situations de travaux. L'ARTCI CI et l'APDP CI encadrent la cybersécurité pour les entreprises CI, avec des sanctions pour les manquements.",
+    "chiffres_cles": [
+      "BTP CI : 89% des entreprises n'ont pas de politique de cybersécurité formalisée",
+      "Pertes moyennes cyber pour une PME CI BTP : estimées 8-25 M FCFA par incident majeur",
+      "Phishing AO BTP : hausse de 45% des tentatives d'usurpation d'identité sur SIGMAP CI (2023)",
+      "Arnaque au virement BTP CI : technique 'fausse situation de travaux' (montants détournés) en hausse",
+      "ARTCI CI CERT : 320 incidents cyber signalés en CI en 2023 (tous secteurs, BTP sous-représenté)"
+    ],
+    "specificites_locales": [
+      "ARTCI CI — CERT-CI : centre de traitement des incidents cybersécurité, signalement obligatoire incidents graves",
+      "APDP CI Loi 2013-450 : obligation de sécuriser les données personnelles des employés et clients BTP",
+      "SIGMAP DGMP CI : compte SIGMAP de l'entreprise = clé d'accès aux marchés publics, à sécuriser absolument",
+      "PCP MENA CI (ARTCI) : exigences de cybersécurité pour les opérateurs d'importance vitale (infrastructure routière, barrages)",
+      "OHADA : responsabilité des dirigeants en cas de perte de données clients (marchés VEFA, garanties)"
+    ]
+  },
+  "definition_axe": {
+    "titre": "Cybersécurité et protection des données dans le BTP",
+    "description": "Capacité de l'entreprise BTP à protéger ses actifs numériques (plans BIM, données financières marchés, données personnelles employés et clients VEFA) contre les cybermenaces. La cybersécurité BTP couvre la sécurisation des accès (comptes SIGMAP, ERP, cloud), la protection contre les ransomwares (fichiers CAD, BIM, ERP), la prévention des arnaques au virement (situations de travaux, paiements fournisseurs), la conformité APDP CI et la continuité d'activité en cas d'incident.",
+    "perimetre": [
+      "Protection comptes SIGMAP DGMP CI et accès AO (phishing, usurpation identité)",
+      "Sécurisation fichiers BIM/CAD (ransomware sur données plans infrastructure)",
+      "Prévention arnaques au virement (situations de travaux, paiements sous-traitants)",
+      "Gestion des accès (IAM) : comptes ERP, cloud, applications chantier",
+      "Conformité APDP CI : sécurisation données personnelles employés, clients VEFA, données biométriques chantier",
+      "Plan de continuité d'activité (PCA) : résilience face aux incidents cyber"
+    ],
+    "technologies_cles": [
+      "Microsoft Defender (inclus Microsoft 365) — protection endpoints PC/tablettes chantier CI",
+      "MFA (Authentification Multi-Facteurs) — obligatoire pour SIGMAP DGMP CI et accès ERP/cloud",
+      "Sophos / Bitdefender — antivirus/EDR pour PME BTP CI (alternatives économiques Microsoft Defender)",
+      "Fortinet FortiGate — pare-feu UTM pour protection réseau siège BTP",
+      "Gestionnaire de mots de passe (Bitwarden, 1Password) — sécurisation comptes SIGMAP et ERP",
+      "Formation anti-phishing (KnowBe4, Proofpoint) — sensibilisation équipes BTP CI aux arnaques"
+    ]
+  },
+  "enjeux_specifiques": {
+    "enjeux": [
+      {
+        "titre": "Sécurisation du compte SIGMAP DGMP CI",
+        "description": "Le compte SIGMAP de l'entreprise donne accès à tous les marchés publics en cours et futurs. Une compromission du compte SIGMAP (phishing, usurpation identité) peut entraîner le dépôt de fausses offres en nom de l'entreprise, la consultation des informations confidentielles des AO, ou le blocage de l'accès aux marchés publics. Le DGMP CI n'offre pas encore de MFA natif sur SIGMAP — l'entreprise doit sécuriser l'accès de son côté.",
+        "impact": "Accès aux marchés publics CI compromis, réputation CNBTP CI atteinte, litiges DGMP CI"
+      },
+      {
+        "titre": "Protection contre les ransomwares sur les fichiers BIM et CAD",
+        "description": "Les fichiers Revit (.rvt, parfois 500 Mo-2 Go), AutoCAD (.dwg), et les dossiers chantier complets représentent des années de travail. Un ransomware chiffrant ces fichiers peut paralyser une entreprise BTP CI (impossibilité de poursuivre les chantiers en cours, perte des plans d'exécution). Sans sauvegarde cloud, la rançon peut être la seule option — souvent 3-15 M FCFA pour les PME BTP.",
+        "impact": "Arrêt chantiers, paiement rançon, perte de données irremplaçables, penalties CNBTP CI"
+      },
+      {
+        "titre": "Arnaques au virement sur les situations de travaux",
+        "description": "La technique de fraude au président ou d'usurpation de RIB (Bank Account Fraud) est en forte hausse dans le BTP CI : l'attaquant usurpe l'identité d'un sous-traitant ou d'un fournisseur et transmet de fausses coordonnées bancaires pour détourner les paiements de situations de travaux (montants souvent entre 5 et 50 M FCFA). La vérification téléphonique du changement de coordonnées bancaires est essentielle.",
+        "impact": "Pertes financières directes 5-50 M FCFA, litiges fournisseurs, relations sous-traitants compromises"
+      }
+    ]
+  },
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Inexistant",
+      "description": "Aucune politique de cybersécurité. Mots de passe partagés (SIGMAP, ERP) entre plusieurs collaborateurs. Antivirus absent ou expiré. Aucune sauvegarde. Données BIM/plans sur PC non protégés. Aucune sensibilisation des équipes aux arnaques. Email personnel utilisé pour les documents de marché.",
+      "signes_distinctifs": [
+        "Mot de passe SIGMAP DGMP CI partagé entre 3-5 personnes, jamais changé",
+        "Aucun antivirus ou antivirus version gratuite expirée sur les PC chantier",
+        "Plans BIM/CAD sur PC ou clé USB sans chiffrement ni sauvegarde",
+        "Email personnel (Gmail, Yahoo) pour les communications marchés publics",
+        "Aucune formation sécurité, équipes ouvertes aux arnaques phishing"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Antivirus basique déployé. Quelques mots de passe uniques par compte. Sauvegarde manuelle irrégulière. Début de sensibilisation aux arnaques (email directionnel). Domaine email professionnel. Pas encore de MFA ni de politique formalisée.",
+      "signes_distinctifs": [
+        "Antivirus payant (Kaspersky, ESET) déployé sur les PC principaux",
+        "Comptes SIGMAP nominatifs (pas de partage de compte)",
+        "Sauvegarde manuelle mensuelle sur disque dur externe",
+        "Sensibilisation informelle aux arnaques par email (réunion d'équipe annuelle)",
+        "Domaine email professionnel (@entreprise.ci) mais sans filtrage anti-spam avancé"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Politique de cybersécurité documentée et communiquée. MFA sur les comptes critiques (email, ERP, SIGMAP). Antivirus/EDR géré centralement. Sauvegarde cloud automatique quotidienne. Formation anti-phishing annuelle. Procédure de vérification des changements de coordonnées bancaires fournisseurs.",
+      "signes_distinctifs": [
+        "Politique cybersécurité documentée : mots de passe, classification données, accès tiers",
+        "MFA obligatoire : email professionnel, ERP, accès cloud (Microsoft Authenticator ou équivalent)",
+        "EDR (Endpoint Detection & Response) déployé centralement sur tous les PC et tablettes",
+        "Sauvegarde cloud automatique quotidienne testée semestriellement",
+        "Formation anti-phishing annuelle avec simulation, procédure virement bancaire sécurisée"
+      ]
+    },
+    "niveau_4": {
+      "label": "Optimisé",
+      "description": "Cybersécurité intégrée dans les processus BTP. Zero Trust architecture pour les accès cloud et chantier. SIEM pour la détection des incidents. DPO désigné pour l'APDP CI. Tests de pénétration annuels sur le SI. Plan de continuité d'activité (PCA) testé. Chiffrement des données sensibles BIM et contrats.",
+      "signes_distinctifs": [
+        "Zero Trust : vérification systématique de chaque accès, même depuis le réseau interne",
+        "SIEM (Security Information and Event Management) : monitoring des alertes sécurité en temps réel",
+        "DPO désigné et déclaré à l'APDP CI, registre des traitements complet (conformité Loi 2013-450)",
+        "Tests de pénétration annuels par prestataire ARTCI CI agréé",
+        "PCA cyber testé annuellement : restauration complète SI en moins de 4 heures"
+      ]
+    },
+    "niveau_5": {
+      "label": "Différenciant",
+      "description": "Cybersécurité by design dans tous les systèmes BTP. SOC externalisé en temps réel. IA pour la détection comportementale des anomalies (fraude interne, intrusion). Certification ISO 27001. Partage de renseignements sur les menaces avec CERT-CI. Programme de sensibilisation continu.",
+      "signes_distinctifs": [
+        "SOC (Security Operations Center) externalisé 24/7 avec surveillance temps réel",
+        "IA comportementale : détection anomalies accès (heure inhabituelle, volume données anormal)",
+        "Certification ISO 27001 obtenue et maintenue (audit annuel Bureau Veritas CI ou SGS CI)",
+        "Participation active CERT-CI : partage d'indicateurs de compromission secteur BTP CI",
+        "Bug bounty program : incentive pour la découverte de vulnérabilités dans les systèmes BTP"
+      ]
+    }
+  },
+  "indicateurs_cles": {
+    "indicateurs": [
+      {
+        "nom": "Taux d'adoption de la MFA",
+        "definition": "Pourcentage des comptes critiques (email, ERP, SIGMAP, cloud) protégés par authentification multi-facteurs",
+        "unite": "%",
+        "cible_sectorielle": "100% des comptes avec accès aux données sensibles BTP protégés par MFA",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Délai de détection d'un incident cyber",
+        "definition": "Temps moyen entre l'occurrence d'un incident de sécurité et sa détection par les équipes IT",
+        "unite": "heures",
+        "cible_sectorielle": "MTTD < 4 heures (vs. semaines sans système de monitoring)",
+        "frequence_mesure": "Par incident"
+      },
+      {
+        "nom": "Taux de collaborateurs formés cybersécurité",
+        "definition": "Pourcentage des collaborateurs ayant suivi une formation anti-phishing et cybersécurité dans l'année",
+        "unite": "%",
+        "cible_sectorielle": "> 90% des collaborateurs avec accès systèmes d'information",
+        "frequence_mesure": "Annuelle"
+      },
+      {
+        "nom": "Conformité APDP CI",
+        "definition": "Pourcentage des traitements de données personnelles BTP déclarés à l'APDP CI et conformes Loi 2013-450",
+        "unite": "%",
+        "cible_sectorielle": "100% des traitements de données personnelles déclarés APDP CI",
+        "frequence_mesure": "Annuelle (audit)"
+      },
+      {
+        "nom": "RTO Plan de Continuité Activité cyber",
+        "definition": "Temps de restauration effectif du SI après un incident cyber majeur (ransomware, panne datacenter)",
+        "unite": "heures",
+        "cible_sectorielle": "RTO < 8 heures pour les systèmes critiques (plans, ERP, SIGMAP)",
+        "frequence_mesure": "Test annuel PCA"
+      }
+    ]
+  },
+  "bonnes_pratiques": {
+    "pratiques": [
+      {
+        "titre": "MFA obligatoire sur le compte SIGMAP et tous les comptes cloud",
+        "description": "Activer l'authentification multi-facteurs sur tous les comptes critiques : compte SIGMAP DGMP CI (email de récupération sécurisé), Microsoft 365 / Google Workspace (accès plans et données clients), ERP (données financières marchés). Utiliser une application authentificateur (Microsoft Authenticator, Google Authenticator) plutôt que le SMS (plus sécurisé). Procédure de récupération de compte en cas de perte du téléphone.",
+        "benefice": "Protection contre 99% des attaques phishing sur les comptes critiques BTP"
+      },
+      {
+        "titre": "Procédure de vérification des coordonnées bancaires fournisseurs",
+        "description": "Instaurer une procédure systématique pour tout changement de coordonnées bancaires d'un sous-traitant ou fournisseur : appel téléphonique de vérification sur le numéro historique (pas le numéro dans l'email de demande de changement), double validation responsable financier + directeur, délai de traitement minimum 48h. Ne jamais modifier des coordonnées bancaires sur simple email, même urgent.",
+        "benefice": "Protection contre les arnaques au virement (Bank Account Fraud), pertes évitées 5-50 M FCFA"
+      },
+      {
+        "titre": "Règle 3-2-1 pour la sauvegarde des fichiers BIM et données chantier",
+        "description": "Appliquer la règle 3-2-1 : 3 copies des données, sur 2 supports différents, dont 1 hors site (cloud). Sauvegarde automatique quotidienne des fichiers Revit, AutoCAD, plans PDF, données ERP vers Azure Backup ou équivalent. Test de restauration semestriel obligatoire. Pour les fichiers BIM > 500 Mo : déduplication et compression activées pour réduire les coûts de stockage cloud.",
+        "benefice": "Protection totale contre ransomwares, restauration en < 4h, aucune rançon à payer"
+      },
+      {
+        "titre": "Formation anti-phishing trimestrielle avec simulation",
+        "description": "Organiser des simulations de phishing trimestrielles ciblant les scénarios BTP CI réels : fausse facture fournisseur, email urgent de modification RIB sous-traitant, phishing SIGMAP (fausse notification AO). Mesurer le taux de clics et former immédiatement les collaborateurs qui cliquent. Objectif : taux de clics < 5% après 6 mois de programme.",
+        "benefice": "Réduction des incidents phishing de 70-80%, culture sécurité développée dans les équipes BTP"
+      },
+      {
+        "titre": "Déclaration APDP CI des traitements de données personnelles BTP",
+        "description": "Lister tous les traitements de données personnelles réalisés dans le cadre de l'activité BTP : données biométriques travailleurs (pointage empreintes), géolocalisation engins et travailleurs, données clients VEFA (coordonnées, données financières BHCI CI), données sous-traitants. Déclarer chaque traitement à l'APDP CI. Désigner un DPO (même partiel). Sanctions APDP CI : jusqu'à 50 M FCFA.",
+        "benefice": "Conformité Loi 2013-450, évitement sanctions APDP CI, protection réputation entreprise BTP"
+      }
+    ]
+  },
+  "ecueils_frequents": {
+    "ecueils": [
+      {
+        "titre": "Partager le mot de passe SIGMAP entre plusieurs personnes",
+        "description": "Dans de nombreuses PME BTP CI, le compte SIGMAP est partagé entre le directeur général, le responsable commercial et l'assistante. En cas de départ d'un employé ou de phishing ciblant l'un d'eux, le compte entier est compromis.",
+        "solution": "Créer des comptes SIGMAP nominatifs par utilisateur (possibilité multi-utilisateur SIGMAP), ou changer le mot de passe SIGMAP immédiatement à chaque départ d'employé"
+      },
+      {
+        "titre": "Sous-estimer les données sensibles dans les plans BIM",
+        "description": "Les maquettes BIM des infrastructures critiques (routes nationales, barrages, bâtiments administratifs de sécurité) contiennent des informations très sensibles (dimensions exactes, matériaux, points de vulnérabilité) qui peuvent être exploitées à des fins malveillantes. Ces fichiers ne doivent pas être sur des espaces cloud publics ou partagés sans contrôle d'accès.",
+        "solution": "Classification des données BIM par niveau de sensibilité, contrôle d'accès strict (authentification obligatoire), chiffrement des maquettes d'infrastructure critique"
+      },
+      {
+        "titre": "Négliger la cybersécurité des IoT chantier (capteurs, drones, caméras)",
+        "description": "Les équipements IoT déployés sur les chantiers CI (capteurs béton SmartRock, drones DJI, caméras de surveillance) sont souvent connectés sur des réseaux non sécurisés et utilisent des mots de passe par défaut. Ils peuvent servir de point d'entrée pour une attaque sur le réseau de l'entreprise.",
+        "solution": "Réseau IoT séparé du réseau principal (VLAN IoT dédié), changement systématique des mots de passe par défaut, mise à jour firmware régulière"
+      }
+    ]
+  },
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau de cybersécurité BTP entre organisations représentatives en Côte d'Ivoire",
+    "lignes": [
+      {
+        "organisation": "COLAS CI",
+        "profil": "Filiale Bouygues Construction, RSSI groupe, politique sécurité groupe appliquée",
+        "niveau_maturite": 4,
+        "points_forts": "Politique cybersécurité groupe ISO 27001, SOC groupe Paris, MFA généralisé, formation anti-phishing trimestrielle, DPO groupe avec déclinaison CI",
+        "points_faibles": "Procédures groupe parfois lentes à adapter aux menaces locales CI (arnaques spécifiques CI), chantiers CI parfois hors périmètre SOC groupe",
+        "initiatives_notables": "Programme COLAS Cyber Vigilance CI : formation anti-phishing spécifique aux arnaques BTP CI (fausse SIGMAP, fausse situation de travaux)"
+      },
+      {
+        "organisation": "BNETD CI",
+        "profil": "Agence étatique CI, DSI interne, données infrastructure critique CI",
+        "niveau_maturite": 3,
+        "points_forts": "Conformité PCP MENA CI (données infrastructure), CERT-CI connexion, MFA sur accès VPN, classification données infrastructure critique",
+        "points_faibles": "Budget cybersécurité insuffisant, SOC non disponible 24/7, personnel IT peu formé sécurité avancée",
+        "initiatives_notables": "Déploiement Fortinet FortiGate sur réseau BNETD CI (2023) : protection périmétrique améliorée"
+      },
+      {
+        "organisation": "SATCI CI",
+        "profil": "Promoteur immobilier CI, données clients VEFA, BHCI CI",
+        "niveau_maturite": 2,
+        "points_forts": "Email professionnel, quelques mots de passe uniques, antivirus Kaspersky déployé",
+        "points_faibles": "Pas de MFA, pas de DPO APDP CI, sauvegarde manuelle irrégulière, aucune formation anti-phishing, comptes SIGMAP partagés",
+        "initiatives_notables": "Suite à une tentative d'arnaque au virement de 12 M FCFA (déjouée par le comptable), SATCI CI a instauré une procédure de double validation des virements"
+      },
+      {
+        "organisation": "PME BTP CI classe C-D",
+        "profil": "Entreprise BTP locale 20-100 employés, marchés publics et privés",
+        "niveau_maturite": 1,
+        "points_forts": "Peu de données numériques = surface d'attaque limitée",
+        "points_faibles": "Aucune politique cyber, mots de passe SIGMAP partagés et simples, antivirus absent, données sur clés USB non chiffrées",
+        "initiatives_notables": "Aucune initiative formelle identifiée — sensibilisation par CNBTP CI en cours (2024-2025)"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "BNETD CI — Gestion d'un incident de phishing ciblé sur le processus de paiement marchés publics",
+    "contexte": "En 2023, le BNETD CI a été ciblé par une campagne de phishing sophistiquée visant à détourner des paiements de marchés publics. L'attaquant avait usurpé l'identité d'un sous-traitant majeur (groupe de BTP ayant 3 marchés actifs avec le BNETD) en créant un domaine très similaire (@bnetd-ci.com vs. @bnetd.ci officiel) et en demandant par email le changement des coordonnées bancaires pour un marché de 850 M FCFA. L'incident a été détecté par le responsable financier qui a reconnu l'anomalie du domaine email.",
+    "probleme": "Tentative de détournement de 850 M FCFA via usurpation d'identité fournisseur BTP. Aucune procédure formalisée de vérification des coordonnées bancaires. Aucun filtre anti-phishing sur la messagerie BNETD CI. MFA absent sur les comptes email. L'incident a été évité par vigilance humaine (non par système technique). Audit post-incident révèle : 3 autres tentatives similaires non détectées dans les 6 derniers mois.",
+    "solution_deployee": "Déploiement Microsoft Defender for Office 365 (protection anti-phishing avancée sur messagerie BNETD CI). MFA obligatoire sur tous les comptes email et accès ERP. Procédure formalisée de vérification des coordonnées bancaires : appel téléphonique sur numéro historique + validation DCAF (Direction Centrale des Affaires Financières) + délai 5 jours. Formation anti-phishing pour 45 collaborateurs (simulation mensuelle pendant 3 mois, puis trimestrielle). Alerte CERT-CI sur les domaines frauduleux identifiés. Charte cybersécurité signée par tous les collaborateurs.",
+    "resultats": {
+      "tentatives_detectees": "0 incident similaire détecté sur les 12 mois suivants le déploiement (vs. 4 tentatives en 6 mois avant)",
+      "taux_click_phishing": "Simulation phishing : taux de clics 68% (mois 1) → 8% (mois 6 après formation)",
+      "mfa_adoption": "100% des collaborateurs BNETD CI avec MFA activé (vs. 0% avant incident)",
+      "delai_virement_change_RIB": "Délai de traitement changement coordonnées bancaires formalisé : 5 jours minimum, double validation",
+      "sensibilisation_secteur": "BNETD CI a partagé son expérience avec CERT-CI et CNBTP CI pour sensibilisation sectorielle BTP",
+      "economies_directes": "Tentative de détournement de 850 M FCFA déjouée — coût programme cybersécurité : 8 M FCFA"
+    },
+    "enseignements": "Le risque de fraude au virement dans le BTP CI est sous-estimé alors qu'il est le principal risque financier cyber. Les procédures humaines (double validation, appel téléphonique de confirmation) sont aussi efficaces que les outils techniques pour ce type de fraude. La formation anti-phishing est l'investissement cyber le plus rentable pour les PME BTP CI."
+  },
+  "ai_context": {
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune politique cybersécurité. Comptes SIGMAP partagés. Antivirus absent ou expiré. Aucune sauvegarde. Email personnel pour documents marchés. Aucune sensibilisation aux arnaques. Surface d'attaque maximale.",
+      "score_21_to_40": "Antivirus basique déployé. Comptes nominatifs. Sauvegarde manuelle irrégulière. Début de sensibilisation informelle. Domaine email professionnel. Pas de MFA ni de politique formalisée.",
+      "score_41_to_60": "Politique cybersécurité documentée. MFA sur comptes critiques (SIGMAP, ERP, cloud). EDR centralisé. Sauvegarde cloud automatique. Formation anti-phishing annuelle. Procédure virement sécurisée. Déclaration APDP CI partielle.",
+      "score_61_to_80": "Zero Trust architecture. SIEM et monitoring incidents. DPO désigné APDP CI. Tests de pénétration annuels. PCA cyber testé. Chiffrement données sensibles BIM. Conformité APDP CI complète.",
+      "score_81_to_100": "SOC externalisé 24/7. IA comportementale détection anomalies. Certification ISO 27001. Participation CERT-CI. Programme sensibilisation continu avec simulation mensuelle. Cybersécurité by design dans tous les systèmes BTP."
+    },
+    "questions_cles_diagnostic": [
+      "Votre compte SIGMAP DGMP CI est-il partagé entre plusieurs personnes ou nominatif ?",
+      "Avez-vous activé la MFA (authentification à deux facteurs) sur vos comptes email et cloud ?",
+      "Quelle est votre procédure pour vérifier un changement de coordonnées bancaires d'un sous-traitant ?",
+      "Avez-vous déclaré vos traitements de données personnelles (biométrie chantier, données clients VEFA) à l'APDP CI ?",
+      "Avez-vous un plan de restauration testé en cas de ransomware sur vos fichiers BIM et données chantier ?"
+    ],
+    "pieges_evaluation": [
+      "Ne pas se limiter aux aspects techniques (antivirus, firewall) sans évaluer les procédures humaines (arnaques au virement)",
+      "Vérifier que les sauvegardes déclarées sont réellement testées et restaurables (beaucoup de sauvegardes CI ne fonctionnent pas à la restauration)",
+      "Distinguer la cybersécurité des filiales de groupes internationaux (niveau élevé, héritage groupe) des PME BTP CI locales (niveau souvent 1-2)"
+    ]
+  },
+  "ressources": {
+    "references_reglementaires": [
+      "ARTCI CI — CERT-CI : signalement incidents cyber, réglementation cybersécurité CI",
+      "APDP CI Loi 2013-450 — Protection données personnelles, sanctions jusqu'à 50 M FCFA",
+      "PCP MENA CI (ARTCI) — Politique cybersécurité pour opérateurs infrastructure critique CI",
+      "ISO 27001:2022 — Management sécurité systèmes d'information (certification applicable CI)",
+      "DGMP CI — Sécurité des comptes SIGMAP et procédures de soumission sécurisée"
+    ],
+    "outils_recommandes": [
+      "Microsoft Defender for Office 365 — Protection anti-phishing messagerie professionnelle",
+      "Microsoft Authenticator / Google Authenticator — MFA pour comptes SIGMAP et cloud",
+      "Bitwarden / 1Password — Gestionnaire mots de passe pour PME BTP CI",
+      "Sophos / Bitdefender GravityZone — EDR pour PME BTP CI (alternative économique)",
+      "KnowBe4 / Proofpoint — Formation anti-phishing avec simulation pour équipes BTP CI"
+    ],
+    "formations_certifications": [
+      "ARTCI CI — Formation cybersécurité pour dirigeants et responsables IT CI",
+      "APDP CI — Formation RGPD-CI et conformité données personnelles BTP",
+      "ANSSI France — Guides cybersécurité PME (applicables contexte BTP CI)",
+      "ISO 27001 Lead Implementer — Certification management sécurité systèmes d'information"
+    ]
+  }
+}

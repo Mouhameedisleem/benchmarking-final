@@ -1,0 +1,56 @@
+{
+  "meta": { "axis": "PROCESS", "sub_axis": "Agilité", "sector": "assurance", "language": "fr", "version": "1.0", "last_updated": "2026-05" },
+  "trends": [
+    { "title": "Squads agiles dédiés aux produits digitaux assurance", "description": "Les assureurs leaders créent des squads autonomes (product owner, développeur, expert métier, data analyst) pour délivrer de nouveaux produits en 6-8 semaines au lieu de 12-18 mois avec les méthodes traditionnelles. En UEMOA, cette approche reste rare mais est adoptée par les filiales de groupes internationaux (Allianz, AXA).", "impact_level": "Élevé", "horizon": "24-36 mois", "adoption_rate": "20 % des assureurs africains membres de grands groupes ont des équipes agiles dédiées (FANAF 2024)", "source": "FANAF Digital Transformation 2024", "year": "2024" },
+    { "title": "Time-to-market produits assurance — de 18 mois à 8 semaines", "description": "L'agilité réduit drastiquement le délai de lancement de nouveaux produits. Un produit de micro-assurance mobile peut être développé et lancé en 8 semaines avec une approche agile vs 18 mois en cycle en V traditionnel.", "impact_level": "Très élevé", "horizon": "18-36 mois", "adoption_rate": "30 % des assureurs adoptant l'agilité réduisent leur TTM de plus de 50 % (McKinsey 2024)", "source": "McKinsey Agile Insurance 2024", "year": "2024" }
+  ],
+  "key_technologies": [
+    { "name": "Outils de gestion agile (Scrum/Kanban)", "category": "Pilotage agile", "maturity_stage": "Mature", "adoption_in_sector": "Faible en UEMOA", "leading_vendors": ["Jira", "Azure DevOps", "Trello", "ClickUp", "Monday.com"] },
+    { "name": "CI/CD pour les plateformes assurance", "category": "Livraison continue", "maturity_stage": "Mature", "adoption_in_sector": "Très faible en UEMOA", "leading_vendors": ["GitLab CI/CD", "GitHub Actions", "Jenkins", "Azure Pipelines"] }
+  ],
+  "market_leaders": {
+    "national": [{ "organisation": "AXA Assurances CI", "country": "Côte d'Ivoire", "key_practice": "Adoption des méthodologies agiles pour le développement de produits digitaux. Lancement d'un produit de micro-assurance hospitalisation en 10 semaines avec une squad dédiée.", "differentiator": "AXA CI a réduit son TTM sur les produits digitaux de 14 mois à 10 semaines grâce aux squads agiles", "source": "AXA CI Rapport Activité 2023" }],
+    "regional": [{ "organisation": "Britam (Kenya)", "country": "Kenya", "key_practice": "Transformation agile complète en 2022 — 8 squads produits, PI Planning trimestriel, OKRs par squad. Lancement de 4 nouveaux produits digitaux en 2023 en moins de 3 mois chacun.", "differentiator": "Britam Kenya a multiplié par 4 son rythme de lancement de nouveaux produits grâce à l'agilité — référence en Afrique de l'Est", "source": "Britam Annual Report 2023" }],
+    "international": [{ "organisation": "AXA Group", "country": "France / Mondial", "key_practice": "Programme AXA Agile — 500+ squads dans 50 pays, PI Planning mensuel, 30 % réduction TTM en 3 ans. Modèle SAFe (Scaled Agile Framework) déployé au niveau groupe.", "differentiator": "AXA a réduit son coût de développement de 25 % et son TTM de 40 % grâce au déploiement de SAFe dans toutes ses filiales", "source": "AXA Annual Report 2023 / SAFe AXA Case Study 2023" }]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Cycle en V traditionnel. Projets de 18-24 mois. Aucune méthode agile. Pas de test utilisateur.",
+    "level_2_developing": "Quelques projets pilotes en Scrum. Pas de squads dédiés. Agilité de surface sans changement organisationnel.",
+    "level_3_defined": "1-2 squads agiles actifs. Sprints de 2 semaines. Backlog produit géré. TTM réduit à 6-9 mois sur les produits digitaux.",
+    "level_4_managed": "5+ squads. OKRs par squad. PI Planning trimestriel. TTM < 3 mois pour les produits digitaux standards. CI/CD déployé.",
+    "level_5_optimizing": "Organisation agile à l'échelle (SAFe). TTM < 8 semaines. Déploiements continus. Mesure de la vélocité par squad."
+  },
+  "regulations": [],
+  "risks": [{ "title": "Agilité incompatible avec les cycles réglementaires CIMA", "description": "Le développement agile peut produire un produit en 8 semaines, mais l'agrément CIMA d'un nouveau produit prend 3-6 mois. Cette asymétrie freine l'adoption de l'agilité dans les compagnies dont les équipes ne maîtrisent pas la gestion réglementaire.", "severity": "Élevé", "likelihood": "Élevée", "mitigation": "Intégrer l'expert conformité CIMA dès la squad. Préparer le dossier réglementaire en parallèle du développement. Utiliser le sandbox CIMA pour les produits innovants." }],
+  "opportunities": [{ "title": "Pilote agile sur le développement de l'application mobile client", "description": "L'application mobile client est le produit le plus adapté à une première expérience agile. Elle n'est pas soumise à agrément CIMA et permet d'apprendre la méthode sur un produit à fort impact client.", "impact_level": "Élevé", "time_to_value": "3-6 mois", "prerequisite_maturity": "Niveau 2" }],
+  "ma_and_fundraising": [],
+  "zoom_case_study": { "entreprise": "Britam Kenya — Transformation agile : 4 nouveaux produits en 2023", "pays": "Kenya", "technologie": "Scrum, OKRs, squads pluridisciplinaires", "description": "Britam Kenya a mené en 2022 une transformation agile complète de sa DSI et de ses équipes produit. 8 squads autonomes (product owner, développeur mobile, expert actuariel, compliance) ont été créés avec des backlogs indépendants et des OKRs trimestriels. En 2023, Britam a lancé 4 nouveaux produits digitaux : assurance santé mobile (souscription en 5 minutes), micro-assurance accident (1 USD/mois), assurance voyage digital, et assurance agricole paramétrique. Chaque produit a été livré en moins de 90 jours. Le PI Planning trimestriel permet à toutes les squads de synchroniser leurs dépendances. Résultat : 4x plus de produits lancés en 2023 vs 2021, 35 % de réduction des coûts de développement.", "resultats": "4 nouveaux produits en 2023 · < 90 jours par produit · 4x plus de lancements · Coût développement -35 % · 8 squads actives", "source": "Britam Annual Report 2023", "annee": "2023" },
+  "comparatif_organisations": {
+    "titre": "Maturité agilité — benchmark assureurs CIMA/UEMOA",
+    "colonnes": ["Organisation", "Squads agiles actives", "TTM < 3 mois produits digitaux", "OKRs par squad", "CI/CD déployé", "PI Planning trimestriel"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "Partiel", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "✗", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "L'agilité est peu répandue dans les compagnies d'assurance UEMOA qui fonctionnent majoritairement en mode projet traditionnel. Le principal frein est la perception que les contraintes réglementaires CIMA sont incompatibles avec les cycles courts. Pourtant, les produits digitaux (applications mobiles, portails client) ne nécessitent pas d'agrément et peuvent être développés en mode agile dès aujourd'hui.",
+    "maturity_max_description": "Organisation agile à l'échelle (SAFe ou équivalent). 5+ squads actives avec OKRs. TTM < 8 semaines pour les produits digitaux. CI/CD déployé. PI Planning trimestriel. Expert conformité CIMA intégré dans les squads produits réglementés.",
+    "scoring_rubric": {
+      "score_1_to_20": "Cycle en V. Projets > 18 mois. Aucune méthode agile.",
+      "score_21_to_40": "Projets pilotes Scrum. Pas de squads. TTM 12-18 mois.",
+      "score_41_to_60": "1-2 squads. Sprints 2 semaines. TTM 6-9 mois produits digitaux.",
+      "score_61_to_80": "5+ squads. OKRs. TTM < 3 mois. CI/CD en cours.",
+      "score_81_to_100": "Agile à l'échelle. TTM < 8 semaines. CI/CD. PI Planning."
+    },
+    "prompt_injection_context": "Cette compagnie d'assurance est évaluée sur sa maturité en agilité dans le contexte CIMA/UEMOA. Analyse l'existence de squads agiles, le time-to-market des produits digitaux, le déploiement de CI/CD et l'intégration de la conformité CIMA dans les cycles agiles.",
+    "key_questions_for_llm": [
+      "Des squads agiles dédiées au développement de produits digitaux existent-elles avec des backlogs et des sprints définis ?",
+      "Quel est le délai moyen (time-to-market) pour lancer un nouveau produit digital depuis l'idée jusqu'au marché ?",
+      "Des OKRs sont-ils définis par squad ou par équipe produit pour mesurer la performance agile ?",
+      "Un pipeline CI/CD est-il en place pour le déploiement continu des applications et plateformes digitales ?",
+      "L'expert conformité CIMA est-il intégré dans les équipes produit pour accélérer les approbations réglementaires ?"
+    ]
+  }
+}

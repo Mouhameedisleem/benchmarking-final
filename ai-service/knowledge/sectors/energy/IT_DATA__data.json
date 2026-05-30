@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "IT_DATA",
+    "sub_axis": "data",
+    "sector": "energie",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Data lake énergie unifié et analytics temps réel AMI",
+      "description": "Les distributeurs d'énergie migrent vers des data lakes centralisés intégrant toutes les sources de données : AMI (pas 15 min), SCADA (temps réel), ERP (billing, clients), EAM (actifs, maintenance), météo (prévision production solaire/demande). En Côte d'Ivoire, le déploiement AMI du PNDE CI 2030 (1M compteurs) générera 96 lectures/compteur/jour, soit 96M points de données/jour au pic — nécessitant une infrastructure data scalable (Hadoop/Spark, cloud AWS/Azure). CIE construit son data lake énergie sur Azure Data Lake Storage Gen2.",
+      "impact_level": "high",
+      "horizon": "short_term",
+      "adoption_rate": "22%",
+      "source": "PNDE CI 2030 / CIE DSI 2024",
+      "year": 2024
+    },
+    {
+      "title": "IA appliquée à la prévision de demande et à l'optimisation du mix énergétique",
+      "description": "Les modèles IA (LSTM, XGBoost, transformers) permettent de prévoir la demande électrique à court terme (15 min - 24h) avec une précision de ±2-3%, permettant d'optimiser le dispatch des centrales et de réduire les coûts d'équilibrage. En Côte d'Ivoire, le mix énergétique CI 2024 (thermique 62%, hydraulique 38%, croissant solaire) est de plus en plus complexe à équilibrer. CIE et la Centrale Thermique d'Azito (CIPREL) travaillent sur des modèles de prévision IA pour optimiser le dispatch et réduire les coûts de production de 8-12%.",
+      "impact_level": "high",
+      "horizon": "short_term",
+      "adoption_rate": "18%",
+      "source": "ANARE-CI / CIE Plan Dispatch 2025",
+      "year": 2025
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "Data Lake / Lakehouse énergie (AMI + SCADA + ERP)",
+      "category": "Data Engineering / Big Data",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "CIE (Azure Data Lake, pilote 2024), BBOXX (AWS S3 + Redshift, en production) — 20% distributeurs UEMOA avec data lake opérationnel",
+      "leading_vendors": ["Azure Data Lake Storage (Microsoft)", "AWS S3 + Lake Formation (Amazon)", "Databricks Lakehouse", "Google BigQuery", "Cloudera Data Platform"]
+    },
+    {
+      "name": "Modèles IA prévision de demande et détection fraude énergie",
+      "category": "Machine Learning / IA Énergie",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "BBOXX (scoring crédit ML en production), CIE (prédiction panne pilote), 15% distributeurs UEMOA avec ML en production",
+      "leading_vendors": ["AutoGrid (Schneider)", "Itron Analytics", "Oracle AI (Utilities)", "AWS SageMaker (BBOXX)", "DataRobot Energy"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "CIE (Compagnie Ivoirienne d'Électricité)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Data lake Azure (en construction 2024-2026) : intégration SCADA historian (Siemens OSIsoft PI), ERP Oracle (billing 2,8M clients), EAM Maximo, données AMI pilotes (250K compteurs 2025-2027), Power BI reporting IQS + management, pilote ML prédiction panne transformateurs (ABB AbilityTM, 450 assets), partenariat INPHB pour thèses data science réseau",
+        "differentiator": "Seul acteur CI avec une architecture data lake complète en construction couvrant IT + OT — OSIsoft PI historian ingère 45M points de données OT/jour depuis le SCADA réseau HTB, alimentant les modèles IA en temps réel",
+        "source": "CIE DSI / Azure CI Case Study 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "BBOXX CI / BBOXX Global",
+        "country": "Côte d'Ivoire / Rwanda / RDC",
+        "key_practice": "Data lake AWS (S3 + Redshift + SageMaker) : 18 variables scoring crédit PAYG (300K clients CI), modèle ML précision 78% défaut paiement, pipeline temps réel (activité IoT kit → scoring → décision crédit en < 5 secondes), dashboard partenaires (Wave CI, Orange Money CI) — API scoring crédit ouverte à 3 fintechs CI",
+        "differentiator": "ML PAYG le plus avancé d'Afrique subsaharienne — scoring crédit énergie alternatif utilisé par 3 fintechs CI pour l'octroi de microcrédits à des clients sans historique bancaire (accès financement BCEAO conditionné aux données BBOXX)",
+        "source": "BBOXX / AWS re:Invent Africa 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Enedis (France) — DataHub national énergie",
+        "country": "France",
+        "key_practice": "DataHub Enedis (plateforme nationale données consommation) : 35M compteurs Linky, 96 lectures/compteur/jour = 3,36 Mds points/jour, architecture CQRS + event streaming (Kafka), open data anonymisé (data.gouv.fr), ML prévision demande ±1,8% (LSTM + météo + calendrier), détection fraude énergie ML (14 000 cas/an identifiés)",
+        "differentiator": "Plus grand data lake énergie d'Europe continentale — 3,36 Mds points de données/jour traités en temps réel, open data consommation anonymisé parmi les plus riches au monde (alimentant 150+ startups energy tech françaises)",
+        "source": "Enedis DataHub / Open Data Énergie France 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Données énergie dans des fichiers Excel/CSV partagés, rapports manuels mensuels, aucune BI, données SCADA non exploitées analytiquement (historian inexistant), pas de culture data.",
+    "level_2_developing": "BI basique (tableau de bord SAIDI/SAIFI mensuel, rapport billing), données SCADA dans historian local non intégré, rapports Power BI/Tableau ad hoc par le DSI, pas de Data Steward.",
+    "level_3_defined": "Power BI déployé (reporting IQS automatisé, NPS, billing), historian SCADA intégré en lecture aux outils BI, début de data governance (Data Stewards nommés), quelques modèles prédictifs simples (régression linéaire conso).",
+    "level_4_managed": "Data lake en construction (AMI + SCADA + ERP unifiés), ML en pilote (prédiction panne, scoring crédit PAYG), Data Governance Office avec Data Stewards par domaine, données conformes APDP CI, pipeline IQS ANARE-CI automatisé.",
+    "level_5_optimizing": "Data lake opérationnel et temps réel (AMI 15 min + SCADA + ERP), ML en production (prédiction conso ±2-3%, détection fraude, scoring crédit), open data anonymisé partagé avec ANARE-CI et partenaires, LLM pour analyse réclamations clients, ROI data mesuré (économies SAIDI, réduction pertes)."
+  },
+  "regulations": [
+    {
+      "name": "APDP CI Loi 2013-450 — Traitement des données de consommation AMI",
+      "authority": "APDP (Autorité de Protection des Données Personnelles de Côte d'Ivoire)",
+      "description": "Les données granulaires de consommation générées par les compteurs AMI (pas 15 minutes) constituent des données personnelles au sens de la Loi CI 2013-450 car elles permettent d'inférer les habitudes de vie des foyers (présence/absence, activités). Leur traitement requiert : déclaration à l'APDP, consentement explicite pour tout usage au-delà de la facturation, anonymisation pour les analyses agrégées, limitation de conservation (5 ans), et sécurité renforcée (chiffrement au repos et en transit). Les Data Stewards APDP sont obligatoires pour tout traitement AMI à grande échelle.",
+      "compliance_deadline": "En vigueur — applicable au déploiement AMI PNDE CI 2030",
+      "impact_on_sector": "Conditionne l'architecture data lake AMI : chiffrement obligatoire, consentement management intégré à l'app client, anonymisation pipeline avant analyses agrégées, audit APDP annuel pour les traitements AMI de masse"
+    },
+    {
+      "name": "ANARE-CI — Obligation de reporting data qualité de service (IQS)",
+      "authority": "ANARE-CI (Autorité Nationale de Régulation de l'Électricité)",
+      "description": "ANARE-CI exige depuis 2024 que les rapports IQS trimestriels (SAIDI, SAIFI, CAIDI, taux satisfaction réclamations) soient extraits directement depuis les systèmes SCADA/NMS des distributeurs via un pipeline automatisé certifié. Toute ressaisie manuelle est prohibée. Les données doivent être conservées 7 ans et auditables. ANARE-CI peut mandater un audit de la qualité des données IQS transmises. Les écarts > 5% vs. données terrain entraînent des sanctions financières.",
+      "compliance_deadline": "2024 (automatisation pipeline SCADA → IQS obligatoire)",
+      "impact_on_sector": "Oblige à une architecture data pipeline robuste SCADA → historian → calcul IQS → rapport ANARE-CI, avec traçabilité complète et qualité des données certifiée — CIE utilise Power BI + OSIsoft PI pour ce pipeline"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Qualité des données réseau dégradée et biais dans les modèles IA énergie",
+      "description": "En Côte d'Ivoire, le réseau électrique CI présente des données de qualité variable : 15-20% de capteurs OT (PLCs, transformateurs) avec des données manquantes ou erronées (drift capteur, problème communication MPLS rural), des données billing avec 8% d'erreurs d'adressage géographique, et des données clients avec 12% de doublons. Un modèle ML (prédiction panne, prévision demande) entraîné sur ces données présentera des biais significatifs — le pilote prédiction panne CIE a initialement montré 42% de précision avant nettoyage des données (vs. 74% après).",
+      "severity": "high",
+      "likelihood": "high",
+      "mitigation": "Mettre en place un programme Data Quality systématique : inventaire qualité des sources (profiling automatisé Great Expectations), règles de nettoyage documentées, SLA qualité par source (ex. historian OT : < 2% manquant), alertes automatiques sur dégradation qualité, et Data Stewards responsables de la qualité de leur domaine — CIE a alloué 2 ETP Data Quality Engineers à son data lake Azure"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Monétisation des données AMI agrégées anonymisées pour l'aménagement urbain CI",
+      "description": "Les données AMI agrégées et anonymisées (profils de charge par quartier, pointe horaire, taux électrification) représentent une ressource précieuse pour les acteurs de l'aménagement urbain d'Abidjan (District d'Abidjan, promoteurs immobiliers, SODECI eau) : planification des extensions réseau, dimensionnement des nouvelles zones (Cocody 2 extension, Port-Bouët aménagement), optimisation de l'éclairage public. Sous réserve d'anonymisation conforme APDP CI, CIE pourrait monétiser ces datasets à 50-150M FCFA/an (benchmark Open Data énergie Europe).",
+      "impact_level": "medium",
+      "time_to_value": "2-4 ans",
+      "prerequisite_maturity": "Niveau 4 — data lake AMI opérationnel + pipeline anonymisation conforme APDP CI"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "Databricks Lakehouse — Partenariat ENGIE Energy Access Afrique subsaharienne",
+      "montant": "Non divulgué (licence entreprise multi-pays)",
+      "investisseurs": ["Databricks (investissement propre)", "ENGIE Energy Access (client stratégique)"],
+      "annee": 2024,
+      "description": "ENGIE Energy Access a déployé Databricks Lakehouse pour unifier ses données PAYG (750K clients actifs, 8 pays africains dont Côte d'Ivoire) : scoring crédit ML (XGBoost + feature store Databricks, 22 variables), prévision demande mini-grids (LSTM, erreur ±4%), détection fraude PAYG (isolation forest, 3 200 cas/an). En CI, la plateforme traite 2,8M transactions IoT PAYG/jour depuis les kits solaires ENGIE Access CI."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "BBOXX CI (Compagnie BBOXX Côte d'Ivoire)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Data lake AWS + SageMaker — Scoring crédit PAYG IA temps réel et prévision défaut paiement",
+    "description": "BBOXX CI opère un data lake AWS complet pour ses 300K clients PAYG : collecte IoT temps réel (30 secondes) depuis les kits solaires (consommation, état batterie, activité, localisation GPS), stockage S3 (200 To données historiques), processing Spark (AWS EMR), feature store SageMaker (18 variables scoring crédit : régularité paiements, heure de paiement, durée utilisation quotidienne, distance agent, ancienneté client, profil géographique, etc.), modèle XGBoost entraîné sur 5 ans historique (78% précision prédiction défaut J+30), inférence temps réel < 5 secondes pour décision crédit nocturne automatique. En parallèle, un modèle de prévision de demande par mini-grid (LSTM, 48h ahead) optimise la charge batterie communautaire.",
+    "resultats": "Taux de défaut paiement : 4,2% → 3,1% en 12 mois grâce au scoring ML (détection proactive des clients à risque et mise en place de plans de paiement alternatifs avant défaut). Crédit nocturne automatique activé : 92% des coupures nocturnes éliminées (vs. 48% avant ML). Portfolio de crédit BBOXX CI : 12M USD. Taux recouvrement amélioré : +8 points. Coût acquisition client (data-driven ciblage) : -22% via modèle propension à l'achat. API scoring partagée avec Wave CI et Orange Money CI pour microcrédits alternatifs : 1 200 nouveaux crédits/mois accordés à des clients BBOXX sans historique bancaire.",
+    "source": "BBOXX / AWS SageMaker Case Study Afrique 2024",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif maturité data — Secteur Énergie Côte d'Ivoire",
+    "colonnes": ["organisation", "Data lake opérationnel", "ML en production", "Conformité APDP CI", "Open data / partage tiers"],
+    "lignes": [
+      {
+        "organisation": "CIE CI",
+        "valeurs": ["Azure Data Lake (en construction)", "ML panne pilote (450 assets)", "Pipeline APDP en cours", "IQS ANARE-CI automatisé"]
+      },
+      {
+        "organisation": "BBOXX CI",
+        "valeurs": ["AWS S3 + SageMaker (en production)", "Scoring crédit 78% (300K clients)", "Consentement PAYG app", "API scoring 3 fintechs CI"]
+      },
+      {
+        "organisation": "ADER CI",
+        "valeurs": ["SI public partiel", "Non", "Réglementation SI public", "Données concessions publiques"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue la maturité data du secteur énergie CI : existence d'un data lake (AMI + SCADA + ERP), modèles ML en production (prédiction panne, scoring crédit, prévision demande), conformité APDP CI pour les données AMI, qualité des données (% manquant, doublons), et pipeline IQS automatisé ANARE-CI.",
+    "maturity_max_description": "Distributeur énergie CI avec data lake opérationnel temps réel (AMI 15 min + SCADA + ERP unifié), ML en production (prédiction panne ±3%, scoring crédit PAYG 78%, détection fraude), Data Governance Office conforme APDP CI, pipeline IQS ANARE-CI automatisé certifié, open data anonymisé partagé — ROI data mesuré et documenté.",
+    "scoring_rubric": {
+      "score_1_to_20": "Données énergie dans des fichiers Excel/CSV, rapports manuels mensuels, aucune BI, SCADA non exploité analytiquement, zéro culture data.",
+      "score_21_to_40": "BI basique (SAIDI/SAIFI mensuel, billing), historian SCADA local non intégré, pas de data governance, modèles prédictifs inexistants.",
+      "score_41_to_60": "Power BI déployé (IQS automatisé partiel), historian intégré BI, Data Stewards nommés, conformité APDP CI partielle, pas de ML en production.",
+      "score_61_to_80": "Data lake en construction (AMI + SCADA + ERP), ML pilotes avancés (prédiction panne ou scoring), Data Governance Office, pipeline IQS ANARE-CI certifié, conformité APDP CI en cours.",
+      "score_81_to_100": "Data lake opérationnel temps réel, ML production multiple (panne + scoring + fraude + demande), Data Governance complet APDP CI, open data anonymisé partagé, ROI data documenté, LLM réclamations clients."
+    },
+    "prompt_injection_context": "Secteur énergie CI : ANARE-CI exige depuis 2024 un pipeline IQS automatisé depuis SCADA (pas de ressaisie). L'APDP CI Loi 2013-450 conditionne tout traitement de données AMI. BBOXX CI est l'acteur le plus mature en ML énergie CI (scoring crédit PAYG en production). Le déploiement AMI PNDE CI 2030 (1M compteurs) générera 96M points/jour nécessitant une architecture data scalable.",
+    "key_questions_for_llm": [
+      "Disposez-vous d'un data lake centralisant vos données énergie (AMI, SCADA, ERP, clients) ? Quels volumes de données traitez-vous quotidiennement ?",
+      "Avez-vous des modèles ML en production dans votre activité énergie (prédiction panne, scoring crédit PAYG, prévision demande, détection fraude) ?",
+      "Votre pipeline de calcul IQS (SAIDI/SAIFI) pour ANARE-CI est-il automatisé depuis le SCADA, ou y a-t-il encore des étapes de ressaisie manuelle ?",
+      "Votre traitement des données de consommation AMI est-il conforme à la Loi APDP CI 2013-450 (consentement, anonymisation, déclaration APDP) ?",
+      "Avez-vous une politique de qualité des données formalisée (Data Quality SLA par source) et des Data Stewards responsables par domaine de données ?"
+    ]
+  }
+}

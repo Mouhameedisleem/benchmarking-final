@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "axis": "RH",
+    "sub_axis": "Agilité RH",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "OKR bancaires — alignement stratégique de l'ensemble des collaborateurs",
+      "description": "Les banques africaines leaders adoptent les OKR (Objectives and Key Results) pour aligner les objectifs individuels sur la stratégie digitale de la banque. Chaque collaborateur, du guichetier au DSI, connaît sa contribution aux objectifs de transformation digitale.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "15 % des banques africaines utilisent les OKR formellement (Deloitte Africa 2024)",
+      "source": "Deloitte Africa Banking Agile HR 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Évaluation continue — feedback 360° en remplacement de l'entretien annuel",
+      "description": "L'entretien annuel d'évaluation est inadapté à la transformation digitale agile. Les banques leaders remplacent l'évaluation annuelle par des check-ins mensuels, un feedback 360° continu et des revues de performance trimestrielles alignées sur les sprints agile.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "20 % des banques africaines ont adopté l'évaluation continue (McKinsey Africa 2024)",
+      "source": "McKinsey Africa Banking HR Agility 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Gig banking interne — mobilité interne des talents entre les squads",
+      "description": "Les banques qui appliquent le modèle agile permettent à leurs collaborateurs de passer d'une squad à une autre selon les besoins des projets, créant un marché interne des talents qui réduit le recrutement externe et développe la polyvalence.",
+      "impact_level": "Moyen",
+      "horizon": "24-36 mois",
+      "adoption_rate": "10 % des grandes banques africaines expérimentent la mobilité interne inter-squads (EY 2024)",
+      "source": "EY Africa Future of Work Banking 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Upskilling continu — formation intégrée au cycle de travail",
+      "description": "Face à l'évolution rapide des compétences digitales, les banques leaders intègrent la formation au cycle de travail : 20 % du temps des squads consacré à l'apprentissage, partenariats Coursera/LinkedIn Learning, micro-certifications validées trimestriellement.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "25 % des banques africaines ont formalisé l'upskilling continu (Standard Bank, Ecobank en tête)",
+      "source": "Standard Bank Learning & Development Report 2023",
+      "year": "2023"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Plateforme OKR Management",
+      "category": "Alignement stratégique agile",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Workboard", "Betterworks", "Lattice", "Perdoo", "Microsoft Viva Goals"]
+    },
+    {
+      "name": "Plateforme de feedback continu",
+      "category": "Évaluation de performance agile",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Lattice", "15Five", "Culture Amp", "Glint (LinkedIn/Microsoft)", "Leapsome"]
+    },
+    {
+      "name": "Marketplace interne des talents",
+      "category": "Mobilité interne et gestion des compétences",
+      "maturity_stage": "Émergence",
+      "adoption_in_sector": "Très faible en Afrique",
+      "leading_vendors": ["Gloat (Internal Talent Marketplace)", "Fuel50", "Workday Talent Marketplace", "SAP Opportunity Marketplace", "Phenom Internal Mobility"]
+    },
+    {
+      "name": "Plateforme d'upskilling / micro-learning",
+      "category": "Formation continue intégrée au travail",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Coursera for Business", "LinkedIn Learning", "Degreed", "EdX for Business", "Go1 (Afrique)"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Société Générale Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Évaluations de performance semestrielles + check-ins trimestriels, objectifs individuels alignés sur les OKR groupe SG, plan de développement individuel formalisé",
+        "differentiator": "Premier réseau bancaire ivoirien à remplacer l'entretien annuel unique par un cycle d'évaluation semestrielle avec feedback continu — cadence alignée sur les cycles agile groupe",
+        "source": "SGCI Rapport Annuel 2023 / SG Group HR Agility Report"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "OKR déployés pour les leaders (top 200 managers) dans 33 pays, évaluation continue via Glint, programme upskilling 40h/an/collaborateur obligatoire",
+        "differentiator": "Programme de mobility interne Ecobank : 15 % des postes ouverts pourvus par mobilité interne inter-filiales en 2023 — développement de talents panafricains sans recrutement externe",
+        "source": "Ecobank Annual Report 2023 / Ecobank HR Agility Program"
+      },
+      {
+        "organisation": "Standard Bank",
+        "country": "Afrique du Sud / Pan-Afrique",
+        "key_practice": "OKR utilisés par 100 % des managers, évaluation continue trimestrielle, upskilling 40h/an, marketplace interne talents entre les squads",
+        "differentiator": "Standard Bank Skills Exchange : plateforme interne permettant aux collaborateurs de postuler à des missions courtes (2-8 semaines) dans d'autres équipes — 500 missions/an en 2023",
+        "source": "Standard Bank Annual Report 2023 / Standard Bank Future of Work Report"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "ING Group",
+        "country": "Pays-Bas",
+        "key_practice": "OKR pour toute la banque, évaluation trimestrielle par les pairs dans les squads, 20 % du temps de chaque squad dédié à l'apprentissage, coaching interne obligatoire",
+        "differentiator": "ING a supprimé les titres hiérarchiques dans les squads — les performances sont évaluées par les pairs sur les résultats livrés, pas sur l'ancienneté",
+        "source": "ING Annual Report 2023 / McKinsey ING Agile HR Case Study"
+      },
+      {
+        "organisation": "Google",
+        "country": "USA",
+        "key_practice": "OKR (inventés chez Intel, popularisés par Google), 20 % du temps dédié aux projets personnels, évaluation 360° tous les 6 mois",
+        "differentiator": "Google a prouvé que les OKR fonctionnent à grande échelle (180 000 employés) en gardant chacun aligné sur l'objectif stratégique — modèle adopté par les banques digitales mondiales",
+        "source": "Google Annual Report 2023 / John Doerr 'Measure What Matters'"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Entretien annuel unique. Objectifs fixés annuellement sans révision. Pas d'OKR. Formation ponctuelle non planifiée. Mobilité interne informelle et rare. RH administrative uniquement.",
+    "level_2_developing": "Entretien annuel structuré. Objectifs individuels annuels. Quelques formations ad hoc. Pas d'OKR. Mobilité interne possible mais sans processus. Plan de développement informel.",
+    "level_3_defined": "Évaluations semestrielles. Objectifs alignés sur la stratégie. Formations planifiées annuellement. OKR pilotés pour les managers. Plan de développement individuel formalisé. Mobilité interne formalisée.",
+    "level_4_managed": "OKR déployés pour tous les managers. Évaluations trimestrielles + feedback continu. Upskilling 20h+/an. Mobilité interne inter-équipes active. Coaching interne disponible.",
+    "level_5_optimizing": "OKR 100 % de l'organisation. Évaluation continue par les pairs. Upskilling 40h+/an intégré au travail. Marketplace interne talents. 20 % du temps squads = apprentissage. Coaching systématique."
+  },
+
+  "regulations": [
+    {
+      "name": "Code du Travail CI — entretiens d'évaluation et sanctions disciplinaires",
+      "issuing_body": "Ministère du Travail CI",
+      "scope": "Toutes les entreprises employant des collaborateurs en CI",
+      "key_requirement": "Les évaluations de performance ne peuvent servir de base à une sanction disciplinaire que si les objectifs étaient formellement communiqués au collaborateur. Documentation obligatoire.",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.travail.gouv.ci"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "OKR mal implémentés — surcharge administrative sans impact culturel",
+      "description": "Les OKR mal implémentés créent une bureaucratie supplémentaire (remplir des tableaux de bord OKR) sans changer la culture de performance. Si les managers utilisent les OKR pour le contrôle plutôt que l'alignement, les collaborateurs les perçoivent comme une contrainte de plus.",
+      "severity": "Moyen",
+      "likelihood": "Élevée lors des premières implémentations",
+      "mitigation": "Former les managers au coaching OKR avant le déploiement, limiter les OKR à 3-5 objectifs par équipe, et ne pas lier les OKR aux primes individuelles dans les premières années."
+    },
+    {
+      "title": "Obsolescence des compétences — gap critique entre les besoins digitaux et les profils disponibles",
+      "description": "Sans programme d'upskilling continu, les compétences bancaires traditionnelles deviennent obsolètes en 3-5 ans face à la transformation digitale. Les banques UEMOA qui n'investissent pas dans l'upskilling se retrouveront avec un gap de compétences irrémédiable.",
+      "severity": "Élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Réaliser un skills mapping annuel, identifier les compétences critiques manquantes à 3 ans et lancer des programmes d'upskilling ciblés (data, agile, digital) avec des partenaires Coursera ou LinkedIn Learning."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "OKR pour la transformation digitale — aligner 100 % des collaborateurs sur les KPIs digitaux",
+      "description": "Déployer les OKR avec des objectifs digitaux mesurables (taux adoption mobile banking, NPS digital, part de transactions digitales) aligne instantanément l'ensemble des équipes commerciales et support sur les priorités de transformation digitale.",
+      "impact_level": "Très élevé",
+      "time_to_value": "3-6 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [],
+
+  "zoom_case_study": {
+    "entreprise": "ING Group",
+    "pays": "Pays-Bas",
+    "technologie": "Agile HR — évaluation par les pairs, OKR et 20 % apprentissage dans les squads bancaires",
+    "description": "ING a transformé ses pratiques RH en même temps que son organisation agile en 2015. Les squads évaluent leurs membres par feedback 360° trimestriel plutôt qu'une évaluation top-down annuelle. Chaque squad alloue 20 % de son temps (1 jour/semaine) à l'apprentissage et l'amélioration continue. Les OKR de chaque squad sont publics et alignés sur les OKR de la tribu et du groupe. Les managers intermédiaires sont devenus des coaches de squad. En 2023 : satisfaction collaborateurs de 82 % (vs 65 % en 2014), TTM de 3 semaines (vs 9 mois en 2014), turnover des talents clés réduit de 18 % à 8 %. ING est cité comme modèle de référence pour l'agilité RH bancaire par McKinsey, Harvard et Deloitte.",
+    "resultats": "Satisfaction collabs 65 % → 82 % · Turnover clés 18 % → 8 % · TTM 9 mois → 3 semaines · 20 % temps apprentissage · OKR publics squads",
+    "source": "ING Annual Report 2023 / McKinsey ING Agile HR Case Study / Harvard Business Review ING",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité agilité RH — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "OKR déployés pour managers", "Évaluation trimestrielle ou continue", "Upskilling > 20h/an formalisé", "Mobilité interne inter-équipes", "Coaching interne disponible"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✗", "Partiel", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'agilité RH est le chaînon manquant de la transformation agile bancaire en UEMOA. Une banque peut déployer Jira et des squads, mais si les évaluations restent annuelles et les objectifs déconnectés de la stratégie digitale, la transformation restera superficielle. Lier les OKR digitaux aux bonus et déployer l'évaluation continue sont les deux leviers RH les plus impactants pour une transformation agile réelle.",
+    "maturity_max_description": "OKR déployés pour 100 % de l'organisation avec alignement stratégique visible. Évaluation continue trimestrielle par les pairs. Upskilling 40h+/an intégré au cycle de travail (20 % du temps squads). Marketplace interne des talents. Coaching systématique pour tous les managers. Satisfaction collaborateurs > 75 % mesurée et publiée.",
+    "scoring_rubric": {
+      "score_1_to_20": "Entretien annuel unique. Objectifs annuels non révisés. Pas d'OKR. Formation ponctuelle. RH administrative.",
+      "score_21_to_40": "Entretien annuel structuré. Objectifs individuels. Formations ad hoc. Pas d'OKR. Mobilité informelle.",
+      "score_41_to_60": "Évaluations semestrielles. Objectifs stratégie alignés. OKR managers pilotes. Formations planifiées.",
+      "score_61_to_80": "OKR managers. Évaluations trimestrielles + feedback. Upskilling 20h+. Mobilité inter-équipes.",
+      "score_81_to_100": "OKR 100 % org. Évaluation continue pairs. 40h+ upskilling. Marketplace talents. 20 % apprentissage."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur sa maturité en agilité RH dans le contexte bancaire UEMOA. Analyse le déploiement des OKR, la fréquence des évaluations de performance, l'existence d'un programme d'upskilling continu, la mobilité interne entre les équipes et la disponibilité du coaching interne.",
+    "key_questions_for_llm": [
+      "Les OKR (Objectives and Key Results) sont-ils utilisés pour aligner les objectifs individuels et d'équipe sur la stratégie de transformation digitale de la banque ?",
+      "Les évaluations de performance sont-elles réalisées plus fréquemment qu'une fois par an, avec du feedback continu ou des check-ins réguliers entre managers et collaborateurs ?",
+      "Un programme d'upskilling continu alloue-t-il formellement du temps et des ressources à la montée en compétences digitales de chaque collaborateur ?",
+      "La mobilité interne entre les équipes et les squads est-elle encouragée et facilitée par un processus formel permettant aux collaborateurs de changer de rôle ou d'équipe ?",
+      "Un programme de coaching interne est-il disponible pour les managers qui ont besoin de développer leurs compétences de leadership agile ?"
+    ]
+  }
+}

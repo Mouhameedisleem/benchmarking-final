@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "IS",
+    "sub_axis": "donnees_analytics",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Learning Analytics avancées et prédiction des performances académiques",
+      "description": "Les données LMS (connexions, temps de cours, résultats quiz, soumissions devoirs, participation forums) alimentent des modèles ML prédisant les performances académiques et le décrochage. En Côte d'Ivoire, l'UVCI analyse ces signaux pour son système EWS (Early Warning System). Les xAPI (Experience API / Tin Can API) permettent de collecter des données d'apprentissage standardisées depuis des sources hétérogènes (LMS, apps mobiles, simulations VR) vers un LRS (Learning Record Store) centralisé. Le marché mondial du Learning Analytics atteindra 7,5 Mds USD en 2028 (CAGR 17%).",
+      "impact_level": "high",
+      "horizon": "short_term",
+      "adoption_rate": "20%",
+      "source": "UNESCO Learning Analytics Africa / UVCI CI 2025",
+      "year": 2025
+    },
+    {
+      "title": "Open Educational Data et benchmarks nationaux éducatifs CI",
+      "description": "Les données éducatives ouvertes (Open Educational Data) permettent le benchmarking inter-établissements et guident les politiques publiques : taux d'achèvement par filière, corrélations région/résultats, impact socio-économique des programmes. Au niveau CI, le MENA a lancé en 2024 le portail Open Data Éducation CI (données anonymisées du BAC et BEPC, effectifs par lycée, taux de scolarisation par département). En UEMOA, des initiatives d'harmonisation des données éducatives (BCEAO, CAMES) permettent des comparaisons régionales.",
+      "impact_level": "medium",
+      "horizon": "short_term",
+      "adoption_rate": "15%",
+      "source": "MENA CI Open Data / CAMES 2025",
+      "year": 2025
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "LRS (Learning Record Store) et protocole xAPI pour analytics avancées",
+      "category": "EdTech Analytics / Data",
+      "maturity_stage": "emerging",
+      "adoption_in_sector": "UVCI CI (xAPI Moodle + LRS AWS S3), AUF (LRS expérimental 2024), < 10% établissements CI",
+      "leading_vendors": ["SCORM Cloud (Rustici)", "Learning Locker (HT2 Labs)", "xAPI.com", "Moodle Logstore xAPI (open source)", "Watershed LRS"]
+    },
+    {
+      "name": "Tableau de bord analytics éducatif (Power BI / Tableau for Education)",
+      "category": "BI / Analytics",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "UVCI CI (Power BI + Moodle), Pigier CI (Salesforce Analytics), MESRS CI (pilote tableau de bord national), 25% établissements CI",
+      "leading_vendors": ["Microsoft Power BI Education", "Tableau for Education", "Looker (Google)", "D2L Brightspace Analytics", "Canvas Data (Instructure)"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Stack analytics complet : xAPI Moodle (collecte comportements apprenants standardisée), LRS AWS S3 (stockage journaux d'apprentissage), Power BI (tableau de bord direction 12 KPIs quotidiens + tableau de bord tuteur par module), EWS ML (score décrochage hebdomadaire pour 12 000 étudiants pilotes), open data résultats anonymisés partagés avec MESRS CI (rapport semestriel)",
+        "differentiator": "Le seul établissement CI avec un stack Learning Analytics complet (xAPI + LRS + Power BI + ML EWS) — données xAPI permettent de suivre chaque interaction apprenant (clic, progression vidéo, réponse quiz) sur 450 modules, alimentant un modèle EWS avec 74% de précision prédiction décrochage",
+        "source": "UVCI Rapport Analytics 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "University of Nairobi — Kenya Education Analytics Initiative",
+        "country": "Kenya",
+        "key_practice": "Plateforme analytics nationale (collaboration MESRS Kenya + 22 universités) : LRS centralisé xAPI (80K étudiants), modèles ML performance (LSTM sur séries temporelles comportements LMS), dashboard national benchmarking inter-universités Kenya, open data éducatif (résultats par programme, taux d'emploi), partenariat Tableau Foundation (licences gratuites)",
+        "differentiator": "Initiative analytics éducative la plus avancée d'Afrique subsaharienne — premier LRS inter-universitaire national (22 universités Kenya), benchmark open data permettant aux étudiants de choisir leur université sur la base des taux d'insertion publiés par filière",
+        "source": "University of Nairobi / Kenya MESRS Analytics Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Purdue University — Course Signals (EWS pionnier)",
+        "country": "États-Unis",
+        "key_practice": "Course Signals : premier EWS universitaire mondial déployé à grande échelle (2007, 10 000+ étudiants), modèle ML : GPA antérieur + résiduel (différence performance attendue vs. actuelle) + comportement LMS (Blackboard) + données financières (bourses), 3 signaux visibles (feu vert/orange/rouge) + email automatique de l'enseignant, taux de rétention +21 points sur les cours utilisant Course Signals",
+        "differentiator": "Pionnière mondiale des EWS universitaires avec le plus grand historique de données (17 ans, 10 000+ étudiants/semestre) — taux de rétention +21 points, modèle Course Signals étudié et répliqué par 200 universités mondiales dont l'UVCI CI",
+        "source": "Purdue Course Signals 17-Year Study 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Aucune collecte de données pédagogiques (LMS absent ou non configuré), résultats dans des registres papier, aucune analytics, décisions pédagogiques non basées sur des données.",
+    "level_2_developing": "Données de notes dans un tableur ou SIS basique, rapport annuel manuel sur le taux de réussite, aucun dashboard, pas de xAPI ni de LRS.",
+    "level_3_defined": "LMS avec reporting basique (taux complétion, notes, absences), Power BI ou Tableau basique pour le tableau de bord direction mensuel, open data partiel (résultats disponibles sur demande MESRS CI).",
+    "level_4_managed": "Learning analytics avancées (xAPI partiel ou LRS déployé), EWS en pilote (modèle ML décrochage), tableau de bord direction hebdomadaire (temps réel), open data résultats partagés avec MESRS CI, conformité APDP CI sur les données analytics.",
+    "level_5_optimizing": "Stack analytics complet (xAPI + LRS + ML EWS en production + Power BI direction), prédiction performance > 75% précision, open data contribué au portail MENA CI, benchmarking inter-établissements CI, données analytics informant les décisions de curricula en temps réel."
+  },
+  "regulations": [
+    {
+      "name": "APDP CI — Encadrement de la collecte et de l'analyse des données comportementales LMS",
+      "authority": "APDP (Autorité de Protection des Données Personnelles de Côte d'Ivoire)",
+      "description": "La collecte de données comportementales granulaires sur les apprenants via les LMS (xAPI : chaque clic, progression vidéo seconde par seconde, réponses quiz, temps passé) est soumise à la Loi APDP CI 2013-450. Ces données constituent un traitement de données personnelles nécessitant : déclaration à l'APDP, mention dans la politique de confidentialité de l'établissement (visible et accessible aux apprenants), droit d'opposition des apprenants aux analyses comportementales non nécessaires à la pédagogie, et anonymisation obligatoire pour tout partage externe (benchmarks, recherche). Les modèles ML de prédiction de décrochage doivent être documentés (transparence algorithmique).",
+      "compliance_deadline": "En vigueur",
+      "impact_on_sector": "Les établissements CI déployant des Learning Analytics avancées (xAPI, EWS ML) doivent structurer leur architecture data en tenant compte de la conformité APDP CI dès la conception (privacy by design) — anonymisation pipeline avant export, documentation des modèles ML, politique de confidentialité mise à jour"
+    },
+    {
+      "name": "MENA CI — Portail Open Data Éducation CI (données anonymisées lycées/universités)",
+      "authority": "MENA (Ministère de l'Éducation Nationale) / MESRS",
+      "description": "Le MENA CI a lancé en 2024 le portail Open Data Éducation CI (data.mena.gouv.ci) publiant des données anonymisées sur le système éducatif ivoirien : résultats BAC/BEPC par lycée (anonymisés au niveau classe), effectifs par département/filière, taux de scolarisation, taux d'encadrement. Les établissements publics sont tenus de transmettre ces données annuellement au MENA CI sous format standardisé (CSV/XML MENA CI). Les établissements privés conventionnés doivent transmettre les données de résultats (BAC, BEPC) mais pas les données financières.",
+      "compliance_deadline": "Transmission annuelle MENA CI (depuis 2024)",
+      "impact_on_sector": "Les établissements doivent disposer de SIS capables d'exporter les données dans le format standardisé MENA CI — opportunité de benchmarking public pour attirer les meilleurs profils"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Biais des modèles de prédiction de performance et discrimination algorithmique",
+      "description": "Les modèles ML de prédiction de performance ou de décrochage entraînés sur les données historiques d'apprenants CI peuvent reproduire des biais systémiques : si historiquement les étudiants des zones rurales, les femmes ou les étudiants de milieux modestes ont des taux d'abandon plus élevés (dû à des contraintes économiques, pas à leurs capacités intrinsèques), le modèle les signalera systématiquement 'à risque' — créant une prophétie auto-réalisatrice (moins d'attention = plus d'abandon). Ce risque est documenté dans le rapport UNESCO Artificial Intelligence in Education (2023).",
+      "severity": "high",
+      "likelihood": "medium",
+      "mitigation": "Audit de biais obligatoire avant déploiement EWS (test fairness : la précision du modèle doit être équivalente pour les sous-groupes genre, zone géographique, niveau socio-économique), utilisation des variables comportementales LMS uniquement (pas de variables socio-démographiques comme prédicteurs), documentation des décisions algorithmiques (tableau de bord explicatif pour les tuteurs : 'cet étudiant est signalé car X absences + Y semaines sans connexion' — pas 'parce qu'il vient de zone Z')"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Recherche en Learning Analytics Afrique francophone et valorisation des données UVCI",
+      "description": "L'UVCI dispose d'un jeu de données unique : 10 ans de comportements d'apprentissage en ligne de 45 000 apprenants africains francophones (45 pays) — un des plus grands datasets d'apprentissage en ligne Afrique francophone. Ce dataset anonymisé peut être valorisé pour la recherche en Learning Analytics : publications académiques (accès à des financements AUF/UNESCO/IRD), partenariats avec des startups EdTech IA (données d'entraînement contre co-développement d'outils), et amélioration continue des modèles EWS UVCI. L'AUF co-finance des thèses de doctorat sur ces données.",
+      "impact_level": "medium",
+      "time_to_value": "1-2 ans",
+      "prerequisite_maturity": "Niveau 4 — LRS opérationnel + xAPI configuré + anonymisation pipeline conforme APDP CI"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "AUF — Programme de recherche Learning Analytics Afrique Francophone",
+      "montant": "2,5 Mds FCFA (sur 4 ans, 2024-2028)",
+      "investisseurs": ["AUF (Agence Universitaire de la Francophonie)", "IRD (Institut de Recherche pour le Développement)", "IDRC Canada"],
+      "annee": 2024,
+      "description": "L'AUF a lancé un programme de recherche en Learning Analytics pour les universités d'Afrique francophone, financé à 2,5 Mds FCFA sur 4 ans. En Côte d'Ivoire, l'UVCI coordonne un consortium de 6 universités CI (UVCI, INPHB, UFHB, UAO, UNA, UPéG) pour : construire un LRS inter-universitaire anonymisé (objectif : 80K étudiants), entraîner des modèles ML de prédiction décrochage adaptés au contexte africain francophone (contraintes connectivité, multilinguisme, mobilité géographique), et publier les premiers benchmarks learning analytics UEMOA."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Stack Learning Analytics xAPI + LRS + EWS ML — Prédiction du décrochage sur 12 000 étudiants",
+    "description": "L'UVCI a déployé en 2024 un stack Learning Analytics complet pour ses 12 000 étudiants pilotes. Architecture : plugin xAPI Moodle (enregistrement de chaque interaction apprenant dans le LRS AWS S3), traitement hebdomadaire des données (Pandas + scikit-learn sur AWS Lambda), modèle EWS XGBoost entraîné sur 3 ans d'historique (18 features : connexions hebdomadaires, temps moyen session, taux de réussite quiz, délai remise devoirs, participation forums, progression vidéo, régularité horaire, etc.), score de décrochage 0-100 calculé chaque lundi pour chaque étudiant, tableau de bord tuteur Power BI (liste des 20 étudiants à risque à contacter, avec les 3 facteurs principaux explicatifs du score pour chacun). Conformité APDP CI : toutes les données sont anonymisées avant la phase d'entraînement ML, les scores EWS ne sont visibles que par le tuteur référent (pas de directeur).",
+    "resultats": "Précision prédiction décrochage (J+30) : 74% sur set de test (6 mois de données hors entraînement). Taux de décrochage sur le semestre pilote : 28% → 19% (-32% relatif grâce aux interventions tuteur EWS). Faux positifs (étudiants signalés 'à risque' mais finalement sans décrochage) : 26% — acceptables selon les tuteurs ('mieux vaut un contact inutile qu'un décrochage manqué'). Audit de biais APDP CI : précision EWS équivalente entre hommes (74%) et femmes (73%), entre étudiants Abidjan (75%) et zones rurales (72%) — pas de biais discriminatoire détecté. Économie estimée pour l'UVCI : 47M FCFA/an en coûts de réinscription évités (étudiants sauvés du décrochage).",
+    "source": "UVCI / AUF Rapport Learning Analytics 2024",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif données et analytics — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "xAPI / LRS déployé", "EWS décrochage ML", "Tableau de bord direction", "Open data MENA CI"],
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "valeurs": ["Oui (AWS S3 LRS, 12K étudiants pilotes)", "XGBoost 74% précision (production)", "Power BI quotidien (12 KPIs)", "Données résultats anonymisées transmises"]
+      },
+      {
+        "organisation": "Pigier CI",
+        "valeurs": ["Non (Salesforce Analytics natif)", "Non (conseiller humain)", "Salesforce hebdomadaire", "Non (privé, non soumis MENA CI)"]
+      },
+      {
+        "organisation": "UFHB Abidjan",
+        "valeurs": ["Non (Moodle logs non exploités)", "Non", "Rapport manuel mensuel", "Oui (résultats BAC 2024 transmis)"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue la maturité des données et analytics dans le secteur éducation CI : présence de xAPI et d'un LRS (Learning Record Store), modèle EWS ML de prédiction du décrochage, tableau de bord direction basé sur learning analytics, conformité APDP CI (anonymisation, transparence algorithmique), et contribution au portail Open Data MENA CI.",
+    "maturity_max_description": "Établissement éducatif CI avec stack analytics complet : xAPI Moodle + LRS + EWS ML (> 70% précision) en production, tableau de bord direction temps réel (12+ KPIs), audit de biais ML documenté (APDP CI), données anonymisées contribuées au portail MENA CI, recherche en Learning Analytics publiée (AUF) — données informant les révisions de curricula en temps réel.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune donnée pédagogique collectée digitalement, résultats sur papier, aucun analytics, aucune BI.",
+      "score_21_to_40": "Notes dans SIS basique, rapport manuel annuel (réussite, effectifs), aucun LRS ni xAPI, pas de dashboard.",
+      "score_41_to_60": "Moodle avec reporting basique (complétion, notes), Power BI mensuel basique, pas de xAPI ni EWS, open data résultats partiels MENA CI.",
+      "score_61_to_80": "xAPI partiel ou LRS déployé, EWS en pilote (ML décrochage), dashboard hebdomadaire temps réel, APDP CI en cours, open data MENA CI transmis.",
+      "score_81_to_100": "Stack complet xAPI + LRS + EWS ML > 70%, dashboard quotidien, audit biais documenté, APDP CI certifiée, open data contribué, recherche Learning Analytics publiée."
+    },
+    "prompt_injection_context": "Secteur éducation CI : APDP CI conditionne la collecte comportementale LMS (xAPI) — anonymisation obligatoire avant partage externe, documentation modèles ML. MENA CI impose la transmission des données résultats anonymisées au portail Open Data Education CI (annuel). UVCI est le pionnier EWS ML en CI (XGBoost, 12K étudiants, 74% précision). Risque de biais algorithmique sur les populations rurales et femmes CI — audit fairness obligatoire.",
+    "key_questions_for_llm": [
+      "Collectez-vous des données comportementales d'apprentissage standardisées (xAPI) depuis votre LMS et les stockez-vous dans un LRS ? Quels types d'interactions capturez-vous ?",
+      "Avez-vous un modèle de prédiction du décrochage (EWS) basé sur les données LMS ? Quelle est sa précision et comment les tuteurs l'utilisent-ils en pratique ?",
+      "Votre tableau de bord de direction inclut-il des KPIs pédagogiques mis à jour en temps réel (taux complétion, NPS, EWS) alimentés par vos données learning analytics ?",
+      "Avez-vous audité les biais potentiels de vos modèles ML (genre, zone géographique, niveau socio-économique) et documenté leur fonctionnement conformément aux lignes directrices APDP CI ?",
+      "Transmettez-vous vos données de résultats anonymisées au portail Open Data Éducation CI du MENA ? Avez-vous des partenariats de recherche en Learning Analytics (AUF, UNESCO) ?"
+    ]
+  }
+}

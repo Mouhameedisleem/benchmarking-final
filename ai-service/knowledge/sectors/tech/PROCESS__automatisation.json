@@ -1,0 +1,56 @@
+{
+  "meta": { "axis": "PROCESS", "sub_axis": "Automatisation", "sector": "telecom", "language": "fr", "version": "1.0", "last_updated": "2026-05" },
+  "trends": [
+    { "title": "RPA dans les opérations télécoms — automatiser la facturation, le provisioning et les réclamations", "description": "Le RPA (Robotic Process Automation) permet d'automatiser les tâches répétitives des back-offices télécom : réconciliation de facturation, provisioning de services, traitement des remboursements, mise à jour des bases de données abonnés. En UEMOA, ces processus sont encore largement manuels avec 5-8 ETP dédiés.", "impact_level": "Très élevé", "horizon": "12-24 mois", "adoption_rate": "25 % des opérateurs africains ont déployé du RPA dans leurs opérations (GSMA 2024)", "source": "GSMA Operations Automation Telecom Africa 2024", "year": "2024" },
+    { "title": "Network Automation — IA pour les réseaux auto-réparateurs et auto-optimisants", "description": "L'automatisation réseau (Network Automation) utilise l'IA et le ML pour détecter proactivement les anomalies réseau, optimiser l'allocation des fréquences et déclencher des corrections sans intervention humaine. Les opérateurs qui déploient la network automation réduisent leurs coûts d'opération réseau de 25-40 %.", "impact_level": "Très élevé", "horizon": "24-48 mois", "adoption_rate": "30 % des opérateurs africains ont des capacités de network automation partielle (GSMA 2024)", "source": "GSMA Network Automation Africa 2024", "year": "2024" }
+  ],
+  "key_technologies": [
+    { "name": "RPA pour les opérations BSS/OSS des télécoms", "category": "Automatisation des processus métier", "maturity_stage": "Mature", "adoption_in_sector": "Faible en UEMOA", "leading_vendors": ["UiPath Telecom", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate", "Ericsson Intelligent Automation Platform"] },
+    { "name": "AIOps — IA pour les opérations réseau", "category": "Automatisation réseau", "maturity_stage": "Croissance", "adoption_in_sector": "Très faible en UEMOA", "leading_vendors": ["Ericsson AUTOMATE", "Nokia AVA", "Huawei iMaster NCE", "IBM AIOps (Netcool)", "Moogsoft"] }
+  ],
+  "market_leaders": {
+    "national": [{ "organisation": "MTN Côte d'Ivoire", "country": "Côte d'Ivoire", "key_practice": "RPA UiPath déployé pour : réconciliation facturation MoMo (85 000 transactions/jour), provisioning des offres data prépayées, traitement des remboursements crédit. Réduction de 12 ETP à 3 ETP pour ces tâches. Network monitoring automatisé avec alertes IA.", "differentiator": "MTN CI a automatisé la réconciliation de 85 000 transactions MoMo par jour avec UiPath RPA — une tâche qui nécessitait auparavant 6 collaborateurs à temps plein — avec un taux d'erreur réduit à 0,001 %", "source": "MTN CI Operations Report 2023" }],
+    "regional": [{ "organisation": "Vodacom Tanzania", "country": "Tanzanie", "key_practice": "RPA pour le provisioning (95 % des activations SIM sans intervention humaine). AIOps Nokia AVA pour la détection d'anomalies réseau. Zero Touch Network Operations pour les incidents de priorité 3-4. Économie de 45 ETP en 2 ans.", "differentiator": "Vodacom Tanzania a atteint 95 % de Zero Touch provisioning — signifiant que 19 SIM sur 20 sont activées sans aucune intervention humaine — éliminant les erreurs manuelles et réduisant le délai d'activation de 4 heures à 3 minutes", "source": "Vodacom Tanzania Annual Report 2023" }],
+    "international": [{ "organisation": "Ericsson (solution Network Automation)", "country": "Suède / Mondial", "key_practice": "AUTOMATE d'Ericsson : IA pour les réseaux 4G/5G auto-réparateurs. Détection des anomalies en < 2 min. Correction automatique pour 75 % des incidents P3-P4. RAN Intelligent Controller (RIC) pour l'optimisation automatique des antennes.", "differentiator": "La plateforme AUTOMATE d'Ericsson déployée chez 40+ opérateurs permet de réduire le MTTR de 60 % et les coûts d'opération réseau de 30 % grâce à l'IA qui gère automatiquement 75 % des incidents réseau", "source": "Ericsson Annual Report 2023 / Ericsson Network Automation Case Studies 2024" }]
+  },
+  "maturity_levels": {
+    "level_1_initial": "100 % opérations manuelles. Provisioning par saisie manuelle. Réclamations traitées par email. Pas d'automatisation réseau. MTTR > 6h.",
+    "level_2_developing": "Quelques scripts d'automatisation maison. Alertes réseau basiques. RPA ponctuel sur 1-2 processus. Monitoring réseau dashboards.",
+    "level_3_defined": "RPA déployé sur processus clés (facturation, provisioning). Network monitoring avec alertes automatiques. Réduction de 30 % des interventions manuelles. MTTR < 4h.",
+    "level_4_managed": "RPA pour 50 %+ des processus BSS répétitifs. AIOps basique. Provisioning > 70 % automatisé. Network automation partielle. MTTR < 2h.",
+    "level_5_optimizing": "Zero Touch provisioning > 90 %. AIOps complet (self-healing network). RPA généralisé. MTTR < 30 min. Coûts opération -30 %."
+  },
+  "regulations": [],
+  "risks": [{ "title": "Automatisation réseau — erreur d'IA entraînant une panne de réseau", "description": "Un système AIOps qui tente de corriger automatiquement une anomalie réseau peut aggraver la situation si son algorithme est mal configuré ou si l'anomalie n'est pas celle qu'il croit détecter. Une panne automatiquement aggravée par le système censé la corriger est catastrophique pour un opérateur UEMOA dont des millions d'utilisateurs dépendent du réseau pour leur activité économique.", "severity": "Très élevé", "likelihood": "Faible", "mitigation": "Déploiement progressif avec human-in-the-loop pour les corrections critiques. Tests exhaustifs en environnement sandbox avant production. Règles de rollback automatique si la correction aggrave l'anomalie. Équipe NOC de supervision en parallèle pendant la montée en maturité AIOps." }],
+  "opportunities": [{ "title": "Customer Zero Touch — résoudre les pannes signalées par l'abonné avant qu'il rappelle", "description": "Combiner le AIOps (détection automatique des anomalies réseau) avec le CRM (identification de l'abonné affecté) et le canal WhatsApp permet de notifier proactivement l'abonné qu'une panne a été détectée sur son secteur ET de lui indiquer l'heure de rétablissement — avant même qu'il ne contacte le service client. Ce modèle 'Customer Zero Touch' réduit les contacts entrants de 40-60 %.", "impact_level": "Très élevé", "time_to_value": "12-18 mois", "prerequisite_maturity": "Niveau 3" }],
+  "ma_and_fundraising": [],
+  "zoom_case_study": { "entreprise": "Vodacom Tanzania — 95 % Zero Touch provisioning, -45 ETP en 2 ans, MTTR < 1h", "pays": "Tanzanie", "technologie": "UiPath RPA + Nokia AVA AIOps + Ericsson OSS automatisé", "description": "Vodacom Tanzania a mené entre 2021 et 2023 un programme d'automatisation opérationnelle ambitieux. Axe 1 — Automatisation BSS : RPA UiPath déployé pour le provisioning SIM (95 % automatisé), la réconciliation facturation (100 % automatisé), les remboursements M-Pesa (98 % automatisé) et la mise à jour du CRM abonné. Réduction de 45 ETP sur 2 ans. Axe 2 — Automatisation réseau : Nokia AVA AIOps pour la détection d'anomalies réseau en temps réel (< 2 minutes de délai de détection), correction automatique des incidents P3 et P4 (75 % des incidents réseau), escalade automatique des incidents P1-P2 vers les équipes NOC. Résultats 2023 : MTTR moyen réduit de 5h à 58 minutes, taux de provisioning sans erreur : 99,99 %, réclamations liées aux activations réduites de 78 %, économie de 6 M$/an en coûts opérationnels.", "resultats": "95 % Zero Touch provisioning · MTTR 5h → 58 min · -45 ETP · Économie 6 M$/an · Réclamations activations -78 % · 99,99 % provisioning sans erreur", "source": "Vodacom Tanzania Annual Report 2023 / Nokia AVA Case Study Tanzania 2023", "annee": "2023" },
+  "comparatif_organisations": {
+    "titre": "Maturité automatisation — benchmark opérateurs télécoms UEMOA",
+    "colonnes": ["Organisation", "RPA déployé > 5 processus", "Provisioning automatisé > 70 %", "AIOps ou network automation actif", "MTTR incidents réseau < 2h", "Équipe RPA/automation dédiée"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "L'automatisation est le levier d'efficacité opérationnelle le plus direct pour les opérateurs UEMOA. Avec des opérations BSS encore largement manuelles (provisioning, facturation, réclamations), le RPA peut réduire les coûts opérationnels de 20-30 % en 18-24 mois avec un ROI > 300 %. La network automation (AIOps) est plus complexe mais réduit le MTTR de 60 % — un avantage compétitif direct sur la qualité de service mesurée par l'ARTCI.",
+    "maturity_max_description": "Zero Touch provisioning > 90 % pour les activations standard. RPA généralisé sur l'ensemble des processus BSS répétitifs (facturation, réclamations, remboursements, rapports). AIOps en production pour la détection et correction automatique de 75 % des incidents réseau. MTTR < 30 minutes. Économie de 25-30 % sur les coûts opérationnels. Équipe dédiée à l'automatisation et à l'optimisation continue.",
+    "scoring_rubric": {
+      "score_1_to_20": "100 % opérations manuelles. Pas d'automatisation. MTTR > 6h. Erreurs fréquentes.",
+      "score_21_to_40": "Scripts maison. Alertes réseau basiques. RPA ponctuel. MTTR 4-6h.",
+      "score_41_to_60": "RPA processus clés. Monitoring avec alertes. 30 % tâches manuelles réduites. MTTR < 4h.",
+      "score_61_to_80": "RPA 50 %+ BSS. AIOps basique. Provisioning 70 % auto. MTTR < 2h.",
+      "score_81_to_100": "Zero Touch 90 %. AIOps complet. RPA généralisé. MTTR < 30 min. -30 % coûts."
+    },
+    "prompt_injection_context": "Cet opérateur télécom est évalué sur sa maturité en automatisation dans le contexte UEMOA. Analyse le déploiement du RPA, le taux d'automatisation du provisioning, les capacités AIOps pour le réseau et le MTTR.",
+    "key_questions_for_llm": [
+      "Le RPA est-il déployé pour automatiser les processus BSS répétitifs (provisioning, facturation, réclamations, remboursements) ?",
+      "Quel pourcentage des activations SIM et des provisioning de services sont effectués sans intervention humaine (Zero Touch) ?",
+      "Un système AIOps ou de network automation est-il en place pour détecter et corriger automatiquement les anomalies réseau ?",
+      "Quel est le MTTR (Mean Time to Repair) moyen pour les incidents réseau impactant les abonnés ?",
+      "Une équipe ou centre d'excellence dédié à l'automatisation des opérations est-il en place pour industrialiser les projets RPA ?"
+    ]
+  }
+}

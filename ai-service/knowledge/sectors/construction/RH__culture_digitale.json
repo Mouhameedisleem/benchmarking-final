@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "RH",
+    "sous_axe": "culture_digitale",
+    "version": "1.0",
+    "langue": "fr",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "La culture digitale dans le BTP CI est parmi les plus faibles de tous les secteurs : le profil dominant des chefs de chantier et conducteurs de travaux CI est un homme de 35-55 ans, formé sur le terrain, peu habitué aux outils numériques, avec une résistance au changement souvent forte. Les ingénieurs jeunes (diplômés INPHB CI, ESTP CI, universités françaises) sont plus ouverts au numérique mais représentent une minorité. La culture du 'ça marche comme ça depuis 20 ans' est prégnante. Le BIM, les applications chantier et les ERP sont rejetés par les profils terrain si l'accompagnement au changement est insuffisant.",
+    "chiffres_cles": [
+      "Âge moyen chef de chantier CI : 42 ans, avec < 20% de formation formelle au numérique",
+      "Taux d'utilisation d'une application de gestion chantier sur mobile par les chefs de chantier CI : < 12%",
+      "85% des chefs de chantier CI utilisent WhatsApp pour communiquer mais pas d'outil BTP professionnel",
+      "Turnover ingénieurs BTP CI : 28% par an (départ vers le secteur minier ou l'étranger)",
+      "Formation continue BTP CI : moins de 5% des entreprises BTP CI investissent en formation numérique"
+    ],
+    "specificites_locales": [
+      "FDFP CI (Fonds de Développement de la Formation Professionnelle) : financement formations BTP CI (entreprises cotisantes peuvent récupérer leurs investissements formation)",
+      "CNBTP CI : programme de formation BTP CI, incluant quelques modules numérique",
+      "INPHB CI (Yamoussoukro) : formation ingénieurs BTP CI — module BIM introduit mais limité",
+      "Résistance culturelle au numérique renforcée dans le BTP CI par la culture orale et de terrain",
+      "Analphabétisme numérique des ouvriers CI : 45% ont un niveau primaire, frein pour les applications terrain"
+    ]
+  },
+  "definition_axe": {
+    "titre": "Culture digitale dans le secteur BTP",
+    "description": "Capacité de l'entreprise BTP à développer une culture organisationnelle favorable à l'adoption des outils numériques à tous les niveaux (direction, ingénieurs, chefs de chantier, compagnons). La culture digitale BTP va au-delà de la formation technique — elle implique une vision partagée de la transformation numérique, des champions du digital internes, une tolérance à l'expérimentation et à l'erreur, et une remise en question des processus historiques.",
+    "perimetre": [
+      "Vision digitale partagée : direction jusqu'aux chefs de chantier, compréhension du 'pourquoi' du numérique",
+      "Formation aux outils numériques BTP : BIM, logiciel chantier, ERP, applications mobiles terrain",
+      "Champions du digital : ingénieurs ou chefs de chantier référents qui portent l'adoption",
+      "Culture de l'expérimentation : pilotes numériques, droit à l'erreur, amélioration continue",
+      "Recrutement et attractivité digital : capacité à attirer les profils numériques dans un secteur peu attractif",
+      "Intégration des jeunes diplômés digital-natives dans les équipes BTP CI"
+    ],
+    "technologies_cles": [
+      "Revit / ArchiCAD — BIM : formation culturelle critique, pas seulement technique",
+      "Microsoft Teams / WhatsApp Business — Transition vers des outils collaboratifs professionnels",
+      "Procore / Fieldwire — Applications chantier : adoption terrain nécessitant accompagnement culturel",
+      "eLearning platforms (Coursera, LinkedIn Learning CI) — Formation continue digitale BTP CI",
+      "YouTube CI — Formation informelle via tutoriels BTP et numérique (très utilisé en CI)",
+      "FDFP CI — Financement formations numériques pour entreprises BTP CI cotisantes"
+    ]
+  },
+  "enjeux_specifiques": {
+    "enjeux": [
+      {
+        "titre": "Résistance au changement des profils terrain",
+        "description": "Les chefs de chantier et conducteurs de travaux CI ayant 15-25 ans d'expérience considèrent souvent les outils numériques comme une menace (surveillance, remise en question de leur expertise) plutôt qu'une aide. L'imposition d'une application chantier sans accompagnement culturel conduit quasi-systématiquement à l'échec (utilisation superficielle, retour au papier après quelques semaines).",
+        "impact": "Échec des projets de transformation digitale BTP CI, gaspillage des investissements IT"
+      },
+      {
+        "titre": "Attractivité pour les profils digital-natives dans le BTP CI",
+        "description": "Les jeunes ingénieurs CI digital-natives (maîtrisant BIM, applications cloud, analytique) préfèrent les secteurs tech, bancaires ou miniers au BTP, perçu comme traditionnel et peu valorisant pour les compétences numériques. Les entreprises BTP CI qui développent une culture numérique forte attirent et retiennent ces profils rares.",
+        "impact": "Recrutement et rétention des profils numériques rares en CI, compétitivité sur les projets BIM"
+      },
+      {
+        "titre": "Formation continue des profils terrain aux outils numériques",
+        "description": "La formation au numérique des chefs de chantier et compagnons CI nécessite une approche adaptée : format court (30-60 min), pratique (sur tablette en conditions réelles de chantier), en français simple, avec un formateur issu du terrain BTP CI. Les formations académiques longues sont inefficaces pour ces profils.",
+        "impact": "Adoption réelle des outils numériques sur le terrain, ROI des investissements IT, productivité accrue"
+      }
+    ]
+  },
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Inexistant",
+      "description": "Aucune culture digitale. La direction n'a pas de vision numérique. Les outils digitaux sont absents ou utilisés uniquement pour l'email et WhatsApp personnel. Toute tentative de déploiement d'un outil numérique est abandonnée rapidement par résistance des équipes.",
+      "signes_distinctifs": [
+        "Direction sans vision numérique, investissement IT nul ou minimal",
+        "Chefs de chantier et ingénieurs : téléphone portable uniquement pour appels et WhatsApp",
+        "Tout déploiement d'outil numérique avorté dans les 2 premiers mois",
+        "Aucune formation numérique au sein de l'entreprise BTP CI",
+        "Discours 'Le digital c'est pour les grandes entreprises, pas pour nous'"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "La direction est convaincue de la nécessité du numérique mais les équipes terrain résistent. Quelques outils basiques déployés (email pro, Excel, WhatsApp Business) mais utilisés superficiellement. Un ou deux ingénieurs jeunes portent le digital mais sont isolés.",
+      "signes_distinctifs": [
+        "Direction convaincue du numérique, équipes terrain résistantes",
+        "Email professionnel et WhatsApp Business déployés, usage incomplet",
+        "1-2 champions digitaux identifiés (jeunes ingénieurs) mais sans mandat formel",
+        "Formation numérique occasionnelle (1 session/an) sans suivi",
+        "Discours 'on a essayé le logiciel mais les chefs de chantier ne l'utilisent pas'"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Programme de formation numérique structuré (FDFP CI mobilisé). Champions digitaux désignés officiellement par chantier. Culture de l'expérimentation installée (pilotes numériques sur 1-2 chantiers avant déploiement). Outils numériques adoptés par 50-60% des équipes terrain.",
+      "signes_distinctifs": [
+        "Plan de formation numérique annuel financé par FDFP CI, couvrant 60%+ des collaborateurs",
+        "Champions digitaux désignés par chantier (chef de chantier ou ingénieur référent numérique)",
+        "Culture pilote : tout nouvel outil est testé sur 1 chantier pendant 3 mois avant déploiement",
+        "KPIs d'adoption numérique mesurés (taux d'utilisation application chantier, données saisies)",
+        "Onboarding numérique pour les nouvelles recrues : formation outils d'entreprise incluse"
+      ]
+    },
+    "niveau_4": {
+      "label": "Optimisé",
+      "description": "Culture digitale intégrée à la culture d'entreprise BTP CI. Innovation bottom-up : les chefs de chantier proposent des améliorations digitales. Recrutement valorisant le BIM et le numérique. Formation continue digitale (eLearning, micro-learning terrain). Taux d'adoption > 80% des outils déployés.",
+      "signes_distinctifs": [
+        "Culture d'innovation ascendante : les équipes terrain soumettent des idées d'amélioration numérique",
+        "Offres d'emploi valorisant BIM, outils numériques comme différenciateurs dans le recrutement",
+        "Programme de micro-learning BTP CI (YouTube, LinkedIn Learning, sessions 15 min) disponible pour tous",
+        "Taux d'adoption > 80% sur tous les outils numériques déployés (mesure régulière)",
+        "Partage de bonnes pratiques numériques inter-chantiers (communauté de pratique interne)"
+      ]
+    },
+    "niveau_5": {
+      "label": "Différenciant",
+      "description": "L'entreprise BTP CI est reconnue comme un acteur digital du secteur. Partenariats académiques (INPHB CI, ESTP CI) pour les stages et l'évolution des programmes. Certification BIM groupe. Participation à la communauté BIM CI. Innovation ouverte avec les EdTechs et les startups BTP CI.",
+      "signes_distinctifs": [
+        "Référence digitale BTP CI : l'entreprise est citée comme exemple de transformation numérique",
+        "Partenariats INPHB CI / ESTP CI : stages, projets de fin d'études sur les outils numériques de l'entreprise",
+        "Certification BIM groupe : 20%+ d'ingénieurs certifiés Revit ou Autodesk",
+        "Participation CNBTP CI / BuildCI : partage d'expériences transformation digitale sectorielle",
+        "Open innovation : collaboration avec startups BTP CI (drones, IoT, IA chantier)"
+      ]
+    }
+  },
+  "indicateurs_cles": {
+    "indicateurs": [
+      {
+        "nom": "Taux d'adoption des outils numériques déployés",
+        "definition": "Pourcentage de collaborateurs (chefs de chantier, ingénieurs, admin) utilisant activement les outils numériques de l'entreprise au moins une fois par semaine",
+        "unite": "%",
+        "cible_sectorielle": "> 75% d'adoption active des outils numériques déployés",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Heures de formation numérique par collaborateur",
+        "definition": "Nombre moyen d'heures de formation numérique (BIM, outils chantier, cloud, sécurité) reçues par collaborateur sur l'année",
+        "unite": "heures/an",
+        "cible_sectorielle": "> 16 heures de formation numérique par collaborateur par an",
+        "frequence_mesure": "Annuelle"
+      },
+      {
+        "nom": "Taux de collaborateurs ayant soumis une idée d'amélioration numérique",
+        "definition": "Pourcentage de collaborateurs ayant proposé au moins une idée d'amélioration numérique (processus, outil, automatisation) dans l'année",
+        "unite": "%",
+        "cible_sectorielle": "> 20% des collaborateurs contributeurs d'idées d'innovation numérique",
+        "frequence_mesure": "Annuelle"
+      },
+      {
+        "nom": "Délai d'adoption moyen d'un nouvel outil",
+        "definition": "Temps entre le déploiement d'un nouvel outil numérique et l'atteinte de 70% d'utilisation régulière",
+        "unite": "semaines",
+        "cible_sectorielle": "< 8 semaines pour atteindre 70% d'adoption (vs. 6+ mois sans accompagnement)",
+        "frequence_mesure": "Par déploiement d'outil"
+      },
+      {
+        "nom": "Budget formation numérique / budget IT total",
+        "definition": "Ratio du budget formation numérique sur le budget IT total de l'entreprise BTP CI",
+        "unite": "%",
+        "cible_sectorielle": "> 20% du budget IT alloué à la formation et à l'accompagnement au changement",
+        "frequence_mesure": "Annuelle"
+      }
+    ]
+  },
+  "bonnes_pratiques": {
+    "pratiques": [
+      {
+        "titre": "Désigner des champions digitaux par chantier",
+        "description": "Identifier et nommer officiellement 1 champion digital par chantier : un profil terrain (pas forcément le plus jeune, mais le plus motivé) qui devient le référent numérique du chantier. Le champion reçoit une formation approfondie, un accès prioritaire aux nouveaux outils et un mandat pour accompagner ses collègues. La désignation est publique et valorisante (prime de responsabilité ou mention dans le plan de carrière).",
+        "benefice": "Multiplication de l'effet de formation, adoption terrain accélérée, relais terrain de confiance"
+      },
+      {
+        "titre": "Utiliser le FDFP CI pour financer les formations numériques",
+        "description": "Les entreprises BTP CI cotisantes au FDFP CI peuvent récupérer tout ou partie de leurs investissements de formation via les dispositifs de remboursement FDFP CI. Faire valider les formations numériques BTP (BIM, logiciel chantier, sécurité informatique) par le FDFP CI pour bénéficier du remboursement. Contacter la délégation FDFP CI la plus proche (Abidjan, Bouaké, San-Pédro).",
+        "benefice": "Réduction coût net formation numérique de 40-80%, accès à des formations de qualité sans contrainte budgétaire"
+      },
+      {
+        "titre": "Formation courte et pratique sur tablette en conditions réelles",
+        "description": "Adapter le format de formation aux profils terrain CI : sessions de 30-60 minutes (pas de journée entière), réalisées sur le chantier avec la tablette de l'entreprise, en conditions réelles (saisie d'une vraie fiche de présence, photo d'un vrai poste de travail, rapport hebdomadaire réel). Le formateur idéal est un ancien chef de chantier reconverti au numérique — pas un formateur généraliste IT.",
+        "benefice": "Taux de rétention x3 vs. formation en salle, adoption immédiate sur le terrain, pas de résistance 'théorique'"
+      },
+      {
+        "titre": "Valoriser le digital dans la culture d'entreprise et le plan de carrière",
+        "description": "Intégrer les compétences numériques dans les critères d'évaluation et d'avancement des chefs de chantier et ingénieurs BTP CI. Exemple : 'Chef de chantier confirmé — maîtrise application chantier Procore' dans la grille de classification. Valoriser publiquement les champions digitaux lors des réunions d'équipe. Communiquer régulièrement sur les réussites numériques (chantier livré en délai grâce à l'EVA, économies BIM).",
+        "benefice": "Motivation intrinsèque à l'adoption numérique, attractivité pour les jeunes diplômés digital-natives"
+      },
+      {
+        "titre": "Communiquer le 'Pourquoi' avant le 'Comment' du numérique",
+        "description": "Avant de déployer un outil numérique sur un chantier CI, organiser une réunion d'équipe de 30 min pour expliquer pourquoi ce changement est nécessaire et ce qu'il apporte concrètement au chef de chantier (pas à l'entreprise) : moins de déplacements au bureau, photos sur tablette au lieu de carnet papier, moins de litiges clients. Le chef de chantier doit voir le bénéfice pour lui, pas seulement pour la direction.",
+        "benefice": "Adhésion au lieu de résistance, adoption volontaire plutôt qu'imposée"
+      }
+    ]
+  },
+  "ecueils_frequents": {
+    "ecueils": [
+      {
+        "titre": "Déployer un outil sans accompagnement au changement",
+        "description": "L'erreur la plus fréquente dans le BTP CI : acheter un logiciel chantier, envoyer un email d'information, et attendre que les chefs de chantier l'utilisent. Sans formation pratique, sans champion digital, sans 'pourquoi', le logiciel n'est jamais utilisé et la direction conclut que 'le digital ne marche pas dans notre secteur'.",
+        "solution": "Allouer 30% du budget de tout projet numérique à l'accompagnement au changement (formation, communication, champion digital, support) — le logiciel n'est que 70% du projet"
+      },
+      {
+        "titre": "Former uniquement les jeunes ingénieurs",
+        "description": "Les entreprises BTP CI qui ne forment que leurs jeunes ingénieurs au numérique créent un fossé culturel avec les chefs de chantier seniors qui continuent sur leurs habitudes papier. Le projet numérique reste sur le papier (au sens littéral).",
+        "solution": "Prioriser la formation des profils terrain (chefs de chantier, conducteurs de travaux) même si c'est plus difficile — ce sont eux qui déterminent l'adoption réelle sur le chantier"
+      },
+      {
+        "titre": "Changer d'outil trop fréquemment",
+        "description": "Certaines entreprises BTP CI changent d'application chantier tous les 12-18 mois, découragées par une adoption insuffisante ou attirées par le dernier outil à la mode. Chaque changement repart à zéro sur la courbe d'adoption et renforce la résistance des équipes terrain.",
+        "solution": "Choisir un outil avec soin (test sur 3 mois avec un chantier pilote), puis s'y tenir au minimum 3 ans — la maîtrise d'un outil simple est bien plus précieuse que la découverte d'outils sophistiqués"
+      }
+    ]
+  },
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau de culture digitale BTP entre organisations représentatives",
+    "lignes": [
+      {
+        "organisation": "COLAS CI",
+        "profil": "Filiale Bouygues Construction, programme Lean Lab CI et formation groupe",
+        "niveau_maturite": 4,
+        "points_forts": "Programme formation numérique groupe (BIM, Procore, SAP) avec budget annuel dédié, champions digitaux formels désignés sur chaque grand chantier CI, innovation bottom-up valorisée, taux adoption outils > 82%",
+        "points_faibles": "Culture top-down groupe parfois peu adaptée à l'innovation bottom-up CI, fossé culturel entre ingénieurs groupe (Paris) et profils terrain CI",
+        "initiatives_notables": "COLAS Digital Academy CI (2023) : 120 chefs de chantier CI formés en 12 modules 30 min sur tablette — taux complétion 78%"
+      },
+      {
+        "organisation": "BNETD CI",
+        "profil": "Agence étatique CI, ingénieurs et contrôleurs de travaux",
+        "niveau_maturite": 3,
+        "points_forts": "Formation BIM imposée pour les contrôleurs projets BNETD CI depuis 2022, culture qualité et rigueur facilitant l'adoption des outils, direction convaincue du numérique",
+        "points_faibles": "Structure administrative ralentissant l'innovation, résistance des profils seniors ingénieurs fonctionnaires, budget formation limité",
+        "initiatives_notables": "Partenariat BNETD CI / INPHB CI : modules BIM intégrés à la formation ingénieurs génie civil INPHB — pipeline de talents numériques BTP CI"
+      },
+      {
+        "organisation": "SATCI CI",
+        "profil": "Promoteur immobilier CI de taille intermédiaire",
+        "niveau_maturite": 3,
+        "points_forts": "Direction fortement engagée dans le numérique, 2 champions digitaux désignés (Procore et DocuSign), FDFP CI mobilisé pour les formations, taux adoption Procore chantier 65%",
+        "points_faibles": "Formation terrain insuffisante (1 journée par outil), pas de micro-learning continu, turnover élevé des ingénieurs formés (28% par an)",
+        "initiatives_notables": "Programme 'Chantier 2.0' SATCI CI : 3 chantiers pilotes 100% numériques (Procore + DocuSign + BatiScript CI) avant déploiement généralisé"
+      },
+      {
+        "organisation": "PME BTP CI classe C-D",
+        "profil": "Entreprise BTP locale 20-100 employés",
+        "niveau_maturite": 1,
+        "points_forts": "Flexibilité, pas de résistance institutionnelle (décision rapide si le dirigeant est convaincu)",
+        "points_faibles": "Culture numérique quasi-inexistante, dirigeant souvent lui-même peu digital, budget formation nul, turnover élevé sans formation numérique",
+        "initiatives_notables": "Initiatives CNBTP CI pour sensibiliser les PME BTP CI au numérique (journées portes ouvertes BIM, ateliers Procore) — participation encore faible"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "COLAS CI — Programme 'Digital Academy CI' : formation numérique terrain de 120 chefs de chantier",
+    "contexte": "COLAS CI gérait 18 chantiers actifs en CI avec un taux d'adoption des outils numériques (Procore, SAP S/4HANA) à seulement 42% chez les chefs de chantier. Les ingénieurs de projet utilisaient les outils mais les chefs de chantier continuaient avec carnets papier et WhatsApp personnel. Le déploiement avait été fait sans formation pratique terrain adaptée — uniquement des manuels PDF en anglais et une journée de formation en salle à Abidjan.",
+    "probleme": "Taux d'adoption Procore chefs de chantier : 42% (saisie données incomplète, application désactivée). Données chantier manquantes : 35% des rapports hebdomadaires non saisis dans Procore (retour au papier). Investissement logiciel : 45 M FCFA/an de licences Procore sous-utilisées. Fossé culturel : ingénieurs vs. chefs de chantier, tension croissante sur le numérique.",
+    "solution_deployee": "Programme 'COLAS Digital Academy CI' : 12 modules de 30 minutes en français, tournés en vidéo sur des chantiers COLAS CI réels, par un ancien chef de chantier CI reconverti en référent numérique. Accès via YouTube privé et application tablette. Champions digitaux désignés (1 par chantier, choisi parmi les volontaires terrain). Sessions pratiques bimensuelles sur tablette sur le chantier. Financement FDFP CI (80% récupéré). Gamification : classement mensuel des chantiers par taux d'adoption Procore (affiché au bureau de chantier).",
+    "resultats": {
+      "taux_adoption": "42% → 83% d'adoption Procore chefs de chantier en 6 mois",
+      "rapports_complets": "65% → 94% des rapports hebdomadaires saisis dans Procore",
+      "taux_completion_formation": "78% des 120 chefs de chantier ont complété les 12 modules",
+      "delai_adoption": "8 semaines pour atteindre 70% d'adoption (vs. 18 mois avec l'ancienne approche)",
+      "economie_formation": "Coût formation brut 12 M FCFA — récupéré FDFP CI 9,6 M FCFA = coût net 2,4 M FCFA",
+      "qualite_donnees": "Complétude données chantier dans Procore : 42% → 91% (base pour analytics et EVA)"
+    },
+    "enseignements": "Le facteur clé de succès : le formateur était un ancien chef de chantier CI, pas un consultant IT. Sa légitimité terrain et sa connaissance des réalités CI (pluie, réseau 4G instable, analphabétisme partiel de certains compagnons) ont éliminé la résistance culturelle. La gamification (classement chantiers visible de tous) a créé une émulation positive et accéléré l'adoption sans coercition."
+  },
+  "ai_context": {
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune culture digitale. Direction sans vision numérique. Outils utilisés uniquement pour email/WhatsApp personnel. Tout déploiement d'outil numérique échoue rapidement. Aucune formation numérique. Discours 'le digital n'est pas pour nous'.",
+      "score_21_to_40": "Direction convaincue mais équipes terrain résistantes. Quelques outils basiques peu utilisés. 1-2 champions digitaux isolés sans mandat formel. Formation occasionnelle sans suivi. Taux adoption < 40%.",
+      "score_41_to_60": "Programme de formation numérique structuré (FDFP CI). Champions digitaux désignés officiellement par chantier. Culture de l'expérimentation (pilotes). KPIs d'adoption mesurés. Taux adoption 50-70%.",
+      "score_61_to_80": "Culture digitale intégrée à la culture d'entreprise. Innovation bottom-up valorisée. Recrutement valorisant le numérique. Micro-learning continu. Taux adoption > 80% sur tous les outils.",
+      "score_81_to_100": "Référence digitale BTP CI. Partenariats académiques INPHB CI. Certification BIM groupe. Participation communauté BIM CI. Open innovation avec startups BTP CI."
+    },
+    "questions_cles_diagnostic": [
+      "Vos chefs de chantier utilisent-ils une application numérique sur tablette pour le suivi quotidien ? Quel est le taux d'utilisation réel ?",
+      "Avez-vous des champions digitaux désignés officiellement sur vos chantiers ?",
+      "Quel pourcentage de votre budget formation est dédié au numérique ? Avez-vous mobilisé le FDFP CI ?",
+      "Comment réagissent vos chefs de chantier expérimentés quand on leur propose un nouvel outil numérique ?",
+      "Avez-vous un programme structuré d'accompagnement au changement lors du déploiement de nouveaux outils ?"
+    ],
+    "pieges_evaluation": [
+      "Ne pas confondre la connaissance théorique d'un outil (formation reçue) avec son utilisation réelle sur le terrain (taux d'adoption mesuré)",
+      "Vérifier que les 'formations numériques' sont pratiques et terrain-adaptées, pas juste des journées en salle avec des slides",
+      "Distinguer la culture digitale de la direction (souvent plus avancée) de la réalité terrain des chefs de chantier CI"
+    ]
+  },
+  "ressources": {
+    "references_reglementaires": [
+      "FDFP CI — Dispositifs de financement de la formation professionnelle continue (dont formations numériques BTP CI)",
+      "CNBTP CI — Programme de formation et conditions d'agrément incluant les compétences numériques",
+      "INPHB CI — Curriculum ingénieurs génie civil avec modules BIM (Yamoussoukro)",
+      "Code du Travail CI Loi 2015-532 — Obligation de formation professionnelle continue des salariés"
+    ],
+    "outils_recommandes": [
+      "Autodesk Revit / BIM 360 — Formation BIM pour ingénieurs CI (Autodesk University en ligne)",
+      "Procore Learning — Formation en ligne chefs de chantier (sous-titres français disponibles)",
+      "YouTube CI — Tutoriels BTP numériques en français, accessibles pour formation informelle",
+      "LinkedIn Learning CI — Formation continue numérique pour cadres BTP CI",
+      "FDFP CI — Plateforme e-learning FDFP CI pour formations certifiées"
+    ],
+    "formations_certifications": [
+      "FDFP CI — Catalogue formations BTP numériques financées (BIM, logiciel chantier, sécurité informatique)",
+      "Autodesk Certified Professional Revit — Certification BIM pour ingénieurs BTP CI",
+      "CNBTP CI / CAMAS BTP — Formation gestion de chantier numérique",
+      "Procore Certified Project Manager — Certification gestion de chantier cloud"
+    ]
+  }
+}

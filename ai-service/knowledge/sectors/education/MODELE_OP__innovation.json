@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "secteur": "education",
+    "axe": "MODELE_OP",
+    "sous_axe": "innovation",
+    "titre": "Innovation dans le modèle opérationnel éducatif en Côte d'Ivoire",
+    "description": "Mise en place de dynamiques d'innovation dans les établissements d'enseignement CI : partenariats recherche-industrie, incubateurs startups étudiantes, hackathons EdTech, expérimentation de technologies émergentes (IA générative, VR/AR, adaptive learning) et co-innovation avec les entreprises ivoiriennes.",
+    "version": "1.0",
+    "date_mise_a_jour": "2025-01-01",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "La Côte d'Ivoire vise un positionnement de hub technologique africain (Plan National de Développement 2021-2025, ambition 'Côte d'Ivoire digitale'). Les établissements d'enseignement sont des acteurs clés de cet écosystème d'innovation, à condition de dépasser leur rôle traditionnel de transmetteurs de savoir pour devenir des lieux de co-création avec l'industrie CI. L'INPHB Yamoussoukro (Fab Lab certifié MIT, 8 startups ex-étudiants) et l'UVCI CI (Innovation Lab EdTech, hackathons annuels) ont montré la voie. Cependant, 90% des établissements CI n'ont aucun programme d'innovation formalisé, et les partenariats recherche-industrie restent sporadiques, faute de cadres contractuels adaptés.",
+    "chiffres_cles": [
+      "CI : 3 000 startups tech recensées en 2024 (Digital Economy Report CI), dont 12% issues de partenariats universitaires",
+      "INPHB Yamoussoukro : Fab Lab MIT certifié, 8 startups créées par ex-étudiants (2021-2024), 1 200 certifications CISCO/an",
+      "UVCI CI : hackathon EdTech CI annuel depuis 2022 (300 participants, 3 projets incubés à ce jour)",
+      "Budget R&D universités publiques CI : < 1% du budget de fonctionnement (vs. 3% recommandé CAMES)",
+      "Marché VR éducatif Afrique subsaharienne : 120 M USD (2024), TCAM 28% jusqu'en 2027",
+      "ALX Africa CI : 45% des inscriptions via TikTok ambassadeurs — modèle d'acquisition innovant copié par 3 établissements CI"
+    ],
+    "acteurs_cles": [
+      "INPHB Yamoussoukro — Fab Lab MIT certifié, hub innovation ingénieurs CI",
+      "UVCI CI — Innovation Lab EdTech, hackathons co-innovation avec industries CI",
+      "CIE/Orange CI/MTN CI — partenaires industriels pour projets de recherche appliquée",
+      "FDFP CI — financement projets innovation formation (28 Mds FCFA/an)",
+      "AFD / IFC / Google.org — bailleurs innovation éducative en Afrique subsaharienne",
+      "AUF — réseau innovation numérique Afrique francophone (appels à projets EdTech)"
+    ]
+  },
+  "enjeux_cles": [
+    {
+      "enjeu": "Structurer des partenariats recherche-industrie CI durables",
+      "description": "Les entreprises ivoiriennes (Orange CI, MTN CI, SIFCA, NSIA, SIB) ont des problématiques opérationnelles réelles (prédiction churn, détection fraude, optimisation supply chain) qui peuvent alimenter des projets de recherche appliquée avec les universités CI. Ces partenariats sont gagnants-gagnants : données réelles pour la recherche, solutions sur mesure pour l'industrie.",
+      "impact": "Revenus complémentaires pour les universités CI et alignement des compétences sur les besoins réels du marché"
+    },
+    {
+      "enjeu": "Créer des incubateurs de startups étudiantes dans les universités CI",
+      "description": "Les meilleurs talents ivoiriens quittent souvent le pays pour créer leur startup (France, Sénégal, Kenya). Un incubateur universitaire (bureau + mentorat + réseau investisseurs CI + financement FDFP CI) crée les conditions pour que ces projets voient le jour en CI.",
+      "impact": "Rétention des talents, création d'emplois CI et image d'excellence de l'établissement"
+    },
+    {
+      "enjeu": "Expérimenter les technologies émergentes à petite échelle avant le déploiement",
+      "description": "VR/AR pour la formation pratique (manipulation d'équipements dangereux, formations médicales, chimie), IA générative pour le tutorat personnalisé, adaptive learning par ML — ces technologies transforment l'efficacité pédagogique mais nécessitent une phase d'expérimentation contrôlée avant déploiement à l'échelle.",
+      "impact": "Avance compétitive et différenciation des programmes face aux MOOC internationaux"
+    },
+    {
+      "enjeu": "Organiser des hackathons EdTech pour identifier les innovations locales",
+      "description": "Les problèmes éducatifs CI (connectivité limitée, contenus peu adaptés, taux de décrochage, accès mobile) nécessitent des solutions locales, pas des transplantations de solutions Silicone Valley. Les hackathons étudiants (24-48h) sont le mécanisme le plus efficace pour générer des idées adaptées au contexte CI.",
+      "impact": "Identification de solutions EdTech adaptées au contexte ivoirien avec coût d'expérimentation faible"
+    },
+    {
+      "enjeu": "Mesurer et valoriser l'innovation dans les accréditations CAMES et MESRS CI",
+      "description": "Le CAMES et le MESRS CI intègrent désormais des indicateurs d'innovation dans leurs critères d'accréditation (nombre de brevets OAPI, partenariats industriels, startups incubées). Les établissements qui ne documentent pas leur activité d'innovation perdent des points face à leurs concurrents régionaux.",
+      "impact": "Maintien des accréditations et attractivité internationale accrue"
+    }
+  ],
+  "niveau_maturite": {
+    "description": "Échelle de maturité innovation dans les établissements d'enseignement CI",
+    "niveaux": [
+      {
+        "niveau": 1,
+        "label": "Absente",
+        "description": "Aucune activité d'innovation formalisée. Enseignement exclusivement transmissif, aucun partenariat industriel, aucun incubateur, aucune expérimentation technologique. Aucun budget R&D ou innovation."
+      },
+      {
+        "niveau": 2,
+        "label": "Ponctuelle",
+        "description": "Quelques initiatives d'innovation ponctuelles portées par des enseignants individuels (sans support institutionnel). Hackathon ou concours étudiant annuel non structuré. 1-2 partenariats industriels informels pour des stages. Aucun incubateur."
+      },
+      {
+        "niveau": 3,
+        "label": "Structurée",
+        "description": "Programme d'innovation formalisé avec budget dédié (1-2% du budget). 1-2 partenariats industriels avec convention signée. Hackathon EdTech annuel avec jury industriel CI. Espace de co-working ou prototypage pour les étudiants. Quelques cours sur l'entrepreneuriat."
+      },
+      {
+        "niveau": 4,
+        "label": "Écosystème",
+        "description": "Innovation Lab ou Fab Lab opérationnel (équipement prototypage, 3D, electronics). Incubateur avec 5+ startups actives. Partenariats industriels structurés avec 3+ entreprises CI (projets sur données réelles). Expérimentation VR/IA en production sur 1-2 programmes. Brevets OAPI déposés."
+      },
+      {
+        "niveau": 5,
+        "label": "Excellence",
+        "description": "Hub d'innovation régional : 10+ startups incubées, 3+ spinoffs actives, 5+ brevets OAPI, partenariats R&D avec 10+ entreprises CI et 2+ multinationales, certification Fab Lab international (MIT FabLab Network), programmes co-diplômants avec entreprises tech CI, reconnaissance CAMES comme centre d'excellence innovation."
+      }
+    ]
+  },
+  "indicateurs_cles": [
+    {
+      "kpi": "Nombre de startups actives issues de l'incubateur",
+      "definition": "Nombre de startups créées par des étudiants ou alumni de l'établissement, toujours actives (> 12 mois d'activité, au moins 1 employé ou CA > 0) à la date de mesure",
+      "unite": "startups",
+      "benchmark_ci": "INPHB Yamoussoukro : 8 startups actives (2024) — UVCI CI : 4 startups — universités publiques CI : 0-1",
+      "cible_sectorielle": "> 5 startups actives (seuil reconnaissance MESRS CI centre d'excellence entrepreneuriat)",
+      "source": "Rapport MESRS CI innovation et entrepreneuriat 2024"
+    },
+    {
+      "kpi": "Budget innovation / R&D (% du budget de fonctionnement)",
+      "definition": "Part du budget annuel de l'établissement allouée aux activités d'innovation, de recherche appliquée et d'expérimentation technologique",
+      "unite": "%",
+      "benchmark_ci": "INPHB Yamoussoukro : 2,8% — UVCI CI : 1,5% — UFHB : 0,3% — cible CAMES : 3%",
+      "cible_sectorielle": "> 2% (seuil accréditation recherche CAMES)",
+      "source": "CAMES critères accréditation R&D + rapports financiers établissements CI 2024"
+    },
+    {
+      "kpi": "Nombre de partenariats R&D actifs avec entreprises CI",
+      "definition": "Nombre de conventions de partenariat R&D actives (signées depuis < 3 ans) avec des entreprises ivoiriennes impliquant une collaboration sur des données ou problématiques réelles",
+      "unite": "partenariats",
+      "benchmark_ci": "INPHB Yamoussoukro : 5 actifs (Orange CI, MTN CI, SIFCA, CIE, SOGB) — UVCI CI : 3 — UFHB : 1",
+      "cible_sectorielle": "> 3 partenariats actifs avec conventions formelles",
+      "source": "Direction Partenariats INPHB 2024"
+    },
+    {
+      "kpi": "Nombre d'étudiants touchés par les programmes d'innovation et d'entrepreneuriat",
+      "definition": "Nombre d'étudiants ayant participé dans l'année à au moins un dispositif d'innovation (hackathon, incubateur, module entrepreneuriat, Fab Lab, projet partenariat industriel)",
+      "unite": "étudiants",
+      "benchmark_ci": "INPHB : 1 800 étudiants/an (40% du campus) — UVCI CI : 850 — UFHB : 120 (< 1%)",
+      "cible_sectorielle": "> 20% des effectifs étudiants par an",
+      "source": "Rapport annuel INPHB 2024 + UVCI CI"
+    },
+    {
+      "kpi": "Taux d'adoption des technologies émergentes en production pédagogique",
+      "definition": "Part des programmes diplômants utilisant au moins une technologie émergente en production (VR/AR, IA générative tutorat, adaptive learning ML, simulation) dans au moins 10% de leur contenu",
+      "unite": "%",
+      "benchmark_ci": "INPHB : 28% des programmes (VR + CISCO simulations) — UVCI CI : 18% (IA tutorat + simulations) — UFHB : 2%",
+      "cible_sectorielle": "> 15% des programmes avec technologie émergente en production",
+      "source": "Audit pédagogique MESRS CI 2024"
+    }
+  ],
+  "zoom_sur": {
+    "organisation": "UVCI CI (Université Virtuelle de Côte d'Ivoire)",
+    "titre": "Innovation Lab EdTech CI : hackathons, co-innovation industrie et 4 startups incubées",
+    "contexte": "En 2022, l'UVCI CI constatait un paradoxe : université pionnière du numérique éducatif en CI, elle n'avait pourtant aucun programme structuré d'innovation. Les meilleurs projets étudiants restaient dans les tiroirs. Une réflexion stratégique avec les partenaires industriels (Orange CI, MTN CI, NSIA Assurances, SIB) a conduit à la création de l'Innovation Lab EdTech CI — espace physique à Cocody (120 m²) et programme structuré d'innovation sur 12 mois.",
+    "solution": "Innovation Lab EdTech CI déployé en 3 composantes : (1) Hackathon annuel 'EdTech Challenge CI' — 48h, 300 participants, 5 défis posés par les partenaires industriels CI (problème de décrochage scolaire, formation mobile offline, accès éducation zones rurales, certification compétences non formelles, formation en langue locale Dioula/Baoulé) ; (2) Programme d'incubation 12 mois — 5 projets sélectionnés post-hackathon, bureau + mentorat + accès réseau investisseurs CI (Bridge CI, Partech Africa) + financement FDFP CI jusqu'à 5 M FCFA ; (3) Living Lab pédagogique — 3 modules UVCI CI utilisés comme terrain d'expérimentation IA générative (Mistral Large pour génération exercices), adaptive learning (XGBoost recommandation parcours) et micro-learning (modules 7-10 min pour mobile first).",
+    "resultats": {
+      "avant": "Aucun programme innovation formalisé (2021), 0 startup étudiante incubée, aucun partenariat industriel actif, innovations pédagogiques portées uniquement par initiative individuelle des tuteurs, budget innovation = 0 FCFA",
+      "apres": "3 éditions hackathon EdTech CI (2022-2024), 820 participants cumulés, 4 startups incubées dont 2 ayant levé des fonds (EduMobile CI : app offline UEMOA, 850K USD seed — DataSkills CI : formation data secteur financier CI, 15 clients entreprises en 18 mois), 3 partenariats R&D actifs (Orange CI, MTN CI, NSIA), 18% des modules UVCI CI avec technologie émergente en production, budget innovation 1,5% du budget UVCI CI (2024)"
+    },
+    "lessons_learned": "Le succès des hackathons tient à la qualité des défis industriels : des problèmes trop vagues ('améliorer l'éducation') génèrent des solutions génériques ; des problèmes très spécifiques ('réduire le décrochage sur les modules UVCI CI de mathématiques chez les étudiants ruraux connectés via 3G') génèrent des innovations concrètes et immédiatement pilotables. Le financement FDFP CI pour les startups incubées a été le déblocage critique : sans lui, les fondateurs ne pouvaient pas quitter leur emploi pour se consacrer à leur projet.",
+    "contact_reference": "Innovation Lab EdTech CI — UVCI CI, Cocody — innovation@uvci.edu.ci"
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif innovation — établissements enseignement CI et références",
+    "lignes": [
+      {
+        "organisation": "INPHB Yamoussoukro",
+        "type": "National — leader innovation",
+        "fab_lab": "Oui (certifié MIT FabLab Network, 2 400 m²)",
+        "startups_incubees": "8 actives (2021-2024)",
+        "partenariats_r_d": "5 actifs (Orange CI, MTN CI, SIFCA, CIE, SOGB)",
+        "technologies_emergentes": "VR (24 casques Meta Quest), CISCO simulations, drones topographiques",
+        "budget_innovation": "2,8% du budget",
+        "score_estime": "82/100"
+      },
+      {
+        "organisation": "UVCI CI",
+        "type": "National — leader EdTech",
+        "fab_lab": "Innovation Lab 120 m² (sans certification MIT)",
+        "startups_incubees": "4 actives (2022-2024)",
+        "partenariats_r_d": "3 actifs (Orange CI, MTN CI, NSIA)",
+        "technologies_emergentes": "IA générative (Mistral Large), adaptive learning XGBoost, micro-learning mobile",
+        "budget_innovation": "1,5% du budget",
+        "score_estime": "74/100"
+      },
+      {
+        "organisation": "UFHB (Université FHB Abidjan)",
+        "type": "National — université publique",
+        "fab_lab": "Non",
+        "startups_incubees": "1 (programme DGE CI non lié à l'UFHB)",
+        "partenariats_r_d": "1 (CNTIG CI — données géographiques, recherche académique)",
+        "technologies_emergentes": "Aucune en production pédagogique",
+        "budget_innovation": "0,3% du budget",
+        "score_estime": "18/100"
+      },
+      {
+        "organisation": "Ashesi University (Ghana)",
+        "type": "Régional — référence Afrique de l'Ouest",
+        "fab_lab": "Oui (Fab Lab + Maker Space 800 m²)",
+        "startups_incubees": "22 actives (programme Ashesi Venture Incubator)",
+        "partenariats_r_d": "8 actifs (entreprises ghanéennes et multinationales)",
+        "technologies_emergentes": "VR, IA, drones (curriculum intégré en ingénierie et CS)",
+        "budget_innovation": "4,2% du budget",
+        "score_estime": "88/100"
+      },
+      {
+        "organisation": "MIT Media Lab (USA)",
+        "type": "International — référence mondiale",
+        "fab_lab": "Oui (MIT FabLab — créateur du concept mondial)",
+        "startups_incubees": "50+ par an (MIT Sandbox + MIT delta v)",
+        "partenariats_r_d": "200+ (multinationales, agences gouvernementales, ONG)",
+        "technologies_emergentes": "Toutes technologies émergentes en recherche de pointe",
+        "budget_innovation": "35% du budget (mission R&D principale)",
+        "score_estime": "99/100"
+      }
+    ]
+  },
+  "bonnes_pratiques": [
+    {
+      "pratique": "Poser des défis industriels très spécifiques lors des hackathons EdTech CI",
+      "description": "Les meilleurs hackathons EdTech CI ne demandent pas 'comment améliorer l'éducation' mais 'comment réduire le taux de décrochage sur les modules mathématiques UVCI CI chez les étudiants 3G ruraux en utilisant uniquement des SMS et des notifications push'. La spécificité génère des innovations adaptées au contexte CI.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Utiliser le financement FDFP CI pour amorcer les startups étudiantes incubées",
+      "description": "Le FDFP CI finance les formations professionnelles, mais des montages créatifs (programme de formation associé à l'incubation, formation des fondateurs pendant l'incubation) permettent d'accéder à 3-5 M FCFA par startup incubée. Agrément FDFP CI de l'établissement obligatoire.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Commencer l'expérimentation VR sur les formations à fort risque (chimie, HTA, électricité)",
+      "description": "Le ROI de la VR est maximal sur les formations pratiques où les erreurs en présentiel sont dangereuses (manipulation réactifs chimiques, HTA, travaux électriques BT/MT). INPHB : +22% résultats évaluation HTA avec VR vs. formation traditionnelle. Le coût amorti sur 3-4 ans pour 50+ étudiants/an est positif dès l'année 2.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Formaliser les partenariats industriels avec des conventions protégeant les droits OAPI",
+      "description": "Les projets de recherche appliquée avec les entreprises CI doivent être encadrés par une convention de partenariat définissant clairement la propriété intellectuelle (OAPI) des résultats : qui détient les brevets, dans quelles conditions l'entreprise peut commercialiser, quelles sont les obligations de publication académique.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Documenter systématiquement les innovations pour les dossiers CAMES et MESRS CI",
+      "description": "Les brevets OAPI déposés, les startups incubées, les partenariats R&D et les expérimentations pédagogiques documentées sont des actifs pour les accréditations CAMES et MESRS CI. Un registre de l'innovation (publications, brevets, startups, partenariats) tenu à jour facilite ces dossiers et renforce l'image de l'établissement.",
+      "priorite": "Moyenne"
+    }
+  ],
+  "pieges_a_eviter": [
+    {
+      "piege": "Lancer un hackathon sans suivi des projets gagnants",
+      "consequence": "Un hackathon sans programme de suivi (incubation, mentorat, financement) génère de l'enthousiasme à court terme mais 0 impact durable. 80% des projets gagnants de hackathons sans suivi sont abandonnés dans les 3 mois. L'UFHB a organisé 2 hackathons en 2021-2022 sans suivi — aucun projet n'a survécu.",
+      "recommandation": "Prévoir dès la conception du hackathon un programme de suivi de 6-12 mois pour les 3-5 meilleures équipes, avec budget et mentorat alloués"
+    },
+    {
+      "piege": "Déployer la VR sans infrastructure Wi-Fi suffisante",
+      "consequence": "Les casques VR (Meta Quest, HTC Vive) nécessitent un Wi-Fi 5 GHz stable à faible latence pour le mode streaming. Sur un réseau Wi-Fi 2,4 GHz partagé avec 500 étudiants, les latences rendent l'expérience inutilisable et génèrent des nausées. Coût de l'erreur : casques inutilisés, budget perdu.",
+      "recommandation": "Installer un SSID dédié Wi-Fi 6 (5 GHz, 160 MHz) pour la salle VR avant tout achat de casques. Budget Wi-Fi = 30% du budget VR total."
+    },
+    {
+      "piege": "Présenter l'IA générative comme la solution à tous les problèmes pédagogiques",
+      "consequence": "L'APDP CI impose une validation humaine obligatoire pour toutes les décisions finales basées sur l'IA (orientation, notation, admissibilité). Un tuteur IA sans supervision humaine exposé comme solution complète viole cette règle et crée un risque légal. De plus, les hallucinations des LLM sur des contenus techniques CI-spécifiques peuvent induire les apprenants en erreur.",
+      "recommandation": "Positionner l'IA générative comme outil d'assistance au tuteur humain, pas comme remplacement. Mettre en place un processus de révision humaine systématique sur les contenus IA générés"
+    },
+    {
+      "piege": "Ignorer la propriété intellectuelle des projets étudiants incubés",
+      "consequence": "Sans convention claire sur la propriété intellectuelle, des conflits émergent entre l'établissement (qui a fourni l'infrastructure), les tuteurs/mentors (qui ont co-développé l'idée) et les étudiants fondateurs. Ces conflits peuvent bloquer la levée de fonds ou créer des litiges OAPI coûteux.",
+      "recommandation": "Faire signer une convention de propriété intellectuelle claire dès l'entrée en incubation : propriété IP à 100% aux étudiants fondateurs, licence d'utilisation académique non exclusive pour l'établissement"
+    }
+  ],
+  "roadmap": {
+    "titre": "Roadmap innovation — établissement d'enseignement CI",
+    "phases": [
+      {
+        "phase": "Phase 1 — Premiers jalons (Mois 1-6)",
+        "actions": [
+          "Désignation d'un Directeur Innovation (enseignant-chercheur + professionnel CI en binôme)",
+          "Organisation du premier hackathon EdTech CI (48h, 3 défis industriels, 100 participants minimum)",
+          "Lancement d'un espace de prototypage basique (imprimante 3D, électronique, posters de design thinking)",
+          "Identification et signature de 2 premières conventions de partenariat R&D avec entreprises CI"
+        ],
+        "budget_indicatif": "3 - 8 M FCFA (hackathon + espace prototypage + conventions R&D)"
+      },
+      {
+        "phase": "Phase 2 — Incubateur et expérimentation (Mois 7-18)",
+        "actions": [
+          "Lancement programme incubation 12 mois (3-5 équipes post-hackathon, avec financement FDFP CI)",
+          "Pilote VR sur 1 formation à fort risque (INPHB modèle) ou IA générative tutorat (UVCI CI modèle)",
+          "Module entrepreneuriat intégré dans 3+ programmes diplômants (20h minimum)",
+          "Enregistrement des innovations à l'OAPI (brevets, logiciels éducatifs)"
+        ],
+        "budget_indicatif": "8 - 20 M FCFA (incubateur + VR pilote + modules entrepreneuriat)"
+      },
+      {
+        "phase": "Phase 3 — Écosystème (Mois 19-36)",
+        "actions": [
+          "Expansion Fab Lab ou Innovation Lab vers la certification MIT FabLab Network (si pertinent)",
+          "5+ partenariats R&D actifs avec industries CI, incluant 1 multinationale",
+          "Programme de pre-seed (10-25 M FCFA) pour les startups les plus prometteuses",
+          "Rapport innovation annuel pour accréditations CAMES et MESRS CI (brevets, startups, partenariats)"
+        ],
+        "budget_indicatif": "20 - 60 M FCFA (expansion Fab Lab + pre-seed + écosystème)"
+      }
+    ]
+  },
+  "ressources": {
+    "formations": [
+      "MIT FabLab Network — certification Fab Lab et formation fab managers (mit.edu/fablab)",
+      "FDFP CI — programmes financement innovation formation (via montages incubation + formation)",
+      "Google.org Africa — programme financement EdTech innovation (50 M USD Afrique subsaharienne)",
+      "AFD — Facilité d'Innovation Sectorielle pour les ODD, incluant l'éducation numérique"
+    ],
+    "outils_recommandes": [
+      "Meta Quest 3 — casques VR formation (prix grand public, SDK Unity/Unreal Engine)",
+      "Mistral Large (via API) — IA générative tutorat et génération d'exercices (APDP CI conforme si hébergement EU)",
+      "Arduino + Raspberry Pi — prototypage électronique accessible pour Fab Lab CI",
+      "Notion ou Airtable — gestion portefeuille projets incubés et suivi hackathons"
+    ],
+    "references_reglementaires": [
+      "OAPI — protection propriété intellectuelle innovations et logiciels éducatifs (oapi.int)",
+      "FDFP CI — guide montages financement formation-incubation (fdfp.ci)",
+      "CAMES — critères innovation et recherche pour accréditations (commission.cames.org)",
+      "MESRS CI — programme IQN et indicateurs innovation (mesrs.ci)",
+      "APDP CI — Loi 2013-450 (gouvernance IA, validation humaine, données recherche apprenants)"
+    ]
+  },
+  "ai_context": {
+    "scoring_dimension": "Maturité des pratiques d'innovation dans les établissements d'enseignement",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune activité d'innovation formalisée : enseignement exclusivement transmissif, aucun partenariat industriel, aucun incubateur, aucune expérimentation technologique, budget innovation nul.",
+      "score_21_to_40": "Quelques initiatives ponctuelles portées par des enseignants individuels, hackathon ou concours annuel non structuré, 1-2 partenariats industriels informels (stages), aucun incubateur formalisé.",
+      "score_41_to_60": "Programme innovation avec budget dédié (1-2%), hackathon EdTech annuel avec jury industriel CI, 1-2 partenariats R&D avec conventions, espace de prototypage basique, module entrepreneuriat dans les cursus.",
+      "score_61_to_80": "Innovation Lab ou Fab Lab opérationnel, 3-5 startups incubées actives, 3+ partenariats R&D entreprises CI, technologies émergentes (VR ou IA) en production sur 10%+ des programmes, brevets OAPI déposés.",
+      "score_81_to_100": "Hub régional : 10+ startups incubées, 5+ brevets OAPI, 5+ partenariats R&D dont multinationales, Fab Lab certifié MIT, 20%+ des programmes avec technologies émergentes, reconnaissance CAMES centre d'excellence innovation."
+    },
+    "questions_discriminantes": [
+      "Disposez-vous d'un programme d'incubation formalisé pour les startups étudiantes (espace, mentorat, financement) ?",
+      "Organisez-vous des hackathons ou concours d'innovation avec des défis posés par des entreprises ivoiriennes réelles ?",
+      "Avez-vous des conventions de partenariat R&D actives avec des entreprises CI impliquant un travail sur des données réelles ?",
+      "Des technologies émergentes (VR/AR, IA générative, adaptive learning) sont-elles utilisées en production dans au moins 10% de vos programmes diplômants ?",
+      "Votre budget innovation/R&D représente-t-il au moins 2% de votre budget de fonctionnement annuel ?"
+    ],
+    "signaux_avances": [
+      "Startups issues de l'incubateur ayant levé des fonds auprès d'investisseurs CI ou régionaux (Bridge CI, Partech Africa)",
+      "Fab Lab certifié MIT FabLab Network permettant l'accès au réseau mondial de 2 000+ labs",
+      "VR ou IA générative déployée en production pédagogique avec mesure d'impact (avant/après évaluation)",
+      "Brevets OAPI déposés sur des innovations pédagogiques ou technologiques issues de la recherche de l'établissement",
+      "Reconnaissance CAMES comme centre d'excellence innovation pour les accréditations de formations hybrides"
+    ]
+  }
+}

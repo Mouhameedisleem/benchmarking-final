@@ -1,0 +1,254 @@
+{
+  "meta": {
+    "axis": "IT_DATA",
+    "sub_axis": "Data",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Data Mesh bancaire — décentralisation des données par domaine métier",
+      "description": "Les banques leaders abandonnent le data warehouse centralisé monolithique au profit d'une architecture Data Mesh : chaque domaine (Crédit, Conformité, Marketing, Risque) est propriétaire de ses données et les expose comme produits de données aux autres domaines.",
+      "impact_level": "Élevé",
+      "horizon": "36-60 mois",
+      "adoption_rate": "5 % des grandes banques africaines expérimentent le Data Mesh (Gartner 2024)",
+      "source": "Gartner Data Architecture Banking Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Open Data bancaire — exploitation des données BCEAO pour le benchmarking",
+      "description": "La BCEAO publie des données agrégées sur les banques UEMOA (ratios prudentiels, volumes de crédit, dépôts). Les banques qui exploitent ces données open data pour se benchmarker contre leurs pairs et identifier les opportunités de marché gagnent un avantage concurrentiel analytique.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "30 % des banques africaines exploitent les données BCEAO de manière analytique (BCEAO 2024)",
+      "source": "BCEAO Données Statistiques Bancaires UEMOA 2024",
+      "year": "2024"
+    },
+    {
+      "title": "IA générative pour l'analyse documentaire bancaire — réduction délai instruction",
+      "description": "Les LLM (Claude, GPT-4) permettent l'analyse automatique des documents de demande de crédit (bilans, déclarations fiscales, business plans) en quelques secondes, réduisant le délai d'instruction de crédit de 10 jours à 2 heures.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "35 % des banques africaines pilotent un use case GenAI (McKinsey Africa 2024)",
+      "source": "McKinsey State of AI in Banking Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Données clients temps réel — Customer 360 unifié multi-canaux",
+      "description": "Les banques leaders construisent un profil Client 360 temps réel, consolidant les données du core banking, du CRM, des canaux digitaux et des partenaires externes (mobile money, données comportementales). Ce profil unifié alimente la personnalisation, la détection de fraude et le scoring crédit.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "20 % des banques africaines ont un Customer 360 opérationnel (IDC Africa 2024)",
+      "source": "IDC Africa Customer Data Banking 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Data Lakehouse / Plateforme analytique unifiée",
+      "category": "Infrastructure data bancaire moderne",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Databricks for Banking", "Snowflake Financial Services", "Microsoft Fabric (ex-Synapse)", "Google BigQuery FSI", "Apache Iceberg + Delta Lake"]
+    },
+    {
+      "name": "CDP — Customer Data Platform bancaire",
+      "category": "Profil client 360 unifié",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Salesforce Data Cloud", "Adobe Real-Time CDP", "Segment (Twilio)", "mParticle", "Tealium AudienceStream"]
+    },
+    {
+      "name": "MLOps — Production et gouvernance des modèles ML",
+      "category": "Industrialisation des modèles IA bancaires",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["MLflow (open-source)", "SAS Model Manager", "DataRobot MLOps", "AWS SageMaker", "Azure Machine Learning"]
+    },
+    {
+      "name": "IA Générative pour le traitement documentaire",
+      "category": "Analyse automatique des documents bancaires",
+      "maturity_stage": "Émergence en Afrique",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Anthropic Claude API (analyse documents)", "OpenAI GPT-4 (extraction données)", "Google Document AI", "AWS Textract", "ABBYY FlexiCapture"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Standard Chartered Bank CI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Plateforme analytique SC Ventures déployée en CI, Customer 360 alimenté par les données core banking + CRM + canaux digitaux, modèles ML de churn client en production",
+        "differentiator": "Accès à la plateforme data mondiale Standard Chartered avec 500+ modèles ML pré-construits adaptables au contexte CI — avantage analytique structurel",
+        "source": "Standard Chartered CI Rapport Annuel 2023 / SC Ventures Data Report"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Ecobank Data Hub : lakehouse centralisé traitant 2 Mds de transactions/mois, Customer 360 sur 33 filiales, modèles ML crédit et fraude en production, pilote IA générative analyse documents",
+        "differentiator": "Ecobank Data Hub est le plus grand lac de données bancaire d'Afrique subsaharienne — 10 ans de données transactionnelles de 33 pays pour les modèles ML panafricains",
+        "source": "Ecobank Technology Report 2023 / Ecobank Data Strategy Annual Report"
+      },
+      {
+        "organisation": "Standard Bank",
+        "country": "Afrique du Sud / Pan-Afrique",
+        "key_practice": "Snowflake Data Cloud déployé, Customer 360 temps réel, 200+ modèles ML en production supervisés par MLops, people analytics avancé, pilote GenAI analyse crédit corporate",
+        "differentiator": "Standard Bank est le groupe bancaire africain avec le plus grand nombre de modèles ML en production supervisés (200+) — MLOps mature permettant une gouvernance et un retraining continu",
+        "source": "Standard Bank Annual Report 2023 / Snowflake Standard Bank Case Study"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "JPMorgan Chase",
+        "country": "USA",
+        "key_practice": "400+ modèles ML en production, 50 000 data scientists et ingénieurs, analyse de 300M clients en temps réel, pilote LLM propriétaire pour analyse de documents juridiques et financiers",
+        "differentiator": "JPMorgan IndexGPT : LLM propriétaire pour l'analyse financière — première grande banque à avoir développé son propre LLM dédié aux services financiers, non dépendant d'OpenAI",
+        "source": "JPMorgan Annual Report 2023 / JPMorgan IndexGPT Patent 2023"
+      },
+      {
+        "organisation": "Nubank",
+        "country": "Brésil",
+        "key_practice": "100 % des décisions de crédit automatisées par ML, scoring basé sur 2 000 variables comportementales, retraining des modèles hebdomadaire via MLOps, taux de défaut 50 % inférieur aux concurrents",
+        "differentiator": "Nubank est le cas d'école mondial du ML bancaire natif : une banque conçue dès le départ autour de la data science — pas de legacy à contourner, ML dans chaque décision",
+        "source": "Nubank Annual Report 2023 / McKinsey Nubank Data Strategy"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Données silotées dans le core banking. Pas de data warehouse. Rapports produits manuellement. Aucun modèle ML. Pas de gouvernance données. IA générative absente.",
+    "level_2_developing": "Data warehouse basique opérationnel. Quelques rapports analytiques. Pas de Customer 360. Modèles statistiques simples (régression). Pas de MLOps. Gouvernance données absente.",
+    "level_3_defined": "Data warehouse central alimentant les reportings clés. Customer 360 partiel. Premiers modèles ML en pilote (scoring crédit, churn). Catalogue de données initié. Gouvernance données en cours.",
+    "level_4_managed": "Data Lakehouse opérationnel. Customer 360 temps réel. 5-10 modèles ML en production avec MLOps. Pilote IA générative (analyse documents crédit). Data Catalog actif. Gouvernance ML modèles critiques.",
+    "level_5_optimizing": "Data Mesh émergent. 20+ modèles ML en production (crédit, fraude, churn, recommandation). GenAI analyse documentaire en production. Customer 360 hyper-personnalisation. MLOps continu. Données as a Product."
+  },
+
+  "regulations": [
+    {
+      "name": "DRIF BCEAO — Dispositif de Remontée des Informations Financières",
+      "issuing_body": "BCEAO",
+      "scope": "Toutes les banques UEMOA",
+      "key_requirement": "Remontée mensuelle de 40+ états financiers et prudentiels en format standardisé BCEAO, délais stricts (fin de mois + 15 jours ouvrés), qualité des données certifiée par la direction",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Loi CI sur la protection des données (ARTCI) — données clients bancaires",
+      "issuing_body": "ARTCI / République de Côte d'Ivoire",
+      "scope": "Banques collectant et traitant des données personnelles de clients ivoiriens",
+      "key_requirement": "Consentement documenté pour l'utilisation analytique des données clients, droit d'accès et d'opposition, durée de conservation limitée à la durée nécessaire, déclaration à l'ARTCI",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.artci.ci"
+    },
+    {
+      "name": "Réglementation BCEAO sur les modèles de scoring crédit algorithmique",
+      "issuing_body": "BCEAO / Comité de Bâle (Bâle III/IV)",
+      "scope": "Banques utilisant des algorithmes ML pour les décisions de crédit",
+      "key_requirement": "Validation indépendante des modèles de scoring avant mise en production, backtesting trimestriel, explicabilité des décisions de refus de crédit, supervision par le Risk Management",
+      "compliance_deadline": "Bâle III en vigueur, Bâle IV en intégration UEMOA",
+      "source_url": "https://www.bis.org/bcbs"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Biais algorithmique dans le scoring crédit — discrimination systémique non détectée",
+      "description": "Un modèle ML de scoring crédit entraîné sur des données historiques bancaires peut reproduire et amplifier des biais systémiques (discrimination par zone géographique, profession, genre). Sans audit de fairness, ces biais passent inaperçus jusqu'à un contentieux client ou une inspection BCEAO.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée sans gouvernance IA",
+      "mitigation": "Implémenter des métriques de fairness (parité démographique, égalité des chances) dans le pipeline MLOps de chaque modèle de crédit, avec audit semestriel par le Risk Management et rapport au Comité des Risques."
+    },
+    {
+      "title": "Data quality — modèles ML erronés sur données corrompues du core banking",
+      "description": "Les données bancaires UEMOA contiennent souvent des doublons clients (10-30 %), des champs manquants (date de naissance, secteur d'activité) et des incohérences entre core banking et CRM. Des modèles ML entraînés sur ces données produiront des prédictions erronées avec un impact direct sur les décisions de crédit.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée en UEMOA",
+      "mitigation": "Lancer un programme de Master Data Management avant tout projet ML, mesurer et publier mensuellement un score de qualité des données par domaine, et définir des seuils de qualité minimum en dessous desquels les modèles ne sont pas mis en production."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "IA générative analyse crédit — réduire le délai d'instruction de 10 jours à 2 heures",
+      "description": "Utiliser un LLM (Claude API, GPT-4) pour analyser automatiquement les bilans, comptes de résultats et business plans des dossiers de crédit PME réduit le délai d'instruction de 10 jours à 2-4 heures. Un analyste humain valide ensuite la synthèse IA — gain de productivité de 5-8× par analyste crédit.",
+      "impact_level": "Très élevé",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Customer 360 pour la personnalisation — multiplier le taux de conversion produit par 3",
+      "description": "Une banque avec un Customer 360 unifié peut proposer le bon produit au bon moment au bon client (crédit pré-approuvé le jour du salaire, assurance auto après détection d'achat automobile dans les transactions). Le taux de conversion des offres proactives est 3-5× supérieur aux campagnes de masse.",
+      "impact_level": "Très élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Partenariat technologique",
+      "acquirer_or_investor": "Standard Bank Africa",
+      "target": "Snowflake — plateforme data cloud pour l'analytique bancaire panafricaine",
+      "amount": "Accord cadre pluriannuel (multi-M$)",
+      "date": "2022",
+      "strategic_rationale": "Déployer Snowflake Data Cloud pour consolider les données de 20 filiales africaines en une seule plateforme analytique, permettant le ML panafricain et les rapports groupe en temps réel",
+      "source": "Snowflake Standard Bank Case Study 2023 / Standard Bank Annual Report 2023"
+    },
+    {
+      "type": "Partenariat IA",
+      "acquirer_or_investor": "Attijariwafa Bank",
+      "target": "Microsoft Azure OpenAI Services — IA générative pour les modèles de risque",
+      "amount": "Accord partenariat technologique Microsoft",
+      "date": "2023",
+      "strategic_rationale": "Intégrer les LLM Azure OpenAI dans les processus d'analyse de risque crédit et de conformité AML/KYC pour réduire les délais d'instruction et améliorer la qualité des décisions",
+      "source": "Microsoft Africa Case Study Attijariwafa 2023 / Attijariwafa Digital Report 2023"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Safaricom / M-Pesa — M-Shwari et Fuliza Credit Scoring ML",
+    "pays": "Kenya / Afrique de l'Est",
+    "technologie": "Machine Learning sur données mobile money — 35 millions de clients avec crédit en < 10 secondes",
+    "description": "Safaricom a révolutionné le crédit bancaire au Kenya en utilisant les données M-Pesa pour un scoring ML alternatif. Le modèle M-Shwari (2012) puis Fuliza (2019) analysent 12+ variables comportementales (fréquence transactions, solde moyen, régularité des paiements, comportement de remboursement) pour attribuer instantanément une limite de crédit. En 2023 : 35 millions de Kenyans ont accès au crédit Fuliza, décision en < 10 secondes, taux de défaut de 3 % (vs 15 % pour le micro-crédit traditionnel), 200 M$ de revenus annuels générés sans agence physique. Le modèle est retrainé hebdomadairement via MLOps pour adapter les scores aux comportements clients changeants. Ce cas prouve qu'en Afrique, les données mobile money valent mieux que les données bancaires traditionnelles pour le scoring crédit.",
+    "resultats": "35M clients · Crédit < 10s · Taux défaut 3 % vs 15 % traditionnel · 200 M$ revenus/an · Retraining hebdomadaire · 0 agence physique",
+    "source": "Safaricom Annual Report 2023 / GSMA Mobile Money Report 2024 / McKinsey Africa FinTech Lending",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité data — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "Data Lakehouse ou DWH central opérationnel", "Customer 360 temps réel", "Modèles ML en production (> 3)", "MLOps pour gouvernance des modèles", "IA générative analyse documentaire pilotée"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "✗", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La maturité data est le différenciateur le plus durable entre les banques UEMOA. Les données transactionnelles accumulées depuis 10-20 ans sont une ressource stratégique inexploitée. La plupart des banques ivoiriennes ont des années de données dans leur core banking mais aucun modèle ML en production. L'IA générative pour l'analyse de documents de crédit est la quickwin data la plus accessible — ROI en 6-12 mois, sans besoin de data warehouse préalable.",
+    "maturity_max_description": "Data Lakehouse central alimenté par le core banking, le CRM et les partenaires externes. Customer 360 temps réel avec hyper-personnalisation IA. 20+ modèles ML en production (crédit, fraude, churn, recommandation, risque). MLOps continu avec retraining automatique et audit de fairness. IA générative pour l'analyse documentaire crédit en production. Données as a Product avec Data Mesh émergent.",
+    "scoring_rubric": {
+      "score_1_to_20": "Données silotées dans le core banking. Pas de DWH. Rapports manuels. Pas de ML. Pas de gouvernance données.",
+      "score_21_to_40": "Data warehouse basique. Rapports analytiques. Pas de Customer 360. Modèles statistiques simples. Pas de MLOps.",
+      "score_41_to_60": "DWH central. Customer 360 partiel. Premiers modèles ML en pilote. Catalogue données initié. Gouvernance en cours.",
+      "score_61_to_80": "Data Lakehouse. Customer 360 temps réel. 5-10 modèles ML prod. MLOps. Pilote GenAI. Data Catalog actif.",
+      "score_81_to_100": "Data Mesh. 20+ modèles ML. GenAI production. Hyper-personnalisation IA. MLOps continu. Données as a Product."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur la maturité de sa stratégie data dans le contexte bancaire UEMOA. Analyse l'existence d'un data lakehouse ou data warehouse central, la disponibilité d'un profil client 360 temps réel, le nombre de modèles ML en production, l'utilisation de l'IA générative pour l'analyse documentaire et la gouvernance MLOps des modèles.",
+    "key_questions_for_llm": [
+      "Un Data Warehouse ou Data Lakehouse central consolide-t-il les données du core banking, du CRM, des canaux digitaux et des partenaires externes en une source unique de vérité ?",
+      "Un profil Client 360 temps réel est-il disponible, unifiant toutes les interactions du client avec la banque sur tous les canaux pour alimenter la personnalisation et la détection de fraude ?",
+      "Des modèles de Machine Learning sont-ils déployés en production (pas seulement en pilote) pour des cas d'usage bancaires clés comme le scoring crédit, la détection de fraude ou la prédiction de churn ?",
+      "Un dispositif MLOps est-il en place pour superviser les modèles ML en production, déclencher le retraining automatique et auditer l'équité et la performance des modèles ?",
+      "L'IA générative est-elle utilisée ou pilotée pour accélérer l'analyse de documents bancaires (bilans, contrats, dossiers de crédit, documents KYC) et réduire les délais d'instruction ?"
+    ]
+  }
+}

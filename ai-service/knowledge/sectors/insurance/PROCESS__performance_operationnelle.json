@@ -1,0 +1,56 @@
+{
+  "meta": { "axis": "PROCESS", "sub_axis": "Performance opérationnelle", "sector": "assurance", "language": "fr", "version": "1.0", "last_updated": "2026-05" },
+  "trends": [
+    { "title": "Ratio combiné — l'indicateur de performance opérationnelle clé des assureurs UEMOA", "description": "Le ratio combiné (sinistres + frais de gestion / primes) des assureurs CIMA se situe entre 95 % et 110 % pour les acteurs IARD, signifiant que certains perdent de l'argent sur le seul résultat technique. La digitalisation (réduction des frais de gestion, meilleure sélection des risques) est le levier principal pour descendre sous 95 %.", "impact_level": "Très élevé", "horizon": "24-36 mois", "adoption_rate": "Ratio combiné moyen UEMOA IARD : 98 % (FANAF 2024)", "source": "FANAF Rapport Statistiques 2024 / Swiss Re Africa 2024", "year": "2024" },
+    { "title": "Lean Insurance — réduction des coûts de gestion de 20-30 % sans réduction d'effectifs", "description": "Le Lean Management appliqué aux processus d'assurance identifie les gaspillages (retravaux, attentes, sur-traitement) et les élimine. Les assureurs africains qui ont appliqué le Lean ont réduit leurs frais de gestion de 20-30 % en 18-24 mois.", "impact_level": "Élevé", "horizon": "12-24 mois", "adoption_rate": "10 % des assureurs africains ont un programme Lean formalisé (EY Africa 2024)", "source": "EY Africa Insurance Operations 2024", "year": "2024" }
+  ],
+  "key_technologies": [
+    { "name": "Tableau de bord performance opérationnelle assurance", "category": "Pilotage des KPIs", "maturity_stage": "Mature", "adoption_in_sector": "Faible en UEMOA", "leading_vendors": ["Power BI", "Tableau", "Qlik Sense", "MicroStrategy Insurance"] },
+    { "name": "Actuariat digital et modélisation des risques", "category": "Optimisation technique", "maturity_stage": "Mature", "adoption_in_sector": "Moyenne dans les grands assureurs UEMOA", "leading_vendors": ["Milliman MG-ALFA", "Towers Watson ResQ", "SAS Actuarial", "Emblem Earnix"] }
+  ],
+  "market_leaders": {
+    "national": [{ "organisation": "NSIA Groupe", "country": "Côte d'Ivoire / Pan-UEMOA", "key_practice": "Tableau de bord KPIs temps réel avec 15 indicateurs de performance opérationnelle. Ratio combiné ramené de 103 % à 94 % en 3 ans via la digitalisation et la sélection des risques.", "differentiator": "NSIA affiche le meilleur ratio combiné IARD du marché ivoirien en 2023 (93,5 %) grâce à sa maturité digitale en sélection des risques", "source": "NSIA Groupe Rapport Annuel 2023" }],
+    "regional": [{ "organisation": "Old Mutual Africa", "country": "Afrique du Sud / Pan-Afrique", "key_practice": "Programme d'excellence opérationnelle avec benchmarking mensuel des 15 filiales africaines. Lean Insurance déployé dans 8 pays. Ratio sinistres/primes réduit de 68 % à 61 % en 5 ans.", "differentiator": "Old Mutual Africa a le ratio frais de gestion le plus bas d'Afrique subsaharienne (18 %) grâce à la digitalisation et à la mutualisation des fonctions support", "source": "Old Mutual Annual Report 2023" }],
+    "international": [{ "organisation": "Munich Re", "country": "Allemagne / Mondial", "key_practice": "Ratio combiné cible < 95 %. 2 Mds€ investis en technologie 2021-2025. IA pour la tarification des risques complexes. Data analytics pour l'optimisation du portefeuille réassurance.", "differentiator": "Munich Re maintient un ratio combiné de 86 % depuis 5 ans — le meilleur du secteur réassurance mondial — grâce à sa supériorité en modélisation des risques par IA", "source": "Munich Re Annual Report 2023" }]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Aucun KPI de performance formalisé. Ratio combiné > 105 %. Reporting manuel mensuel. Pas de benchmarking.",
+    "level_2_developing": "Quelques KPIs financiers suivis trimestriellement. Ratio combiné 100-105 %. Reporting partiel automatisé.",
+    "level_3_defined": "KPIs opérationnels définis et suivis mensuellement. Ratio combiné 95-100 %. Tableau de bord direction. Benchmarking sectoriel annuel.",
+    "level_4_managed": "Dashboard temps réel avec 15+ KPIs. Ratio combiné < 95 %. Lean actif. Benchmarking mensuel. Actuariat digital.",
+    "level_5_optimizing": "Ratio combiné < 90 %. Prédiction des sinistres par IA. Excellence opérationnelle institutionnalisée. Benchmarking continu."
+  },
+  "regulations": [{ "name": "Marge de solvabilité CIMA — ratio minimum de capital", "issuing_body": "CIMA", "scope": "Tous assureurs CIMA", "key_requirement": "Capital minimum de 1 Md FCFA pour les assureurs vie et IARD. Ratio de solvabilité minimum (actifs couvrant les engagements techniques). Reporting trimestriel à la CIMA.", "compliance_deadline": "En vigueur — révision en cours vers Solvabilité 2 adapté CIMA", "source_url": "https://www.cima-afrique.org" }],
+  "risks": [{ "title": "Sous-provisionnement technique — risque systémique dans le secteur UEMOA", "description": "La CIMA a identifié dans son rapport 2023 que 30 % des assureurs membres présentent des insuffisances de provisionnement technique. Un provisionnement insuffisant améliore artificiellement le ratio combiné à court terme mais met en danger la solvabilité à long terme.", "severity": "Très élevé", "likelihood": "Élevée", "mitigation": "Actuariat digital rigoureux. Audit externe annuel des provisions. Reporting CIMA en temps réel. Alerte automatique si provisions < seuil réglementaire." }],
+  "opportunities": [{ "title": "Digitalisation du reporting réglementaire CIMA — conformité automatique et gain de temps", "description": "La production des états réglementaires CIMA (États C, I, R) est encore largement manuelle dans les assureurs UEMOA. L'automatisation de ce reporting libère 20-30 % du temps des équipes finance et conformité pour des analyses à valeur ajoutée.", "impact_level": "Élevé", "time_to_value": "6-12 mois", "prerequisite_maturity": "Niveau 2" }],
+  "ma_and_fundraising": [],
+  "zoom_case_study": { "entreprise": "Old Mutual Africa — Ratio frais de gestion 18 % : le meilleur d'Afrique subsaharienne", "pays": "Afrique du Sud / Pan-Afrique", "technologie": "Lean Management + digitalisation + mutualisation des fonctions support sur 15 filiales", "description": "Old Mutual Africa a mené entre 2019 et 2023 un programme d'excellence opérationnelle sur ses 15 filiales africaines. Le programme comportait 3 axes : (1) Lean Insurance — cartographie et élimination des gaspillages dans les processus sinistres et souscription, (2) mutualisation des fonctions support (IT, RH, juridique, actuariat) au niveau groupe pour réduire la duplication, (3) digitalisation des agents avec une application mobile pour réduire les coûts de distribution. Résultat : ratio frais de gestion ramené de 26 % à 18 % en 4 ans — le plus bas d'Afrique subsaharienne. Le ratio sinistres/primes est passé de 68 % à 61 %. Ces 13 points d'amélioration du ratio combiné représentent 150 M$ de bénéfice technique supplémentaire annuel.", "resultats": "Frais gestion 26 % → 18 % · Ratio S/P 68 % → 61 % · 150 M$/an bénéfice technique · Lean déployé 8 pays · 15 filiales benchmarkées mensuellement", "source": "Old Mutual Annual Report 2023 / McKinsey Old Mutual Case Study 2023", "annee": "2023" },
+  "comparatif_organisations": {
+    "titre": "Maturité performance opérationnelle — benchmark assureurs CIMA/UEMOA",
+    "colonnes": ["Organisation", "Ratio combiné < 95 %", "Dashboard KPIs temps réel", "Programme Lean actif", "Reporting CIMA automatisé", "Actuariat digital"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "Partiel", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "La performance opérationnelle des assureurs UEMOA est contrainte par des ratios combinés élevés (95-110 %) qui limitent la rentabilité et la capacité d'investissement digital. La digitalisation des processus (STP, RPA, IA anti-fraude) et le Lean Management sont les deux leviers les plus accessibles pour améliorer structurellement le ratio combiné. La solvabilité CIMA impose par ailleurs une discipline de provisionnement qui nécessite un actuariat digital rigoureux.",
+    "maturity_max_description": "Ratio combiné inférieur à 90 %. Dashboard temps réel avec 15+ KPIs opérationnels. Programme Lean Insurance institutionnalisé. Reporting réglementaire CIMA entièrement automatisé. Actuariat digital avec modèles prédictifs de sinistres. Benchmarking mensuel des performances vs leaders africains.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucun KPI formalisé. Ratio combiné > 105 %. Reporting manuel. Pas de benchmarking.",
+      "score_21_to_40": "KPIs financiers trimestriels. Ratio 100-105 %. Reporting partiel.",
+      "score_41_to_60": "KPIs mensuels. Ratio 95-100 %. Dashboard direction. Benchmarking annuel.",
+      "score_61_to_80": "Dashboard temps réel. Ratio < 95 %. Lean actif. Reporting CIMA semi-auto.",
+      "score_81_to_100": "Ratio < 90 %. IA prédictive. Excellence opérationnelle. Benchmarking continu."
+    },
+    "prompt_injection_context": "Cette compagnie d'assurance est évaluée sur sa performance opérationnelle dans le contexte CIMA/UEMOA. Analyse le ratio combiné, l'existence d'un tableau de bord de KPIs opérationnels, le programme Lean, l'automatisation du reporting CIMA et la maturité actuarielle.",
+    "key_questions_for_llm": [
+      "Le ratio combiné (sinistres + frais de gestion / primes) est-il inférieur à 95 % ?",
+      "Un tableau de bord de performance opérationnelle avec des KPIs temps réel est-il utilisé par la direction ?",
+      "Un programme Lean ou d'excellence opérationnelle est-il actif pour réduire les coûts de gestion ?",
+      "Le reporting réglementaire CIMA est-il automatisé ou encore principalement manuel ?",
+      "L'actuariat est-il digitalisé avec des modèles prédictifs pour la tarification et le provisionnement ?"
+    ]
+  }
+}

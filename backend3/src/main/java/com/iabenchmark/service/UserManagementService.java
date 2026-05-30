@@ -13,6 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class UserManagementService {
@@ -38,7 +39,7 @@ public class UserManagementService {
     }
 
     public UserResponse getUserById(Long id) {
-        User user = userRepository.findById(id)
+        User user = userRepository.findById(Objects.requireNonNull(id))
                 .orElseThrow(() -> new EntityNotFoundException("User not found with id: " + id));
         return toResponse(user);
     }
@@ -51,11 +52,11 @@ public class UserManagementService {
 
         User user = new User();
         applyRequest(user, request, true);
-        return toResponse(userRepository.save(user));
+        return toResponse(Objects.requireNonNull(userRepository.save(user)));
     }
 
     public UserResponse updateUser(Long id, UserRequest request) {
-        User user = userRepository.findById(id)
+        User user = userRepository.findById(Objects.requireNonNull(id))
                 .orElseThrow(() -> new EntityNotFoundException("User not found with id: " + id));
 
         if (request.getEmail() == null || request.getEmail().trim().isEmpty()) {
@@ -66,25 +67,25 @@ public class UserManagementService {
         }
 
         applyRequest(user, request, false);
-        return toResponse(userRepository.save(user));
+        return toResponse(userRepository.save(Objects.requireNonNull(user)));
     }
 
     public UserResponse toggleUserStatus(Long id) {
-        User user = userRepository.findById(id)
+        User user = userRepository.findById(Objects.requireNonNull(id))
                 .orElseThrow(() -> new EntityNotFoundException("User not found with id: " + id));
         user.setActive(!user.isActive());
-        return toResponse(userRepository.save(user));
+        return toResponse(Objects.requireNonNull(userRepository.save(user)));
     }
 
     public void deleteUser(Long id) {
-        User user = userRepository.findById(id)
+        User user = userRepository.findById(Objects.requireNonNull(id))
                 .orElseThrow(() -> new EntityNotFoundException("User not found with id: " + id));
 
         if (evaluationRepository.existsBySubmittedById(id)) {
             throw new RuntimeException("Impossible de supprimer cet utilisateur car il a deja soumis des evaluations");
         }
 
-        userRepository.delete(user);
+        userRepository.delete(Objects.requireNonNull(user));
     }
 
     private UserResponse toResponse(User user) {
@@ -148,7 +149,7 @@ public class UserManagementService {
         }
 
         if (request.getCompanyId() != null) {
-            Company company = companyRepository.findById(request.getCompanyId())
+            Company company = companyRepository.findById(Objects.requireNonNull(request.getCompanyId()))
                     .orElseThrow(() -> new EntityNotFoundException("Company not found with id: " + request.getCompanyId()));
             user.setCompany(company);
         } else if (user.getRole() == Role.CLIENT) {

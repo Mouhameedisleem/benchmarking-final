@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "axis": "BUSINESS",
+    "sub_axis": "Innovation",
+    "sector": "assurance",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Assurance paramétrique — le produit le plus innovant pour l'Afrique de l'Ouest",
+      "description": "L'assurance paramétrique (paiement automatique basé sur un indice — pluviométrie, vitesse du vent, indice de rendement agricole) est particulièrement adaptée à l'Afrique de l'Ouest. Elle élimine la fraude, le coût d'expertise et les délais de règlement. La CIMA travaille à son encadrement réglementaire depuis 2022.",
+      "impact_level": "Très élevé",
+      "horizon": "24-36 mois",
+      "adoption_rate": "5 produits paramétriques actifs en UEMOA en 2024 (principalement agriculture et catastrophes naturelles)",
+      "source": "IFC Africa Parametric Insurance 2024 / Swiss Re Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Sandbox réglementaire CIMA — les insurtechs peuvent tester sans agrément complet",
+      "description": "La CIMA a lancé en 2023 un cadre d'expérimentation permettant aux insurtechs d'opérer pendant 12-18 mois avec un agrément simplifié pour tester des produits innovants. 8 insurtechs africaines ont déjà été admises en 2024.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "8 insurtechs admises dans le sandbox CIMA 2024",
+      "source": "CIMA Rapport Sandbox 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Embedded Insurance — l'assurance intégrée dans les produits non-assurance",
+      "description": "L'assurance embarquée (intégrée dans un achat automobile, une location immobilière, un crédit digital) représente la prochaine vague d'innovation. En Afrique de l'Ouest, les partenariats avec les plateformes de e-commerce et les fintech ouvrent ce marché.",
+      "impact_level": "Élevé",
+      "horizon": "24-48 mois",
+      "adoption_rate": "3 partenariats embedded insurance actifs en UEMOA en 2024 (Jumia, Wave, Orange Money)",
+      "source": "Swiss Re Embedded Insurance Africa 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Assurance paramétrique et données satellitaires",
+      "category": "Produits innovants",
+      "maturity_stage": "Émergence en Afrique",
+      "adoption_in_sector": "Très faible — 5 produits actifs UEMOA",
+      "leading_vendors": ["ARC (African Risk Capacity)", "Swiss Re iptiQ", "Descartes Underwriting", "Pula Advisors (agriculture)"]
+    },
+    {
+      "name": "API d'assurance embarquée (Embedded Insurance)",
+      "category": "Distribution innovante",
+      "maturity_stage": "Croissance mondiale",
+      "adoption_in_sector": "Émergence en UEMOA",
+      "leading_vendors": ["Cover Genius", "Instanda", "Qover", "Wakam", "InsuResilience"]
+    },
+    {
+      "name": "Télématique et UBI (Usage-Based Insurance)",
+      "category": "Tarification comportementale",
+      "maturity_stage": "Mature en Europe/USA",
+      "adoption_in_sector": "Pilotes au Maroc, très faible en UEMOA",
+      "leading_vendors": ["Cambridge Mobile Telematics", "Octo Telematics", "LexisNexis Risk Solutions"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "NSIA Groupe — Innovation Lab Assurance",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Partenariat avec Pula Advisors pour l'assurance agricole paramétrique. Lancement d'un produit d'assurance obsèques digitale en partenariat avec les opérateurs de mobile money. Lab d'innovation interne créé en 2023.",
+        "differentiator": "Premier assureur ivoirien à avoir lancé un produit d'assurance paramétrique agricole avec paiement automatique par satellite — 12 000 agriculteurs assurés en 2023",
+        "source": "NSIA Groupe Innovation Report 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Turaco (insurtech Uganda/Kenya/Ghana)",
+        "country": "Afrique de l'Est et de l'Ouest",
+        "key_practice": "Micro-assurance santé et vie distribuée via mobile money (MTN, Airtel). Produits à partir de 1 000 FCFA/mois. Règlement sinistre en 72h via mobile money. 500 000 clients dans 3 pays.",
+        "differentiator": "Turaco a prouvé la viabilité économique de la micro-assurance en Afrique avec un ratio sinistres-primes de 58 % et un NPS de +68",
+        "source": "Turaco Annual Report 2023 / IFC Investment Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Swiss Re (réassureur mondial)",
+        "country": "Suisse / Mondial",
+        "key_practice": "Plateforme iptiQ — assurance as a service pour l'embarqué. Produits paramétriques pour les risques climatiques africains. Partenariat avec la Banque Mondiale pour les risques souverains africains (ARC).",
+        "differentiator": "Swiss Re a structuré 15 programmes d'assurance paramétrique en Afrique subsaharienne couvrant 2 millions d'agriculteurs — référence mondiale en innovation assurance pour les marchés émergents",
+        "source": "Swiss Re Annual Report 2023 / Swiss Re Africa Insurance Market 2024"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune initiative d'innovation. Produits standardisés non modifiés depuis > 5 ans. Aucun budget R&D. Aucun suivi du marché insurtech.",
+    "level_2_developing": "Veille insurtech informelle. Quelques produits adaptés (micro-assurance basique). Pas de lab innovation. Pas de partenariat startup.",
+    "level_3_defined": "Cellule innovation créée. Budget R&D dédié (< 2 % du CA). 1-2 produits innovants lancés. Veille réglementaire sandbox CIMA active.",
+    "level_4_managed": "Lab innovation structuré avec équipe dédiée. Partenariat avec 2-3 insurtechs. Produit embedded insurance ou paramétrique actif. Dépôt de 1-2 brevets ou modèles innovants.",
+    "level_5_optimizing": "Pipeline innovation formalisé. Embedded insurance déployé avec 3+ partenaires. Assurance paramétrique active. Participation au sandbox CIMA. Innovation ouverte avec startups."
+  },
+
+  "regulations": [
+    {
+      "name": "Cadre d'expérimentation CIMA (Sandbox réglementaire)",
+      "issuing_body": "CIMA",
+      "scope": "Insurtechs et assureurs innovants dans les 14 États membres",
+      "key_requirement": "Les entreprises peuvent tester des produits ou modèles d'affaires innovants pendant 12-18 mois avec un agrément simplifié, sous supervision CIMA renforcée",
+      "compliance_deadline": "En vigueur depuis 2023",
+      "source_url": "https://www.cima-afrique.org"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Inertie réglementaire CIMA face aux produits innovants",
+      "description": "Le Code CIMA a été conçu pour des produits d'assurance traditionnels. Les produits paramétriques, l'embedded insurance et l'assurance comportementale (UBI) nécessitent des adaptations réglementaires qui peuvent prendre 2-5 ans.",
+      "severity": "Élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Engagement proactif avec la CIMA via FANAF pour co-construire les cadres réglementaires. Utilisation du sandbox CIMA pour tester avant réglementation complète."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Assurance obsèques digitale — produit à fort potentiel culturel en UEMOA",
+      "description": "L'assurance obsèques est culturellement très importante en Afrique de l'Ouest. Un produit 100 % digital (souscription mobile, paiement mobile money, règlement rapide) sur ce segment peut toucher des millions de personnes non-assurées par des produits traditionnels.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Pula Advisors",
+      "target": "Extension assurance agricole paramétrique",
+      "amount": "20 M$",
+      "date": "2023",
+      "strategic_rationale": "Couverture de 5 millions d'agriculteurs africains d'ici 2025 — assurance paramétrique indexée sur les données satellitaires",
+      "source": "Pula Advisors Press Release 2023"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Pula Advisors — L'assurance agricole paramétrique qui protège 2 millions d'agriculteurs africains",
+    "pays": "Kenya / Pan-Afrique (dont Côte d'Ivoire, Sénégal, Mali)",
+    "technologie": "Données satellitaires, indices météorologiques, paiement automatique mobile money",
+    "description": "Pula Advisors a développé un modèle d'assurance agricole radicalement différent : pas d'agent sur le terrain, pas d'expertise sinistre, pas de formulaire. Le produit est indexé sur des données satellitaires (NDVI — indice de végétation) et météorologiques. Si l'indice tombe sous un seuil prédéfini (sécheresse, inondation), le paiement est automatiquement déclenché via mobile money dans les 7 jours. En Côte d'Ivoire et au Sénégal, Pula assure des agriculteurs de cacao, maïs et arachide à partir de 2 500 FCFA/saison. En 2023 : 2 millions d'agriculteurs assurés dans 18 pays africains, 97 % des sinistres réglés sans intervention humaine, coût opérationnel 60 % inférieur à l'assurance agricole traditionnelle.",
+    "resultats": "2 M agriculteurs assurés · 18 pays africains · Sinistre réglé en 7 jours · 97 % auto-traité · Coût opérationnel -60 % · 20 M$ levés en 2023",
+    "source": "Pula Advisors Annual Report 2023 / IFC Investment Report 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité innovation — benchmark assureurs CIMA/UEMOA",
+    "colonnes": ["Organisation", "Lab innovation structuré", "Produit paramétrique actif", "Partenariat insurtech", "Embedded insurance", "Participation sandbox CIMA"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "Partiel", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'innovation dans le secteur assurance UEMOA est à la fois une opportunité unique et une nécessité urgente. Le marché est sous-pénétré (1-1,5 % du PIB), les produits traditionnels ne touchent pas les 90 % non-assurés, et les insurtechs commencent à occuper les niches délaissées. L'assurance paramétrique (agriculture, catastrophes), l'embedded insurance (e-commerce, fintech) et la micro-assurance mobile sont les trois axes d'innovation les plus accessibles et les plus impactants pour un assureur UEMOA.",
+    "maturity_max_description": "Lab innovation structuré avec équipe dédiée et budget > 3 % du CA. Pipeline de produits innovants (paramétrique, embedded, UBI) en cours de développement ou déployés. Participation active au sandbox CIMA. Partenariats avec 3+ insurtechs. Programme d'open innovation avec startups africaines. Au moins un produit d'assurance paramétrique ou embarquée actif à grande échelle.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune innovation. Produits inchangés depuis > 5 ans. Aucune veille insurtech.",
+      "score_21_to_40": "Veille informelle. Micro-assurance basique. Pas de budget R&D dédié.",
+      "score_41_to_60": "Cellule innovation créée. 1-2 produits innovants lancés. Partenariat 1 insurtech.",
+      "score_61_to_80": "Lab structuré. Produit paramétrique ou embedded actif. 2-3 partenariats insurtechs.",
+      "score_81_to_100": "Pipeline innovation formalisé. Paramétrique + embedded + micro-assurance actifs. Sandbox CIMA. Open innovation."
+    },
+    "prompt_injection_context": "Cette compagnie d'assurance est évaluée sur sa capacité d'innovation dans le contexte CIMA/UEMOA. Analyse l'existence d'un lab innovation, les produits innovants lancés (paramétrique, embedded, micro-assurance), les partenariats avec les insurtechs et la participation au sandbox CIMA.",
+    "key_questions_for_llm": [
+      "La compagnie dispose-t-elle d'une structure dédiée à l'innovation (lab, cellule R&D, budget spécifique) ?",
+      "Un produit d'assurance paramétrique, embarquée (embedded) ou de micro-assurance mobile a-t-il été lancé ?",
+      "Des partenariats actifs avec des insurtechs africaines ou internationales existent-ils ?",
+      "La compagnie participe-t-elle au sandbox réglementaire CIMA ou à des programmes d'expérimentation ?",
+      "Un programme de veille et d'open innovation avec les startups est-il en place ?"
+    ]
+  }
+}

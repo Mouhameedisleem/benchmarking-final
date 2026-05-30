@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "axis": "BUSINESS",
+    "sub_axis": "Orientation client",
+    "sector": "assurance",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "NPS et satisfaction client — l'assurance africaine parmi les secteurs les moins bien notés",
+      "description": "Le NPS moyen du secteur assurance en Afrique subsaharienne est de -15 à +5, contre +30 à +50 pour les banques digitales et les opérateurs mobile money. La lenteur de règlement des sinistres (délai moyen 45 jours vs 30 imposés par la CIMA) est le principal facteur de mécontentement.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "Moins de 20 % des assureurs CIMA mesurent leur NPS régulièrement (FANAF 2024)",
+      "source": "FANAF Étude Satisfaction Client 2024 / Bain & Company Africa Insurance NPS 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Personnalisation des produits d'assurance via la data — de l'offre standard à l'offre individuelle",
+      "description": "Les assureurs leaders utilisent les données comportementales (conduite, santé, habitudes) pour proposer des produits sur mesure. En UEMOA, les données mobile money et de crédit digital commencent à alimenter les moteurs de personnalisation.",
+      "impact_level": "Élevé",
+      "horizon": "24-36 mois",
+      "adoption_rate": "15 % des assureurs africains utilisent la data pour personnaliser les offres (McKinsey 2024)",
+      "source": "McKinsey Africa Insurance Personalization 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Règlement rapide des sinistres — le différenciateur clé en Afrique de l'Ouest",
+      "description": "Dans un contexte où la confiance envers l'assurance est faible, la rapidité de règlement est le principal facteur de fidélisation et de recommandation. Les assureurs qui règlent en moins de 7 jours constatent un NPS 3x supérieur à la moyenne du marché UEMOA.",
+      "impact_level": "Très élevé",
+      "horizon": "6-12 mois",
+      "adoption_rate": "Moins de 10 % des assureurs CIMA règlent les sinistres courants en moins de 7 jours",
+      "source": "CIMA Rapport de Supervision 2024 / FANAF 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "CRM assurance avec scoring client",
+      "category": "Gestion relation client",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Salesforce Financial Services Cloud", "Microsoft Dynamics 365 Insurance", "SAP CX Insurance", "Guidewire CustomerEngage"]
+    },
+    {
+      "name": "Portail sinistres self-service et application mobile",
+      "category": "Expérience client sinistres",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Snapsheet", "Guidewire ClaimCenter", "FNOL Digital (First Notice of Loss)", "Bdeo (IA sinistres)"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "NSIA Assurances CI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Application NSIA Connect : déclaration de sinistre en ligne, suivi en temps réel du dossier, paiement par mobile money. NPS mesuré trimestriellement.",
+        "differentiator": "Premier assureur ivoirien à avoir lancé la déclaration de sinistre par WhatsApp avec accusé de réception automatique en moins de 2 heures",
+        "source": "NSIA Groupe Rapport RSE 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Old Mutual Africa",
+        "country": "Afrique du Sud / Pan-Afrique",
+        "key_practice": "Programme 'Voice of the Customer' avec enquêtes post-sinistre, délai de règlement réduit à 5 jours pour 80 % des sinistres auto, chatbot dédié sinistres",
+        "differentiator": "Old Mutual a augmenté son NPS de -8 à +34 en 3 ans en se concentrant sur la rapidité de règlement — référence africaine en satisfaction client assurance",
+        "source": "Old Mutual Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "AXA Group",
+        "country": "France / Mondial",
+        "key_practice": "Plateforme AXA Connect — suivi sinistre en temps réel, NPS post-sinistre automatisé, résolution en 48h pour sinistres auto simples via IA photo",
+        "differentiator": "AXA a réduit son délai de règlement sinistres auto de 15 jours à 48h pour les cas simples grâce à l'analyse IA des photos — NPS +52",
+        "source": "AXA Annual Report 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune mesure de satisfaction client. Sinistres traités manuellement avec délais > 45 jours. Aucun canal digital de contact. Relation client exclusivement via agents physiques.",
+    "level_2_developing": "Enquêtes de satisfaction annuelles non systématiques. Quelques canaux digitaux (email, WhatsApp non structuré). Délai sinistres 30-45 jours.",
+    "level_3_defined": "NPS mesuré semestriellement. Portail client basique (suivi dossier). Canal de déclaration sinistre digital disponible. Délai sinistres < 30 jours pour IARD courant.",
+    "level_4_managed": "NPS mesuré en continu post-sinistre. Application mobile avec déclaration et suivi. Délai sinistres < 15 jours pour 80 % des cas. Parcours client omnicanal.",
+    "level_5_optimizing": "NPS > 40. Sinistres simples réglés en < 7 jours via IA. Application mobile 4+ étoiles. Personnalisation des produits par segment. Programme fidélité digital actif."
+  },
+
+  "regulations": [
+    {
+      "name": "Article 12 Code CIMA — Délais de règlement des sinistres",
+      "issuing_body": "CIMA",
+      "scope": "Tous assureurs CIMA",
+      "key_requirement": "Délai maximum de 30 jours pour régler un sinistre IARD après remise des pièces complètes. Pénalités applicables en cas de dépassement.",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.cima-afrique.org"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Défiance culturelle envers l'assurance — barrière structurelle à l'orientation client",
+      "description": "En Côte d'Ivoire, 65 % des non-assurés citent le mauvais règlement des sinistres comme raison principale de ne pas souscrire (enquête FANAF 2023). La transformation de l'expérience client est conditionnée à la reconstruction de la confiance.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Transparence totale sur les délais de règlement, communication proactive sur les sinistres réglés, témoignages clients dans la communication digitale."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Règlement sinistres en 48h — différenciateur commercial majeur en UEMOA",
+      "description": "Un assureur qui règle les sinistres courants (bris de glace, petits accidents) en 48h via une application mobile serait le premier sur le marché UEMOA. Cela générerait un bouche-à-oreille exceptionnel dans un marché où le délai moyen est de 30-45 jours.",
+      "impact_level": "Très élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [],
+
+  "zoom_case_study": {
+    "entreprise": "Old Mutual Africa — De NPS -8 à +34 en 3 ans grâce à la rapidité sinistres",
+    "pays": "Afrique du Sud / Pan-Afrique",
+    "technologie": "Programme Voice of Customer + digitalisation règlement sinistres",
+    "description": "En 2020, Old Mutual Africa affichait un NPS de -8, avec 60 % de plaintes liées aux délais de règlement de sinistres. La compagnie a lancé un programme en 3 axes : (1) objectif 5 jours ouvrés pour les sinistres auto courants, (2) application mobile de suivi en temps réel avec notifications push à chaque étape, (3) paiement sinistre par mobile money dans les pays sans infrastructure bancaire. En 2023 : NPS à +34, délai moyen de règlement à 4,8 jours ouvrés, 78 % des sinistres réglés sans intervention humaine pour les montants < 500 USD. Le taux de recommandation active (clients qui recommandent Old Mutual à un proche) est passé de 12 % à 41 %.",
+    "resultats": "NPS -8 → +34 · Délai sinistres 4,8 jours · 78 % sinistres auto-traités · Recommandation active 12 % → 41 % · Rétention clients +18 %",
+    "source": "Old Mutual Annual Report 2023 / Bain & Company Africa Insurance 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité orientation client — benchmark assureurs CIMA/UEMOA",
+    "colonnes": ["Organisation", "NPS mesuré en continu", "Application mobile sinistres", "Délai règlement < 15 jours", "Déclaration sinistre 24/7", "Personnalisation offres"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "Partiel"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'orientation client est le talon d'Achille du secteur assurance UEMOA. Le délai de règlement des sinistres, la complexité des dossiers et le manque de transparence ont créé une défiance profonde envers l'assurance. Les assureurs qui digitalisent l'expérience sinistre (déclaration mobile, suivi temps réel, paiement mobile money) créent un avantage compétitif durable car ils reconstituent la confiance — le bien le plus rare du secteur.",
+    "maturity_max_description": "NPS > 40 mesuré en continu post-sinistre. Application mobile 4+ étoiles avec déclaration et suivi sinistre 24/7. Délai de règlement < 7 jours pour 80 % des sinistres courants. Paiement par mobile money disponible. Personnalisation des communications et des offres par profil client. Programme de fidélité digital avec récompenses.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune mesure satisfaction. Sinistres > 45 jours. Contact uniquement physique. Aucun outil digital client.",
+      "score_21_to_40": "Enquêtes annuelles. Email disponible. Délai 30-45 jours. Pas d'application mobile.",
+      "score_41_to_60": "NPS mesuré semestriellement. Portail web basique. Canal digital sinistre. Délai < 30 jours.",
+      "score_61_to_80": "NPS continu. App mobile avec suivi sinistre. Délai < 15 jours. Omnicanal partiel.",
+      "score_81_to_100": "NPS > 40. Sinistres < 7 jours. App 4+ étoiles. Mobile money. Personnalisation active."
+    },
+    "prompt_injection_context": "Cette compagnie d'assurance est évaluée sur son orientation client dans le contexte CIMA/UEMOA. Analyse les délais de règlement sinistres, la disponibilité des canaux digitaux de contact et de déclaration, la mesure de satisfaction client (NPS), et la personnalisation des produits et communications.",
+    "key_questions_for_llm": [
+      "Le NPS ou un indicateur de satisfaction client est-il mesuré régulièrement (au moins trimestriellement) ?",
+      "Les clients peuvent-ils déclarer un sinistre 24/7 via une application mobile ou un portail en ligne ?",
+      "Le délai moyen de règlement des sinistres IARD courants est-il inférieur à 15 jours ouvrés ?",
+      "Un système de suivi en temps réel du dossier sinistre est-il disponible pour le client ?",
+      "Les produits et communications sont-ils personnalisés en fonction du profil et du comportement du client ?"
+    ]
+  }
+}

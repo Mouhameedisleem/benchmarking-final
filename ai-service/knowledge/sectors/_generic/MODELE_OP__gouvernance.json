@@ -1,0 +1,247 @@
+{
+  "meta": {
+    "axis": "MODELE_OPERATIONNEL",
+    "sub_axis": "Gouvernance digitale",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Chief Digital Officer (CDO) — leadership exécutif de la transformation",
+      "description": "La nomination d'un CDO ou d'un équivalent au comité exécutif est devenue le signal institutionnel le plus fort de l'engagement d'une organisation dans sa transformation digitale.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "90 % des entreprises du Fortune 500 ont un CDO ou équivalent (Gartner 2024)",
+      "source": "Gartner CIO and CDO Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Digital Governance Framework — gouvernance formalisée des décisions digitales",
+      "description": "Les organisations matures formalisent leurs processus de décision digitale : qui approuve quoi, quels critères, quels comités, comment mesurer le succès — pour éviter les initiatives dispersées sans impact.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "63 % des transformations échouent sans gouvernance formalisée (McKinsey 2024)",
+      "source": "McKinsey Digital Transformation Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "AI Governance — gouvernance éthique et responsable de l'IA",
+      "description": "L'émergence de l'IA dans les décisions organisationnelles crée un besoin urgent de gouvernance IA : comités d'éthique, audits d'algorithmes, RACI des décisions IA, explicabilité des modèles.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "58 % des grandes entreprises ont formé un comité d'éthique IA (IBM AI Ethics Survey 2024)",
+      "source": "IBM AI Ethics Global Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Portfolio Management digital — priorisation des investissements",
+      "description": "Face à la multiplication des initiatives digitales, les organisations adoptent des frameworks de portfolio management (OKR-gated, product portfolio) pour allouer les budgets aux initiatives à plus fort impact.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "71 % des DSI considèrent la priorisation comme leur défi principal (Gartner 2024)",
+      "source": "Gartner CIO Agenda Survey 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Outils de portfolio management IT",
+      "category": "Gouvernance des investissements",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en Afrique",
+      "leading_vendors": ["ServiceNow SPM", "Planview", "Microsoft Project", "Clarity PPM", "Monday.com"]
+    },
+    {
+      "name": "Outils de pilotage OKR et stratégie",
+      "category": "Alignement stratégique",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["Workboard", "Betterworks", "Perdoo", "Quantive (ex-Gtmhub)", "Weekdone"]
+    },
+    {
+      "name": "Outils d'AI Governance",
+      "category": "Gouvernance de l'IA",
+      "maturity_stage": "Émergence",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["IBM OpenScale", "Microsoft Responsible AI", "AWS SageMaker Clarify", "Fiddler AI", "Credo AI"]
+    },
+    {
+      "name": "GRC (Governance, Risk & Compliance)",
+      "category": "Conformité et risques",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["ServiceNow GRC", "MetricStream", "RSA Archer", "IBM OpenPages", "SAP GRC"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Comité de transformation digitale avec DSI membre du COMEX, roadmap digitale formalisée et revue trimestriellement",
+        "differentiator": "Premier acteur sectoriel à publier une roadmap digitale à 3 ans accessible à tous les collaborateurs",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Digital Governance Board mensuel avec Group CDO, revue du portfolio digital cross-pays, budget digital unifié",
+        "differentiator": "Gouvernance digitale alignée sur les 33 filiales avec délégation locale dans un cadre global",
+        "source": "Ecobank Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "ING Group",
+        "country": "Pays-Bas",
+        "key_practice": "Digital governance agile : PACE (Platform, Agile, Customer, Execute) framework aligne 50 000 personnes",
+        "differentiator": "Décisions digitales prises au niveau squad sans validation hiérarchique — gouvernance par les OKRs et les données",
+        "source": "ING Annual Report 2023 / McKinsey Agile at Scale"
+      },
+      {
+        "organisation": "Mastercard",
+        "country": "USA",
+        "key_practice": "AI Governance : comité d'éthique IA avec DPO, audit des algorithmes tous les 6 mois, explicabilité obligatoire",
+        "differentiator": "Decency Quotient (DQ) : chaque modèle IA est évalué sur son impact social avant déploiement",
+        "source": "Mastercard AI Ethics Report 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune gouvernance digitale. Initiatives digitales dispersées sans coordination. IT géré comme un centre de coût. Aucun CDO. Budget IT non optimisé.",
+    "level_2_developing": "DSI présent mais sans rôle stratégique. Quelques comités de projet IT. Pas de roadmap digitale. Décisions prises en silos. Budget IT réactif.",
+    "level_3_defined": "CDO ou DSI au COMEX. Roadmap digitale formalisée. Comité de pilotage digital mensuel. Budget digital dédié. KPIs de transformation suivis.",
+    "level_4_managed": "Gouvernance digitale formalisée avec RACI clair. Portfolio management des initiatives. OKRs digitaux cascadés. AI Governance naissante. Revue stratégique trimestrielle.",
+    "level_5_optimizing": "Gouvernance agile data-driven. AI Governance mature avec comité éthique. Portfolio management avec scoring ROI automatisé. Décisions decentralisées aux squads avec des OKRs comme guardrails."
+  },
+
+  "regulations": [
+    {
+      "name": "SYSCOHADA Révisé — Gouvernance et contrôle interne",
+      "issuing_body": "OHADA",
+      "scope": "Entreprises des pays membres OHADA",
+      "key_requirement": "Contrôle interne formalisé, piste d'audit des décisions financières et opérationnelles",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.ohada.com"
+    },
+    {
+      "name": "Instruction BCEAO sur la gouvernance IT des institutions financières",
+      "issuing_body": "BCEAO",
+      "scope": "Institutions financières de la zone UEMOA",
+      "key_requirement": "Comité de gouvernance IT formalisé, politique de sécurité approuvée par le CA, reporting IT trimestriel",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "AI Act (UE) — Gouvernance des systèmes IA à risque élevé",
+      "issuing_body": "Union Européenne",
+      "scope": "Organisations déployant des systèmes IA dans des domaines à risque élevé (crédit, RH, santé)",
+      "key_requirement": "Registre des systèmes IA, évaluation des risques, superviseur humain, transparence",
+      "compliance_deadline": "2026 (entrée en vigueur progressive)",
+      "source_url": "https://artificialintelligenceact.eu"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Transformation sans gouvernance — dispersion des ressources",
+      "description": "Sans gouvernance claire, chaque département lance ses propres initiatives digitales en silos, créant de la redondance, des incompatibilités et un gaspillage de ressources estimé à 40-60 % du budget IT.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Créer un comité de pilotage digital avec mandat clair, budget centralisé et processus de priorisation basé sur le ROI et l'alignement stratégique."
+    },
+    {
+      "title": "Décisions IA sans supervision — risque réglementaire et éthique",
+      "description": "L'utilisation de modèles IA pour des décisions à impact (crédit, recrutement, conformité) sans supervision humaine et sans explicabilité expose à des risques réglementaires croissants (AI Act, RGPD).",
+      "severity": "Très élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Établir un registre des systèmes IA, définir quelles décisions nécessitent une supervision humaine et documenter l'explicabilité de chaque modèle."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Accélération de la transformation par une gouvernance agile",
+      "description": "Une gouvernance agile (décisions au niveau squad, OKRs comme guardrails) accélère la livraison 3-5× vs une gouvernance hiérarchique traditionnelle, sans sacrifier l'alignement stratégique.",
+      "impact_level": "Très élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Confiance des parties prenantes via une gouvernance transparente",
+      "description": "Une gouvernance digitale transparente (roadmap publiée, KPIs partagés, processus de décision documenté) renforce la confiance des clients, partenaires et régulateurs dans la maturité de l'organisation.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "ServiceNow",
+      "target": "Ux-Ally et Hitch Works",
+      "amount": "Divers",
+      "date": "2022-2023",
+      "strategic_rationale": "Renforcer la plateforme de gouvernance IT et de gestion des talents pour le portfolio digital",
+      "source": "ServiceNow Press Releases 2022-2023"
+    },
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Investors (General Atlantic, etc.)",
+      "target": "Planview",
+      "amount": "1 Md$ (recapitalisation)",
+      "date": "2021",
+      "strategic_rationale": "Développer la plateforme de portfolio management pour les transformations digitales d'entreprise",
+      "source": "Planview Press Release 2021"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "ING Group",
+    "pays": "Pays-Bas",
+    "technologie": "Agile Governance — gouvernance décentralisée aux squads avec OKRs comme guardrails stratégiques",
+    "description": "ING a révolutionné sa gouvernance digitale en supprimant 3 niveaux hiérarchiques et en donnant à 350 squads autonomes le pouvoir de décision dans le cadre d'OKRs stratégiques. Le Digital Governance Board valide les OKRs trimestriels mais ne micro-manage pas les décisions. Chaque squad a un budget propre et peut lancer des expérimentations sans validation préalable tant que les guardrails sont respectés. Cette transformation a réduit le time-to-market de 6 mois à 3 semaines et augmenté la satisfaction collaborateur de 40 %. ING est devenu la référence mondiale de la gouvernance agile en finance.",
+    "resultats": "Time-to-market 6 mois → 3 semaines · Satisfaction collaborateur +40 % · 3 niveaux hiérarchiques supprimés · 350 squads autonomes · Référence mondiale agilité bancaire",
+    "source": "ING Annual Report 2023 / McKinsey Agile at Scale 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité gouvernance digitale — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "CDO ou DSI au COMEX", "Roadmap digitale formalisée", "Comité pilotage digital actif", "Portfolio management digital", "AI Governance formalisée"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La gouvernance digitale est le système nerveux central de la transformation. Sans elle, les meilleures technologies et les meilleurs talents produisent des résultats fragmentés. Une gouvernance efficace ne ralentit pas la transformation — elle l'accélère en clarifiant les priorités et en éliminant les blocages organisationnels.",
+    "maturity_max_description": "CDO au COMEX avec mandat clair. Roadmap digitale à 3 ans formalisée et revue trimestriellement. Portfolio management avec scoring ROI. AI Governance avec comité éthique. OKRs digitaux cascadés. Gouvernance agile permettant la décision au niveau des équipes dans un cadre stratégique.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune gouvernance digitale. Initiatives dispersées. IT centre de coût. Aucun CDO. Budget réactif.",
+      "score_21_to_40": "DSI sans rôle stratégique. Quelques comités projet. Pas de roadmap. Décisions en silos.",
+      "score_41_to_60": "CDO ou DSI au COMEX. Roadmap formalisée. Comité pilotage mensuel. Budget dédié. KPIs suivis.",
+      "score_61_to_80": "Gouvernance formalisée avec RACI. Portfolio management. OKRs digitaux. AI Governance naissante.",
+      "score_81_to_100": "Gouvernance agile data-driven. AI Governance mature. Portfolio scoring ROI. Décisions squads + OKRs guardrails."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur la maturité de sa gouvernance digitale. Analyse la présence d'un CDO ou DSI au comité exécutif, l'existence d'une roadmap digitale formalisée, l'activité d'un comité de pilotage digital, le déploiement d'un portfolio management des initiatives digitales et la formalisation d'une gouvernance de l'IA.",
+    "key_questions_for_llm": [
+      "Un CDO (Chief Digital Officer) ou un DSI avec rôle stratégique est-il membre du comité exécutif (COMEX) ?",
+      "Une roadmap digitale à 12-36 mois est-elle formalisée, validée par la direction et revue régulièrement ?",
+      "Un comité de pilotage de la transformation digitale se réunit-il régulièrement pour prendre des décisions sur le portfolio ?",
+      "Un processus de portfolio management priorise-t-il les initiatives digitales selon leur ROI et leur alignement stratégique ?",
+      "Une gouvernance de l'IA est-elle formalisée avec un registre des systèmes IA et des règles d'éthique documentées ?"
+    ]
+  }
+}

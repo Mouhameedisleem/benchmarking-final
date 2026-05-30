@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.EnumMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -53,6 +54,7 @@ public class DataInitializer implements ApplicationRunner {
             log.info("Questionnaire par défaut créé avec les 7 axes de maturité digitale.");
         } else {
             backfillMissingAxes();
+            migrateSubAxes();
         }
     }
 
@@ -125,48 +127,68 @@ public class DataInitializer implements ApplicationRunner {
                         "Les systèmes internes communiquent-ils via des APIs standardisées permettant une intégration fluide ?"}
         ));
 
+        map.put(QuestionAxis.MODELE_OPERATIONNEL_INNOVATION, List.of(
+                new String[]{"Simplification & automatisation des processus",
+                        "Les processus sont-ils dématérialisés, des workflows digitaux sont-ils en place et l'automatisation par RPA/IA est-elle déployée ?"},
+                new String[]{"Gouvernance de la transformation digitale",
+                        "Une stratégie et feuille de route digitale sont-elles définies avec une gouvernance, des budgets et un pilotage dédiés ?"},
+                new String[]{"Développement de l'innovation",
+                        "L'innovation est-elle développée en interne (labs, hackatons) avec des liens avec l'écosystème des fintechs et une veille concurrentielle du digital ?"}
+        ));
+
+        map.put(QuestionAxis.IT_DATA, List.of(
+                new String[]{"Socle IT",
+                        "L'infrastructure IT est-elle modernisée avec recours au cloud (IaaS, PaaS, SaaS), une architecture modulaire (micro-services) et ouverte (couche API) ?"},
+                new String[]{"Socle IT",
+                        "L'entreprise dispose-t-elle d'une politique de cybersécurité opérationnelle et investit-elle dans les nouvelles technologies (IA, IoT) ?"},
+                new String[]{"Data",
+                        "Les données (internes/externes) sont-elles acquises, mises en qualité et accessibles pour l'exploitation analytique et décisionnelle ?"},
+                new String[]{"Data",
+                        "Une gouvernance de la donnée est-elle en place avec une équipe dédiée à la data et des outils adaptés de gestion du cycle de vie des données ?"}
+        ));
+
         map.put(QuestionAxis.CANAUX_DISTRIBUTION, List.of(
-                new String[]{"Présence digitale",
-                        "L'entreprise dispose-t-elle d'un site web responsive et d'une application mobile fonctionnelle ?"},
-                new String[]{"Canaux transactionnels",
-                        "Les clients peuvent-ils réaliser des opérations complètes en ligne (commande, paiement, suivi) ?"},
-                new String[]{"Onboarding digital",
-                        "Le parcours d'inscription ou de souscription est-il disponible 100% en ligne ?"},
-                new String[]{"Accessibilité & couverture",
-                        "Les canaux digitaux sont-ils accessibles sur mobile et couvrent-ils l'ensemble de la clientèle cible ?"}
+                new String[]{"Canaux de distribution & expérience client",
+                        "Les clients peuvent-ils accéder aux services via des canaux digitaux (web/mobile), physiques et distants avec une expérience omnicanale cohérente ?"},
+                new String[]{"Canaux de distribution & expérience client",
+                        "La tarification et le modèle relationnel sont-ils adaptés et différenciés selon les canaux de distribution (digital, physique, distant) ?"},
+                new String[]{"Selfcare client",
+                        "Les fonctionnalités selfcare sont-elles développées sur les canaux digitaux (consultation, opérations, souscription, réclamation) ?"},
+                new String[]{"Selfcare client",
+                        "L'usage des canaux est-il piloté avec des indicateurs et un dispositif d'accompagnement des clients dans leur autonomisation digitale ?"}
         ));
 
         map.put(QuestionAxis.MARKETING_COMMUNICATION, List.of(
-                new String[]{"Présence réseaux sociaux",
-                        "L'entreprise est-elle active sur les réseaux sociaux avec une stratégie éditoriale définie ?"},
-                new String[]{"Marketing digital",
-                        "Des campagnes de marketing digital (SEO, SEM, email, social ads) sont-elles déployées avec suivi du ROI ?"},
-                new String[]{"Personnalisation",
-                        "Les communications clients sont-elles personnalisées selon le profil et le comportement digital ?"},
-                new String[]{"Notoriété digitale",
-                        "La marque bénéficie-t-elle d'une notoriété digitale mesurée (avis en ligne, part de voix) ?"}
+                new String[]{"Marketing & communication digitale",
+                        "Une stratégie de communication digitale est-elle formalisée et déployée sur les canaux numériques avec une cohérence de marque ?"},
+                new String[]{"Marketing & communication digitale",
+                        "Des outils de marketing digital et de lead management sont-ils déployés avec mesure du ROI sur les campagnes ?"},
+                new String[]{"Marketing & communication digitale",
+                        "Des dispositifs d'écoute client (enquêtes de satisfaction, NPS) et de conduite de projets d'amélioration sont-ils opérationnels ?"}
         ));
 
         map.put(QuestionAxis.RH_CULTURE_DIGITALE, List.of(
-                new String[]{"Compétences digitales",
-                        "Les collaborateurs disposent-ils des compétences digitales nécessaires à leurs fonctions ?"},
-                new String[]{"Formation continue",
-                        "Un programme de formation digitale structuré (e-learning, certifications) est-il en place ?"},
-                new String[]{"SIRH & processus RH",
-                        "Les processus RH (paie, recrutement, évaluation) sont-ils digitalisés via un SIRH intégré ?"},
-                new String[]{"Culture d'innovation",
-                        "L'entreprise encourage-t-elle l'expérimentation et dispose-t-elle de rituels d'innovation ?"}
+                new String[]{"Culture digitale",
+                        "Des programmes d'acculturation digitale et de formation aux nouveaux usages sont-ils déployés pour l'ensemble des collaborateurs ?"},
+                new String[]{"Poste de travail du banquier",
+                        "Les conseillers sont-ils équipés d'outils d'assistance technologique (IA, tableaux de bord data) pour améliorer la qualité de conseil ?"},
+                new String[]{"Collaboratif & digital working",
+                        "Des outils collaboratifs modernes (Teams, SharePoint...) sont-ils déployés et le télétravail est-il organisé de façon sécurisée ?"},
+                new String[]{"Digitalisation de la fonction RH",
+                        "Les processus RH (recrutement, évaluation, formation) sont-ils digitalisés et l'impact du digital sur les métiers est-il mesuré ?"},
+                new String[]{"Agilité",
+                        "Des méthodes agiles et une digital factory (labs UX, design sprints) sont-elles en place pour accélérer les projets de transformation ?"}
         ));
 
         map.put(QuestionAxis.OFFRES_DIGITALES, List.of(
-                new String[]{"Digitalisation des offres",
-                        "Les produits et services existants sont-ils disponibles en ligne avec souscription digitale ?"},
-                new String[]{"Produits nativement digitaux",
-                        "L'entreprise propose-t-elle des produits conçus exclusivement pour le canal digital ?"},
-                new String[]{"Partenariats & API",
-                        "L'entreprise intègre-t-elle des services partenaires ou expose-t-elle des APIs à des tiers ?"},
-                new String[]{"Innovation produit digital",
-                        "Des nouvelles offres digitales à valeur ajoutée sont-elles en cours de développement ou de lancement ?"}
+                new String[]{"Offres digitales",
+                        "L'entreprise propose-t-elle des offres de type néo-banque/banque en ligne avec des parcours de souscription 100% digitaux ?"},
+                new String[]{"Offres digitales",
+                        "Des services de conseil automatisés (agrégation patrimoniale, robot-advisor, coaching financier digital) sont-ils disponibles ?"},
+                new String[]{"Open banking (BaaS, BaaP)",
+                        "L'entreprise développe-t-elle des partenariats avec des fintechs et start-ups innovantes pour co-construire de nouvelles offres ?"},
+                new String[]{"Open banking (BaaS, BaaP)",
+                        "Les données et services sont-ils exposés via des APIs ouvertes dans une logique Banking-as-a-Service (BaaS) ou Banking-as-a-Platform (BaaP) ?"}
         ));
 
         return map;
@@ -176,7 +198,7 @@ public class DataInitializer implements ApplicationRunner {
     private void seedDefaultQuestionnaire() {
         Questionnaire q = new Questionnaire();
         q.setTitle("Benchmark Maturité Digitale — Tous Secteurs");
-        q.setDescription("Questionnaire de référence couvrant les 7 axes de maturité digitale.");
+        q.setDescription("Questionnaire de référence couvrant les 9 axes de maturité digitale.");
         q.setSector("Tous secteurs");
         q.setCountry("Tous pays");
         q.setMode(QuestionnaireMode.GENERATED);
@@ -190,6 +212,108 @@ public class DataInitializer implements ApplicationRunner {
             }
         }
         questionnaireRepository.save(q);
+    }
+
+    // ── Migration : met à jour les sous-axes par axe (idempotent) ────────────────
+    private void migrateSubAxes() {
+        Map<QuestionAxis, Map<String, String>> renamingByAxis = buildSubAxisRenamingMap();
+        List<Questionnaire> questionnaires = questionnaireRepository.findAll();
+
+        for (Questionnaire q : questionnaires) {
+            boolean modified = false;
+
+            // Renommer les anciens sous-axes selon leur axe (évite les conflits de noms)
+            for (Question question : q.getQuestions()) {
+                String old = question.getSubAxis();
+                QuestionAxis axis = question.getAxis();
+                if (old != null && renamingByAxis.containsKey(axis)) {
+                    String newName = renamingByAxis.get(axis).get(old);
+                    if (newName != null) {
+                        question.setSubAxis(newName);
+                        modified = true;
+                    }
+                }
+            }
+
+            // Ajouter les sous-axes totalement nouveaux manquants
+            int maxOrder = q.getQuestions().stream().mapToInt(Question::getDisplayOrder).max().orElse(0);
+
+            // RH : Poste de travail du banquier + Collaboratif & digital working
+            boolean hasRh = q.getQuestions().stream().anyMatch(qn -> qn.getAxis() == QuestionAxis.RH_CULTURE_DIGITALE);
+            if (hasRh) {
+                if (q.getQuestions().stream().noneMatch(qn -> "Poste de travail du banquier".equals(qn.getSubAxis()))) {
+                    maxOrder++;
+                    addQuestion(q, maxOrder, QuestionAxis.RH_CULTURE_DIGITALE,
+                            "Poste de travail du banquier",
+                            "Les conseillers sont-ils équipés d'outils d'assistance technologique (IA, tableaux de bord data) pour améliorer la qualité de conseil ?");
+                    modified = true;
+                }
+                if (q.getQuestions().stream().noneMatch(qn -> "Collaboratif & digital working".equals(qn.getSubAxis()))) {
+                    maxOrder++;
+                    addQuestion(q, maxOrder, QuestionAxis.RH_CULTURE_DIGITALE,
+                            "Collaboratif & digital working",
+                            "Des outils collaboratifs modernes (Teams, SharePoint...) sont-ils déployés et le télétravail est-il organisé de façon sécurisée ?");
+                    modified = true;
+                }
+            }
+
+            // Nouveaux axes complets : ajouter toutes leurs questions si absents
+            Map<QuestionAxis, List<String[]>> defaults = buildDefaultQuestions();
+            for (QuestionAxis newAxis : new QuestionAxis[]{QuestionAxis.MODELE_OPERATIONNEL_INNOVATION, QuestionAxis.IT_DATA}) {
+                boolean axisAbsent = q.getQuestions().stream().noneMatch(qn -> qn.getAxis() == newAxis);
+                if (axisAbsent) {
+                    for (String[] qd : defaults.get(newAxis)) {
+                        maxOrder++;
+                        addQuestion(q, maxOrder, newAxis, qd[0], qd[1]);
+                    }
+                    modified = true;
+                    log.info("Questionnaire '{}' : axe {} ajouté.", q.getTitle(), newAxis);
+                }
+            }
+
+            if (modified) {
+                questionnaireRepository.save(q);
+                log.info("Questionnaire '{}' (id={}) : sous-axes migrés.", q.getTitle(), q.getId());
+            }
+        }
+    }
+
+    private Map<QuestionAxis, Map<String, String>> buildSubAxisRenamingMap() {
+        Map<QuestionAxis, Map<String, String>> map = new EnumMap<>(QuestionAxis.class);
+
+        // CANAUX_DISTRIBUTION
+        Map<String, String> canaux = new LinkedHashMap<>();
+        canaux.put("Présence digitale",          "Canaux de distribution & expérience client");
+        canaux.put("Canaux transactionnels",     "Canaux de distribution & expérience client");
+        canaux.put("Onboarding digital",         "Selfcare client");
+        canaux.put("Accessibilité & couverture", "Selfcare client");
+        map.put(QuestionAxis.CANAUX_DISTRIBUTION, canaux);
+
+        // MARKETING_COMMUNICATION
+        Map<String, String> marketing = new LinkedHashMap<>();
+        marketing.put("Présence réseaux sociaux", "Marketing & communication digitale");
+        marketing.put("Marketing digital",        "Marketing & communication digitale");
+        marketing.put("Personnalisation",         "Marketing & communication digitale");
+        marketing.put("Notoriété digitale",       "Marketing & communication digitale");
+        map.put(QuestionAxis.MARKETING_COMMUNICATION, marketing);
+
+        // RH_CULTURE_DIGITALE
+        Map<String, String> rh = new LinkedHashMap<>();
+        rh.put("Compétences digitales",  "Culture digitale");
+        rh.put("Formation continue",     "Culture digitale");
+        rh.put("SIRH & processus RH",    "Digitalisation de la fonction RH");
+        rh.put("Culture d'innovation",   "Agilité");
+        map.put(QuestionAxis.RH_CULTURE_DIGITALE, rh);
+
+        // OFFRES_DIGITALES
+        Map<String, String> offres = new LinkedHashMap<>();
+        offres.put("Digitalisation des offres",    "Offres digitales");
+        offres.put("Produits nativement digitaux", "Offres digitales");
+        offres.put("Partenariats & API",           "Open banking (BaaS, BaaP)");
+        offres.put("Innovation produit digital",   "Open banking (BaaS, BaaP)");
+        map.put(QuestionAxis.OFFRES_DIGITALES, offres);
+
+        return map;
     }
 
     private void createUser(String username, String email, String password,

@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "axis": "IT_DATA",
+    "sub_axis": "Socle IT & Applications",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Core System Modernisation — migration des legacy vers le cloud-native",
+      "description": "Les organisations remplacent leurs systèmes cœur vieillissants (ERP, core banking des années 90) par des architectures cloud-native modulaires, réduisant le coût de maintenance de 40-60 % et multipliant la vitesse d'innovation.",
+      "impact_level": "Très élevé",
+      "horizon": "24-48 mois",
+      "adoption_rate": "72 % des DSI identifient la modernisation du legacy comme priorité n°1 (Gartner 2024)",
+      "source": "Gartner CIO Agenda Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "ERP Cloud — migration vers des ERP cloud-native",
+      "description": "SAP S/4HANA Cloud, Oracle Cloud ERP et Microsoft Dynamics 365 remplacent les ERP on-premise, apportant des mises à jour automatiques, une scalabilité élastique et une intégration native avec les écosystèmes cloud.",
+      "impact_level": "Très élevé",
+      "horizon": "12-36 mois",
+      "adoption_rate": "60 % des grandes entreprises ont initié une migration ERP cloud (Gartner 2024)",
+      "source": "Gartner ERP Market Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "API-first Architecture — refactoring vers des architectures modulaires",
+      "description": "Le pattern Strangler Fig permet de migrer les monolithes legacy vers des microservices en exposant des APIs devant le système existant, permettant une modernisation progressive sans big bang risqué.",
+      "impact_level": "Élevé",
+      "horizon": "12-36 mois",
+      "adoption_rate": "78 % des nouvelles applications IT sont conçues en microservices (CNCF Survey 2024)",
+      "source": "CNCF Annual Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Low-Code pour les applications métier — réduction du backlog IT",
+      "description": "Les plateformes low-code (Power Apps, OutSystems) permettent aux équipes métier de développer 60-70 % de leurs besoins applicatifs sans passer par la queue du backlog IT, accélérant la digitalisation.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "70 % des nouvelles applications d'entreprise seront low-code d'ici 2025 (Gartner)",
+      "source": "Gartner Low-Code Application Platform Market 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "ERP (Enterprise Resource Planning)",
+      "category": "Système de gestion intégrée",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne en Afrique",
+      "leading_vendors": ["SAP S/4HANA", "Oracle Cloud ERP", "Microsoft Dynamics 365", "Odoo (open-source)", "Sage 300"]
+    },
+    {
+      "name": "CRM (Customer Relationship Management)",
+      "category": "Gestion de la relation client",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne",
+      "leading_vendors": ["Salesforce", "Microsoft Dynamics CRM", "HubSpot CRM", "Zoho CRM", "SAP CRM"]
+    },
+    {
+      "name": "Middleware / ESB / iPaaS",
+      "category": "Intégration applicative",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["MuleSoft", "IBM App Connect", "Dell Boomi", "Azure Integration Services", "WSO2"]
+    },
+    {
+      "name": "Microservices & Conteneurisation",
+      "category": "Architecture applicative moderne",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible en Afrique",
+      "leading_vendors": ["Docker", "Kubernetes", "Red Hat OpenShift", "AWS ECS/EKS", "Azure AKS"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "ERP déployé pour la gestion financière et RH, CRM pour la gestion clients, intégration entre systèmes via APIs",
+        "differentiator": "Premier acteur sectoriel à migrer son ERP vers le cloud avec adoption des mises à jour automatiques",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Core banking Temenos T24 unifié sur 33 pays + SAP ERP groupe, couche API unifiée (Ecobank API Hub)",
+        "differentiator": "Architecture bancaire modulaire permettant de lancer un nouveau produit en 6 semaines vs 18 mois avant la modernisation",
+        "source": "Ecobank Technology Report 2023 / Temenos Case Study"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "DBS Bank",
+        "country": "Singapour",
+        "key_practice": "Migration complète vers une architecture microservices cloud-native en 5 ans — 0 downtime de migration",
+        "differentiator": "Scalabilité ×10 sans infrastructure physique additionnelle — 1 000+ déploiements par jour en production",
+        "source": "DBS Technology Report 2023 / AWS Summit Case Study"
+      },
+      {
+        "organisation": "SAP",
+        "country": "Allemagne",
+        "key_practice": "SAP S/4HANA Cloud : plateforme ERP cloud-native utilisée par 25 000+ entreprises dans 180 pays",
+        "differentiator": "Business Technology Platform (BTP) : intégration, extension et IA intégrés dans un seul socle",
+        "source": "SAP Annual Report 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Systèmes legacy isolés. ERP basique ou inexistant. Pas de CRM. Intégrations manuelles (copier-coller, clés USB). Architecture spaghetti. Pas de documentation du SI.",
+    "level_2_developing": "ERP de base déployé. CRM partiel. Quelques intégrations point-à-point. Documentation SI incomplète. Dette technique croissante. Pas de roadmap applicative.",
+    "level_3_defined": "ERP et CRM déployés et intégrés. Cartographie du SI documentée. Quelques APIs. Roadmap applicative formalisée. Urbanisation du SI en cours.",
+    "level_4_managed": "ERP cloud ou en cours de migration. APIs comme standard d'intégration. CMDB (Configuration Management Database) à jour. Architecture cible définie. Microservices sur les nouvelles apps.",
+    "level_5_optimizing": "Architecture cloud-native. Microservices sur les apps critiques. Zero legacy. ERP cloud-native avec mises à jour continues. Low-code pour les apps métier. Architecture événementielle."
+  },
+
+  "regulations": [
+    {
+      "name": "SYSCOHADA Révisé — Systèmes comptables informatisés",
+      "issuing_body": "OHADA",
+      "scope": "Entreprises utilisant des logiciels comptables dans les pays membres OHADA",
+      "key_requirement": "Les ERP et logiciels comptables doivent produire des états financiers conformes au SYSCOHADA, avec piste d'audit",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.ohada.com"
+    },
+    {
+      "name": "Directive BCEAO sur les systèmes core banking",
+      "issuing_body": "BCEAO",
+      "scope": "Institutions financières de la zone UEMOA",
+      "key_requirement": "Core banking certifié, plan de continuité, exigences de performance (RTO/RPO), certification annuelle",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Dette technique — coût croissant de la maintenance du legacy",
+      "description": "Chaque année sans modernisation augmente la dette technique : les compétences sur les technologies obsolètes se raréfient, les coûts de maintenance croissent et l'agilité se réduit jusqu'à la paralysie.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Établir un programme de modernisation progressive (strangler pattern), allouer 20-30 % du budget IT au remboursement de la dette technique annuellement."
+    },
+    {
+      "title": "Migration ERP — risque de surcoût et de délai",
+      "description": "70 % des projets ERP dépassent le budget et les délais initiaux. Un dépassement de 100-300 % n'est pas exceptionnel pour les grands projets ERP sans gouvernance rigoureuse.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Adopter une approche de migration progressive (cloud lift-and-shift puis modernisation), maintenir une équipe projet dédiée et un sponsor exécutif actif."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Migration cloud ERP — réduction des coûts d'infrastructure de 40 %",
+      "description": "La migration vers un ERP cloud transforme les CAPEX de licence et d'infrastructure en OPEX prévisibles, avec des réductions de coûts totaux de 30-50 % sur 5 ans.",
+      "impact_level": "Très élevé",
+      "time_to_value": "18-36 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Low-code pour réduire le backlog IT de 60 %",
+      "description": "Les plateformes low-code permettent aux équipes métier de développer leurs besoins applicatifs non-critiques sans mobiliser les équipes IT, réduisant le backlog et accelerant les livraisons.",
+      "impact_level": "Élevé",
+      "time_to_value": "3-12 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "SAP",
+      "target": "Qualtrics",
+      "amount": "8 Mds$",
+      "date": "2018",
+      "strategic_rationale": "Intégrer les données d'expérience client et employé dans la suite ERP SAP pour des décisions data-driven",
+      "source": "SAP Press Release 2018"
+    },
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Microsoft",
+      "target": "SAP partenariat Azure",
+      "amount": "Alliance stratégique",
+      "date": "2019",
+      "strategic_rationale": "Microsoft Azure comme cloud préféré pour SAP S/4HANA — alliance pour accélérer les migrations ERP cloud",
+      "source": "Microsoft/SAP Partnership Press Release 2019"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "DBS Bank",
+    "pays": "Singapour",
+    "technologie": "Core System Modernisation — migration complète vers une architecture cloud-native microservices",
+    "description": "DBS Bank a conduit l'une des migrations de système cœur les plus ambitieuses de l'industrie bancaire. En 5 ans (2014-2019), DBS a migré son legacy core banking vers une architecture entièrement cloud-native sur AWS. Le résultat : 1 000+ déploiements par jour en production (vs 1/mois avant), scalabilité ×10 sans infrastructure physique additionnelle, et économies de 300M SGD en CAPEX IT. DBS a également créé une API Layer exposant 500+ services à des partenaires, créant un écosystème digital. La banque est désormais classée 'Meilleure banque digitale au monde' pour la 6ème fois consécutive.",
+    "resultats": "1 000+ déploiements/jour · Scalabilité ×10 · 300M SGD CAPEX économisés · 500+ APIs exposées · 82 % transactions digitales · #1 meilleure banque digitale mondiale 6 ans",
+    "source": "DBS Annual Report 2023 / AWS Summit Singapore 2023 Case Study",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité socle IT & applications — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "ERP déployé et intégré", "CRM déployé et utilisé", "SI cartographié et documenté", "APIs comme standard d'intégration", "Roadmap applicative formalisée"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "✗", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Le socle IT est le fondement sur lequel repose toute la transformation digitale. Un SI legacy non modernisé est un frein structurel à l'innovation — chaque nouvelle fonctionnalité coûte plus cher et prend plus de temps à cause de la dette technique accumulée. La modernisation progressive est la voie réaliste pour sortir du legacy sans risque excessif.",
+    "maturity_max_description": "ERP cloud-native avec mises à jour continues. CRM unifié avec vue 360° client. Cartographie SI complète et à jour. APIs comme standard unique d'intégration. Microservices sur les applications critiques. Low-code pour les applications métier. Roadmap applicative à 3 ans formalisée.",
+    "scoring_rubric": {
+      "score_1_to_20": "Systèmes legacy isolés. Pas d'ERP ni de CRM. Intégrations manuelles. Architecture spaghetti.",
+      "score_21_to_40": "ERP de base. CRM partiel. Quelques intégrations point-à-point. Documentation SI incomplète.",
+      "score_41_to_60": "ERP et CRM déployés et intégrés. Cartographie SI documentée. Quelques APIs. Roadmap formalisée.",
+      "score_61_to_80": "ERP cloud en cours. APIs comme standard. CMDB à jour. Architecture cible définie. Microservices sur nouvelles apps.",
+      "score_81_to_100": "Architecture cloud-native. Microservices critiques. Zero legacy. ERP cloud-native. Low-code métier. EDA."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur la maturité de son socle IT et de ses applications. Analyse le déploiement et l'intégration de l'ERP, la présence d'un CRM unifié, la cartographie du Système d'Information, l'adoption des APIs comme standard d'intégration et l'existence d'une roadmap applicative formalisée.",
+    "key_questions_for_llm": [
+      "Un ERP est-il déployé et intégré avec les autres systèmes de l'organisation pour la gestion financière, RH et opérationnelle ?",
+      "Un CRM est-il déployé et utilisé par les équipes commerciales pour centraliser les données et interactions clients ?",
+      "Le Système d'Information est-il cartographié et documenté avec les dépendances entre applications identifiées ?",
+      "Les APIs sont-elles adoptées comme standard pour les nouvelles intégrations entre systèmes ?",
+      "Une roadmap applicative à 3 ans est-elle formalisée avec un plan de modernisation des systèmes legacy ?"
+    ]
+  }
+}

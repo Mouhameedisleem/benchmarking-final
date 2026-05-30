@@ -58,7 +58,7 @@
           </ul>
         </li>
       </ul>
-      
+
       <!-- ==================== MENU CONSULTANT ==================== -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngIf="hasRole('CONSULTANT')">
         <li class="nav-item">
@@ -93,6 +93,11 @@
             <i class="fas fa-brain me-1"></i>Référentiels IA
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/consultant/rapport" routerLinkActive="active" (click)="closeMenu()">
+            <i class="fas fa-file-alt me-1"></i>Rapport
+          </a>
+        </li>
       </ul>
 
       <!-- ==================== MENU CLIENT ==================== -->
@@ -125,40 +130,48 @@
       <ul class="navbar-nav">
         <!-- Notifications (pour Admin et Consultant) -->
         <li class="nav-item dropdown" *ngIf="hasRole(['ADMIN', 'CONSULTANT'])">
-          <a class="nav-link position-relative" href="#" role="button" data-bs-toggle="dropdown">
+          <a class="nav-link position-relative" href="#" role="button" data-bs-toggle="dropdown" (click)="onBellClick()">
             <i class="fas fa-bell"></i>
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                  *ngIf="notifications.length > 0">
-              {{ notifications.length }}
-              <span class="visually-hidden">notifications</span>
+                  *ngIf="unreadCount > 0">
+              {{ unreadCount }}
+              <span class="visually-hidden">notifications non lues</span>
             </span>
           </a>
-          <ul class="dropdown-menu dropdown-menu-end" style="min-width: 320px;">
+          <ul class="dropdown-menu dropdown-menu-end" style="min-width: 340px; max-height: 400px; overflow-y: auto;">
             <li>
               <div class="d-flex justify-content-between align-items-center px-3 py-2 bg-light border-bottom">
                 <h6 class="mb-0 fw-bold">Notifications</h6>
                 <span class="badge bg-primary">{{ notifications.length }}</span>
               </div>
             </li>
-            <li *ngFor="let notif of notifications">
-              <a class="dropdown-item py-2" href="#">
-                <div class="d-flex align-items-start">
-                  <div class="rounded-circle p-2 me-2 flex-shrink-0"
-                       [ngClass]="notif.iconBg">
-                    <i [class]="notif.icon"></i>
-                  </div>
-                  <div>
-                    <div class="fw-semibold small">{{ notif.title }}</div>
-                    <small class="text-muted">{{ notif.subtitle }}</small>
-                  </div>
-                </div>
-              </a>
+            <li *ngIf="notifications.length === 0">
+              <div class="text-center text-muted py-4 small">
+                <i class="fas fa-bell-slash d-block mb-2 fa-lg"></i>
+                Aucune notification
+              </div>
             </li>
-            <li><hr class="dropdown-divider my-1"></li>
-            <li>
-              <a class="dropdown-item text-center text-primary small py-2" routerLink="/users" (click)="closeMenu()">
-                <i class="fas fa-external-link-alt me-1"></i>Gérer les utilisateurs
-              </a>
+            <li *ngFor="let notif of notifications">
+              <div class="dropdown-item py-2" [class.bg-light]="!notif.read">
+                <div class="d-flex align-items-start">
+                  <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-2"
+                       style="width:34px;height:34px;background:rgba(13,110,253,.12)">
+                    <i class="fas fa-bell text-primary small"></i>
+                  </div>
+                  <div class="flex-grow-1 overflow-hidden">
+                    <div class="small text-wrap">{{ notif.message }}</div>
+                    <small class="text-muted">{{ notif.timestamp | date:'dd/MM HH:mm' }}</small>
+                  </div>
+                  <span *ngIf="!notif.read" class="ms-2 mt-1 rounded-circle bg-primary flex-shrink-0"
+                        style="width:8px;height:8px;display:inline-block"></span>
+                </div>
+              </div>
+            </li>
+            <li *ngIf="notifications.length > 0"><hr class="dropdown-divider my-1"></li>
+            <li *ngIf="notifications.length > 0">
+              <button class="dropdown-item text-center text-primary small py-2" (click)="onBellClick()">
+                <i class="fas fa-check-double me-1"></i>Tout marquer comme lu
+              </button>
             </li>
           </ul>
         </li>

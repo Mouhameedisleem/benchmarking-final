@@ -1,0 +1,285 @@
+{
+  "secteur": "btp",
+  "axe": "IT_DATA",
+  "sous_axe": "data",
+  "label": "Données et analytique BTP",
+  "description": "Capacité à collecter, structurer, analyser et valoriser les données de chantier et d'entreprise BTP en Côte d'Ivoire : données BIM (géométrie, coûts, planning), IoT capteurs chantier, données opérationnelles (rendements, incidents, coûts réels), tableaux de bord décisionnels et analytique prédictive pour la gestion de projets BTP.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Données BTP CI historiquement absentes : aucun benchmark coûts fiable CI — devis basés sur estimation experte individuelle",
+      "BIM comme source de données structurées : Revit exporte quantités, coûts, planning — sous-exploité en CI",
+      "Données IoT chantier CI : capteurs béton SmartRock (résistance temps réel), sondes sol (tassement), caméras IP surveillance",
+      "EVA (Earned Value Analysis) : outil analytique standard projets CI > 1 Md FCFA — BNETD CI l'exige sur grands projets",
+      "Power BI adoption CI : Microsoft 365 inclut Power BI Pro — entreprises BTP CI l'utilisent peu",
+      "CNBTP CI benchmark : données coûts construction CI désagrégées — accessible membres uniquement",
+      "Données sinistres RC décennale CI : CIMA CI assureurs partagent peu — risque sous-déclaration"
+    ],
+    "acteurs_cles": [
+      "CNBTP CI — Conseil National du BTP : benchmark coûts construction CI, données sectorielles",
+      "BNETD CI — MOA délégué État CI : reporting données projets, GEOPROJET CI SIG données infrastructure",
+      "LBTP CI — données essais matériaux CI, résistances béton local, taux de compression BLS",
+      "Autodesk — BIM 360 data platform : extraction données BIM projets CI",
+      "Microsoft CI — Power BI Pro : visualisation données BTP CI",
+      "ARTCI CI — données incidents réseau, réglementation données sectorielles CI"
+    ],
+    "reglementation_locale": [
+      "APDP CI Loi 2013-450 : données personnelles chantier (biométrie, géolocalisation) — registre obligatoire, durée conservation limitée",
+      "OHADA Acte uniforme : conservation pièces comptables et données chantier 10 ans minimum",
+      "BNETD CI Directive BIM 2023 : données BIM livrables obligatoires — IFC natif + COBie (données exploitation)",
+      "SIGMAP DGMP CI : données marchés publics BTP publiées — accès API (données ouvertes)",
+      "CIMA Code Assurances : données sinistres construction CI — déclaration RC décennale obligatoire",
+      "Loi CI 2017-771 : valeur juridique données numériques CI — archivage électronique conforme"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Aucune donnée structurée. Devis sur expérience individuelle non documentée. Rapports papier archivés en cartons. Aucun indicateur de performance chantier. Décisions basées sur intuition du DG.",
+      "indicateurs": [
+        "Devis basés sur expérience individuelle — aucun historique coûts structuré",
+        "Rapports journaliers papier archivés ou perdus",
+        "0 KPI chantier suivi : ni rendement, ni coût réel vs budgété, ni délai",
+        "Données sinistres RC décennale non archivées",
+        "0 outil analytique — décisions uniquement qualitatives"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Excel de suivi coûts par projet. Quelques KPIs suivis manuellement (taux avancement, coût mensuel). Historique devis sur 2-3 projets récents. Aucune analyse tendances. Aucune donnée IoT chantier.",
+      "indicateurs": [
+        "Suivi coûts Excel par projet — mis à jour mensuellement",
+        "2-3 KPIs manuels : % avancement, dépenses cumulées, délai estimé",
+        "Historique devis 2-3 projets récents — non structuré pour réutilisation",
+        "Aucun benchmark externe (CNBTP CI non consulté pour données)",
+        "0 capteur IoT ni donnée temps réel chantier"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "ERP ou outil gestion projets avec données structurées par chantier. EVA mensuel automatisé. Tableau de bord Power BI direction. Historique coûts 3+ ans pour devis. Données BIM exportées pour métrés. Benchmark CNBTP CI utilisé.",
+      "indicateurs": [
+        "ERP (SAP, Odoo CI, Procore) : données coûts, rendements, délais structurées par chantier",
+        "EVA mensuel automatisé : CPI, SPI, EAC — rapport direction < 2h",
+        "Power BI tableau de bord : 5+ KPIs chantier mis à jour hebdomadairement",
+        "Historique coûts 3+ ans structuré — réutilisé pour devis (précision ±10%)",
+        "Benchmark CNBTP CI consulté trimestriellement — ajustement prix unitaires CI"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "Data lake projets BTP CI : BIM + ERP + chantier. Analytique prédictive coûts et délais (ML). IoT capteurs béton SmartRock et capteurs sol. Dashboard temps réel DG. Données BIM COBie pour exploitation FM. Contribution données anonymisées CNBTP CI.",
+      "indicateurs": [
+        "Data lake BTP CI : BIM + ERP + IoT + RH + SIGMAP — une source de vérité",
+        "ML prédictif dépassement coûts : alertes EAC > budget J+4 (vs J+45 traditionnel)",
+        "IoT chantier : capteurs béton SmartRock CI + sondes sol — données temps réel",
+        "Power BI temps réel DG : 15+ KPIs mis à jour quotidiennement",
+        "BIM COBie exporté au MO : données exploitation FM (équipements, garanties, maintenance)"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "IA générateurs de devis BTP CI (LLM entraîné données historiques CI). Jumeau numérique chantier temps réel. Données sectorielles anonymisées publiées CNBTP CI. Analytics as-a-service pour sous-traitants CI. Référence data BTP Afrique de l'Ouest.",
+      "indicateurs": [
+        "IA devis BTP CI : devis auto-généré LLM ± 5% en < 2h vs 5 jours ingénieur",
+        "Jumeau numérique chantier : BIM + IoT + drones — état temps réel",
+        "Données anonymisées publiées CNBTP CI : 50+ projets CI contribués au data commons",
+        "Analytics as-a-service PME BTP CI partenaires : SaaS données tableau de bord",
+        "Publication benchmark coûts construction CI — référence annuelle sectorielle"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Comment gérez-vous vos données de coûts historiques pour établir vos devis ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Expérience individuelle — aucun historique structuré"},
+        {"valeur": 2, "label": "Excel par projet — non structuré pour réutilisation systématique"},
+        {"valeur": 3, "label": "ERP structuré : historique 3+ ans, réutilisé pour devis (±10%)"},
+        {"valeur": 4, "label": "Data lake BIM+ERP : ML prédictif devis (±5%), benchmark CNBTP CI"},
+        {"valeur": 5, "label": "IA devis BTP CI : auto-généré ± 3% en < 2h — entraîné sur données CI"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Utilisez-vous l'EVA (Earned Value Analysis) pour piloter vos projets ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — suivi visuel avancement uniquement"},
+        {"valeur": 2, "label": "Suivi % avancement et coût mensuel — pas d'EVA formelle"},
+        {"valeur": 3, "label": "EVA mensuel automatisé : CPI, SPI, EAC — rapport < 2h"},
+        {"valeur": 4, "label": "EVA temps réel intégré BIM 5D — alertes J+4 si dépassement prévu"},
+        {"valeur": 5, "label": "EVA + ML prédictif — EAC précision ±1%, 0 dépassement non anticipé"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Disposez-vous de capteurs IoT sur vos chantiers CI (béton, sol, environnement) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — 0 capteur IoT, mesures manuelles uniquement"},
+        {"valeur": 2, "label": "Thermomètres et hygromètres manuels — relevés papier"},
+        {"valeur": 3, "label": "Capteurs béton SmartRock ou équivalent sur ouvrages critiques"},
+        {"valeur": 4, "label": "IoT chantier complet : béton + sol + environnement — dashboard temps réel"},
+        {"valeur": 5, "label": "Jumeau numérique IoT + BIM + drones — état chantier temps réel complet"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Utilisez-vous des tableaux de bord analytiques (Power BI, Tableau) pour piloter vos projets ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — réunions de direction uniquement"},
+        {"valeur": 2, "label": "Excel avec quelques graphiques — mis à jour manuellement"},
+        {"valeur": 3, "label": "Power BI 5+ KPIs — mis à jour hebdomadairement"},
+        {"valeur": 4, "label": "Power BI temps réel 15+ KPIs — alertes automatiques dépassements"},
+        {"valeur": 5, "label": "Analytics as-a-service — dashboard DG + sous-traitants CI + MO partagé"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "Données coûts historiques structurées",
+      "EVA automatisé",
+      "IoT capteurs chantier CI",
+      "Tableaux de bord analytiques",
+      "Contribution data commons sectoriel"
+    ],
+    "lignes": [
+      {
+        "organisation": "PME BTP CI classe D-E",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "0 données structurées, 0 EVA, 0 IoT, 0 dashboard, 0 contribution sectorielle"
+      },
+      {
+        "organisation": "SETIMA CI",
+        "scores": [2, 2, 1, 2, 1],
+        "note_globale": 2,
+        "commentaire": "Excel coûts, EVA partiel manuel, 0 IoT, graphiques Excel, aucun partage sectoriel"
+      },
+      {
+        "organisation": "SATCI CI",
+        "scores": [3, 3, 2, 3, 2],
+        "note_globale": 3,
+        "commentaire": "ERP Procore + SAP, EVA mensuel auto, capteurs béton 2 projets, Power BI 8 KPIs"
+      },
+      {
+        "organisation": "COLAS CI",
+        "scores": [5, 5, 4, 5, 4],
+        "note_globale": 5,
+        "commentaire": "Data lake BIM+ERP, ML prédictif EAC, IoT multi-capteurs, Power BI RT, données CNBTP CI"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "CNBTP CI — benchmark données coûts construction CI",
+      "part_de_marche_estimee": "Unique base données coûts BTP CI structurée",
+      "forces": ["Données CI désagrégées par type projet", "Prix unitaires main-d'œuvre CI", "Benchmarks délais CI", "Accès membres agréés"],
+      "faiblesses": ["Mise à jour annuelle insuffisante", "Accès restreint non-membres", "Format PDF non exploitable directement"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "Atalian Africa / SODEXO Africa — data FM bâtiments Afrique",
+      "part_de_marche_estimee": "Données exploitation FM bâtiments Afrique",
+      "forces": ["Données maintenance bâtiments 12 pays Afrique", "Benchmarks coûts FM UEMOA", "Analytics FM prédictif"],
+      "faiblesses": ["Données FM — pas construction", "Pas d'ouverture données CI externe"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "Autodesk Construction Cloud (BIM 360 + Construction IQ)",
+      "part_de_marche_estimee": "Leader mondial analytique BTP",
+      "forces": ["Construction IQ IA prédictive incidents sécurité", "BIM 360 analytics avancement", "COBie export données FM", "Intégration Power BI native"],
+      "faiblesses": ["Coût USD élevé", "IA entraînée données projets US/Europe — moins précis CI", "Débit CI requis"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Microsoft Power BI Pro — analytique BTP CI",
+      "usage": "Tableaux de bord KPIs chantier, EVA mensuel, alertes dépassements, rapports DG",
+      "niveau_cible": "3+",
+      "cout_estime": "Inclus M365 Business (ou 8 USD/user/mois standalone)",
+      "disponibilite_ci": "International — cloud Microsoft CI, partenaires formation Power BI Abidjan"
+    },
+    {
+      "nom": "SmartRock (Maturix) — capteurs béton IoT CI",
+      "usage": "Résistance béton temps réel — coulage nocturne CI, décoffrage optimisé, rapport automatique LBTP CI",
+      "niveau_cible": "3+",
+      "cout_estime": "80 000–150 000 FCFA/capteur (usage unique) + 200 000 FCFA/an gateway",
+      "disponibilite_ci": "International — importé CI (importateurs matériaux spécialisés Abidjan)"
+    },
+    {
+      "nom": "Autodesk Construction IQ — analytique prédictive BIM",
+      "usage": "IA incidents sécurité, qualité et avancement — données BIM 360 Procore CI",
+      "niveau_cible": "4",
+      "cout_estime": "Inclus BIM 360 Enterprise (2 000 000+ FCFA/an selon volume)",
+      "disponibilite_ci": "International — cloud Autodesk accessible CI"
+    },
+    {
+      "nom": "CNBTP CI — données benchmark coûts CI",
+      "usage": "Prix unitaires construction CI, benchmarks délais, données main-d'œuvre CI actualisées",
+      "niveau_cible": "3+",
+      "cout_estime": "Cotisation CNBTP CI (200 000–500 000 FCFA/an selon classe)",
+      "disponibilite_ci": "Natif CI — CNBTP CI Abidjan Plateau"
+    },
+    {
+      "nom": "Procore Analytics — tableau de bord chantier CI",
+      "usage": "KPIs chantier temps réel depuis Procore : avancement, incidents, RFI, coûts — intégré M365",
+      "niveau_cible": "3+",
+      "cout_estime": "Inclus abonnement Procore (600 000–2 000 000 FCFA/an)",
+      "disponibilite_ci": "International — partenaires Procore CI"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "COLAS CI — data lake BIM+ERP : analytique prédictive échangeur Marcory 28 Mds FCFA",
+    "organisation": "COLAS CI (filiale Bouygues Construction, Abidjan) — échangeur Marcory, Abidjan Sud",
+    "contexte": "Échangeur Marcory CI (28 Mds FCFA, 36 mois, MOA AGEROUTE CI, MOE BNETD CI) : projet BIM imposé par BNETD CI. Données: BIM Revit 5D, Procore chantier, SAP S/4HANA ERP, 24 capteurs béton SmartRock CI (piles du pont), 8 drones DJI relevés hebdomadaires. Enjeu analytique : EAC précis pour éviter dépassement budgétaire (budget État CI).",
+    "probleme": "Sans analytique structurée : rapport mensuel direction 4-5 jours travail 3 ingénieurs. EAC précision ±15% (industrie CI standard). Capteurs SmartRock non connectés à BIM — données manuellement relevées. Données drones : photos archivées sans analyse avancement systématique.",
+    "solution_deployee": "Data lake Azure CI : BIM Revit 5D + Procore chantier + SAP S/4HANA + SmartRock API + DroneDeploy avancement. Power BI temps réel : 18 KPIs DG mis à jour toutes les 4h. EVA auto-calculé BIM 5D → Power BI : CPI, SPI, EAC actualisé dès nouvelle saisie avancement. ML (Azure ML) : modèle prédictif EAC entraîné sur 14 projets CI historiques Bouygues CI. SmartRock intégré Azure IoT Hub : résistance béton piles pont temps réel → alerte si < 25 MPa J+14.",
+    "resultats": "Rapport mensuel direction : 4-5 jours → 2h auto-généré Power BI (-95%). EAC précision ML : ±1,4% (vs ±15% avant — soit 20× plus précis). Économie action corrective précoce : 850 M FCFA estimés (dépassement détecté M+2 vs M+8 méthode classique). SmartRock : décoffrage optimisé 14→11 jours (-21%) = 3 jours grue libérée par pile. Drones DroneDeploy IA : avancement topo hebdomadaire vs BIM 4D — écart détecté J+4 vs J+45. Données anonymisées contribuées CNBTP CI : 28 Mds FCFA projet échangeur CI = nouvelle référence benchmark prix unitaires Abidjan. BNETD CI : rapport GEOPROJET CI alimenté automatiquement — 0 ressaisie.",
+    "enseignements": [
+      "Un data lake BIM+ERP+IoT ne nécessite pas de DSI expert data science — Power BI + Procore Analytics suffisent pour 90% des besoins analytiques d'une PME-GE BTP CI",
+      "L'EAC précis à ±1,4% change la relation MOA : BNETD CI fait confiance aux données COLAS CI — 0 dispute sur dépassement si prévu et documenté",
+      "Les capteurs SmartRock béton optimisent le décoffrage de 3 jours par pile — sur un pont de 12 piles CI, c'est 36 jours de grue économisés soit 180 M FCFA"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "EVA", "Earned Value Analysis", "CPI SPI EAC", "Power BI BTP CI", "data lake BTP",
+      "BIM 5D données", "IoT capteurs chantier CI", "SmartRock béton CI", "analytique prédictive BTP",
+      "benchmark coûts CNBTP CI", "BNETD CI données projets", "ML prédictif coûts délais",
+      "historique coûts structuré", "COBie données FM", "jumeau numérique chantier CI"
+    ],
+    "signaux_niveau_avance": [
+      "EVA automatisé avec EAC précision ±5% ou mieux",
+      "Data lake BIM+ERP+IoT source unique vérité",
+      "IoT capteurs béton/sol temps réel dashboard",
+      "Power BI 10+ KPIs temps réel direction",
+      "Données contribuées CNBTP CI data commons"
+    ],
+    "pieges_frequents": [
+      "EVA déclaré mais calculé à J+30 depuis Excel manuel — sans automatisation, l'EVA est 6 semaines trop tardif",
+      "Historique coûts = classeurs Excel par projet non structurés — ne permet pas d'entraîner un modèle prédictif",
+      "Capteurs SmartRock achetés mais données non centralisées ni analysées = IoT niveau 1",
+      "Power BI installé mais nourri manuellement = tableau de bord Excel amélioré — pas de l'analytique temps réel"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "0 données structurées. Devis expérience individuelle. 0 EVA. 0 IoT. Décisions qualitatives uniquement.",
+      "score_21_to_40": "Excel coûts par projet. EVA partiel manuel. 0 IoT. Graphiques Excel. Aucun benchmark externe.",
+      "score_41_to_60": "ERP données structurées. EVA mensuel auto < 2h. Capteurs béton 1+ projet. Power BI 5+ KPIs. Benchmark CNBTP CI.",
+      "score_61_to_80": "Data lake BIM+ERP+IoT. ML prédictif EAC ±5%. IoT multi-capteurs. Power BI RT 15+ KPIs. COBie exporté.",
+      "score_81_to_100": "IA devis ±3%. Jumeau numérique temps réel. 50+ projets CI data commons. Analytics as-a-service. Référence Afrique."
+    }
+  }
+}

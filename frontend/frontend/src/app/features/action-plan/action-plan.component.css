@@ -1,0 +1,12 @@
+.kanban-col { min-height: 400px; display: flex; flex-direction: column; }
+.kanban-body { flex: 1; min-height: 200px; }
+.kanban-card { transition: transform .15s, box-shadow .15s; cursor: default; }
+.kanban-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.12) !important; }
+
+.btn-xs { padding: 2px 6px; font-size: 0.7rem; }
+.x-small { font-size: 0.75rem; }
+
+.border-3 { border-width: 3px !important; }
+
+.modal { z-index: 1055; }
+.modal-backdrop { z-index: 1050; }

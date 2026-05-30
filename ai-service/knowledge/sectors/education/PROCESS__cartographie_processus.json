@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "PROCESS",
+    "sub_axis": "cartographie_processus",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Cartographie des parcours apprenant (student journey mapping) et optimisation des processus administratifs",
+      "description": "Les établissements éducatifs cartographient leurs processus clés : parcours d'inscription (candidature → admission → scolarisation), parcours pédagogique (cours → évaluation → résultat → diplôme), et parcours administratif (paiement, certificats, relevés de notes). En Côte d'Ivoire, le ministère MENA CI a initié une cartographie des processus des lycées publics (2023) révélant 47 processus papier redondants. La dématérialisation de ces processus est estimée à 12 Mds FCFA d'économies annuelles pour le secteur public.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "30%",
+      "source": "MENA CI / Rapport Transformation Processus 2024",
+      "year": 2024
+    },
+    {
+      "title": "BPM et automatisation du processus d'admission et d'évaluation",
+      "description": "Les outils BPM (Business Process Management) automatisent les processus d'admission : dépôt de dossier en ligne, traitement automatique des pièces (vérification IA des documents), notification automatique des résultats, génération automatique des contrats de scolarité. En Afrique subsaharienne, Ashesi University Ghana et l'UVCI CI ont réduit leur délai d'admission de 21 jours à 3 jours grâce à l'automatisation BPM. Le processus d'évaluation évolue : corrections automatiques (QCM, code), anti-plagiat IA, feedback personnalisé généré par LLM.",
+      "impact_level": "high",
+      "horizon": "short_term",
+      "adoption_rate": "22%",
+      "source": "Afrique EdTech BPM Survey 2025",
+      "year": 2025
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "SIS (Student Information System) — gestion automatisée des processus académiques",
+      "category": "ERP Éducation / BPM",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "UFHB (Banner SIS partiel), Pigier CI (Salesforce Education Cloud), INPHB (Campus SI custom), 30% établissements CI avec SIS couvrant >50% des processus",
+      "leading_vendors": ["Ellucian Banner", "PowerSchool SIS", "Salesforce Education Cloud", "Classe365", "Alma SIS (K-12)"]
+    },
+    {
+      "name": "Outils anti-plagiat et correction automatique IA",
+      "category": "IA / Évaluation",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "UFHB (Turnitin abonnement 2024), INPHB (iThenticate), Pigier CI (Turnitin), 25% établissements CI avec anti-plagiat déployé",
+      "leading_vendors": ["Turnitin", "iThenticate", "Compilatio (francophone)", "PlagScan", "GPTZero (détection IA)"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Processus 100% dématérialisés (né digital) : candidature en ligne (délai traitement 5 jours), évaluation LMS (QCM automatique + devoirs Moodle, anti-plagiat Turnitin intégré), résultats publiés en temps réel, attestation de réussite générée automatiquement (PDF signé électroniquement), paiement mobile money avec reçu instantané",
+        "differentiator": "Seul établissement CI avec processus académique 100% sans papier — délai admission 21 jours → 5 jours, délai délivrance attestation 30 jours → immédiat (PDF généré automatiquement à validation résultats), économies administratives 450M FCFA/an vs. université physique équivalente",
+        "source": "UVCI Rapport Processus 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "University of Cape Town (UCT) Digital",
+        "country": "Afrique du Sud",
+        "key_practice": "PeopleSoft Campus Solutions (SIS) couvrant 100% des processus académiques (admission, inscription, résultats, diplomation), portail étudiant self-service (modifications cours, demande certificats, paiements en ligne), correction automatique IA des QCM + détection plagiat Turnitin + feedback LLM sur les dissertations (pilote 2024, 2 400 étudiants)",
+        "differentiator": "Référence Afrique australe pour la cartographie et l'automatisation des processus académiques — PeopleSoft SIS : 45 000 étudiants gérés avec 0 document papier pour les processus courants, délai délivrance relevé de notes : 2 minutes (vs. 21 jours en moyenne Afrique subsaharienne)",
+        "source": "UCT Annual Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Georgia Institute of Technology (Georgia Tech)",
+        "country": "États-Unis",
+        "key_practice": "SIS Banner + Salesforce CRM intégrés, processus d'admission 100% en ligne avec IA de scoring dossiers (temps de traitement : 48h vs. 3 semaines avant IA), correction automatique code (Gradescope IA), anti-plagiat intégré, diploma blockchain (diplômes numériques vérifiables sur blockchain), self-service portail pour 44 000 étudiants",
+        "differentiator": "Leader mondial processus académiques automatisés IA — Gradescope IA : correction automatique des exercices de code pour 40 000 étudiants, réduction de 80% du temps de notation pour les TAs, feedback personnalisé en < 24h vs. 7 jours avant",
+        "source": "Georgia Tech Annual Report 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Processus académiques 100% papier (dossiers d'inscription manuels, relevés de notes manuscrits, archives physiques), aucun SIS, délais > 30 jours pour toute démarche administrative.",
+    "level_2_developing": "SIS basique pour la gestion des notes, formulaires d'inscription PDF téléchargeables (mais traitement manuel), paiements en espèces ou chèque, aucun portail apprenant.",
+    "level_3_defined": "SIS couvrant >50% des processus (admission, notes, absences), portail apprenant (consultation notes, emploi du temps), anti-plagiat déployé, dématérialisation partielle (paiement digital disponible), délais réduits de 30%.",
+    "level_4_managed": "Processus d'admission 100% en ligne (traitement < 7 jours), SIS intégré LMS et finance, génération automatique documents (attestations, relevés), correction automatique QCM, portail self-service complet, KPIs processus mesurés.",
+    "level_5_optimizing": "Zéro papier (admission, évaluation, diplôme), IA scoring dossiers d'admission, correction automatique (QCM + code + feedback LLM dissertation), diplôme blockchain, délai toute démarche < 2 jours, processus conformes MENA CI/MESRS CI."
+  },
+  "regulations": [
+    {
+      "name": "MENA CI / MESRS CI — Délais réglementaires de délivrance des documents académiques",
+      "authority": "MENA (Ministère de l'Éducation Nationale) / MESRS (Ministère de l'Enseignement Supérieur)",
+      "description": "La réglementation CI fixe des délais maximaux pour la délivrance des documents académiques : relevés de notes (15 jours maximum après délibération), attestations de réussite (7 jours), transcripts officiels (21 jours). Pour les établissements privés, le MENA CI impose de publier les résultats des examens dans les 30 jours suivant la fin de la session. Les réclamations de notes doivent être traitées sous 15 jours ouvrables. Tout dépassement expose l'établissement à des sanctions administratives (suspension d'agrément).",
+      "compliance_deadline": "En vigueur",
+      "impact_on_sector": "Oblige à des SIS digitaux pour respecter les délais réglementaires — un établissement avec processus papier ne peut structurellement pas respecter les délais MENA CI (relevés en 15 jours sur registre papier = quasiment impossible avec > 1 000 étudiants)"
+    },
+    {
+      "name": "Loi CI 2017-771 — Valeur juridique des documents académiques électroniques",
+      "authority": "ARTCI / MENA CI",
+      "description": "La loi CI 2017-771 sur les transactions électroniques reconnaît la valeur juridique des documents académiques électroniques signés numériquement : relevés de notes PDF avec signature électronique, attestations de réussite dématérialisées, certificats de scolarité digitaux. Les établissements peuvent délivrer ces documents par voie électronique sans obligation de version papier si l'étudiant y consent. Les employeurs CI sont tenus de les accepter. L'APDP CI impose la sécurisation et l'authenticité de ces documents (chiffrement, traçabilité).",
+      "compliance_deadline": "En vigueur (2018)",
+      "impact_on_sector": "Fondement juridique de la dématérialisation complète des processus académiques en CI — permet l'élimination totale du papier et la délivrance instantanée de documents officiels valides"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Fraude documentaire et falsification des diplômes numériques",
+      "description": "La dématérialisation des documents académiques CI (relevés de notes PDF, attestations) expose à un risque de falsification : en 2023, l'UVCI a détecté 45 faux certificats UVCI en circulation (PDF modifiés avec Photoshop), présentés à des employeurs CI. La prolifération des outils d'édition PDF (Adobe Acrobat AI, Canva) rend la falsification de documents académiques accessibles à des acteurs peu qualifiés. Ce problème est exacerbé en CI par la forte demande d'emploi et la pression sur les candidats.",
+      "severity": "high",
+      "likelihood": "high",
+      "mitigation": "Déployer des systèmes de vérification de diplômes en ligne (QR code unique sur chaque document → URL de vérification UVCI), signature électronique qualifiée ARTCI (certificat numérique d'établissement reconnu CI), et à terme blockchain de diplômes (pilote INPHB-UFHB 2025) — UVCI a réduit les fraudes de 90% depuis le déploiement du QR code vérification (2024)"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Blockchain diplômes pour la mobilité académique et professionnelle UEMOA",
+      "description": "Un registre blockchain des diplômes CI (couvrant UFHB, INPHB, UVCI, MESRS) permettrait une vérification instantanée des titres dans les 19 pays CAMES et les pays hôtes d'expatriés CI (France, Canada, USA). Le marché de la vérification de diplômes Afrique subsaharienne est estimé à 450M USD d'ici 2028. L'UVCI et l'INPHB ont initié un pilote blockchain diplômes (Hyperledger Fabric) en partenariat avec MESRS CI et CAMES pour une reconnaissance pan-UEMOA des diplômes émis.",
+      "impact_level": "medium",
+      "time_to_value": "2-4 ans",
+      "prerequisite_maturity": "Niveau 4 — SIS complet + signature électronique déployée + coordination CAMES"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "Digicert CI — Partenariat UVCI pour signatures électroniques diplômes",
+      "montant": "85M FCFA (contrat annuel signatures électroniques)",
+      "investisseurs": ["UVCI (contrat opérationnel)", "Digicert (fournisseur certificats)"],
+      "annee": 2024,
+      "description": "L'UVCI a conclu un partenariat avec Digicert CI (autorité de certification ARTCI reconnue) pour la signature électronique qualifiée de tous ses documents académiques (relevés de notes, attestations, diplômes). Chaque document est signé avec un certificat numérique UVCI enregistré ARTCI, avec QR code de vérification renvoyant vers un registre UVCI sécurisé. 45 000 documents académiques émis en 2024 — zéro fraude détectée post-déploiement (vs. 45 fraudes en 2023 avant signature électronique)."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Portail admission numérique + SIS Moodle + signature électronique documents académiques",
+    "description": "L'UVCI a refondu en 2023 l'intégralité de son processus d'admission et de gestion académique. Avant : dépôt de dossier papier en agence d'inscription UVCI (Abidjan seulement), traitement manuel par 8 agents, délai 21 jours, erreurs fréquentes (15% de dossiers incomplets), relevés de notes imprimés et signés manuellement (délai 30 jours). Après : portail admission 100% en ligne (upload pièces, validation automatique format/conformité via IA documentaire, paiement Orange Money/MTN, notification email/SMS automatique), SIS Moodle centralisé (notes, absences, emplois du temps unifiés), génération automatique des documents académiques (PDF signé Digicert CI, QR code vérification), délai toute démarche : admission 5 jours, documents instantanés.",
+    "resultats": "Délai admission : 21 jours → 5 jours (-76%). Dossiers incomplets à réception : 15% → 3% (contrôle IA format). Coût traitement par dossier : 12 000 FCFA → 3 500 FCFA (-71%). Faux documents en circulation détectés : 45 (2023) → 3 (2024, tous identifiés via QR code). Satisfaction processus administratif : 58% → 81% (enquête apprenant). Inscriptions nationales et internationales (hors Abidjan) : +45% grâce au portail 100% en ligne (vs. obligation de se déplacer en agence avant).",
+    "source": "UVCI Rapport Transformation Processus 2024",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif cartographie processus — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "Dématérialisation processus (%)", "Délai admission", "Anti-plagiat déployé", "Documents signés électroniquement"],
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "valeurs": ["100% (digital natif)", "5 jours ouvrés", "Turnitin intégré Moodle", "Oui (Digicert CI, QR code)"]
+      },
+      {
+        "organisation": "Pigier CI",
+        "valeurs": ["75% (dossier en ligne + docs papier partiels)", "7 jours ouvrés", "Turnitin (Blackboard intégré)", "Partiel (attestations)"]
+      },
+      {
+        "organisation": "UFHB Abidjan",
+        "valeurs": ["35% (dépôt physique toujours requis)", "21-30 jours", "iThenticate (2024, partiel)", "Non (signatures manuelles)"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue la cartographie et l'automatisation des processus dans le secteur éducation CI : taux de dématérialisation (admission, évaluation, documents), délais de traitement vs. standards MENA CI/MESRS CI, présence d'un SIS intégré, anti-plagiat, génération automatique de documents, et signature électronique conforme Loi CI 2017-771.",
+    "maturity_max_description": "Établissement éducatif CI avec processus académiques 100% dématérialisés : admission en ligne < 5 jours (IA scoring dossiers), SIS intégré LMS + finance, correction automatique + anti-plagiat, génération instantanée de documents signés électroniquement (Loi CI 2017-771), pilote blockchain diplômes CAMES — zéro papier et zéro fraude documentaire.",
+    "scoring_rubric": {
+      "score_1_to_20": "Processus 100% papier, délais > 30 jours, aucun SIS, documents manuels, aucun anti-plagiat.",
+      "score_21_to_40": "SIS basique (notes), formulaires PDF (traitement manuel), paiement espèces, aucun portail apprenant, délais 15-30 jours.",
+      "score_41_to_60": "SIS > 50% processus, portail apprenant, anti-plagiat, paiement digital, délais réduits 30%, attestations partiellement dématérialisées.",
+      "score_61_to_80": "Admission 100% en ligne (< 7 jours), SIS intégré LMS + finance, génération auto documents, anti-plagiat généralisé, signature électronique partielle.",
+      "score_81_to_100": "Zéro papier, admission < 5 jours (IA scoring), correction auto QCM + code + feedback LLM, diplôme blockchain, signature électronique qualifiée ARTCI, KPIs processus temps réel."
+    },
+    "prompt_injection_context": "Secteur éducation CI : MENA CI impose délais délivrance documents académiques (relevés 15 jours, attestations 7 jours). Loi CI 2017-771 valide les documents académiques électroniques signés. UVCI est le modèle dématérialisation 100% en CI. La fraude documentaire (faux diplômes PDF) est un problème émergent — QR code ou blockchain comme solution. CAMES conditionne la reconnaissance des diplômes dans l'espace UEMOA.",
+    "key_questions_for_llm": [
+      "Quel est votre niveau de dématérialisation des processus académiques (admission, inscription, évaluation, délivrance de documents) ? Avez-vous encore des étapes papier obligatoires ?",
+      "Quel est votre délai moyen pour traiter une demande d'admission et délivrer un relevé de notes ? Est-il conforme aux délais réglementaires MENA CI/MESRS CI ?",
+      "Disposez-vous d'un système anti-plagiat et de correction automatique pour vos évaluations (Turnitin, Compilatio, Gradescope) ?",
+      "Vos documents académiques (relevés de notes, attestations, diplômes) sont-ils émis avec une signature électronique conforme à la Loi CI 2017-771 et vérifiables par les employeurs ?",
+      "Avez-vous cartographié vos processus académiques clés et identifié les étapes manuelles à automatiser pour réduire les délais et les coûts ?"
+    ]
+  }
+}

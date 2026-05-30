@@ -1,0 +1,284 @@
+{
+  "secteur": "industrie",
+  "axe": "PROCESS",
+  "sous_axe": "cartographie_processus",
+  "label": "Cartographie des processus industriels",
+  "description": "Capacité des entreprises industrielles à modéliser, documenter et optimiser leurs processus de production et de support : cartographie Value Stream Mapping (VSM), procédures opérationnelles standardisées (POS), flux matières et informations, en vue d'une digitalisation ciblée et d'une certification ISO 9001 dans le contexte industriel CI.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "PMI CI : 90% des processus non documentés — dépendance aux personnes-clés, risque de rupture si départ",
+      "Certification ISO 9001:2015 : exige cartographie processus documentée — pré-requis pour donneurs d'ordre GMS et multinationales CI",
+      "Value Stream Mapping (VSM) : outil lean manufacturing adapté au contexte agroalimentaire CI (cacao, anacarde, palmier)",
+      "Processus de pesage et dosage CI : critique en agroalimentaire — erreurs coûteuses (rebuts, hors-spec, litiges clients)",
+      "HACCP (Hazard Analysis Critical Control Points) : agroalimentaire CI — obligatoire pour export UE — requiert cartographie processus CCP",
+      "Processus SIGMAP CI : industries fournisseurs État CI — marchés publics exigent procédures documentées"
+    ],
+    "acteurs_cles": [
+      "CODINORM CI — Comité de Normalisation CI : normes ISO adaptées CI, formations certification",
+      "FONASCI CI — Fonds de Normalisation et de Standardisation CI : financement certification PMI CI",
+      "INP-HB Yamoussoukro — formations ingénieurs qualité, lean manufacturing, VSM CI",
+      "Bureau Veritas CI / SGS CI — organismes certification ISO 9001, ISO 22000 CI",
+      "FIPA CI — Fédération Ivoirienne du Patronat Industriel : formations processus PMI CI",
+      "USAID CI / GIZ CI — programmes appui modernisation PMI CI (cartographie processus)"
+    ],
+    "reglementation_locale": [
+      "ISO 9001:2015 : cartographie processus obligatoire — exigée par donneurs d'ordre GMS et multinationales CI",
+      "ISO 22000:2018 / HACCP : agroalimentaire CI — CCP documentés, flux de production cartographiés",
+      "CODINORM CI Norme NCI 000-2 : guide cartographie processus PMI ivoiriennes",
+      "APEX-CI : certifications export CI (GlobalGAP, Rainforest Alliance) — cartographie processus exigée",
+      "Code Hygiène CI (Décret 2012) : industries agroalimentaires CI — procédures HACCP documentées",
+      "LBTP CI / CODINORM CI : normes matériaux CI — processus production documentés requis"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Aucune documentation processus. Procédures dans la tête des opérateurs et chefs d'atelier. Aucune cartographie flux. Dépendance totale aux personnes-clés. Impossible à certifier ISO. Formation = compagnonnage informel.",
+      "indicateurs": [
+        "0 procédure écrite — tout dans la tête des opérateurs",
+        "0 cartographie flux production (Value Stream Mapping)",
+        "Formation nouveaux opérateurs : compagnonnage informel uniquement",
+        "Incidents répétés car causes non documentées ni corrigées",
+        "0 démarche certification ISO — même pas envisagée"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Quelques procédures écrites sur les postes critiques. Diagrammes de flux basiques dessinés manuellement. Fiches de poste sommaires. Aucune mise à jour systématique. Cartographie partielle et non partagée.",
+      "indicateurs": [
+        "3-5 procédures écrites sur postes critiques — non mise à jour",
+        "Diagrammes flux dessinés à la main — non partagés avec opérateurs",
+        "Fiches de poste sommaires non conformes ISO",
+        "0 VSM (Value Stream Mapping) formel",
+        "Démarche ISO évoquée — aucun plan d'action"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Cartographie processus complète (VSM) réalisée sur lignes principales. POS (Procédures Opérationnelles Standardisées) documentées pour 80%+ des postes. Processus clés numérisés. Certification ISO 9001 obtenue ou en cours. Gestion documentaire structurée.",
+      "indicateurs": [
+        "VSM réalisée sur 80%+ des lignes de production",
+        "POS documentées et affichées : 80%+ des postes de travail",
+        "GED (Gestion Électronique des Documents) : procédures versionnées en ligne",
+        "ISO 9001 obtenue ou audit blanc réussi",
+        "Formation opérateurs sur base POS numériques — tablettes atelier"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "Cartographie dynamique des processus intégrée au MES/ERP. VSM temps réel depuis données capteurs. HACCP et CCP intégrés au système qualité numérique. Audit interne processus mensuel. Amélioration continue chiffrée.",
+      "indicateurs": [
+        "VSM dynamique : MES alimente cartographie temps réel — goulots identifiés automatiquement",
+        "HACCP CI intégré système qualité numérique — CCP alertes automatiques",
+        "Audit interne processus mensuel : 100% actions correctives tracées",
+        "Amélioration continue chiffrée : 5+ améliorations processus/an avec ROI documenté",
+        "Processus fournisseurs intégrés : flux matières de la commande à la réception numériques"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Usine numérique : cartographie processus = jumeau numérique dynamique. IA détection goulots et optimisation flux. Processus 100% paperless. Référence cartographie processus industrielle CI — contributions CODINORM CI.",
+      "indicateurs": [
+        "Jumeau numérique processus : simulation optimisation flux production en continu",
+        "IA goulots : détection automatique et recommandation réaffectation ressources",
+        "100% paperless : 0 fiche papier en atelier — tablettes durciées + ERP MES",
+        "Contribution CODINORM CI : 2+ normes processus PMI CI co-rédigées",
+        "Publication VSM industrielle CI : référence secteur FIPA CI / INP-HB CI"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Vos procédures de production sont-elles documentées et accessibles aux opérateurs ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — tout dans la tête des opérateurs, 0 écrit"},
+        {"valeur": 2, "label": "Quelques procédures clés écrites — non mises à jour ni partagées"},
+        {"valeur": 3, "label": "POS documentées pour 80%+ postes — GED numérique"},
+        {"valeur": 4, "label": "POS intégrées MES — tablettes atelier, mises à jour automatiques"},
+        {"valeur": 5, "label": "100% paperless — procédures IA adaptatives, jumeau numérique"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Avez-vous réalisé une cartographie Value Stream Mapping (VSM) de vos lignes de production ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — aucune cartographie flux"},
+        {"valeur": 2, "label": "Diagrammes flux basiques dessinés à la main — non maintenus"},
+        {"valeur": 3, "label": "VSM formelle réalisée sur lignes principales — document partagé"},
+        {"valeur": 4, "label": "VSM dynamique intégrée MES — goulots identifiés en temps réel"},
+        {"valeur": 5, "label": "Jumeau numérique processus — simulation optimisation flux en continu"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Avez-vous une certification ISO 9001 (ou ISO 22000 pour l'agroalimentaire CI) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — pas même envisagée"},
+        {"valeur": 2, "label": "En réflexion — quelques procédures écrites pour commencer"},
+        {"valeur": 3, "label": "ISO 9001 obtenue ou audit blanc réussi"},
+        {"valeur": 4, "label": "ISO 9001 + ISO 22000 (HACCP) — audits annuels, 0 non-conformité majeure"},
+        {"valeur": 5, "label": "Multi-certifié : ISO 9001 + 22000 + 14001 + contribution CODINORM CI"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Comment gérez-vous l'amélioration continue de vos processus ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Aucune démarche — on fait comme on a toujours fait"},
+        {"valeur": 2, "label": "Réunions ponctuelles quand problème grave — sans suivi"},
+        {"valeur": 3, "label": "PDCA / 5 pourquoi — actions correctives tracées, revue mensuelle"},
+        {"valeur": 4, "label": "5+ améliorations/an chiffrées, ROI documenté, KPIs processus"},
+        {"valeur": 5, "label": "IA amélioration continue : recommandations automatiques, flux optimisé en continu"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "POS documentées et accessibles",
+      "VSM réalisée",
+      "Certification ISO obtenue",
+      "GED numérique processus",
+      "Amélioration continue chiffrée"
+    ],
+    "lignes": [
+      {
+        "organisation": "PMI CI (< 50 employés)",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "0 procédure, 0 VSM, 0 ISO, 0 GED, 0 amélioration continue"
+      },
+      {
+        "organisation": "Industrie moyenne CI (50-200 employés)",
+        "scores": [2, 2, 2, 2, 2],
+        "note_globale": 2,
+        "commentaire": "Quelques POS, flux dessinés à la main, ISO en réflexion, GED partielle"
+      },
+      {
+        "organisation": "SUCAF CI",
+        "scores": [4, 3, 4, 3, 3],
+        "note_globale": 3,
+        "commentaire": "POS 85% postes, VSM lignes principales, ISO 9001 + 22000, GED partielle"
+      },
+      {
+        "organisation": "SIFCA CI",
+        "scores": [5, 5, 5, 5, 5],
+        "note_globale": 5,
+        "commentaire": "POS MES intégrées, VSM dynamique, ISO 9001+22000+14001, GED numérique, IA amélioration"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "CODINORM CI — normalisation processus industriels CI",
+      "part_de_marche_estimee": "Référence nationale normes processus CI",
+      "forces": ["Normes NCI adaptées contexte CI", "Formations PMI CI", "Financement FONASCI CI", "Partenariat ISO international"],
+      "faiblesses": ["Budget limité État CI", "Lenteur publication normes", "Peu de normes spécifiques agroalimentaire CI"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "Bureau Veritas Africa — certification ISO processus industries UEMOA",
+      "part_de_marche_estimee": "Leader certification ISO industries Afrique francophone",
+      "forces": ["Réseau auditeurs 14 pays Afrique", "ISO 9001, 22000, 14001 CI", "Accompagnement PMI CI", "Reconnu multinationales"],
+      "faiblesses": ["Coût certification élevé PMI CI (3-8 M FCFA)", "Rotation auditeurs — moins de continuité"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "Siemens Opcenter (SIMATIC IT) — MES avec VSM dynamique",
+      "part_de_marche_estimee": "Leader mondial MES cartographie processus",
+      "forces": ["VSM dynamique intégrée", "HACCP module", "POS numériques tablettes", "Intégration SAP/ERP"],
+      "faiblesses": ["Coût inaccessible PMI CI", "Déploiement 6-18 mois", "Expertise locale CI limitée"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Bizagi / Lucidchart — cartographie processus VSM numérique",
+      "usage": "VSM et BPMN processus industriels CI — diagrammes versionnés, partagés en ligne",
+      "niveau_cible": "3+",
+      "cout_estime": "Gratuit (Lucidchart freemium) à 200 000 FCFA/an (équipe)",
+      "disponibilite_ci": "International — SaaS accessible CI"
+    },
+    {
+      "nom": "Odoo CI Quality — POS et gestion qualité numérique",
+      "usage": "POS numérisées, points de contrôle qualité, HACCP CCP, alertes non-conformité",
+      "niveau_cible": "3+",
+      "cout_estime": "Inclus Odoo Manufacturing CI (800 000–2 500 000 FCFA/an)",
+      "disponibilite_ci": "International — partenaires Odoo CI Abidjan"
+    },
+    {
+      "nom": "CODINORM CI — accompagnement certification ISO",
+      "usage": "Formation ISO 9001:2015, accompagnement cartographie processus, financement FONASCI CI",
+      "niveau_cible": "3+",
+      "cout_estime": "Accompagnement 2 000 000–5 000 000 FCFA (FONASCI CI cofinance jusqu'à 50%)",
+      "disponibilite_ci": "Natif CI — CODINORM Abidjan Marcory"
+    },
+    {
+      "nom": "Bureau Veritas CI — certification ISO 9001 / ISO 22000",
+      "usage": "Audit et certification ISO 9001:2015 et ISO 22000:2018 — reconnus donneurs d'ordre multinationales CI",
+      "niveau_cible": "3+",
+      "cout_estime": "3 000 000–8 000 000 FCFA certification initiale + renouvellement annuel",
+      "disponibilite_ci": "International — bureau Bureau Veritas Abidjan CI"
+    },
+    {
+      "nom": "SAP S/4HANA QM + PP — HACCP et VSM dynamique",
+      "usage": "Gestion qualité HACCP intégrée production SAP : CCP alertes, VSM dynamique",
+      "niveau_cible": "4",
+      "cout_estime": "Inclus SAP S/4HANA (15 000 000+ FCFA implémentation)",
+      "disponibilite_ci": "International — partenaires SAP CI (Capgemini CI)"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "Société Ivoirienne de Transformation de l'Anacarde (SITA CI) — cartographie VSM + ISO 22000 : accès marché EU",
+    "organisation": "SITA CI (Société Ivoirienne de Transformation de l'Anacarde, San Pedro CI — 15 000 t anacarde/an)",
+    "contexte": "SITA CI : transformateur anacarde CI — amandes cajou pour export EU et USA. Perd un contrat Carrefour France (4 000 tonnes/an, 2,8 Mds FCFA) faute de certification ISO 22000. Audit Carrefour France : 22 non-conformités documentaires (procédures absentes, HACCP non documenté, traçabilité partielle).",
+    "probleme": "22 non-conformités ISO 22000 : 0 procédure HACCP documentée, 0 VSM, POS absentes 18/25 postes. Coût perte contrat Carrefour France : 2,8 Mds FCFA/an. Délai corrective imposé : 6 mois pour recertification.",
+    "solution_deployee": "Programme CODINORM CI + Bureau Veritas CI : cartographie VSM 4 lignes, 85 POS rédigées (ISO 22000 conforme), HACCP 14 CCP documentés et intégrés Odoo Quality, GED Odoo numérique (fin du papier atelier), formation 45 opérateurs (FDFP CI 75%). Certification ISO 22000 audit Bureau Veritas CI.",
+    "resultats": "ISO 22000 obtenue en 5 mois (vs 6 mois accordés). 22 non-conformités résolues : 0 NC majeure audit final. Contrat Carrefour France renoué : 4 000 t × 700 FCFA/kg premium ISO = 2,8 Mds FCFA/an récupérés. 3 nouveaux clients EU attirés par certification — CA +38% en 18 mois. POS numériques Odoo : formation nouveaux opérateurs 3j → 6h (-80%). Coût programme : 18 M FCFA (CODINORM + Bureau Veritas + Odoo + FDFP CI) — ROI : 5 jours de vente Carrefour France.",
+    "enseignements": [
+      "La certification ISO 22000 CI n'est pas un coût — c'est la condition d'accès au marché EU/USA : sans elle, les PMI CI sont exclues des donneurs d'ordre internationaux",
+      "La cartographie VSM + POS documentées transforment le risque 'départ personne-clé' : les procédures restent même si les opérateurs changent",
+      "FONASCI CI + FDFP CI cofinancent jusqu'à 75% d'un programme ISO — le coût net pour l'entreprise CI est minimal"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "cartographie processus industriel CI", "VSM Value Stream Mapping", "POS procédures opérationnelles",
+      "ISO 9001 CI", "ISO 22000 CI", "HACCP CCP CI", "CODINORM CI", "Bureau Veritas CI",
+      "GED procédures numériques", "amélioration continue PDCA", "lean manufacturing CI",
+      "FONASCI CI certification", "5 pourquoi", "8D NC industrielle CI"
+    ],
+    "signaux_niveau_avance": [
+      "VSM formelle réalisée et maintenue",
+      "ISO 9001 ou ISO 22000 obtenue",
+      "POS numériques sur tablettes atelier",
+      "HACCP CCP intégré système qualité numérique",
+      "5+ améliorations processus/an chiffrées"
+    ],
+    "pieges_frequents": [
+      "Diagrammes flux dessinés une fois ≠ VSM maintenue — sans mise à jour après chaque amélioration, la VSM est un document mort",
+      "ISO en cours depuis 2+ ans sans date d'audit = non-engagement — il faut une date ferme Bureau Veritas CI",
+      "POS affichées en papier sur les murs ≠ GED numérique — le papier jaunit et n'est pas mis à jour",
+      "HACCP mentionné sans CCP documentés = conformité de façade — les auditeurs EU/USA vérifient les enregistrements CCP"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "0 procédure. 0 VSM. 0 ISO. Formation compagnonnage. Incidents répétés non corrigés.",
+      "score_21_to_40": "Quelques POS non maintenues. Flux dessinés à la main. ISO en réflexion. 0 GED.",
+      "score_41_to_60": "POS 80%+ postes. VSM formelle. ISO 9001 obtenue. GED numérique. PDCA mensuel.",
+      "score_61_to_80": "VSM dynamique MES. HACCP intégré. ISO 9001+22000. 5+ améliorations/an ROI documenté.",
+      "score_81_to_100": "Jumeau numérique processus. IA goulots. 100% paperless. Contribution CODINORM CI. Référence CI."
+    }
+  }
+}

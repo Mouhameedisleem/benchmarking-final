@@ -1,0 +1,261 @@
+{
+  "meta": {
+    "axis": "BUSINESS",
+    "sub_axis": "Modèle économique digital",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Revenus non-intérêts via le digital — diversification du PNB",
+      "description": "Les banques digitalement matures génèrent 40-60 % de leur PNB via des commissions et services digitaux (paiements, FX en ligne, assurance bancassurance digitale), réduisant la dépendance aux revenus d'intérêts.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "Les banques digitalement avancées en Afrique génèrent 35 %+ de commissions digitales (McKinsey 2024)",
+      "source": "McKinsey Africa Banking Revenue Pool 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Freemium bancaire — compte gratuit, revenus sur les services premium",
+      "description": "Wave et les néobanques africaines ont démontré que le compte gratuit (sans frais de tenue) est viable avec des revenus générés sur les services premium (crédit, épargne automatique, assurance, FX).",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "Modèle adopté par 5 néobanques africaines dépassant 1M clients (Partech 2024)",
+      "source": "Partech Africa Fintech Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Bancassurance digitale — vente d'assurance via les canaux bancaires digitaux",
+      "description": "L'intégration de produits d'assurance (vie, santé, agri, crédit) dans l'application mobile bancaire crée des revenus récurrents sans coût de distribution additionnel, avec des taux de conversion 2-3× supérieurs au canal agence.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "30 % des banques CIMA proposent de la bancassurance digitale (CIMA 2024)",
+      "source": "CIMA Rapport Annuel 2024",
+      "year": "2024"
+    },
+    {
+      "title": "FX digital & transferts internationaux — revenus sur la diaspora",
+      "description": "La diaspora ivoirienne (France, USA, Canada) envoie 1+ Md$ par an vers la CI. Les banques qui offrent un service FX digital compétitif (taux transparents, rapidité) capturent ces flux au détriment de Western Union.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "Marché des remittances CI : 1,2 Mds$ en 2023, croissance 8 %/an (Banque Mondiale 2024)",
+      "source": "Banque Mondiale Rapport Remittances Afrique de l'Ouest 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Plateforme de paiements digitaux",
+      "category": "Génération de revenus de commissions",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne en UEMOA",
+      "leading_vendors": ["Mastercard Payment Gateway", "Visa DPS", "Interswitch", "Flutterwave", "CinetPay (Afrique de l'Ouest)"]
+    },
+    {
+      "name": "Plateforme de bancassurance digitale",
+      "category": "Revenus croisés banque-assurance",
+      "maturity_stage": "Croissance en Afrique",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Majesco", "Instanda", "Socotra", "NSIA Assurances (local)", "Allianz Africa"]
+    },
+    {
+      "name": "Plateforme FX et remittances",
+      "category": "Services de change et transfert",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne",
+      "leading_vendors": ["Wise (Transferwise)", "Flutterwave Send", "Ecobank Rapidtransfer", "WorldRemit", "Lemfi (Afrique)"]
+    },
+    {
+      "name": "Crédit digital instantané",
+      "category": "Revenus d'intérêts digitaux",
+      "maturity_stage": "Croissance en Afrique",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Jumo", "Branch", "M-Pawa (Safaricom)", "Ecobank QuickLoan", "Orange Finance"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "UBA Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Leo (chatbot bancaire) pour l'initiation de prêts et paiements, transferts diaspora via UBA Diaspora Banking",
+        "differentiator": "Premier service de transfert diaspora CI compétitif avec Western Union via l'application mobile UBA",
+        "source": "UBA CI Rapport Annuel 2023 / UBA Group Digital Strategy"
+      },
+      {
+        "organisation": "SGCI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Bancassurance NSIA : vente d'assurance vie et habitation via les conseillers bancaires, objectif digital d'ici 2025",
+        "differentiator": "Partenariat NSIA Banque-Assurance : revenus bancassurance représentant 8 % du PNB, en croissance de 15 %/an",
+        "source": "SGCI / NSIA Rapport Annuel 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Ecobank Rapidtransfer : transferts inter-africains en temps réel sur 33 pays, commissions 50 % moins chères que Western Union",
+        "differentiator": "Seule banque africaine à offrir des transferts instantanés entre 33 pays africains via une API unique — infrastructure de paiement panafricaine",
+        "source": "Ecobank Annual Report 2023 / Ecobank Payments Strategy"
+      },
+      {
+        "organisation": "Stanbic Bank (Standard Bank)",
+        "country": "Afrique de l'Ouest",
+        "key_practice": "Digital lending : crédit instantané sur l'app mobile avec décision en 60 secondes, revenus d'intérêts digitaux +25 % en 2023",
+        "differentiator": "Modèle hybride : revenus d'intérêts classiques + commissions digitales (60/40) — première banque à équilibrer les deux sources",
+        "source": "Standard Bank Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Nubank",
+        "country": "Brésil / Amérique Latine",
+        "key_practice": "Néobanque : 100M clients, 0 agence, compte gratuit, revenus via crédit (62 % du PNB) et services premium",
+        "differentiator": "Coût par client 5× inférieur aux banques traditionnelles brésiliennes — modèle économique digital pur le plus scalable au monde",
+        "source": "Nubank Annual Report 2023 / Bloomberg 2024"
+      },
+      {
+        "organisation": "Revolut",
+        "country": "Royaume-Uni / Europe",
+        "key_practice": "Modèle freemium : compte gratuit + plans Premium (9€/mois) et Metal (14€/mois), FX 0 commission, 45M clients",
+        "differentiator": "ARPU (revenu moyen par utilisateur) en croissance de 40 %/an grâce à l'upsell de services premium via les données comportementales",
+        "source": "Revolut Annual Report 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Revenus 100 % issus de la marge d'intérêt. Aucun revenu digital trackable. Commissions bancaires classiques (tenue de compte, cartes). Pas de stratégie de diversification.",
+    "level_2_developing": "Quelques services digitaux payants. Pas de tracking des revenus digitaux. Bancassurance en agence uniquement. Transferts diaspora via correspondants classiques (Western Union).",
+    "level_3_defined": "Commissions digitales mesurées. Bancassurance via les conseillers avec objectifs. FX digital lancé. Paiements marchands digitaux. Revenus digitaux représentant 10-20 % du PNB.",
+    "level_4_managed": "Revenus digitaux > 20 % du PNB. Crédit digital instantané sur l'app. Bancassurance digitale (vente sur app). FX compétitif avec la diaspora. Modèle freemium partiel.",
+    "level_5_optimizing": "Revenus digitaux > 35 % du PNB. Modèle économique multi-services (crédit, assurance, FX, investissement). BNPL lancé. BaaS générant des revenus de plateforme. Coût par client digital -60 %."
+  },
+
+  "regulations": [
+    {
+      "name": "Code CIMA — Bancassurance en zone CIMA",
+      "issuing_body": "CIMA (Conférence Interafricaine des Marchés d'Assurances)",
+      "scope": "Banques et compagnies d'assurance en zone CIMA (14 pays dont CI)",
+      "key_requirement": "Agrément bancassurance, séparation comptable des activités, formation des conseillers bancaires à la vente d'assurance",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.cima-afrique.org"
+    },
+    {
+      "name": "Instruction BCEAO sur les transferts de fonds",
+      "issuing_body": "BCEAO",
+      "scope": "Établissements offrant des services de transfert de fonds en zone UEMOA",
+      "key_requirement": "Agrément de prestataire de services de paiement, limites de montants, reporting des flux, conformité LCB-FT",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Loi LCB-FT UEMOA — Lutte contre le blanchiment et le financement du terrorisme",
+      "issuing_body": "BCEAO / GIABA",
+      "scope": "Toutes les banques et institutions financières en zone UEMOA",
+      "key_requirement": "KYC renforcé sur les transactions digitales, déclarations de soupçons, gel d'avoirs, due diligence tiers",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.giaba.org"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Cannibalisation des revenus traditionnels par les offres digitales",
+      "description": "Les frais de tenue de compte et commissions classiques (15-20 % du PNB) sont sous pression des offres gratuites (Wave, Orange Money). Une transition mal gérée vers le digital peut créer un trou de revenus.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Définir une stratégie de transition progressive : maintenir les frais sur le canal physique tout en développant de nouveaux revenus digitaux (crédit, assurance, FX) avant de baisser les frais traditionnels."
+    },
+    {
+      "title": "Non-conformité LCB-FT sur les transactions digitales — risque réglementaire majeur",
+      "description": "L'accélération des transactions digitales (paiements mobiles, crédit digital, FX) sans système AML adapté expose la banque à des sanctions BCEAO et des pénalités GAFI pouvant dépasser 100M FCFA.",
+      "severity": "Très élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Mettre à niveau le système AML/KYC pour couvrir les canaux digitaux, automatiser la surveillance des transactions suspectes et former les équipes conformité aux risques digitaux."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Commissions sur les paiements marchands — le POS digital sans terminal physique",
+      "description": "Le QR code de paiement et les APIs de paiement marchand permettent de générer des commissions sur chaque transaction sans coût de déploiement de terminal POS. Marché: 500 000+ commerçants en CI.",
+      "impact_level": "Très élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Bancassurance digitale — vente d'assurance dans l'app mobile",
+      "description": "L'assurance vie crédit, l'assurance santé et l'assurance agricole vendues via l'app bancaire génèrent des commissions de 5-15 % avec des taux de conversion 3× supérieurs au canal agence.",
+      "impact_level": "Élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "NSIA Banque / NSIA Assurances",
+      "target": "Fusion bancassurance CI",
+      "amount": "N/A",
+      "date": "En cours (2023-2024)",
+      "strategic_rationale": "Créer un groupe bancassurance intégré leader en CI pour maximiser les revenus croisés banque-assurance",
+      "source": "NSIA Groupe Rapport 2023 / APBEF-CI"
+    },
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Partech Africa, IFC",
+      "target": "Néobanques africaines (OZÉ, Koa, Float)",
+      "amount": "50-150 M$ (total)",
+      "date": "2022-2024",
+      "strategic_rationale": "Financer les modèles économiques digitaux alternatifs aux banques traditionnelles UEMOA",
+      "source": "Partech Africa Report 2024"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Nubank",
+    "pays": "Brésil",
+    "technologie": "Modèle économique néobanque — 100M clients, 0 agence, coût par client 5× inférieur",
+    "description": "Nubank a révolutionné le modèle économique bancaire au Brésil : compte courant et carte de crédit gratuits, pas de frais cachés, 100 % mobile. Les revenus proviennent du crédit (62 % du PNB), des services d'investissement (15 %), de l'assurance (8 %) et des services premium (15 %). Avec 100M de clients, Nubank est la plus grande banque digitale du monde. Son coût d'acquisition par client est de 5$ vs 250$ pour une banque traditionnelle brésilienne. Le ROE (Return on Equity) a atteint 17 % en 2023 — supérieur à Itaú Unibanco, la plus grande banque brésilienne.",
+    "resultats": "100M clients · 0 agence · Coût acquisition 5$ vs 250$ · ROE 17 % · PNB digital 100 % · 62 % revenus crédit digital · Valorisation 45 Mds$",
+    "source": "Nubank Annual Report 2023 / Forbes Fintech 50 2024",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité modèle économique digital — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "Revenus digitaux mesurés", "Crédit digital instantané disponible", "Bancassurance digitale active", "FX digital compétitif", "Revenus digitaux > 20 % PNB"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Le modèle économique bancaire UEMOA est sous pression structurelle. Les fintechs capturent les commissions de paiement, les transferts et le micro-crédit — sources de revenus traditionnellement rentables. La banque qui ne diversifie pas ses revenus digitaux (crédit digital, bancassurance, FX) vers 30-35 % du PNB d'ici 2027 verra son PNB stagner alors que ses coûts (agences, compliance) continuent de croître.",
+    "maturity_max_description": "Revenus digitaux > 35 % du PNB mesurés et trackés. Crédit digital instantané sur app. Bancassurance digitale (vente dans l'app). FX digital compétitif pour la diaspora. Commissions paiements marchands QR code. Modèle freemium partiel. BNPL ou nouvelles formes de crédit digital lancées.",
+    "scoring_rubric": {
+      "score_1_to_20": "Revenus 100 % marge d'intérêt. Aucun revenu digital trackable. Pas de diversification.",
+      "score_21_to_40": "Quelques services digitaux payants. Pas de tracking. Bancassurance agence. FX classique.",
+      "score_41_to_60": "Commissions digitales mesurées. Bancassurance avec objectifs. FX digital lancé. Revenus 10-20 % PNB.",
+      "score_61_to_80": "Revenus digitaux > 20 % PNB. Crédit digital app. Bancassurance app. FX compétitif. Freemium partiel.",
+      "score_81_to_100": "Revenus > 35 % PNB. Multi-services (crédit, assurance, FX, invest). BNPL. BaaS. Coût client -60 %."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur la maturité de son modèle économique digital dans le contexte bancaire UEMOA. Analyse la mesure des revenus digitaux dans le PNB, la disponibilité du crédit digital instantané, le déploiement de la bancassurance digitale, la compétitivité du FX digital pour la diaspora et la diversification des sources de revenus.",
+    "key_questions_for_llm": [
+      "Les revenus digitaux (commissions paiements, crédit digital, bancassurance digitale) sont-ils mesurés séparément dans le PNB et représentent-ils plus de 20 % ?",
+      "Un crédit digital instantané (décision en < 60 secondes, sans passage en agence) est-il disponible via l'application mobile ?",
+      "Des produits d'assurance (vie crédit, santé, agri) sont-ils vendus via l'application bancaire mobile avec un parcours 100 % digital ?",
+      "Un service FX digital compétitif (taux transparents, rapidité) est-il disponible pour les transferts de la diaspora ?",
+      "La banque a-t-elle initié une réflexion sur un modèle freemium (compte gratuit + services premium payants) pour attirer les clients non-bankés ?"
+    ]
+  }
+}

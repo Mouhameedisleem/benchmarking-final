@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "axis": "BUSINESS",
+    "sub_axis": "Orientation client",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Hyper-personnalisation pilotée par l'IA",
+      "description": "Les organisations leaders utilisent des modèles ML pour personnaliser chaque interaction client en temps réel : offres, communications, prix et parcours adaptés au comportement individuel.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "55 % des grandes entreprises mondiales (Forrester 2024)",
+      "source": "Forrester Customer Experience Index 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Mesure systématique du NPS et du CES",
+      "description": "Le Net Promoter Score et le Customer Effort Score deviennent des KPIs stratégiques liés à la rémunération variable des dirigeants dans 40 % des grandes entreprises.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "40 % des grandes entreprises (Bain & Company 2024)",
+      "source": "Bain & Company NPS Benchmarks 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Chatbots et assistants IA pour le service client 24/7",
+      "description": "Les assistants conversationnels IA résolvent 60-80 % des demandes clients sans intervention humaine, réduisant le coût de service de 30-40 %.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "70 % des centres de contact (Gartner 2024)",
+      "source": "Gartner Customer Service Technologies 2024",
+      "year": "2024"
+    },
+    {
+      "title": "CRM unifié — vue 360° client cross-canal",
+      "description": "L'unification des données client (transactions, interactions, comportement digital) dans un CRM unique est le prérequis de toute stratégie d'orientation client avancée.",
+      "impact_level": "Élevé",
+      "horizon": "6-18 mois",
+      "adoption_rate": "60 % des grandes entreprises (Salesforce State of CRM 2024)",
+      "source": "Salesforce State of CRM Report 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "CRM (Customer Relationship Management)",
+      "category": "Gestion relation client",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Élevée",
+      "leading_vendors": ["Salesforce", "Microsoft Dynamics 365", "HubSpot", "Zoho CRM"]
+    },
+    {
+      "name": "Plateformes de feedback client (VoC)",
+      "category": "Mesure satisfaction",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Moyenne",
+      "leading_vendors": ["Medallia", "Qualtrics XM", "SurveyMonkey", "AskNicely"]
+    },
+    {
+      "name": "Moteurs de recommandation IA",
+      "category": "Personnalisation",
+      "maturity_stage": "Croissance rapide",
+      "adoption_in_sector": "Faible à moyenne en Afrique",
+      "leading_vendors": ["AWS Personalize", "Google Recommendations AI", "Adobe Target"]
+    },
+    {
+      "name": "Chatbots & IA conversationnelle",
+      "category": "Service client automatisé",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible à moyenne",
+      "leading_vendors": ["Intercom", "Zendesk", "IBM Watson Assistant", "ChatGPT API"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Mesure NPS régulière, CRM déployé, SLA réclamation < 48h",
+        "differentiator": "Premier acteur local à publier un rapport de satisfaction client annuel",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "MTN Group",
+        "country": "Afrique du Sud",
+        "key_practice": "Programme Y'ello Care — CRM unifié sur 21 pays, NPS mesuré trimestriellement",
+        "differentiator": "Personnalisation des offres basée sur le comportement de consommation data",
+        "source": "MTN Annual Report 2023"
+      },
+      {
+        "organisation": "Jumia",
+        "country": "Pan-Afrique",
+        "key_practice": "CRM e-commerce avec segmentation comportementale sur 11 pays africains",
+        "differentiator": "Score App Store maintenu > 4/5 dans tous les pays de présence",
+        "source": "Jumia Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Apple",
+        "country": "USA",
+        "key_practice": "Human Interface Design — expérience client comme avantage compétitif absolu",
+        "differentiator": "NPS +75, rétention écosystème 92 %, standard UX adopté par 35M développeurs",
+        "source": "Apple Annual Report 2023 / Forrester CX Index 2023"
+      },
+      {
+        "organisation": "Amazon",
+        "country": "USA",
+        "key_practice": "Obsession client — chaque décision testée sur l'impact client avant l'impact financier",
+        "differentiator": "Customer First principle ancré dans les 16 Leadership Principles",
+        "source": "Amazon Annual Report 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune mesure de satisfaction client. Les réclamations sont gérées de façon réactive et non tracée. Pas de CRM.",
+    "level_2_developing": "Enquêtes de satisfaction ponctuelles. CRM partiel ou tableur. SLA non formalisé. Peu de personnalisation.",
+    "level_3_defined": "NPS mesuré régulièrement. CRM déployé avec données de base. SLA réclamation défini (< 72h). Segmentation client basique.",
+    "level_4_managed": "Vue 360° client unifiée. NPS lié aux OKRs. Chatbot opérationnel. Personnalisation des communications. SLA < 48h respecté.",
+    "level_5_optimizing": "Hyper-personnalisation IA en temps réel. NPS > 50. CES mesuré. Résolution self-service > 70 %. Satisfaction client KPI stratégique au COMEX."
+  },
+
+  "regulations": [
+    {
+      "name": "Loi n°2013-450 relative à la protection des données à caractère personnel",
+      "issuing_body": "République de Côte d'Ivoire / ARTCI",
+      "scope": "Toute organisation collectant des données client en Côte d'Ivoire",
+      "key_requirement": "Consentement explicite, droit à l'oubli, déclaration ARTCI pour les traitements sensibles",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.artci.ci"
+    },
+    {
+      "name": "RGPD (GDPR)",
+      "issuing_body": "Union Européenne",
+      "scope": "Organisations traitant des données de résidents européens",
+      "key_requirement": "Consentement, portabilité, droit à l'effacement, DPO obligatoire",
+      "compliance_deadline": "En vigueur depuis 2018",
+      "source_url": "https://gdpr.eu"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Absence de vue unifiée client",
+      "description": "Des silos de données entre canaux (agence, app, web, centre d'appel) génèrent une expérience incohérente et des opportunités de cross-sell manquées.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Déployer un CRM unifié comme source de vérité unique pour toutes les interactions client."
+    },
+    {
+      "title": "Sur-sollicitation et lassitude client",
+      "description": "Des communications non personnalisées génèrent des taux de désabonnement élevés et dégradent la relation client.",
+      "severity": "Moyen",
+      "likelihood": "Élevée",
+      "mitigation": "Mettre en place une gestion de la pression marketing et une personnalisation basée sur les préférences client."
+    },
+    {
+      "title": "Fuite de données client",
+      "description": "Une violation de données CRM peut causer des sanctions réglementaires (ARTCI, RGPD) et une perte de confiance irréversible.",
+      "severity": "Très élevé",
+      "likelihood": "Faible à moyenne",
+      "mitigation": "Chiffrement des données CRM, contrôle d'accès strict, audit annuel de sécurité."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Augmentation du cross-sell et up-sell via personnalisation",
+      "description": "La personnalisation IA des offres génère en moyenne 20-35 % de revenus additionnels selon McKinsey.",
+      "impact_level": "Très élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 3 — CRM déployé"
+    },
+    {
+      "title": "Réduction du coût de service via le self-service",
+      "description": "Chaque point de contact migré vers le self-service réduit le coût de service de 60-80 % vs interaction agent.",
+      "impact_level": "Élevé",
+      "time_to_value": "3-12 mois",
+      "prerequisite_maturity": "Niveau 2 — app mobile fonctionnelle"
+    },
+    {
+      "title": "Fidélisation et réduction du churn",
+      "description": "Une amélioration de 5 % de la rétention client augmente la rentabilité de 25-95 % selon Bain & Company.",
+      "impact_level": "Très élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3 — NPS mesuré"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Salesforce",
+      "target": "Tableau Software",
+      "amount": "15,7 Mds$",
+      "date": "2019",
+      "strategic_rationale": "Enrichir le CRM Salesforce avec des capacités analytiques avancées pour offrir une vue 360° client data-driven",
+      "source": "Salesforce Press Release 2019"
+    },
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "SAP",
+      "target": "Qualtrics",
+      "amount": "8 Mds$",
+      "date": "2018",
+      "strategic_rationale": "Intégrer la mesure de l'expérience client (XM) aux processus ERP pour lier satisfaction et performance opérationnelle",
+      "source": "SAP Press Release 2018"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Apple",
+    "pays": "USA",
+    "technologie": "Human Interface Design — expérience client comme avantage compétitif absolu",
+    "description": "Apple a bâti son leadership mondial sur l'obsession de l'expérience client : chaque produit est conçu par reverse-engineering depuis le besoin utilisateur. L'Apple Store redéfinit le retail avec un NPS de 75+. Le programme Voice of Customer analyse 40M+ avis App Store par mois. Les Human Interface Guidelines sont le standard UX adopté par 35 millions de développeurs tiers. Chaque lancement produit est précédé de 6 à 18 mois de tests utilisateurs intensifs.",
+    "resultats": "NPS +75 · Satisfaction client 89 % · Rétention écosystème 92 % · 2 900 Mds$ de capitalisation · Score App Store moyen 4,8/5",
+    "source": "Apple Annual Report 2023 / Forrester CX Index 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité orientation client — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "Mesure NPS régulière", "CRM unifié 360°", "Chatbot / FAQ digitale", "SLA réclamation < 48h", "Personnalisation offres"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "✓", "Partiel", "✓", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "Partiel", "✗", "Partiel", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'orientation client est le différenciateur clé dans les marchés saturés. Les organisations qui mesurent et pilotent systématiquement la satisfaction client (NPS, CES) surperforment leurs concurrents de 4-8 % en croissance de revenus selon Bain.",
+    "maturity_max_description": "NPS mesuré trimestriellement et lié aux OKRs dirigeants. CRM unifié avec vue 360° client cross-canal. Hyper-personnalisation IA des offres et communications. Self-service > 70 % des demandes. SLA < 24h. Score App Store > 4,5/5.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune mesure de satisfaction. Réclamations non tracées. Pas de CRM. Expérience client non pilotée.",
+      "score_21_to_40": "Enquêtes ponctuelles sans suivi. CRM partiel. SLA non formalisé. Peu ou pas de personnalisation.",
+      "score_41_to_60": "NPS mesuré régulièrement. CRM déployé avec données de base. SLA défini. Segmentation client basique.",
+      "score_61_to_80": "Vue 360° client unifiée. NPS lié aux OKRs. Chatbot opérationnel. Personnalisation des offres. SLA < 48h respecté.",
+      "score_81_to_100": "Hyper-personnalisation IA en temps réel. NPS > 50. CES mesuré. Self-service > 70 %. KPI satisfaction au COMEX."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur sa maturité d'orientation client. Analyse la qualité de la mesure de satisfaction (NPS, CES), l'unification des données client (CRM), la personnalisation des offres, la qualité du service digital (chatbot, SLA) et la capacité de self-service.",
+    "key_questions_for_llm": [
+      "L'organisation mesure-t-elle régulièrement le NPS ou un équivalent de satisfaction client ?",
+      "Dispose-t-elle d'un CRM unifié offrant une vue 360° du client cross-canal ?",
+      "Existe-t-il un chatbot ou une FAQ digitale résolvant les demandes en autonomie ?",
+      "Le SLA de traitement des réclamations est-il défini et respecté (< 48h) ?",
+      "Les offres et communications sont-elles personnalisées selon le profil et comportement client ?"
+    ]
+  }
+}

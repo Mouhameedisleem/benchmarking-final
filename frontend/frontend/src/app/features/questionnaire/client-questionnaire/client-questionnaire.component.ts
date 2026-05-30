@@ -219,6 +219,14 @@ export class ClientQuestionnaireComponent implements OnInit, OnDestroy {
     return '';
   }
 
+  goToSection(i: number) {
+    if (i > this.currentIndex) return;
+    const state = this.questionnaireService.currentState.value;
+    if (!state) return;
+    this.questionnaireService.currentState.next({ ...state, currentSection: i });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   /**
    * Calcule le pourcentage de progression de la section
    */
@@ -259,7 +267,9 @@ export class ClientQuestionnaireComponent implements OnInit, OnDestroy {
       'AGILITE': '🔄',
       'SOCLE_IT': '💻',
       'DATA': '📊',
-      'POSTE_TRAVAIL': '🖥️'
+      'POSTE_TRAVAIL': '🖥️',
+      'MODELE_OPERATIONNEL': '🏭',
+      'IT_DATA': '🗄️'
     };
     return icons[categoryId] || '📋';
   }

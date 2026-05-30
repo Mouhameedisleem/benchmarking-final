@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "axis": "RH",
+    "sub_axis": "Digitalisation RH",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "SIRH bancaire — unification des données RH dans un système central",
+      "description": "Les banques UEMOA gèrent encore leur paie, leurs congés et leurs évaluations dans des systèmes séparés (souvent Excel + logiciel paie local). La migration vers un SIRH intégré (SAP SuccessFactors, Workday) unifie les données et permet des reportings RH précis.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "20 % des banques africaines ont un SIRH intégré déployé (IDC Africa 2024)",
+      "source": "IDC Africa HR Technology Banking 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Recrutement digital bancaire — attraction des talents tech dans un marché compétitif",
+      "description": "La guerre des talents tech en Afrique de l'Ouest (développeurs, data scientists, product managers) se joue sur LinkedIn, les job boards africains et les hackathons. Les banques qui ne digitalisent pas leur processus de recrutement perdent ces profils aux fintechs.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "40 % des recrutements bancaires africains passent par LinkedIn (LinkedIn Africa 2024)",
+      "source": "LinkedIn Africa Talent Insights Banking 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Selfservice RH — autonomisation des collaborateurs sur les demandes courantes",
+      "description": "Le selfservice RH (demande de congés, consultation bulletin de paie, mise à jour coordonnées) réduit de 40 % la charge administrative des équipes RH et améliore la satisfaction des collaborateurs qui n'ont plus à attendre une réponse DRH pour des demandes simples.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "25 % des banques africaines ont déployé un selfservice RH (EY Africa 2024)",
+      "source": "EY Africa HR Digital Banking 2024",
+      "year": "2024"
+    },
+    {
+      "title": "People Analytics bancaire — données RH pour les décisions stratégiques",
+      "description": "Les banques leaders utilisent les données RH (taux de rotation, engagement, absentéisme, performances) pour prédire les risques de départs, identifier les managers sous-performants et optimiser les affectations. Le people analytics réduit le turnover de 15-25 %.",
+      "impact_level": "Élevé",
+      "horizon": "24-36 mois",
+      "adoption_rate": "10 % des banques africaines utilisent le people analytics en production (Deloitte Africa 2024)",
+      "source": "Deloitte Global Human Capital Trends Banking Africa 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "SIRH intégré",
+      "category": "Gestion centralisée des ressources humaines",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["SAP SuccessFactors", "Workday HCM", "Oracle HCM Cloud", "Sage HRMS Africa", "ADP Workforce Now"]
+    },
+    {
+      "name": "ATS — Applicant Tracking System",
+      "category": "Recrutement digital",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Workday Recruiting", "SAP SuccessFactors Recruiting", "Lever", "Greenhouse", "TalentSoft (Cegid)"]
+    },
+    {
+      "name": "Portail selfservice RH",
+      "category": "Autonomisation des collaborateurs",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["SAP SuccessFactors Employee Central", "Workday Self-Service", "Keka (PME Afrique)", "BambooHR", "Zoho People"]
+    },
+    {
+      "name": "Logiciel de paie africain",
+      "category": "Gestion de la paie UEMOA",
+      "maturity_stage": "Mature (solutions locales)",
+      "adoption_in_sector": "Moyenne",
+      "leading_vendors": ["Sage Paie (Afrique)", "Cegid Quadra Paie", "DIOQ (solutions CI)", "ADP Africa", "SIGTAS (UEMOA)"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Société Générale Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "SIRH Groupe SG déployé en CI (SAP SuccessFactors), recrutement 100 % via plateforme groupe, selfservice RH pour congés et bulletins de paie",
+        "differentiator": "Bénéficie du SIRH Société Générale Groupe déployé dans 60 pays — données RH CI intégrées au reporting groupe avec benchmarks salariaaux Afrique",
+        "source": "SGCI Rapport Annuel 2023 / SG Group HR Report"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Workday HCM déployé dans 33 filiales, recrutement centralisé via LinkedIn + plateforme propre, selfservice RH disponible pour 15 000 collaborateurs",
+        "differentiator": "Seule banque africaine avec un SIRH Workday unifié couvrant 33 pays — people analytics panafricain permettant des décisions RH basées sur des données réelles",
+        "source": "Ecobank Annual Report 2023 / Workday Case Study Ecobank"
+      },
+      {
+        "organisation": "Standard Bank",
+        "country": "Afrique du Sud / Pan-Afrique",
+        "key_practice": "People analytics avancé : modèles prédictifs de turnover, identification des hauts potentiels, optimisation des plans de succession",
+        "differentiator": "Standard Bank People Analytics : modèle ML prédit 80 % des départs de collaborateurs 6 mois à l'avance — programme de rétention ciblé réduit le turnover de 20 %",
+        "source": "Standard Bank Annual Report 2023 / Deloitte Standard Bank People Analytics Case Study"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Unilever",
+        "country": "Royaume-Uni / Global",
+        "key_practice": "Recrutement 100 % IA : 250 000 candidatures traitées par IA (HireVue) en 2023, réduction délai recrutement de 4 mois à 2 semaines, biais inconscients réduits",
+        "differentiator": "Modèle de référence en recrutement IA — Unilever a prouvé que l'IA peut traiter 10× plus de candidatures avec 50 % de réduction des biais et 2× moins de temps",
+        "source": "Unilever HR Annual Report 2023 / Harvard Business Review Unilever AI Recruitment"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Paie sur logiciel isolé ou Excel. Dossiers collaborateurs papier. Recrutement par annonces presse. Évaluations papier. Pas de selfservice RH. RH = administratif uniquement.",
+    "level_2_developing": "Logiciel de paie basique. Quelques données RH en Excel. Recrutement sur LinkedIn basique. Pas de SIRH intégré. Selfservice RH absent. Reporting RH mensuel manuel.",
+    "level_3_defined": "SIRH partiel (paie + congés digitalisés). Recrutement via ATS basique. Bulletins de paie électroniques. Évaluations digitales annuelles. Selfservice congés. Reporting RH régulier.",
+    "level_4_managed": "SIRH complet (paie, congés, formation, recrutement, évaluation). Selfservice RH complet. Recrutement 100 % digital avec ATS. Onboarding digital. People analytics basique (turnover, engagement).",
+    "level_5_optimizing": "SIRH intégré avec people analytics avancé. Modèles prédictifs turnover. Recrutement IA-assisté. Parcours collaborateur 100 % digital. Formation intégrée au SIRH. Succession planning data-driven."
+  },
+
+  "regulations": [
+    {
+      "name": "Code du Travail de Côte d'Ivoire — gestion de la paie et des congés",
+      "issuing_body": "Ministère de l'Emploi et de la Protection Sociale CI",
+      "scope": "Toutes les entreprises employant des collaborateurs en Côte d'Ivoire",
+      "key_requirement": "Bulletin de paie obligatoire (peut être électronique si accepté par le salarié), respect des congés légaux, déclarations CNPS et contributions sociales",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.travail.gouv.ci"
+    },
+    {
+      "name": "Loi ARTCI CI — traitement des données personnelles des collaborateurs",
+      "issuing_body": "ARTCI / République de Côte d'Ivoire",
+      "scope": "Employeurs collectant et traitant des données personnelles de leurs collaborateurs",
+      "key_requirement": "Consentement des collaborateurs pour le traitement de leurs données personnelles dans le SIRH, droit d'accès et de rectification, déclaration à l'ARTCI",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.artci.ci"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Données RH sensibles non sécurisées — violation vie privée collaborateurs",
+      "description": "Les données RH (salaires, évaluations, données médicales, sanctions disciplinaires) sont parmi les données les plus sensibles. Un SIRH mal sécurisé ou des données en Excel partagées exposent la banque à des violations graves de la vie privée des collaborateurs.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Migrer les données RH vers un SIRH certifié avec contrôle d'accès basé sur les rôles, chiffrement des données sensibles et audit trail de tous les accès."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Selfservice RH — libérer 2 ETP de charge administrative dans chaque DRH bancaire",
+      "description": "La mise en place d'un selfservice RH pour les congés, les bulletins de paie et les mises à jour de coordonnées libère 30-40 % du temps des équipes RH, qui peuvent se concentrer sur le développement des talents et le people analytics.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Déploiement SIRH",
+      "acquirer_or_investor": "Ecobank Group",
+      "target": "Workday HCM — déploiement SIRH panafricain 33 filiales",
+      "amount": "Investissement pluriannuel (multi-M$)",
+      "date": "2019-2022",
+      "strategic_rationale": "Unifier les données RH de 15 000 collaborateurs dans 33 filiales africaines pour permettre un people analytics panafricain et standardiser les processus RH",
+      "source": "Workday Case Study Ecobank 2022 / Ecobank Annual Report 2023"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Ecobank",
+    "pays": "Pan-Afrique",
+    "technologie": "Workday HCM — SIRH unifié pour 15 000 collaborateurs dans 33 pays",
+    "description": "Ecobank a déployé Workday HCM en 2019-2022 dans ses 33 filiales africaines, unifiant la gestion de 15 000 collaborateurs dans un système unique. Auparavant, chaque filiale avait son propre système de paie (souvent Excel ou un logiciel local). Workday a permis : selfservice RH pour tous les collaborateurs (congés, bulletin de paie, formation), reporting RH groupe en temps réel (turnover par pays, engagement, performance), people analytics permettant d'identifier les managers à fort turnover. Résultats : réduction du turnover de 22 % à 15 % en 2 ans, économies sur les coûts administratifs RH de 3 M$/an, conformité social 100 % dans tous les pays.",
+    "resultats": "15 000 collaborateurs · 33 pays · Turnover 22 % → 15 % · Économies admin 3 M$/an · Conformité 100 % · Self-service RH déployé",
+    "source": "Workday Case Study Ecobank 2022 / Ecobank Annual Report 2023",
+    "annee": "2022"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité digitalisation RH — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "SIRH intégré déployé", "Selfservice RH collaborateurs", "Recrutement 100 % digital (ATS)", "Bulletins de paie électroniques", "People analytics actif"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "Partiel", "✓", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La digitalisation RH bancaire en UEMOA est en retard par rapport aux autres industries. Les banques qui opèrent avec des dossiers papier, des paies Excel et un recrutement sans ATS perdent des heures précieuses d'équipes RH sur des tâches administratives plutôt que sur le développement des talents. La pression des fintechs pour les talents tech rend urgent le déploiement d'un recrutement digital compétitif.",
+    "maturity_max_description": "SIRH intégré couvrant paie, congés, formation, recrutement et évaluation. Selfservice RH complet pour tous les collaborateurs. Recrutement 100 % digital avec ATS et IA-assisté. People analytics prédictif (turnover, succession). Onboarding digital. Bulletins de paie 100 % électroniques. Conformité ARTCI documentée.",
+    "scoring_rubric": {
+      "score_1_to_20": "Paie Excel ou logiciel isolé. Dossiers papier. Recrutement presse. Évaluations papier. Pas de selfservice.",
+      "score_21_to_40": "Logiciel de paie basique. Excel RH. LinkedIn basique. Pas de SIRH. Reporting mensuel manuel.",
+      "score_41_to_60": "SIRH partiel (paie + congés). ATS basique. Bulletins électroniques. Évaluations digitales. Selfservice congés.",
+      "score_61_to_80": "SIRH complet. Selfservice RH. Recrutement 100 % digital. Onboarding digital. People analytics basique.",
+      "score_81_to_100": "SIRH + people analytics avancé. Modèles prédictifs. Recrutement IA-assisté. Parcours collab 100 % digital."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur la maturité de sa digitalisation RH dans le contexte bancaire UEMOA. Analyse le déploiement d'un SIRH intégré, la disponibilité d'un selfservice RH pour les collaborateurs, la digitalisation du recrutement et l'utilisation du people analytics pour les décisions RH.",
+    "key_questions_for_llm": [
+      "Un SIRH intégré (couvrant au minimum la paie, les congés et l'évaluation de performance) est-il déployé et utilisé par tous les collaborateurs ?",
+      "Un portail selfservice RH permet-il aux collaborateurs de gérer leurs demandes de congés, consulter leurs bulletins de paie et mettre à jour leurs coordonnées sans intervention de la DRH ?",
+      "Le processus de recrutement est-il entièrement digitalisé avec un ATS (Applicant Tracking System) pour les offres d'emploi, les candidatures et les évaluations ?",
+      "Les bulletins de paie sont-ils distribués électroniquement à tous les collaborateurs, et les fiches de paie papier ont-elles été supprimées ?",
+      "Des analyses de people analytics sont-elles réalisées pour mesurer le taux de rotation, l'engagement et identifier les risques de départs des talents clés ?"
+    ]
+  }
+}

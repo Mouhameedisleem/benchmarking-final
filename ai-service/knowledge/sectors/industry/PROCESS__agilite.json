@@ -1,0 +1,283 @@
+{
+  "secteur": "industrie",
+  "axe": "PROCESS",
+  "sous_axe": "agilite",
+  "label": "Agilité opérationnelle industrielle",
+  "description": "Capacité des entreprises industrielles à adapter rapidement leur production aux variations de la demande : flexibilité des lignes (SMED, changements de série rapides), gestion agile des stocks (Kanban, Juste-à-Temps), planification adaptative (S&OP numérique), et réactivité aux aléas (ruptures matières, pannes, pics de commandes) dans le tissu industriel CI.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Industries saisonnières CI : agroalimentaire en campagne (cacao nov-avril, anacarde mars-juillet) — pics demande extrêmes",
+      "Ruptures matières CI : supply chain courte mais fragile — coupures routes (pluies), grèves douanes CI",
+      "Délais de livraison GMS Abidjan (Carrefour CI, Prosuma) : 24-48h max — exige agilité stocks CI",
+      "SMED (Single-Minute Exchange of Die) CI : changements de série longues — opportunité d'agilité coûteux en temps",
+      "S&OP (Sales & Operations Planning) CI : coordination ventes-production rare en PMI CI",
+      "Import matières premières CI : délais douane Abidjan (GUCE CI) imprévisibles — buffer stocks obligatoires"
+    ],
+    "acteurs_cles": [
+      "GUCE CI — Guichet Unique du Commerce Extérieur : dédouanement import matières CI — délais imprévisibles",
+      "GMS CI (Carrefour CI, Prosuma, Sococé) — donneurs d'ordre exigeant livraisons 24-48h",
+      "APEX-CI — export industries CI : délais export aléatoires (ports CI congestion)",
+      "PAA CI (Port Autonome d'Abidjan) — logistique import/export, congestion quais",
+      "BCEAO — financement stocks matières CI (crédit de campagne agroalimentaire)",
+      "Orange Money CI / Wave CI — paiements fournisseurs urgents pour déblocage livraisons"
+    ],
+    "reglementation_locale": [
+      "GUCE CI — procédures dédouanement import : délais légaux 5 jours ouvrables (souvent 8-15 jours pratique)",
+      "Code Travail CI Loi 2015-532 : heures supplémentaires pic production — majoration 15-50% selon durée",
+      "CNSS CI : déclarations effectifs mensuels — flexibilité intérimaires BTP CI / industrie CI (Adecco CI, Randstad CI)",
+      "BCEAO CI : crédit de campagne agroalimentaire CI — financement stocks matières saison",
+      "PAA CI Loi 2000-487 : concessions portuaires, délais débarquement — impact approvisionnement industriel CI"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Aucune agilité opérationnelle. Production figée sur un plan mensuel non révisé. Stocks tampons énormes ou ruptures fréquentes. Changements de série > 4h. Aucun S&OP. Réaction aux aléas uniquement en mode crise.",
+      "indicateurs": [
+        "Plan production mensuel non révisé — aucun ajustement possible en cours de période",
+        "Changements de série > 4h — perte production significative",
+        "Stocks tampons > 45 jours — immobilisation capital",
+        "0 S&OP — ventes et production planifiées séparément",
+        "Aléas (panne, rupture) = crise — aucun plan de contingence"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Plan production révisé hebdomadairement. Quelques améliorations SMED informelles. Stocks tampons réduits sur matières principales. Réunion S&OP mensuelle informelle. Délais flexibilité insuffisants.",
+      "indicateurs": [
+        "Plan production révisé hebdomadairement — Excel",
+        "Changements de série : 2-4h — amélioration SMED informelle",
+        "Stocks tampons 30-45 jours matières principales",
+        "Réunion production-ventes mensuelle informelle — non formalisée S&OP",
+        "Réactivité aléas : 24-48h délai réponse"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "S&OP mensuel formalisé (ventes + production + supply chain). SMED structuré sur lignes critiques (< 60 min). Kanban matières sur composants à forte rotation. Stocks tampons < 20 jours. Plan de contingence pannes documenté.",
+      "indicateurs": [
+        "S&OP mensuel structuré : ventes + production + achats — tableau de bord dédié",
+        "SMED sur lignes critiques : changements série < 60 min (-50% vs baseline)",
+        "Kanban matières : 3+ composants en flux tiré — ruptures < 5%",
+        "Stocks tampons < 20 jours matières principales CI",
+        "Plan contingence pannes : équipements critiques, fournisseurs alternatifs documentés"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "S&OP numérique intégré ERP. SMED < 30 min sur lignes clés. Kanban électronique (eKanban). Stocks en temps réel depuis MES. Prédiction demande ML. Réactivité aléas < 4h. Intérimaires CI activables sous 24h.",
+      "indicateurs": [
+        "S&OP numérique ERP : révision planification J+1 possible",
+        "SMED < 30 min sur 80%+ lignes — changements série standards",
+        "eKanban intégré ERP : commandes automatiques fournisseurs CI sous seuil",
+        "Prédiction demande ML : précision ±8% sur 4 semaines",
+        "Intérimaires BTP CI activables sous 24h : contrat cadre Adecco CI / Randstad CI"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Usine agile de référence CI. S&OP IA auto-ajusté en continu. SMED < 10 min. Kanban autonome (auto-commande). Prédiction demande IA ±3%. Zéro rupture matières. Référence agilité industrielle UEMOA.",
+      "indicateurs": [
+        "S&OP IA : planification auto-ajustée quotidiennement — intégration signaux marché CI temps réel",
+        "SMED < 10 min — changements de série < 5 min sur lignes phares",
+        "Kanban autonome : IA commande automatiquement matières CI sans intervention humaine",
+        "Prédiction demande IA ±3% sur 8 semaines — 0 rupture matières sur 18 mois",
+        "Référence agilité industrielle UEMOA — publication INP-HB CI, FIPA CI"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "À quelle fréquence révisez-vous votre plan de production en fonction de la demande réelle ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Mensuel — plan figé, non révisé en cours de période"},
+        {"valeur": 2, "label": "Hebdomadaire — Excel révisé manuellement"},
+        {"valeur": 3, "label": "S&OP mensuel structuré : ventes + production + achats"},
+        {"valeur": 4, "label": "S&OP numérique ERP — révision planification J+1 possible"},
+        {"valeur": 5, "label": "S&OP IA auto-ajusté quotidiennement — signaux marché temps réel"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Quelle est la durée de vos changements de série (SMED) sur vos lignes principales ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "> 4h — perte production significative"},
+        {"valeur": 2, "label": "2-4h — améliorations informelles ponctuelles"},
+        {"valeur": 3, "label": "< 60 min — SMED structuré sur lignes critiques"},
+        {"valeur": 4, "label": "< 30 min — SMED standardisé 80%+ lignes"},
+        {"valeur": 5, "label": "< 10 min — changements série quasi-instantanés"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Utilisez-vous un système Kanban (physique ou électronique) pour gérer vos stocks de production ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — stock tampon mensuel figé"},
+        {"valeur": 2, "label": "Quelques stocks tampons réduits — sans Kanban formel"},
+        {"valeur": 3, "label": "Kanban physique sur 3+ composants clés"},
+        {"valeur": 4, "label": "eKanban ERP : commandes auto-déclenchées sous seuil"},
+        {"valeur": 5, "label": "Kanban IA autonome — 0 rupture matières sur 18 mois"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Disposez-vous d'un plan de contingence pour les aléas majeurs (panne, rupture matières) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — mode crise uniquement"},
+        {"valeur": 2, "label": "Quelques contacts fournisseurs alternatifs — non documentés"},
+        {"valeur": 3, "label": "Plan contingence documenté : équipements critiques, fournisseurs alternatifs CI"},
+        {"valeur": 4, "label": "Plan contingence + test annuel + intérimaires activables < 24h"},
+        {"valeur": 5, "label": "Résilience totale : 0 arrêt > 4h non anticipé sur 18 mois"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "Fréquence révision plan production",
+      "Durée changements de série",
+      "Kanban / gestion stocks agile",
+      "S&OP formalisé",
+      "Plan contingence aléas"
+    ],
+    "lignes": [
+      {
+        "organisation": "PMI CI (< 50 employés)",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "Plan mensuel figé, changements série 4h+, 0 Kanban, 0 S&OP, mode crise uniquement"
+      },
+      {
+        "organisation": "Industrie moyenne CI (50-200 employés)",
+        "scores": [2, 2, 2, 2, 2],
+        "note_globale": 2,
+        "commentaire": "Excel hebdomadaire, SMED informel 2-3h, stocks tampons réduits, réunion mensuelle informelle"
+      },
+      {
+        "organisation": "SUCAF CI",
+        "scores": [4, 3, 3, 4, 3],
+        "note_globale": 3,
+        "commentaire": "S&OP SAP mensuel, SMED 45 min lignes sucrerie, Kanban matières, plan contingence documenté"
+      },
+      {
+        "organisation": "SIFCA CI",
+        "scores": [5, 4, 4, 5, 5],
+        "note_globale": 5,
+        "commentaire": "S&OP ERP quotidien, SMED < 20 min, eKanban ERP, prédiction ML ±5%, 0 rupture 12 mois"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "SIFCA CI — agilité opérationnelle agro-industrielle CI",
+      "part_de_marche_estimee": "Référence agilité production agro-industrielle CI",
+      "forces": ["S&OP SAP intégré groupe", "SMED certifié groupe Michelin", "eKanban ERP", "Prédiction demande ML"],
+      "faiblesses": ["Modèle groupe international — non réplicable PMI CI directement"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "Lean Institute Africa (LIA) — formations S&OP et lean Afrique",
+      "part_de_marche_estimee": "Référence formation lean/S&OP industries Afrique",
+      "forces": ["Formations SMED et Kanban adaptées Afrique", "Réseau formateurs 8 pays Afrique", "Cas d'usage industries CI"],
+      "faiblesses": ["Présence CI encore faible", "Coût formations élevé PMI CI"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "SAP IBP (Integrated Business Planning) — S&OP cloud industrie",
+      "part_de_marche_estimee": "Leader mondial S&OP industriel",
+      "forces": ["S&OP intégré SAP ERP", "ML prédiction demande", "Révision planification J+1", "Intégration SCADA/MES"],
+      "faiblesses": ["Coût très élevé (> 20 M FCFA/an)", "Complexité déploiement CI", "Sur-mesure pour grands groupes"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Odoo Manufacturing CI — S&OP et Kanban intégré",
+      "usage": "S&OP mensuel, Kanban électronique, réapprovisionnement automatique, planification capacité",
+      "niveau_cible": "3+",
+      "cout_estime": "800 000–2 500 000 FCFA/an (partenaires Odoo CI Abidjan)",
+      "disponibilite_ci": "International — partenaires Odoo CI disponibles"
+    },
+    {
+      "nom": "SMED Lean — méthodologie changements série rapides",
+      "usage": "Formation SMED : réduire changements série < 60 min — ROI immédiat sur TRS",
+      "niveau_cible": "3+",
+      "cout_estime": "Formation SMED 2 jours : 300 000–600 000 FCFA (FDFP CI remboursable 75%)",
+      "disponibilite_ci": "International — formateurs lean CI disponibles INP-HB Yamoussoukro"
+    },
+    {
+      "nom": "Microsoft Excel + Power BI — S&OP PMI CI",
+      "usage": "S&OP mensuel structuré sur Excel connecté Power BI — accessible PMI CI sans ERP",
+      "niveau_cible": "3",
+      "cout_estime": "Inclus M365 Business (100 000–250 000 FCFA/user/an)",
+      "disponibilite_ci": "International — cloud Microsoft accessible CI"
+    },
+    {
+      "nom": "Adecco CI / Randstad CI — contrats intérimaires industrie CI",
+      "usage": "Flexibilité main-d'œuvre CI : intérimaires activables < 24h pour pics production",
+      "niveau_cible": "3+",
+      "cout_estime": "Variable selon qualification et durée — majoré 30-45% vs CDI",
+      "disponibilite_ci": "Natif CI — Adecco CI et Randstad CI bureaux Abidjan"
+    },
+    {
+      "nom": "SAP IBP (cloud) — S&OP et prédiction demande ML",
+      "usage": "S&OP intégré SAP, prédiction demande ML ±8%, révision planification J+1",
+      "niveau_cible": "4-5",
+      "cout_estime": "20 000 000+ FCFA/an (grandes industries CI seulement)",
+      "disponibilite_ci": "International — partenaires SAP CI disponibles"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "Brasserie Ivoirienne de Jus de Fruits (BIJF CI) — S&OP + SMED : agilité lignes jus frais Abidjan",
+    "organisation": "BIJF CI (Brasserie Ivoirienne de Jus de Fruits, Yopougon CI — jus frais fruits tropicaux CI)",
+    "contexte": "BIJF CI : fabricant jus frais (mangue, ananas, goyave CI) — 3 500 tonnes/mois. Clients : GMS Abidjan (Carrefour CI, Prosuma, Score) — livraisons 24-48h. Problème : 6 variétés × 4 formats = 24 références SKU — changements série 3,5h en moyenne. TRS 58%. Ruptures GMS 3-4 fois/mois (pénalités 50 000 FCFA/rupture).",
+    "probleme": "Changements série 3,5h = 14% du temps production perdu/semaine. TRS 58% (objectif 78%). Ruptures GMS 3-4/mois : pénalités 150 000–200 000 FCFA/mois. S&OP : aucun — ventes commandent à la production 24h avant livraison.",
+    "solution_deployee": "SMED : analyse 3 changements série filmés — 48 opérations identifiées, 31 externalisables. Nouvelles procédures SMED : outillage rapide, préparation hors ligne. S&OP mensuel Odoo CI : réunion ventes + production + achats + 4 semaines rolling. eKanban Odoo : 8 matières premières (pulpes CI) en réapprovisionnement auto fournisseurs Korhogo CI et Man CI.",
+    "resultats": "SMED : 3,5h → 52 min (-75%). TRS : 58% → 76% (+18 points). Changements série/semaine : 8 × 3,5h = 28h → 8 × 52 min = 7h = 21h production récupérées/semaine. Ruptures GMS : 3-4/mois → 0,3/mois (-90%). Pénalités GMS : 200 000 FCFA → 15 000 FCFA/mois (-93%). CA supplémentaire : 21h production × 350 000 FCFA/h = 7,35 M FCFA/semaine. ROI programme SMED + S&OP Odoo : 4 mois.",
+    "enseignements": [
+      "Le SMED CI est l'amélioration à ROI le plus rapide en industrie multiréférence — 75% de réduction des changements série équivaut à ajouter une demi-journée de production par semaine",
+      "Le S&OP CI n'est pas de la sophistication — c'est une réunion hebdomadaire ventes-production-achats de 90 min qui évite les ruptures GMS et les pénalités",
+      "L'eKanban Odoo sur les pulpes CI avec fournisseurs Korhogo et Man CI a éliminé les ruptures matières — les fournisseurs ruraux CI ont tous les smartphones avec WhatsApp"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "agilité industrielle CI", "SMED changements série", "S&OP ventes production", "Kanban eKanban",
+      "planification adaptative CI", "flexibilité production CI", "ruptures matières CI",
+      "prédiction demande ML CI", "stocks tampons CI", "pic demande agroalimentaire CI",
+      "intérimaires industrie CI", "Adecco CI Randstad CI", "contingence panne CI"
+    ],
+    "signaux_niveau_avance": [
+      "S&OP mensuel structuré avec réunion multi-fonctionnelle",
+      "SMED < 60 min sur lignes principales",
+      "Kanban ou eKanban sur matières principales",
+      "Révision planification hebdomadaire depuis données réelles",
+      "Ruptures matières < 5% du temps"
+    ],
+    "pieges_frequents": [
+      "Plan production révisé manuellement ≠ S&OP — S&OP requiert la participation des ventes ET de la supply chain, pas seulement la production",
+      "SMED déclaré mais pas chronométré — sans mesure avant/après, ce n'est pas une amélioration structurée",
+      "Stocks tampons réduits ≠ Kanban — le Kanban est un système de déclenchement visuel, pas juste de réduire les stocks",
+      "Réunion production-ventes = simple compte-rendu de problèmes — sans décision planification et engagement, ce n'est pas un S&OP"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Plan mensuel figé. Changements série 4h+. 0 Kanban. 0 S&OP. Mode crise aléas. Stocks 45j+.",
+      "score_21_to_40": "Excel hebdomadaire. SMED informel 2-4h. Stocks réduits. Réunion informelle. Plan contingence absent.",
+      "score_41_to_60": "S&OP mensuel structuré. SMED < 60 min. Kanban physique. Stocks < 20j. Plan contingence documenté.",
+      "score_61_to_80": "S&OP ERP quotidien. SMED < 30 min. eKanban auto. Prédiction ML ±8%. Ruptures < 2%.",
+      "score_81_to_100": "S&OP IA auto-ajusté. SMED < 10 min. Kanban autonome. 0 rupture 18 mois. Référence UEMOA."
+    }
+  }
+}

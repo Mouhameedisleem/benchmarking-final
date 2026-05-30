@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "BUSINESS",
+    "sous_axe": "strategie_digitale",
+    "titre": "Stratégie digitale dans le BTP en Côte d'Ivoire",
+    "description": "Adoption d'une stratégie de transformation numérique dans le secteur Bâtiment et Travaux Publics CI : BIM (Building Information Modeling), drones de surveillance chantier, gestion de projets digitale, dématérialisation des marchés publics et pilotage numérique des grands chantiers du PND 2021-2025.",
+    "version": "1.0",
+    "date_mise_a_jour": "2025-01-01",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "Le secteur BTP représente environ 8% du PIB ivoirien (2024) et emploie 350 000 personnes directement et indirectement. Le Plan National de Développement CI 2021-2025 prévoit 50 000 Mds FCFA d'investissements dont une large part en infrastructure : autoroutes, barrages hydroélectriques (Singrobo, Tiboto), 150 000 logements sociaux, hôpitaux et universités. Malgré ce boom, la digitalisation du secteur BTP CI reste embryonnaire : moins de 5% des projets utilisent le BIM, les plans sont encore majoritairement papier, et la coordination de chantier repose sur des réunions hebdomadaires physiques. Les entreprises internationales implantées en CI (COLAS CI, VINCI Construction) apportent leurs pratiques digitales de la maison mère, créant un fossé avec les entreprises BTP CI purement locales.",
+    "chiffres_cles": [
+      "Secteur BTP CI : ~8% du PIB, 4ème secteur économique, 350 000 emplois directs et indirects",
+      "PND CI 2021-2025 : 50 000 Mds FCFA d'investissements infrastructure (routes, barrages, logements)",
+      "Taux de pénétration BIM CI : < 5% des projets (vs. 65% UK, 40% France, 28% Maroc 2024)",
+      "CNBTP CI : 2 800 entreprises BTP agréées (classification A à E), dont 85% de classe D-E (PME)",
+      "Déficit logement CI : 600 000 unités (Banque Mondiale 2024), marché 1 200 Mds FCFA/an",
+      "DGMP CI : 45% des appels d'offres publics BTP dématérialisés sur plateforme SIGMAP (2024)"
+    ],
+    "acteurs_cles": [
+      "BNETD (Bureau National d'Études Techniques et de Développement) — maîtrise d'ouvrage déléguée État CI",
+      "AGEROUTE CI — agence de gestion et d'entretien des routes CI",
+      "CNBTP CI (Chambre Nationale du BTP) — organisme professionnel, agréments A-E",
+      "COLAS CI (filiale Bouygues TP) — leader routes et travaux publics CI",
+      "DGMP CI (Direction Générale des Marchés Publics) — dématérialisation appels d'offres BTP",
+      "SICOGI CI — construction et gestion immobilière publique"
+    ]
+  },
+  "enjeux_cles": [
+    {
+      "enjeu": "Adoption du BIM pour réduire les erreurs de conception et les surcoûts",
+      "description": "Les conflits de conception (interférences entre gaines, structures, façades) découverts en chantier représentent 8-18% du surcoût total des grands projets BTP CI. Le BIM (Revit, ArchiCAD, Navisworks) détecte ces conflits en phase étude, avant le début des travaux, réduisant les modifications coûteuses en chantier.",
+      "impact": "Réduction des surcoûts de conception de 8-15% sur les projets > 5 Mds FCFA"
+    },
+    {
+      "enjeu": "Dématérialiser les marchés publics BTP (DGMP CI SIGMAP)",
+      "description": "La Direction Générale des Marchés Publics CI a lancé la plateforme SIGMAP pour dématérialiser les appels d'offres BTP (dépôt dossiers, ouverture des plis, notification). Seules 45% des procédures sont dématérialisées en 2024. Les entreprises BTP CI non numérisées manquent des marchés publics faute de compétences pour soumissionner en ligne.",
+      "impact": "Accès à un marché public BTP CI de 1 800 Mds FCFA/an pour les entreprises numérisées"
+    },
+    {
+      "enjeu": "Piloter les chantiers avec des outils digitaux (drones, IoT, ERP chantier)",
+      "description": "La supervision physique des chantiers CI (visites hebdomadaires) est insuffisante pour détecter les dérives de planning et de qualité à temps. Les drones de surveillance (images quotidiennes, modèles 3D de l'avancement), les capteurs IoT (béton, sol, vibrations) et les ERP chantier (Procore, MS Project) permettent un pilotage en temps réel.",
+      "impact": "Réduction des retards de chantier de 25-40% et amélioration de la qualité constructive"
+    },
+    {
+      "enjeu": "Former les PME BTP CI aux outils numériques",
+      "description": "85% des entreprises BTP CI sont des PME de classe D-E (< 500 M FCFA de CA), sans DSI ni budget IT. La digitalisation de base (AutoCAD à la place du dessin à la main, WhatsApp Business pour coordonner les sous-traitants, tablette sur chantier) est déjà transformatrice pour ces entreprises. Le FDFP CI et la CNBTP CI proposent des formations subventionnées.",
+      "impact": "Compétitivité accrue des PME BTP CI face aux entreprises internationales"
+    },
+    {
+      "enjeu": "Intégrer les exigences numériques des maîtres d'ouvrage internationaux",
+      "description": "Les bailleurs internationaux (Banque Mondiale, BAD, AFD) exigent de plus en plus des livrables BIM dans leurs marchés de travaux pour les projets qu'ils financent en CI. Les entreprises BTP CI ne disposant pas de compétences BIM ne peuvent pas soumissionner à ces marchés à forte valeur.",
+      "impact": "Accès à 350 Mds FCFA/an de marchés BTP financés par bailleurs internationaux en CI"
+    }
+  ],
+  "niveau_maturite": {
+    "description": "Échelle de maturité stratégie digitale pour les entreprises BTP CI",
+    "niveaux": [
+      {
+        "niveau": 1,
+        "label": "Analogique",
+        "description": "Plans papier uniquement, coordination par réunions physiques, devis manuscrits ou Word/Excel basique, aucun outil de gestion de projet, appels d'offres papier, aucune présence numérique. PME BTP CI de classe D-E typique."
+      },
+      {
+        "niveau": 2,
+        "label": "Outils de base",
+        "description": "AutoCAD 2D pour les plans, MS Project ou Excel pour le planning, email pour la coordination, site web vitrine statique, soumission SIGMAP DGMP CI partielle. Quelques tablettes sur chantier pour la documentation photo."
+      },
+      {
+        "niveau": 3,
+        "label": "Numérique structuré",
+        "description": "BIM 2D/3D partiel (Revit ou ArchiCAD sur 1-2 projets), ERP chantier basique (suivi planning, budget, ressources), drones de surveillance occasionnels, présence LinkedIn/web structurée, SIGMAP DGMP CI maîtrisée, stratégie numérique écrite et budget IT alloué."
+      },
+      {
+        "niveau": 4,
+        "label": "Digital intégré",
+        "description": "BIM niveau 2 systématique (tous projets > 2 Mds FCFA), ERP chantier intégré (Procore ou SAP), drones hebdomadaires, IoT capteurs béton/sol sur chantiers critiques, tableaux de bord chantier en temps réel, soumissions BIM exigées par maîtres d'ouvrage, conformité ARTCI pour drones."
+      },
+      {
+        "niveau": 5,
+        "label": "Excellence BTP 4.0",
+        "description": "BIM niveau 3 (CDE — Common Data Environment partagé avec MOA/MOE/entreprises), digital twin du bâtiment en exploitation, IA prédiction retards et surcoûts, AR/VR pour revues de conception, jumeaux numériques infrastructure routière, exigences BIM dans tous les appels d'offres émis, reconnaissance BNETD CI comme référence BIM nationale."
+      }
+    ]
+  },
+  "indicateurs_cles": [
+    {
+      "kpi": "Taux de pénétration BIM (projets avec BIM / total projets)",
+      "definition": "Part des projets de construction ou travaux publics conduits avec un modèle BIM (3D minimum, maquette numérique partagée) sur le total des projets de l'entreprise ou du secteur",
+      "unite": "%",
+      "benchmark_ci": "Secteur BTP CI : < 5% (2024) — COLAS CI : 35% (projets > 5 Mds FCFA) — BNETD CI : 12%",
+      "cible_sectorielle": "> 25% d'ici 2027 (objectif BNETD CI Plan BIM National CI)",
+      "source": "CNBTP CI enquête numérisation BTP 2024 + BNETD CI"
+    },
+    {
+      "kpi": "Taux de dématérialisation des appels d'offres BTP",
+      "definition": "Part des appels d'offres BTP publics déposés et instruits entièrement sur la plateforme SIGMAP DGMP CI (dépôt dossier + ouverture des plis + notification + contractualisation en ligne)",
+      "unite": "%",
+      "benchmark_ci": "DGMP CI : 45% dématérialisés (2024) — objectif DGMP CI : 80% d'ici 2026",
+      "cible_sectorielle": "> 80% (aligné objectif DGMP CI)",
+      "source": "Rapport annuel DGMP CI 2024"
+    },
+    {
+      "kpi": "Taux de dérive de planning (écart réel vs. planning initial)",
+      "definition": "Écart moyen entre la durée de réalisation réelle et la durée planifiée initialement pour les projets BTP CI, exprimé en pourcentage du planning initial",
+      "unite": "% de dépassement",
+      "benchmark_ci": "BTP CI sans outils digitaux : +38% de dépassement moyen — entreprises avec ERP chantier : +12%",
+      "cible_sectorielle": "< 15% de dépassement (avec ERP chantier et suivi drone)",
+      "source": "Rapport BNETD CI performance chantiers 2023 + Banque Mondiale CI Infrastructure"
+    },
+    {
+      "kpi": "Budget numérique BTP (% du CA réinvesti en digitalisation)",
+      "definition": "Part du chiffre d'affaires annuel de l'entreprise BTP réinvestie dans les outils, formations et infrastructures numériques (BIM, ERP, drones, IoT, cybersécurité)",
+      "unite": "%",
+      "benchmark_ci": "PME BTP CI : < 0,5% — entreprises internationales implantées CI (COLAS) : 2-4%",
+      "cible_sectorielle": "> 1,5% (recommandation CNBTP CI Plan Numérique BTP 2025)",
+      "source": "CNBTP CI enquête investissements numériques 2024"
+    },
+    {
+      "kpi": "Nombre de projets avec pilotage drone actif",
+      "definition": "Nombre de chantiers actifs où des relevés drone sont effectués au moins une fois par semaine pour le suivi de l'avancement, la sécurité ou le contrôle qualité",
+      "unite": "chantiers",
+      "benchmark_ci": "COLAS CI : 8 chantiers avec drones actifs (2024) — BNETD CI : 3 projets pilotes — secteur CI total : < 20 chantiers",
+      "cible_sectorielle": "Objectif secteur CI : 50+ chantiers avec drone actif d'ici 2026",
+      "source": "ARTCI autorisation drones CI 2024 + BNETD CI"
+    }
+  ],
+  "zoom_sur": {
+    "organisation": "COLAS CI (filiale Bouygues Travaux Publics)",
+    "titre": "BIM niveau 2 sur l'autoroute Yamoussoukro-Tiébissou (Y2T) : 47 conflits évités, -12% surcoûts",
+    "contexte": "Le projet Autoroute Yamoussoukro-Tiébissou (Y2T — 75 km, budget 285 Mds FCFA, cofinancé BAD/État CI) est le premier grand projet routier CI à avoir intégré le BIM dès la phase d'études (2022). COLAS CI, attributaire du lot principal, a déployé Autodesk Revit pour la modélisation des ouvrages d'art et Navisworks pour la détection de conflits entre les disciplines (structure, réseaux hydrauliques, signalétique, éclairage).",
+    "solution": "Déploiement BIM niveau 2 sur 18 mois de phase études : (1) maquette 3D Revit complète des 8 ouvrages d'art du tracé (ponts, échangeurs, passages à faune) ; (2) CDE (Common Data Environment) Autodesk BIM 360 partagé avec BNETD CI (MOA déléguée) et les bureaux d'études (LBTP CI) ; (3) revues de coordination mensuelle en réalité virtuelle (Meta Quest) permettant aux équipes COLAS CI et BNETD CI de visiter virtuellement le chantier avant sa construction ; (4) drones DJI Matrice 300 hebdomadaires pour suivi 3D de l'avancement vs. maquette BIM (écarts automatiquement calculés) ; (5) formation de 22 ingénieurs COLAS CI et 8 ingénieurs BNETD CI sur Revit et BIM 360 (40h chacun, financement FDFP CI pour les CI-résidents).",
+    "resultats": {
+      "avant": "Projets routiers précédents CI : +38% de dépassement planning moyen, +22% de dépassement budget moyen, conflits de conception découverts en chantier (modification coûteuse en cours de travaux), réunions de coordination physiques hebdomadaires (mobilisation 12+ ingénieurs, déplacements Abidjan-Yamoussoukro)",
+      "apres": "47 conflits de conception détectés et résolus en phase études (avant terrassement), économies estimées 12% du coût total (34 Mds FCFA évités sur l'ouvrage), délai résolution conflit 2h → 15 min (modèle 3D vs. discussion verbale), fréquence réunions physiques réduite de 4/mois à 1/mois (visio + CDE BIM 360), avancement chantier suivi à J+1 grâce aux drones (vs. J+7 avec visites physiques), 30 ingénieurs CI certifiés BIM (premier pool national de compétences BIM TP en CI)"
+    },
+    "lessons_learned": "La principale résistance est venue des sous-traitants CI de classe D-E qui ne disposaient pas de compétences BIM. COLAS CI a dû mettre en place un programme d'accompagnement de 6 mois (viewer BIM gratuit sur tablette pour les chefs de chantier, sans nécessité de maîtriser Revit). La condition sine qua non du succès du BIM est l'engagement du maître d'ouvrage (BNETD CI ici) — sans son implication dans le CDE, les entreprises font du BIM pour elles-mêmes mais pas de manière collaborative.",
+    "contact_reference": "Direction Technique COLAS CI — Abidjan Plateau"
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif stratégie digitale — entreprises BTP CI et références",
+    "lignes": [
+      {
+        "organisation": "COLAS CI",
+        "type": "National — leader (filiale Bouygues TP)",
+        "bim_adoption": "35% des projets > 5 Mds FCFA (BIM niveau 2)",
+        "erp_chantier": "SAP S/4HANA + Procore (intégration partielle)",
+        "drones": "8 chantiers actifs (DJI Matrice 300)",
+        "sigmap_dgmp": "100% (soumissions SIGMAP systématiques)",
+        "budget_numerique": "3,2% du CA",
+        "score_estime": "72/100"
+      },
+      {
+        "organisation": "BNETD CI",
+        "type": "National — maître d'ouvrage public",
+        "bim_adoption": "12% des projets supervisés (pilotes BIM 2022-2024)",
+        "erp_chantier": "BNETD SI interne (développement spécifique, partiellement numérique)",
+        "drones": "3 projets pilotes (partenariat ARTCI)",
+        "sigmap_dgmp": "Interface SIGMAP (MOA déléguée)",
+        "budget_numerique": "0,8% du budget (enveloppe BNETD CI 2024)",
+        "score_estime": "48/100"
+      },
+      {
+        "organisation": "PME BTP CI classe C (anonymisée)",
+        "type": "National — PME locale",
+        "bim_adoption": "0% (AutoCAD 2D uniquement)",
+        "erp_chantier": "Excel + WhatsApp (coordination informelle)",
+        "drones": "0",
+        "sigmap_dgmp": "Partielle (assistance cabinet pour les appels d'offres > 500 M FCFA)",
+        "budget_numerique": "< 0,5% du CA",
+        "score_estime": "18/100"
+      },
+      {
+        "organisation": "VINCI Construction Maroc",
+        "type": "Régional — référence Afrique francophone",
+        "bim_adoption": "68% des projets (BIM niveau 2 systématique > 1 Mds MAD)",
+        "erp_chantier": "Oracle Primavera P6 + VINCI Construction Digital Hub",
+        "drones": "15+ chantiers actifs (contrat cadre DJI Enterprise)",
+        "sigmap_dgmp": "Marchés publics Maroc 100% dématérialisés (eMarchés)",
+        "budget_numerique": "3,8% du CA",
+        "score_estime": "81/100"
+      },
+      {
+        "organisation": "Skanska (Suède/USA)",
+        "type": "International — référence mondiale BTP digital",
+        "bim_adoption": "95% des projets (BIM niveau 3, digital twins)",
+        "erp_chantier": "Skanska ONE (ERP propriétaire) + Procore + Autodesk Construction Cloud",
+        "drones": "Flotte autonome (100+ chantiers actifs simultanément)",
+        "sigmap_dgmp": "Marchés publics 100% électroniques (Suède, USA, Royaume-Uni)",
+        "budget_numerique": "5,1% du CA (investissement R&D BTP 4.0)",
+        "score_estime": "97/100"
+      }
+    ]
+  },
+  "bonnes_pratiques": [
+    {
+      "pratique": "Commencer le BIM par un projet pilote à enjeux élevés pour démontrer le ROI",
+      "description": "Ne pas chercher à déployer le BIM sur tous les projets dès la première année. Choisir un projet > 2 Mds FCFA avec un maître d'ouvrage partenaire (BNETD CI, bailleur international) pour mesurer rigoureusement les économies et convaincre la direction et les clients. COLAS CI a mis 3 ans pour atteindre 35% de taux BIM.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Maîtriser la plateforme SIGMAP DGMP CI pour accéder aux marchés publics",
+      "description": "45% des marchés publics BTP CI sont déjà sur SIGMAP — objectif 80% en 2026. Les PME BTP CI ne maîtrisant pas SIGMAP sont exclues de facto d'une part croissante du marché. Formation SIGMAP : 1 jour suffit, formation CNBTP CI disponible (40 000 FCFA).",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Déployer des drones pour le suivi hebdomadaire des chantiers critiques",
+      "description": "Un drone DJI Mavic 3 Enterprise (2,5 M FCFA) amorti sur 50 vols/an représente 50 000 FCFA/vol — moins cher qu'un déplacement Abidjan-intérieur CI (100-150 000 FCFA). Le suivi hebdomadaire par drone produit des orthophotos permettant de comparer l'avancement réel vs. planning BIM. Autorisation ARTCI requise (délai 15-30 jours).",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Utiliser le FDFP CI pour financer la formation BIM des équipes",
+      "description": "La formation BIM (Revit, ArchiCAD, Navisworks) pour un ingénieur coûte 200 000-500 000 FCFA selon le niveau. Le FDFP CI rembourse 50-80% pour les entreprises agréées FDFP CI. COLAS CI a formé 22 ingénieurs via ce mécanisme pour le projet Y2T.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Intégrer les sous-traitants CI dans la démarche BIM (viewer gratuit sur tablette)",
+      "description": "Le BIM n'a de valeur que si toute la chaîne de construction l'utilise. Équiper les sous-traitants et chefs de chantier d'un viewer BIM gratuit (Autodesk Viewer, BIMcollab Zoom free) sur tablette robuste (Samsung Tab Active ou iPad Pro) suffit pour qu'ils voient le modèle 3D sans devoir maîtriser Revit.",
+      "priorite": "Moyenne"
+    }
+  ],
+  "pieges_a_eviter": [
+    {
+      "piege": "Acheter des logiciels BIM sans former les équipes ni engager la direction",
+      "consequence": "Les licences Revit ou ArchiCAD non utilisées représentent 1-3 M FCFA/an gaspillés. Sans formation (minimum 40h pour un ingénieur) et sans engagement de la direction (obligation BIM sur certains projets), les équipes reviennent à AutoCAD 2D dès que la pression du chantier monte.",
+      "recommandation": "Former d'abord, acheter les licences ensuite. Et désigner un BIM Manager interne dédié (même à temps partiel) avant tout déploiement"
+    },
+    {
+      "piege": "Faire voler des drones sans autorisation ARTCI",
+      "consequence": "L'ARTCI réglemente strictement l'usage des drones en CI (zones interdites, altitudes maximales, distance des aéroports d'Abidjan et Yamoussoukro, obligation d'autorisation préalable). Un drone saisi par les autorités ou un accident non couvert représente une perte de 2-8 M FCFA et un risque pénal.",
+      "recommandation": "Déposer le dossier d'autorisation ARTCI 30 jours avant le premier vol (formulaire en ligne artci.ci) et souscrire une assurance responsabilité civile drone spécifique"
+    },
+    {
+      "piege": "Digitaliser uniquement la phase études et ignorer le chantier",
+      "consequence": "Un BIM parfait en phase études qui n'est pas utilisé sur le chantier (tablettes absentes, modèle non mis à jour) ne réduit pas les erreurs d'exécution. 60% des conflits détectés en phase études réapparaissent sous une forme différente en chantier faute de suivi BIM.",
+      "recommandation": "Prévoir dès le budget du projet des tablettes robustes pour chaque chef de chantier (300 000-500 000 FCFA/tablette) et un processus de mise à jour hebdomadaire du modèle BIM 'as-built'"
+    },
+    {
+      "piege": "Négliger la cybersécurité des plans et données de chantier",
+      "description": "Les plans BIM et les données de chantier (modèles 3D, coûts, plannings) représentent un actif stratégique. Leur stockage sur Google Drive personnel ou WhatsApp expose l'entreprise à l'espionnage industriel et viole les clauses de confidentialité des marchés publics CI (CCAG DGMP CI article 28 : confidentialité des études).",
+      "recommandation": "Héberger le CDE (Common Data Environment) sur une plateforme sécurisée (Autodesk BIM 360, Microsoft SharePoint) avec authentification MFA et traçabilité des accès"
+    }
+  ],
+  "roadmap": {
+    "titre": "Roadmap stratégie digitale — entreprise BTP CI",
+    "phases": [
+      {
+        "phase": "Phase 1 — Fondations numériques (Mois 1-6)",
+        "actions": [
+          "Formation équipe : AutoCAD 2D → AutoCAD 3D → introduction Revit BIM (via FDFP CI)",
+          "Maîtrise plateforme SIGMAP DGMP CI (formation CNBTP CI — 1 jour, 40 000 FCFA)",
+          "Acquisition tablettes robustes pour chefs de chantier (Samsung Tab Active ou équivalent)",
+          "Déploiement ERP chantier basique (Procore Starter ou MS Project + SharePoint)"
+        ],
+        "budget_indicatif": "5 - 15 M FCFA (formations + tablettes + licences ERP basique)"
+      },
+      {
+        "phase": "Phase 2 — BIM et drones (Mois 7-18)",
+        "actions": [
+          "Déploiement BIM sur 1 projet pilote > 2 Mds FCFA (Revit + Navisworks + BIM 360)",
+          "Acquisition drone DJI Mavic 3 Enterprise + autorisation ARTCI",
+          "Suivi hebdomadaire par drone sur 3 chantiers actifs",
+          "Formation BIM Manager interne (40h Revit + 16h coordination BIM)"
+        ],
+        "budget_indicatif": "12 - 30 M FCFA (licences BIM + drone + BIM Manager)"
+      },
+      {
+        "phase": "Phase 3 — Intégration et excellence (Mois 19-36)",
+        "actions": [
+          "BIM niveau 2 systématique sur tous les projets > 1 Mds FCFA",
+          "CDE partagé avec MOA (BNETD CI) et MOE sur les grands projets",
+          "IoT capteurs béton et sol sur chantiers critiques (qualité, sécurité)",
+          "Tableau de bord chantier temps réel (Power BI + drone data + ERP)"
+        ],
+        "budget_indicatif": "20 - 60 M FCFA (IoT + CDE partagé + BI chantier)"
+      }
+    ]
+  },
+  "ressources": {
+    "formations": [
+      "CNBTP CI — programme formation numérique BTP (AutoCAD, BIM, SIGMAP — Abidjan, Yamoussoukro)",
+      "FDFP CI — financement formations BIM et gestion de projets numériques (50-80% remboursement)",
+      "Autodesk Education — licences Revit et BIM 360 gratuites pour formation (autodesk.com/education)",
+      "LBTP CI (Laboratoire du BTP) — formations contrôle qualité et essais numériques"
+    ],
+    "outils_recommandes": [
+      "Autodesk Revit — modélisation BIM bâtiment (standard mondial, licences FDFP CI éligibles)",
+      "Procore — gestion de chantier collaborative (web + mobile, utilisé par COLAS CI en CI)",
+      "DJI Mavic 3 Enterprise — drone surveillance chantier (2,5 M FCFA, autorisation ARTCI)",
+      "Autodesk BIM 360 — CDE (Common Data Environment) partagé MOA/MOE/entreprises",
+      "SIGMAP DGMP CI — plateforme marchés publics BTP (sigmap.gouv.ci)"
+    ],
+    "references_reglementaires": [
+      "DGMP CI — décret n°2009-259 sur les marchés publics CI et plateforme SIGMAP",
+      "ARTCI — réglementation usage drones CI (autorisation préalable, zones interdites, altitude)",
+      "CNBTP CI — règlement de classification et d'agrément des entreprises BTP CI (A à E)",
+      "CCAG (Cahier des Clauses Administratives Générales) — marchés publics CI, confidentialité études",
+      "APDP CI — Loi 2013-450 (géolocalisation engins, biométrie travailleurs, données chantier IoT)"
+    ]
+  },
+  "ai_context": {
+    "scoring_dimension": "Maturité de la stratégie digitale dans les entreprises BTP",
+    "scoring_rubric": {
+      "score_1_to_20": "Plans papier uniquement, aucun outil numérique de gestion de projet, devis Word/Excel non structurés, appels d'offres papier, aucune présence numérique, 0% BIM, aucun drone.",
+      "score_21_to_40": "AutoCAD 2D pour les plans, MS Project ou Excel pour le planning, email et WhatsApp pour la coordination, site vitrine basique, SIGMAP partielle pour les marchés publics, 0% BIM.",
+      "score_41_to_60": "BIM partiel sur 1-2 projets pilotes, ERP chantier basique, drones occasionnels, SIGMAP DGMP CI maîtrisée, stratégie numérique écrite et budget IT alloué (> 1% CA), quelques tablettes sur chantiers.",
+      "score_61_to_80": "BIM niveau 2 systématique (> 25% projets), ERP chantier intégré, drones hebdomadaires sur chantiers critiques, IoT capteurs déployés, tableau de bord chantier temps réel, conformité ARTCI drones.",
+      "score_81_to_100": "BIM niveau 3 (CDE partagé MOA/MOE/entreprises), digital twin bâtiment, IA prédiction retards, AR/VR revues conception, flotte drone autonome, IoT complet, reconnaissance BNETD CI référence BIM nationale."
+    },
+    "questions_discriminantes": [
+      "Sur quel pourcentage de vos projets actuels utilisez-vous le BIM (Building Information Modeling) avec une maquette numérique 3D partagée ?",
+      "Maîtrisez-vous la plateforme SIGMAP de la DGMP CI pour soumissionner aux appels d'offres publics BTP en ligne ?",
+      "Utilisez-vous des drones pour le suivi hebdomadaire de l'avancement de vos chantiers ?",
+      "Disposez-vous d'un ERP de gestion de chantier intégré (planning, budget, ressources, qualité) autre qu'Excel ?",
+      "Votre budget annuel investi dans les outils numériques représente-t-il plus de 1,5% de votre chiffre d'affaires ?"
+    ],
+    "signaux_avances": [
+      "BIM niveau 2 systématique avec CDE partagé MOA/MOE sur les projets > 1 Mds FCFA",
+      "Tableau de bord chantier temps réel alimenté par drones + ERP + IoT, accessible sur tablette",
+      "Conformité totale SIGMAP DGMP CI avec 100% des soumissions d'appels d'offres publics en ligne",
+      "Pool de BIM Managers certifiés (Autodesk Certified Professional) en interne",
+      "Contrats BTP avec clause BIM exigée par le maître d'ouvrage (BNETD CI, bailleurs internationaux)"
+    ]
+  }
+}

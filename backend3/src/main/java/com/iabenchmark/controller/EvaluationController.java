@@ -5,14 +5,18 @@ import com.iabenchmark.dto.EvaluationRequest;
 import com.iabenchmark.dto.EvaluationResponse;
 import com.iabenchmark.dto.RecommendationResponse;
 import com.iabenchmark.model.Evaluation;
+import com.iabenchmark.model.MaturityLevel;
 import com.iabenchmark.model.Role;
 import com.iabenchmark.model.User;
 import com.iabenchmark.repository.EvaluationRepository;
 import com.iabenchmark.repository.UserRepository;
 import com.iabenchmark.security.UserDetailsImpl;
+import com.iabenchmark.service.ActionPlanService;
 import com.iabenchmark.service.AiService;
 import com.iabenchmark.service.EmailService;
 import com.iabenchmark.service.EvaluationService;
+import com.iabenchmark.service.NotificationSseService;
+import com.iabenchmark.service.PdfReportService;
 import com.iabenchmark.service.RecommendationService;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
@@ -31,6 +35,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 @RestController
 @RequestMapping("/api/evaluations")
@@ -41,25 +46,47 @@ public class EvaluationController {
     private final EvaluationRepository evaluationRepository;
     private final EmailService emailService;
     private final UserRepository userRepository;
+    private final PdfReportService pdfReportService;
+    private final NotificationSseService notificationSseService;
+    private final ActionPlanService actionPlanService;
 
     public EvaluationController(EvaluationService evaluationService,
                                 RecommendationService recommendationService,
                                 AiService aiService,
                                 EvaluationRepository evaluationRepository,
                                 EmailService emailService,
-                                UserRepository userRepository) {
+                                UserRepository userRepository,
+                                PdfReportService pdfReportService,
+                                NotificationSseService notificationSseService,
+                                ActionPlanService actionPlanService) {
         this.evaluationService = evaluationService;
         this.recommendationService = recommendationService;
         this.aiService = aiService;
         this.evaluationRepository = evaluationRepository;
         this.emailService = emailService;
         this.userRepository = userRepository;
+        this.pdfReportService = pdfReportService;
+        this.notificationSseService = notificationSseService;
+        this.actionPlanService = actionPlanService;
     }
 
     @PostMapping
     @PreAuthorize("hasAnyRole('CLIENT', 'CONSULTANT', 'ADMIN')")
     public ResponseEntity<EvaluationResponse> submitEvaluation(@Valid @RequestBody EvaluationRequest request) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(evaluationService.submitEvaluation(request));
+        EvaluationResponse response = evaluationService.submitEvaluation(request);
+        try {
+            Evaluation ev = evaluationRepository.findById(Objects.requireNonNull(response.getEvaluationId())).orElse(null);
+            if (ev != null && ev.isPendingReview()) {
+                String companyName = ev.getCompany().getName();
+                String message = companyName + " vient de soumettre son évaluation";
+                if (ev.getCompany().getConsultant() != null) {
+                    notificationSseService.notifyUser(Objects.requireNonNull(ev.getCompany().getConsultant().getId()), message, "EVALUATION_SUBMITTED");
+                } else {
+                    notificationSseService.notifyAllConsultantsAndAdmins(message, "EVALUATION_SUBMITTED");
+                }
+            }
+        } catch (Exception ignored) {}
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @GetMapping("/{id}")
@@ -74,7 +101,11 @@ public class EvaluationController {
 
     @GetMapping("/latest")
     public ResponseEntity<EvaluationResponse> getLatestCompanyEvaluation(@RequestParam Long companyId) {
-        return ResponseEntity.ok(evaluationService.getLatestCompanyEvaluation(companyId));
+        EvaluationResponse evaluation = evaluationService.getLatestCompanyEvaluation(companyId);
+        if (evaluation == null) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(evaluation);
     }
 
     @GetMapping("/all")
@@ -118,7 +149,13 @@ public class EvaluationController {
                 ? evaluationRepository.findByPendingReviewTrueOrderByCreatedAtDesc()
                 : evaluationRepository.findByPendingReviewTrueAndCompanyConsultantIdOrderByCreatedAtDesc(currentUser.getId());
 
-        List<Map<String, Object>> result = evaluations.stream()
+        // Deduplicate: keep only the most recent evaluation per company
+        java.util.Map<Long, com.iabenchmark.model.Evaluation> latestByCompany = new java.util.LinkedHashMap<>();
+        for (com.iabenchmark.model.Evaluation ev : evaluations) {
+            latestByCompany.putIfAbsent(ev.getCompany().getId(), ev);
+        }
+
+        List<Map<String, Object>> result = latestByCompany.values().stream()
                 .map(ev -> {
                     Map<String, Object> item = new java.util.LinkedHashMap<>();
                     item.put("evaluationId", ev.getId());
@@ -135,9 +172,20 @@ public class EvaluationController {
 
     @GetMapping("/{id}/recommendations")
     public ResponseEntity<List<RecommendationResponse>> getRecommendations(@PathVariable Long id) {
+        Evaluation evaluation = evaluationRepository.findById(Objects.requireNonNull(id))
+                .orElseThrow(() -> new EntityNotFoundException("Evaluation not found: " + id));
+
+        // Return stored recommendations if already generated
+        List<RecommendationResponse> stored = aiService.getStoredRecommendations(evaluation);
+        if (!stored.isEmpty()) {
+            return ResponseEntity.ok(stored);
+        }
+
         if (aiService.isAiServiceAvailable()) {
             try {
-                return ResponseEntity.ok(aiService.getAiRecommendations(id));
+                List<RecommendationResponse> recs = aiService.getAiRecommendations(id);
+                aiService.updateStoredRecommendations(evaluation, recs);
+                return ResponseEntity.ok(recs);
             } catch (Exception ignored) {
                 // AI service failed — fall through to rule-based
             }
@@ -147,16 +195,106 @@ public class EvaluationController {
 
     @GetMapping("/{id}/benchmark")
     public ResponseEntity<BenchmarkResponse> getBenchmark(@PathVariable Long id) {
+        Evaluation evaluation = evaluationRepository.findById(Objects.requireNonNull(id))
+                .orElseThrow(() -> new EntityNotFoundException("Evaluation not found: " + id));
+
+        // Return stored benchmark if already generated — avoids regenerating on every view
+        BenchmarkResponse stored = aiService.getStoredBenchmark(evaluation);
+        if (stored != null) {
+            return ResponseEntity.ok(stored);
+        }
+
         if (!aiService.isAiServiceAvailable()) {
             return ResponseEntity.status(503).build();
         }
-        return ResponseEntity.ok(aiService.getBenchmark(id));
+
+        BenchmarkResponse benchmark = aiService.getBenchmark(id);
+        aiService.storeBenchmark(evaluation, benchmark);
+        return ResponseEntity.ok(benchmark);
+    }
+
+    @PostMapping("/{id}/benchmark/regenerate")
+    @PreAuthorize("hasAnyRole('ADMIN', 'CONSULTANT')")
+    public ResponseEntity<BenchmarkResponse> regenerateBenchmark(@PathVariable Long id) {
+        Evaluation evaluation = evaluationRepository.findById(Objects.requireNonNull(id))
+                .orElseThrow(() -> new EntityNotFoundException("Evaluation not found: " + id));
+
+        if (!aiService.isAiServiceAvailable()) {
+            return ResponseEntity.status(503).build();
+        }
+
+        BenchmarkResponse benchmark = aiService.getBenchmark(id);
+        aiService.storeBenchmark(evaluation, benchmark);
+        return ResponseEntity.ok(benchmark);
+    }
+
+    @GetMapping("/dashboard")
+    @PreAuthorize("hasAnyRole('ADMIN', 'CONSULTANT')")
+    public ResponseEntity<List<Map<String, Object>>> getDashboardData(
+            @AuthenticationPrincipal UserDetailsImpl principal) {
+        User currentUser = userRepository.findByEmail(principal.getEmail())
+                .orElseThrow(() -> new EntityNotFoundException("User not found"));
+
+        List<Evaluation> evaluations = currentUser.getRole() == Role.ADMIN
+                ? evaluationRepository.findAll().stream()
+                    .sorted((a, b) -> b.getCreatedAt().compareTo(a.getCreatedAt()))
+                    .toList()
+                : evaluationRepository.findByCompanyConsultantIdOrderByCreatedAtDesc(currentUser.getId());
+
+        List<Map<String, Object>> result = evaluations.stream()
+                .map(ev -> {
+                    Map<String, Object> item = new java.util.LinkedHashMap<>();
+                    item.put("evaluationId", ev.getId());
+                    item.put("companyId",    ev.getCompany().getId());
+                    item.put("companyName",  ev.getCompany().getName());
+                    item.put("sector",       ev.getCompany().getSector());
+                    item.put("country",      ev.getCompany().getCountry());
+                    item.put("companySize",  ev.getCompany().getSize());
+                    item.put("globalScore",  ev.getGlobalScore());
+                    item.put("maturityLevel", ev.getMaturityLevel() != null ? ev.getMaturityLevel().name() : null);
+                    item.put("status", ev.isValidated() ? "VALIDATED"
+                            : ev.isPendingReview() ? "PENDING_REVIEW" : "IN_PROGRESS");
+                    item.put("createdAt", ev.getCreatedAt());
+                    return item;
+                }).toList();
+        return ResponseEntity.ok(result);
+    }
+
+    @GetMapping("/rapport")
+    @PreAuthorize("hasAnyRole('ADMIN', 'CONSULTANT')")
+    public ResponseEntity<List<Map<String, Object>>> getRapportGlobal(
+            @AuthenticationPrincipal UserDetailsImpl principal) {
+        User currentUser = userRepository.findByEmail(principal.getEmail())
+                .orElseThrow(() -> new EntityNotFoundException("User not found"));
+
+        List<Evaluation> evaluations = currentUser.getRole() == Role.ADMIN
+                ? evaluationRepository.findAll().stream()
+                    .sorted((a, b) -> b.getCreatedAt().compareTo(a.getCreatedAt()))
+                    .toList()
+                : evaluationRepository.findByCompanyConsultantIdOrderByCreatedAtDesc(currentUser.getId());
+
+        List<Map<String, Object>> result = evaluations.stream()
+                .map(ev -> {
+                    EvaluationResponse evalResp = evaluationService.getEvaluation(ev.getId());
+                    Map<String, Object> item = new java.util.LinkedHashMap<>();
+                    item.put("evaluationId", ev.getId());
+                    item.put("companyId", ev.getCompany().getId());
+                    item.put("companyName", ev.getCompany().getName());
+                    item.put("globalScore", ev.getGlobalScore());
+                    item.put("maturityLevel", ev.getMaturityLevel().name());
+                    item.put("status", ev.isValidated() ? "VALIDATED"
+                            : ev.isPendingReview() ? "PENDING_REVIEW" : "IN_PROGRESS");
+                    item.put("createdAt", ev.getCreatedAt());
+                    item.put("answerSummaries", evalResp.getAnswerSummaries());
+                    return item;
+                }).toList();
+        return ResponseEntity.ok(result);
     }
 
     @GetMapping("/{id}/full-review")
     @PreAuthorize("hasAnyRole('ADMIN', 'CONSULTANT')")
     public ResponseEntity<Map<String, Object>> getFullReview(@PathVariable Long id) {
-        Evaluation evaluation = evaluationRepository.findById(id)
+        Evaluation evaluation = evaluationRepository.findById(Objects.requireNonNull(id))
                 .orElseThrow(() -> new EntityNotFoundException("Evaluation not found: " + id));
 
         EvaluationResponse evalResponse = evaluationService.getEvaluation(id);
@@ -176,11 +314,31 @@ public class EvaluationController {
         return ResponseEntity.ok(body);
     }
 
+    @GetMapping("/{id}/report/pdf")
+    @PreAuthorize("hasAnyRole('ADMIN', 'CONSULTANT', 'CLIENT')")
+    public ResponseEntity<byte[]> downloadPdfReport(@PathVariable Long id) {
+        byte[] pdf = pdfReportService.generateReport(id);
+        String filename = "rapport-evaluation-" + id + ".pdf";
+        return ResponseEntity.ok()
+                .header("Content-Type", "application/pdf")
+                .header("Content-Disposition", "attachment; filename=\"" + filename + "\"")
+                .body(pdf);
+    }
+
+    @PutMapping("/{id}/target-maturity")
+    @PreAuthorize("hasAnyRole('ADMIN', 'CONSULTANT')")
+    public ResponseEntity<Void> setTargetMaturity(@PathVariable Long id,
+                                                  @RequestBody Map<String, String> body) {
+        String level = body.get("targetMaturityLevel");
+        evaluationService.setTargetMaturity(id, MaturityLevel.valueOf(level));
+        return ResponseEntity.noContent().build();
+    }
+
     @PutMapping("/{id}/recommendations")
     @PreAuthorize("hasAnyRole('ADMIN', 'CONSULTANT')")
     public ResponseEntity<Void> updateRecommendations(@PathVariable Long id,
                                                       @RequestBody List<RecommendationResponse> recommendations) {
-        Evaluation evaluation = evaluationRepository.findById(id)
+        Evaluation evaluation = evaluationRepository.findById(Objects.requireNonNull(id))
                 .orElseThrow(() -> new EntityNotFoundException("Evaluation not found: " + id));
         aiService.updateStoredRecommendations(evaluation, recommendations);
         return ResponseEntity.noContent().build();
@@ -191,11 +349,22 @@ public class EvaluationController {
     public ResponseEntity<List<RecommendationResponse>> regenerateWithPrompt(
             @PathVariable Long id,
             @RequestBody Map<String, String> body) {
-        Evaluation evaluation = evaluationRepository.findById(id)
+        Evaluation evaluation = evaluationRepository.findById(Objects.requireNonNull(id))
                 .orElseThrow(() -> new EntityNotFoundException("Evaluation not found: " + id));
         String consultantPrompt = body.getOrDefault("consultantPrompt", "");
-        List<RecommendationResponse> recs = aiService.getAiRecommendations(id, consultantPrompt);
-        aiService.updateStoredRecommendations(evaluation, recs);
+        List<RecommendationResponse> recs;
+        try {
+            recs = aiService.getAiRecommendations(id, consultantPrompt);
+        } catch (Exception aiEx) {
+            try {
+                recs = recommendationService.generateRecommendations(id);
+            } catch (Exception fallbackEx) {
+                recs = List.of();
+            }
+        }
+        try {
+            aiService.updateStoredRecommendations(evaluation, recs);
+        } catch (Exception ignored) {}
         return ResponseEntity.ok(recs);
     }
 
@@ -204,11 +373,16 @@ public class EvaluationController {
     public ResponseEntity<BenchmarkResponse> regenerateBenchmarkWithPrompt(
             @PathVariable Long id,
             @RequestBody Map<String, String> body) {
-        Evaluation evaluation = evaluationRepository.findById(id)
+        Evaluation evaluation = evaluationRepository.findById(Objects.requireNonNull(id))
                 .orElseThrow(() -> new EntityNotFoundException("Evaluation not found: " + id));
         String consultantPrompt = body.getOrDefault("consultantPrompt", "");
-        BenchmarkResponse bench = aiService.getBenchmark(id, consultantPrompt);
-        aiService.storeBenchmark(evaluation, bench);
+        BenchmarkResponse bench;
+        try {
+            bench = aiService.getBenchmark(id, consultantPrompt);
+            aiService.storeBenchmark(evaluation, bench);
+        } catch (Exception e) {
+            return ResponseEntity.status(503).build();
+        }
         return ResponseEntity.ok(bench);
     }
 
@@ -217,7 +391,7 @@ public class EvaluationController {
     public ResponseEntity<Map<String, String>> validateAndSendResults(
             @PathVariable Long id,
             @RequestBody List<RecommendationResponse> finalRecommendations) {
-        Evaluation evaluation = evaluationRepository.findById(id)
+        Evaluation evaluation = evaluationRepository.findById(Objects.requireNonNull(id))
                 .orElseThrow(() -> new EntityNotFoundException("Evaluation not found: " + id));
 
         aiService.updateStoredRecommendations(evaluation, finalRecommendations);
@@ -225,13 +399,17 @@ public class EvaluationController {
         evaluation.setValidated(true);
         evaluationRepository.save(evaluation);
 
+        try { actionPlanService.generateFromRecommendations(id, finalRecommendations); } catch (Exception ignored) {}
+
         String companyEmail = evaluation.getCompany().getEmail();
         String companyName = evaluation.getCompany().getName();
         String emailStatus;
         if (companyEmail != null && !companyEmail.isBlank()) {
             try {
                 BenchmarkResponse benchmark = aiService.getStoredBenchmark(evaluation);
-                emailService.sendEvaluationResults(companyEmail, companyName, evaluation, finalRecommendations, benchmark);
+                byte[] pdfBytes = null;
+                try { pdfBytes = pdfReportService.generateReport(id); } catch (Exception ignored) {}
+                emailService.sendEvaluationResults(companyEmail, companyName, evaluation, finalRecommendations, benchmark, id, pdfBytes);
                 emailStatus = "Résultats envoyés à " + companyEmail;
             } catch (Exception e) {
                 emailStatus = "Validation enregistrée. Erreur d'envoi email : " + e.getMessage();

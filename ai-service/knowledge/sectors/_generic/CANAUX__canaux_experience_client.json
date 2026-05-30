@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "axis": "CANAUX_DISTRIBUTION",
+    "sub_axis": "Canaux & Expérience client",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Omnicanal — expérience unifiée sur tous les points de contact",
+      "description": "Les clients naviguent entre digital (app, web, réseaux sociaux) et physique (agence, point de vente) en s'attendant à une expérience parfaitement cohérente. L'omnicanal remplace le multicanal cloisonné.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "73 % des clients utilisent plusieurs canaux avant d'acheter (Salesforce State of the Connected Customer 2024)",
+      "source": "Salesforce State of the Connected Customer 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Hyper-personnalisation — expérience individuelle à grande échelle",
+      "description": "Les organisations leaders utilisent l'IA pour personnaliser chaque interaction en temps réel (contenu, offre, message) en fonction du profil comportemental individuel, générant 40 % de revenus additionnels.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "71 % des clients attendent une expérience personnalisée (McKinsey 2024)",
+      "source": "McKinsey Next in Personalization 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Mobile-First — le smartphone comme canal dominant",
+      "description": "En Afrique de l'Ouest, 95 % des accès internet se font via mobile. Les organisations qui ne livrent pas une expérience mobile-native (app ou PWA) perdent l'essentiel de leur audience digitale.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "95 % des accès internet en Afrique de l'Ouest sont mobile (GSMA 2024)",
+      "source": "GSMA Mobile Economy West Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Conversational Commerce — achat via messagerie et chatbots",
+      "description": "WhatsApp Business, chatbots IA et assistants vocaux permettent de réaliser des transactions complètes dans une conversation, éliminant la friction des formulaires web traditionnels.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "60 % des interactions client seront via des canaux conversationnels d'ici 2026 (Gartner)",
+      "source": "Gartner Customer Service Technology Survey 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "CRM (Customer Relationship Management)",
+      "category": "Gestion de la relation client",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne",
+      "leading_vendors": ["Salesforce", "Microsoft Dynamics 365", "HubSpot", "Zoho CRM", "Sage CRM"]
+    },
+    {
+      "name": "Application Mobile Native / PWA",
+      "category": "Canal digital mobile",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne en Afrique",
+      "leading_vendors": ["React Native", "Flutter (Google)", "Swift (Apple)", "Kotlin (Android)", "Ionic"]
+    },
+    {
+      "name": "Plateforme Omnicanal / CDP (Customer Data Platform)",
+      "category": "Unification des données client",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible en Afrique",
+      "leading_vendors": ["Salesforce CDP", "Adobe Experience Platform", "Segment", "mParticle", "Tealium"]
+    },
+    {
+      "name": "Chatbot & Voicebot IA",
+      "category": "Service client automatisé",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["Dialogflow (Google)", "Azure Bot Service", "IBM Watson Assistant", "Botpress", "Rasa"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Application mobile avec 50 000+ utilisateurs actifs, chatbot WhatsApp Business opérationnel",
+        "differentiator": "Premier acteur sectoriel à offrir un parcours client 100 % digital de la souscription au service après-vente",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Safaricom",
+        "country": "Kenya",
+        "key_practice": "App MySafaricom : 15M utilisateurs actifs, intégration M-Pesa, USSD pour zones non couvertes",
+        "differentiator": "Expérience client unifiée du USSD (2G) à l'app premium (4G/5G), couvrant 100 % de la population",
+        "source": "Safaricom Annual Report 2023"
+      },
+      {
+        "organisation": "Jumia",
+        "country": "Pan-Afrique",
+        "key_practice": "App mobile + web responsive + call center intégrés dans un CRM unifié sur 11 marchés",
+        "differentiator": "NPS de 62 maintenu grâce à un suivi commande temps réel et un SAV unifié cross-canal",
+        "source": "Jumia Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Amazon",
+        "country": "USA",
+        "key_practice": "Expérience omnicanale : app, web, Alexa, Amazon Go (sans caisse), livraison même jour",
+        "differentiator": "One-Click Purchase breveté : réduction de la friction d'achat à son minimum absolu",
+        "source": "Amazon Annual Report 2023 / Forrester CX Index 2024"
+      },
+      {
+        "organisation": "DBS Bank",
+        "country": "Singapour",
+        "key_practice": "82 % des transactions en digital, application mobile classée #1 mondiale (Global Finance 2024)",
+        "differentiator": "Intégration de l'IA dans 1 000+ points de l'expérience client pour personnalisation en temps réel",
+        "source": "DBS Annual Report 2023 / Global Finance Best Digital Bank 2024"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Canal physique uniquement. Aucun service digital. Interaction client 100 % humaine. Données client non centralisées.",
+    "level_2_developing": "Site web statique informationnel. Présence réseaux sociaux basique. Pas d'application mobile. Pas de CRM. Service client uniquement téléphonique.",
+    "level_3_defined": "Application mobile ou site web transactionnel. CRM déployé avec historique client. Service client multicanal (téléphone, email, chat). NPS mesuré.",
+    "level_4_managed": "Expérience omnicanale cohérente. Personnalisation basée sur les données. Chatbot opérationnel 24/7. NPS > 40. Parcours client digitalisé > 60 %.",
+    "level_5_optimizing": "Hyper-personnalisation IA en temps réel. CDP (Customer Data Platform) unifié. NPS > 60. Conversational commerce actif. Taux de digitalisation > 80 %."
+  },
+
+  "regulations": [
+    {
+      "name": "Loi n°2013-450 — Protection des données clients",
+      "issuing_body": "République de Côte d'Ivoire / ARTCI",
+      "scope": "Organisations collectant des données clients via des canaux digitaux",
+      "key_requirement": "Consentement explicite pour la collecte de données comportementales, droit d'accès et de suppression",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.artci.ci"
+    },
+    {
+      "name": "Loi n°2016-412 relative au commerce électronique",
+      "issuing_body": "République de Côte d'Ivoire",
+      "scope": "Organisations vendant en ligne des biens ou services en Côte d'Ivoire",
+      "key_requirement": "Conditions générales de vente claires, droit de rétractation, sécurité des transactions en ligne",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.gouv.ci"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Expérience mobile dégradée — perte de clientèle digitale",
+      "description": "En Afrique de l'Ouest, une application mobile lente (> 3 secondes de chargement) perd 53 % de ses utilisateurs potentiels. Une mauvaise UX mobile est rédhibitoire pour la croissance digitale.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Optimiser l'application pour les réseaux 3G/4G africains, utiliser le lazy loading, compresser les images, viser un score Lighthouse > 80."
+    },
+    {
+      "title": "Données clients fragmentées — impossibilité de personnaliser",
+      "description": "Des données clients réparties entre CRM, app, point de vente et call center non connectés rendent impossible la personnalisation et créent des expériences incohérentes frustrantes.",
+      "severity": "Élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Déployer un CRM unifié comme source de vérité unique alimenté par tous les points de contact."
+    },
+    {
+      "title": "Phishing via canaux digitaux — risque réputationnel",
+      "description": "Les criminels usurpent l'identité des marques sur WhatsApp, SMS et réseaux sociaux pour escroquer les clients. Chaque incident fragilise la confiance dans les canaux digitaux.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Enregistrer les canaux officiels, former les clients aux tentatives de phishing, déployer la vérification WhatsApp Business officielle."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "WhatsApp Business — canal digital à coût marginal nul",
+      "description": "Avec 95 % de pénétration en Afrique de l'Ouest, WhatsApp Business permet de servir les clients, traiter les demandes et réaliser des transactions sans développer d'application propriétaire.",
+      "impact_level": "Très élevé",
+      "time_to_value": "1-6 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Self-service digital — réduction des coûts de service client",
+      "description": "Chaque interaction déportée du call center vers le self-service digital réduit le coût de traitement de 5-7€ à 0,25€. Un taux de résolution digital de 60 % génère des économies substantielles.",
+      "impact_level": "Très élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Programme de fidélisation digital — augmentation de la rétention",
+      "description": "Les programmes de fidélisation digitaux (points, cashback, niveaux) augmentent la rétention de 25-35 % et génèrent des données comportementales précieuses pour la personnalisation.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Salesforce",
+      "target": "Slack",
+      "amount": "27,7 Mds$",
+      "date": "2021",
+      "strategic_rationale": "Intégrer la collaboration en temps réel dans la plateforme CRM pour une expérience client et employé unifiée",
+      "source": "Salesforce Press Release 2021"
+    },
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Investors (Tiger Global, etc.)",
+      "target": "Freshworks",
+      "amount": "1,03 Mds$ (IPO)",
+      "date": "2021",
+      "strategic_rationale": "Démocratiser les outils CRM et de service client pour les PMEs des marchés émergents",
+      "source": "Freshworks IPO Prospectus 2021"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "DBS Bank",
+    "pays": "Singapour",
+    "technologie": "Digital-First Banking — 82 % des transactions en digital, app #1 mondiale",
+    "description": "DBS Bank a réinventé l'expérience bancaire en se positionnant comme 'une entreprise tech avec une licence bancaire'. L'application DBS digibank traite 82 % de toutes les transactions sans intervention humaine. L'IA personnalise 1 000+ points du parcours client en temps réel. DBS a fermé 25 % de ses agences physiques tout en augmentant la satisfaction client. La banque a été classée 'Meilleure banque digitale mondiale' 6 années consécutives par Global Finance. Le NPS est passé de 23 à 67 en 5 ans de transformation digitale.",
+    "resultats": "82 % transactions digitales · NPS 67 (+44 pts) · App #1 mondiale · 1 000+ points personnalisés par IA · 25 % agences fermées sans perte client",
+    "source": "DBS Annual Report 2023 / Global Finance Best Digital Bank 2024",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité canaux & expérience client — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "Application mobile transactionnelle", "CRM déployé et unifié", "Chatbot 24/7", "NPS mesuré régulièrement", "Personnalisation par IA"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "Partiel", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'expérience client digitale est le premier facteur de différenciation concurrentielle. En Afrique de l'Ouest, le mobile est le seul canal digital qui compte. Les organisations qui livrent une expérience mobile fluide et personnalisée capturent une clientèle de plus en plus digitale, tandis que les acteurs sans stratégie mobile-first perdent des parts de marché irreversiblement.",
+    "maturity_max_description": "Application mobile avec 80 %+ de transactions digitales. CRM unifié avec vue 360° client. CDP pour la personnalisation en temps réel. Chatbot IA 24/7 résolvant 60 %+ des demandes. NPS > 60. Conversational commerce opérationnel. Hyper-personnalisation sur tous les canaux.",
+    "scoring_rubric": {
+      "score_1_to_20": "Canal physique uniquement. Aucun service digital. Données clients non centralisées.",
+      "score_21_to_40": "Site web statique. Réseaux sociaux basiques. Pas d'app ni de CRM. Service client téléphonique uniquement.",
+      "score_41_to_60": "Application mobile transactionnelle. CRM déployé. Service multicanal. NPS mesuré.",
+      "score_61_to_80": "Expérience omnicanale. Personnalisation basée sur données. Chatbot 24/7. NPS > 40. 60 %+ digital.",
+      "score_81_to_100": "Hyper-personnalisation IA. CDP unifié. NPS > 60. Conversational commerce. 80 %+ digital."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur la maturité de ses canaux digitaux et de l'expérience client. Analyse la disponibilité d'une application mobile transactionnelle, l'existence d'un CRM unifié avec vue 360°, le déploiement d'un chatbot 24/7, la mesure régulière du NPS et la personnalisation des interactions par IA.",
+    "key_questions_for_llm": [
+      "L'organisation dispose-t-elle d'une application mobile permettant de réaliser des transactions complètes ?",
+      "Un CRM unifié centralise-t-il toutes les interactions clients sur l'ensemble des canaux ?",
+      "Un chatbot ou assistant virtuel est-il disponible 24/7 pour répondre aux demandes clients ?",
+      "Le NPS (Net Promoter Score) est-il mesuré régulièrement et diffusé aux équipes pour action ?",
+      "L'IA est-elle utilisée pour personnaliser les offres et communications en fonction du profil individuel ?"
+    ]
+  }
+}

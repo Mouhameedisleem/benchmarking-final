@@ -1,0 +1,284 @@
+{
+  "secteur": "btp",
+  "axe": "MODELE_OP",
+  "sous_axe": "gouvernance",
+  "label": "Gouvernance digitale BTP",
+  "description": "Capacité à structurer la gouvernance de la transformation digitale dans les entreprises BTP : comité de pilotage digital, politique IT BTP (sécurité chantier, APDP CI, cloud), indicateurs de performance digitale, et alignement stratégique des investissements technologiques sur les objectifs métier en Côte d'Ivoire.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "BTP CI : dirigeants souvent issus du terrain (ingénieurs génie civil) — faible culture gouvernance IT formelle",
+      "Investissements IT BTP CI souvent ad hoc : tablette achetée par chef de chantier, logiciel BIM sans stratégie globale",
+      "APDP CI Loi 2013-450 : biométrie chantier et géolocalisation requièrent une politique IT formelle et une DPO désignée",
+      "SIGMAP DGMP CI : conformité numérique marchés publics CI — exige politique de cybersécurité documentée pour AO > 500 M FCFA",
+      "PND CI 2021-2025 : projets d'infrastructure imposent reportings digitaux MOA (BNETD CI, AGEROUTE CI) — gouvernance données exigée",
+      "Turnover encadrement BTP CI : sans gouvernance digitale, la connaissance IT part avec les talents — risque de régression"
+    ],
+    "acteurs_cles": [
+      "CNBTP CI — formations gouvernance IT BTP, agréments classes A-B",
+      "ARTCI CI — réglementation systèmes d'information CI, notifications incidents cybersécurité",
+      "APDP CI — Autorité de Protection des Données Personnelles : DPO, registre traitements",
+      "DGMP CI — Direction Générale des Marchés Publics : conformité SI pour marchés publics",
+      "BNETD CI — reporting digital MOA GEOPROJET CI : exigences données projets",
+      "Expert-comptable CI / cabinet conseil BTP CI — audit IT annuel, conformité OHADA"
+    ],
+    "reglementation_locale": [
+      "APDP CI Loi 2013-450 : DPO obligatoire si traitement données sensibles (biométrie, géolocalisation) — registre traitements, politique RGPD-CI",
+      "ARTCI CI : notification incidents sécurité SI dans les 72h (calqué RGPD européen)",
+      "CCAG CI Décret 2009-260 : clause SI pour marchés publics BTP > 500 M FCFA — politique cybersécurité exigée",
+      "OHADA Acte uniforme : conservation pièces comptables numériques 10 ans — archivage SI conforme",
+      "Loi CI 2017-771 : gouvernance signatures électroniques et documents légaux numériques CI",
+      "Loi CI n°2018-570 VEFA : données acquéreurs VEFA — politique confidentialité et sécurité SI exigée"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Aucune gouvernance digitale. Achats IT décentralisés sans stratégie. Aucun comité de pilotage. Aucune politique IT documentée. APDP CI non respectée. Indicateurs IT inexistants.",
+      "indicateurs": [
+        "Achats IT décidés par chefs de chantier ou DG sans DSI ni politique",
+        "0 politique cybersécurité documentée — partage mot de passe WiFi chantier",
+        "APDP CI non connue — biométrie chantier non déclarée",
+        "0 indicateur IT suivi : ni uptime, ni adoption, ni incidents",
+        "0 budget IT formalisé — dépenses IT dans 'frais divers'"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Un responsable IT informel (souvent le comptable ou un ingénieur 'qui s'y connaît'). Budget IT approximatif. Quelques règles IT informelles. APDP CI partiellement respectée. Pas de comité de pilotage formalisé.",
+      "indicateurs": [
+        "Responsable IT informel désigné — pas de fiche de poste",
+        "Budget IT approximatif inclus dans 'équipements' — non suivi",
+        "Règles IT informelles non écrites : 'ne pas installer n'importe quoi'",
+        "APDP CI : déclaration biométrie non faite — risque sanction",
+        "1-2 indicateurs IT suivis : coût licences, nombre postes — aucun KPI performance"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "DSI ou responsable IT formalisé. Comité de pilotage digital trimestriel. Politique IT documentée (cybersécurité, MDM, cloud). APDP CI respectée — DPO désigné. Budget IT dédié avec suivi. KPIs IT définis.",
+      "indicateurs": [
+        "DSI ou responsable IT formalisé avec fiche de poste",
+        "Comité de pilotage digital trimestriel : DG + DSI + DRH + DAF",
+        "Politique IT documentée : charte BYOD, MDM Intune, cloud PCP CI",
+        "APDP CI : DPO désigné, registre traitements à jour, biométrie déclarée",
+        "Budget IT dédié 2-4% CA — suivi mensuel écarts"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "Gouvernance digitale intégrée à la stratégie d'entreprise. Tableau de bord digital temps réel DG. Politique IT alignée PND CI et SIGMAP CI. Audit IT annuel externe. ROI mesuré par projet digital. Roadmap IT 3 ans validée.",
+      "indicateurs": [
+        "Tableau de bord digital DG : adoption outils, incidents, ROI projets — temps réel",
+        "Politique IT alignée SIGMAP CI conformité et APDP CI — auditée annuellement",
+        "ROI mesuré par projet digital : lean, BIM, tablettes — business case documenté",
+        "Audit IT externe annuel : cabinet CI certifié CISA ou équivalent",
+        "Roadmap IT 3 ans validée comité de direction — révision semestrielle"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Gouvernance digitale maturité totale. CDO (Chief Digital Officer) au CODIR. Tableau de bord OKR digital public. Référence gouvernance BTP CI — contributions CNBTP CI et ARTCI CI. Politique IT publiée comme modèle sectoriel.",
+      "indicateurs": [
+        "CDO membre CODIR — digital co-construit avec métier BTP CI",
+        "OKRs digitaux alignés stratégie 5 ans : 3 objectifs, 9 résultats mesurables",
+        "Gouvernance données projet : data stewards par chantier, catalogue métadonnées",
+        "Politique IT publiée comme modèle CNBTP CI — 3+ entreprises CI l'ont adoptée",
+        "Contribution ARTCI CI : participation groupes travail réglementation SI BTP"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Avez-vous un responsable ou une fonction IT formalisée dans votre entreprise BTP ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — chacun gère son propre matériel"},
+        {"valeur": 2, "label": "Un collègue 'qui s'y connaît' s'en occupe informellement"},
+        {"valeur": 3, "label": "Responsable IT formalisé avec fiche de poste"},
+        {"valeur": 4, "label": "DSI intégré au comité de direction"},
+        {"valeur": 5, "label": "CDO membre CODIR — digital co-construit stratégie"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Disposez-vous d'une politique IT documentée (cybersécurité, BYOD, cloud) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — aucune règle IT écrite"},
+        {"valeur": 2, "label": "Quelques règles informelles non écrites"},
+        {"valeur": 3, "label": "Politique IT documentée — appliquée partiellement"},
+        {"valeur": 4, "label": "Politique IT complète, auditée annuellement, APDP CI conforme"},
+        {"valeur": 5, "label": "Politique IT publiée modèle sectoriel — adoptée par d'autres entreprises CI"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Comment gérez-vous votre budget IT ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Dans 'frais divers' — non isolé ni suivi"},
+        {"valeur": 2, "label": "Budget approximatif dans 'équipements' — pas de suivi fin"},
+        {"valeur": 3, "label": "Budget IT dédié 2-4% CA — suivi mensuel"},
+        {"valeur": 4, "label": "Budget IT avec ROI mesuré par projet — business case documenté"},
+        {"valeur": 5, "label": "Budget IT OKR-driven — chaque investissement lié à un résultat mesurable"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Êtes-vous conformes à la Loi APDP CI (Loi 2013-450) pour vos traitements de données chantier ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — APDP CI non connue"},
+        {"valeur": 2, "label": "Loi connue mais aucune action de mise en conformité"},
+        {"valeur": 3, "label": "DPO désigné, biométrie déclarée, registre traitements en cours"},
+        {"valeur": 4, "label": "Conformité APDP CI complète — audit annuel externe"},
+        {"valeur": 5, "label": "Conformité APDP CI + contribution groupes travail ARTCI CI"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "Responsable IT formalisé",
+      "Politique IT documentée",
+      "Budget IT dédié suivi",
+      "Conformité APDP CI",
+      "ROI digital mesuré"
+    ],
+    "lignes": [
+      {
+        "organisation": "PME BTP CI classe D-E",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "Aucune gouvernance IT — achats ad hoc, APDP CI inconnue, 0 budget IT"
+      },
+      {
+        "organisation": "SETIMA CI",
+        "scores": [3, 2, 3, 2, 2],
+        "note_globale": 2,
+        "commentaire": "Responsable IT informel, politique IT partielle, budget suivi approximatif, APDP CI en cours"
+      },
+      {
+        "organisation": "SATCI CI",
+        "scores": [3, 3, 3, 3, 3],
+        "note_globale": 3,
+        "commentaire": "DSI formalisé, politique IT documentée, budget 3% CA, DPO désigné, ROI tablettes mesuré"
+      },
+      {
+        "organisation": "COLAS CI",
+        "scores": [5, 5, 5, 5, 5],
+        "note_globale": 5,
+        "commentaire": "CDO CODIR, politique IT Bouygues CI adaptée, budget OKR, APDP CI audité, ROI BIM documenté"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "COLAS CI — gouvernance digitale groupe Bouygues CI",
+      "part_de_marche_estimee": "Référence gouvernance IT BTP CI",
+      "forces": ["Cadre gouvernance Bouygues adapté CI", "CDO groupe Bouygues", "Audit IT Ernst & Young annuel CI", "Politique IT publiée CNBTP CI"],
+      "faiblesses": ["Cadre groupe parfois inadapté contexte PME CI", "Coût gouvernance groupe inaccessible PME"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "Cabinet DOSI Consulting (Dakar/Abidjan) — gouvernance IT BTP Afrique",
+      "part_de_marche_estimee": "Conseil gouvernance IT BTP UEMOA",
+      "forces": ["Spécialiste BTP UEMOA", "Conformité APDP CI et équivalents UEMOA", "Formations DPO CI et Sénégal"],
+      "faiblesses": ["Taille cabinet limitée", "Références BTP CI encore peu nombreuses"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "Gartner IT Score for Construction — cadre gouvernance BTP international",
+      "part_de_marche_estimee": "Référence mondiale gouvernance IT BTP",
+      "forces": ["Benchmark 3 000+ entreprises BTP mondial", "Cadre maturité IT construction", "Intégration ESG et IA"],
+      "faiblesses": ["Coût abonnement Gartner (> 15 M FCFA/an)", "Non adapté contexte UEMOA", "En anglais"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Microsoft 365 + Power BI — tableau de bord gouvernance IT",
+      "usage": "Dashboard DG : adoption outils, incidents, budget IT vs réalisé, KPIs chantiers",
+      "niveau_cible": "3+",
+      "cout_estime": "Inclus M365 Business (100 000–250 000 FCFA/user/an)",
+      "disponibilite_ci": "International — déployé CI, partenaires M365 Abidjan"
+    },
+    {
+      "nom": "Microsoft Intune MDM — gouvernance parc IT chantier",
+      "usage": "Gestion centralisée tablettes et smartphones chantier CI — politique BYOD, effacement distant",
+      "niveau_cible": "3+",
+      "cout_estime": "Inclus M365 Business Premium (150 000–300 000 FCFA/user/an)",
+      "disponibilite_ci": "International — cloud Microsoft CI accessible"
+    },
+    {
+      "nom": "APDP CI — registre traitements (outil fourni APDP CI)",
+      "usage": "Déclaration traitements données personnelles CI, registre DPO, biométrie chantier",
+      "niveau_cible": "3+",
+      "cout_estime": "Gratuit (formulaires APDP CI) — conseil DPO 300 000–600 000 FCFA",
+      "disponibilite_ci": "Natif CI — APDP CI Abidjan Plateau"
+    },
+    {
+      "nom": "Odoo CI — module budget IT et ROI projets",
+      "usage": "Suivi budget IT par projet, ROI digital, tableaux de bord direction",
+      "niveau_cible": "4",
+      "cout_estime": "800 000–2 000 000 FCFA/an (hébergement CI)",
+      "disponibilite_ci": "International — partenaires Odoo CI disponibles Abidjan"
+    },
+    {
+      "nom": "ISO 27001 / ISO 38500 — cadres gouvernance IT",
+      "usage": "ISO 27001 : SMSI cybersécurité. ISO 38500 : gouvernance IT direction. Certifications référence marchés publics CI",
+      "niveau_cible": "4-5",
+      "cout_estime": "Accompagnement certification : 3–8 M FCFA, renouvellement annuel",
+      "disponibilite_ci": "International — cabinets certifiés CI (Bureau Veritas, SGS CI)"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "SATCI CI — mise en place gouvernance digitale structurée : DG embarqué, budget IT, APDP CI",
+    "organisation": "SATCI CI (Société Africaine de Travaux de Construction et d'Ingénierie, Abidjan)",
+    "contexte": "2021 : SATCI CI en croissance rapide (8 chantiers simultanés, 280 employés) — achats IT décentralisés, 4 logiciels BIM différents sur les chantiers, biométrie ZKTeco non déclarée APDP CI, 0 politique cybersécurité. DSI inexistant. Budget IT dans 'frais généraux'.",
+    "probleme": "Risque APDP CI : amende jusqu'à 5% CA pour biométrie non déclarée (Loi 2013-450). Coût IT opaque : 3 logiciels BIM achetés sans ROI mesuré. 2 incidents ransomware manqués de peu. Turnover ingénieur IT : perte totale de la configuration réseau 3 chantiers.",
+    "solution_deployee": "Nomination DSI avec fiche de poste et rattachement DG. Comité de pilotage digital mensuel (DG + DSI + DRH + DAF). Politique IT documentée : MDM Intune, cloud Microsoft 365, charte BYOD. DPO désignée (juriste interne formée APDP CI). Budget IT formalisé 3% CA avec suivi mensuel. Standardisation BIM : Revit + Procore uniquement.",
+    "resultats": "APDP CI : biométrie 8 chantiers déclarée en 3 mois — 0 risque sanction. Coût IT : -22% après standardisation (suppression 2 licences redondantes). Incidents cybersécurité : 0 en 18 mois post-politique (vs 2 quasi-incidents avant). Adoption Procore : 72% utilisateurs actifs (vs 31% avant gouvernance). Budget IT : écarts < 8% mensuel. Roadmap IT 2 ans validée CODIR — 3 projets digitaux prioritisés. Reconnaissance CNBTP CI comme 'cas de bonne gouvernance' PME BTP CI.",
+    "enseignements": [
+      "La gouvernance IT ne nécessite pas un grand groupe — un DSI + un comité mensuel + une politique de 5 pages suffisent pour une PME BTP CI de 280 personnes",
+      "L'APDP CI est un déclencheur efficace : la conformité légale force la mise en place d'une gouvernance IT minimale",
+      "Standardiser les outils (un seul BIM, un seul outil chantier) génère plus de ROI que d'investir dans de nouveaux outils sans gouvernance"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "gouvernance digitale", "DSI", "CDO", "comité de pilotage digital", "politique IT",
+      "budget IT", "ROI digital", "APDP CI", "DPO", "conformité données",
+      "MDM Intune", "tableau de bord DG", "roadmap IT", "audit IT", "KPIs digitaux BTP",
+      "cybersécurité BTP CI", "registre traitements", "ISO 27001"
+    ],
+    "signaux_niveau_avance": [
+      "DSI formalisé rattaché DG ou CDO CODIR",
+      "Budget IT dédié suivi avec ROI mesuré",
+      "APDP CI conforme : DPO + registre traitements",
+      "Politique IT documentée et auditée",
+      "Roadmap IT 3 ans validée CODIR"
+    ],
+    "pieges_frequents": [
+      "Confondre 'quelqu'un gère l'IT' avec une gouvernance formalisée — sans fiche de poste et comité, c'est niveau 2",
+      "APDP CI déclarée mais biométrie chantier non enregistrée = non-conformité",
+      "Budget IT dans 'frais généraux' = niveau 1 même si l'entreprise dépense beaucoup en IT",
+      "Politique cybersécurité = poster dans la salle de réunion — sans MDM et audit, c'est décoratif"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune gouvernance IT. Achats ad hoc. 0 politique documentée. APDP CI inconnue. Budget IT opaque.",
+      "score_21_to_40": "Responsable IT informel. Règles IT non écrites. APDP CI connue mais non respectée. Budget IT approximatif.",
+      "score_41_to_60": "DSI formalisé. Comité de pilotage trimestriel. Politique IT documentée. DPO désigné. Budget 2-4% CA suivi.",
+      "score_61_to_80": "DSI au CODIR. Tableau de bord digital DG. ROI mesuré par projet. APDP CI auditée. Roadmap IT 3 ans.",
+      "score_81_to_100": "CDO CODIR. OKRs digitaux. Gouvernance données chantier. Politique publiée modèle CI. Contribution ARTCI CI."
+    }
+  }
+}

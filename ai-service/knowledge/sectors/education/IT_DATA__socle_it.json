@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "secteur": "education",
+    "axe": "IT_DATA",
+    "sous_axe": "socle_it",
+    "titre": "Socle IT dans l'enseignement en Côte d'Ivoire",
+    "description": "Infrastructure IT fondamentale des établissements d'enseignement CI : architecture cloud/on-premise, SIS (Student Information System), LMS, réseau campus, gestion des identités (IAM), plan de continuité pédagogique (PCP MENA CI), sauvegarde et Plan de Reprise d'Activité (PRA).",
+    "version": "1.0",
+    "date_mise_a_jour": "2025-01-01",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "Le socle IT des établissements d'enseignement ivoiriens est hétérogène : les universités publiques (UFHB, INPHB) maintiennent des serveurs physiques vieillissants dans des salles informatiques non certifiées, tandis que les établissements privés modernes (UVCI CI, Pigier CI) opèrent en cloud pur ou hybride. Le principal défi CI est la connectivité : 18% des écoles disposent d'un accès internet, et les coupures d'électricité (5-8h/jour hors Abidjan) imposent des architectures résilientes (onduleurs, générateurs, apps offline). Le Plan de Continuité Pédagogique (PCP) est obligatoire depuis 2021 (MENA CI), mais seuls 22% des établissements en disposent d'un testé. L'ARTCI impose aux établissements d'enseignement des obligations spécifiques : journalisation des logs Wi-Fi 12 mois et filtrage du contenu pour les mineurs.",
+    "chiffres_cles": [
+      "12 universités CI utilisent Moodle comme LMS principal (open source, standard de facto UEMOA)",
+      "Taux de disponibilité LMS moyen CI : 91% (vs. 99,5% UVCI CI sur AWS CDN Cloudflare)",
+      "18% des écoles CI ont accès à internet (ARTCI 2024) — objectif MENA CI : 80% en 2026",
+      "Plan de Continuité Pédagogique (PCP) obligatoire MENA CI depuis 2021 : 22% des établissements en ont un testé",
+      "INPHB Yamoussoukro : Wi-Fi 6 campus (1 Gbps, 4 500 utilisateurs), 12 salles hybrides Teams Rooms",
+      "ARTCI : logs Wi-Fi 12 mois obligatoires pour tous les établissements d'enseignement CI"
+    ],
+    "acteurs_cles": [
+      "ARTCI — régulation cybersécurité, filtrage mineurs Wi-Fi, logs 12 mois obligatoires",
+      "MENA CI — Plan de Continuité Pédagogique (PCP) obligatoire depuis 2021",
+      "MESRS CI — IQN (Indicateur Qualité Numérique) intégrant l'infrastructure IT",
+      "CIE (Compagnie Ivoirienne d'Électricité) — contraintes alimentation électrique campus",
+      "Orange CI / MTN CI — opérateurs fibre optique campus et connectivity ARTCI",
+      "AUF — hébergement Moodle mutualisé pour universités francophones (backup infrastructure)"
+    ]
+  },
+  "enjeux_cles": [
+    {
+      "enjeu": "Migration vers une architecture cloud résiliente adaptatée aux contraintes CI",
+      "description": "Les serveurs physiques on-premise dans les universités CI sont soumis aux coupures d'électricité (5-8h/jour hors Abidjan), aux pannes de climatisation et aux risques d'inondation. La migration cloud (AWS, Azure, ou hébergement AUF) avec CDN Cloudflare et app offline apporte une résilience structurelle absente des architectures physiques locales.",
+      "impact": "Passage de 91% à 99,5% de disponibilité LMS, éliminant les interruptions pédagogiques"
+    },
+    {
+      "enjeu": "Déployer un SIS centralisé et interopérable avec le LMS",
+      "description": "La majorité des universités CI utilisent des systèmes de gestion des informations étudiantes (SIS) disparates : tableurs Excel, logiciels locaux non interfacés (SCOLARIX, Banner partiel), sans connexion avec le LMS. Un SIS centralisé (Banner, Salesforce Education Cloud, ou solution open source Ellucian) connecté via API au LMS élimine les doubles saisies et les erreurs.",
+      "impact": "Réduction des erreurs administratives de 60-80% et base de données étudiants unifiée"
+    },
+    {
+      "enjeu": "Implémenter le Plan de Continuité Pédagogique (PCP) obligatoire MENA CI",
+      "description": "Depuis 2021, le MENA CI rend obligatoire un Plan de Continuité Pédagogique (PCP) pour tous les établissements CI. Le PCP définit la continuité des enseignements en cas d'incident (coupure réseau, pandémie, événements climatiques). Seuls 22% des établissements CI en ont un formellement testé.",
+      "impact": "Conformité légale et continuité pédagogique garantie même lors de crises majeures"
+    },
+    {
+      "enjeu": "Mettre en place une gestion des identités centralisée (IAM)",
+      "description": "Sans IAM centralisé, les étudiants CI gèrent 3-5 comptes distincts (LMS, SIS, email, Wi-Fi, bibliothèque numérique) avec des mots de passe différents — source d'une insatisfaction majeure et d'un risque sécurité (réutilisation mots de passe faibles). Un IAM (Microsoft Entra ID, Keycloak ou LDAP) avec SSO (Single Sign-On) unifie l'expérience.",
+      "impact": "Réduction de 70% des tickets de réinitialisation de mot de passe et amélioration sécurité"
+    },
+    {
+      "enjeu": "Assurer la conformité ARTCI (logs Wi-Fi, filtrage mineurs)",
+      "description": "L'ARTCI impose aux établissements CI hébergeant des mineurs (lycées, collèges, universités avec étudiants < 18 ans) de journaliser tous les logs de connexion Wi-Fi pendant 12 mois et de filtrer les contenus inappropriés. 65% des établissements CI ne respectent pas cette obligation (ARTCI audit 2024).",
+      "impact": "Conformité légale évitant les sanctions ARTCI et protection des apprenants mineurs"
+    }
+  ],
+  "niveau_maturite": {
+    "description": "Échelle de maturité socle IT pour les établissements d'enseignement CI",
+    "niveaux": [
+      {
+        "niveau": 1,
+        "label": "Archaïque",
+        "description": "Infrastructure IT inexistante ou vétuste : aucun LMS, gestion Excel, serveurs partagés non dédiés, connexion internet intermittente via box mobile, aucun SIS, aucun IAM, Wi-Fi non filtré, aucun PCP."
+      },
+      {
+        "niveau": 2,
+        "label": "Basique",
+        "description": "LMS Moodle on-premise (serveur local, disponibilité < 90%), SIS tableur ou logiciel isolé non interfacé avec le LMS, Wi-Fi campus non sécurisé (WPA2 partagé), aucun IAM (comptes manuels), PCP non formalisé, aucune sauvegarde testée."
+      },
+      {
+        "niveau": 3,
+        "label": "Structuré",
+        "description": "LMS cloud hébergé (AUF ou AWS) avec SLA > 99%, SIS centralisé interfacé LMS via API basique, Wi-Fi campus segmenté (VLAN étudiants/staff), IAM partiel (Active Directory), PCP formalisé (non testé), sauvegardes quotidiennes testées mensuellement, logs ARTCI 12 mois."
+      },
+      {
+        "niveau": 4,
+        "label": "Avancé",
+        "description": "Architecture cloud hybride (LMS cloud AWS/Azure + CDN Cloudflare), app mobile offline 30 jours, SIS complet interfacé LMS + CRM (double saisie éliminée), IAM SSO (Entra ID ou Keycloak), MFA 90%+ utilisateurs, PCP testé annuellement, Wi-Fi 6 campus avec filtrage mineurs ARTCI, PRA < 4h RTO."
+      },
+      {
+        "niveau": 5,
+        "label": "Excellence",
+        "description": "Infrastructure cloud-native résiliente (multi-région, 99,9% SLA), SIS/LMS/CRM intégrés en temps réel (API REST + event-driven), IAM zéro confiance (Zero Trust Network), observabilité complète (Grafana + alerting IA), PRA < 1h RTO, infrastructure as code (Terraform), conformité ARTCI automatisée et auditée."
+      }
+    ]
+  },
+  "indicateurs_cles": [
+    {
+      "kpi": "Taux de disponibilité du LMS (SLA)",
+      "definition": "Pourcentage du temps où le LMS est accessible aux apprenants et enseignants sur une période de 30 jours (excluant les maintenances planifiées notifiées 48h à l'avance)",
+      "unite": "%",
+      "benchmark_ci": "UVCI CI (AWS + Cloudflare CDN) : 99,5% — INPHB (hybride Azure) : 98,2% — UFHB (on-premise) : 91%",
+      "cible_sectorielle": "> 99% (SLA standard cloud éducation)",
+      "source": "Monitoring uptime UVCI CI 2024 + MESRS CI IQN infrastructure"
+    },
+    {
+      "kpi": "RTO (Recovery Time Objective) — Plan de Reprise d'Activité",
+      "definition": "Délai maximum entre une panne ou incident majeur et la restauration complète des services pédagogiques essentiels (LMS, email, accès ressources)",
+      "unite": "heures",
+      "benchmark_ci": "UVCI CI : RTO < 2h (AWS multi-AZ) — INPHB : RTO < 4h — UFHB : RTO estimé 48-72h (pas de PRA testé)",
+      "cible_sectorielle": "RTO < 4h (aligné sur PCP MENA CI)",
+      "source": "Plan de Continuité Pédagogique UVCI CI 2023 + INPHB 2024"
+    },
+    {
+      "kpi": "Taux de couverture SSO (Single Sign-On)",
+      "definition": "Part des services numériques académiques (LMS, SIS, email, bibliothèque, Wi-Fi) accessibles via un identifiant unique (SSO) sans re-saisie de mot de passe",
+      "unite": "%",
+      "benchmark_ci": "UVCI CI : 78% (Entra ID SSO) — Pigier CI : 82% (Salesforce SSO) — UFHB : 0%",
+      "cible_sectorielle": "> 80% des services numériques couverts par le SSO",
+      "source": "Audit IT UVCI CI 2024 + enquête MESRS CI"
+    },
+    {
+      "kpi": "Conformité ARTCI logs Wi-Fi",
+      "definition": "Part des points d'accès Wi-Fi de l'établissement équipés d'un système de journalisation conforme ARTCI (logs 12 mois, filtrage mineurs actif, identité utilisateur tracée)",
+      "unite": "%",
+      "benchmark_ci": "INPHB campus : 100% (Wi-Fi 6 avec journalisation Cisco ISE) — UFHB : 18% — secteur CI : 35%",
+      "cible_sectorielle": "100% (obligation légale ARTCI — aucune tolérance)",
+      "source": "Audit ARTCI établissements éducatifs CI 2024"
+    },
+    {
+      "kpi": "Taux d'adoption de l'app mobile offline par les apprenants",
+      "definition": "Part des apprenants inscrits ayant téléchargé et utilisé l'application mobile du LMS (avec fonctionnalité offline) au moins une fois dans le mois",
+      "unite": "%",
+      "benchmark_ci": "UVCI CI : 68% (app Moodle offline — 23% des sessions vidéo en mode offline) — secteur CI : non mesuré",
+      "cible_sectorielle": "> 50% (pertinent pour la continuité en zones à connectivité limitée CI)",
+      "source": "Analytics LMS UVCI CI 2024"
+    }
+  ],
+  "zoom_sur": {
+    "organisation": "INPHB Yamoussoukro (Institut National Polytechnique Félix Houphouët-Boigny)",
+    "titre": "Migration cloud hybride Azure : de 12 serveurs physiques à 99,2% de disponibilité",
+    "contexte": "En 2021, l'INPHB gérait son infrastructure IT sur 12 serveurs physiques installés dans une salle informatique non certifiée (température non contrôlée, humidité non surveillée, alimentation sur groupes électrogènes). Le LMS Moodle on-premise affichait une disponibilité de 87% (240 heures d'indisponibilité/an). Le SIS SCOLARIX fonctionnait en local sur 3 serveurs distincts, sans connexion avec le LMS. Les coupures CIE fréquentes à Yamoussoukro (5-8h/jour) paralysaient régulièrement les activités académiques.",
+    "solution": "Migration vers une architecture cloud hybride Azure en 18 mois : (1) migration LMS Moodle vers Azure App Service (région France Centre — latence < 80ms depuis Yamoussoukro via fibre Orange CI) + CDN Azure pour les vidéos de cours (décodage H.265, 150 Kbps minimum) ; (2) connexion SIS SCOLARIX à Moodle via API REST (synchronisation étudiants, notes et présences en temps réel, 15 min de décalage maximum) ; (3) déploiement Microsoft Entra ID SSO pour 10 200 comptes (étudiants + staff + enseignants) — fin des 5 comptes distincts par étudiant ; (4) Wi-Fi 6 campus Cisco Catalyst 9100 (150 points d'accès, 1 Gbps, 4 500 utilisateurs simultanés) avec Cisco ISE pour journalisation ARTCI 12 mois et filtrage mineurs (partenariat ARTCI programme Écoles Connectées CI) ; (5) PCP MENA CI formalisé et testé (simulation d'incident en mars 2024 : RTO réel 3h42).",
+    "resultats": {
+      "avant": "Disponibilité LMS 87% (240h/an d'indisponibilité), RTO estimé > 72h (pas de PRA), 5 comptes distincts par étudiant (LMS + SIS + email + Wi-Fi + bibliothèque), 12 serveurs physiques en salle non certifiée, coût maintenance IT 85 M FCFA/an, conformité ARTCI logs Wi-Fi : 0%",
+      "apres": "Disponibilité LMS 99,2% (+ 12,2 pts), RTO réel 3h42 (vs. 72h+ estimé), SSO Entra ID sur 78% des services (fin des comptes multiples), infrastructure cloud Azure, coût IT 85M → 58M FCFA/an (-32% TCO 3 ans), conformité ARTCI logs Wi-Fi 100%, 10 200 comptes Entra ID actifs, 85 Surface Pro staff sous MDM Intune, note IQN MESRS CI infrastructure 74/100 (+31 points vs. 2021)"
+    },
+    "lessons_learned": "La résistance principale est venue du service informatique interne qui craignait de perdre le contrôle sur l'infrastructure. La solution a été de les former sur Azure Administration (2 agents certifiés AZ-104) et de les positionner comme architectes du cloud plutôt que comme mainteneurs de serveurs physiques. Le retour sur investissement (ROI) du cloud hybride a été positif dès l'année 2 grâce à la réduction des coûts de maintenance physique (techniciens, pièces, climatisation).",
+    "contact_reference": "Direction des Systèmes d'Information INPHB — Yamoussoukro"
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif socle IT — établissements enseignement CI et références",
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "type": "National — leader numérique",
+        "architecture": "Cloud-native AWS (multi-AZ eu-west-3) + CDN Cloudflare",
+        "sis_lms_integration": "Moodle + SIS custom — API temps réel, 0 double saisie",
+        "iam_sso": "Microsoft Entra ID SSO (78% services couverts)",
+        "disponibilite_lms": "99,5% (SLA contractuel AWS)",
+        "artci_conformite": "100% logs Wi-Fi + filtrage (partenariat ARTCI AUF)",
+        "pcp_test": "Testé annuellement (RTO < 2h atteint en test 2024)",
+        "score_estime": "86/100"
+      },
+      {
+        "organisation": "INPHB Yamoussoukro",
+        "type": "National — grande école publique",
+        "architecture": "Cloud hybride Azure (LMS + SIS) + on-premise résiduel",
+        "sis_lms_integration": "SCOLARIX + Moodle — API REST (synchronisation 15 min)",
+        "iam_sso": "Microsoft Entra ID SSO (78% services, 10 200 comptes)",
+        "disponibilite_lms": "99,2% (Azure App Service)",
+        "artci_conformite": "100% logs Wi-Fi (Cisco ISE, 150 APs Wi-Fi 6)",
+        "pcp_test": "Testé (mars 2024, RTO réel 3h42)",
+        "score_estime": "79/100"
+      },
+      {
+        "organisation": "UFHB (Université FHB Abidjan)",
+        "type": "National — université publique",
+        "architecture": "On-premise (serveurs physiques salle non certifiée)",
+        "sis_lms_integration": "Banner partiel + Moodle — aucune API (double saisie systématique)",
+        "iam_sso": "Aucun SSO (5 comptes distincts par étudiant)",
+        "disponibilite_lms": "91% (240h/an d'indisponibilité)",
+        "artci_conformite": "18% (1/5 campus Wi-Fi avec logs conformes)",
+        "pcp_test": "PCP non formalisé (non testé)",
+        "score_estime": "24/100"
+      },
+      {
+        "organisation": "Strathmore University (Nairobi, Kenya)",
+        "type": "Régional — référence Afrique de l'Est",
+        "architecture": "Cloud AWS (multi-services) + data center propre certifié Tier 2",
+        "sis_lms_integration": "Ellucian Banner + Moodle — intégration complète temps réel",
+        "iam_sso": "Okta SSO (100% services couverts, MFA obligatoire)",
+        "disponibilite_lms": "99,8% (SLA contractuel + PRA automatique AWS)",
+        "artci_conformite": "Conforme Kenya ICT Regulations (équivalent ARTCI)",
+        "pcp_test": "Testé semestriellement (RTO < 1h)",
+        "score_estime": "91/100"
+      },
+      {
+        "organisation": "Arizona State University — ASU EdPlus (USA)",
+        "type": "International — référence mondiale",
+        "architecture": "Cloud-first AWS multi-région (us-east-1, eu-west-1) + CDN global Akamai",
+        "sis_lms_integration": "PeopleSoft SIS + Canvas LMS — intégration temps réel 100% API",
+        "iam_sso": "AWS SSO + Duo MFA (100% des 200 000 comptes)",
+        "disponibilite_lms": "99,95% (99,99% cible 2025)",
+        "artci_conformite": "Conforme FERPA + NIST CSF (cadre US équivalent)",
+        "pcp_test": "Testé trimestriellement (RTO < 15 min — auto-failover AWS)",
+        "score_estime": "98/100"
+      }
+    ]
+  },
+  "bonnes_pratiques": [
+    {
+      "pratique": "Migrer vers l'hébergement Moodle AUF comme première étape cloud accessible",
+      "description": "L'AUF héberge Moodle pour les universités francophones partenaires (coût symbolique, SLA 99%, CDN AUF Afrique). C'est la migration cloud la plus simple et la moins risquée pour les universités CI sans expertise cloud interne. UVCI CI a démarré sur l'infrastructure AUF avant de migrer vers AWS.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Déployer Microsoft Entra ID SSO via le programme Microsoft for Education (tarif réduit)",
+      "description": "Microsoft propose Entra ID (anciennement Azure AD) à tarif éducation subventionné (≤ 1,5 USD/utilisateur/mois pour les universités CI éligibles). Le SSO couvre Moodle (via LTI ou OIDC), Microsoft 365, Teams et les applications web tierces. Élimine les comptes multiples et réduit les tickets IT de 60-70%.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Assurer la conformité ARTCI logs Wi-Fi avant toute expansion du réseau campus",
+      "description": "L'ARTCI peut sanctionner les établissements non conformes (journalisation 12 mois + filtrage mineurs). La mise en conformité est techniquement simple : un contrôleur Wi-Fi Cisco, Aruba ou Ubiquiti configuré avec AAA (RADIUS) et un pare-feu avec filtrage DNS (Cisco Umbrella, filtrage OpenDNS Education). Coût : 3-8 M FCFA pour un campus de 500 points d'accès.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Tester le PCP MENA CI en condition réelle au moins une fois par an",
+      "description": "Un PCP non testé est un PCP inutile. La simulation d'incident annuelle (coupure réseau simulée pendant 4h, équipe IT non prévenue) révèle les failles réelles : procédures obsolètes, contacts d'urgence inexactes, temps de communication trop longs. INPHB : test mars 2024, RTO réel 3h42 vs. 2h cible — plan d'amélioration immédiat.",
+      "priorite": "Haute"
+    },
+    {
+      "pratique": "Intégrer le SIS et le LMS via API pour éliminer les doubles saisies",
+      "description": "La double saisie (notes saisies dans le LMS ET dans le SIS manuellement) est source de 80% des erreurs de notes dans les universités CI. Une API REST (synchronisation toutes les 15 min ou en temps réel) entre Moodle Gradebook et le SIS (Banner, SCOLARIX, Salesforce) élimine ce risque structurel.",
+      "priorite": "Haute"
+    }
+  ],
+  "pieges_a_eviter": [
+    {
+      "piege": "Construire une salle serveur physique au lieu de migrer vers le cloud",
+      "consequence": "Une salle serveur physique en CI coûte 25-50 M FCFA à construire (climatisation N+1, onduleurs, accès sécurisé, câblage) et 8-15 M FCFA/an à opérer — pour une disponibilité inférieure au cloud (pas de géo-redondance automatique). Le cloud AWS ou Azure en région Europe est moins cher à l'année 2 avec une disponibilité supérieure.",
+      "recommandation": "Comparer le TCO (Total Cost of Ownership) sur 3 ans avant de décider : cloud vs. on-premise. Dans 90% des cas pour les établissements CI, le cloud est moins cher et plus fiable dès l'année 2"
+    },
+    {
+      "piege": "Choisir un SIS non interfaçable avec Moodle",
+      "consequence": "Un SIS en base Access locale ou en logiciel propriétaire sans API publique est une dette technique majeure. La connexion Moodle-SIS est la priorité d'interopérabilité n°1 pour les universités CI — sans elle, chaque session d'examens génère des heures de re-saisie manuelle et des erreurs coûteuses.",
+      "recommandation": "Exiger une API REST documentée comme critère éliminatoire lors de la sélection d'un SIS. Les solutions open source (OpenSIS, Fedena) ou standards (Banner, Ellucian) offrent cette API nativement"
+    },
+    {
+      "piege": "Déployer le Wi-Fi campus sans planification de la couverture radio",
+      "consequence": "Des points d'accès mal placés (un par salle plutôt que par zone de couverture radio) créent des dead zones et des interférences. L'UFHB a déployé 80 points d'accès en 2022 avec une couverture < 60% du campus et une saturation des canaux 2,4 GHz dans les amphithéâtres.",
+      "recommandation": "Réaliser une étude de couverture radio préalable (heat map) avant déploiement. Budget : 500 000 FCFA pour une étude professionnelle, qui évite 3-5 M FCFA de redeploiement"
+    },
+    {
+      "piege": "Héberger les données apprenants sur des serveurs hors UEMOA sans DPA conforme APDP CI",
+      "consequence": "L'hébergement sur AWS us-east-1 (Virginie) ou en Chine sans Data Processing Agreement (DPA) conforme APDP CI expose l'établissement à des sanctions. L'APDP CI préconise les serveurs UEMOA ou Europe (avec BCR ou Standard Contractual Clauses).",
+      "recommandation": "Utiliser AWS eu-west-3 (Paris) ou Azure France Centre pour l'hébergement des données apprenants CI. Signer un DPA avec le fournisseur cloud et le déposer à l'APDP CI"
+    }
+  ],
+  "roadmap": {
+    "titre": "Roadmap socle IT — établissement d'enseignement CI",
+    "phases": [
+      {
+        "phase": "Phase 1 — Stabilisation (Mois 1-4)",
+        "actions": [
+          "Audit infrastructure IT existante (serveurs, réseau, LMS, SIS, comptes utilisateurs)",
+          "Migration LMS Moodle vers hébergement cloud AUF ou AWS eu-west-3 (SLA > 99%)",
+          "Mise en conformité ARTCI logs Wi-Fi (journalisation 12 mois + filtrage mineurs)",
+          "Sauvegardes testées quotidiennes pour LMS, SIS et données apprenants"
+        ],
+        "budget_indicatif": "5 - 15 M FCFA (migration LMS + conformité Wi-Fi ARTCI)"
+      },
+      {
+        "phase": "Phase 2 — Intégration et IAM (Mois 5-12)",
+        "actions": [
+          "Déploiement Microsoft Entra ID SSO (ou Keycloak open source) pour tous les comptes",
+          "Intégration API REST SIS ↔ LMS (synchronisation notes, présences, inscrits)",
+          "App mobile Moodle avec offline 30 jours déployée et communiciquée aux apprenants",
+          "Plan de Continuité Pédagogique (PCP MENA CI) rédigé, approuvé et testé"
+        ],
+        "budget_indicatif": "8 - 20 M FCFA (IAM + API SIS-LMS + app mobile + PCP)"
+      },
+      {
+        "phase": "Phase 3 — Excellence (Mois 13-24)",
+        "actions": [
+          "Wi-Fi 6 campus avec étude de couverture radio préalable (objectif 95%+ couverture)",
+          "Observabilité complète (Grafana + alerting) pour monitoring temps réel LMS et SIS",
+          "Architecture zero-trust (MFA 100% + segmentation réseau + gestion accès privilégiés)",
+          "Score IQN MESRS CI infrastructure > 70/100 (audit et plan d'amélioration)"
+        ],
+        "budget_indicatif": "15 - 40 M FCFA (Wi-Fi 6 + observabilité + zero trust)"
+      }
+    ]
+  },
+  "ressources": {
+    "formations": [
+      "Microsoft for Education — Azure Administrator AZ-104 et Entra ID (tarif éducation réduit)",
+      "AWS Educate — formations cloud pour IT staff des universités (subventionné AWS)",
+      "CISCO NetAcad — formation réseau et Wi-Fi campus (programme Networking Academy CI)",
+      "FDFP CI — financement formations IT pour techniciens établissements éducatifs (agrément requis)"
+    ],
+    "outils_recommandes": [
+      "Moodle + hébergement AUF — LMS standard CI/UEMOA, cloud AUF ou AWS eu-west-3",
+      "Microsoft Entra ID + Microsoft 365 Education — IAM SSO + MFA + suite collaborative (tarif éducation)",
+      "Cisco Meraki ou Aruba — Wi-Fi campus avec journalisation ARTCI intégrée et filtrage DNS",
+      "AWS ou Azure (région eu-west-3 / France Centre) — hébergement conforme APDP CI",
+      "Grafana + Prometheus — observabilité open source pour monitoring LMS et SIS"
+    ],
+    "references_reglementaires": [
+      "ARTCI — obligations journalisation Wi-Fi 12 mois et filtrage mineurs (artci.ci)",
+      "MENA CI — Plan de Continuité Pédagogique obligatoire (circulaire 2021)",
+      "APDP CI — Loi 2013-450 (hébergement données apprenants, DPA fournisseurs cloud)",
+      "MESRS CI — IQN infrastructure et critères accréditation numérique",
+      "AUF — service hébergement Moodle pour universités francophones (auf.org/numerique)"
+    ]
+  },
+  "ai_context": {
+    "scoring_dimension": "Maturité du socle IT dans les établissements d'enseignement",
+    "scoring_rubric": {
+      "score_1_to_20": "Infrastructure IT absente ou vétuste : aucun LMS, gestion Excel, connexion internet intermittente via box mobile, aucun SIS, aucun IAM, Wi-Fi non sécurisé non conforme ARTCI, aucun PCP.",
+      "score_21_to_40": "LMS Moodle on-premise (disponibilité < 90%), SIS tableur isolé sans API LMS, Wi-Fi campus non segmenté, aucun SSO (comptes multiples par étudiant), PCP non formalisé, sauvegardes non testées.",
+      "score_41_to_60": "LMS cloud hébergé (SLA > 99%), SIS interfacé LMS via API basique, Wi-Fi segmenté conformité ARTCI partielle, IAM partiel (Active Directory), PCP formalisé non testé, sauvegardes quotidiennes testées.",
+      "score_61_to_80": "Architecture cloud hybride AWS/Azure + CDN, SIS-LMS intégrés (0 double saisie), SSO Entra ID (80%+ services), MFA 90%+, app offline déployée, Wi-Fi 6 conformité ARTCI 100%, PCP testé (RTO < 4h).",
+      "score_81_to_100": "Cloud-native multi-région (99,9%+ SLA), zero trust network, SSO 100% services, observabilité complète Grafana, PRA automatique RTO < 1h, infrastructure as code, IQN MESRS CI infrastructure > 85/100."
+    },
+    "questions_discriminantes": [
+      "Quel est le taux de disponibilité (uptime) de votre LMS sur les 12 derniers mois ?",
+      "Vos étudiants peuvent-ils accéder à tous leurs services académiques (LMS, email, SIS, bibliothèque) avec un seul identifiant SSO ?",
+      "Votre réseau Wi-Fi campus est-il conforme aux obligations ARTCI (journalisation des logs 12 mois, filtrage des contenus pour les mineurs) ?",
+      "Disposez-vous d'un Plan de Continuité Pédagogique (PCP MENA CI) formalisé, approuvé et testé en conditions réelles dans les 12 derniers mois ?",
+      "Les données de vos apprenants sont-elles hébergées sur des serveurs en Europe ou en UEMOA avec un DPA conforme à la Loi 2013-450 (APDP CI) ?"
+    ],
+    "signaux_avances": [
+      "Architecture cloud multi-région avec failover automatique garantissant un SLA > 99,5% sans intervention humaine",
+      "SSO couvrant 100% des services académiques avec MFA obligatoire pour tous les comptes (apprenants et staff)",
+      "RTO testé inférieur à 2 heures dans un test en conditions réelles du Plan de Continuité Pédagogique",
+      "Observabilité complète avec alerting automatique (Grafana + Prometheus) sur tous les systèmes critiques LMS et SIS",
+      "Conformité ARTCI 100% (logs Wi-Fi 12 mois + filtrage mineurs) sur l'ensemble du campus, auditée annuellement"
+    ]
+  }
+}

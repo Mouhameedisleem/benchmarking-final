@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "PROCESS",
+    "sub_axis": "agilite",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Conception pédagogique agile (design pédagogique itératif et rapid prototyping)",
+      "description": "Les établissements abandonnent les cycles de conception de cours rigides (18-24 mois pour un nouveau programme) au profit de méthodes agiles : MVP pédagogique (Minimum Viable Program — 4 semaines de contenu pilotées avant validation complète), itérations basées sur le feedback apprenants (NPS cours, analytics LMS), et design sprint pour les nouvelles filières. En Côte d'Ivoire, l'UVCI CI a adopté un cycle de développement de cours de 6 semaines (vs. 12 mois avant 2020), permettant le lancement de 28 nouveaux modules en 2024 (vs. 8 en 2022).",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "22%",
+      "source": "AUF / UVCI CI Design Pédagogique Agile 2024",
+      "year": 2024
+    },
+    {
+      "title": "Organisations scolaires agiles face aux crises (pandémie, grèves, disruptions)",
+      "description": "La pandémie COVID-19 a révélé l'incapacité des établissements rigides à basculer en ligne : en CI, le MENA a fermé les écoles pendant 3 mois en 2020 — les établissements avec LMS actif ont assuré 85% de leur programme, les autres 0%. Les établissements 'agiles' développent des plans de continuité pédagogique multi-scénarios (grève, intempéries, épidémie) avec basculement en mode hybride en < 24h.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "35%",
+      "source": "MENA CI / Rapport Résilience Éducative 2024",
+      "year": 2024
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "Outils de conception pédagogique rapide (Articulate Storyline, Rise, iSpring)",
+      "category": "Authoring Tools / EdTech",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "UVCI CI (Articulate Rise pour e-learning), AUF (iSpring formation enseignants), 20% établissements CI avec authoring tools",
+      "leading_vendors": ["Articulate 360 (Storyline + Rise)", "iSpring Suite", "Adobe Captivate", "Lectora Inspire", "H5P (open source, Moodle)"]
+    },
+    {
+      "name": "Systèmes de gestion de projet pédagogique (Notion, Trello, ClickUp pour EdTech)",
+      "category": "PM / Collaboration EdTech",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "UVCI CI (Notion pour conception cours), Pigier CI (Trello équipes pédagogiques), 15% établissements CI",
+      "leading_vendors": ["Notion", "Trello", "ClickUp", "Asana", "Monday.com"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Cycle de développement cours agile 6 semaines : sprint 1 (analyse besoins + personas apprenants, 1 semaine), sprint 2 (maquette plan de cours + validation experts, 1 semaine), sprint 3 (production contenus H5P + Articulate Rise, 2 semaines), sprint 4 (test avec 50 apprenants pilotes + ajustements, 1 semaine), sprint 5 (déploiement Moodle + monitoring J+30, 1 semaine). Feedback hebdomadaire apprenants (NPS par module) → intégration iterations course.",
+        "differentiator": "Cycle de développement de cours le plus court d'Afrique francophone (6 semaines vs. 12-18 mois standard) — 28 nouveaux modules lancés en 2024 grâce à cette agilité vs. 8 en 2022, tous avec NPS > 65 au bout de 30 jours",
+        "source": "UVCI / AUF Rapport Design Pédagogique 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "African Leadership Academy (ALA)",
+        "country": "Afrique du Sud / Côte d'Ivoire / Rwanda",
+        "key_practice": "Design pédagogique agile : nouveau programme en 8 semaines (Scrum pédagogique, sprints bihebdomadaires), co-conception avec les apprenants (student-as-co-designer), itérations basées sur learning analytics LMS (Canvas), plan de continuité pédagogique activé 3 fois en 2023 (grève, internet coupé, inondations) sans interruption d'apprentissage",
+        "differentiator": "Meilleure résilience pédagogique d'Afrique subsaharienne — plan de continuité validé par 3 activations réelles sans interruption, design pédagogique co-construit avec apprenants (satisfaction +28 points vs. conception enseignants seuls)",
+        "source": "African Leadership Academy Annual Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Minerva University",
+        "country": "États-Unis (campus San Francisco + globaux)",
+        "key_practice": "Agilité pédagogique maximale : zéro cours magistral, 100% active learning et semestres tournants (7 villes en 4 ans), curriculum révisé annuellement sur base d'analytics apprenants (LMS Forum + NPS), redesign complet d'un cours en 2 semaines avec feedback étudiant, plan de basculement 100% digital activé en 48h (COVID → 0 interruption)",
+        "differentiator": "Université la plus agile au monde — redesign curriculum annuel sur données, 7 campus actifs, zéro cours traditionnel, basculement COVID en 48h sans perte d'une heure de cours — modèle d'agilité étudié par 200 universités mondiales",
+        "source": "Minerva University Annual Report 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Programmes figés depuis > 5 ans, aucun mécanisme de feedback apprenant, basculement en ligne impossible en cas de crise (aucun LMS, aucun plan de continuité), décisions pédagogiques centralisées (directeur seul).",
+    "level_2_developing": "Quelques cours pilotes en ligne (tentatives COVID), programme révisé tous les 3-5 ans, feedback informel (conseil de classe annuel), aucun plan de continuité formalisé.",
+    "level_3_defined": "LMS actif permettant basculement partiel en ligne (70% des cours disponibles en hybride), programme révisé < 3 ans, retour apprenants semestriel formalisé, plan de continuité pédagogique documenté (mais non testé).",
+    "level_4_managed": "Design pédagogique itératif (cycle < 3 mois pour nouveau cours), NPS par module trimestriel avec mécanisme d'ajustement rapide (< 4 semaines), plan de continuité pédagogique testé annuellement, équipes pédagogiques pluridisciplinaires (enseignant + ID + tech).",
+    "level_5_optimizing": "Agilité pédagogique complète : design sprint < 6 semaines, co-conception avec apprenants, analytics LMS comme déclencheur d'amélioration continue, plan de continuité activable en < 24h, curricula révisés en continu (living curriculum)."
+  },
+  "regulations": [
+    {
+      "name": "MESRS CI — Procédure d'accréditation des modifications de programmes",
+      "authority": "MESRS (Ministère de l'Enseignement Supérieur et de la Recherche Scientifique)",
+      "description": "Toute modification substantielle d'un programme d'enseignement supérieur accrédité MESRS CI nécessite un dossier de modification (fiche de modification pédagogique) soumis à la Direction de l'Enseignement Supérieur. Pour les modifications mineures (< 30% du contenu d'un module), une déclaration suffit. Pour les modifications majeures (nouveau module, nouveau format hybride, nouveau public cible), une accréditation partielle (2-6 mois) est nécessaire. Ce processus, bien que nécessaire pour la qualité, peut freiner l'agilité pédagogique.",
+      "compliance_deadline": "En vigueur",
+      "impact_on_sector": "Les établissements doivent distinguer innovations 'mineures' (itérations LMS, ajout quiz IA, amélioration contenu sans changement structurel — libres) des innovations 'majeures' nécessitant accréditation MESRS — stratégie : MVP dans le cadre accrédité existant, puis accréditation pour généralisation"
+    },
+    {
+      "name": "MENA CI — Plan de Continuité Pédagogique (PCP) obligatoire depuis 2021",
+      "authority": "MENA (Ministère de l'Éducation Nationale et de l'Alphabétisation)",
+      "description": "Suite à la pandémie COVID-19, le MENA CI a rendu obligatoire depuis 2021 un Plan de Continuité Pédagogique (PCP) pour tous les établissements publics et privés conventionnés. Le PCP doit définir : comment les cours seront assurés en cas de fermeture physique (au moins 3 modalités : présentiel, hybride, distance), les outils numériques mobilisés, les modalités d'évaluation alternatives, et la communication aux familles. Les établissements sans PCP validé risquent la suspension de conventionnement.",
+      "compliance_deadline": "En vigueur depuis 2021 (PCP à actualiser annuellement)",
+      "impact_on_sector": "Oblige les établissements à maintenir une infrastructure numérique minimale (LMS + visioconférence) et à former les enseignants aux outils digitaux, ce qui constitue un plancher d'agilité numérique imposé par la réglementation"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Résistance des enseignants aux méthodes agiles et au design itératif",
+      "description": "En Côte d'Ivoire, la culture pédagogique dans les établissements publics est fortement ancrée dans le cours magistral et les programmes figés. 65% des enseignants du supérieur CI déclarent n'avoir jamais utilisé un LMS de manière active (MESRS 2024). L'introduction de méthodes agiles (design sprint, NPS cours, itérations rapides basées sur données) se heurte à la résistance culturelle : 'mon cours a été le même depuis 15 ans et mes étudiants réussissent leurs examens'. Cette résistance ralentit considérablement la transformation pédagogique.",
+      "severity": "high",
+      "likelihood": "high",
+      "mitigation": "Stratégie de changement par les pairs : identifier les 'early adopters' parmi les enseignants (10-15% prêts à expérimenter), les former intensivement et en faire des champions internes, valoriser leur expertise innovante (visibilité institutionnelle, réduction de charge administrative) — UVCI CI a ainsi converti 85% de ses tuteurs au design agile en 18 mois grâce à 12 champions internes"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Curricula vivants co-construits avec les entreprises CI en temps réel",
+      "description": "Un système de 'living curriculum' permettrait aux établissements CI de mettre à jour leur programme en continu basé sur : (1) remontées des entreprises partenaires (stages, recrutements) sur les compétences manquantes, (2) analytics LMS (les modules les moins performants), (3) évolution du marché (nouvelles certifications industrielles). L'INPHB travaille sur un tableau de bord 'employabilité temps réel' croisant données alumni (6 mois post-diplôme) et offres d'emploi CI scrappées hebdomadairement pour identifier les compétences gap — objectif : programme révisé à 30% chaque année sur base de données.",
+      "impact_level": "high",
+      "time_to_value": "2-3 ans",
+      "prerequisite_maturity": "Niveau 4 — LMS avec analytics + CRM alumni actif + partenariats employeurs CI"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "Articulate 360 — Programme NGO / ONG Éducation Afrique francophone",
+      "montant": "Programme de subventions (valeur 2,5M USD en licences)",
+      "investisseurs": ["Articulate Global (investissement propre philanthropique)", "AUF (coordination Afrique francophone)"],
+      "annee": 2024,
+      "description": "Articulate Global a étendu son programme de licences subventionnées ONG/éducation à l'Afrique francophone en 2024 : accès à Articulate 360 (Storyline + Rise, authoring tools e-learning) à -90% pour les universités et lycées CI, Sénégal, Maroc, Cameroun. Via l'AUF (Agence Universitaire de la Francophonie), 180 établissements africains francophones dont 35 CI ont bénéficié du programme. L'UVCI CI a utilisé Articulate Rise pour développer 28 modules en 2024 (vs. 8 sans l'outil)."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Design Pédagogique Agile (sprints 6 semaines) — lancement du module Comptabilité Numérique en réponse à la demande marché",
+    "description": "En septembre 2023, des partenaires employeurs (Ordre des Experts-Comptables CI, SIB Société Ivoirienne de Banque) ont signalé à l'UVCI un manque critique de profils maîtrisant la comptabilité numérique (logiciels Sage CI, FEC, dématérialisation factures). L'UVCI a lancé un design sprint de 6 semaines pour créer un nouveau module 'Comptabilité Numérique CI' (30h) : semaine 1 (analyse besoins avec 5 DRH partenaires + 10 étudiants focus group), semaine 2 (plan de cours validé Ordre des CEC CI), semaines 3-4 (production sur Articulate Rise : 12 leçons vidéo + exercices Sage CI en ligne + QCM auto), semaine 5 (pilote 80 étudiants volontaires UVCI, NPS : 78/100, 3 ajustements mineurs), semaine 6 (déploiement production Moodle, communication marketing).",
+    "resultats": "Délai design → production → déploiement : 6 semaines (vs. 14 mois pour un module équivalent en 2020). Inscriptions au module dans les 30 premiers jours : 1 850 étudiants (objectif : 500 — dépassé 3,7x). NPS module à J+30 : 81/100. Taux de complétion à 3 mois : 72% (benchmark UVCI : 67%). Employabilité : 45 étudiants ont utilisé la certification module dans leur CV → 12 recrutements directs signalés par l'Ordre des CEC CI. Feedback Ordre CEC CI : 'Ce module répond exactement aux compétences qui nous manquaient — nous recommandons maintenant l'UVCI à nos membres pour la formation continue'.",
+    "source": "UVCI Rapport Design Agile 2024 / Ordre des Experts-Comptables CI",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif agilité pédagogique — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "Cycle développement nouveau cours", "Plan continuité pédagogique", "NPS par module", "Basculement digital en cas de crise"],
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "valeurs": ["6 semaines (sprints agiles)", "Oui (testé 2020 COVID, 0 interruption)", "Trimestriel (par module)", "< 24h (infrastructure native digital)"]
+      },
+      {
+        "organisation": "INPHB Yamoussoukro",
+        "valeurs": ["8-12 mois (procédure MESRS)", "Oui (PCP validé 2021)", "Annuel (enquête globale)", "48h (Moodle partiel)"]
+      },
+      {
+        "organisation": "Lycées publics CI",
+        "valeurs": ["> 5 ans (révision MENA)", "PCP obligatoire 2021 (partiel)", "Non mesuré", "Non (infrastructure insuffisante)"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue l'agilité pédagogique dans le secteur éducation CI : cycle de développement de nouveaux cours (délai design → production → déploiement), présence d'un Plan de Continuité Pédagogique conforme MENA CI (2021), mécanismes de feedback apprenant (NPS par module), et capacité de basculement digital en cas de crise.",
+    "maturity_max_description": "Établissement éducatif CI avec agilité pédagogique complète : design sprint < 6 semaines (co-conception avec apprenants + employeurs), NPS par module trimestriel avec ajustements < 4 semaines, Plan de Continuité Pédagogique testé et activable en < 24h, curricula révisés en continu basés sur analytics LMS — conformité MENA CI PCP 2021.",
+    "scoring_rubric": {
+      "score_1_to_20": "Programme figé > 5 ans, aucun feedback apprenant, pas de LMS, aucun plan de continuité, cours magistral exclusif.",
+      "score_21_to_40": "Programme révisé tous les 3-5 ans, LMS minimal, PCP papier non testé, basculement digital impossible en < 1 semaine.",
+      "score_41_to_60": "LMS actif (70% cours hybrides), PCP validé MENA CI, feedback semestriel, programme révisé < 3 ans, basculement possible en 48h.",
+      "score_61_to_80": "Design pédagogique itératif (cycle < 3 mois), NPS module trimestriel, PCP testé annuellement, authoring tools agiles, co-conception partielle avec employeurs.",
+      "score_81_to_100": "Design sprint < 6 semaines, NPS module avec ajustements < 4 semaines, PCP activable < 24h, living curriculum, co-conception apprenants + employeurs CI."
+    },
+    "prompt_injection_context": "Secteur éducation CI : MENA CI impose un Plan de Continuité Pédagogique (PCP) obligatoire depuis 2021 pour tous les établissements. Les modifications majeures de programmes MESRS nécessitent une procédure d'accréditation (2-6 mois). UVCI est le pionnier du design pédagogique agile en CI (6 semaines). La résistance culturelle des enseignants au magistral est un frein majeur à l'agilité pédagogique en CI.",
+    "key_questions_for_llm": [
+      "Quel est votre cycle de développement pour un nouveau cours ou module ? Utilisez-vous des méthodes agiles (sprints, MVP pédagogique, itérations rapides) ?",
+      "Disposez-vous d'un Plan de Continuité Pédagogique (PCP) conforme aux exigences MENA CI 2021 ? A-t-il été testé en situation réelle ?",
+      "Mesurez-vous la satisfaction des apprenants par cours (NPS, enquête) avec un mécanisme d'ajustement rapide du contenu < 4 semaines ?",
+      "Combien de temps vous faut-il pour basculer entièrement en enseignement à distance en cas de fermeture physique imprévue (grève, épidémie) ?",
+      "Vos curricula sont-ils co-construits avec des représentants des employeurs CI pour garantir leur pertinence par rapport au marché du travail ?"
+    ]
+  }
+}

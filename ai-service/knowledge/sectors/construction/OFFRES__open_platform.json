@@ -1,0 +1,284 @@
+{
+  "secteur": "btp",
+  "axe": "OFFRES",
+  "sous_axe": "open_platform",
+  "label": "Plateformes ouvertes et écosystème digital BTP",
+  "description": "Capacité à adopter des plateformes ouvertes (Open BIM IFC, APIs SIGMAP, marketplaces BTP), à partager des données sectorielles (benchmarks coûts CNBTP CI, essais LBTP CI) et à contribuer à l'écosystème numérique du BTP en Côte d'Ivoire et en UEMOA.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Fragmentation des données BTP CI : plans AutoCAD propriétaires incompatibles entre MOA, MOE, entreprises et bureaux de contrôle",
+      "SIGMAP DGMP CI : API ouverte marchés publics BTP CI (45% dématérialisés, objectif 80% 2026)",
+      "BNETD CI portail GEOPROJET CI : SIG national des projets d'infrastructure, données géospatiales ouvertes",
+      "Format IFC (Industry Foundation Classes) Open BIM : interopérabilité entre Revit, ArchiCAD, Tekla CI — standard mondial progressivement adopté",
+      "Marketplace matériaux BTP CI naissante : CNBTP CI répertoire fournisseurs, achats groupés PME BTP CI",
+      "LBTP CI : laboratoire référence essais matériaux CI — données qualité matériaux locaux (BLS, ciment CI, granulats)"
+    ],
+    "acteurs_cles": [
+      "BNETD CI — Bureau National d'Études Techniques et de Développement : MOA délégué État CI, portail GEOPROJET CI",
+      "CNBTP CI — Conseil National du Bâtiment et des Travaux Publics : agréments, répertoire entreprises agréées",
+      "SIGMAP DGMP CI — Système Intégré de Gestion des Marchés Publics : plateforme nationale dématérialisée",
+      "LBTP CI — Laboratoire du Bâtiment et des Travaux Publics : essais matériaux, normes CI",
+      "ARTCI CI — Autorité de Régulation des Télécommunications et de l'ICT : régulation plateformes numériques CI",
+      "BHCI — Banque de l'Habitat de Côte d'Ivoire : données logement VEFA, programme SHB",
+      "Buildwise (ex-CSTB France) — référence normes BIM UEMOA francophone"
+    ],
+    "reglementation_locale": [
+      "Loi CI 2017-771 : valeur juridique documents électroniques et signatures numériques CI",
+      "APDP CI Loi 2013-450 : protection données personnelles — partage données chantier via plateformes",
+      "SIGMAP DGMP CI Décret 2009-259 : dématérialisation marchés publics, API publication données",
+      "Directive UEMOA 04/2005 : harmonisation commandes publiques Afrique de l'Ouest",
+      "Code CIMA : assurances construction RC décennale CI — données sinistres partagées",
+      "OHADA Acte uniforme : contrats construction, responsabilités numériques"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Aucune plateforme ouverte utilisée. Échanges de plans par clé USB ou email (PDF). Aucune participation aux marchés SIGMAP CI. Données entreprise en silos complets, aucun partage sectoriel.",
+      "indicateurs": [
+        "Plans transmis par clé USB ou email PDF uniquement",
+        "Aucune inscription sur SIGMAP DGMP CI",
+        "Aucun format IFC utilisé — DWG propriétaire exclusif",
+        "Aucune donnée partagée avec CNBTP CI ou LBTP CI",
+        "Aucune présence sur marketplace matériaux ou sous-traitants CI"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Utilisation ponctuelle de SIGMAP DGMP CI pour consultation d'appels d'offres publics. Échanges DWG par email. Notions d'IFC sans implémentation. Aucun partage proactif de données sectorielles.",
+      "indicateurs": [
+        "Compte SIGMAP DGMP CI créé — consultation AO uniquement",
+        "DWG partagé par email ou WeTransfer — pas de GED commune",
+        "IFC évoqué mais non utilisé en projet",
+        "Fournisseurs gérés par carnet d'adresses manuel",
+        "Aucune donnée benchmarking coûts partagée avec CNBTP CI"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Soumissions actives sur SIGMAP DGMP CI. Export IFC depuis Revit pour échanges bureau de contrôle. Utilisation de plateformes collaboratives projet (BIM 360 ou Procore). Référencement sur marketplace CNBTP CI. Accès données LBTP CI pour contrôle qualité matériaux.",
+      "indicateurs": [
+        "Soumissions dématérialisées SIGMAP CI : > 60% des AO publics visés",
+        "Export IFC Revit utilisé pour échanges MOE ↔ bureau de contrôle",
+        "BIM 360 ou Procore comme CDE (Common Data Environment) projet",
+        "Référencé sur répertoire CNBTP CI fournisseurs/entreprises",
+        "Accès portail LBTP CI résultats essais matériaux"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "Intégration API SIGMAP CI pour veille automatique AO. Modèle BIM IFC fédéré multi-acteurs (MOA/MOE/entreprises/contrôle). Participation à des groupements de partage de données coûts (CNBTP CI). Marketplace fournisseurs intégrée à l'ERP. Contributions Open BIM sectorielles.",
+      "indicateurs": [
+        "API SIGMAP CI intégrée : alertes AO automatiques par secteur/région",
+        "Modèle IFC fédéré : MOA + MOE + entreprise + bureau de contrôle sur CDE commun",
+        "Données coûts historiques partagées anonymisées avec CNBTP CI",
+        "Marketplace fournisseurs connectée à ERP (SAP/Odoo CI) : commandes intégrées",
+        "Contribution benchmarks LBTP CI : 2+ rapports d'essais partagés/an"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Plateforme ouverte multi-acteurs animée par l'entreprise (Open BIM data commons CI). Co-construction API métier avec BNETD CI GEOPROJET. Marketplace BTP CI propriétaire ou co-fondée. Data lake sectoriel contribué (coûts, délais, sinistres). Leader de l'écosystème digital BTP en Côte d'Ivoire.",
+      "indicateurs": [
+        "Data commons BTP CI co-fondé : > 15 entreprises contribuant données anonymisées",
+        "API métier co-construite avec BNETD CI GEOPROJET CI",
+        "Marketplace BTP CI opérée ou co-fondée (matériaux, sous-traitants qualifiés CNBTP CI)",
+        "Data lake sectoriel alimenté : coûts, délais, sinistres — accessible membres CNBTP CI",
+        "Certifié Open BIM buildingSMART International — référence UEMOA"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Utilisez-vous SIGMAP DGMP CI pour vos appels d'offres publics ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — aucune utilisation"},
+        {"valeur": 2, "label": "Consultation uniquement — pas de soumission en ligne"},
+        {"valeur": 3, "label": "Soumissions actives sur SIGMAP CI"},
+        {"valeur": 4, "label": "API SIGMAP CI intégrée pour veille automatique"},
+        {"valeur": 5, "label": "Partenaire SIGMAP CI — co-développement fonctionnalités"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Utilisez-vous le format IFC pour l'échange de maquettes BIM avec vos partenaires ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — DWG ou PDF uniquement"},
+        {"valeur": 2, "label": "IFC évoqué mais non utilisé en projet réel"},
+        {"valeur": 3, "label": "Export IFC utilisé ponctuellement pour bureau de contrôle"},
+        {"valeur": 4, "label": "Modèle IFC fédéré multi-acteurs sur CDE commun"},
+        {"valeur": 5, "label": "Open BIM IFC natif — contribution buildingSMART"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Partagez-vous des données de coûts ou de performance avec des associations sectorielles (CNBTP CI) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — données totalement privées"},
+        {"valeur": 2, "label": "Répertorié CNBTP CI mais aucun partage de données"},
+        {"valeur": 3, "label": "Accès données CNBTP CI — pas de contribution"},
+        {"valeur": 4, "label": "Contribution anonymisée données coûts CNBTP CI"},
+        {"valeur": 5, "label": "Co-animation data commons sectoriel CNBTP CI"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Comment gérez-vous votre réseau de fournisseurs et sous-traitants qualifiés ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Carnet d'adresses manuel / WhatsApp uniquement"},
+        {"valeur": 2, "label": "Liste Excel fournisseurs — mise à jour manuelle"},
+        {"valeur": 3, "label": "Présence sur marketplace BTP CI (CNBTP CI répertoire)"},
+        {"valeur": 4, "label": "Marketplace intégrée ERP — commandes et évaluations intégrées"},
+        {"valeur": 5, "label": "Marketplace BTP CI propre ou co-fondée — opérateur de l'écosystème"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "Utilisation SIGMAP DGMP CI",
+      "Format IFC Open BIM",
+      "Partage données sectorielles",
+      "Marketplace fournisseurs/matériaux",
+      "Contribution écosystème digital BTP"
+    ],
+    "lignes": [
+      {
+        "organisation": "PME BTP CI classe D-E",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "Aucune plateforme ouverte — échanges WhatsApp et clé USB"
+      },
+      {
+        "organisation": "AGEROUTE CI",
+        "scores": [4, 3, 3, 3, 3],
+        "note_globale": 3,
+        "commentaire": "SIGMAP CI actif, IFC sur grands projets, données partiellement partagées avec BNETD CI"
+      },
+      {
+        "organisation": "COLAS CI",
+        "scores": [4, 4, 4, 4, 3],
+        "note_globale": 4,
+        "commentaire": "API SIGMAP CI, BIM IFC fédéré, contribution CNBTP CI, marketplace groupe Bouygues"
+      },
+      {
+        "organisation": "BNETD CI",
+        "scores": [5, 5, 5, 4, 5],
+        "note_globale": 5,
+        "commentaire": "Animateur GEOPROJET CI et Open BIM national — référence écosystème CI"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "BNETD CI — portail GEOPROJET CI",
+      "part_de_marche_estimee": "Référence nationale SIG BTP",
+      "forces": ["Mandaté État CI", "Données infrastructure nationales", "Open BIM progressif", "Partenariat IGT CI géospatial"],
+      "faiblesses": ["Accès restreint privés", "Lenteur ouverture API", "Budget numérique limité"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "Buildwise Afrique (CSTB partenariat) — normes BIM UEMOA",
+      "part_de_marche_estimee": "Référence normative francophone",
+      "forces": ["Normes BIM adaptées contexte UEMOA", "Partenariats ministères travaux publics", "Formations certifiantes francophones"],
+      "faiblesses": ["Présence physique CI limitée", "Coûts certifications élevés PME"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "buildingSMART International — IFC Open BIM",
+      "part_de_marche_estimee": "Standard mondial Open BIM",
+      "forces": ["Format IFC ISO 16739 — universel", "Interopérabilité totale logiciels BIM", "Communauté 120+ pays", "Gratuit (open standard)"],
+      "faiblesses": ["Adoption lente Afrique subsaharienne", "Complexité technique implémentation", "Manque formateurs locaux CI"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "SIGMAP DGMP CI — API marchés publics",
+      "usage": "Veille automatique appels d'offres BTP CI publics, soumissions dématérialisées",
+      "niveau_cible": "3+",
+      "cout_estime": "Gratuit (plateforme État CI)",
+      "disponibilite_ci": "Natif CI — obligatoire marchés publics"
+    },
+    {
+      "nom": "IFC / buildingSMART Open BIM",
+      "usage": "Format d'échange interopérable maquettes BIM entre MOA, MOE, entreprises, contrôle",
+      "niveau_cible": "3+",
+      "cout_estime": "Gratuit (standard ouvert) — investissement formation",
+      "disponibilite_ci": "Natif logiciels BIM (Revit, ArchiCAD) — export intégré"
+    },
+    {
+      "nom": "Autodesk BIM 360 / ACC — CDE commun",
+      "usage": "Common Data Environment multi-acteurs projet — partage maquettes IFC, RFI, plans",
+      "niveau_cible": "3-4",
+      "cout_estime": "400 000–1 200 000 FCFA/an selon taille",
+      "disponibilite_ci": "International — accès via internet CI 4G/fibre"
+    },
+    {
+      "nom": "GEOPROJET CI — portail BNETD CI",
+      "usage": "SIG national projets infrastructure CI — données géospatiales ouvertes",
+      "niveau_cible": "3+",
+      "cout_estime": "Gratuit (portail public CI)",
+      "disponibilite_ci": "Natif CI — portail web BNETD"
+    },
+    {
+      "nom": "Odoo BTP CI — module achat marketplace",
+      "usage": "ERP open source avec marketplace fournisseurs intégrée, commandes, évaluations",
+      "niveau_cible": "4",
+      "cout_estime": "800 000–2 500 000 FCFA/an (hébergement CI partenaires locaux)",
+      "disponibilite_ci": "International — partenaires implémentation CI disponibles"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "BNETD CI — Open BIM GEOPROJET CI : fédération maquettes IFC grand projet infrastructure",
+    "organisation": "BNETD CI (Bureau National d'Études Techniques et de Développement, Abidjan)",
+    "contexte": "Projet pont Jacqueville CI (8,2 Mds FCFA) : 5 acteurs (BNETD MOA délégué, bureau études français MOE, entreprise chinoise GC, bureau contrôle ivoirien, CIE CI réseaux). Échanges plans : 47 versions DWG incompatibles en 3 mois, 2 incidents clash détectés tardivement sur chantier.",
+    "probleme": "Incompatibilité logiciels et formats entre acteurs : DWG AutoCAD CI ↔ Revit France ↔ Tekla Chine — aucune plateforme commune. Délai résolution clashes en phase chantier : 6–9 semaines chacun.",
+    "solution_deployee": "Adoption IFC 2x3 comme format d'échange obligatoire contractualisé. CDE BIM 360 commun : BNETD CI administrateur, accès 5 acteurs. Coordination hebdomadaire modèle fédéré IFC via Navisworks Manage. API SIGMAP CI intégrée : publication automatique avenants marchés.",
+    "resultats": "Clashes détectés en phase conception (avant chantier) : 89% des 127 clashes identifiés. Délai résolution clash phase chantier : 6-9 semaines → 4 jours (-93%). Coût travaux supplémentaires clash : économie estimée 380 M FCFA vs. projets similaires sans BIM. Réunions coordination site : 3/semaine → 1/semaine (-67%). API SIGMAP CI : 12 avenants publiés automatiquement en 48h vs. 12-18 jours manuel. Modèle projet reconnu référence UEMOA par buildingSMART Francophone.",
+    "enseignements": [
+      "Le format IFC contractualisé dès la phase APD supprime 90% des incompatibilités logiciels inter-acteurs",
+      "L'API SIGMAP CI réduit les délais administratifs marchés de 85% — levier compétitivité majeur",
+      "Un CDE commun BNETD CI rend l'entreprise locale auditable et crédible face aux groupes internationaux"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "open BIM", "IFC", "format ouvert", "interopérabilité", "SIGMAP CI", "marchés publics dématérialisés",
+      "GEOPROJET CI", "BNETD CI", "CDE commun", "marketplace BTP", "CNBTP CI", "LBTP CI",
+      "data commons", "API ouverte", "buildingSMART", "fédération maquette", "partage données sectorielles"
+    ],
+    "signaux_niveau_avance": [
+      "API SIGMAP CI intégrée au SI",
+      "Modèle IFC fédéré multi-acteurs",
+      "Contribution data commons CNBTP CI",
+      "Marketplace fournisseurs connectée ERP",
+      "Certifié buildingSMART International"
+    ],
+    "pieges_frequents": [
+      "Confondre 'être présent sur SIGMAP CI' (compte créé) avec 'utiliser SIGMAP CI' (soumissions actives)",
+      "Format IFC déclaré mais export non testé ni contractualisé avec partenaires",
+      "Marketplace BTP CI = répertoire Excel fournisseurs renommé",
+      "Partage données = accès données CNBTP CI sans contribution en retour"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune plateforme ouverte. DWG par clé USB, absence totale SIGMAP CI, données en silos complets.",
+      "score_21_to_40": "SIGMAP CI en consultation seulement. DWG partagé par email. IFC non utilisé. Pas de partage sectoriel.",
+      "score_41_to_60": "Soumissions SIGMAP CI actives. Export IFC ponctuel. CDE projet utilisé. Référencé CNBTP CI. Accès LBTP CI.",
+      "score_61_to_80": "API SIGMAP CI intégrée. BIM IFC fédéré multi-acteurs. Contribution données CNBTP CI. Marketplace ERP connectée.",
+      "score_81_to_100": "Animateur data commons BTP CI. API co-construite BNETD CI. Marketplace BTP CI opérée. Certifié buildingSMART — référence UEMOA."
+    }
+  }
+}

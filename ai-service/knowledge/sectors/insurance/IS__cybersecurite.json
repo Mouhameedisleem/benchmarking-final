@@ -1,0 +1,60 @@
+{
+  "meta": { "axis": "INFORMATION_SYSTEM", "sub_axis": "Cybersécurité", "sector": "assurance", "language": "fr", "version": "1.0", "last_updated": "2026-05" },
+  "trends": [
+    { "title": "Assurance cyber — les assureurs sont à la fois victimes et couvrants des cyber-risques", "description": "Les compagnies d'assurance détiennent des données ultra-sensibles (santé, patrimoine, KYC) qui en font des cibles privilégiées pour les cyberattaques. En parallèle, l'assurance cyber est l'un des segments à la plus forte croissance. Les assureurs UEMOA doivent gérer les deux faces du risque cyber.", "impact_level": "Très élevé", "horizon": "Immédiat", "adoption_rate": "3 cyberattaques majeures sur des assureurs africains en 2023 dont 1 en UEMOA (CIMA Rapport 2024)", "source": "CIMA Rapport Cybersécurité Secteur Assurance 2024 / INTERPOL Africa Cyber Report 2024", "year": "2024" },
+    { "title": "RGPD-like en Côte d'Ivoire — protection des données personnelles des assurés", "description": "La loi ivoirienne sur la protection des données personnelles (Loi n°2013-450) impose aux assureurs des obligations strictes sur la collecte, le traitement et la conservation des données des assurés. Les contrôles ARTCI se renforcent depuis 2023.", "impact_level": "Élevé", "horizon": "Immédiat", "adoption_rate": "40 % des assureurs CI ont réalisé un audit de conformité protection des données en 2023 (ARTCI 2024)", "source": "ARTCI Rapport Annuel 2024", "year": "2024" }
+  ],
+  "key_technologies": [
+    { "name": "SOC (Security Operations Center) assurance", "category": "Surveillance et réponse aux incidents", "maturity_stage": "Mature", "adoption_in_sector": "Très faible en UEMOA — principalement externalisé", "leading_vendors": ["IBM Security QRadar", "Splunk SIEM", "Microsoft Sentinel", "CrowdStrike Falcon"] },
+    { "name": "Chiffrement des données assurés et gestion des accès", "category": "Protection des données", "maturity_stage": "Mature", "adoption_in_sector": "Faible en UEMOA", "leading_vendors": ["Thales CipherTrust", "HashiCorp Vault", "Microsoft Azure AD", "CyberArk PAM"] },
+    { "name": "Assurance cyber — produits pour couvrir les entreprises", "category": "Nouveau segment produit", "maturity_stage": "Croissance en Afrique", "adoption_in_sector": "Très faible en UEMOA — marché émergent", "leading_vendors": ["AXA XL Cyber", "Chubb Cyber", "Beazley Cyber", "Munich Re Cyber Solutions"] }
+  ],
+  "market_leaders": {
+    "national": [{ "organisation": "Allianz CI", "country": "Côte d'Ivoire", "key_practice": "SOC externalisé auprès d'un MSSP (Managed Security Service Provider) certifié. Chiffrement des données assurés. Audit cybersécurité annuel. Sensibilisation du personnel trimestrielle. Lancement d'un produit d'assurance cyber PME en 2023.", "differentiator": "Premier assureur ivoirien à avoir lancé un produit d'assurance cyber dédié aux PME — assureur ET acteur de la cybersécurité", "source": "Allianz CI Rapport 2023" }],
+    "regional": [{ "organisation": "Sanlam Pan Africa", "country": "Afrique du Sud / Pan-Afrique", "key_practice": "SOC groupe avec surveillance 24/7 de toutes les filiales africaines. DPO nommé pour chaque pays. Audit ISO 27001 en cours dans 5 filiales. Programme de sensibilisation e-learning mensuel.", "differentiator": "Sanlam a investi 25 M$ en cybersécurité sur 2021-2024 et n'a subi aucune violation de données majeure sur ses filiales africaines — record du secteur", "source": "Sanlam Annual Report 2023" }],
+    "international": [{ "organisation": "AXA Group", "country": "France / Mondial", "key_practice": "AXA a créé AXA XL Cyber — une division dédiée à l'assurance cyber d'entreprise. En interne : ISO 27001 dans toutes les entités, SOC global, bug bounty program public. Investissement de 500 M€/an en cybersécurité.", "differentiator": "AXA est à la fois l'assureur cyber leader mondial et une entreprise certifiée ISO 27001 — preuve que les assureurs peuvent exceller dans les deux rôles", "source": "AXA Annual Report 2023 / AXA XL Cyber Report 2024" }]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Aucune politique de cybersécurité formalisée. Antivirus basique. Pas de SOC. Données assurés non chiffrées. Aucune sensibilisation.",
+    "level_2_developing": "Politique de mots de passe. Antivirus à jour. Sauvegardes chiffrées. Pas de SOC. Audit IT annuel basique.",
+    "level_3_defined": "Politique sécurité documentée. SOC externalisé. Chiffrement des données assurés. DPO nommé. Audit annuel cybersécurité. Sensibilisation semestrielle.",
+    "level_4_managed": "SOC 24/7. ISO 27001 en cours. Pen test annuel. Formation cybersécurité mensuelle. SIEM déployé. Conformité Loi 2013-450 vérifiée.",
+    "level_5_optimizing": "ISO 27001 certifié. SOC interne ou MSSP premium. Zero Trust architecture. Bug bounty. Assurance cyber produit actif."
+  },
+  "regulations": [
+    { "name": "Loi n°2013-450 — Protection des données à caractère personnel (Côte d'Ivoire)", "issuing_body": "ARTCI / APDP (Autorité de Protection des Données Personnelles)", "scope": "Toutes les entreprises traitant des données personnelles en Côte d'Ivoire, dont les assureurs", "key_requirement": "Déclaration obligatoire des traitements de données à l'APDP. Consentement explicite des assurés pour l'utilisation de leurs données. DPO recommandé pour les grands traitements.", "compliance_deadline": "En vigueur — contrôles renforcés depuis 2023", "source_url": "https://www.artci.ci" },
+    { "name": "Circulaire CIMA sur la sécurité des systèmes d'information", "issuing_body": "CIMA", "scope": "Tous assureurs CIMA", "key_requirement": "Politique de sécurité des systèmes d'information obligatoire. Tests d'intrusion recommandés. Notification obligatoire à la CIMA en cas d'incident majeur affectant les données des assurés.", "compliance_deadline": "En vigueur", "source_url": "https://www.cima-afrique.org" }
+  ],
+  "risks": [{ "title": "Vol de données assurés — données de santé et patrimoniales ultra-sensibles", "description": "Les assureurs détiennent les données les plus sensibles des personnes physiques : état de santé, patrimoine, bénéficiaires, antécédents médicaux. Une violation de ces données entraîne des amendes ARTCI, des actions en responsabilité civile et une perte de confiance irrémédiable.", "severity": "Très élevé", "likelihood": "Élevée", "mitigation": "Chiffrement de toutes les données assurés au repos et en transit. Accès en moindre privilège. SOC 24/7. Plan de réponse aux incidents testé. Conformité Loi 2013-450 vérifiée annuellement." }],
+  "opportunities": [{ "title": "Assurance cyber PME — marché à créer en Côte d'Ivoire", "description": "Aucun assureur CI ne propose encore un produit d'assurance cyber abordable pour les PME. Or 60 % des PME ivoiriennes ont subi au moins un incident cyber en 2023 (ARTCI). Un produit à 150 000-300 000 FCFA/an couvrant la perte d'exploitation et la responsabilité cyber toucherait un marché de 50 000 PME.", "impact_level": "Très élevé", "time_to_value": "12-24 mois", "prerequisite_maturity": "Niveau 3" }],
+  "ma_and_fundraising": [],
+  "zoom_case_study": { "entreprise": "AXA XL Cyber — Assureur ET expert en cybersécurité", "pays": "France / Mondial", "technologie": "Assurance cyber d'entreprise + services de prévention et réponse aux incidents", "description": "AXA a créé AXA XL Cyber en 2020 pour devenir à la fois un assureur cyber leader et une entreprise exemplaire en matière de cybersécurité. La division propose des polices d'assurance cyber couvrant ransomware, violation de données, interruption d'activité et cyber-extorsion. En parallèle, AXA a investi 500 M€/an en cybersécurité interne : ISO 27001 dans 50 entités, SOC global 24/7, bug bounty public avec 500 chercheurs, formation mensuelle de 160 000 collaborateurs. Résultat 2023 : AXA XL Cyber génère 1,8 Md€ de primes (2ème mondial) et AXA n'a subi aucune violation de données majeure depuis 2021 (après l'incident de 2021 qui avait servi de leçon). Pour les assureurs UEMOA : l'assurance cyber est un nouveau marché ET une obligation de sécuriser sa propre maison.", "resultats": "1,8 Md€ primes cyber · 2ème assureur cyber mondial · ISO 27001 × 50 entités · SOC 24/7 · 0 violation majeure depuis 2021 · Bug bounty 500 chercheurs", "source": "AXA Annual Report 2023 / AXA XL Cyber Market Report 2024", "annee": "2023" },
+  "comparatif_organisations": {
+    "titre": "Maturité cybersécurité — benchmark assureurs CIMA/UEMOA",
+    "colonnes": ["Organisation", "SOC 24/7 (interne ou MSSP)", "Données assurés chiffrées", "DPO nommé (Loi 2013-450)", "Audit cyber annuel", "Produit assurance cyber actif"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "Partiel"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Les assureurs UEMOA sont doublement exposés au risque cyber : comme cibles (données ultra-sensibles des assurés) et comme couvrants (responsabilité si la police ne couvre pas les sinistres cyber de leurs clients entreprises). La conformité à la Loi ivoirienne 2013-450 sur les données personnelles est encore insuffisante dans le secteur. L'assurance cyber PME est un marché quasi-inexistant en Côte d'Ivoire malgré une demande réelle.",
+    "maturity_max_description": "ISO 27001 certifié. SOC 24/7 (interne ou MSSP premium). Zero Trust architecture déployée. Toutes données assurés chiffrées au repos et en transit. DPO nommé, conformité Loi 2013-450 vérifiée annuellement. Pen test semestriel. Produit d'assurance cyber PME actif. Formation mensuelle de tous les collaborateurs.",
+    "scoring_rubric": {
+      "score_1_to_20": "Pas de politique sécurité. Données non chiffrées. Aucun SOC. Aucune conformité.",
+      "score_21_to_40": "Politique basique. Antivirus. Sauvegardes. Pas de SOC. Pas de DPO.",
+      "score_41_to_60": "Politique documentée. SOC externalisé. Chiffrement données. DPO nommé. Audit annuel.",
+      "score_61_to_80": "SOC 24/7. ISO 27001 en cours. Pen test annuel. Conformité 2013-450 vérifiée.",
+      "score_81_to_100": "ISO 27001 certifié. Zero Trust. SOC premium. Bug bounty. Assurance cyber active."
+    },
+    "prompt_injection_context": "Cette compagnie d'assurance est évaluée sur sa maturité cybersécurité dans le contexte CIMA/UEMOA. Analyse la protection des données des assurés, la présence d'un SOC, la conformité à la Loi 2013-450 sur les données personnelles, et l'existence éventuelle d'un produit d'assurance cyber.",
+    "key_questions_for_llm": [
+      "Un SOC (Security Operations Center) interne ou externalisé surveille-t-il les systèmes de la compagnie 24/7 ?",
+      "Les données des assurés (santé, patrimoine, KYC) sont-elles chiffrées au repos et en transit ?",
+      "Un DPO (Data Protection Officer) a-t-il été nommé et la conformité à la Loi 2013-450 est-elle vérifiée annuellement ?",
+      "Des tests d'intrusion (pen tests) sont-ils réalisés au moins une fois par an sur les systèmes critiques ?",
+      "Un produit d'assurance cyber est-il proposé aux clients entreprises ou PME ?"
+    ]
+  }
+}

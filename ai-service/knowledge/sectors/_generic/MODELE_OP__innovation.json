@@ -1,0 +1,246 @@
+{
+  "meta": {
+    "axis": "MODELE_OPERATIONNEL",
+    "sub_axis": "Innovation & R&D digitale",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Corporate Venture Capital & Open Innovation — capter l'innovation externe",
+      "description": "Les grandes organisations créent des fonds de CVC (Corporate Venture Capital) ou des programmes d'open innovation (hackathons, accélérateurs, partenariats startups) pour accéder à des technologies émergentes sans les développer en interne.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "75 % des Fortune 500 ont un programme d'open innovation actif (Deloitte 2024)",
+      "source": "Deloitte Open Innovation Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "AI-augmented R&D — accélération de la recherche par l'IA",
+      "description": "L'IA (AlphaFold, GitHub Copilot, Perplexity) accélère radicalement la R&D en automatisant la revue de littérature, la génération d'hypothèses et la simulation de tests, réduisant les cycles d'innovation de 50-80 %.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "48 % des équipes R&D utilisent l'IA pour accélérer la recherche (McKinsey 2024)",
+      "source": "McKinsey Technology Trends 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Design Thinking & Jobs-to-be-Done — innovation centrée utilisateur",
+      "description": "Le Design Thinking et le framework Jobs-to-be-Done remplacent l'innovation technologique 'push' par une innovation 'pull' partant des besoins non satisfaits des utilisateurs, augmentant le taux de succès des innovations de 3-5×.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "71 % des organisations leaders utilisent le Design Thinking (IBM Institute 2024)",
+      "source": "IBM Design Thinking Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Intrapreneuriat — startup interne pour l'innovation de rupture",
+      "description": "Les organisations créent des entités internes autonomes (labs, ventures, spin-offs) avec des ressources dédiées pour développer des innovations de rupture sans être freinées par les contraintes du core business.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "62 % des grandes entreprises ont un programme d'intrapreneuriat (Harvard Business Review 2024)",
+      "source": "Harvard Business Review Innovation Survey 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Innovation Management Platform",
+      "category": "Gestion du pipeline d'innovation",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible en Afrique",
+      "leading_vendors": ["Brightidea", "IdeaScale", "Spigit", "Hype Innovation", "Microsoft Viva Amplify"]
+    },
+    {
+      "name": "Rapid Prototyping & MVP Tools",
+      "category": "Développement rapide de prototypes",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["Figma", "InVision", "Adobe XD", "Bubble (no-code MVP)", "Webflow"]
+    },
+    {
+      "name": "Sandbox & Lab Environment",
+      "category": "Expérimentation sécurisée",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["AWS Sandbox", "Azure DevTest Labs", "Google Cloud Sandbox", "Gitpod"]
+    },
+    {
+      "name": "AI Research Tools",
+      "category": "R&D augmentée par l'IA",
+      "maturity_stage": "Émergence",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["Perplexity AI", "Elicit", "Consensus", "GitHub Copilot", "Anthropic Claude API"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Lab d'innovation interne avec budget dédié, participation aux hackathons sectoriels, partenariats startups actifs",
+        "differentiator": "Premier acteur sectoriel à lancer un programme d'intrapreneuriat permettant aux collaborateurs de proposer et piloter des innovations",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Orange Ventures Africa",
+        "country": "Afrique de l'Ouest",
+        "key_practice": "Fonds de 50 M$ pour investir dans les startups tech africaines, programme Orange Fab d'accélération",
+        "differentiator": "Portefeuille de 30+ startups africaines co-développant des innovations avec les réseaux Orange",
+        "source": "Orange Ventures Africa Report 2023"
+      },
+      {
+        "organisation": "Safaricom Spark Fund",
+        "country": "Kenya",
+        "key_practice": "Fonds de 1 M$ pour startups kenyanes, accélérateur Spark, co-développement avec l'API M-Pesa",
+        "differentiator": "Les startups accélérées génèrent 15 % du trafic additionnel M-Pesa via des cas d'usage innovants",
+        "source": "Safaricom Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Google",
+        "country": "USA",
+        "key_practice": "Google X (Moonshot Factory) : projets à 10× d'impact — Waymo (voiture autonome), Loon (internet par ballons)",
+        "differentiator": "Règle du 70/20/10 : 70 % core business, 20 % adjacent, 10 % rupture — institutionnalisation de l'innovation de rupture",
+        "source": "Google Alphabet Annual Report 2023 / MIT Technology Review"
+      },
+      {
+        "organisation": "Amazon",
+        "country": "USA",
+        "key_practice": "Day 1 Culture : chaque jour est le premier jour d'une startup — AWS né d'un projet interne, Kindle, Echo pareil",
+        "differentiator": "Working Backwards : chaque innovation commence par le communiqué de presse final imaginé, puis on travaille à rebours",
+        "source": "Amazon Annual Report 2023 / Jeff Bezos Letters to Shareholders"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune activité d'innovation formelle. L'innovation est ponctuelle et non structurée. Pas de budget dédié. Pas de lab ni d'accélérateur. Réaction aux tendances plutôt qu'anticipation.",
+    "level_2_developing": "Quelques projets innovation ad hoc. Participation à des hackathons externes. Pas de processus formalisé. Budget innovation intégré dans le budget IT.",
+    "level_3_defined": "Lab d'innovation ou cellule dédiée. Budget innovation identifié (> 5 % du budget IT). Processus de soumission des idées. Partenariats startups actifs. MVPs testés régulièrement.",
+    "level_4_managed": "Programme d'innovation structuré avec pipeline et KPIs. Design Thinking formalisé. Open Innovation avec startups et universités. Sandbox pour l'expérimentation. Quelques innovations lancées.",
+    "level_5_optimizing": "Innovation systémique. CVC ou fonds d'innovation actif. Intrapreneuriat formalisé. IA dans le processus R&D. 10+ innovations lancées par an. Écosystème d'innovation reconnu."
+  },
+
+  "regulations": [
+    {
+      "name": "Propriété intellectuelle — Code de la propriété industrielle CI",
+      "issuing_body": "OAPI (Organisation Africaine de la Propriété Intellectuelle)",
+      "scope": "Innovations protégeables en Côte d'Ivoire et dans les 17 pays membres OAPI",
+      "key_requirement": "Dépôt de brevets, protection des marques et des dessins, délais de dépôt",
+      "compliance_deadline": "Sur demande",
+      "source_url": "https://www.oapi.int"
+    },
+    {
+      "name": "Réglementation BCEAO sur le Regulatory Sandbox pour la Fintech",
+      "issuing_body": "BCEAO",
+      "scope": "Startups et innovations fintech en zone UEMOA",
+      "key_requirement": "Cadre bac à sable réglementaire permettant de tester des innovations financières avec une régulation allégée pendant 12-24 mois",
+      "compliance_deadline": "En vigueur (2022)",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Innovation sans adoption — POC cemetery",
+      "description": "De nombreuses organisations lancent des POCs (Proof of Concept) qui ne passent jamais en production — le 'POC cemetery'. L'innovation sans chemin vers la production ne crée pas de valeur.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Définir dès le départ le critère de passage en production (scalabilité, ROI, fit marché) et allouer les ressources de déploiement avant de commencer le POC."
+    },
+    {
+      "title": "Not Invented Here (NIH) Syndrome — rejet des innovations externes",
+      "description": "La résistance culturelle aux solutions développées en dehors de l'organisation pousse à réinventer des roues existantes, gaspillant des ressources et ralentissant l'innovation.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Institutionnaliser l'open innovation, valoriser et récompenser l'adoption d'innovations externes et de startups."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Ecosystem Innovation — partenariats startups pour accélérer l'innovation",
+      "description": "Les partenariats avec les startups locales permettent d'accéder à des innovations développées en 3 mois que l'organisation mettrait 18 mois à développer en interne, avec un risque financier limité.",
+      "impact_level": "Très élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Intrapreneuriat — valoriser le potentiel d'innovation interne",
+      "description": "Les collaborateurs ont une connaissance unique des problèmes clients et opérationnels. Un programme d'intrapreneuriat structuré transforme ces insights en innovations commercialisables.",
+      "impact_level": "Élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Orange Ventures, IFC",
+      "target": "Partenariats startups africaines (Orange Fab)",
+      "amount": "50 M$ (Orange Ventures Africa)",
+      "date": "2022-2024",
+      "strategic_rationale": "Développer l'écosystème tech africain et co-innover avec des startups locales sur les marchés Orange",
+      "source": "Orange Annual Report 2023 / Orange Ventures Africa"
+    },
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Alphabet (Google)",
+      "target": "DeepMind",
+      "amount": "500 M$",
+      "date": "2014",
+      "strategic_rationale": "Intégrer la recherche en IA fondamentale dans l'écosystème Google pour des innovations à long terme",
+      "source": "Google Press Release 2014"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Amazon",
+    "pays": "USA",
+    "technologie": "Day 1 Culture & Working Backwards — innovation institutionnalisée à grande échelle",
+    "description": "Amazon maintient une culture 'Day 1' — chaque jour est comme le premier jour d'une startup. Le processus 'Working Backwards' impose de commencer chaque innovation par rédiger le communiqué de presse que l'on voudrait publier lors du lancement, puis de travailler à rebours. AWS, Kindle, Echo, Prime, et Amazon Go sont tous nés de ce processus. Amazon investit 10 % de ses revenus en R&D (73 Mds$ en 2023). La règle des 'deux pizzas' : si une équipe est trop grande pour être nourrie par deux pizzas, elle est trop grande pour innover efficacement.",
+    "resultats": "73 Mds$ R&D/an · AWS né d'un projet interne (40 Mds$/an) · Kindle, Echo, Go : innovations internes devenues marchés · Day 1 culture : 15 ans de croissance à deux chiffres",
+    "source": "Amazon Annual Report 2023 / Jeff Bezos Letters to Shareholders 1997-2021",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité innovation & R&D digitale — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "Budget innovation dédié (> 5 % IT)", "Lab ou cellule innovation active", "Partenariats startups formalisés", "MVPs testés régulièrement", "Innovations lancées en production"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "Partiel", "✗", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'innovation digitale n'est plus optionnelle dans un marché en disruption permanente. Les organisations qui n'investissent pas dans l'innovation se font disrupter par des entrants digitaux. En Afrique de l'Ouest, l'écosystème startup (Lagos, Nairobi, Abidjan) offre des opportunités d'open innovation accessibles même aux organisations de taille moyenne.",
+    "maturity_max_description": "Programme d'innovation structuré avec budget dédié > 5 % du budget IT. Lab d'innovation ou cellule dédiée. Design Thinking formalisé. Open Innovation avec startups locales. Sandbox réglementaire pour les innovations financières. Intrapreneuriat formalisé. Pipeline d'innovations avec KPIs mesurés.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune innovation formelle. Pas de budget. Pas de lab. Réaction aux tendances uniquement.",
+      "score_21_to_40": "Quelques projets ad hoc. Hackathons externes. Pas de processus. Budget intégré dans l'IT.",
+      "score_41_to_60": "Lab ou cellule dédiée. Budget identifié. Processus d'idées. Partenariats startups. MVPs testés.",
+      "score_61_to_80": "Programme structuré avec KPIs. Design Thinking. Open Innovation. Sandbox. Quelques innovations lancées.",
+      "score_81_to_100": "Innovation systémique. CVC actif. Intrapreneuriat. IA dans R&D. 10+ innovations/an. Écosystème reconnu."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur sa maturité en innovation et R&D digitale. Analyse l'existence d'un budget d'innovation dédié, la présence d'un lab ou d'une cellule innovation active, la formalisation de partenariats avec des startups, la régularité des MVPs testés et le nombre d'innovations effectivement lancées en production.",
+    "key_questions_for_llm": [
+      "Un budget d'innovation dédié (distinct du budget IT courant) est-il alloué annuellement pour l'expérimentation ?",
+      "Un lab d'innovation, une cellule dédiée ou un espace d'expérimentation est-il actif avec des ressources dédiées ?",
+      "Des partenariats formalisés avec des startups ou universités permettent-ils l'accès à des innovations externes ?",
+      "Des prototypes ou MVPs sont-ils développés et testés régulièrement avec de vrais utilisateurs ?",
+      "Combien d'innovations ont-elles passé de l'étape POC à la production commerciale au cours des 12 derniers mois ?"
+    ]
+  }
+}

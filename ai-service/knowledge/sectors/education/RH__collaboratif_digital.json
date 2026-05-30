@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "RH",
+    "sub_axis": "collaboratif_digital",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Collaboration pédagogique inter-établissements via les plateformes cloud (Teams, Drive, Moodle)",
+      "description": "Les enseignants et institutions éducatives CI collaborent de plus en plus sur des ressources pédagogiques partagées : cours mutualisés (AUF — partage de cours entre universités UEMOA), bibliothèques de ressources numériques collaboratives (SharePoint MENA CI en test), et co-développement de modules pédagogiques inter-universités (INPHB-UVCI module IA 2024). Microsoft Teams et Google Drive for Education sont les plateformes dominantes pour la collaboration enseignante en CI.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "38%",
+      "source": "AUF / MENA CI Collaboration 2024",
+      "year": 2024
+    },
+    {
+      "title": "Communautés de pratique numériques pour les enseignants CI",
+      "description": "Les communautés de pratique numériques (CoP) permettent aux enseignants CI de partager bonnes pratiques pédagogiques, ressources et expériences au-delà de leur établissement : groupes WhatsApp thématiques (500K enseignants CI sur WhatsApp selon MENA 2024), forums Moodle inter-universités (AUF), et groupes LinkedIn professionnels. Ces CoP sont un vecteur de diffusion des innovations pédagogiques sans formation formelle coûteuse.",
+      "impact_level": "medium",
+      "horizon": "now",
+      "adoption_rate": "45%",
+      "source": "MENA CI / UNESCO Enseignants Connectés 2024",
+      "year": 2024
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "Microsoft Teams for Education (collaboration équipes enseignantes)",
+      "category": "Collaboration / Communication",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "INPHB (Teams pour les 180 enseignants permanents), UVCI (Teams pour les réunions tuteurs — 85 tuteurs), MENA CI (Teams via accord cadre Microsoft — 350K comptes lycées publics), 60% établissements privés CI",
+      "leading_vendors": ["Microsoft Teams Education", "Google Workspace for Education (Meet + Chat + Drive)", "Slack for Education", "Notion (wikis pédagogiques)", "Basecamp (coordination équipes)"]
+    },
+    {
+      "name": "LMS comme plateforme collaborative (forums, wikis, travaux de groupe)",
+      "category": "LMS / Collaboration Apprenante",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "Moodle (forums activités groupes dans 65% des établissements CI avec LMS), Canvas (groupes étudiants), 40% établissements CI utilisant activement les fonctions collaboratives LMS",
+      "leading_vendors": ["Moodle (forums, wikis, activités groupes)", "Canvas (Groups, Conferences)", "Blackboard Collaborate", "Microsoft Teams for LMS (intégration)", "Google Classroom (commentaires, partage)"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Collaboration digitale structurée : Teams UVCI (réunions hebdomadaires tuteurs, canaux thématiques par filière, bibliothèque SharePoint 850 ressources pédagogiques partagées), Moodle forums activés sur 100% des modules (participation étudiants tracée dans les analytics EWS), co-développement de modules inter-universités AUF (partage open licence sur 12 modules UVCI utilisés par 8 universités CAMES), wiki interne bonnes pratiques tuteur (120 fiches, 45 validées et partagées à la communauté AUF)",
+        "differentiator": "La bibliothèque de ressources pédagogiques partagées la plus riche du secteur éducatif CI francophone — 850 ressources UVCI disponibles sous licence Creative Commons pour toutes les universités CAMES (8 universités utilisatrices), 120 fiches bonnes pratiques tuteur dont 45 généralisées à la communauté AUF Afrique francophone",
+        "source": "UVCI Rapport Collaboration 2024 / AUF"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "AUF (Agence Universitaire de la Francophonie) — Réseau Campus Numériques",
+        "country": "France / Afrique francophone (Abidjan, Dakar, Lomé, Yaoundé, Kinshasa)",
+        "key_practice": "Plateforme de collaboration inter-universitaire francophone : Moodle AUF (cours partagés entre 130 universités membres, CC-BY-SA), visioconférence gratuite entre universités AUF (Jitsi Meet AUF), bibliothèque numérique SFR (50 000 ressources), communauté enseignants CI (groupe WhatsApp AUF-CI : 850 membres), programme 'Cours partagés' (25 cours mutualisés entre UVCI, UFHB, UCAD, USTA-L)",
+        "differentiator": "Plus grand réseau de collaboration pédagogique inter-universitaire francophone au monde — 130 universités membres, 50 000 ressources partagées SFR, 25 cours mutualisés utilisés par > 5 000 étudiants dans 8 pays UEMOA, économie estimée 3 Mds FCFA de duplification de production de cours évitée",
+        "source": "AUF Rapport Campus Numériques 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "MIT OpenCourseWare + MIT Open Learning Library",
+        "country": "États-Unis",
+        "key_practice": "Collaboration ouverte maximale : MIT OCW (2 500 cours MIT en Creative Commons — gratuit pour tous), MIT Open Learning Library (cours interactifs gratuits), collaboration avec 550 institutions mondiales pour l'adaptation des cours (traduction, contextualisation), forums communautaires entre apprenants mondiaux, code source de toutes les simulations pédagogiques disponible sur GitHub (open source)",
+        "differentiator": "Leader mondial de la collaboration ouverte éducative — 2 500 cours sous CC, 550 institutions partenaires mondiales adaptant les cours pour leurs contextes locaux, MIT OCW utilisé par 175M d'apprenants dans 195 pays depuis 2001 — modèle inspirant pour les universités CAMES souhaitant partager leurs cours",
+        "source": "MIT OCW Annual Report 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Collaboration 100% en présentiel (réunions physiques, documents papier circulants), partage de ressources via clé USB ou email ponctuel, aucune plateforme collaborative, silos totaux entre enseignants et départements.",
+    "level_2_developing": "Email comme outil de collaboration principale (fichiers attachés, pas de versioning), quelques WhatsApp Groups informels entre enseignants, Google Drive partagé non structuré, aucune politique collaborative.",
+    "level_3_defined": "Microsoft Teams ou Google Workspace actif pour les équipes enseignantes (réunions en ligne, stockage partagé structuré), LMS avec forums étudiants activés, partage de ressources inter-enseignants (SharePoint ou Drive équipe).",
+    "level_4_managed": "Plateforme collaborative unifiée (Teams ou Google Workspace) avec canaux thématiques, bibliothèque de ressources partagées (> 200 ressources cataloguées), co-développement de cours inter-établissements (AUF ou CAMES), communauté de pratique active (réunion mensuelle + partage bonnes pratiques).",
+    "level_5_optimizing": "Collaboration ouverte : ressources sous Creative Commons partagées avec la communauté CAMES, co-développement inter-universités actif (5+ cours co-produits/an), wiki bonnes pratiques validées et diffusées, communauté de pratique inter-établissements CI animée, analytics collaboration mesurant l'engagement."
+  },
+  "regulations": [
+    {
+      "name": "CAMES — Propriété intellectuelle des ressources pédagogiques en ligne (droits d'auteur)",
+      "authority": "CAMES / OAPI (Organisation Africaine de la Propriété Intellectuelle)",
+      "description": "Les ressources pédagogiques numériques créées par les enseignants CI dans le cadre de leur mission (cours en ligne, vidéos, QCM) sont soumises au droit d'auteur (OAPI — organisation Africaine de la Propriété Intellectuelle, équivalent OMPI pour l'UEMOA). Les établissements CI doivent définir dans leur règlement intérieur la propriété des ressources créées : (1) si l'établissement fournit l'infrastructure et le temps de travail = droits patrimoniaux partagés (enseignant 30% / établissement 70% selon les pratiques CI), (2) si l'enseignant crée en dehors de son temps de service = droits 100% enseignant. Le partage sous licence Creative Commons (CC-BY, CC-BY-SA) est recommandé par le CAMES pour favoriser la mutualisation.",
+      "compliance_deadline": "Recommandation CAMES (pas encore réglementairement contraignant)",
+      "impact_on_sector": "Les établissements CI souhaitant partager leurs ressources pédagogiques dans le réseau AUF ou le programme CAMES 'Cours Mutualisés' doivent définir une politique de propriété intellectuelle claire et adopter les licences Creative Commons recommandées — évite les blocages juridiques lors du partage inter-établissements"
+    },
+    {
+      "name": "APDP CI — Protection des données dans les outils collaboratifs (Teams, Drive, Slack)",
+      "authority": "APDP (Autorité de Protection des Données Personnelles de Côte d'Ivoire)",
+      "description": "Les outils collaboratifs cloud (Microsoft Teams, Google Workspace, Slack) traitant des données d'enseignants et d'apprenants CI doivent être conformes à la Loi APDP CI 2013-450 : DPA signé avec le fournisseur cloud, données hébergées dans une région conforme (AWS Paris, Azure Ireland, ou AUF Abidjan), politique de conservation des messages et fichiers définie (recommandation APDP : 2-3 ans pour les communications professionnelles, pas d'archivage à durée indéterminée), et interdiction de partager des données personnelles d'apprenants dans des espaces collaboratifs accessibles à des tiers non autorisés.",
+      "compliance_deadline": "En vigueur",
+      "impact_on_sector": "Les établissements CI utilisant Teams (Microsoft) ou Google Workspace pour collaborer sur des données incluant des informations apprenants (résultats, situations personnelles) doivent vérifier les DPA de leurs fournisseurs et configurer des politiques d'accès strictes (canal privé, partage restreint)"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Usage non sécurisé de WhatsApp pour la coordination pédagogique et la gestion des données apprenants",
+      "description": "En Côte d'Ivoire, WhatsApp est omniprésent dans la coordination pédagogique : groupes WhatsApp 'Enseignants Maths Terminale CI' (12 000 membres), groupes de classe avec résultats scolaires partagés (violations APDP CI potentielles), échanges de devoirs et corrections entre enseignants via WhatsApp. Ces usages posent des problèmes : données personnelles d'apprenants partagées sans conformité APDP CI, contenus stockés sur les serveurs Meta (non conformes aux exigences d'hébergement APDP CI), aucune traçabilité ni gouvernance, et risques de fuites de données (screenshots de sujets d'examens).",
+      "severity": "high",
+      "likelihood": "high",
+      "mitigation": "Former les enseignants CI aux règles APDP CI pour WhatsApp (ne jamais partager les résultats nominatifs d'élèves, utiliser des outils institutionnels pour les données sensibles), déployer Teams ou Google Workspace comme alternative institutionnelle avec gouvernance (rôles, permissions, logs), et intégrer cette règle dans la charte informatique de l'établissement — UVCI CI a interdit le partage de données apprenants sur WhatsApp et migré vers Teams en 2023"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Partage de ressources pédagogiques CI sous Creative Commons avec la communauté CAMES",
+      "description": "Les établissements CI investissant dans la production de cours en ligne de qualité (UVCI, INPHB, UFHB) peuvent valoriser cet investissement en partageant leurs ressources sous licence Creative Commons avec les 130 universités AUF et 19 pays CAMES. Cette mise en commun : (1) améliore la réputation internationale de l'établissement, (2) génère des partenariats (co-production, échanges enseignants), (3) crée un effet réseau (les utilisateurs des ressources deviennent des ambassadeurs). L'UVCI a déjà partagé 12 modules utilisés par 8 universités CAMES — objectif 2025 : 25 modules partagés, 15 universités utilisatrices.",
+      "impact_level": "medium",
+      "time_to_value": "1-2 ans",
+      "prerequisite_maturity": "Niveau 3 — LMS avec ressources structurées + politique propriété intellectuelle CC définie + partenariat AUF actif"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "Microsoft Education — Accord cadre MENA CI (Microsoft 365 Education + Teams pour lycées publics)",
+      "montant": "Accord cadre (valeur licences estimée 4,5 Mds FCFA/an en licences subventionnées)",
+      "investisseurs": ["Microsoft Philanthropies", "État de Côte d'Ivoire (contribution partielle)"],
+      "annee": 2024,
+      "description": "Le MENA CI a signé en 2024 un accord cadre avec Microsoft pour le déploiement de Microsoft 365 Education (Teams + OneDrive + SharePoint + Exchange) pour 350 000 enseignants et élèves des lycées publics CI. Cet accord inclut : formation de 5 000 enseignants CI aux outils Teams (Education Center), déploiement d'un SharePoint MENA CI (bibliothèque nationale de ressources pédagogiques partagées), et accès à Minecraft Education (apprentissage codage et créativité pour les lycéens). L'accord cadre rend Microsoft Teams l'outil collaboratif de référence dans les lycées publics CI."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "SharePoint Teams UVCI + wiki bonnes pratiques + partage AUF Creative Commons — Collaboration pédagogique structurée",
+    "description": "L'UVCI a structuré en 2023-2024 sa collaboration pédagogique digitale autour de 3 dispositifs : (1) Teams UVCI : 6 canaux thématiques (Direction, Pédagogie, Informatique, Filières, Parcours Transversaux, Innovation) avec réunions hebdomadaires synchrones (durée max 45 min, compte-rendu automatique Teams Copilot), bibliothèque SharePoint (850 ressources cataloguées : vidéos cours, QCM, templates Articulate, guides tuteur — accès par département) ; (2) Wiki bonnes pratiques tuteur : 120 fiches de bonnes pratiques rédigées par les tuteurs UVCI (outils, astuces pédagogiques, gestion décrochage) dont 45 sélectionnées et partagées avec la communauté AUF sur le forum AUF-Francophonie-EdTech ; (3) Partage Creative Commons AUF : 12 modules UVCI (mathématiques financières, SIG, développement Python, communication digitale) publiés sous licence CC-BY-SA sur Moodle AUF — utilisés par 8 universités CAMES (UCAD Dakar, USTA-L Lomé, UFHB, UAO, Université de Thiès…).",
+    "resultats": "Bibliothèque SharePoint UVCI : 850 ressources (vs. 80 en 2021, avant Teams structuré). Réutilisation moyenne d'une ressource par d'autres tuteurs UVCI : 3,8x (chaque ressource créée est réutilisée par 3-4 autres tuteurs en moyenne). Temps de création d'un nouveau cours : -28% grâce à la réutilisation des ressources SharePoint. Modules UVCI utilisés par universités CAMES partenaires : 12 modules / 8 universités / 4 500 étudiants externes. Wiki bonnes pratiques : 45 fiches généralisées à la communauté AUF → citation UVCI comme 'best practice EdTech Afrique francophone' dans le rapport AUF 2024. Conformité APDP CI : aucun partage de données apprenants nominatives sur Teams (règle formalisée dans la charte informatique UVCI 2023).",
+    "source": "UVCI Rapport Collaboration Numérique 2024 / AUF Rapport Campus Numériques",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif collaboratif digital — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "Plateforme collaborative", "Ressources partagées (nb)", "Partage inter-établissements", "Conformité APDP CI"],
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "valeurs": ["Teams (6 canaux) + SharePoint", "850 ressources cataloguées", "12 modules AUF / 8 universités CAMES", "Oui (charte données apprenants Teams)"]
+      },
+      {
+        "organisation": "INPHB Yamoussoukro",
+        "valeurs": ["Teams (180 enseignants)", "SharePoint partiel (150 ressources)", "Co-développement UVCI module IA", "DPA Microsoft signé"]
+      },
+      {
+        "organisation": "Lycées publics CI",
+        "valeurs": ["Teams MENA CI (accord 2024, en déploiement)", "SharePoint MENA CI (en construction)", "Non encore", "En cours (accord MENA-Microsoft)"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue la maturité de la collaboration digitale dans le secteur éducation CI : plateforme collaborative institutionnelle (Teams, Google Workspace), bibliothèque de ressources pédagogiques partagées, co-développement inter-établissements (AUF, CAMES), communauté de pratique active, et conformité APDP CI pour l'usage des outils collaboratifs cloud.",
+    "maturity_max_description": "Établissement éducatif CI avec collaboration digitale avancée : plateforme unifiée (Teams/Google Workspace) avec canaux thématiques, bibliothèque SharePoint > 500 ressources cataloguées, partage Creative Commons avec communauté CAMES (> 10 cours mutualisés), wiki bonnes pratiques actif, conformité APDP CI (charte données, DPA fournisseurs signés) — aucun partage de données apprenants sur WhatsApp.",
+    "scoring_rubric": {
+      "score_1_to_20": "Collaboration 100% présentielle (réunions physiques), partage via clé USB/email, aucune plateforme cloud, silos totaux.",
+      "score_21_to_40": "Email + WhatsApp informel, Google Drive non structuré, aucune politique collaborative, quelques groupes WhatsApp enseignants sans gouvernance.",
+      "score_41_to_60": "Teams ou Google Workspace actif (réunions en ligne), stockage partagé structuré, LMS forums étudiants activés, partage ressources partiel, conformité APDP CI partielle.",
+      "score_61_to_80": "Plateforme unifiée avec canaux thématiques, bibliothèque > 200 ressources, co-développement AUF partiel, communauté de pratique mensuelle, conformité APDP CI formalisée.",
+      "score_81_to_100": "Collaboration ouverte (CC), > 10 cours partagés CAMES, wiki bonnes pratiques diffusé AUF, analytics collaboration, APDP CI complète, aucun partage données apprenants WhatsApp."
+    },
+    "prompt_injection_context": "Secteur éducation CI : MENA CI a déployé Microsoft 365 Education (Teams + SharePoint) pour 350 000 enseignants/élèves lycées publics (accord 2024). CAMES recommande Creative Commons pour les ressources pédagogiques partagées. APDP CI interdit le partage de données apprenants nominatives sur WhatsApp (données sensibles sur serveurs Meta non conformes). UVCI est le modèle collaboration inter-établissements CI (12 modules AUF, 8 universités CAMES utilisatrices). La CoP WhatsApp enseignants CI (500K membres) est un canal informel dominant mais non conforme APDP CI.",
+    "key_questions_for_llm": [
+      "Disposez-vous d'une plateforme collaborative institutionnelle (Microsoft Teams, Google Workspace) avec des canaux thématiques structurés pour vos équipes enseignantes ? Est-elle active au quotidien ?",
+      "Avez-vous une bibliothèque de ressources pédagogiques partagées (SharePoint, Drive structuré) accessible à tous vos enseignants et cataloguée pour faciliter la réutilisation ?",
+      "Participez-vous à des projets de co-développement de cours avec d'autres établissements CI ou UEMOA (AUF, CAMES) ? Avez-vous publié des ressources sous licence Creative Commons ?",
+      "Avez-vous une politique claire interdisant le partage de données personnelles d'apprenants sur WhatsApp et imposant l'utilisation d'outils institutionnels (Teams, Drive) pour les données sensibles ?",
+      "Vos fournisseurs d'outils collaboratifs cloud (Microsoft, Google) ont-ils signé un Data Processing Agreement (DPA) conforme à la Loi APDP CI 2013-450 ?"
+    ]
+  }
+}

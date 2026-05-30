@@ -1,22 +1,37 @@
+from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
+import logging
 import os
+import traceback
 from dotenv import load_dotenv
 
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+
 from services.questionnaire_agent import QuestionnaireAgent
+from services.questionnaire_generator import QuestionnaireGenerator
 from services.recommendation_engine import RecommendationEngine
 from services.scoring_agent import ScoringAgent
 from services.benchmarking_engine import BenchmarkingEngine
 from knowledge.frameworks import get_frameworks_for_sector, FRAMEWORKS
+from knowledge.sub_axis_extra import warmup_cache
 
 load_dotenv()
 
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    warmup_cache()
+    yield
+
+
 app = FastAPI(
     title="IA Benchmark — AI Service",
-    description="Agent IA pour la génération de questionnaires fondés sur des frameworks reconnus (Gartner, McKinsey, ISO, CMMI, COBIT, MIT CISR, WEF) et l'évaluation de la maturité digitale.",
-    version="2.0.0"
+    description="Agent IA propulsé par Groq/Llama-3.3-70B (+ fallback Mistral) pour la génération de questionnaires fondés sur des frameworks reconnus (Gartner, McKinsey, ISO, CMMI, COBIT, MIT CISR, WEF) et l'évaluation de la maturité digitale.",
+    version="3.0.0",
+    lifespan=lifespan,
 )
 
 app.add_middleware(
@@ -26,7 +41,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-questionnaire_agent = QuestionnaireAgent()
+questionnaire_agent = QuestionnaireAgent()     # kept for /generate-options endpoint
+questionnaire_generator = QuestionnaireGenerator()  # sector-aware generation
 recommendation_engine = RecommendationEngine()
 scoring_agent = ScoringAgent()
 benchmarking_engine = BenchmarkingEngine()
@@ -49,6 +65,7 @@ class GeneratedQuestion(BaseModel):
     display_order: int
     source_framework: str = ""
     maturity_indicator: str = ""
+    options: list[str] = []
 
 class QuestionnaireResponse(BaseModel):
     title: str
@@ -72,6 +89,8 @@ class RecommendationRequest(BaseModel):
     marketing_score: float = 0.0
     rh_score: float = 0.0
     offres_score: float = 0.0
+    modele_operationnel_score: float = 0.0
+    it_data_score: float = 0.0
     maturity_level: str
     sub_axis_scores: Optional[list[dict]] = []
     consultant_prompt: Optional[str] = None
@@ -82,6 +101,8 @@ class RecommendationItem(BaseModel):
     title: str
     description: str
     best_practice: str
+    source: Optional[str] = None
+    source_url: Optional[str] = None
 
 class RecommendationsResponse(BaseModel):
     evaluation_id: int
@@ -144,7 +165,10 @@ class BenchmarkRequest(BaseModel):
     marketing_score: float = 0.0
     rh_score: float = 0.0
     offres_score: float = 0.0
+    modele_operationnel_score: float = 0.0
+    it_data_score: float = 0.0
     maturity_level: str
+    sub_axis_scores: Optional[list[dict]] = []
     consultant_prompt: Optional[str] = None
 
 class SectorBenchmark(BaseModel):
@@ -188,6 +212,22 @@ class RoadmapPhase(BaseModel):
     target_level: str
     investment_level: str
 
+class SubAxisBenchmark(BaseModel):
+    axis: str
+    sub_axis: str
+    company_score: float
+    tendances: list[dict] = []
+    analyse_statique: str = ""
+    maturite_maximale: str = ""
+    cadre_juridique: list[dict] = []
+    ma_levees_fonds: list[dict] = []
+    leaders_nationaux: list[dict] = []
+    leaders_regionaux: list[dict] = []
+    leaders_internationaux: list[dict] = []
+    analyse_personnalisee: str = ""
+    zoom_case_study: dict = {}
+    comparatif_organisations: dict = {}
+
 class BenchmarkResponse(BaseModel):
     company_name: str
     sector: str
@@ -200,6 +240,7 @@ class BenchmarkResponse(BaseModel):
     trends: list[BenchmarkTrend] = []
     sector_leaders: list[SectorLeader] = []
     improvement_roadmap: list[RoadmapPhase] = []
+    sub_axis_benchmarks: list[SubAxisBenchmark] = []
     key_insights: list[str] = []
 
 
@@ -243,11 +284,11 @@ def list_frameworks(sector: Optional[str] = None):
 @app.post("/api/ai/generate-questionnaire", response_model=QuestionnaireResponse)
 async def generate_questionnaire(request: QuestionnaireRequest):
     """
-    Génère un questionnaire de maturité digitale grounded dans des frameworks reconnus.
-    Chaque question est taguée avec son framework source et son indicateur de maturité.
+    Génère un questionnaire de maturité digitale adapté au secteur et au pays.
+    Utilise un catalogue de sous-axes sectoriels pour garantir des questions spécifiques.
     """
     try:
-        result = await questionnaire_agent.generate(
+        result = await questionnaire_generator.generate(
             sector=request.sector,
             country=request.country,
             company_size=request.company_size,
@@ -256,6 +297,7 @@ async def generate_questionnaire(request: QuestionnaireRequest):
         )
         return result
     except Exception as e:
+        logging.error("generate-questionnaire failed: %s\n%s", e, traceback.format_exc())
         raise HTTPException(status_code=500, detail=f"Erreur de génération: {str(e)}")
 
 

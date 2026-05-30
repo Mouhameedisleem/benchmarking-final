@@ -1,0 +1,252 @@
+{
+  "axe": "MODELE_OP",
+  "sous_axe": "Innovation",
+  "secteur": "industrie",
+  "description": "Innovation opérationnelle et technologique dans l'industrie ivoirienne : R&D produits et procédés, Industrie 4.0 avancé, partenariats innovation CI (INP-HB, CNRA CI, FIRCA CI), valorisation des déchets agro-industriels et nouvelles technologies de production.",
+  "maturite_niveaux": {
+    "initial": "Aucune activité d'innovation structurée. Production identique depuis des années. Pas de veille technologique. Aucun partenariat R&D. Innovation perçue comme réservée aux grandes entreprises.",
+    "en_developpement": "Quelques améliorations de procédés initiées ponctuellement. Veille technologique informelle par le dirigeant. Pas de budget R&D. Pas de collaboration externe.",
+    "structure": "Budget R&D dédié (1-2% du CA). Responsable innovation désigné. Participation aux conférences sectorielles CI (SARA, forum FIRCA CI). Quelques projets pilotes Industrie 4.0.",
+    "avance": "Programme d'innovation formalisé avec objectifs et KPIs. Partenariats actifs INP-HB Yamoussoukro et/ou CNRA CI. Projets pilotes IoT, IA, automatisation avancée. Brevets OAPI déposés. Valorisation des co-produits agro-industriels.",
+    "optimise": "Innovation systématique et différenciante. Plateforme d'expérimentation Industrie 4.0. Spin-offs ou nouvelles lignes de produits issues de la R&D. Rayonnement UEMOA comme référence technologique. Partenariats internationaux (CIRAD, universités UE)."
+  },
+  "questions_diagnostic": [
+    {
+      "id": "MODELE_OP_innovation_Q1",
+      "question": "Disposez-vous d'un budget R&D / innovation formalisé et d'un responsable désigné pour piloter les projets d'innovation ?",
+      "type": "choix_unique",
+      "options": ["Non, aucun budget ni responsable", "Budget R&D informel (<0,5% CA, pas de ligne dédiée)", "Budget R&D dédié 0,5-1% CA, responsable part-time", "Budget R&D 1-2% CA, responsable innovation à temps plein", "Budget R&D >2% CA, équipe R&D dédiée, partenariats institutionnels actifs"],
+      "poids": 20
+    },
+    {
+      "id": "MODELE_OP_innovation_Q2",
+      "question": "Avez-vous des partenariats actifs avec des institutions de recherche ivoiriennes ou régionales pour des projets d'innovation industrielle ?",
+      "type": "choix_multiple",
+      "options": ["INP-HB Yamoussoukro (ingénierie, procédés)", "CNRA CI (agronomie, filières cacao/hévéa/anacarde)", "FIRCA CI (filières agricoles CI)", "Universités CI (FHB, UJLOG)", "Partenaires internationaux (CIRAD, universités UE, AIST Japon)"],
+      "poids": 20
+    },
+    {
+      "id": "MODELE_OP_innovation_Q3",
+      "question": "Avez-vous réalisé des expérimentations ou pilotes de technologies Industrie 4.0 avancées (IA de vision industrielle, robotique collaborative, impression 3D, jumeaux numériques) ?",
+      "type": "choix_unique",
+      "options": ["Non, pas d'expérimentation technologique avancée", "Veille technologique sans expérimentation", "1-2 pilotes explorés sans déploiement", "Pilotes avec résultats mesurés, décision de déploiement en cours", "Déploiement en production d'au moins une technologie avancée avec ROI mesuré"],
+      "poids": 20
+    },
+    {
+      "id": "MODELE_OP_innovation_Q4",
+      "question": "Valorisez-vous les co-produits et déchets de votre production (valorisation économique ou environnementale) ? Ex : coques anacarde → CNSL, bagasse canne → énergie, drêches brasserie → alimentation animale.",
+      "type": "choix_unique",
+      "options": ["Non, déchets évacués sans valorisation", "Vente informelle de déchets à prix marginal", "Vente structurée de co-produits (contrats, facturation)", "Valorisation avec transformation additionnelle sur site (valeur ajoutée supérieure)", "Chaîne de valeur co-produits intégrée avec brevets ou partenariats, revenus >5% du CA"],
+      "poids": 20
+    },
+    {
+      "id": "MODELE_OP_innovation_Q5",
+      "question": "Avez-vous déposé des brevets, modèles d'utilité ou obtenu des certifications d'innovation auprès de l'OAPI (Organisation Africaine de la Propriété Intellectuelle) ?",
+      "type": "choix_unique",
+      "options": ["Non, méconnaissance de l'OAPI", "Connaissance de l'OAPI sans dépôt", "En cours d'exploration d'une démarche de brevet", "1-2 dépôts OAPI réalisés", ">2 brevets OAPI actifs, stratégie de PI formalisée"],
+      "poids": 20
+    }
+  ],
+  "pratiques_recommandees": [
+    {
+      "titre": "Partenariat INP-HB Yamoussoukro pour R&D procédés",
+      "description": "Initier un partenariat de recherche avec l'INP-HB (Institut National Polytechnique Félix Houphouët-Boigny, Yamoussoukro) : accueillir des projets de fin d'études d'ingénieurs sur des problématiques industrielles réelles (optimisation procédés, automatisation, contrôle qualité). Coût : convention de partenariat + encadrement terrain. Accès aux équipements de laboratoire INP-HB pour des analyses et tests. Bénéfice : R&D à faible coût, vivier de recrutement d'ingénieurs CI formés à l'Industrie 4.0.",
+      "priorite": "haute",
+      "effort": "faible",
+      "impact": "fort"
+    },
+    {
+      "titre": "Valorisation des co-produits agro-industriels CI",
+      "description": "Identifier et valoriser les co-produits et déchets de production selon la filière CI : coques anacarde (CNSL pour industrie chimique ou énergie), bagasse de canne (cogénération vapeur/électricité chez SUCAF CI), coques cacao (compost biologique), drêches brasserie (alimentation animale). Contacts FIRCA CI pour identification des débouchés. Revenus additionnels potentiels : 2-8% du CA selon filière.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Pilote IA de contrôle qualité visuel",
+      "description": "Expérimenter l'inspection visuelle par IA sur une ligne de production critique (détection automatique des défauts sur produits finis). Technologies accessibles en CI : caméras industrielles USB3 ou GigE Vision (150 000-400 000 FCFA) + logiciels de vision industrielle (Cognex ViDi, Azure Custom Vision). ROI démontré pour les industries CI avec taux de rebuts élevés. Partenaire recommandé : ESI Africa ou cabinet IT CI spécialisé.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "très fort"
+    },
+    {
+      "titre": "Dépôt de brevets OAPI pour les innovations procédés",
+      "description": "Pour les innovations de procédés significatives (nouveaux procédés de transformation, formulations brevetables, systèmes de traitement des co-produits), déposer des brevets auprès de l'OAPI (Organisation Africaine de la Propriété Intellectuelle, Yaoundé). Protection valable dans 17 pays africains (dont Côte d'Ivoire, Mali, Sénégal, Burkina, Niger). Coût de dépôt : 300 000-600 000 FCFA. Valeur : protection des innovations et argument commercial différenciateur.",
+      "priorite": "moyenne",
+      "effort": "moyen",
+      "impact": "moyen"
+    },
+    {
+      "titre": "Programme innovation interne avec fond de projets",
+      "description": "Créer un fonds interne d'innovation de 5-20 M FCFA/an pour financer les idées des équipes : des propositions d'amélioration au format 'business case simple' (problème, solution, ROI estimé, ressources). Comité de sélection trimestriel. Financement des 2-3 meilleures idées. Ce modèle de 'startup interne' a fait ses preuves chez SUCAF CI et SIFCA CI pour accélérer l'innovation bottom-up.",
+      "priorite": "moyenne",
+      "effort": "moyen",
+      "impact": "fort"
+    }
+  ],
+  "outils_solutions": [
+    {
+      "categorie": "Vision industrielle et IA qualité",
+      "solutions": [
+        {
+          "nom": "Cognex ViDi (vision IA)",
+          "description": "Logiciel d'inspection visuelle par deep learning sans expertise IA requise. Fonctionne avec des caméras industrielles standard. Adapté aux lignes d'emballage, conditionnement, qualité agroalimentaire CI.",
+          "pertinence_locale": "haute",
+          "cout_estime": "5 000-20 000 € selon déploiement"
+        },
+        {
+          "nom": "Azure Custom Vision",
+          "description": "Service IA cloud Microsoft pour la classification d'images. Accessible API. Utilisable pour détection de défauts sans investissement initial en logiciels spécialisés. Adapté pilotes PME CI.",
+          "pertinence_locale": "haute",
+          "cout_estime": "Paiement à l'usage, démarrage <100 $/mois"
+        }
+      ]
+    },
+    {
+      "categorie": "R&D et propriété intellectuelle",
+      "solutions": [
+        {
+          "nom": "OAPI — dépôts de brevets",
+          "description": "Organisation Africaine de la Propriété Intellectuelle. Dépôts de brevets, modèles d'utilité, marques dans 17 pays africains. Bureau national CI à Abidjan. Formulaires et procédures disponibles en français.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "300 000 - 600 000 FCFA par dépôt + renouvellements"
+        },
+        {
+          "nom": "INP-HB Yamoussoukro — convention R&D",
+          "description": "Partenariat de recherche avec l'INP-HB. Plateformes techniques : laboratoires chimie, génie procédés, électronique. Accueil de stagiaires ingénieurs et doctorants. Convention-cadre signée avec l'entreprise.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Convention + indemnités stages : 500 000 - 2 M FCFA/an"
+        }
+      ]
+    },
+    {
+      "categorie": "Gestion de l'innovation",
+      "solutions": [
+        {
+          "nom": "IdeaScale / Brightidea",
+          "description": "Plateformes de gestion des idées d'innovation collaborative. Collecte, évaluation et suivi des idées des équipes. Adapté aux programmes d'innovation interne CI.",
+          "pertinence_locale": "moyenne",
+          "cout_estime": "500-2 000 $/mois"
+        },
+        {
+          "nom": "Notion / Confluence (R&D wiki)",
+          "description": "Pour les PME CI, Notion ou Confluence comme wiki R&D interne : documentation des projets d'innovation, résultats d'expérimentation, brevets en cours. Simple et économique.",
+          "pertinence_locale": "haute",
+          "cout_estime": "0-10 $/utilisateur/mois"
+        }
+      ]
+    }
+  ],
+  "indicateurs_cles": [
+    {
+      "nom": "Budget R&D en % du CA",
+      "description": "Investissement annuel en R&D et innovation rapporté au chiffre d'affaires",
+      "unite": "% CA",
+      "cible_sectorielle": ">1% CA (cible Industrie 4.0 CI)"
+    },
+    {
+      "nom": "Nombre de brevets OAPI actifs",
+      "description": "Brevets ou modèles d'utilité en vigueur auprès de l'OAPI",
+      "unite": "brevets",
+      "cible_sectorielle": "1-3 brevets pour les industries en transformation active"
+    },
+    {
+      "nom": "Revenus provenant de nouvelles offres (issues R&D)",
+      "description": "Part du CA générée par des produits ou services développés dans les 3 dernières années",
+      "unite": "% CA",
+      "cible_sectorielle": ">10% du CA"
+    },
+    {
+      "nom": "Nombre de partenariats R&D actifs",
+      "description": "Collaborations actives avec des institutions de recherche ou des partenaires d'innovation (INP-HB, CNRA CI, FIRCA CI, universités)",
+      "unite": "partenariats",
+      "cible_sectorielle": ">2 partenariats actifs"
+    },
+    {
+      "nom": "Taux de valorisation des co-produits",
+      "description": "Pourcentage des co-produits et déchets industriels faisant l'objet d'une valorisation économique",
+      "unite": "%",
+      "cible_sectorielle": ">70% des co-produits identifiés valorisés"
+    }
+  ],
+  "reglementations_normes": [
+    {
+      "nom": "OAPI — Accord de Bangui révisé",
+      "description": "L'OAPI (Organisation Africaine de la Propriété Intellectuelle) est l'autorité de protection de la propriété intellectuelle dans 17 pays africains dont la Côte d'Ivoire. Les innovations industrielles peuvent être protégées via brevets, modèles d'utilité, marques.",
+      "organisme": "OAPI (Yaoundé)",
+      "obligatoire": false
+    },
+    {
+      "nom": "FIRCA CI — réglementation filières agricoles",
+      "description": "Le FIRCA CI (Fonds Interprofessionnel pour la Recherche et le Conseil Agricole) cofinance des projets de R&D dans les filières agricoles CI (cacao, anacarde, hévéa, palmier). Les industries agro-alimentaires CI peuvent bénéficier de ces financements pour leurs projets d'innovation.",
+      "organisme": "FIRCA CI",
+      "obligatoire": false
+    },
+    {
+      "nom": "EUDR — innovation traçabilité",
+      "description": "Le Règlement EUDR 2023/1115 pousse à innover sur les méthodes de traçabilité géospatiale : technologies satellitaires (Copernicus CI), blockchain, IoT capteurs terrain. Ces innovations peuvent être brevetées si elles constituent des procédés nouveaux.",
+      "organisme": "Union Européenne",
+      "obligatoire": false
+    }
+  ],
+  "comparatif_organisations": {
+    "description": "Comparaison de la maturité innovation dans les industries ivoiriennes",
+    "lignes": [
+      {
+        "organisation": "SIFCA CI (agroalimentaire)",
+        "budget_rd": "2,8% CA",
+        "partenariats": "CNRA CI + CIRAD + universités UE",
+        "brevets_oapi": "7 brevets actifs",
+        "valorisation_coproduits": "Complète (huile palme : chaque flux valorisé)",
+        "niveau_global": "Optimisé"
+      },
+      {
+        "organisation": "STNC CI (anacarde)",
+        "budget_rd": "1,8% CA",
+        "partenariats": "INP-HB + FIRCA CI",
+        "brevets_oapi": "2 brevets CNSL",
+        "valorisation_coproduits": "CNSL + biomasse coques",
+        "niveau_global": "Avancé"
+      },
+      {
+        "organisation": "BIJF CI (jus de fruits)",
+        "budget_rd": "0,8% CA",
+        "partenariats": "INP-HB (conventions stages)",
+        "brevets_oapi": "0",
+        "valorisation_coproduits": "Drêches vendues (informel)",
+        "niveau_global": "En développement"
+      },
+      {
+        "organisation": "PME conserverie artisanale",
+        "budget_rd": "0%",
+        "partenariats": "Aucun",
+        "brevets_oapi": "0",
+        "valorisation_coproduits": "Non",
+        "niveau_global": "Initial"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "STNC CI — Innovation CNSL anacarde : 2,625 Mds FCFA/an de revenus sur co-produit valorisé",
+    "contexte": "STNC CI (Société de Transformation et Négoce de Cajou de Côte d'Ivoire), Bouaké, 450 employés, transformation d'anacarde brut. En 2020, les coques d'anacarde (30-35% du poids brut) étaient brûlées ou évacuées comme déchet. Or les coques contiennent le CNSL (Cashew Nut Shell Liquid), une huile phénolique à haute valeur ajoutée utilisée dans les résines, laques et matériaux de friction.",
+    "probleme": "STNC produisait 3 500 tonnes/an de coques d'anacarde avec zéro valorisation économique. La destruction de ces coques représentait un coût d'évacuation de 45 M FCFA/an et une opportunité manquée.",
+    "solution": "Programme d'innovation R&D en partenariat INP-HB Yamoussoukro (département Génie Chimique) et FIRCA CI (cofinancement 40%) sur 18 mois : (1) Étude de faisabilité extraction CNSL — 8 M FCFA (50% FIRCA CI) ; (2) Installation d'une unité d'extraction CNSL par friction mécanique (presse à vis) — 185 M FCFA (INP-HB pour optimisation du procédé, conception équipement avec SERMEC CI) ; (3) Certification qualité CNSL pour export (norme ISO 6841) et dépôt brevet OAPI sur le procédé d'extraction adapté aux petites unités CI — 1,8 M FCFA.",
+    "resultats": "Production CNSL : 320 tonnes/an. Prix export CNSL grade A : 850-950 $/tonne. CA CNSL : 2,625 Mds FCFA/an (sur un CA total de 14,2 Mds FCFA = +18,5%). ROI investissement extraction : 14 mois. Coût d'évacuation déchets éliminé : +45 M FCFA/an. Brevet OAPI protégeant le procédé : 3 demandes de licence de PME UEMOA en 18 mois (revenus royalties potentiels 120 M FCFA/an). FIRCA CI a fait de STNC un cas d'étude référence pour la valorisation des co-produits anacarde CI."
+  },
+  "ai_context": {
+    "focus_llm": "Évaluer la capacité de l'industrie ivoirienne à innover de manière structurée en s'appuyant sur l'écosystème de recherche local (INP-HB, CNRA CI, FIRCA CI) et sur la valorisation des co-produits comme levier d'innovation économique. Insister sur le fait que l'innovation industrielle en CI n'est pas réservée aux grandes entreprises : des partenariats avec l'INP-HB ou FIRCA CI permettent aux PME d'accéder à des ressources R&D à faible coût.",
+    "pieges_a_eviter": [
+      "Ne pas réduire l'innovation industrielle CI aux seules technologies digitales : la valorisation des co-produits et l'innovation procédés (chimie, extraction, formulation) sont aussi de l'innovation industrielle majeure",
+      "Ne pas ignorer l'OAPI : les innovations CI peuvent et doivent être protégées par des brevets OAPI pour éviter la copie régionale",
+      "Éviter de recommander des partenariats internationaux coûteux avant d'avoir épuisé les partenaires locaux CI (INP-HB, CNRA CI, FIRCA CI) plus accessibles et mieux contextualisés",
+      "Ne pas oublier que le FIRCA CI cofinance des projets R&D : les industries éligibles (filières agricoles CI) peuvent obtenir 30-50% de financement de leurs projets d'innovation"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune activité d'innovation. Pas de budget R&D. Aucun partenariat. Co-produits non valorisés. Pas de veille technologique.",
+      "score_21_to_40": "Veille informelle, quelques améliorations de procédés empiriques. Pas de budget formalisé. Coques/déchets vendus à prix marginal sans valeur ajoutée.",
+      "score_41_to_60": "Budget R&D 0,5-1% CA. Partenariat informel avec INP-HB ou université CI. Quelques pilotes technologiques. Co-produits vendus de manière structurée.",
+      "score_61_to_80": "Programme d'innovation formalisé. Partenariats actifs INP-HB et/ou CNRA CI. Pilotes Industrie 4.0 avec résultats mesurés. Valorisation structurée des co-produits. Exploration OAPI.",
+      "score_81_to_100": "Innovation systématique et différenciante. >2% CA en R&D. Brevets OAPI actifs. Co-produits valorisés représentant >5% du CA. Partenariats institutionnels multiples. Référence R&D UEMOA."
+    }
+  }
+}

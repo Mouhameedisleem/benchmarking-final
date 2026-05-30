@@ -1,0 +1,285 @@
+{
+  "secteur": "industrie",
+  "axe": "STRATEGIE",
+  "sous_axe": "vision_digitale",
+  "label": "Vision et stratégie de transformation digitale industrielle",
+  "description": "Capacité des entreprises industrielles à formuler, communiquer et exécuter une vision digitale claire : Industrie 4.0, MES (Manufacturing Execution System), SCADA, automatisation des lignes, connectivité OT/IT, en cohérence avec les spécificités du tissu industriel de Côte d'Ivoire et de l'UEMOA.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Industrie CI : dominée par l'agroalimentaire (cacao, café, anacarde, hévéa), le BTP matériaux, le textile et la chimie — secteur secondaire représente 22% du PIB CI",
+      "Tissu industriel CI : 80% de PMI (Petites et Moyennes Industries) — budget digital limité, priorité production immédiate",
+      "Industrie 4.0 CI : adoption très naissante — SCADA et MES présents dans grandes unités (SIR raffinerie, SUCAF, SIFCA), absents des PMI",
+      "Énergie industrielle CI : CIE CI fournisseur principal — délestages impactent production → besoin continuité électrique (groupes électrogènes, UPS)",
+      "Main-d'œuvre industrielle CI : coût main-d'œuvre compétitif vs automatisation — arbitrage plus complexe qu'en Europe",
+      "PND CI 2021-2025 : industrialisation comme priorité nationale — Zone Industrielle de Yopougon, PK24 Abidjan, ZES Jacqueville",
+      "APEX-CI (Agence de Promotion des Exportations CI) : soutien industries exportatrices — traçabilité internationale exigée (cacao, café, anacarde)"
+    ],
+    "acteurs_cles": [
+      "CEPICI — Centre de Promotion des Investissements en CI : code investissements, zones industrielles CI",
+      "APEX-CI — Agence de Promotion des Exportations : traçabilité produits CI pour export, normes EU",
+      "FIPA CI — Fédération Ivoirienne du Patronat Industriel : représentation PMI CI",
+      "CNTIG CI — Comité National de la TIC et de l'Intelligence Économique : stratégie digital industrie CI",
+      "INP-HB Yamoussoukro — formations ingénieurs industrie CI, partenariats R&D industrielle",
+      "SIFCA (Société Ivoirienne de Financement et d'Assistance Commerciale) — groupe agroalimentaire CI (Palm CI, Michelin CI) : industrie 4.0 avancée"
+    ],
+    "reglementation_locale": [
+      "Code des Investissements CI (Loi 2012-487) : avantages fiscaux industries CI — informatique industrielle éligible",
+      "UEMOA Directive 06/2013 : libre circulation marchandises industrielles UEMOA — traçabilité numérique exigée",
+      "OHADA Acte uniforme AUDCG : gestion entreprises industrielles CI — archivage électronique",
+      "APDP CI Loi 2013-450 : données opérateurs et ouvriers industriels CI — biométrie usine",
+      "ISO 9001:2015 / ISO 22000 : certifications industries CI — exigent traçabilité et documentation numériques",
+      "Règlement EU Cacao sans déforestation (EUDR 2023) : traçabilité géospatiale cacao CI obligatoire dès 2025"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Aucune vision digitale industrielle. Production gérée manuellement ou avec des équipements électromécaniques sans informatisation. Aucun système de suivi production numérique. Direction non convaincue de l'utilité du digital en usine.",
+      "indicateurs": [
+        "0 système numérique de suivi production — carnets de production papier",
+        "Équipements sans connectivité (PLC non raccordés à un réseau)",
+        "0 indicateur de performance production (TRS, OEE) suivi numériquement",
+        "Direction : 'le digital c'est pour les bureaux, pas l'usine'",
+        "0 budget IT/OT industriel formalisé"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Premiers outils numériques de gestion production (Excel de suivi, quelques automates). Vision digitale informelle portée par un technicien ou ingénieur de production. Pas de stratégie formalisée ni de budget dédié.",
+      "indicateurs": [
+        "Excel suivi production quotidien — saisie manuelle post-production",
+        "Quelques PLCs (Siemens S7, Schneider Modicon) sans supervision SCADA",
+        "Vision digitale informelle : 'on va essayer un MES un jour'",
+        "0 roadmap digitale — projets IT ad hoc non priorisés",
+        "Budget IT = renouvellement PC admin — aucun investissement OT"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Vision digitale industrielle formalisée avec roadmap 2-3 ans. SCADA déployé sur lignes critiques. MES pilote en cours. Direction engagée sur 1-2 projets phares. Budget OT/IT dédié. Objectif TRS ou OEE défini.",
+      "indicateurs": [
+        "Roadmap digitale industrielle 2-3 ans validée direction : 3+ projets priorisés",
+        "SCADA déployé : supervision temps réel lignes critiques (1+ ligne)",
+        "MES pilote : 1 atelier ou 1 ligne en cours de déploiement",
+        "TRS (Taux de Rendement Synthétique) mesuré et suivi mensuel",
+        "Budget OT/IT industriel 2-4% CA — comité de pilotage trimestriel"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "Industrie 4.0 déployée sur l'essentiel des lignes. MES intégré ERP. SCADA multi-sites. Maintenance prédictive sur équipements critiques. Traçabilité production end-to-end. OEE > 75%. Vision digitale intégrée à la stratégie 5 ans.",
+      "indicateurs": [
+        "MES intégré ERP (SAP PP ou Oracle MFG Cloud) : données production en temps réel",
+        "SCADA multi-sites CI : supervision centralisée depuis Abidjan",
+        "Maintenance prédictive : capteurs vibrations/température sur 50%+ équipements critiques",
+        "Traçabilité end-to-end : matières premières → produit fini → expédition (lot numérique)",
+        "OEE > 75% (vs 55% moyenne PMI CI estimée)"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Usine intelligente Industrie 4.0 complète. Jumeau numérique usine. IA optimisation production. Zéro papier usine. Traçabilité EUDR cacao CI complète. Référence Industrie 4.0 UEMOA. Collaboration avec INP-HB CI pour R&D industrielle.",
+      "indicateurs": [
+        "Jumeau numérique usine : simulation temps réel — optimisation recettes et cadences",
+        "IA optimisation planning production : ordonnancement auto, minimisation changements série",
+        "OEE > 85% — benchmark international industries similaires",
+        "Traçabilité EUDR cacao CI : géolocalisation parcelles, lot numérique bout en bout",
+        "Référence Industrie 4.0 UEMOA — publication cas d'usage CEPICI / INP-HB CI"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Disposez-vous d'une vision et d'une roadmap digitale industrielle formalisée ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — aucune vision digitale industrielle"},
+        {"valeur": 2, "label": "Vision informelle — 'on va essayer un MES un jour'"},
+        {"valeur": 3, "label": "Roadmap 2-3 ans validée direction : 3+ projets priorisés"},
+        {"valeur": 4, "label": "Vision Industrie 4.0 intégrée stratégie 5 ans — MES+SCADA déployés"},
+        {"valeur": 5, "label": "Usine intelligente — jumeau numérique, IA production, référence UEMOA"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Disposez-vous d'un système SCADA ou MES sur vos lignes de production ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — 0 supervision numérique production"},
+        {"valeur": 2, "label": "PLCs sans SCADA — aucune supervision centralisée"},
+        {"valeur": 3, "label": "SCADA sur lignes critiques — MES pilote en cours"},
+        {"valeur": 4, "label": "MES intégré ERP — SCADA multi-sites CI"},
+        {"valeur": 5, "label": "Jumeau numérique + IA optimisation — OEE > 85%"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Mesurez-vous votre TRS (Taux de Rendement Synthétique) ou OEE de façon automatisée ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — aucun indicateur production suivi numériquement"},
+        {"valeur": 2, "label": "TRS calculé manuellement mensuel — Excel"},
+        {"valeur": 3, "label": "TRS suivi hebdomadaire depuis SCADA/MES"},
+        {"valeur": 4, "label": "OEE temps réel — alertes automatiques si < seuil"},
+        {"valeur": 5, "label": "OEE + IA prédictive pannes — 0 arrêt non anticipé"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Avez-vous une traçabilité numérique end-to-end de votre production (matière première → produit fini) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — aucune traçabilité numérique"},
+        {"valeur": 2, "label": "Registre papier de lots — saisie manuelle"},
+        {"valeur": 3, "label": "Traçabilité numérique partielle : 1 étape sur 3"},
+        {"valeur": 4, "label": "Traçabilité end-to-end : matière → fini → expédition (lot numérique)"},
+        {"valeur": 5, "label": "Traçabilité EUDR complète : géolocalisation + lot numérique certifié"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "Roadmap digitale formalisée",
+      "SCADA/MES déployé",
+      "TRS/OEE mesuré automatiquement",
+      "Traçabilité end-to-end",
+      "Budget OT/IT dédié"
+    ],
+    "lignes": [
+      {
+        "organisation": "PMI CI (< 50 employés)",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "0 vision digitale, production papier, TRS non mesuré, 0 traçabilité, 0 budget OT"
+      },
+      {
+        "organisation": "Industrie moyenne CI (50-200 employés)",
+        "scores": [2, 2, 2, 2, 2],
+        "note_globale": 2,
+        "commentaire": "Vision informelle, PLCs sans SCADA, Excel TRS mensuel, registre papier lots"
+      },
+      {
+        "organisation": "SUCAF CI (Sucreries de Côte d'Ivoire)",
+        "scores": [4, 4, 4, 3, 4],
+        "note_globale": 4,
+        "commentaire": "MES déployé, SCADA lignes, OEE suivi, traçabilité lot partielle, budget OT structuré"
+      },
+      {
+        "organisation": "SIFCA CI (groupe Palm CI, Michelin CI)",
+        "scores": [5, 5, 5, 5, 5],
+        "note_globale": 5,
+        "commentaire": "Industrie 4.0 complet, jumeau numérique pilote, OEE > 85%, traçabilité EUDR, R&D INP-HB"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "SIFCA CI — groupe agroindustriel (Palmci, Trituraf, Michelin Plantation)",
+      "part_de_marche_estimee": "Leader Industrie 4.0 CI agroalimentaire",
+      "forces": ["Jumeau numérique huileries palm oil CI", "SCADA multi-sites CI", "Traçabilité EUDR opérationnelle", "Partenariat INP-HB CI"],
+      "faiblesses": ["Périmètre agro uniquement — non transférable directement autres secteurs", "Technologies groupe international — pas accessibles PMI CI"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "Dangote Industries Africa — industrie 4.0 Afrique",
+      "part_de_marche_estimee": "Leader industriel Afrique subsaharienne",
+      "forces": ["DCS / SCADA cimenteries et raffineries Afrique", "SAP S/4HANA PP intégré", "MES Siemens SIMATIC IT déployé", "Benchmark OEE Afrique"],
+      "faiblesses": ["Absence CI directe (présence Nigeria, Ghana, Sénégal)", "Modèle grand groupe non transférable PMI CI"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "Siemens Digital Industries — solutions Industrie 4.0",
+      "part_de_marche_estimee": "Leader mondial automatisation industrielle",
+      "forces": ["PLC Siemens S7 (référence CI)", "SCADA WinCC", "MES SIMATIC IT", "Jumeau numérique Tecnomatix", "Bureau CI disponible"],
+      "faiblesses": ["Coût élevé — hors budget PMI CI", "Complexité intégration OT/IT", "Support local CI limité"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Siemens WinCC — SCADA industriel CI",
+      "usage": "Supervision lignes de production temps réel, alarmes, historisation données capteurs",
+      "niveau_cible": "3+",
+      "cout_estime": "2 000 000–8 000 000 FCFA selon configuration",
+      "disponibilite_ci": "International — distributeurs Siemens CI Abidjan (SOTELCI, COTECNA)"
+    },
+    {
+      "nom": "Odoo Manufacturing CI — MES open source",
+      "usage": "Ordres de fabrication, suivi production, BOM, TRS — intégré ERP Odoo CI",
+      "niveau_cible": "3+",
+      "cout_estime": "800 000–2 500 000 FCFA/an (partenaires Odoo CI Abidjan)",
+      "disponibilite_ci": "International — partenaires Odoo CI disponibles Abidjan"
+    },
+    {
+      "nom": "SAP S/4HANA PP (Production Planning) — ERP+MES",
+      "usage": "Planification production, MRP, suivi OF, qualité — intégré ERP SAP CI grandes industries",
+      "niveau_cible": "4",
+      "cout_estime": "15 000 000–50 000 000 FCFA implémentation + licences annuelles",
+      "disponibilite_ci": "International — partenaires SAP CI (Capgemini CI, KPMG CI)"
+    },
+    {
+      "nom": "APEX-CI traçabilité export — plateforme cacao/café CI",
+      "usage": "Traçabilité produits CI pour export UEMOA et international (EUDR cacao CI 2025)",
+      "niveau_cible": "3+",
+      "cout_estime": "Accès APEX-CI (cotisation exportateurs CI)",
+      "disponibilite_ci": "Natif CI — APEX-CI Abidjan Plateau"
+    },
+    {
+      "nom": "Microsoft Power BI — OEE et KPIs production CI",
+      "usage": "Dashboard OEE temps réel, TRS, rebuts, temps d'arrêt — connecté SCADA ou MES",
+      "niveau_cible": "3+",
+      "cout_estime": "Inclus M365 Business (8 USD/user/mois standalone)",
+      "disponibilite_ci": "International — cloud Microsoft accessible CI"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "SUCAF CI — Sucreries de Côte d'Ivoire : SCADA + MES sucre CI, OEE +18 points",
+    "organisation": "SUCAF CI (Sucreries de Côte d'Ivoire, filiale Vilgrain/Somdiaa, Ferké et Borotou CI)",
+    "contexte": "SUCAF CI : 2 sucreries CI (Ferké I et II, Borotou-Koro) — 180 000 tonnes sucre/an. Production de campagne (nov-avril) : 6 mois d'intensité maximale. Problème : TRS 61% en 2020 (perte énorme en campagne sucrière), arrêts non planifiés fréquents, planification production sur tableaux Excel campagne.",
+    "probleme": "Arrêts non planifiés : 12-18h/semaine en pointe campagne CI. TRS 61% vs objectif groupe 78%. Causes arrêts non tracées numériquement — diagnostic post-mortem impossible. Qualité sucre : 3,2% lots hors-spec/an (pertes déclassement commercial). Reporting groupe Paris : 3 jours préparation données manuelles.",
+    "solution_deployee": "SCADA Siemens WinCC CI : supervision 48 capteurs lignes extraction et raffinage (Ferké I). MES Odoo Manufacturing CI adapté : OF, TRS auto-calculé, causes arrêts catégorisées. Capteurs vibrations Schaeffler FAG sur turbines critiques → maintenance prédictive. Power BI : OEE temps réel, alertes SMS chef de production si TRS < 70%.",
+    "resultats": "TRS : 61% → 79% en 2 campagnes (+18 points). Arrêts non planifiés : -64% (18h → 6,5h/semaine en pointe). Lots hors-spec : 3,2% → 0,8% (-75%). Reporting groupe Paris : 3 jours → 45 min automatisé Power BI. Économie arrêts évités : 2,4 Mds FCFA estimés sur 2 campagnes (production non perdue × prix sucre CI). Coût implémentation total : 185 M FCFA — ROI < 2 mois de campagne.",
+    "enseignements": [
+      "En industrie de campagne CI, 1 point de TRS gagné = des centaines de millions FCFA de production supplémentaire — le ROI du SCADA est le plus rapide de tous les investissements digitaux",
+      "Les causes d'arrêts catégorisées en MES transforment la maintenance réactive en maintenance préventive — sans données, on répare les mêmes pannes indéfiniment",
+      "OEE + alertes SMS chef de production changent le comportement opérationnel : 'on ne voit pas défiler les pertes, maintenant on les reçoit sur le téléphone en temps réel'"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "Industrie 4.0", "SCADA", "MES", "TRS", "OEE", "automatisation industrielle CI",
+      "PLC Siemens", "jumeau numérique usine", "maintenance prédictive industrie",
+      "traçabilité production", "EUDR cacao CI", "APEX-CI export", "roadmap digitale industrielle",
+      "SAP PP", "Odoo Manufacturing", "budget OT IT industriel CI"
+    ],
+    "signaux_niveau_avance": [
+      "SCADA déployé avec supervision temps réel",
+      "MES intégré ERP — TRS/OEE automatisé",
+      "Maintenance prédictive capteurs vibrations/température",
+      "Traçabilité end-to-end lot numérique",
+      "OEE > 75% mesuré et piloté"
+    ],
+    "pieges_frequents": [
+      "PLCs achetés = Industrie 4.0 — sans SCADA, les PLCs sont des automates isolés sans valeur analytics",
+      "TRS calculé mensuel manuellement = pilotage à l'aveugle — sans temps réel, les pertes durent des semaines",
+      "Traçabilité = registre papier de lots numérotés — ce n'est pas une traçabilité numérique",
+      "MES déclaré car Odoo installé — sans module Manufacturing configuré et utilisé, c'est un ERP sans MES"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Production papier. 0 SCADA ni MES. TRS non mesuré. 0 traçabilité numérique. 0 budget OT.",
+      "score_21_to_40": "Excel production, PLCs isolés, TRS Excel mensuel, registre papier lots, vision informelle.",
+      "score_41_to_60": "SCADA lignes critiques, MES pilote, TRS hebdomadaire, traçabilité partielle, budget OT 2-4% CA.",
+      "score_61_to_80": "MES+ERP intégré, SCADA multi-sites, maintenance prédictive, traçabilité end-to-end, OEE > 75%.",
+      "score_81_to_100": "Jumeau numérique, IA production, OEE > 85%, EUDR traçabilité, référence Industrie 4.0 UEMOA."
+    }
+  }
+}

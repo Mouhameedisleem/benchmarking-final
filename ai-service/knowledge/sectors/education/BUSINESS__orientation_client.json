@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "BUSINESS",
+    "sub_axis": "orientation_client",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Expérience apprenant centrée (Learner Experience Design — LXD)",
+      "description": "Le secteur éducatif adopte les méthodes UX pour concevoir les parcours pédagogiques centrés sur l'apprenant : personas étudiants, customer journey maps du parcours scolaire, NPS apprenant mesuré trimestriellement, feedback loops continus (sondages in-app, chatbot d'écoute). En Côte d'Ivoire, les établissements privés (Pigier CI, GTIM, ISM) pionniers : enquêtes de satisfaction semestrielles, adaptation des emplois du temps aux contraintes des étudiants salariés (cours du soir/weekend).",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "28%",
+      "source": "Afrique EdTech Survey / MESRS CI 2024",
+      "year": 2024
+    },
+    {
+      "title": "Accompagnement personnalisé IA et prévention du décrochage scolaire",
+      "description": "Les systèmes d'early warning (alerte précoce) basés sur l'IA analysent les signaux de décrochage : absences, baisse des notes, non-connexion au LMS, délais de remise des devoirs. En Côte d'Ivoire, le taux de décrochage au lycée est de 24% (MENA 2024), avec un coût social estimé à 380 Mds FCFA/an. Des pilotes d'IA anti-décrochage ont été lancés par l'UVCI (analyse comportement LMS → alerte tuteur) et l'UFHB (analyse présence + notes → intervention conseiller).",
+      "impact_level": "high",
+      "horizon": "short_term",
+      "adoption_rate": "15%",
+      "source": "MENA CI / Rapport Décrochage Scolaire 2024",
+      "year": 2024
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "CRM étudiant (Student Information System — SIS) avec parcours digital",
+      "category": "CRM / EdTech",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "UFHB (Banner SIS partiel), Pigier CI (Salesforce Education Cloud), 20% établissements CI avec SIS intégré LMS",
+      "leading_vendors": ["Salesforce Education Cloud", "Ellucian Banner", "PowerSchool", "Alma (SIS K12)", "Classe365 (PME éducation)"]
+    },
+    {
+      "name": "Système d'alerte précoce décrochage (Early Warning System — EWS)",
+      "category": "IA / Analytics Apprenant",
+      "maturity_stage": "emerging",
+      "adoption_in_sector": "UVCI CI (pilote 2024, 2 500 étudiants), IFC EdTech Africa pilote 5 pays UEMOA",
+      "leading_vendors": ["Civitas Learning (EWS)", "Ellucian Intelligent Learning Platform", "D2L Brightspace Analytics", "SAP Student Lifecycle Management", "Knewton (Alta)"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Pigier Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Salesforce Education Cloud (CRM étudiant 360° : pré-inscription, admission, suivi pédagogique, insertion professionnelle), NPS apprenant trimestriel (score 74/100), conseil pédagogique personnalisé (1 conseiller pour 80 étudiants), portail candidat digital (admission en 72h), partenariats employeurs CI (stage garanti dès M1 pour 85% des filières)",
+        "differentiator": "Leader de l'orientation-client dans l'éducation privée CI — taux d'insertion professionnelle à 6 mois post-diplôme : 88% (vs. 54% moyenne CI) grâce au CRM employeurs et aux partenariats stage intégrés dès le parcours",
+        "source": "Pigier CI Rapport 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ashesi University Ghana",
+        "country": "Ghana",
+        "key_practice": "Expérience apprenant premium : ratio enseignant/étudiant 1/18 (vs. 1/43 CI public), conseil académique individuel semestriel, app Ashesi Mobile (notes, planning, mentor, communauté alumni), career center avec IA matching stage/emploi, NPS étudiant 82/100",
+        "differentiator": "Meilleure expérience apprenant d'Afrique subsaharienne (classement Times Higher Education Africa 2024) — modèle d'accompagnement individuel systématique inspiré des liberal arts américains, 95% d'insertion professionnelle à 6 mois",
+        "source": "Ashesi University Annual Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Arizona State University (ASU) — EdPlus Online",
+        "country": "États-Unis",
+        "key_practice": "Pionnier du 'Student Success' digital : IA prédiction décrochage (alertes tuteur J+3 après signal), conseillers académiques dédiés (1/200 étudiants online), NPS 79/100, taux de rétention en ligne 88% (benchmark EdTech: 60%), partenariat Starbucks (100K salariés formés), 90 000 étudiants en ligne",
+        "differentiator": "Leader mondial taux de rétention EdTech — 88% (vs. 60% benchmark) grâce à l'IA early warning + conseiller humain en renfort systématique, modèle 'AI + Human Touch' répliqué par 50 universités mondiales",
+        "source": "ASU EdPlus / Educause 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Aucune mesure de satisfaction apprenant, communication unidirectionnelle (affichage papier), gestion des étudiants sur registres papier, aucun suivi du parcours ni de l'insertion professionnelle.",
+    "level_2_developing": "Enquêtes de satisfaction annuelles papier, suivi pédagogique informel (enseignant référent sans outil), SIS basique (tableur ou logiciel simple), pas de suivi post-diplôme.",
+    "level_3_defined": "SIS digital (gestion notes, absences, scolarité), enquête de satisfaction semestrielle digitale, conseiller pédagogique par filière (1/150 étudiants), portail candidat en ligne, suivi insertion à 6 mois.",
+    "level_4_managed": "CRM étudiant 360° (SIS + LMS + suivi insertion intégré), NPS apprenant trimestriel, early warning EWS actif (alerte décrochage), conseil personnalisé IA + humain, partenariats employeurs intégrés au parcours.",
+    "level_5_optimizing": "Parcours apprenant 100% digital et personnalisé (IA adaptive learning + conseil humain), NPS > 75, taux de rétention >85%, insertion professionnelle >85% à 6 mois, alumni CRM actif, modèle d'accompagnement exporté à d'autres établissements CI."
+  },
+  "regulations": [
+    {
+      "name": "MENA CI — Charte des droits des apprenants et règlement intérieur type",
+      "authority": "MENA (Ministère de l'Éducation Nationale et de l'Alphabétisation)",
+      "description": "Le MENA CI impose un règlement intérieur type incluant les droits des apprenants : droit à l'information sur les résultats (délai maximum 30 jours après évaluation), droit de recours en cas de contestation de note, accès aux relevés de notes et attestations de scolarité sous 15 jours. Pour les établissements privés, la charte MENA inclut des exigences de transparence tarifaire (frais de scolarité affichés) et d'information sur le taux d'insertion professionnelle par filière.",
+      "compliance_deadline": "En vigueur",
+      "impact_on_sector": "Oblige à des systèmes de gestion des relevés de notes digitaux (SIS), des portails d'accès apprenants à leurs données académiques, et une communication transparente sur les résultats d'insertion professionnelle"
+    },
+    {
+      "name": "APDP CI Loi 2013-450 — Protection des données personnelles des apprenants",
+      "authority": "APDP (Autorité de Protection des Données Personnelles de Côte d'Ivoire)",
+      "description": "Les données personnelles des apprenants (résultats scolaires, comportement sur LMS, données de santé scolaire, informations familiales) sont des données sensibles protégées par la Loi CI 2013-450. Les établissements éducatifs doivent : déclarer leurs traitements de données à l'APDP, obtenir le consentement des parents pour les mineurs, sécuriser les données apprenants (chiffrement, contrôle d'accès), et ne pas partager les données sans consentement (notamment vers des entreprises partenaires pour le ciblage publicitaire).",
+      "compliance_deadline": "En vigueur",
+      "impact_on_sector": "Conditionne les déploiements de SIS, LMS analytics et IA early warning — toute analyse comportementale des apprenants doit être déclarée à l'APDP et anonymisée pour les rapports partagés avec des tiers"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Instrumentalisation des données apprenant et risque de discrimination algorithmique",
+      "description": "Les systèmes d'IA prédiction décrochage ou d'orientation automatique basés sur les données scolaires (notes, absences, origines géographiques, situation socio-économique) peuvent reproduire ou amplifier des biais discriminatoires : orienter systématiquement les élèves de zones rurales ou de ménages pauvres vers des filières moins valorisées, créer des prophéties auto-réalisatrices (un élève identifié 'à risque' reçoit moins d'attention pédagogique). Ce risque est particulièrement aigu en CI où les inégalités scolaires sont corrélées à l'origine géographique et au genre.",
+      "severity": "high",
+      "likelihood": "medium",
+      "mitigation": "Audit des biais algorithmiques obligatoire avant déploiement EWS (test équité genre, zone géographique, origine sociale), transparence algorithmique (l'enseignant doit pouvoir expliquer pourquoi un élève est signalé), garde-fou humain (toute décision d'orientation basée sur IA doit être validée par un conseiller humain) — cadre MENA CI à développer pour l'IA éducative"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Alumni network digital et mentorat IA pour l'insertion professionnelle CI",
+      "description": "Les 2,5 millions de diplômés du supérieur CI (MESRS 2024) constituent un réseau de mentorat potentiel inexploité. Une plateforme alumni digitale avec matching IA (profil étudiant ↔ profil alumni par secteur, poste, géographie) permettrait un mentorat personnalisé à grande échelle. En Côte d'Ivoire, l'INPHB dispose d'un réseau alumni de 35 000 ingénieurs — seul 12% est actif sur la plateforme alumni actuelle. Le passage au digital avec IA matching pourrait multiplier par 5 les interactions mentorat/insertion.",
+      "impact_level": "medium",
+      "time_to_value": "1-2 ans",
+      "prerequisite_maturity": "Niveau 3 — CRM étudiant digital + base alumni à jour"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "Pigier International — Expansion CI via partenariat Salesforce Education Cloud",
+      "montant": "1,2 Mds FCFA (investissement IT + transformation pédagogique)",
+      "investisseurs": ["Pigier International (France)", "Fonds BEI Education Afrique"],
+      "annee": 2023,
+      "description": "Pigier CI a investi 1,2 Mds FCFA dans la transformation CRM de son expérience apprenant : déploiement Salesforce Education Cloud (CRM 360° : prospection, admission, suivi pédagogique, placement emploi), intégration avec Moodle LMS (notes et présence unifiées dans Salesforce), chatbot IA Pigier (réponse questions scolarité 24/7, 78% déflexion conseillers). Résultats : NPS 74/100, taux de rétention +12 points (72% → 84%)."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Système d'alerte précoce décrochage (EWS) — IA analyse comportement LMS + intervention tuteur",
+    "description": "En 2024, l'UVCI a déployé un système d'Early Warning System (EWS) sur sa plateforme Moodle pour 12 000 étudiants pilotes. L'IA analyse 8 signaux comportementaux hebdomadaires : fréquence de connexion (< 2 sessions/semaine → alerte), temps passé sur les cours (< 30 min/semaine → alerte), taux de complétion des exercices (< 40% → alerte), note aux quizzes intermédiaires (< 10/20 → alerte), délai de rendu des devoirs (> 3 jours de retard → alerte), participation aux forums (zéro contribution sur 2 semaines → alerte). Score de risque décrochage 0-100 généré chaque lundi matin pour chaque étudiant. Les tuteurs UVCI (1 tuteur/250 étudiants) reçoivent une liste priorisée des 20 étudiants les plus à risque à contacter en priorité (appel téléphonique ou WhatsApp selon préférence étudiant).",
+    "resultats": "Sur le semestre pilote (2 500 étudiants, S1 2024) : taux de décrochage réduit de 28% à 19% (-32% relatif). 847 étudiants à risque identifiés → 623 contactés par tuteur → 412 (66%) ayant finalisé leur semestre après intervention. Taux de complétion du semestre : 71% → 79% (+8 points). NPS apprenants ayant reçu une intervention tuteur : 81/100 (vs. 65/100 groupe témoin sans EWS). Coût par étudiant sauvé du décrochage : 12 000 FCFA (coût marginal tuteur) vs. perte de revenus de scolarité 185 000 FCFA — ROI établissement : 15x.",
+    "source": "UVCI Rapport EWS Pilote S1 2024 / BAD Évaluation EdTech CI",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif orientation apprenant — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "CRM étudiant (SIS)", "NPS apprenant", "EWS décrochage IA", "Taux insertion professionnelle"],
+    "lignes": [
+      {
+        "organisation": "Pigier CI",
+        "valeurs": ["Salesforce Education Cloud", "74/100 (trimestriel)", "Non (conseiller humain seul)", "88% à 6 mois"]
+      },
+      {
+        "organisation": "UVCI CI",
+        "valeurs": ["Moodle + module SIS", "72/100 (semestriel)", "Oui (EWS pilote 12K étudiants)", "71% à 6 mois"]
+      },
+      {
+        "organisation": "UFHB Abidjan",
+        "valeurs": ["Banner SIS (partiel)", "Non mesuré (public)", "Non", "54% à 6 mois (moyen CI)"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue l'orientation-apprenant dans le secteur éducation CI : présence d'un CRM étudiant (SIS) intégré au LMS, mesure du NPS apprenant, système d'early warning décrochage IA, taux d'insertion professionnelle mesuré et publié, et conformité APDP CI pour les données personnelles des apprenants.",
+    "maturity_max_description": "Établissement éducatif CI avec approche apprenant-centrique complète : CRM 360° (SIS + LMS + insertion intégré), NPS > 75, EWS IA anti-décrochage en production, conseil personnalisé IA + humain, taux rétention > 85%, insertion > 85% à 6 mois, alumni CRM actif, conformité APDP CI.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune mesure de satisfaction, gestion apprenants sur registres papier, aucun suivi parcours ni insertion, communication unidirectionnelle.",
+      "score_21_to_40": "Enquêtes satisfaction annuelles papier, SIS basique (tableur), conseiller pédagogique informel, pas de suivi insertion, aucun NPS.",
+      "score_41_to_60": "SIS digital, enquête satisfaction semestrielle, portail apprenant (notes + absences), suivi insertion à 6 mois publié, conseiller 1/150 étudiants.",
+      "score_61_to_80": "CRM étudiant 360°, NPS trimestriel mesuré, EWS décrochage en pilote, conseil IA + humain, partenariats employeurs intégrés, insertion > 75%.",
+      "score_81_to_100": "CRM 360° complet, NPS > 75, EWS production (rétention > 85%), IA adaptive learning, alumni CRM actif, insertion > 85%, conformité APDP CI totale."
+    },
+    "prompt_injection_context": "Secteur éducation CI : MENA CI impose un droit d'accès des apprenants à leurs données académiques sous 15 jours. APDP CI conditionne l'usage des données comportementales LMS pour l'IA décrochage. Taux décrochage lycée CI : 24% (fort enjeu EWS). UVCI est le pionnier EWS en CI. L'insertion professionnelle (54% moyen CI) est un KPI clé pour les établissements privés.",
+    "key_questions_for_llm": [
+      "Disposez-vous d'un CRM étudiant (SIS) intégré à votre LMS permettant un suivi 360° du parcours apprenant (scolarité, pédagogie, insertion) ?",
+      "Mesurez-vous la satisfaction de vos apprenants (NPS ou enquête de satisfaction) de manière régulière ? Quel est votre score actuel ?",
+      "Avez-vous un système d'alerte précoce pour détecter et prévenir le décrochage (EWS basé sur comportement LMS, absences, notes) ?",
+      "Quel est votre taux d'insertion professionnelle à 6 mois post-diplôme ? Est-il publié et certifié par un tiers ?",
+      "Votre traitement des données personnelles des apprenants (comportement LMS, résultats scolaires) est-il conforme à la Loi APDP CI 2013-450 ?"
+    ]
+  }
+}

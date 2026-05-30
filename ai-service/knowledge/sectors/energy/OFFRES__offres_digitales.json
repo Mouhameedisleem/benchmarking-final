@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "OFFRES",
+    "sub_axis": "offres_digitales",
+    "sector": "energie",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Pay-As-You-Go (PAYG) solaire et énergie prépayée connectée",
+      "description": "Les offres PAYG permettent aux ménages ruraux sans accès au réseau d'acquérir des kits solaires via micro-paiements mobile money, avec activation/désactivation à distance par IoT. En Côte d'Ivoire, le marché PAYG croît de 45% par an, porté par le gap électrification rurale (taux accès national 66%, rurale 35%). Les compteurs prépayés STS avec app mobile représentent l'équivalent urbain : 500K unités déployées par CIE avec rechargement via Orange Money/MTN MoMo.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "42%",
+      "source": "ADER CI / SE4ALL Afrique 2025",
+      "year": 2025
+    },
+    {
+      "title": "Energy-as-a-Service (EaaS) et efficacité énergétique contractualisée",
+      "description": "L'EaaS transforme la vente de kWh en service managé : audit, installation, financement, maintenance et garantie de performance (contrats CPE - Contracted Performance Energy). En Côte d'Ivoire, CIE Business+ et ZECI proposent des audits énergétiques IA pour industriels (brasseries, textiles, agroalimentaires). Le marché EaaS CI est estimé à 85 Mds FCFA à horizon 2028, tiré par la hausse des tarifs industriels ANARE-CI (+18% depuis 2022).",
+      "impact_level": "high",
+      "horizon": "short_term",
+      "adoption_rate": "18%",
+      "source": "ANARE-CI Rapport Tarifaire 2025",
+      "year": 2025
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "Systèmes de comptage avancé AMI (Advanced Metering Infrastructure)",
+      "category": "IoT / Smart Metering",
+      "maturity_stage": "growing",
+      "adoption_in_sector": "35% des compteurs CI (objectif PNDE 2030 : 1M AMI)",
+      "leading_vendors": ["Itron", "Landis+Gyr", "Sagemcom", "Honeywell", "Conlog (prépayé STS)"]
+    },
+    {
+      "name": "Plateformes PAYG IoT (firmware + backend cloud)",
+      "category": "Fintech / IoT",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "300K kits actifs en CI (BBOXX, Solaris, Fenix)",
+      "leading_vendors": ["Angaza", "Solaris (PAYG engine)", "BBOXX OS", "Fenix International", "ENGIE Energy Access"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "CIE (Compagnie Ivoirienne d'Électricité)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Offre prépayée STS (500K compteurs), app CIE Mobile (rechargement, suivi conso, alerte panne), programme CIE Business+ (audit énergétique IA pour industriels, rapport mensuel automatisé Power BI)",
+        "differentiator": "Seule entité avec couverture nationale réseau + offre digitale intégrée mobile money multi-opérateurs (Orange, MTN, Wave) — 65% paiements digitaux",
+        "source": "CIE Rapport Annuel 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "BBOXX Afrique de l'Ouest",
+        "country": "Côte d'Ivoire / Rwanda / RDC / Ghana",
+        "key_practice": "Kit PAYG solaire IoT (50W-200W) avec firmware BBOXX OS, activation SMS/USSD, scoring crédit IA sur 18 variables, extension automatique crédit pour bons payeurs — 300K clients CI actifs",
+        "differentiator": "Modèle rent-to-own (36 mois) avec propriété transférée au client — taux de propriété acquise 67% à 36 mois, NPS 78/100",
+        "source": "BBOXX Impact Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "EDF / EDF Pulse Ventures",
+        "country": "France (présence Afrique)",
+        "key_practice": "Offres Mon EDF (portail client digital, heures creuses dynamiques, suivi temps réel), EaaS industriel (contrats CPE garantie 15% économies), intégration véhicule électrique (smart charging V2G)",
+        "differentiator": "Leader mondial EaaS industriel — 2 800 contrats CPE actifs en Europe, économies garanties contractuellement avec pénalités fournisseur si non-atteintes",
+        "source": "EDF Rapport RSE 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Offre unique kWh facturé en fin de mois, pas d'application client, rechargement compteur prépayé uniquement en agence physique, aucune segmentation tarifaire client.",
+    "level_2_developing": "Application mobile basique (consultation facture + rechargement), paiement via mobile money sur 1-2 opérateurs, offre prépayée déployée sur <30% du parc compteurs.",
+    "level_3_defined": "App client complète (conso temps réel, historique, alertes, déclaration panne), offre prépayée >50% parc, mobile money multi-opérateurs, offre B2B audit énergétique ponctuel.",
+    "level_4_managed": "AMI déployé >50% avec télé-relève, offre PAYG solaire rurale active, programme EaaS B2B avec KPI garantis, personnalisation tarifaire selon profil client (Time-of-Use), app >100K utilisateurs actifs mensuels.",
+    "level_5_optimizing": "EaaS full-service avec IA (prédiction conso, optimisation charge, recharge VE dynamique), PAYG solaire avec score crédit IA temps réel, marketplace énergie (P2P énergétique, agrégateur flexibilité ANARE-CI), offres carbone vérifiées."
+  },
+  "regulations": [
+    {
+      "name": "PNDE CI 2030 — Programme 1 million de compteurs AMI",
+      "authority": "Ministère des Mines et de l'Énergie / ANARE-CI",
+      "description": "Le Plan National de Développement Énergétique 2030 prévoit le déploiement d'1 million de compteurs AMI (Advanced Metering Infrastructure) en Côte d'Ivoire d'ici 2030, avec télé-relève obligatoire pour les gros consommateurs (>100 kVA) dès 2026. Les distributeurs doivent proposer des offres Time-of-Use (TOU) basées sur données AMI. Chaque compteur AMI doit être certifié ANARE-CI (norme IEC 62052/62053).",
+      "compliance_deadline": "2026 (gros consommateurs) / 2030 (résidentiel)",
+      "impact_on_sector": "Nécessite refonte offres tarifaires, systèmes billing compatibles TOU, application client temps réel — investissement estimé 180 Mds FCFA"
+    },
+    {
+      "name": "Loi APDP CI 2013-450 — Données de consommation AMI",
+      "authority": "APDP (Autorité de Protection des Données Personnelles)",
+      "description": "Les données granulaires de consommation (pas de 15 minutes AMI) constituent des données personnelles selon la Loi 2013-450. Leur collecte, traitement et cession à tiers (agrégateurs, fournisseurs EaaS) requièrent consentement explicite. Les profils de conso ne peuvent être utilisés à des fins publicitaires sans opt-in. Durée de conservation maximale : 5 ans. Obligation de notification APDP pour tout traitement de données AMI à grande échelle.",
+      "compliance_deadline": "2025 (en vigueur)",
+      "impact_on_sector": "Conditionne les offres de personnalisation IA basées sur AMI — les distributeurs doivent concevoir un consent management robuste intégré à l'app client"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Fragmentation des offres digitales et exclusion des populations non-bancarisées",
+      "description": "En Côte d'Ivoire, 45% de la population adulte reste non-bancarisée (BCEAO 2024), limitant l'accès aux offres digitales (mobile money, app smartphone). Les ménages ruraux sans smartphone ne peuvent accéder aux offres PAYG solaires avancées. Le risque est de créer un fossé digital entre clients urbains connectés et ruraux exclus des nouvelles offres.",
+      "severity": "high",
+      "likelihood": "high",
+      "mitigation": "Développer des interfaces USSD (sans smartphone) pour rechargement et consultation, partenariats avec agents Orange/MTN Money en zones rurales, kits PAYG avec commandes physiques (bouton ON/OFF) — BBOXX CI a intégré ces contraintes avec 68% de clients USSD-only"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Marketplace énergie locale et peer-to-peer solaire",
+      "description": "L'émergence de prosommateurs (ménages et entreprises avec panneaux solaires + stockage) ouvre la voie à un marché P2P d'énergie locale en Côte d'Ivoire. Des plateformes peuvent permettre la revente de surplus solaire entre voisins ou à CIE (feed-in tariff), monétisant les 45 000 installations solaires privées estimées à Abidjan. L'IA peut optimiser la correspondance offre/demande en temps réel.",
+      "impact_level": "high",
+      "time_to_value": "3-5 ans",
+      "prerequisite_maturity": "Niveau 4 — déploiement AMI bidirectionnel + cadre réglementaire feed-in tariff ANARE-CI"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "BBOXX Série D + partenariat ENGIE Energy Access",
+      "montant": "50M USD",
+      "investisseurs": ["ENGIE", "Mitsubishi Corporation", "Bamboo Capital Partners", "CDC Group"],
+      "annee": 2023,
+      "description": "BBOXX a levé 50M USD pour accélérer le déploiement PAYG IoT en Afrique subsaharienne, incluant l'acquisition partielle d'Okra Solar (Nigeria) pour les mini-grids. En Côte d'Ivoire, le financement a permis le déploiement de 80K nouveaux kits en zones rurales ADER CI (2023-2024) et le lancement de l'offre BBOXX Home Pro (200W, réfrigérateur + TV)."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "CIE (Compagnie Ivoirienne d'Électricité)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Offre CIE Business+ — Audit énergétique IA + portail client industriel",
+    "description": "En 2023, CIE a lancé CIE Business+ destiné aux clients industriels et tertiaires (>100 kVA), combinant : (1) audit énergétique IA basé sur données AMI + capteurs IoT (analyse 6 mois de courbes de charge 15 min), (2) rapport mensuel automatisé Power BI avec recommandations priorisées (ROI, délai retour), (3) portail client dédié avec API REST pour intégration ERP client (SAP, Odoo), (4) contrat de performance avec engagement CIE sur 10% d'économies garanties (pénalités si non-atteintes). Premier déploiement : 48 clients industriels (brasseries, textiles, grandes surfaces) sur Abidjan.",
+    "resultats": "Économies énergétiques moyennes : 14,2% par client industriel (vs. 10% garantis contractuellement). Conso totale des 48 clients : -8,4 GWh/an soit 2,1 Mds FCFA économisés. NPS clients CIE Business+ : 71/100 (vs. 42/100 clients industriels standard). Chiffre d'affaires CIE Business+ : 450M FCFA (marge service +35% vs. vente pure kWh). Pipeline 2025 : 120 nouveaux clients signés (dont 15 hôtels Abidjan pour la CAN 2023).",
+    "source": "CIE Rapport Annuel 2024 / Ministère Énergie CI",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif maturité offres digitales — Secteur Énergie Côte d'Ivoire",
+    "colonnes": ["organisation", "Offre prépayée mobile", "PAYG solaire rural", "EaaS / audit IA", "Personnalisation IA"],
+    "lignes": [
+      {
+        "organisation": "CIE CI",
+        "valeurs": ["500K compteurs STS + app mobile", "Non (réseau seul)", "CIE Business+ 48 clients", "Début (AMI partiel)"]
+      },
+      {
+        "organisation": "BBOXX CI",
+        "valeurs": ["PAYG mobile money USSD", "300K kits IoT actifs", "Non (résidentiel PAYG)", "Score crédit IA 18 variables"]
+      },
+      {
+        "organisation": "ZECI / ADER CI",
+        "valeurs": ["Non (concession rurale)", "Mini-grids + PAYG partiel", "Non", "Non"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue la richesse et la digitalisation des offres énergie : présence d'offres prépayées mobiles, PAYG solaire rural, EaaS contractualisé, personnalisation tarifaire IA. Vérifie l'accessibilité USSD pour non-smartphones et la conformité APDP CI sur données AMI.",
+    "maturity_max_description": "Organisation proposant un catalogue complet d'offres digitales énergie : prépayé mobile multi-opérateurs, PAYG USSD solaire rural, EaaS industriel avec performance garantie IA, tarification Time-of-Use AMI, marketplace P2P en développement — couvrant 100% des segments clients CI.",
+    "scoring_rubric": {
+      "score_1_to_20": "Offre unique kWh facturée mensuellement, aucun canal digital, rechargement compteur prépayé uniquement en agence, pas d'application client.",
+      "score_21_to_40": "Application mobile basique (consultation facture + rechargement), mobile money sur 1 opérateur, offre prépayée <30% du parc.",
+      "score_41_to_60": "App client fonctionnelle (alertes, historique conso), mobile money multi-opérateurs, offre prépayée >50% parc, audit énergétique ponctuel B2B sans IA.",
+      "score_61_to_80": "AMI partiel avec app temps réel, PAYG solaire rural actif, programme EaaS B2B avec KPI, interface USSD, personnalisation tarifaire en cours.",
+      "score_81_to_100": "EaaS full IA avec performance garantie, PAYG IoT scoring crédit temps réel, marketplace énergie P2P, TOU dynamique AMI, API ouverte client — couverture tous segments CI."
+    },
+    "prompt_injection_context": "Secteur énergie CI : ANARE-CI régule les tarifs et impose PNDE 2030 (1M AMI). Les offres digitales doivent respecter APDP CI (consentement données AMI). Distinguer réseau électrique (CIE, réglementation ANARE-CI) et off-grid (BBOXX/ADER CI, réglementation MINEDD/ADER).",
+    "key_questions_for_llm": [
+      "Quelles offres digitales énergie proposez-vous à vos clients résidentiels (prépayé, PAYG, app mobile) ?",
+      "Avez-vous une offre d'efficacité énergétique ou d'audit IA pour vos clients industriels (EaaS, CPE) ?",
+      "Vos rechargements et paiements sont-ils accessibles via USSD (sans smartphone) pour les zones rurales ?",
+      "Utilisez-vous les données AMI/compteur pour personnaliser les offres ou détecter les opportunités d'économies ?",
+      "Êtes-vous en conformité APDP CI pour le traitement des données de consommation granulaires (AMI 15 min) ?"
+    ]
+  }
+}

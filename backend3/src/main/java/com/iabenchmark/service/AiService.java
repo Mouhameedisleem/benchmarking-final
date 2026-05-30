@@ -11,6 +11,7 @@ import com.iabenchmark.repository.EvaluationRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 @Service
 public class AiService {
@@ -31,9 +33,13 @@ public class AiService {
 
     public AiService(EvaluationRepository evaluationRepository) {
         this.evaluationRepository = evaluationRepository;
-        this.restTemplate = new RestTemplate();
+        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
+        factory.setConnectTimeout(10_000);
+        factory.setReadTimeout(240_000);
+        this.restTemplate = new RestTemplate(factory);
     }
 
+    @SuppressWarnings("unchecked")
     public boolean isAiServiceAvailable() {
         try {
             ResponseEntity<Map<String, Object>> response = restTemplate.getForEntity(aiServiceUrl + "/health", (Class<Map<String, Object>>)(Class<?>)Map.class);
@@ -73,9 +79,8 @@ public class AiService {
             ResponseEntity<Map<String, Object>> response = restTemplate.postForEntity(
                 aiServiceUrl + "/api/ai/score", payload, (Class<Map<String, Object>>)(Class<?>)Map.class);
 
-            if (!response.getStatusCode().is2xxSuccessful() || response.getBody() == null) return;
-
             Map<String, Object> body = response.getBody();
+            if (!response.getStatusCode().is2xxSuccessful() || body == null) return;
 
             // Enrich critical gaps
             Object gaps = body.get("critical_gaps");
@@ -123,10 +128,11 @@ public class AiService {
             BenchmarkResponse benchmark = getBenchmark(evaluation.getId());
             evaluation.setBenchmarkJson(objectMapper.writeValueAsString(benchmark));
         } catch (Exception ignored) {}
-        evaluationRepository.save(evaluation);
+        try {
+            if (evaluation != null) evaluationRepository.save(evaluation);
+        } catch (Exception ignored) {}
     }
 
-    @SuppressWarnings("unchecked")
     public List<RecommendationResponse> getStoredRecommendations(Evaluation evaluation) {
         if (evaluation.getRecommendationsJson() == null) return List.of();
         try {
@@ -165,8 +171,32 @@ public class AiService {
     }
 
     public List<RecommendationResponse> getAiRecommendations(Long evaluationId, String consultantPrompt) {
-        Evaluation evaluation = evaluationRepository.findById(evaluationId)
+        Evaluation evaluation = evaluationRepository.findById(Objects.requireNonNull(evaluationId))
                 .orElseThrow(() -> new EntityNotFoundException("Evaluation not found: " + evaluationId));
+
+        // Compute sub-axis scores from evaluation answers
+        Map<String, Double> weightedBySubAxis = new java.util.LinkedHashMap<>();
+        Map<String, Integer> totalWeightsBySubAxis = new java.util.LinkedHashMap<>();
+        for (EvaluationAnswer a : evaluation.getResponses()) {
+            String subAxisName = a.getQuestion().getSubAxis() != null ? a.getQuestion().getSubAxis() : "";
+            if (subAxisName.isEmpty()) continue;
+            String key = a.getQuestion().getAxis().name() + "::" + subAxisName;
+            double normalized = (a.getScoreValue() / 5.0) * 100.0;
+            int weight = a.getQuestion().getWeight() != null ? a.getQuestion().getWeight() : 3;
+            weightedBySubAxis.merge(key, normalized * weight, (a1, b) -> a1 + b);
+            totalWeightsBySubAxis.merge(key, weight, (a1, b) -> a1 + b);
+        }
+        List<Map<String, Object>> subAxisScores = new ArrayList<>();
+        for (Map.Entry<String, Double> entry : weightedBySubAxis.entrySet()) {
+            String[] parts = entry.getKey().split("::", 2);
+            if (parts.length != 2) continue;
+            double score = Math.round(entry.getValue() / totalWeightsBySubAxis.get(entry.getKey()) * 10.0) / 10.0;
+            Map<String, Object> sas = new HashMap<>();
+            sas.put("axis", parts[0]);
+            sas.put("sub_axis", parts[1]);
+            sas.put("score", score);
+            subAxisScores.add(sas);
+        }
 
         Map<String, Object> payload = new HashMap<>();
         payload.put("evaluation_id", evaluationId);
@@ -181,16 +211,21 @@ public class AiService {
         payload.put("marketing_score", evaluation.getMarketingCommunicationScore());
         payload.put("rh_score", evaluation.getRhCultureDigitaleScore());
         payload.put("offres_score", evaluation.getOffresDigitalesScore());
+        payload.put("modele_operationnel_score", evaluation.getModeleOperationnelScore());
+        payload.put("it_data_score", evaluation.getItDataScore());
         payload.put("maturity_level", evaluation.getMaturityLevel().name());
+        payload.put("sub_axis_scores", subAxisScores);
         if (consultantPrompt != null && !consultantPrompt.isBlank()) {
             payload.put("consultant_prompt", consultantPrompt);
         }
 
         try {
+            @SuppressWarnings("unchecked")
             ResponseEntity<Map<String, Object>> response = restTemplate.postForEntity(
                 aiServiceUrl + "/api/ai/generate-recommendations", payload, (Class<Map<String, Object>>)(Class<?>)Map.class);
-            if (response.getStatusCode().is2xxSuccessful() && response.getBody() != null) {
-                return parseRecommendations((Map<String, Object>) response.getBody());
+            Map<String, Object> recBody = response.getBody();
+            if (response.getStatusCode().is2xxSuccessful() && recBody != null) {
+                return parseRecommendations(recBody);
             }
         } catch (Exception e) {
             throw new RuntimeException("AI service unavailable: " + e.getMessage());
@@ -198,48 +233,75 @@ public class AiService {
         return List.of();
     }
 
-    @SuppressWarnings("unchecked")
     public BenchmarkResponse getBenchmark(Long evaluationId) {
         return getBenchmark(evaluationId, null);
     }
 
-    @SuppressWarnings("unchecked")
     public BenchmarkResponse getBenchmark(Long evaluationId, String consultantPrompt) {
-        Evaluation evaluation = evaluationRepository.findById(evaluationId)
+        Evaluation evaluation = evaluationRepository.findById(Objects.requireNonNull(evaluationId))
                 .orElseThrow(() -> new EntityNotFoundException("Evaluation not found: " + evaluationId));
 
+        // Compute sub-axis scores from evaluation answers
+        Map<String, Double> weightedBySubAxis = new java.util.LinkedHashMap<>();
+        Map<String, Integer> totalWeightsBySubAxis = new java.util.LinkedHashMap<>();
+        for (EvaluationAnswer a : evaluation.getResponses()) {
+            String subAxisName = a.getQuestion().getSubAxis() != null ? a.getQuestion().getSubAxis() : "";
+            if (subAxisName.isEmpty()) continue;
+            String key = a.getQuestion().getAxis().name() + "::" + subAxisName;
+            double normalized = (a.getScoreValue() / 5.0) * 100.0;
+            int weight = a.getQuestion().getWeight() != null ? a.getQuestion().getWeight() : 3;
+            weightedBySubAxis.merge(key, normalized * weight, (a1, b) -> a1 + b);
+            totalWeightsBySubAxis.merge(key, weight, (a1, b) -> a1 + b);
+        }
+        List<Map<String, Object>> subAxisScores = new ArrayList<>();
+        for (Map.Entry<String, Double> entry : weightedBySubAxis.entrySet()) {
+            String[] parts = entry.getKey().split("::", 2);
+            if (parts.length != 2) continue;
+            double score = Math.round(entry.getValue() / totalWeightsBySubAxis.get(entry.getKey()) * 10.0) / 10.0;
+            Map<String, Object> sas = new HashMap<>();
+            sas.put("axis", parts[0]);
+            sas.put("sub_axis", parts[1]);
+            sas.put("score", score);
+            sas.put("question_count", totalWeightsBySubAxis.get(entry.getKey()));
+            subAxisScores.add(sas);
+        }
+
         Map<String, Object> payload = new HashMap<>();
-        payload.put("company_name",   evaluation.getCompany().getName());
-        payload.put("sector",         evaluation.getCompany().getSector() != null ? evaluation.getCompany().getSector() : "");
-        payload.put("country",        evaluation.getCompany().getCountry() != null ? evaluation.getCompany().getCountry() : "");
-        payload.put("company_size",   evaluation.getCompany().getSize() != null ? evaluation.getCompany().getSize() : "");
-        payload.put("global_score",   evaluation.getGlobalScore());
-        payload.put("business_score", evaluation.getBusinessScore());
-        payload.put("process_score",  evaluation.getProcessScore());
-        payload.put("si_score",       evaluation.getInformationSystemScore());
-        payload.put("canaux_score",   evaluation.getCanauxDistributionScore());
-        payload.put("marketing_score", evaluation.getMarketingCommunicationScore());
-        payload.put("rh_score",       evaluation.getRhCultureDigitaleScore());
-        payload.put("offres_score",   evaluation.getOffresDigitalesScore());
-        payload.put("maturity_level", evaluation.getMaturityLevel().name());
+        payload.put("company_name",              evaluation.getCompany().getName());
+        payload.put("sector",                    evaluation.getCompany().getSector() != null ? evaluation.getCompany().getSector() : "");
+        payload.put("country",                   evaluation.getCompany().getCountry() != null ? evaluation.getCompany().getCountry() : "");
+        payload.put("company_size",              evaluation.getCompany().getSize() != null ? evaluation.getCompany().getSize() : "");
+        payload.put("global_score",              evaluation.getGlobalScore());
+        payload.put("business_score",            evaluation.getBusinessScore());
+        payload.put("process_score",             evaluation.getProcessScore());
+        payload.put("si_score",                  evaluation.getInformationSystemScore());
+        payload.put("canaux_score",              evaluation.getCanauxDistributionScore());
+        payload.put("marketing_score",           evaluation.getMarketingCommunicationScore());
+        payload.put("rh_score",                  evaluation.getRhCultureDigitaleScore());
+        payload.put("offres_score",              evaluation.getOffresDigitalesScore());
+        payload.put("modele_operationnel_score", evaluation.getModeleOperationnelScore());
+        payload.put("it_data_score",             evaluation.getItDataScore());
+        payload.put("maturity_level",            evaluation.getMaturityLevel().name());
+        payload.put("sub_axis_scores",           subAxisScores);
         if (consultantPrompt != null && !consultantPrompt.isBlank()) {
             payload.put("consultant_prompt", consultantPrompt);
         }
 
         try {
+            @SuppressWarnings("unchecked")
             ResponseEntity<Map<String, Object>> response = restTemplate.postForEntity(
                 aiServiceUrl + "/api/ai/benchmark", payload, (Class<Map<String, Object>>)(Class<?>)Map.class);
 
-            if (!response.getStatusCode().is2xxSuccessful() || response.getBody() == null) {
+            Map<String, Object> benchBody = response.getBody();
+            if (!response.getStatusCode().is2xxSuccessful() || benchBody == null) {
                 throw new RuntimeException("AI service returned non-2xx response");
             }
-            return parseBenchmarkResponse(response.getBody(), evaluation);
+            return parseBenchmarkResponse(benchBody, evaluation);
         } catch (Exception e) {
             throw new RuntimeException("AI benchmark service unavailable: " + e.getMessage());
         }
     }
 
-    @SuppressWarnings("unchecked")
     private BenchmarkResponse parseBenchmarkResponse(Map<String, Object> body, Evaluation evaluation) {
         BenchmarkResponse res = new BenchmarkResponse();
         res.setCompanyName(str(body, "company_name"));
@@ -292,6 +354,7 @@ public class AiService {
                 t.setHorizon(str(m, "horizon"));
                 t.setAdoptionRate(str(m, "adoption_rate"));
                 t.setSource(str(m, "source"));
+                t.setSourceUrl(str(m, "source_url"));
                 return t;
             }).toList());
         }
@@ -308,6 +371,7 @@ public class AiService {
                 l.setKeyPractice(str(m, "key_practice"));
                 l.setDifferentiator(str(m, "differentiator"));
                 l.setSource(str(m, "source"));
+                l.setSourceUrl(str(m, "source_url"));
                 return l;
             }).toList());
         }
@@ -328,6 +392,32 @@ public class AiService {
             }).toList());
         }
 
+        // Sub-axis benchmarks
+        Object sabList = body.get("sub_axis_benchmarks");
+        if (sabList instanceof List<?> list) {
+            res.setSubAxisBenchmarks(list.stream().filter(i -> i instanceof Map).map(i -> {
+                Map<?,?> m = (Map<?,?>) i;
+                BenchmarkResponse.SubAxisBenchmark sab = new BenchmarkResponse.SubAxisBenchmark();
+                sab.setAxis(str(m, "axis"));
+                sab.setSubAxis(str(m, "sub_axis"));
+                sab.setCompanyScore(toDouble(m.get("company_score")));
+                sab.setAnalyseStatique(str(m, "analyse_statique"));
+                sab.setMaturiteMaximale(str(m, "maturite_maximale"));
+                sab.setAnalysePersonnalisee(str(m, "analyse_personnalisee"));
+                sab.setTendances(toListOfMaps(m.get("tendances")));
+                sab.setCadreJuridique(toListOfMaps(m.get("cadre_juridique")));
+                sab.setMaLeveesFonds(toListOfMaps(m.get("ma_levees_fonds")));
+                sab.setLeadersNationaux(toListOfMaps(m.get("leaders_nationaux")));
+                sab.setLeadersRegionaux(toListOfMaps(m.get("leaders_regionaux")));
+                sab.setLeadersInternationaux(toListOfMaps(m.get("leaders_internationaux")));
+                sab.setZoomCaseStudy(toSingleMap(m.get("zoom_case_study")));
+                sab.setComparatifOrganisations(toSingleMap(m.get("comparatif_organisations")));
+                sab.setRisques(toListOfMaps(m.get("risques")));
+                sab.setOpportunites(toListOfMaps(m.get("opportunites")));
+                return sab;
+            }).toList());
+        }
+
         return res;
     }
 
@@ -344,6 +434,7 @@ public class AiService {
     }
 
     // ...existing code...
+    @SuppressWarnings("unchecked")
     private List<RecommendationResponse> parseRecommendations(Map<String, Object> body) {
         Object recs = body.get("recommendations");
         if (!(recs instanceof List<?> list)) return List.of();
@@ -351,8 +442,11 @@ public class AiService {
             .filter(item -> item instanceof Map)
             .map(item -> {
                 Map<String, Object> m = (Map<String, Object>) item;
-                return new RecommendationResponse(str(m, "axis"), str(m, "priority"),
+                RecommendationResponse r = new RecommendationResponse(str(m, "axis"), str(m, "priority"),
                     str(m, "title"), str(m, "description"), str(m, "best_practice"));
+                r.setSource(str(m, "source"));
+                r.setSourceUrl(str(m, "source_url"));
+                return r;
             }).toList();
     }
 
@@ -365,10 +459,24 @@ public class AiService {
         };
     }
 
-    @SuppressWarnings("unchecked")
     private List<String> toStringList(Object obj) {
         if (obj instanceof List<?> list) return list.stream().map(Object::toString).toList();
         return List.of();
+    }
+
+    @SuppressWarnings("unchecked")
+    private List<Map<String, Object>> toListOfMaps(Object obj) {
+        if (!(obj instanceof List<?> list)) return List.of();
+        return list.stream()
+            .filter(i -> i instanceof Map)
+            .map(i -> (Map<String, Object>) i)
+            .toList();
+    }
+
+    @SuppressWarnings("unchecked")
+    private Map<String, Object> toSingleMap(Object obj) {
+        if (obj instanceof Map<?, ?> m) return (Map<String, Object>) m;
+        return Map.of();
     }
 
     private String str(Map<?, ?> m, String key) {

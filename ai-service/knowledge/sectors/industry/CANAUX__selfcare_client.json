@@ -1,0 +1,284 @@
+{
+  "secteur": "industrie",
+  "axe": "CANAUX_DISTRIBUTION",
+  "sous_axe": "selfcare_client",
+  "label": "Selfcare client industriel",
+  "description": "Capacité des entreprises industrielles à offrir à leurs clients B2B un espace d'autonomie numérique : consultation historique commandes et livraisons, téléchargement documents (CoA, factures, EUDR), paiements autonomes via Mobile Money CI, suivi réclamations en ligne, et accès aux données qualité de leurs lots sans passer par un intermédiaire humain.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Clients B2B industries CI : ont des équipes achat avec compétences numériques croissantes (Nestlé CI, Carrefour CI, Barry Callebaut)",
+      "Appels clients industries CI : 40-60% pour consultation statut commande, CoA, factures — tâches à faible valeur ajoutée pour commerciaux",
+      "Paiements B2B CI : 60-90 jours délai standard — paiements anticipés via selfcare (Orange Money Business CI) accélèrent BFR",
+      "CoA et documentation qualité : exigés immédiatement par clients ISO CI et exportateurs — téléchargement selfcare elimine l'attente",
+      "Portail clients CI : spécificité industrie = accès aux données techniques (analyses, spécifications) autant qu'aux données commerciales (commandes, factures)",
+      "WhatsApp Business CI : canal selfcare hybride — clients PME CI préfèrent WhatsApp aux portails web pour commandes rapides"
+    ],
+    "acteurs_cles": [
+      "GMS CI (Carrefour CI, Prosuma CI) — clients B2B exigeant portails selfcare fournisseurs",
+      "Barry Callebaut CI / Cargill CI — acheteurs cacao CI : accès selfcare données lot, EUDR, CoA",
+      "Nestlé CI / Unilever CI — industries agro CI : portails fournisseurs self-service",
+      "Orange Money Business CI / Wave for Business CI — paiements B2B selfcare autonomes",
+      "WhatsApp Business API (Meta) — canal selfcare industriel hybride CI",
+      "DGI CI — portail e-facture selfcare téléchargement copies conformes"
+    ],
+    "reglementation_locale": [
+      "DGI CI Loi 2022-974 : copies conformes e-factures téléchargeables en ligne par clients CI",
+      "APDP CI Loi 2013-450 : authentification clients portail selfcare — données personnelles protégées",
+      "BCEAO Instruction 008-05-2015 : paiements selfcare Mobile Money CI B2B réglementés",
+      "ISO 9001:2015 : accès client à la documentation qualité — CoA téléchargeables en ligne requis",
+      "Loi CI 2017-771 : valeur juridique documents téléchargés depuis portail selfcare CI",
+      "Code Commerce CI : droit client à copie conforme factures — portail selfcare répond à cette obligation"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Aucun selfcare. Toute interaction nécessite un appel au commercial ou au service client. Clients attendent 1-5 jours pour documents. Aucun paiement en ligne. Réclamations verbales uniquement.",
+      "indicateurs": [
+        "0 portail client — toute demande par téléphone ou visite",
+        "Documents (CoA, factures) : envoyés par courrier ou email sur demande",
+        "Paiements : virement bancaire sur facture papier — délai 45-90 jours",
+        "Réclamations verbales — aucun suivi ni accusé de réception",
+        "0 autonomie client — 100% des interactions nécessitent un humain"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Email de réponse aux demandes documentaires. Quelques documents téléchargeables (fiche technique produit sur site web). Paiements Mobile Money CI ponctuels non structurés. Réclamations par email sans SLA.",
+      "indicateurs": [
+        "Site web produit : fiches techniques téléchargeables — CoA non disponibles",
+        "Email demandes documentaires — délai 1-2 jours",
+        "Mobile Money CI ponctuel : ni automatisé ni dans portail",
+        "Réclamations email — délai traitement non mesuré",
+        "< 20% interactions clients peuvent se faire sans appel"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Portail selfcare authentifié : historique commandes, téléchargement CoA et factures par lot. Paiements Orange Money Business CI disponibles en ligne. Ticketing réclamations avec accusé de réception et SLA. WhatsApp Business CI pour commandes rapides.",
+      "indicateurs": [
+        "Portail client authentifié : historique 12 mois, CoA par lot, e-factures DGI CI",
+        "60%+ des demandes documentaires résolues sans appel commercial",
+        "Paiements Orange Money Business CI : disponibles depuis portail client",
+        "Ticketing réclamations : accusé de réception automatique + SLA 48h affiché",
+        "WhatsApp Business CI : réponses CoA et statut commande < 2h ouvrées"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "Selfcare B2B complet. 80%+ interactions sans appel. Portail avec alertes proactives (lot livré, CoA disponible, facture échue). EUDR données disponibles selfcare. Paiements automatiques intégrés ERP. NPS > 60.",
+      "indicateurs": [
+        "80%+ interactions clients autonomes — taux appels -65% vs baseline",
+        "Alertes proactives : notification SMS/email client dès lot livré, CoA disponible",
+        "EUDR données accessibles selfcare : parcelles géolocalisées par lot cacao CI",
+        "Paiements B2B automatisés intégrés ERP : Mobile Money CI + virement UEMOA",
+        "NPS selfcare > 60 — enquête satisfaction post-interaction automatique"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Plateforme selfcare industrielle de référence CI. IA assistant client B2B. 95%+ interactions autonomes. Intégration directe dans l'ERP du client. Open data EUDR par API. NPS > 75. Référence UEMOA.",
+      "indicateurs": [
+        "IA assistant selfcare B2B : répond aux questions techniques (spécifications, conformité) sans humain",
+        "95%+ interactions autonomes — équipe commerciale focalisée sur développement",
+        "API clients : ERP clients connectent directement au portail CI — 0 portail web nécessaire",
+        "Open data EUDR API : données géospatiales intégrées ERP acheteurs EU directement",
+        "NPS > 75 — référence selfcare B2B industrie UEMOA"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Vos clients B2B peuvent-ils télécharger leurs CoA et factures de façon autonome ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — tout par téléphone ou visite"},
+        {"valeur": 2, "label": "Fiches techniques sur site web — CoA et factures sur demande email"},
+        {"valeur": 3, "label": "Portail authentifié : CoA et e-factures téléchargeables par numéro de lot"},
+        {"valeur": 4, "label": "Portail selfcare complet : 80%+ interactions sans appel, alertes proactives"},
+        {"valeur": 5, "label": "API client : ERP acheteurs connectés directement, 95%+ autonome"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Vos clients peuvent-ils effectuer leurs paiements de façon autonome (Mobile Money CI, portail) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — virement bancaire sur facture papier uniquement"},
+        {"valeur": 2, "label": "Mobile Money CI ponctuel — pas de portail paiement intégré"},
+        {"valeur": 3, "label": "Paiements Orange Money Business CI disponibles sur portail client"},
+        {"valeur": 4, "label": "Paiements B2B automatisés intégrés ERP : Mobile Money CI + virement UEMOA"},
+        {"valeur": 5, "label": "Paiements API temps réel : déclenchés automatiquement à validation livraison"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Utilisez-vous WhatsApp Business CI pour le selfcare client (statut commandes, CoA) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — WhatsApp personnel non structuré"},
+        {"valeur": 2, "label": "WhatsApp personnel commercial — informel, non tracé"},
+        {"valeur": 3, "label": "WhatsApp Business CI : réponses CoA et statut < 2h ouvrées"},
+        {"valeur": 4, "label": "WhatsApp Business API CI : chatbot statut commandes 24h/24"},
+        {"valeur": 5, "label": "IA WhatsApp + portail intégrés : 95%+ requêtes résolues automatiquement"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Vos clients B2B ont-ils accès aux données EUDR (traçabilité cacao) en selfcare ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non applicable ou non — 0 données EUDR partagées"},
+        {"valeur": 2, "label": "Document EUDR envoyé par email sur demande — délai 3-5j"},
+        {"valeur": 3, "label": "Documentation EUDR téléchargeable en ligne par numéro de lot"},
+        {"valeur": 4, "label": "EUDR données selfcare : parcelles géolocalisées accessibles temps réel"},
+        {"valeur": 5, "label": "API EUDR : ERP acheteurs EU connectés directement aux données CI"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "Portail selfcare documentaire",
+      "Paiements B2B autonomes",
+      "WhatsApp Business CI selfcare",
+      "Données EUDR selfcare",
+      "Taux interactions autonomes"
+    ],
+    "lignes": [
+      {
+        "organisation": "PMI CI (< 50 employés)",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "0 selfcare, virements papier, WhatsApp personnel, 0 EUDR, 0% autonome"
+      },
+      {
+        "organisation": "Industrie moyenne CI (50-200 employés)",
+        "scores": [2, 2, 2, 1, 2],
+        "note_globale": 2,
+        "commentaire": "Fiches web, Mobile Money ponctuel, WhatsApp business informel, 20% autonome"
+      },
+      {
+        "organisation": "SUCAF CI",
+        "scores": [3, 3, 3, 2, 3],
+        "note_globale": 3,
+        "commentaire": "Portail GMS CI, paiements portail, WhatsApp Business CI, EUDR partiel, 60% autonome"
+      },
+      {
+        "organisation": "SIFCA CI",
+        "scores": [5, 4, 4, 5, 5],
+        "note_globale": 5,
+        "commentaire": "API ERP clients, paiements ERP auto, chatbot WhatsApp, EUDR API, 92% autonome"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "Orange Money Business CI — paiements selfcare B2B",
+      "part_de_marche_estimee": "Leader paiements selfcare B2B CI",
+      "forces": ["API Mobile Money Business CI", "Portail entreprise Orange CI", "SDK documenté", "SLA entreprise"],
+      "faiblesses": ["Frais transaction 0,5-1,5%", "Plafonds transactions B2B CI", "Support API CI variable"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "Hubtel Africa — portail selfcare B2B Afrique de l'Ouest",
+      "part_de_marche_estimee": "Plateforme selfcare B2B Afrique émergente",
+      "forces": ["Selfcare commandes, factures, paiements intégrés", "Mobile Money multi-opérateurs CI", "Multilingue (français, anglais)"],
+      "faiblesses": ["Présence CI limitée", "Adoption industries CI faible", "Personnalisation limitée"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "Salesforce Experience Cloud — portail selfcare B2B industriel",
+      "part_de_marche_estimee": "Leader mondial portail selfcare B2B",
+      "forces": ["Portail B2B configurable", "IA Einstein assistant", "Intégration ERP native", "Mobile app"],
+      "faiblesses": ["Coût très élevé (> 15 M FCFA/an)", "Complexité implémentation CI", "Sur-mesure grands groupes"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Odoo CI — portail client selfcare B2B",
+      "usage": "Portail client : historique commandes, CoA, e-factures, réclamations, paiements Orange Money CI",
+      "niveau_cible": "3+",
+      "cout_estime": "Inclus Odoo Manufacturing CI (800 000–2 500 000 FCFA/an)",
+      "disponibilite_ci": "International — partenaires Odoo CI Abidjan"
+    },
+    {
+      "nom": "WhatsApp Business API (Meta) — selfcare industriel CI",
+      "usage": "Chatbot statut commandes, CoA, alertes livraisons — canal préféré clients PME CI",
+      "niveau_cible": "3+",
+      "cout_estime": "150 000–500 000 FCFA/an (API Meta + hébergement chatbot)",
+      "disponibilite_ci": "International — SaaS accessible CI, partenaires intégration CI disponibles"
+    },
+    {
+      "nom": "Orange Money Business CI API — paiements selfcare B2B",
+      "usage": "Paiements B2B autonomes depuis portail client CI : factures, acomptes, paiements anticipés",
+      "niveau_cible": "3+",
+      "cout_estime": "0,5–1,5% par transaction + intégration API 500 000 FCFA",
+      "disponibilite_ci": "Natif CI — Orange Business CI Abidjan"
+    },
+    {
+      "nom": "Zendesk / Freshdesk — selfcare réclamations B2B CI",
+      "usage": "Portail réclamations selfcare : tickets clients, FAQ, base de connaissances technique CI",
+      "niveau_cible": "3+",
+      "cout_estime": "100 000–400 000 FCFA/an (SaaS cloud)",
+      "disponibilite_ci": "International — SaaS accessible CI"
+    },
+    {
+      "nom": "Azure API Management — API selfcare clients ERP CI",
+      "usage": "Publication APIs sécurisées pour ERP clients : commandes, CoA, EUDR — portail développeurs",
+      "niveau_cible": "4-5",
+      "cout_estime": "50 000–200 000 FCFA/mois selon appels API",
+      "disponibilite_ci": "International — cloud Azure accessible CI"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "COGIT CI (Compagnie de Gestion Industrielle et Technique) — portail selfcare B2B : appels commerciaux -68%, NPS 32→61",
+    "organisation": "COGIT CI (fabricant emballages et conditionnements industriels CI, Yopougon — 65 clients B2B dont 18 GMS et industries CI)",
+    "contexte": "COGIT CI : 2 commerciaux terrain pour 65 clients. 40% du temps commercial = répondre à des demandes documentaires (CoA, factures, statut commande). Carrefour CI impose en 2023 : portail selfcare fournisseur requis pour référencement. Barry Callebaut CI exige CoA en ligne immédiat pour chaque lot livré.",
+    "probleme": "2 commerciaux passent 3,2h/jour sur demandes documentaires = 80% de leur temps non commercial. Carrefour CI : condition portail selfcare à respecter sous 3 mois. Barry Callebaut CI : CoA en 72h max (actuellement 5 jours). NPS clients GMS CI : 32/100.",
+    "solution_deployee": "Portail selfcare Odoo CI : historique 24 mois, CoA téléchargeables par numéro de lot immédiatement, e-factures DGI CI conformes, statut livraison GPS. WhatsApp Business API CI : chatbot statut commandes 24h/24 (Twilio CI). Paiements Orange Money Business CI depuis portail. Formation clients GMS CI (demi-journée sur site Carrefour CI et Barry Callebaut CI).",
+    "resultats": "Appels documentaires commerciaux : 3,2h → 1h/jour (-68%). Temps commercial libéré : 2,2h × 2 × 250j = 1 100h/an — réorientées prospection. CoA délai : 5 jours → instantané. Barry Callebaut CI : renouvellement contrat + 800 tonnes/an. Carrefour CI : référencement confirmé. WhatsApp chatbot : 78% requêtes résolues sans humain. NPS GMS CI : 32 → 61/100 en 6 mois. Délai paiement GMS CI : 60j → 32j (e-facture + paiement selfcare). CA +18% (Barry Callebaut nouvel engagement + Prosuma CI nouvel référencement).",
+    "enseignements": [
+      "Le portail selfcare industriel libère 68% du temps commercial passé sur des tâches documentaires — c'est plus d'1 ETP temps plein récupéré sans recrutement",
+      "Le CoA instantané en ligne est souvent la condition cachée de renouvellement de contrat avec les multinationales CI — 5 jours de délai est éliminatoire pour les certifications ISO clients",
+      "WhatsApp Business API CI répond aux préférences des PME clientes CI : elles préfèrent WhatsApp à un portail web — 78% de résolution automatique sur ce canal"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "portail selfcare B2B industriel CI", "CoA téléchargeable en ligne CI", "autonomie client B2B CI",
+      "paiements Orange Money Business CI selfcare", "WhatsApp Business API CI", "EUDR selfcare accès CI",
+      "taux interactions autonomes industrie CI", "chatbot client industriel CI",
+      "e-facture DGI CI selfcare", "réclamations ticketing selfcare CI"
+    ],
+    "signaux_niveau_avance": [
+      "Portail client authentifié avec CoA et factures téléchargeables",
+      "60%+ interactions clients autonomes sans appel",
+      "Paiements Orange Money CI disponibles depuis portail",
+      "WhatsApp Business CI actif avec réponses < 2h",
+      "NPS selfcare mesuré et > 40/100"
+    ],
+    "pieges_frequents": [
+      "Site web avec fiche technique ≠ portail selfcare — l'accès public à une fiche PDF n'est pas du selfcare authentifié",
+      "CoA envoyé rapidement par email ≠ selfcare — le selfcare c'est le client qui prend ce dont il a besoin sans solliciter personne",
+      "WhatsApp personnel commercial ≠ WhatsApp Business API — le canal informel n'est ni tracé, ni conforme, ni exploitable",
+      "Taux appels faible ≠ selfcare élevé — peut signifier que les clients ont abandonné à chercher l'information (frustration silencieuse)"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "0 selfcare. Tout par téléphone. CoA courrier. Paiements virements papier. 0% autonome.",
+      "score_21_to_40": "Fiches web. Email documentaire. Mobile Money ponctuel. < 20% autonome.",
+      "score_41_to_60": "Portail authentifié CoA/factures. Paiements portail. WhatsApp Business CI. 60% autonome.",
+      "score_61_to_80": "Portail self-service complet 80%+. EUDR selfcare. Alertes proactives. NPS > 60.",
+      "score_81_to_100": "API ERP clients. IA assistant B2B. 95% autonome. Open data EUDR. NPS > 75. Référence UEMOA."
+    }
+  }
+}

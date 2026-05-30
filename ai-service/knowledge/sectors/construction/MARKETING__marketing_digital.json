@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "MARKETING",
+    "sous_axe": "marketing_digital",
+    "version": "1.0",
+    "langue": "fr",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "Le marketing digital dans le BTP CI est sous-développé : la plupart des entreprises de construction et des promoteurs immobiliers s'appuient sur le bouche-à-oreille (65% des ventes immobilières CI) et les relations personnelles pour développer leur activité. Les grands projets publics sont obtenus par les réseaux SIGMAP DGMP CI. Cependant, le marché immobilier résidentiel CI (déficit de 600 000 logements) et le BTP privé offrent un potentiel de marketing digital considérable, notamment pour capter les acquéreurs de la diaspora CI via les réseaux sociaux, le référencement et la publicité en ligne.",
+    "chiffres_cles": [
+      "65% des ventes immobilières CI passent par le bouche-à-oreille et les réseaux personnels",
+      "Taux de pénétration Internet CI : 62% (ARTCI 2023), dont 85% via mobile",
+      "Facebook CI : 4,2 millions d'utilisateurs (1er réseau social CI, notamment diaspora)",
+      "WhatsApp CI : 6,5 millions d'utilisateurs actifs (principal canal de communication mobile CI)",
+      "Recherches Google 'immobilier Abidjan', 'appartement Cocody', 'promoteur Abidjan' : +45% en 2023"
+    ],
+    "specificites_locales": [
+      "Facebook et WhatsApp sont les canaux digitaux dominants pour l'immobilier CI (Instagram en croissance)",
+      "Diaspora CI très active sur les groupes Facebook CI immobilier (France, Canada, USA)",
+      "LinkedIn CI : utilisé pour le BTP B2B (entreprises, sous-traitants, fournisseurs, MOA institutionnels)",
+      "Google My Business CI : indispensable pour le référencement local des entreprises BTP Abidjan",
+      "YouTube CI : consommation vidéo en forte croissance, adapté aux visites virtuelles immobilières"
+    ]
+  },
+  "definition_axe": {
+    "titre": "Marketing digital dans le secteur BTP",
+    "description": "Capacité de l'entreprise BTP à utiliser les canaux digitaux pour développer sa notoriété, générer des leads qualifiés et convertir des prospects en clients. Le marketing digital BTP CI couvre le référencement (SEO/SEA sur Google CI), la présence sur les réseaux sociaux (Facebook, Instagram, LinkedIn CI), la publicité en ligne (Meta Ads, Google Ads), le marketing de contenu (vidéos, témoignages, avant/après chantiers), la génération de leads immobiliers et les campagnes ciblant la diaspora ivoirienne.",
+    "perimetre": [
+      "SEO/SEA : référencement Google CI sur mots-clés immobilier et BTP (appartement Abidjan, promoteur CI)",
+      "Réseaux sociaux : Facebook, Instagram, LinkedIn CI pour notoriété et génération de leads",
+      "Publicité digitale : Meta Ads (Facebook/Instagram), Google Ads CI ciblant acquéreurs et MO",
+      "Marketing de contenu : vidéos chantier, témoignages clients, avant/après, visites virtuelles",
+      "Email marketing : campagnes ciblées (prospects immobilier, clients existants, partenaires BTP CI)",
+      "Marketing diaspora : ciblage géographique diaspora CI (France, Canada, USA) sur Meta Ads"
+    ],
+    "technologies_cles": [
+      "Google My Business CI — Présence locale Abidjan pour entreprises BTP CI (SEO local)",
+      "Meta Ads (Facebook/Instagram) — Publicité immobilière ciblée acquéreurs CI et diaspora",
+      "Google Ads CI — SEA sur mots-clés immobilier et BTP Abidjan",
+      "Canva Pro — Création de contenu visuel BTP CI adapté aux réseaux sociaux (sans designer)",
+      "Mailchimp / Brevo — Email marketing pour prospects immobiliers et partenaires BTP CI",
+      "WordPress + Yoast SEO — Site web BTP CI optimisé référencement Google CI"
+    ]
+  },
+  "enjeux_specifiques": {
+    "enjeux": [
+      {
+        "titre": "Capter les acquéreurs de la diaspora ivoirienne via le digital",
+        "description": "La diaspora ivoirienne (estimée à 2,5 millions de personnes dans le monde) représente un marché immobilier considérable. Ces acquéreurs potentiels consultent les offres immobilières CI exclusivement en ligne (sites web, Facebook, YouTube). Les promoteurs CI qui développent une présence digitale qualitative sur ces canaux peuvent capter ce marché sans représentation physique à l'étranger.",
+        "impact": "Accès à un marché acquéreurs supplémentaire de 35-40% du total VEFA Abidjan"
+      },
+      {
+        "titre": "Référencement pour les appels d'offres BTP publics",
+        "description": "Au-delà de l'immobilier résidentiel, les entreprises BTP CI qui soumissionnent sur SIGMAP DGMP CI peuvent renforcer leur positionnement digital pour être identifiées par les collectivités, les bailleurs de fonds (BAD, BM, AFD) et les entreprises privées comme MOA. LinkedIn et le site web avec références de projets jouent un rôle clé dans cette crédibilité digitale.",
+        "impact": "Crédibilité accrue pour les marchés publics et les partenariats avec des bailleurs de fonds internationaux"
+      },
+      {
+        "titre": "Contenu vidéo pour démontrer le savoir-faire BTP CI",
+        "description": "Les vidéos de chantier (time-lapse, visite de progression, témoignages clients) sont le contenu le plus consommé sur Facebook et YouTube CI. Les entreprises BTP CI qui documentent régulièrement leurs chantiers en vidéo construisent une preuve de qualité et de compétence bien plus convaincante que des textes ou brochures.",
+        "impact": "Notoriété accrue, preuve de qualité visible avant achat, différenciation concurrentielle forte"
+      }
+    ]
+  },
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Inexistant",
+      "description": "Aucune présence digitale. Pas de site web ou site vitrine non maintenu. Aucun compte sur les réseaux sociaux. Prospection uniquement par réseau personnel, bouche-à-oreille et présence physique dans les salons immobiliers CI.",
+      "signes_distinctifs": [
+        "Aucun site web ou site vitrine non mis à jour depuis 2+ ans",
+        "Aucun compte Facebook, Instagram ou LinkedIn professionnel",
+        "Prospection : réseau personnel, bouche-à-oreille, prescripteurs physiques",
+        "Aucune base de données prospects ou clients",
+        "Brochures papier comme seul support commercial"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Site web vitrine basique et page Facebook. Posts Facebook irréguliers (photos chantier). Numéro WhatsApp Business pour les demandes commerciales. Google My Business créé. Aucune publicité digitale payante. Stratégie non définie.",
+      "signes_distinctifs": [
+        "Site web vitrine (Wix ou WordPress basique) avec informations de base",
+        "Page Facebook avec 200-1000 followers, posts irréguliers (1-2/mois)",
+        "Numéro WhatsApp Business pour les demandes entrantes",
+        "Google My Business créé avec quelques avis clients",
+        "Aucune publicité digitale payante, aucun budget marketing digital"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Stratégie de contenu régulière sur Facebook et Instagram. Publicités Meta Ads ponctuelles pour les lancements de programmes immobiliers. Site web SEO-optimisé avec catalogue projets. Email marketing pour prospects et clients. Présence LinkedIn pour le BTP B2B.",
+      "signes_distinctifs": [
+        "Stratégie contenu définie : 3-5 posts/semaine Facebook/Instagram (photos chantier, témoignages, avancement)",
+        "Meta Ads : campagnes publicité sur lancements de programmes (budget 500 000-2 M FCFA/campagne)",
+        "Site web optimisé SEO : références projets, blog BTP CI, formulaire de contact qualifié",
+        "Email marketing mensuel : newsletter prospects et clients (Mailchimp ou Brevo)",
+        "LinkedIn CI : page entreprise avec profils équipe, références projets publics"
+      ]
+    },
+    "niveau_4": {
+      "label": "Optimisé",
+      "description": "Marketing digital intégré avec funnel de conversion complet. Ciblage diaspora CI sur Meta Ads (France, Canada). Vidéos chantier et témoignages réguliers (YouTube CI). SEA Google Ads sur mots-clés immobilier Abidjan. CRM connecté aux leads digitaux. ROI marketing mesuré.",
+      "signes_distinctifs": [
+        "Funnel de conversion complet : publicité → landing page → formulaire → CRM → nurturing → vente",
+        "Ciblage diaspora CI : Meta Ads géolocalisé France/Canada/USA avec créatifs adaptés (français diaspora CI)",
+        "YouTube CI : chaîne avec 50+ vidéos chantier, time-lapses, visites virtuelles (> 10 000 abonnés)",
+        "Google Ads CI : SEA sur 30+ mots-clés immobilier Abidjan (coût par clic moyen 250-1 200 FCFA)",
+        "CRM (HubSpot, Zoho) connecté aux leads Facebook/Google, nurturing automatisé"
+      ]
+    },
+    "niveau_5": {
+      "label": "Différenciant",
+      "description": "Marketing digital data-driven et IA-augmenté. IA pour la personnalisation des publicités et le scoring des leads. Influenceurs immobilier CI partenaires. Communauté en ligne engagée (groupe Facebook 'Investir en CI'). ROI marketing précisément mesuré. Marketing automation complet.",
+      "signes_distinctifs": [
+        "IA publicités : optimisation automatique créatifs et audiences Meta Ads (IA Meta Advantage+)",
+        "Scoring leads IA : prédiction probabilité de conversion pour priorisation commerciale",
+        "Partenariats influenceurs immobilier CI (Instagram 50K+ followers) pour lancements programmes",
+        "Communauté en ligne (groupe Facebook modéré) : 5 000+ membres intéressés par l'immobilier CI",
+        "Attribution marketing multi-touch : ROI précis par canal (coût d'acquisition client par canal)"
+      ]
+    }
+  },
+  "indicateurs_cles": {
+    "indicateurs": [
+      {
+        "nom": "Nombre de leads digitaux qualifiés par mois",
+        "definition": "Nombre de prospects ayant soumis leurs coordonnées via le site web, Facebook, WhatsApp ou Google Ads et répondant aux critères de qualification (budget, projet d'achat CI)",
+        "unite": "leads/mois",
+        "cible_sectorielle": "> 50 leads qualifiés/mois pour un promoteur de taille intermédiaire CI",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Taux de conversion lead → vente",
+        "definition": "Pourcentage des leads digitaux qui aboutissent à une signature de contrat VEFA ou de marché BTP CI",
+        "unite": "%",
+        "cible_sectorielle": "> 5% de conversion leads digitaux en vente (secteur immobilier CI)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Coût d'acquisition client (CAC) digital",
+        "definition": "Budget marketing digital total divisé par le nombre de clients signés grâce aux canaux digitaux",
+        "unite": "FCFA",
+        "cible_sectorielle": "CAC < 500 000 FCFA/client signé (vs. coût commercial physique souvent > 1 M FCFA)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Portée organique mensuelle (réseaux sociaux)",
+        "definition": "Nombre total de personnes uniques ayant vu au moins un contenu de la page Facebook ou Instagram de l'entreprise BTP CI",
+        "unite": "personnes/mois",
+        "cible_sectorielle": "> 20 000 personnes/mois en portée organique (sans publicité payante)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Part des ventes initiées par canal digital",
+        "definition": "Pourcentage des ventes immobilières (contrats VEFA signés) dont le premier contact a été établi via un canal digital (site web, Facebook, Google, email)",
+        "unite": "%",
+        "cible_sectorielle": "> 35% des ventes avec origine digitale (vs. 5-10% sans stratégie digitale)",
+        "frequence_mesure": "Mensuelle"
+      }
+    ]
+  },
+  "bonnes_pratiques": {
+    "pratiques": [
+      {
+        "titre": "Publier des vidéos de progression de chantier hebdomadairement",
+        "description": "Filmer le chantier chaque semaine avec un smartphone (format vertical pour Instagram/Facebook Reels) : avancement des travaux, témoignage du chef de chantier, vue aérienne si drone ARTCI autorisé. Montage simple (CapCut, disponible sur mobile CI). Publication Facebook + Instagram avec hashtags #ImmobilierAbidjan #BTPCôtedIvoire. Coût quasi-nul, impact fort sur la crédibilité et la preuve de qualité.",
+        "benefice": "Portée organique multipliée x3-5 vs. photos statiques, preuve de progression rassurante pour les acquéreurs"
+      },
+      {
+        "titre": "Campagnes Meta Ads ciblant la diaspora CI lors des lancements de programmes",
+        "description": "Lors du lancement d'un nouveau programme immobilier, créer des campagnes Meta Ads (Facebook + Instagram) avec ciblage géographique France (Paris, Lyon, Marseille, Nantes), Canada (Montréal, Toronto) et USA (New York, Atlanta, Washington DC) pour les personnes d'origine ivoirienne ou intéressées par la Côte d'Ivoire. Créatifs en français de la diaspora CI. Budget : 500 000-2 M FCFA sur 4 semaines de lancement.",
+        "benefice": "Accès aux acquéreurs diaspora CI sans présence physique à l'étranger, coût d'acquisition réduit vs. événements diaspora"
+      },
+      {
+        "titre": "Google My Business optimisé pour le référencement local Abidjan",
+        "description": "Optimiser la fiche Google My Business de l'entreprise BTP CI : description complète avec mots-clés (promoteur immobilier Abidjan, constructeur Cocody, appartement VEFA), photos projets en cours et livrés, horaires, numéro WhatsApp cliquable, recueil actif d'avis Google clients (NPS > 4,0). Répondre à tous les avis (positifs et négatifs) en moins de 48h.",
+        "benefice": "Apparition en première page Google sur 'promoteur immobilier Abidjan' et variantes, sans coût publicité"
+      },
+      {
+        "titre": "Créer des témoignages vidéo d'acquéreurs satisfaits",
+        "description": "Demander aux acquéreurs satisfaits lors de la remise des clés de réaliser un témoignage vidéo de 1-2 minutes (smartphone, cadre de leur appartement tout juste livré). Obtenir leur accord APDP CI (publication sur réseaux sociaux). Publier sur Facebook, Instagram et YouTube CI. Témoignage diaspora (filmé depuis la France) : impact particulièrement fort sur les autres acquéreurs diaspora.",
+        "benefice": "Preuve sociale la plus convaincante pour l'achat immobilier, taux de conversion leads x2 avec témoignages"
+      },
+      {
+        "titre": "Landing page dédiée par programme immobilier avec formulaire lead",
+        "description": "Pour chaque programme immobilier, créer une page d'atterrissage dédiée (WordPress, Wix ou Webflow) avec : visite Matterport intégrée, galerie photos, plan de masse, prix à partir de X M FCFA, formulaire simple (prénom, email, numéro WhatsApp CI/international). Connecter le formulaire au CRM ou directement à WhatsApp Business pour une prise en charge rapide (< 30 min de rappel = meilleur taux de conversion).",
+        "benefice": "Conversion leads x3 vs. envoi vers page d'accueil générique, qualification des leads améliorée"
+      }
+    ]
+  },
+  "ecueils_frequents": {
+    "ecueils": [
+      {
+        "titre": "Publier irrégulièrement sur les réseaux sociaux (effet yo-yo)",
+        "description": "Les entreprises BTP CI démarrent leur présence réseaux sociaux avec enthousiasme (10 posts en 2 semaines) puis abandonnent pendant 3 mois. L'algorithme Facebook pénalise l'irrégularité et la portée chute. Les prospects voient un compte mort et perdent confiance.",
+        "solution": "Planifier un calendrier de contenu réaliste (3 posts/semaine minimum) avec des thèmes récurrents : photo chantier lundi, témoignage mercredi, conseil construction vendredi. Utiliser un outil de planification (Meta Business Suite, gratuit) pour préparer les posts à l'avance"
+      },
+      {
+        "titre": "Publicités Meta Ads sans ciblage précis",
+        "description": "Beaucoup de promoteurs CI lancent des publicités Facebook sans ciblage précis (tout Abidjan, tous âges, tous intérêts), générant des leads non qualifiés (personnes qui cliquent par curiosité sans projet d'achat réel). Budget gaspillé et équipe commerciale découragée.",
+        "solution": "Ciblage précis : âge 28-55 ans, intérêts 'immobilier', 'investissement', géographie selon programme, revenus estimés > 200 000 FCFA/mois. Tester 3 audiences différentes et analyser les résultats à J+7"
+      },
+      {
+        "titre": "Ne pas mesurer le ROI du marketing digital",
+        "description": "Sans mesure du ROI par canal (coût d'acquisition par lead et par vente), les promoteurs CI ne savent pas quels canaux performent et gaspillent leur budget sur des canaux inefficaces.",
+        "solution": "Implémenter un suivi UTM sur tous les liens (campagnes Meta Ads, emails) connecté à Google Analytics et au CRM. Mesurer systématiquement : nombre de leads, taux de conversion, coût par lead, coût d'acquisition client par canal"
+      }
+    ]
+  },
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau de marketing digital BTP entre organisations représentatives",
+    "lignes": [
+      {
+        "organisation": "Groupe Immobilier Palm CI",
+        "profil": "Promoteur immobilier émergent CI, forte présence digitale, cible diaspora",
+        "niveau_maturite": 4,
+        "points_forts": "100 000+ followers Facebook, Meta Ads diaspora CI actives (France, Canada), chaîne YouTube 8 500 abonnés, CRM HubSpot connecté leads digitaux, 40% ventes d'origine digitale",
+        "points_faibles": "Coût de production de contenu élevé (équipe marketing 3 personnes), ROI multi-touch pas encore totalement mesuré",
+        "initiatives_notables": "Campagne 'Investir en CI depuis la diaspora' (2023) : 850 leads qualifiés en 30 jours, 38 contrats VEFA signés depuis la France — ROI x12"
+      },
+      {
+        "organisation": "SATCI CI",
+        "profil": "Promoteur immobilier CI référent, institutionnel et grand public",
+        "niveau_maturite": 3,
+        "points_forts": "Site web SEO-optimisé, page Facebook 45 000 followers, Meta Ads ponctuelles lors des lancements, présence salons immobiliers SIMI CI",
+        "points_faibles": "Instagram sous-développé, pas de chaîne YouTube active, ciblage Meta Ads peu précis, pas de CRM digital connecté",
+        "initiatives_notables": "Programme diaspora SATCI CI digital (2024) : partenariat avec associations CI en France pour référencement SATCI CI dans leurs canaux — 28% ventes désormais diaspora"
+      },
+      {
+        "organisation": "COLAS CI",
+        "profil": "Entreprise BTP infrastructure CI, marketing B2B institutions et bailleurs",
+        "niveau_maturite": 3,
+        "points_forts": "LinkedIn CI soigné (3 500 followers, références projets BAD/BM/AFD), site web références détaillées, présence events BTP professionnels CI (SIBTP)",
+        "points_faibles": "Pas de marketing B2C (activité B2B uniquement), peu de contenu vidéo public, aucune publicité digitale payante",
+        "initiatives_notables": "Rapport annuel BTP Afrique COLAS publié sur LinkedIn : référence sectorielle partagée 2 000+ fois en 2023 — notoriété B2B renforcée"
+      },
+      {
+        "organisation": "PME BTP CI classe D (constructeur local)",
+        "profil": "Petit entrepreneur BTP CI, marchés locaux < 100 M FCFA",
+        "niveau_maturite": 1,
+        "points_forts": "Réseau personnel fort, bouche-à-oreille efficace dans la communauté locale",
+        "points_faibles": "Aucune présence digitale, aucun site web, page Facebook personnelle utilisée parfois pour partager des photos de chantier, aucun investissement marketing digital",
+        "initiatives_notables": "Usage personnel de WhatsApp pour partager des photos de chantier avec des prospects (informel, efficace à petite échelle)"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "Groupe Immobilier Palm CI — Campagne Meta Ads diaspora pour le lancement du programme 'Les Résidences du Plateau'",
+    "contexte": "Groupe Immobilier Palm CI a lancé en octobre 2023 un programme de 180 appartements VEFA au Plateau (Abidjan), ciblant les cadres ivoiriens et la diaspora avec des appartements à partir de 45 M FCFA. Face à la saturation des salons immobiliers physiques CI (SIMI CI, SIPIM CI) et à un coût d'acquisition client élevé par les canaux traditionnels, Palm CI a décidé de lancer une campagne digitale exclusivement ciblée diaspora pour ce programme.",
+    "probleme": "Campagnes traditionnelles : coût d'acquisition client par salon immobilier = 2,8 M FCFA/vente. Salons diaspora (Paris, Montréal) : déplacement équipe commerciale 3-5 M FCFA pour 50-80 leads, taux de conversion 3-5%. Seuls 22% des appartements du programme précédent avaient été vendus à des acquéreurs diaspora malgré leur potentiel. Délai entre premier contact diaspora et signature contrat VEFA : 4-6 mois (procédures bancaires CI, déplacement nécessaire).",
+    "solution_deployee": "Campagne Meta Ads (Facebook + Instagram) sur 60 jours : ciblage géographique France (Paris, Île-de-France, Lyon), Canada (Montréal), USA (Tri-State Area), Angleterre (Londres). Audiences : personnes d'origine ivoirienne, intérêts 'Côte d'Ivoire', 'investissement immobilier', 'diaspora africaine', âge 30-55 ans. Créatifs : 6 vidéos (1 min) dont 2 témoignages diaspora (tournés à Paris et Montréal), 1 visite Matterport 360° intégrée, landing page dédiée avec formulaire WhatsApp. Budget total : 3,5 M FCFA. Suivi CRM HubSpot. Processus digital complet : visite 360° → lead WhatsApp → signature DocuSign → paiement via virement bancaire international ou Orange Money diaspora.",
+    "resultats": {
+      "leads_qualifies": "1 240 leads générés en 60 jours (vs. 50-80 lors d'un salon diaspora physique)",
+      "taux_conversion": "5,8% conversion lead → signature (72 contrats VEFA signés en 60 jours)",
+      "cout_acquisition": "48 000 FCFA/lead qualifié, 485 000 FCFA/vente signée (vs. 2,8 M FCFA canaux traditionnels)",
+      "part_diaspora": "72 sur 180 appartements vendus à des acquéreurs diaspora (40%) en 60 jours",
+      "signature_electronique": "67 des 72 contrats diaspora signés via DocuSign sans déplacement physique",
+      "roi_campagne": "ROI campagne Meta Ads : 32x (72 ventes × 45 M FCFA = 3,24 Mds FCFA CA générés / 3,5 M FCFA investis)"
+    },
+    "enseignements": "Les vidéos-témoignages tournées par des acquéreurs de la diaspora (Paris et Montréal) ont eu un taux d'engagement x4 supérieur aux vidéos institutionnelles. La disponibilité 24h/24 du processus (WhatsApp automatique + Matterport) a été décisive — les acquéreurs diaspora achètent souvent hors des heures de bureau CI."
+  },
+  "ai_context": {
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune présence digitale. Prospection uniquement par bouche-à-oreille et réseau personnel. Aucun site web actif. Aucun compte réseaux sociaux professionnel. Brochures papier uniquement. Aucun budget marketing digital.",
+      "score_21_to_40": "Site web vitrine basique. Page Facebook avec posts irréguliers. WhatsApp Business pour demandes entrantes. Google My Business créé. Aucune publicité digitale payante. Stratégie non définie, budget nul ou minimal.",
+      "score_41_to_60": "Stratégie de contenu régulière Facebook/Instagram. Meta Ads ponctuelles lors des lancements. Site web SEO-optimisé. Email marketing mensuel. LinkedIn pour le BTP B2B. Quelques vidéos chantier.",
+      "score_61_to_80": "Funnel de conversion complet. Ciblage diaspora CI sur Meta Ads. Chaîne YouTube active. Google Ads SEA. CRM connecté aux leads digitaux. ROI marketing mesuré par canal.",
+      "score_81_to_100": "Marketing digital data-driven et IA. IA optimisation publicités et scoring leads. Influenceurs immobilier CI partenaires. Communauté en ligne engagée. Attribution marketing multi-touch précise. CAC optimisé."
+    },
+    "questions_cles_diagnostic": [
+      "Quelle est la part de vos ventes ou marchés qui provient d'un premier contact digital (site web, Facebook, Google) ?",
+      "Publiez-vous régulièrement du contenu (photos, vidéos) sur les réseaux sociaux pour promouvoir vos projets BTP ?",
+      "Utilisez-vous des publicités Meta Ads ou Google Ads pour générer des leads qualifiés ?",
+      "Avez-vous ciblé la diaspora ivoirienne dans vos campagnes marketing ? Comment ?",
+      "Mesurez-vous le coût d'acquisition de chaque vente ou marché BTP par canal marketing ?"
+    ],
+    "pieges_evaluation": [
+      "Ne pas confondre une page Facebook avec des followers avec une stratégie marketing digital réelle (ciblage, budget, mesure ROI)",
+      "Vérifier la régularité de la publication (demander à voir les 3 derniers mois d'activité Facebook) plutôt que juste la présence",
+      "Distinguer le marketing B2C immobilier (promoteurs, VEFA) du marketing B2B BTP (entreprises de travaux cherchant des marchés publics via SIGMAP)"
+    ]
+  },
+  "ressources": {
+    "references_reglementaires": [
+      "ARTCI CI — Réglementation publicité digitale et protection des consommateurs en ligne CI",
+      "APDP CI Loi 2013-450 — Traitement des données prospects (email, numéro WhatsApp collectés en ligne)",
+      "Loi CI n°2018-570 VEFA — Informations obligatoires dans la publicité immobilière VEFA CI"
+    ],
+    "outils_recommandes": [
+      "Meta Business Suite — Gestion publicités Facebook/Instagram et ciblage diaspora CI",
+      "Google Ads / Google My Business — SEA et référencement local BTP Abidjan",
+      "Matterport / Kuula — Visites virtuelles 360° intégrables dans les publicités et landing pages",
+      "Mailchimp / Brevo — Email marketing prospects immobiliers et partenaires BTP CI",
+      "HubSpot CRM (gratuit) — Suivi leads digitaux et pipeline de vente immobilier CI",
+      "Canva Pro — Création de contenu visuel BTP CI pour réseaux sociaux sans designer"
+    ],
+    "formations_certifications": [
+      "Meta Blueprint — Certification Marketing Meta Ads (Facebook/Instagram) pour immobilier CI",
+      "Google Ads Certification — Formation Google Ads pour promoteurs immobiliers CI",
+      "Digital Marketing Institute — Formation marketing digital immobilier (applicable CI)",
+      "ARTCI CI — Formation réglementation publicité digitale et protection consommateurs CI"
+    ]
+  }
+}

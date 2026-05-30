@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "PROCESS",
+    "sous_axe": "agilite",
+    "version": "1.0",
+    "langue": "fr",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "L'agilité des processus dans le BTP CI est traditionnellement faible : les marchés publics imposent des délais et des processus contractuels rigides (CCAG CI, DGMP), la gestion de projet suit des méthodes classiques (MS Project Gantt, planning linéaire), et les avenants contrats prennent des mois à être approuvés par la DGMP CI. Pourtant, la réalité des chantiers CI exige une forte adaptabilité : aléas climatiques (saison des pluies mai-juillet, octobre-novembre), instabilité d'approvisionnement en matériaux, contraintes foncières imprévues, grèves. L'adoption de méthodes agiles adaptées au BTP (Lean Construction, Last Planner System, micro-itérations) représente un levier de compétitivité.",
+    "chiffres_cles": [
+      "68% des chantiers BTP CI dépassent leurs délais initiaux (source BNETD CI 2023)",
+      "42% des chantiers CI dépassent leur budget de plus de 15%",
+      "Délai moyen approbation avenant marché public CI : 45-90 jours (DGMP CI)",
+      "Saison des pluies CI : 2 périodes (mai-juillet, oct-nov) impactant 40% du temps de chantier",
+      "Méthode Last Planner System : réduction des retards de 25-35% sur projets pilotes Afrique de l'Ouest"
+    ],
+    "specificites_locales": [
+      "CCAG CI : processus d'avenant rigide (approbation DGMP CI obligatoire > 10% montant initial)",
+      "Aléas approvisionnement : matériaux importés (acier, ciment spécial) avec délais portuaires Abidjan 15-30 jours",
+      "Turnover main-d'œuvre sur chantiers CI : 25-35% par an, nécessitant une formation continue",
+      "CNBTP CI : classification agrément basée sur capacités organisationnelles et gestion de projet",
+      "Financement BAD/BM CI : rapports de progression à fréquence imposée (mensuelle, trimestrielle)"
+    ]
+  },
+  "definition_axe": {
+    "titre": "Agilité et adaptabilité des processus de gestion de projet BTP",
+    "description": "Capacité de l'entreprise BTP à adapter rapidement ses processus de gestion de projet face aux aléas de chantier (conditions météo, retards approvisionnement, modifications maître d'ouvrage, contraintes foncières). L'agilité BTP se traduit par l'adoption du Lean Construction (Last Planner System, Takt Planning), des cycles de planification courts (hebdomadaire vs. mensuel), une communication chantier accélérée et une capacité à reconfigurer les équipes et ressources rapidement.",
+    "perimetre": [
+      "Last Planner System (LPS) : planification collaborative hebdomadaire chantier",
+      "Takt Planning : planification par zones et flux de travail (efficacité continuité équipes)",
+      "Look-ahead planning : anticipation 3-6 semaines des contraintes et approvisionnements",
+      "Gestion agile des avenants : processus de change management rapide en interne",
+      "Communication chantier : réunions courtes quotidiennes (stand-up) vs. réunions longues mensuelles",
+      "Équipes pluridisciplinaires chantier : intégration études-travaux-qualité pour décisions rapides"
+    ],
+    "technologies_cles": [
+      "MS Project / Primavera P6 — planning détaillé avec actualisation hebdomadaire",
+      "TouchPlan / Wrike Construction — Last Planner System numérique pour planning collaboratif",
+      "WhatsApp Business / Teams CI — communication chantier rapide (stand-up numérique)",
+      "Kanban boards (Trello, Monday.com) — suivi tâches hebdomadaires chantier",
+      "Procore Change Management — gestion numérique des modifications et avenants",
+      "Power BI / Tableau — tableaux de bord avancement actualisés daily pour décisions rapides"
+    ]
+  },
+  "enjeux_specifiques": {
+    "enjeux": [
+      {
+        "titre": "Adaptation aux aléas climatiques CI",
+        "description": "La Côte d'Ivoire connaît deux saisons des pluies (mai-juillet, octobre-novembre) qui interrompent régulièrement les chantiers de génie civil (terrassement, fondations, routes). Les plannings rigides Gantt ne permettent pas une réorganisation rapide des activités. Un processus agile de replanning hebdomadaire permet de maximiser l'utilisation des équipes en cas d'intempéries.",
+        "impact": "Réduction des journées improductives de 30-40% grâce à la replanning agile en cas de pluies"
+      },
+      {
+        "titre": "Gestion agile des aléas d'approvisionnement",
+        "description": "Les matériaux importés (acier, carrelage, équipements CVC) subissent des aléas de livraison au port d'Abidjan (15-30 jours de délai portuaire, parfois 45-60 en cas de congestion). Un look-ahead planning à 6 semaines avec buffer de commande anticipé permet d'absorber ces aléas sans bloquer le chantier.",
+        "impact": "Réduction des arrêts chantier pour manque de matériaux de 60%, économie en heures perdues"
+      },
+      {
+        "titre": "Vitesse de réponse aux demandes de modification client",
+        "description": "Les maîtres d'ouvrage CI (particuliers en VEFA, administrations) formulent fréquemment des modifications en cours de chantier. Le processus de gestion de modification (impact délai/coût, avenant, approbation DGMP si marché public) peut prendre 45-90 jours pour un marché public. En marché privé, un processus agile de change management réduit ce délai.",
+        "impact": "Réduction délai traitement modification 45 jours → 5 jours (marchés privés), satisfaction client accrue"
+      }
+    ]
+  },
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Inexistant",
+      "description": "Planning Gantt initial jamais mis à jour après signature du marché. Réunions de chantier mensuelles avec le maître d'ouvrage, aucune réunion interne structurée. Les aléas sont gérés de manière réactive et informelle. Aucune méthode de gestion de projet formalisée.",
+      "signes_distinctifs": [
+        "Planning Gantt établi au démarrage, jamais actualisé (fichier MS Project figé)",
+        "Réunions chantier mensuelles uniquement (longues, peu efficaces)",
+        "Aléas gérés verbalement, aucune traçabilité des décisions prises",
+        "Chef de chantier prend toutes les décisions seul, sans processus consultatif",
+        "Aucun look-ahead : approvisionnements commandés avec retard régulier"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Réunions de chantier hebdomadaires instaurées. Planning actualisé mensuellement. Premiers look-ahead à 2-3 semaines. Communication par groupe WhatsApp chantier (non structurée). Conscience des aléas mais pas encore de méthode formalisée.",
+      "signes_distinctifs": [
+        "Réunions hebdomadaires instaurées (30-60 min, ordre du jour informel)",
+        "Planning MS Project mis à jour mensuellement (pas hebdomadairement)",
+        "Groupe WhatsApp chantier utilisé pour la coordination quotidienne",
+        "Look-ahead informel à 2-3 semaines dans la tête du chef de chantier",
+        "Quelques indicateurs de retard suivis mais sans processus d'escalade"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Last Planner System (LPS) ou équivalent adopté pour la planification hebdomadaire collaborative. Réunions stand-up quotidiennes de 15 min. Planning actualisé chaque semaine avec suivi du PPC (Pourcentage de Promesses Complètes). Look-ahead à 4-6 semaines formalisé. Change management documenté.",
+      "signes_distinctifs": [
+        "LPS ou équivalent : réunion planning collaborative hebdomadaire avec toute l'équipe chantier",
+        "Stand-up quotidien 15 min : blocages identifiés et résolus rapidement",
+        "PPC (% Promesses Complètes) suivi hebdomadairement : objectif > 80%",
+        "Look-ahead 4-6 semaines formalisé avec identificaton contraintes approvisionnement",
+        "Process change management documenté : fiche modification → évaluation impact → accord client"
+      ]
+    },
+    "niveau_4": {
+      "label": "Optimisé",
+      "description": "Lean Construction systématisé sur tous les chantiers > 100 M FCFA. Takt Planning sur les projets bâtiment (appartements, bureaux) pour optimiser le flux d'équipes. Outils numériques de planification collaborative (TouchPlan, Wrike). Adaptation rapide des plannings sur mobile par les chefs de chantier.",
+      "signes_distinctifs": [
+        "Lean Construction certifié : ensemble des chantiers majeurs sous LPS + Takt Planning",
+        "PPC > 85% constant sur les 6 derniers mois",
+        "Adaptation planning en temps réel : chef de chantier reconfigure sur tablette, diffusion instantanée",
+        "Tableau de bord variance planning/réel : analyse causes retards (météo, approvisionnement, RH)",
+        "Équipes pluridisciplinaires auto-organisées sur les chantiers complexes"
+      ]
+    },
+    "niveau_5": {
+      "label": "Différenciant",
+      "description": "Agilité totale avec IA prédictive pour la planification. Le jumeau numérique du chantier simule différents scénarios de replanning en cas d'aléa (pluies, rupture matériaux) et propose la solution optimale. Collaboration en temps réel maître d'ouvrage-entreprise-sous-traitants sur plateforme commune. Benchmark et amélioration continue systématique.",
+      "signes_distinctifs": [
+        "IA prédictive : simulation automatique de scénarios de replanning en cas d'aléa détecté",
+        "Collaboration temps réel maître d'ouvrage sur plateforme partagée (modification approuvée en heures)",
+        "Amélioration continue : analyse systématique des causes de retard, intégration au planning des projets suivants",
+        "Certification Lean Construction (IGLC) ou équivalent pour les chefs de projet",
+        "Benchmark inter-projets : partage des bonnes pratiques et des leçons apprises entre chantiers"
+      ]
+    }
+  },
+  "indicateurs_cles": {
+    "indicateurs": [
+      {
+        "nom": "PPC — Pourcentage de Promesses Complètes",
+        "definition": "Pourcentage des tâches hebdomadaires planifiées lors du Last Planner réellement complétées à la fin de la semaine",
+        "unite": "%",
+        "cible_sectorielle": "> 80% (niveau Lean Construction standard), > 85% (niveau avancé)",
+        "frequence_mesure": "Hebdomadaire"
+      },
+      {
+        "nom": "Délai de mise à jour du planning",
+        "definition": "Fréquence de mise à jour du planning de chantier (Gantt/réseau) après un aléa ou modification",
+        "unite": "jours",
+        "cible_sectorielle": "< 2 jours (vs. 7-30 jours en gestion classique)",
+        "frequence_mesure": "À chaque aléa"
+      },
+      {
+        "nom": "Taux de dépassement délai des chantiers",
+        "definition": "Part des chantiers livrés hors du délai contractuel initial (ou avenant approuvé)",
+        "unite": "%",
+        "cible_sectorielle": "< 20% des chantiers en dépassement délai (vs. 68% secteur CI)",
+        "frequence_mesure": "Annuelle (par portefeuille)"
+      },
+      {
+        "nom": "Délai traitement demande de modification client",
+        "definition": "Temps entre réception demande de modification et réponse formelle (impact coût/délai) au client",
+        "unite": "jours",
+        "cible_sectorielle": "< 5 jours pour marchés privés ; < 30 jours pour avenants marchés publics",
+        "frequence_mesure": "Par modification"
+      },
+      {
+        "nom": "Horizon du look-ahead planning",
+        "definition": "Nombre de semaines de look-ahead formalisé pour l'anticipation des contraintes approvisionnement et ressources",
+        "unite": "semaines",
+        "cible_sectorielle": "> 4 semaines de look-ahead formalisé et mis à jour hebdomadairement",
+        "frequence_mesure": "Hebdomadaire"
+      }
+    ]
+  },
+  "bonnes_pratiques": {
+    "pratiques": [
+      {
+        "titre": "Adopter le Last Planner System adapté au contexte CI",
+        "description": "Déployer le LPS sur les chantiers > 100 M FCFA : réunion de planification collaborative hebdomadaire (30 min) avec tous les chefs de lot, engagement individuel sur les tâches de la semaine, suivi PPC le vendredi. Adapter le format aux réalités CI : réunion en français, simplification du vocabulaire Lean, prise en compte des aléas typiquement CI (pluies, jours fériés, approvisionnements port d'Abidjan).",
+        "benefice": "Réduction des retards de 25-35%, meilleure coordination inter-lots, responsabilisation des équipes"
+      },
+      {
+        "titre": "Look-ahead planning à 6 semaines pour les approvisionnements",
+        "description": "Mettre en place un look-ahead de 6 semaines (vs. standard 3 semaines) pour tenir compte des délais portuaires Abidjan (15-30 jours) et des délais de fabrication des matériaux spéciaux. Identifier à chaque mise à jour les approvisionnements critiques et déclencher les commandes avec 6 semaines d'avance.",
+        "benefice": "Réduction des arrêts chantier pour manque de matériaux de 60-70%"
+      },
+      {
+        "titre": "Réunions stand-up quotidiennes de 15 minutes",
+        "description": "Remplacer ou compléter les longues réunions hebdomadaires par un stand-up daily de 15 min avec les chefs de lot : Hier (accompli), Aujourd'hui (prévu), Blocages (à résoudre immédiatement). Format debout pour maintenir la brièveté. Décision immédiate sur les blocages pour éviter les journées perdues.",
+        "benefice": "Résolution des blocages le jour même, réduction des journées perdues pour attente de décision"
+      },
+      {
+        "titre": "Kanban numérique pour le suivi des tâches hebdomadaires",
+        "description": "Utiliser un tableau Kanban numérique (Trello, Monday.com ou même Miro partagé) pour visualiser l'avancement des tâches hebdomadaires par lot de travaux. Accessible par mobile pour les chefs de chantier. Mise à jour en temps réel depuis le terrain.",
+        "benefice": "Visibilité partagée sur l'avancement, identification immédiate des goulots d'étranglement"
+      },
+      {
+        "titre": "Process de change management rapide pour les marchés privés",
+        "description": "Définir un processus en 3 étapes pour les modifications client (marchés privés) : Fiche modification (impact délai + coût estimé en 24h), accord client signé numériquement (DocuSign, valeur Loi CI 2017-771), déclenchement modification planning. Objectif : modification traitée en moins de 5 jours.",
+        "benefice": "Satisfaction client, réduction litiges fin de chantier, traçabilité des modifications"
+      }
+    ]
+  },
+  "ecueils_frequents": {
+    "ecueils": [
+      {
+        "titre": "LPS appliqué comme une réunion de plus sans engagement",
+        "description": "Le Last Planner System dégénère en réunion hebdomadaire supplémentaire où les chefs de lot se contentent de reporter les tâches non complétées sans analyse des causes ni engagement réel. Le PPC stagne en dessous de 60%.",
+        "solution": "Analyser systématiquement les causes de non-completion (5 Pourquoi), intégrer les leçons au planning, responsabiliser chaque chef de lot personnellement"
+      },
+      {
+        "titre": "Confondre agilité BTP et désorganisation",
+        "description": "Certaines entreprises BTP CI confondent l'agilité (adaptation rapide et structurée aux aléas) avec le travail informel et non planifié. L'agilité BTP nécessite une planification rigoureuse à court terme, pas l'absence de planification.",
+        "solution": "Former les équipes sur la distinction entre planification rigide (Gantt maître) et planification flexible (LPS hebdomadaire). Les deux sont nécessaires et complémentaires."
+      },
+      {
+        "titre": "Négliger les aléas CI spécifiques dans la planification",
+        "description": "Les plannings BTP CI qui ne tiennent pas compte des aléas typiquement locaux (jours fériés CI multiples, saisons des pluies, délais portuaires Abidjan, coupures électriques CIE) sont systématiquement dépassés.",
+        "solution": "Intégrer les buffer spécifiques CI dans le planning maître : +15% buffer météo, +20% buffer approvisionnement port, jours fériés CI systématiquement exclus"
+      }
+    ]
+  },
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau d'agilité dans la gestion de projet BTP entre organisations représentatives",
+    "lignes": [
+      {
+        "organisation": "COLAS CI",
+        "profil": "Filiale groupe Bouygues, grands travaux routiers et infrastructure",
+        "niveau_maturite": 4,
+        "points_forts": "Lean Construction déployé sur l'ensemble des grands chantiers CI, PPC > 82%, tableau de bord variance planning/réel hebdomadaire, formation Lean intégrée au programme RH groupe",
+        "points_faibles": "Méthodes groupe parfois rigides pour les petits chantiers CI, adaptation aux aléas locaux parfois lente",
+        "initiatives_notables": "Lean Lab CI : équipe dédiée Lean Construction pour accompagnement et amélioration continue chantiers"
+      },
+      {
+        "organisation": "BNETD CI",
+        "profil": "MOA délégué État CI, ingénierie et contrôle infrastructure publique",
+        "niveau_maturite": 3,
+        "points_forts": "Planning des projets publics actualisé mensuellement, réunions de chantier structurées avec MO et entreprises, gestion des avenants conforme CCAG CI et DGMP CI",
+        "points_faibles": "Processus d'approbation avenant DGMP CI rigide (45-90 jours), réactivité limitée face aux aléas urgents",
+        "initiatives_notables": "Tableau de bord GEOPROJET CI : indicateurs avancement projets infrastructure, alertes retards automatiques"
+      },
+      {
+        "organisation": "GCO CI (Groupement Construction Ouvrages)",
+        "profil": "Groupement d'entreprises PME BTP pour grands marchés publics CI",
+        "niveau_maturite": 2,
+        "points_forts": "Coordination inter-entreprises du groupement, réunions hebdomadaires de coordination",
+        "points_faibles": "Agilité limitée par la structure multi-acteurs, décisions nécessitant accord de toutes les parties, PPC non mesuré",
+        "initiatives_notables": "WhatsApp Business groupe pour la coordination quotidienne inter-entreprises du groupement"
+      },
+      {
+        "organisation": "PME BTP CI < 50 employés",
+        "profil": "Petite entreprise BTP locale, chantiers < 100 M FCFA",
+        "niveau_maturite": 1,
+        "points_forts": "Réactivité naturelle des petites structures, décisions rapides sans bureaucratie",
+        "points_faibles": "Aucune méthode de gestion de projet formalisée, aléas gérés de manière entièrement réactive et souvent trop tardive",
+        "initiatives_notables": "Usage informel de WhatsApp pour la coordination chantier (principal outil de communication)"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "COLAS CI — Déploiement du Last Planner System sur le chantier de l'autoroute Y4 (Abidjan périphérique)",
+    "contexte": "COLAS CI a décroché en 2021 un marché de 45 Mds FCFA pour la construction d'un tronçon de 18 km de l'autoroute périphérique d'Abidjan (Y4), en zone semi-urbaine avec contraintes foncières importantes et forte pression de l'AGEROUTE CI sur les délais. Le chantier mobilisait 12 lots de travaux (terrassement, assainissement, chaussée, ouvrages d'art, signalisation) avec 8 sous-traitants CI. Le planning initial Gantt prévoyait 30 mois. Après 6 mois, COLAS CI a déployé le Last Planner System pour rattraper les retards accumulés.",
+    "probleme": "À M+6, le chantier accusait 7 semaines de retard sur 12 lots. Causes : interférences entre lots (un lot bloquant le suivant), approvisionnements en granulats depuis Bouaké perturbés par la route nationale dégradée, pluies exceptionnelles en mai-juin 2022. PPC implicite estimé à 52% (une tâche sur deux non complétée à temps). Risque pénalités AGEROUTE CI : 0,1% du montant marché par jour de retard = 45 M FCFA/jour.",
+    "solution_deployee": "Déploiement LPS par l'équipe Lean Lab COLAS Afrique : atelier de 2 jours avec les 12 chefs de lot + 8 sous-traitants. Mise en place de : réunions LPS hebdomadaires (mercredi 7h30, 45 min), look-ahead 6 semaines avec identification contraintes approvisionnement, stand-up quotidien 15 min par zone, tableau Kanban par lot sur écran commun bureau chantier, analyse PPC hebdomadaire. Formation accélérée 12 chefs de lot Lean Construction (3 jours). Outil digital : TouchPlan (iOS) pour les chefs de lot avec tablette.",
+    "resultats": {
+      "ppc": "52% → 83% en 8 semaines de déploiement LPS",
+      "rattrapage_retard": "7 semaines de retard rattrapées en 4 mois (arrêt dégradation, puis rattrapage +1,75 sem/mois)",
+      "arrets_approvisionnement": "Arrêts chantier pour rupture granulats : 5 arrêts (M1-M6) → 1 arrêt (M7-M18)",
+      "interferences_lots": "Journées perdues interférences inter-lots : 38 jours (M1-M6) → 7 jours (M7-M18)",
+      "livraison": "Autoroute livrée avec 3 semaines de retard final sur 30 mois (vs. 7 semaines à M+6) — pénalités AGEROUTE CI réduites de 88%",
+      "satisfaction_sous_traitants": "NPS sous-traitants CI sur coordination chantier : 18 → 61/100"
+    },
+    "enseignements": "Le LPS adapté au contexte CI nécessite une phase intensive d'acculturation (2-3 mois) car les chefs de chantier CI sont habitués à des plannings top-down imposés. L'adhésion des sous-traitants est clé — sans eux, le LPS ne fonctionne pas. Le look-ahead à 6 semaines (au lieu de 3 semaines standard) a été déterminant pour anticiper les ruptures de granulats de Bouaké."
+  },
+  "ai_context": {
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune méthode de gestion de projet agile. Planning Gantt initial figé jamais mis à jour. Réunions chantier mensuelles peu structurées. Aléas gérés de manière entièrement réactive et informelle. Aucun look-ahead formalisé.",
+      "score_21_to_40": "Réunions hebdomadaires instaurées. Planning mis à jour mensuellement. Premiers look-ahead informels. Communication par WhatsApp non structurée. Conscience des aléas CI sans méthode formalisée pour les anticiper.",
+      "score_41_to_60": "Last Planner System ou équivalent déployé sur chantiers principaux. Stand-up quotidiens. PPC mesuré hebdomadairement (60-79%). Look-ahead 4-6 semaines formalisé. Change management documenté pour les modifications client.",
+      "score_61_to_80": "Lean Construction systématisé sur l'ensemble du portefeuille. PPC > 82% constant. Takt Planning sur projets bâtiment. Outils numériques de planification collaborative. Adaptation planning en temps réel depuis le terrain.",
+      "score_81_to_100": "Agilité totale avec IA prédictive pour la planification. Simulation automatique de scénarios de replanning. Collaboration temps réel maître d'ouvrage-entreprise-sous-traitants. Certification Lean Construction. Amélioration continue systématique et documentée."
+    },
+    "questions_cles_diagnostic": [
+      "Quelle est la fréquence de mise à jour de votre planning de chantier (journalière, hebdomadaire, mensuelle) ?",
+      "Utilisez-vous le Last Planner System ou une autre méthode Lean Construction ?",
+      "Mesurez-vous votre PPC (Pourcentage de Promesses Complètes) hebdomadairement ?",
+      "Avez-vous un look-ahead planning à 4-6 semaines formalisé pour anticiper les approvisionnements ?",
+      "En combien de jours traitez-vous une demande de modification de votre client ?"
+    ],
+    "pieges_evaluation": [
+      "Ne pas confondre l'agilité informelle des petites PME BTP (réactivité sans méthode) avec un niveau d'agilité élevé",
+      "Vérifier que le LPS déclaré est réellement pratiqué (PPC mesuré) et pas seulement nommé sans substance",
+      "Distinguer l'agilité sur les grands chantiers (souvent meilleure) de la gestion des petits chantiers du même portefeuille"
+    ]
+  },
+  "ressources": {
+    "references_reglementaires": [
+      "CCAG CI — Clauses de délai et processus d'avenant pour marchés publics BTP",
+      "DGMP CI — Procédure d'approbation des avenants marchés publics BTP",
+      "CNBTP CI — Conditions d'agrément incluant capacités organisationnelles et gestion de projet",
+      "Loi CI 2017-771 — Valeur juridique des modifications contractuelles électroniques"
+    ],
+    "outils_recommandes": [
+      "TouchPlan / Wrike Construction — Last Planner System numérique et collaboratif",
+      "MS Project / Primavera P6 — planning Gantt maître avec actualisation hebdomadaire",
+      "Trello / Monday.com — Kanban boards tâches hebdomadaires chantier",
+      "Power BI — tableau de bord PPC et variance planning/réel",
+      "Procore Change Management — gestion numérique des modifications et avenants"
+    ],
+    "formations_certifications": [
+      "Lean Construction Institute — Formation Last Planner System et Takt Planning",
+      "IGLC (International Group for Lean Construction) — Certification Lean Construction professionnels BTP",
+      "CNBTP CI — Formation gestion de projet BTP adapté contexte CI",
+      "PMI (Project Management Institute) PMP — Certification management de projet BTP"
+    ]
+  }
+}

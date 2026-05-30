@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "axis": "RH_DIGITAL",
+    "sub_axis": "Poste de travail digital",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Digital Employee Experience (DEX) — l'expérience employé comme priorité",
+      "description": "Les organisations mesurent et optimisent l'expérience digitale de leurs employés (satisfaction des outils, performance des postes, friction dans les processus) avec la même rigueur que l'expérience client.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "65 % des grandes entreprises ont une stratégie DEX formalisée (Gartner 2024)",
+      "source": "Gartner Digital Employee Experience Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Microsoft 365 Copilot — IA intégrée dans le poste de travail",
+      "description": "Microsoft 365 Copilot intègre l'IA générative dans Word, Excel, Teams et Outlook, permettant aux collaborateurs de rédiger, analyser, résumer et automatiser directement dans leurs outils quotidiens.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "40 % des entreprises Fortune 500 ont déployé Microsoft 365 Copilot (Microsoft 2024)",
+      "source": "Microsoft Work Trend Index 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Zero Trust sur le poste de travail — sécurité sans VPN",
+      "description": "Le modèle Zero Trust appliqué au poste de travail (accès conditionnel, vérification continue, MDM) remplace les VPN traditionnels et permet le travail sécurisé depuis n'importe quel appareil et lieu.",
+      "impact_level": "Élevé",
+      "horizon": "6-18 mois",
+      "adoption_rate": "58 % des organisations ont un programme MDM (Gartner Endpoint Security 2024)",
+      "source": "Gartner Endpoint Security & Management Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "BYOD & Travail hybride — flexibilité du lieu de travail",
+      "description": "Le travail hybride (bureau + télétravail) est devenu la norme dans les entreprises modernes, nécessitant des outils collaboratifs cloud-native accessibles depuis n'importe quel appareil.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "70 % des organisations ont formalisé une politique de travail hybride (McKinsey 2024)",
+      "source": "McKinsey Future of Work Survey 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Suite de productivité cloud",
+      "category": "Poste de travail digital",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne à élevée",
+      "leading_vendors": ["Microsoft 365", "Google Workspace", "Zoho Workplace", "Notion", "Atlassian"]
+    },
+    {
+      "name": "MDM / Unified Endpoint Management",
+      "category": "Gestion des appareils",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en Afrique",
+      "leading_vendors": ["Microsoft Intune", "Jamf", "VMware Workspace ONE", "ManageEngine", "Cisco Meraki"]
+    },
+    {
+      "name": "Communication unifiée (UCaaS)",
+      "category": "Collaboration temps réel",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne",
+      "leading_vendors": ["Microsoft Teams", "Zoom", "Cisco Webex", "Google Meet", "Slack"]
+    },
+    {
+      "name": "Password Manager & SSO",
+      "category": "Sécurité du poste",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en Afrique",
+      "leading_vendors": ["1Password Business", "Bitwarden", "LastPass", "Okta SSO", "Azure AD SSO"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Microsoft 365 déployé, videoconférence Teams pour les réunions internes, MDM pour les appareils mobiles professionnels",
+        "differentiator": "Premier acteur sectoriel à déployer un SSO unifié pour toutes les applications métier",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Standard Bank",
+        "country": "Afrique du Sud",
+        "key_practice": "Microsoft 365 + Teams déployés sur 50 000 collaborateurs dans 20 pays africains",
+        "differentiator": "DEX score mesuré trimestriellement avec amélioration continue du poste de travail",
+        "source": "Standard Bank Technology Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Microsoft",
+        "country": "USA",
+        "key_practice": "Workplace Analytics : mesure la productivité et le bien-être collaborateur via Microsoft Viva",
+        "differentiator": "Premier à mesurer le 'collaboration overload' et à l'optimiser pour éviter le burn-out digital",
+        "source": "Microsoft Work Trend Index 2024"
+      },
+      {
+        "organisation": "Spotify",
+        "country": "Suède",
+        "key_practice": "Work From Anywhere : 100 % des 8 000 collaborateurs peuvent travailler de n'importe où dans le monde",
+        "differentiator": "Productivité maintenue avec zéro perte et satisfaction collaborateur +20 % en travail distribué",
+        "source": "Spotify Work From Anywhere Policy 2022 / Harvard Business Review 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Poste de travail 100 % on-premise. Pas de suite cloud. Logiciels locaux non mis à jour. VPN lent pour l'accès à distance. Aucune politique BYOD.",
+    "level_2_developing": "Email cloud déployé. Partage de fichiers via clés USB ou email. Pas de collaboration en temps réel. Videoconférence occasionnelle. Pas de MDM.",
+    "level_3_defined": "Suite de productivité cloud (M365 ou G-Suite). Teams/Meet pour la collaboration. Partage documentaire en temps réel. MDM partiel. SSO pour les apps principales.",
+    "level_4_managed": "Poste de travail 100 % cloud-native. MDM complet. SSO unifié. Politique de travail hybride formalisée. DEX mesuré. MFA sur toutes les applications.",
+    "level_5_optimizing": "IA générative intégrée dans le poste (Copilot, Gemini). Zero Trust complet. DEX optimisé en continu. Travail distribué global sans friction. Productivity Analytics actif."
+  },
+
+  "regulations": [
+    {
+      "name": "Loi n°2013-451 — Protection des systèmes informatiques",
+      "issuing_body": "République de Côte d'Ivoire / ARTCI",
+      "scope": "Toutes les organisations utilisant des systèmes informatiques professionnels",
+      "key_requirement": "Sécurisation des postes de travail, gestion des accès, protection contre les intrusions",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.artci.ci"
+    },
+    {
+      "name": "Politique de protection des données sur les appareils mobiles (BYOD)",
+      "issuing_body": "CNIL / ARTCI",
+      "scope": "Organisations autorisant l'utilisation d'appareils personnels pour le travail",
+      "key_requirement": "Séparation des données professionnelles et personnelles, effacement à distance possible, politique BYOD documentée",
+      "compliance_deadline": "Recommandation (bonne pratique)",
+      "source_url": "https://www.cnil.fr/fr/byod-quelles-sont-les-bonnes-pratiques"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Shadow IT — outils non approuvés créant des risques de sécurité",
+      "description": "Quand les outils officiels sont insuffisants, les collaborateurs adoptent des outils personnels (Dropbox, WhatsApp perso, ChatGPT free) pour les données professionnelles, créant des risques de fuite.",
+      "severity": "Élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Fournir des outils adaptés aux besoins réels, mesurer l'usage shadow IT et intégrer les outils populaires dans le catalogue officiel sécurisé."
+    },
+    {
+      "title": "Productivité perdue par excès de réunions et notifications",
+      "description": "Les outils collaboratifs mal utilisés (réunions vidéo excessives, notifications constantes) créent un 'collaboration overload' réduisant la productivité réelle de 30-40 %.",
+      "severity": "Moyen",
+      "likelihood": "Très élevée",
+      "mitigation": "Former les équipes à la 'réunion-hygiene', définir des plages de travail sans interruption et mesurer le collaboration overload via analytics."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "IA générative dans le poste de travail — gain de productivité de 30-40 %",
+      "description": "Microsoft 365 Copilot et Google Duet AI permettent de réduire le temps passé sur les tâches répétitives (rédaction, résumé, analyse) de 30-40 %, libérant du temps pour les activités à valeur ajoutée.",
+      "impact_level": "Très élevé",
+      "time_to_value": "3-12 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Travail hybride — attraction et rétention des talents",
+      "description": "Une politique de travail hybride bien structurée est le deuxième critère de choix d'employeur après le salaire. Elle permet de recruter des talents dans des bassins géographiques élargis.",
+      "impact_level": "Élevé",
+      "time_to_value": "3-6 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Microsoft",
+      "target": "Viva (développement interne)",
+      "amount": "Investissement R&D",
+      "date": "2021",
+      "strategic_rationale": "Créer une plateforme d'expérience employé intégrée à Teams pour le bien-être et la productivité",
+      "source": "Microsoft Press Release 2021"
+    },
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Zoom",
+      "target": "Workvivo",
+      "amount": "N/A",
+      "date": "2023",
+      "strategic_rationale": "Intégrer une plateforme d'engagement collaborateur dans l'écosystème Zoom pour le travail hybride",
+      "source": "Zoom Press Release 2023"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Microsoft",
+    "pays": "USA",
+    "technologie": "Microsoft 365 Copilot — IA générative intégrée dans chaque application de productivité",
+    "description": "Microsoft a réinventé le poste de travail en intégrant l'IA générative directement dans Word, Excel, PowerPoint, Teams et Outlook via Microsoft 365 Copilot. Une étude interne montre que les utilisateurs de Copilot complètent les tâches 29 % plus rapidement et sont 68 % plus susceptibles de se sentir dans un état de flux productif. Teams réunit 320 millions d'utilisateurs actifs quotidiens. Microsoft Viva mesure le bien-être et la productivité de 40 millions d'employés. La plateforme Workplace Analytics identifie automatiquement les sources de friction dans les workflows.",
+    "resultats": "320M utilisateurs Teams quotidiens · 29 % gain productivité via Copilot · 40M employés monitored via Viva · 68 % plus de flow états · #1 suite bureautique mondiale",
+    "source": "Microsoft Work Trend Index 2024 / Harvard Business Review Copilot Study 2024",
+    "annee": "2024"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité poste de travail digital — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "Suite cloud (M365/G-Suite) déployée", "Collaboration vidéo (Teams/Meet)", "MDM pour appareils mobiles", "SSO unifié déployé", "IA générative dans les outils"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "✓", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["Partiel", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Le poste de travail digital est la fondation de la productivité des collaborateurs. Un poste de travail moderne, sécurisé et connecté multiplie l'efficacité individuelle. L'intégration de l'IA générative (Copilot, Gemini) dans les outils quotidiens représente le prochain saut majeur de productivité — estimé à 30-40 % pour les tâches de connaissance.",
+    "maturity_max_description": "Suite de productivité cloud complète (M365 ou G-Suite). Collaboration unifiée via Teams/Meet. MDM complet sur tous les appareils. SSO unifié pour toutes les applications. MFA obligatoire. IA générative intégrée (Copilot). DEX mesuré et optimisé. Politique travail hybride formalisée.",
+    "scoring_rubric": {
+      "score_1_to_20": "Poste 100 % on-premise. Pas de suite cloud. VPN lent. Aucune politique BYOD.",
+      "score_21_to_40": "Email cloud. Partage via clés USB ou email. Pas de collaboration temps réel. Pas de MDM.",
+      "score_41_to_60": "Suite cloud déployée (M365/G-Suite). Teams/Meet pour la collaboration. MDM partiel. SSO pour les apps principales.",
+      "score_61_to_80": "Poste 100 % cloud-native. MDM complet. SSO unifié. Travail hybride formalisé. DEX mesuré.",
+      "score_81_to_100": "IA générative intégrée. Zero Trust complet. DEX optimisé. Travail distribué. Productivity Analytics."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur la maturité de son poste de travail digital. Analyse le déploiement d'une suite de productivité cloud (M365 ou G-Suite), l'utilisation d'outils de collaboration vidéo (Teams, Meet), la gestion des appareils (MDM), l'existence d'un SSO unifié et l'intégration d'IA générative dans les outils de travail.",
+    "key_questions_for_llm": [
+      "Une suite de productivité cloud (Microsoft 365, Google Workspace) est-elle déployée pour tous les collaborateurs ?",
+      "Des outils de collaboration vidéo (Teams, Meet, Zoom) sont-ils utilisés quotidiennement pour les réunions et le travail collaboratif ?",
+      "Un système de gestion des appareils (MDM) contrôle-t-il la sécurité des smartphones et tablettes professionnels ?",
+      "Un SSO (Single Sign-On) unifié permet-il aux collaborateurs d'accéder à toutes les applications avec un seul identifiant ?",
+      "Des outils d'IA générative (Microsoft Copilot, Google Duet AI) sont-ils disponibles dans le poste de travail ?"
+    ]
+  }
+}

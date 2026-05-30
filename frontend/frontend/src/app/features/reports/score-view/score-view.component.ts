@@ -353,27 +353,36 @@ import { environment } from '../../../../environments/environment';
               </div>
             </div>
 
-            <!-- Sector leaders -->
+            <!-- Sector leaders — 3-level hierarchy -->
             <div *ngIf="benchmark.sector_leaders?.length" class="mb-3">
               <div class="small fw-bold mb-2" style="color:#059669;letter-spacing:.06em;">
                 <i class="fas fa-trophy me-1"></i>LEADERS DU SECTEUR
               </div>
-              <div class="row g-2">
-                <div *ngFor="let leader of benchmark.sector_leaders" class="col-md-4">
-                  <div class="p-3 rounded-3 h-100" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #bbf7d0;">
-                    <div class="d-flex align-items-center gap-2 mb-2">
-                      <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
-                           style="width:32px;height:32px;font-size:.75rem;font-weight:700;">
-                        {{ leader.estimated_score }}
+              <div *ngFor="let group of leadersByLevel()" class="mb-3">
+                <div class="small fw-semibold mb-2 d-flex align-items-center gap-1"
+                     [style.color]="group.color">
+                  <i [class]="group.icon"></i> {{ group.label }}
+                </div>
+                <div class="row g-2">
+                  <div *ngFor="let leader of group.leaders" class="col-md-4">
+                    <div class="p-3 rounded-3 h-100"
+                         [style.background]="group.bg"
+                         [style.border]="'1px solid ' + group.border">
+                      <div class="d-flex align-items-center gap-2 mb-2">
+                        <div class="text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                             [style.background]="group.color"
+                             style="width:32px;height:32px;font-size:.75rem;font-weight:700;">
+                          {{ leader.estimated_score }}
+                        </div>
+                        <div>
+                          <div class="fw-bold small">{{ leader.company }}</div>
+                          <div style="font-size:.7rem;color:#6b7280;">{{ leader.country }}</div>
+                        </div>
                       </div>
-                      <div>
-                        <div class="fw-bold small">{{ leader.company }}</div>
-                        <div style="font-size:.7rem;color:#6b7280;">{{ leader.country }}</div>
+                      <div class="small text-muted">{{ leader.key_practice }}</div>
+                      <div *ngIf="leader.differentiator" class="mt-1 small" [style.color]="group.color">
+                        <i class="fas fa-star me-1"></i>{{ leader.differentiator }}
                       </div>
-                    </div>
-                    <div class="small text-muted">{{ leader.key_practice }}</div>
-                    <div *ngIf="leader.differentiator" class="mt-1 small" style="color:#059669;">
-                      <i class="fas fa-star me-1"></i>{{ leader.differentiator }}
                     </div>
                   </div>
                 </div>
@@ -581,5 +590,17 @@ export class ScoreViewComponent implements OnInit {
   investmentColor(level: string): string {
     const m: any = { 'Faible':'#198754', 'Modéré':'#fd7e14', 'Élevé':'#dc3545' };
     return m[level] || '#6c757d';
+  }
+
+  leadersByLevel(): { level: string; label: string; icon: string; color: string; bg: string; border: string; leaders: any[] }[] {
+    const all: any[] = this.benchmark?.sector_leaders || [];
+    const groups = [
+      { level: 'NATIONAL',  label: 'Leaders Nationaux',    icon: 'fas fa-flag',   color: '#0891b2', bg: 'linear-gradient(135deg,#f0f9ff,#e0f2fe)', border: '#bae6fd' },
+      { level: 'REGIONAL',  label: 'Leaders Régionaux',    icon: 'fas fa-globe-africa', color: '#7c3aed', bg: 'linear-gradient(135deg,#faf5ff,#ede9fe)', border: '#ddd6fe' },
+      { level: 'GLOBAL',    label: 'Leaders Mondiaux',     icon: 'fas fa-trophy', color: '#059669', bg: 'linear-gradient(135deg,#f0fdf4,#dcfce7)', border: '#bbf7d0' },
+    ];
+    return groups
+      .map(g => ({ ...g, leaders: all.filter(l => (l.level || 'GLOBAL') === g.level) }))
+      .filter(g => g.leaders.length > 0);
   }
 }

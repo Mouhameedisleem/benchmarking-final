@@ -1,0 +1,305 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "RH",
+    "sous_axe": "digitalisation_rh",
+    "version": "1.0",
+    "langue": "fr",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "La gestion RH dans le BTP CI est caractérisée par une forte proportion de main-d'œuvre temporaire (journaliers, ouvriers intérimaires), un fort turnover (25-35% par an), et des exigences réglementaires CI strictes (CNSS CI, Inspection du Travail CI, CNBTP CI pour les agréments). La gestion administrative RH est souvent manuelle : registres papier, fiches de pointage manuscrites, bulletins de salaire produits à la main ou sur Excel non automatisé. La digitalisation RH BTP CI présente des défis spécifiques : gestion des paiements journaliers (Mobile Money CI), pointage biométrique sur chantier (APDP CI), et gestion des contrats multi-sites.",
+    "chiffres_cles": [
+      "Part main-d'œuvre temporaire/journalière BTP CI : 40-60% de l'effectif total selon les chantiers",
+      "Turnover annuel moyen BTP CI : 25-35% (ingénieurs : 28%, ouvriers : 35-50%)",
+      "Délai moyen traitement paie manuelle BTP CI : 5-8 jours (retards fréquents avec impact relations sociales)",
+      "Taux de conformité CNSS CI déclaration BTP : estimé à 55% seulement (sous-déclaration fréquente)",
+      "Coût des litiges prud'homaux BTP CI par litige : 500 000 - 5 M FCFA (souvent dus à mauvaise documentation RH)"
+    ],
+    "specificites_locales": [
+      "CNSS CI (Caisse Nationale de Sécurité Sociale) : déclarations et cotisations mensuelles obligatoires pour les salariés BTP CI (risque de redressement si sous-déclarés)",
+      "Inspection du Travail CI : contrôles inopinés sur les chantiers CI, vérification des registres (registre du personnel, registre des accidents, affichage obligatoire)",
+      "Code du Travail CI Loi 2015-532 : contrats de travail (CDI, CDD, journaliers), heures supplémentaires, congés payés",
+      "APDP CI Loi 2013-450 : biométrie pointage chantier = données sensibles, déclaration obligatoire",
+      "FDFP CI : cotisation formation professionnelle sur la masse salariale, droits à la formation"
+    ]
+  },
+  "definition_axe": {
+    "titre": "Digitalisation des ressources humaines dans le BTP",
+    "description": "Capacité de l'entreprise BTP à digitaliser ses processus RH : gestion des contrats de travail (CDI, CDD, journaliers), pointage et suivi des présences sur chantier (biométrique ou application mobile), traitement automatisé de la paie (Sage Paie CI, Silae), déclarations CNSS CI automatisées, gestion des congés et absences, suivi des formations (FDFP CI), et archivage numérique des dossiers du personnel. La conformité au Code du Travail CI et aux obligations CNSS CI est l'enjeu central.",
+    "perimetre": [
+      "Gestion des contrats : CDI, CDD, journaliers — édition, signature électronique, archivage numérique",
+      "Pointage chantier : biométrique (empreintes digitales, APDP CI), application mobile, badge RFID",
+      "Paie automatisée : Sage Paie CI, calcul automatique salaire brut/net, heures sup., indemnités BTP CI",
+      "Déclarations CNSS CI : états mensuels automatisés, certificats de travail, bordereau CNSS",
+      "Gestion congés/absences : workflow digital de validation, suivi des droits en temps réel",
+      "Paiement salaires Mobile Money CI : Orange Money CI, MTN MoMo CI pour les journaliers"
+    ],
+    "technologies_cles": [
+      "Sage Paie CI — Logiciel de paie adapté au contexte CI (CNSS CI, Code du Travail CI)",
+      "Silae / PayFit — SIRH cloud paie pour PME BTP CI (alternative Sage)",
+      "Biometric Systems (ZKTeco, Suprema) — Pointage biométrique chantier (empreintes, visage)",
+      "Orange Money Business CI / Wave CI — Paiement salaires journaliers par mobile money",
+      "Taleo / BambooHR — SIRH complet (recrutement, formation, évaluation) pour grandes entreprises BTP CI",
+      "Microsoft Excel avancé + Power Query — Alternative low-cost SIRH pour PME BTP CI"
+    ]
+  },
+  "enjeux_specifiques": {
+    "enjeux": [
+      {
+        "titre": "Conformité CNSS CI et gestion des journaliers BTP",
+        "description": "La sous-déclaration des travailleurs journaliers à la CNSS CI est un risque majeur pour les entreprises BTP CI. Un redressement CNSS CI peut atteindre plusieurs années de cotisations avec pénalités. La digitalisation du pointage et de la paie permet la génération automatique des états CNSS CI mensuels et la conformité totale.",
+        "impact": "Conformité CNSS CI garantie, évitement des redressements (parfois 50-500 M FCFA), protection sociale travailleurs"
+      },
+      {
+        "titre": "Paiement rapide des journaliers par Mobile Money CI",
+        "description": "Les ouvriers journaliers BTP CI attendent souvent leur paiement en espèces ou par chèque en fin de semaine, avec des risques de retard (chèque refusé, cash insuffisant). Le paiement par Mobile Money CI (Orange Money, Wave) le jour J ou J+1 est plébiscité par les ouvriers CI et réduit le risque de conflit social sur les chantiers.",
+        "impact": "Satisfaction ouvriers journaliers, réduction des arrêts de chantier pour impayés, traçabilité paiements"
+      },
+      {
+        "titre": "Gestion multi-sites et mobilité du personnel BTP CI",
+        "description": "Une entreprise BTP CI gère souvent des équipes sur 3-10 chantiers en parallèle, avec des travailleurs qui passent d'un chantier à l'autre. Sans SIRH multi-sites, le suivi des présences, des heures travaillées et des affectations est ingérable manuellement, créant des erreurs de paie et des risques de conflits.",
+        "impact": "Visibilité RH multi-sites en temps réel, paie correcte par chantier, allocation optimale des ressources"
+      }
+    ]
+  },
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Inexistant",
+      "description": "Gestion RH entièrement manuelle. Registre du personnel papier. Pointage sur fiche de présence manuscrite. Paie calculée manuellement ou sur Excel non automatisé. Déclarations CNSS CI faites à la main sur formulaires papier. Paiements en cash ou chèque. Risque de redressement CNSS CI élevé.",
+      "signes_distinctifs": [
+        "Registre du personnel papier, parfois incomplet (violation Code du Travail CI)",
+        "Fiche de présence manuscrite par chantier, souvent perdue ou illisible",
+        "Paie calculée sur calculatrice ou Excel basique, bulletins produits à la main",
+        "Déclarations CNSS CI : formulaires papier déposés au bureau CNSS (risque d'omissions)",
+        "Paiements cash pour les journaliers BTP CI (risque vol, litiges, absence de traçabilité)"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Excel de suivi du personnel standardisé. Pointage sur tablette ou application basique. Paie sous Sage ou équivalent pour les CDI. Déclarations CNSS CI partiellement automatisées. Quelques paiements Mobile Money CI initiés par le gestionnaire RH.",
+      "signes_distinctifs": [
+        "Excel RH standardisé : registre du personnel, suivi absences, calcul salaires CDI",
+        "Pointage sur application simple (Google Sheets, signature sur tablette) pour les chantiers principaux",
+        "Sage Paie CI pour les salariés CDI (bulletins automatiques), manuel pour les journaliers",
+        "CNSS CI : états mensuels générés par Excel, déposés sur portail CNSS CI",
+        "Paiements Mobile Money CI pour 30-40% des journaliers (non systématisé)"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "SIRH (Sage Paie CI ou Silae) couvrant CDI et CDD. Pointage biométrique sur les chantiers principaux (déclaré APDP CI). Génération automatique états CNSS CI. Paiements journaliers via Orange Money CI / Wave CI systématisés. Dossiers numériques du personnel archivés en GED.",
+      "signes_distinctifs": [
+        "Sage Paie CI : paie automatique CDI + CDD, bulletins générés automatiquement, envoi par email",
+        "Pointage biométrique ZKTeco sur 3-5 chantiers principaux (déclaration traitement biométrique APDP CI faite)",
+        "CNSS CI : états mensuels générés automatiquement depuis Sage Paie CI (100% des salariés déclarés)",
+        "Orange Money CI / Wave CI : 100% des journaliers payés par mobile money le jour J",
+        "GED RH : dossiers personnels numériques (contrats, attestations, bulletins) dans SharePoint RH"
+      ]
+    },
+    "niveau_4": {
+      "label": "Optimisé",
+      "description": "SIRH complet multi-sites : gestion des affectations chantier en temps réel, workflow de validation congés digital, formation FDFP CI trackée, onboarding numérique des nouvelles recrues. Conformité CNSS CI, Code du Travail CI et APDP CI documentée. Analytics RH : indicateurs de turnover, absentéisme par chantier.",
+      "signes_distinctifs": [
+        "SIRH multi-sites : affectation des travailleurs entre chantiers gérée en temps réel dans le SIRH",
+        "Workflow digital congés/absences : demande mobile → validation chef de projet → mise à jour automatique paie",
+        "Formation FDFP CI : plan de formation numérique, suivi des droits et remboursements dans le SIRH",
+        "Onboarding digital : contrat signé électroniquement le premier jour, accès IT automatiquement provisionnés",
+        "Dashboard RH : turnover par chantier, absentéisme, coût RH par m² ou par lot de travaux"
+      ]
+    },
+    "niveau_5": {
+      "label": "Différenciant",
+      "description": "SIRH intégré à l'ERP chantier : coût RH par lot de travaux en temps réel. IA prédictive pour le recrutement et la rétention. Portail self-service employé complet (bulletins, congés, formation, attestations). Politique de bien-être et engagement mesuré. Marque employeur digitale attractive.",
+      "signes_distinctifs": [
+        "ERP-SIRH intégré : heures travaillées par chantier → coût RH par lot de travaux → rentabilité en temps réel",
+        "IA recrutement : scoring automatique CV, prédiction turnover pour les nouvelles recrues",
+        "Portail employé self-service : bulletins, congés, attestations, plan de formation — zéro papier",
+        "Engagement employé : sondages NPS employés trimestriels, suivi des résultats et actions",
+        "Marque employeur digitale : Glassdoor CI, LinkedIn CI, attractivité pour les ingénieurs digital-natives"
+      ]
+    }
+  },
+  "indicateurs_cles": {
+    "indicateurs": [
+      {
+        "nom": "Taux de conformité CNSS CI",
+        "definition": "Pourcentage des travailleurs BTP CI (CDI, CDD, journaliers > 1 mois) déclarés à la CNSS CI",
+        "unite": "%",
+        "cible_sectorielle": "100% des travailleurs éligibles déclarés CNSS CI (obligation légale)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Délai de traitement de la paie",
+        "definition": "Nombre de jours entre la clôture de la période de paie et la réception du bulletin et du virement par le salarié",
+        "unite": "jours",
+        "cible_sectorielle": "< 2 jours (paie CDI automatisée Sage) ; J même jour pour les journaliers (Mobile Money)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Taux de paiement Mobile Money CI des journaliers",
+        "definition": "Pourcentage des paiements journaliers BTP CI réalisés par mobile money (Orange Money CI, Wave CI, MTN MoMo CI) vs. cash ou chèque",
+        "unite": "%",
+        "cible_sectorielle": "> 80% des paiements journaliers par Mobile Money CI",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Taux d'erreurs de paie",
+        "definition": "Pourcentage des bulletins de paie comportant une erreur (montant incorrect, heures sup. manquantes, primes oubliées) nécessitant une régularisation",
+        "unite": "%",
+        "cible_sectorielle": "< 1,5% d'erreurs de paie (vs. 8-12% en processus manuel BTP CI)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Taux de turnover annuel",
+        "definition": "Pourcentage des départs (toutes causes) sur l'effectif moyen de l'année — indicateur de l'efficacité des politiques RH et de rétention",
+        "unite": "%",
+        "cible_sectorielle": "Turnover < 20% (vs. 25-35% secteur BTP CI sans politique RH structurée)",
+        "frequence_mesure": "Annuelle"
+      }
+    ]
+  },
+  "bonnes_pratiques": {
+    "pratiques": [
+      {
+        "titre": "Déployer Sage Paie CI pour la conformité automatique CNSS CI",
+        "description": "Sage Paie CI est le logiciel de paie le plus répandu dans le contexte CI, paramétré pour les conventions collectives BTP CI, les cotisations CNSS CI, la taxe apprentissage (FDFP CI), et les charges sociales CI. La génération automatique des états CNSS CI mensuels élimine le risque d'omission. Coût : environ 150 000-500 000 FCFA/an selon la taille de l'entreprise. Formation obligatoire pour le gestionnaire RH (FDFP CI finançable).",
+        "benefice": "100% de conformité CNSS CI, réduction délai paie de 8 jours → 2 jours, zéro risque de redressement CNSS"
+      },
+      {
+        "titre": "Pointage biométrique chantier avec déclaration APDP CI",
+        "description": "Déployer des pointeuses biométriques ZKTeco (empreintes digitales) sur les chantiers > 30 personnes. Coût par unité : 150 000-300 000 FCFA. OBLIGATION : déclarer le traitement de données biométriques à l'APDP CI avant déploiement (formulaire en ligne APDP CI). Prévoir l'alternative (badge magnétique) pour les employés refusant la biométrie. Synchronisation automatique des présences vers Sage Paie CI pour le calcul des salaires.",
+        "benefice": "Fin des pointages frauduleux (travailleurs fantômes), paie précise basée sur les présences réelles, conformité APDP CI"
+      },
+      {
+        "titre": "Paiement journaliers BTP CI par Orange Money CI le jour même",
+        "description": "Intégrer l'API Orange Money Business CI ou Wave CI dans le processus de paie des journaliers : après validation des présences du jour (ou de la semaine), déclencher les paiements Mobile Money automatiquement. Former les ouvriers journaliers à l'ouverture d'un compte Orange Money CI (sessions gratuites Orange CI sur les chantiers). Avantage pour le chef de chantier : plus de gestion de cash, plus de risque de vol.",
+        "benefice": "Satisfaction immédiate des journaliers, réduction des conflits pour impayés, traçabilité CNSS CI"
+      },
+      {
+        "titre": "Dossiers numériques du personnel dans une GED RH sécurisée",
+        "description": "Archiver tous les documents RH dans une GED SharePoint sécurisée : contrats de travail, bulletins de paie, attestations CNSS CI, formations FDFP CI, registres accidents, fiches médicales aptitude (médecine du travail CI). Accès restreint (DRH, directeur, comptable). Délai de conservation selon Code du Travail CI (5 ans post-contrat minimum). Cette GED est consultable lors des contrôles de l'Inspection du Travail CI.",
+        "benefice": "Contrôles Inspection du Travail CI sans stress, accès immédiat aux dossiers, conformité Code du Travail CI"
+      },
+      {
+        "titre": "Tableau de bord RH multi-chantiers pour le pilotage",
+        "description": "Créer un tableau de bord Power BI connecté au SIRH : effectif par chantier en temps réel, taux d'absentéisme, coût RH par chantier, heures supplémentaires par poste, turnover par trimestre. Ce tableau de bord permet au directeur BTP CI de piloter les risques RH (chantier sous-effectif, turnover anormal) avant qu'ils impactent la livraison.",
+        "benefice": "Pilotage proactif des risques RH, allocation optimale des ressources inter-chantiers"
+      }
+    ]
+  },
+  "ecueils_frequents": {
+    "ecueils": [
+      {
+        "titre": "Déployer la biométrie sans déclaration APDP CI",
+        "description": "Les empreintes digitales et les données faciales sont des données biométriques sensibles au sens de la Loi CI 2013-450. Leur collecte sans déclaration préalable à l'APDP CI expose l'entreprise à des sanctions pouvant aller jusqu'à 50 M FCFA.",
+        "solution": "Déclarer SYSTÉMATIQUEMENT le traitement de données biométriques à l'APDP CI avant déploiement de toute pointeuse biométrique. Procédure simple, gratuite et accessible en ligne sur le site APDP CI."
+      },
+      {
+        "titre": "Sous-déclarer les journaliers à la CNSS CI",
+        "description": "La tentation de ne pas déclarer les journaliers 'pour quelques jours' à la CNSS CI est un risque majeur : en cas de contrôle (fréquents sur les grands chantiers CI, notamment avec des bailleurs étrangers comme la BAD ou la BM), le redressement CNSS CI peut porter sur plusieurs années de cotisations avec pénalités de 50-100%.",
+        "solution": "Déclarer 100% des journaliers dès le premier jour travaillé. Le coût des cotisations CNSS CI journalières est marginal (2-4% du salaire journalier) vs. le risque de redressement."
+      },
+      {
+        "titre": "SIRH sur-dimensionné jamais utilisé",
+        "description": "Des PME BTP CI investissent dans des SIRH complexes (SAP HR, Oracle HCM) qu'elles ne peuvent pas maintenir faute de compétences internes. Le SIRH est configuré partiellement, puis abandonné après 6-12 mois.",
+        "solution": "Commencer par Sage Paie CI (pour la paie et la conformité CNSS CI) + Excel RH structuré (pour le suivi du personnel). Ajouter des modules SIRH progressivement en fonction des besoins réels."
+      }
+    ]
+  },
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau de digitalisation RH BTP entre organisations représentatives",
+    "lignes": [
+      {
+        "organisation": "COLAS CI",
+        "profil": "Filiale Bouygues Construction, DRH groupe avec déclinaison locale CI",
+        "niveau_maturite": 4,
+        "points_forts": "SIRH groupe SAP HR avec module CI (CNSS CI, Code du Travail), paie automatisée 100% CDI+CDD, pointage biométrique sur tous les chantiers CI, déclaration biométrie APDP CI, paiements Mobile Money CI pour journaliers, onboarding numérique",
+        "points_faibles": "SIRH groupe parfois inadapté aux spécificités CI (journaliers, conventions BTP CI), dépendance DSI Paris pour les adaptations locales",
+        "initiatives_notables": "Programme 'Paie Mobile CI' : 100% des 450 journaliers COLAS CI payés par Orange Money CI le vendredi soir — 0 incident paiement en 18 mois"
+      },
+      {
+        "organisation": "BNETD CI",
+        "profil": "Agence étatique CI, DRH sous tutelle État CI",
+        "niveau_maturite": 3,
+        "points_forts": "Sage Paie CI pour les fonctionnaires et contractuels BNETD CI, déclarations CNSS CI automatisées, dossiers personnels numériques, conformité Code du Travail CI",
+        "points_faibles": "Pointage biométrique non encore déployé sur les missions terrain, peu de SIRH pour la gestion des prestataires et journaliers sur les chantiers contrôlés par BNETD CI",
+        "initiatives_notables": "Portail RH BNETD CI : accès bulletins de paie et attestations en self-service pour les 850 collaborateurs BNETD CI"
+      },
+      {
+        "organisation": "SATCI CI",
+        "profil": "Promoteur immobilier CI, effectif 80-120 collaborateurs + journaliers",
+        "niveau_maturite": 3,
+        "points_forts": "Sage Paie CI déployé (CDI + CDD), pointage biométrique ZKTeco sur 4 chantiers (déclaration APDP CI faite), paiements Orange Money CI pour 75% des journaliers, dossiers numériques SharePoint RH",
+        "points_faibles": "Pas de SIRH complet (uniquement paie), suivi des formations FDFP CI manuel, tableau de bord RH absent, turnover ingénieurs 28%/an non piloté",
+        "initiatives_notables": "Projet SIRH cloud Silae en cours (paie + congés + formation) — déploiement prévu 2025 en remplacement Sage on-premise"
+      },
+      {
+        "organisation": "PME BTP CI classe D (20-80 employés)",
+        "profil": "Petite entreprise BTP locale avec quelques CDI et beaucoup de journaliers",
+        "niveau_maturite": 1,
+        "points_forts": "Structure simple, relations personnalisées avec les employés",
+        "points_faibles": "Paie manuelle ou Excel non automatisé, déclarations CNSS CI partielles (journaliers souvent non déclarés), paiements cash, aucun dossier numérique, risque de redressement CNSS CI élevé",
+        "initiatives_notables": "Quelques PME BTP CI utilisent le portail CNSS CI en ligne pour les déclarations (première étape de digitalisation RH)"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "BNETD CI — Déploiement Sage Paie CI et portail RH self-service pour 850 collaborateurs",
+    "contexte": "Le BNETD CI emploie environ 850 collaborateurs (fonctionnaires détachés État CI, contractuels BNETD, prestataires) répartis entre le siège d'Abidjan (Plateau) et les directions régionales (Bouaké, San-Pédro, Man, Yamoussoukro). La gestion RH était partiellement manuelle : bulletins de paie produits sur un ancien logiciel non maintenu, dossiers personnels dans des classeurs physiques, attestations de travail tapées manuellement. Les contrôles de l'Inspection du Travail CI en 2021 avaient relevé des manquements sur la tenue des registres.",
+    "probleme": "Délai production bulletins de paie : 8 jours (vs. norme 2 jours). Erreurs de paie : 11% des bulletins comportaient des anomalies (primes oubliées, majorations heures sup. incorrectes). Attestations CNSS CI : produites manuellement en 3-5 jours par demande. Dossiers personnels papier : 35% incomplets lors du contrôle Inspection du Travail CI 2021 — 2 procès-verbaux établis. Déclarations CNSS CI partielles : 12% des contractuels non déclarés CNSS CI sur 2020.",
+    "solution_deployee": "Migration Sage Paie CI (version cloud) : paramétrage conventions BNETD CI, types de contrats (fonctionnaire/contractuel/prestataire), primes et indemnités spécifiques BNETD CI (indemnité terrain, frais de mission). Formation DRH et comptabilité (3 jours FDFP CI). Portail RH self-service (SharePoint) : accès bulletins en PDF pour tous les collaborateurs, demande congés en ligne (workflow validation hiérarchique), téléchargement attestations de travail et CNSS CI en selfcare. GED RH : numérisation de 850 dossiers personnels (externalisation sur 3 mois). Déclarations CNSS CI générées automatiquement depuis Sage Paie CI le 25 de chaque mois.",
+    "resultats": {
+      "delai_paie": "8 jours → 2 jours de délai de production des bulletins (-75%)",
+      "erreurs_paie": "11% → 1,8% d'erreurs de paie (-84%)",
+      "conformite_cnss_ci": "88% → 100% des collaborateurs déclarés CNSS CI",
+      "attestations_self_service": "Délai attestation CNSS CI : 3-5 jours → disponible immédiatement en selfcare",
+      "conformite_inspection_travail": "Contrôle Inspection du Travail CI 2023 : 0 procès-verbal (vs. 2 en 2021) — dossiers complets à 98%",
+      "satisfaction_collaborateurs": "NPS collaborateurs BNETD CI sur les services RH : 18 → 62/100"
+    },
+    "enseignements": "La numérisation des 850 dossiers personnels papier a été la phase la plus laborieuse (3 mois avec équipe dédiée). Le portail self-service a été le levier d'adoption le plus visible — les collaborateurs ont immédiatement adopté l'accès aux bulletins en ligne (taux d'accès mensuel : 94% des collaborateurs) car c'était un bénéfice direct et tangible pour eux."
+  },
+  "ai_context": {
+    "scoring_rubric": {
+      "score_1_to_20": "Gestion RH entièrement manuelle. Registre personnel papier incomplet. Paie manuscrite ou Excel basique. Déclarations CNSS CI partielles (journaliers souvent omis). Paiements cash. Risque de redressement CNSS CI élevé. Aucun dossier numérique.",
+      "score_21_to_40": "Excel RH standardisé. Pointage sur application simple pour quelques chantiers. Paie Sage pour les CDI, manuelle pour les journaliers. CNSS CI partiellement automatisé. Paiements Mobile Money CI pour une partie des journaliers.",
+      "score_41_to_60": "SIRH (Sage Paie CI ou Silae) couvrant CDI et CDD. Pointage biométrique principal déclaré APDP CI. États CNSS CI automatiques. 100% journaliers payés Mobile Money CI. GED RH numérique. Conformité Code du Travail CI.",
+      "score_61_to_80": "SIRH complet multi-sites. Workflow congés digital. Formation FDFP CI trackée. Onboarding numérique. Analytics RH (turnover, absentéisme, coût RH par chantier). Conformité APDP CI documentée.",
+      "score_81_to_100": "SIRH intégré à ERP chantier (coût RH par lot de travaux). IA recrutement et prédiction turnover. Portail employé self-service complet. NPS employés mesuré. Marque employeur digitale attractive pour ingénieurs CI."
+    },
+    "questions_cles_diagnostic": [
+      "Vos travailleurs journaliers BTP CI sont-ils tous déclarés à la CNSS CI ? Comment gérez-vous leurs déclarations ?",
+      "Utilisez-vous un logiciel de paie (Sage Paie CI ou autre) pour automatiser le calcul des salaires et les déclarations CNSS CI ?",
+      "Comment payez-vous vos ouvriers journaliers : en cash, par chèque ou par mobile money (Orange Money CI, Wave CI) ?",
+      "Avez-vous déployé un pointage biométrique sur vos chantiers ? Avez-vous déclaré ce traitement à l'APDP CI ?",
+      "Vos dossiers du personnel sont-ils numérisés et accessibles immédiatement lors d'un contrôle de l'Inspection du Travail CI ?"
+    ],
+    "pieges_evaluation": [
+      "Ne pas croire que la gestion RH manuelle est acceptable dans le BTP CI — les risques réglementaires (CNSS CI, Inspection du Travail CI, APDP CI) sont réels et coûteux",
+      "Vérifier la conformité biométrique APDP CI systématiquement — déploiement sans déclaration = risque de sanction",
+      "Distinguer la gestion des CDI (souvent digitalisée) de la réalité des journaliers BTP CI (souvent encore en cash)"
+    ]
+  },
+  "ressources": {
+    "references_reglementaires": [
+      "CNSS CI — Obligations de déclaration et cotisations sociales pour les entreprises BTP CI",
+      "Code du Travail CI Loi 2015-532 — Contrats de travail, congés, heures supplémentaires BTP CI",
+      "Inspection du Travail CI — Registres obligatoires en entreprise BTP (registre du personnel, accidents, affichage)",
+      "APDP CI Loi 2013-450 — Déclaration obligatoire des traitements de données biométriques",
+      "FDFP CI — Droits et obligations de formation professionnelle continue BTP CI"
+    ],
+    "outils_recommandes": [
+      "Sage Paie CI — Logiciel de paie adapté contexte CI (CNSS CI, Code du Travail, conventions BTP)",
+      "Silae / PayFit — SIRH cloud paie pour PME BTP CI (alternative moderne Sage)",
+      "ZKTeco / Suprema — Pointeuses biométriques chantier (empreintes + visage, compatibles APDP CI avec déclaration)",
+      "Orange Money Business CI / Wave CI — Paiement salaires journaliers BTP CI par mobile money",
+      "Microsoft Power BI — Dashboard RH multi-chantiers (connecté Sage Paie CI)"
+    ],
+    "formations_certifications": [
+      "FDFP CI — Formation Sage Paie CI pour gestionnaires RH BTP CI (remboursable FDFP CI)",
+      "CNSS CI — Formation obligations déclaratives et gestion des journaliers BTP CI",
+      "APDP CI — Formation protection données personnelles et conformité biométrie chantier",
+      "Inspection du Travail CI — Formation registres obligatoires et droit du travail BTP CI"
+    ]
+  }
+}

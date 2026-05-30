@@ -71,8 +71,17 @@ public class Evaluation {
     @Column(nullable = false)
     private MaturityLevel maturityLevel = MaturityLevel.INITIAL;
 
+    @Enumerated(EnumType.STRING)
+    private MaturityLevel targetMaturityLevel;
+
     @OneToMany(mappedBy = "evaluation", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<EvaluationAnswer> responses = new ArrayList<>();
+
+    @Column(nullable = false)
+    private Double modeleOperationnelScore = 0.0;
+
+    @Column(nullable = false)
+    private Double itDataScore = 0.0;
 
     @Column(nullable = false)
     private boolean pendingReview = true;
@@ -138,16 +147,22 @@ public class Evaluation {
     public void setProcessScore(Double processScore) { this.processScore = processScore; }
     public Double getInformationSystemScore() { return informationSystemScore; }
     public void setInformationSystemScore(Double informationSystemScore) { this.informationSystemScore = informationSystemScore; }
-    public Double getCanauxDistributionScore() { return canauxDistributionScore; }
+    public Double getCanauxDistributionScore() { return canauxDistributionScore != null ? canauxDistributionScore : 0.0; }
     public void setCanauxDistributionScore(Double s) { this.canauxDistributionScore = s; }
-    public Double getMarketingCommunicationScore() { return marketingCommunicationScore; }
+    public Double getMarketingCommunicationScore() { return marketingCommunicationScore != null ? marketingCommunicationScore : 0.0; }
     public void setMarketingCommunicationScore(Double s) { this.marketingCommunicationScore = s; }
-    public Double getRhCultureDigitaleScore() { return rhCultureDigitaleScore; }
+    public Double getRhCultureDigitaleScore() { return rhCultureDigitaleScore != null ? rhCultureDigitaleScore : 0.0; }
     public void setRhCultureDigitaleScore(Double s) { this.rhCultureDigitaleScore = s; }
-    public Double getOffresDigitalesScore() { return offresDigitalesScore; }
+    public Double getOffresDigitalesScore() { return offresDigitalesScore != null ? offresDigitalesScore : 0.0; }
     public void setOffresDigitalesScore(Double s) { this.offresDigitalesScore = s; }
+    public Double getModeleOperationnelScore() { return modeleOperationnelScore != null ? modeleOperationnelScore : 0.0; }
+    public void setModeleOperationnelScore(Double s) { this.modeleOperationnelScore = s; }
+    public Double getItDataScore() { return itDataScore != null ? itDataScore : 0.0; }
+    public void setItDataScore(Double s) { this.itDataScore = s; }
     public MaturityLevel getMaturityLevel() { return maturityLevel; }
     public void setMaturityLevel(MaturityLevel maturityLevel) { this.maturityLevel = maturityLevel; }
+    public MaturityLevel getTargetMaturityLevel() { return targetMaturityLevel; }
+    public void setTargetMaturityLevel(MaturityLevel targetMaturityLevel) { this.targetMaturityLevel = targetMaturityLevel; }
     public List<EvaluationAnswer> getResponses() { return responses; }
     public LocalDateTime getCreatedAt() { return createdAt; }
     public LocalDateTime getUpdatedAt() { return updatedAt; }

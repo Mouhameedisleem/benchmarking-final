@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "axis": "IS",
+    "sub_axis": "integration_api",
+    "sector": "education",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05-17"
+  },
+  "trends": [
+    {
+      "title": "Interopérabilité EdTech via standards IMS Global (LTI, QTI, CASE)",
+      "description": "L'écosystème EdTech fragmente les données d'apprentissage entre des dizaines d'outils (LMS, SIS, visioconférence, outils anti-plagiat, correction automatique). Les standards IMS Global permettent l'interopérabilité : LTI (Learning Tools Interoperability) pour intégrer des outils tiers dans le LMS sans re-login, QTI (Question and Test Interoperability) pour importer/exporter des évaluations entre systèmes, xAPI (Tin Can) pour les données d'apprentissage. En Côte d'Ivoire, l'UVCI utilise LTI pour intégrer Turnitin, QuestionWell et Zoom directement dans Moodle (SSO transparent pour les apprenants).",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "25%",
+      "source": "IMS Global / AUF EdTech Integration 2024",
+      "year": 2024
+    },
+    {
+      "title": "APIs de paiement éducatif (Mobile Money + Wave) et fintech EdTech CI",
+      "description": "La digitalisation des paiements de scolarité en CI passe par l'intégration d'APIs mobile money : Orange Money CI, MTN MoMo CI, et Wave CI. Les établissements CI leaders intègrent ces APIs directement dans leurs portails d'inscription et SIS pour permettre des paiements en quelques clics. Des fintechs émergentes proposent des solutions 'Buy Now, Pay Later' (BNPL) pour les frais de scolarité (Julaya CI, Djamo CI) avec intégration API dans les SIS des établissements.",
+      "impact_level": "high",
+      "horizon": "now",
+      "adoption_rate": "40%",
+      "source": "ARTCI / Orange CI / UVCI 2024",
+      "year": 2024
+    }
+  ],
+  "key_technologies": [
+    {
+      "name": "LTI (Learning Tools Interoperability) — Intégration outils tiers dans LMS",
+      "category": "Interopérabilité / EdTech",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "UVCI CI (LTI Turnitin + Zoom + QuestionWell dans Moodle), INPHB (LTI Cisco Webex + Gradescope), 20% établissements CI",
+      "leading_vendors": ["IMS Global LTI standard (universel)", "Canvas LTI store", "Moodle Plugin Directory (LTI)", "Blackboard LTI", "Brightspace LTI"]
+    },
+    {
+      "name": "APIs Mobile Money pour paiement frais de scolarité (Orange, MTN, Wave CI)",
+      "category": "Fintech / Paiement Éducatif",
+      "maturity_stage": "mature",
+      "adoption_in_sector": "60% des établissements privés CI avec au moins une API mobile money intégrée, 85% des paiements scolarité Pigier CI via mobile money",
+      "leading_vendors": ["Orange Money API CI (marchands)", "MTN MoMo API (Open API)", "Wave CI API (marchands)", "Julaya CI (BNPL EdTech)", "Djamo CI (paiement fractionné scolarité)"]
+    }
+  ],
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Intégrations LTI Moodle : Turnitin (anti-plagiat), QuestionWell (génération quiz IA), Zoom (cours synchrones), Microsoft Teams (collaboration), xAPI Moodle → LRS AWS S3. Paiements intégrés : Orange Money API (70% paiements), MTN MoMo API (15%), Wave CI API (12%), avec reçu automatique email + SMS, réconciliation automatique SIS.",
+        "differentiator": "Écosystème EdTech le plus intégré de CI — 8 outils tiers intégrés via LTI dans Moodle (SSO transparent, données synchronisées), 3 APIs mobile money actives avec réconciliation comptable automatique (0 ressaisie manuelle paiements), délai traitement paiement scolarité → inscription active : 12 minutes",
+        "source": "UVCI DSI Rapport Intégrations 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Aga Khan Academy (AKA) Mombasa / Nairobi",
+        "country": "Kenya / Tanzanie / Ouganda",
+        "key_practice": "Intégration complète SIS (Veracross) + LMS (Canvas) + outils tiers (Turnitin LTI, Screencastify, Khan Academy LTI), paiement M-Pesa intégré SIS (Mpesa API Safaricom), portail parents connecté (grades, absences, paiements en temps réel via API Veracross), middleware d'intégration MuleSoft pour synchronisation SIS/LMS/Finance",
+        "differentiator": "Intégration SIS-LMS-paiement la plus avancée d'Afrique de l'Est — MuleSoft middleware : toute inscription SIS automatiquement provisionnée dans Canvas LMS en < 5 secondes, parents informés en temps réel via portail et M-Pesa pour les frais",
+        "source": "Aga Khan Academy Technology Report 2024"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Canvas by Instructure — Écosystème d'intégrations LMS",
+        "country": "États-Unis",
+        "key_practice": "Catalog de 1 000+ intégrations LTI certifiées (Turnitin, Zoom, Microsoft Teams, Google Apps, Gradescope, Khan Academy, Kahoot!), API REST complète (6 000+ endpoints documentés), Canvas Data (data warehouse open pour analytics), webhook pour synchronisation temps réel SIS → LMS, partenariats avec 350+ EdTech",
+        "differentiator": "LMS le plus intégré au monde — 1 000+ intégrations LTI certifiées, API 6 000 endpoints avec documentation complète (Swagger), Canvas Data : data warehouse gratuit pour les établissements permettant de construire des analytics avancées sur toutes les données Canvas",
+        "source": "Instructure Canvas Platform Report 2024"
+      }
+    ]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Aucune intégration entre systèmes, ressaisie manuelle de toutes les données entre outils (SIS → tableur Excel → email → LMS), pas d'API, paiements espèces uniquement.",
+    "level_2_developing": "Paiement mobile money via 1 opérateur (sans API — virement avec notification manuelle), quelques fichiers CSV exportés/importés manuellement entre SIS et LMS.",
+    "level_3_defined": "APIs mobile money intégrées (Orange Money + MTN MoMo) dans le portail de paiement, LTI pour 1-2 outils tiers dans le LMS, synchronisation SIS-LMS basique.",
+    "level_4_managed": "3+ APIs mobile money intégrées avec réconciliation automatique, LTI pour 5+ outils dans le LMS (SSO transparent), middleware d'intégration SIS-LMS-Finance, xAPI collecte données comportementales vers LRS.",
+    "level_5_optimizing": "Architecture d'intégration complète (middleware ou iPaaS) : SIS-LMS-SIS-Finance-Alumni-MENA CI API (reporting automatique), toutes les APIs mobile money CI, LTI pour tous les outils tiers, interopérabilité CAMES (échanges inter-universités via API standard)."
+  },
+  "regulations": [
+    {
+      "name": "BCEAO — Agrément et réglementation des APIs de paiement mobile money CI",
+      "authority": "BCEAO (Banque Centrale des États de l'Afrique de l'Ouest)",
+      "description": "Les établissements éducatifs CI intégrant des APIs de paiement mobile money (Orange Money, MTN MoMo, Wave) dans leurs portails doivent : (1) signer un contrat de marchands avec chaque opérateur (merchant agreement + KYC institutionnel), (2) respecter les plafonds de transaction BCEAO (500K FCFA/transaction, 5M FCFA/mois pour les particuliers — limite relevée à 10M FCFA/mois pour les institutions), (3) émettre des reçus électroniques conformes (N° de transaction, montant, date, bénéficiaire), (4) déclarer les flux agrégés à la DGI CI (fiscalité sur les commissions perçues). Frais API : 0,5-1,5% selon opérateur.",
+      "compliance_deadline": "En vigueur",
+      "impact_on_sector": "Les établissements CI doivent négocier des merchant agreements avec Orange Money, MTN MoMo et Wave pour intégrer légalement leurs APIs — processus de 4-8 semaines, KYC institutionnel complet requis (statuts, agrément MENA, mandataires sociaux)"
+    },
+    {
+      "name": "IMS Global LTI — Standard d'interopérabilité EdTech (recommandé CAMES et AUF)",
+      "authority": "IMS Global (standard international) / CAMES / AUF",
+      "description": "Le CAMES et l'AUF recommandent l'adoption des standards IMS Global (LTI 1.3, xAPI, QTI) pour garantir l'interopérabilité des outils EdTech dans l'espace francophone. Les établissements souhaitant être référencés dans le catalogue de cours AUF ou bénéficier du financement BAD éducation doivent démontrer leur conformité LTI et xAPI. Le MESRS CI inclut la conformité LTI dans ses critères d'évaluation de la qualité des établissements d'enseignement supérieur numérique (grille de notation 2024).",
+      "compliance_deadline": "Recommandation CAMES/AUF (non obligatoire mais valorisé pour les financements)",
+      "impact_on_sector": "La conformité LTI est un avantage compétitif pour obtenir des financements AUF/BAD et pour les partenariats inter-universités UEMOA — les établissements non-conformes LTI sont exclus des consortiums d'échange de cours et de diplômes CAMES"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Fragmentation des données apprenants entre multiples outils non intégrés et perte de vue 360°",
+      "description": "En Côte d'Ivoire, la majorité des établissements opèrent avec 5-15 outils digitaux non intégrés (SIS, LMS, email, visioconférence, anti-plagiat, paiements, WhatsApp support) créant des silos de données. Un étudiant en difficulté peut être invisible dans le LMS (absences non notées), en retard dans le SIS (frais impayés bloqués manuellement), et actif sur WhatsApp uniquement. Sans intégration, l'établissement ne peut construire une vue 360° de l'apprenant pour des interventions EWS pertinentes. En CI, 72% des établissements n'ont aucune synchronisation automatique entre leur SIS et leur LMS.",
+      "severity": "high",
+      "likelihood": "high",
+      "mitigation": "Déployer un middleware léger d'intégration (Zapier Education, MuleSoft Anypoint ou n8n open source) pour synchroniser les données clés entre SIS (notes, paiements, statut inscription) et LMS (accès cours, complétion), puis enrichir progressivement — UVCI CI a utilisé l'API Moodle + Python scripts pour synchroniser les 3 systèmes (SIS, LMS, Finance) en 8 semaines sans middleware commercial coûteux"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "API nationale d'identité apprenant CI (SSO éducatif inter-établissements)",
+      "description": "En Côte d'Ivoire, un étudiant changeant d'établissement doit réouvrir un compte dans chaque nouveau SIS/LMS — ses données d'apprentissage (portfolio, résultats, badges) ne sont pas transférables. Une API nationale d'identité apprenant CI (initiée MESRS, basée sur le numéro étudiant CI + clé CAMES) permettrait la portabilité des données académiques : un étudiant qui transfère de l'UFHB à l'INPHB conserve son portfolio et son historique. L'UVCI travaille avec MESRS CI sur ce projet d'identité apprenant CI nationale (pilote 2025).",
+      "impact_level": "high",
+      "time_to_value": "3-5 ans",
+      "prerequisite_maturity": "Niveau 4 — SIS opérationnel avec numéro étudiant CI standardisé + conformité APDP CI portabilité données"
+    }
+  ],
+  "ma_and_fundraising": [
+    {
+      "deal": "Julaya CI — Extension EdTech (paiement fractionné scolarité)",
+      "montant": "3,5 Mds FCFA (Série A)",
+      "investisseurs": ["Orange Ventures CI", "Partech Africa", "IFC"],
+      "annee": 2024,
+      "description": "Julaya CI, startup fintech BCEAO-agréée spécialisée dans les paiements B2B, a lancé une offre 'EduPay' permettant aux établissements CI de proposer un paiement fractionné des frais de scolarité (3-10 mensualités via Orange Money/Wave) avec garantie de l'établissement (Julaya avance les frais, l'étudiant rembourse sur 6-10 mois). 35 établissements CI ont signé avec Julaya EduPay en 2024, dont Pigier CI et ESC Abidjan. L'intégration API (REST + webhooks Moodle) automatise l'activation/suspension des accès selon le statut de remboursement."
+    }
+  ],
+  "zoom_case_study": {
+    "entreprise": "UVCI (Université Virtuelle de Côte d'Ivoire)",
+    "pays": "Côte d'Ivoire",
+    "technologie": "Intégration LTI multi-outils Moodle + APIs mobile money multi-opérateurs — Écosystème EdTech intégré",
+    "description": "En 2023-2024, l'UVCI a construit un écosystème EdTech intégré autour de Moodle LMS : (1) LTI intégrations : Turnitin (anti-plagiat, SSO transparent), QuestionWell (génération quiz IA), Zoom (cours synchrones depuis Moodle sans changement d'onglet), Microsoft Teams (collaboration projets), H5P (contenu interactif) — 8 outils tiers intégrés via LTI ; (2) Paiements multi-opérateurs : Orange Money API (70% volume), MTN MoMo API (15%), Wave API (12%), avec portail de paiement unique UVCI (3 boutons), reçu automatique PDF email + SMS, réconciliation comptable automatique (import nightly vers Oracle) ; (3) Synchronisation SIS-LMS : script Python (API Moodle REST) activant automatiquement les cours dès confirmation paiement (délai : 12 minutes vs. 2 jours manuels).",
+    "resultats": "Délai activation cours post-paiement : 2 jours → 12 minutes. Erreurs de réconciliation paiement/inscription : 8% (manuel) → 0,3% (API automisée). Part paiements digitaux : 97% (vs. 65% en 2022). Abandons de paiement (checkout) : -45% grâce au portail multi-opérateurs en une page (vs. 3 portails séparés avant). Outils LTI adoptés : 8 intégrés dans Moodle (vs. 1 seul en 2022) — les tuteurs passent de Zoom à Turnitin sans quitter Moodle, réduisant les demandes de support technique de 62%.",
+    "source": "UVCI DSI Rapport Intégrations 2024",
+    "annee": 2024
+  },
+  "comparatif_organisations": {
+    "titre": "Comparatif intégration API — Secteur Éducation Côte d'Ivoire",
+    "colonnes": ["organisation", "APIs mobile money intégrées", "Outils LTI dans LMS", "Synchro SIS-LMS", "BNPL scolarité disponible"],
+    "lignes": [
+      {
+        "organisation": "UVCI CI",
+        "valeurs": ["Orange + MTN + Wave (API directe)", "8 outils LTI (Turnitin, Zoom, QWell…)", "Automatique (12 min, API Python)", "Non (frais modiques — non nécessaire)"]
+      },
+      {
+        "organisation": "Pigier CI",
+        "valeurs": ["Orange + Wave (API marchands)", "3 outils LTI (Blackboard)", "Manuelle mensuelle", "Oui (Julaya EduPay)"]
+      },
+      {
+        "organisation": "UFHB Abidjan",
+        "valeurs": ["Non (paiement agence CIE-UFHB)", "Non (Moodle sans LTI configuré)", "Manuelle (export CSV)", "Non"]
+      }
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Évalue l'intégration et les APIs dans le secteur éducation CI : intégration APIs mobile money multi-opérateurs (Orange, MTN, Wave) dans le portail de paiement, outils LTI intégrés dans le LMS (SSO transparent), synchronisation SIS-LMS automatisée, et conformité BCEAO pour les merchant agreements.",
+    "maturity_max_description": "Établissement éducatif CI avec écosystème intégré complet : APIs mobile money multi-opérateurs (réconciliation automatique, délai activation < 15 min), 5+ outils LTI dans LMS (SSO transparent), middleware SIS-LMS-Finance (synchronisation temps réel), xAPI vers LRS, conformité BCEAO merchant agreements — aucune ressaisie manuelle dans les processus clés.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune intégration, ressaisie manuelle entre tous les outils, paiements espèces uniquement, pas d'API, silos totaux.",
+      "score_21_to_40": "Paiement mobile money 1 opérateur (sans API — notification manuelle), CSV échanges manuels SIS-LMS, aucun LTI.",
+      "score_41_to_60": "APIs mobile money 1-2 opérateurs intégrées, LTI pour 1-2 outils dans LMS, synchronisation SIS-LMS semi-auto (hebdomadaire).",
+      "score_61_to_80": "3+ APIs mobile money avec réconciliation auto, LTI 5+ outils SSO transparent, synchro SIS-LMS automatique (< 1h), BCEAO merchant agreements signés.",
+      "score_81_to_100": "Toutes APIs mobile money CI, LTI 8+ outils, middleware SIS-LMS-Finance temps réel (< 15 min), xAPI→LRS, BNPL intégré, conformité BCEAO totale, zéro ressaisie."
+    },
+    "prompt_injection_context": "Secteur éducation CI : BCEAO impose des merchant agreements pour les intégrations API mobile money éducatives (Orange Money, MTN MoMo, Wave CI). Le standard LTI est recommandé par CAMES et AUF pour l'interopérabilité EdTech UEMOA. UVCI CI est le modèle d'intégration le plus avancé (8 LTI + 3 APIs mobile money + synchronisation auto SIS-LMS). Julaya EduPay CI propose des BNPL scolarité via API intégrée LMS.",
+    "key_questions_for_llm": [
+      "Avez-vous intégré les APIs mobile money (Orange Money, MTN MoMo, Wave) directement dans votre portail de paiement de scolarité ? Disposez-vous de merchant agreements BCEAO ?",
+      "Votre LMS intègre-t-il des outils tiers via le protocole LTI (Turnitin, Zoom, Gradescope, etc.) permettant un SSO transparent pour vos apprenants ?",
+      "Votre SIS et votre LMS sont-ils synchronisés automatiquement (activation cours dès confirmation paiement, mise à jour des inscriptions) ? Quel est le délai de cette synchronisation ?",
+      "Proposez-vous une solution de paiement fractionné des frais de scolarité (BNPL comme Julaya EduPay) intégrée à votre SIS ?",
+      "Vos données d'apprentissage (xAPI) sont-elles collectées dans un LRS standardisé permettant l'interopérabilité avec d'autres plateformes et établissements UEMOA ?"
+    ]
+  }
+}

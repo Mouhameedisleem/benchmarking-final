@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "axis": "PROCESS",
+    "sub_axis": "Cartographie des processus",
+    "sector": "assurance",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Cartographie end-to-end du parcours sinistre — le processus le plus critique à optimiser",
+      "description": "Le parcours sinistre concentre 60 % des insatisfactions clients dans le secteur assurance UEMOA. Sa cartographie révèle en moyenne 18-25 étapes dont 40-60 % sont des étapes d'attente, de validation redondante ou de retranscription manuelle. La cartographie est le prérequis à toute digitalisation.",
+      "impact_level": "Très élevé",
+      "horizon": "6-12 mois",
+      "adoption_rate": "25 % des grands assureurs africains ont cartographié formellement leurs processus sinistres (FANAF 2024)",
+      "source": "FANAF Excellence Opérationnelle 2024 / EY Africa Insurance Process Mining 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Process mining dans les systèmes de gestion de polices — identification automatique des goulots",
+      "description": "Les outils de process mining (Celonis, UiPath) analysent les logs des core insurance systems pour identifier automatiquement les goulots d'étranglement dans les processus de souscription et de sinistres. En assurance, ils révèlent des écarts de 3x entre le temps théorique et le temps réel de traitement.",
+      "impact_level": "Élevé",
+      "horizon": "24-36 mois",
+      "adoption_rate": "8 % des assureurs africains utilisent le process mining (EY 2024)",
+      "source": "EY Africa Insurance Digital Operations 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "BPMN et outils de modélisation de processus",
+      "category": "Cartographie et documentation",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Bizagi", "Camunda", "Signavio (SAP)", "ARIS (Software AG)", "Lucidchart"]
+    },
+    {
+      "name": "Process Mining spécialisé assurance",
+      "category": "Analyse automatique des processus",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en Afrique",
+      "leading_vendors": ["Celonis Financial Services", "UiPath Process Mining", "IBM Process Mining", "Appian Process Mining"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "NSIA Assurances CI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Cartographie complète de 8 processus critiques (souscription auto, sinistre vie, KYC). Réduction du délai de souscription auto de 3 jours à 4 heures après cartographie et simplification.",
+        "differentiator": "NSIA a cartographié et simplifié ses processus de souscription en 2022, réduisant de 40 % le nombre d'étapes manuelles",
+        "source": "NSIA Rapport Transformation Opérationnelle 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Jubilee Insurance Kenya",
+        "country": "Kenya",
+        "key_practice": "Programme de cartographie et d'automatisation de 15 processus clés. Délai sinistres réduit de 21 à 7 jours après cartographie et implémentation RPA.",
+        "differentiator": "Jubilee Insurance a identifié via process mining que 55 % du temps de traitement d'un sinistre était consacré à l'attente de validation de managers — simplifié en délégation automatique",
+        "source": "Jubilee Insurance Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Allianz Group",
+        "country": "Allemagne / Mondial",
+        "key_practice": "Programme Global Process Excellence — cartographie de 200+ processus dans 70 pays avec standardisation mondiale. Process mining Celonis déployé pour identifier les écarts entre processus théoriques et réels.",
+        "differentiator": "Allianz a économisé 350 M€/an grâce à la standardisation et l'optimisation de ses processus via cartographie et process mining",
+        "source": "Allianz Annual Report 2023 / Celonis Allianz Case Study 2023",
+        "annee": "2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune cartographie formalisée. Processus dans la tête des collaborateurs. Documentation inexistante. Chaque agence traite différemment les mêmes dossiers.",
+    "level_2_developing": "Quelques procédures écrites pour les processus les plus courants. Documentation partielle non mise à jour. Pas d'outil de modélisation.",
+    "level_3_defined": "Cartographie des processus critiques (souscription, sinistre) en BPMN. Documentation à jour. Propriétaires de processus désignés. Indicateurs de temps de traitement mesurés.",
+    "level_4_managed": "Tous les processus majeurs cartographiés. Process mining déployé sur les systèmes core. KPIs de performance par processus. Programme d'amélioration continue actif.",
+    "level_5_optimizing": "Process mining en continu. Benchmarking des processus vs leaders africains. Amélioration continue institutionnalisée. Délai sinistres courants < 7 jours."
+  },
+
+  "regulations": [
+    {
+      "name": "Circulaire CIMA sur les procédures internes de gestion des sinistres",
+      "issuing_body": "CIMA",
+      "scope": "Tous assureurs CIMA",
+      "key_requirement": "Documentation obligatoire des procédures de réception, instruction et règlement des sinistres. Traçabilité complète des dossiers exigée lors des inspections CIMA.",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.cima-afrique.org"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Résistance à la documentation des processus — culture orale dominante",
+      "description": "Dans de nombreuses compagnies d'assurance UEMOA, la connaissance des processus est concentrée chez quelques experts seniors. La cartographie est perçue comme une menace ('rendre explicite ce qui donne du pouvoir') plutôt qu'un outil d'efficacité.",
+      "severity": "Moyen",
+      "likelihood": "Élevée",
+      "mitigation": "Approche participative — impliquer les experts terrain dans la cartographie. Positionner la documentation comme protection (si l'expert part, le savoir reste). Support de la direction générale obligatoire."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Conformité CIMA par la documentation — transformer l'obligation en avantage",
+      "description": "La CIMA exige des procédures documentées lors de ses inspections. Les assureurs qui cartographient leurs processus pour la conformité peuvent simultanément identifier des gains d'efficacité significatifs (réduction de 30-50 % des étapes redondantes).",
+      "impact_level": "Élevé",
+      "time_to_value": "3-9 mois",
+      "prerequisite_maturity": "Niveau 1"
+    }
+  ],
+
+  "ma_and_fundraising": [],
+
+  "zoom_case_study": {
+    "entreprise": "Jubilee Insurance Kenya — Process Mining pour passer de 21 à 7 jours sur les sinistres",
+    "pays": "Kenya (référence Afrique de l'Est)",
+    "technologie": "Process Mining UiPath + RPA pour l'automatisation des étapes identifiées",
+    "description": "Jubilee Insurance Kenya a mené en 2022 une analyse process mining complète de son processus sinistres, qui révélait un délai moyen de 21 jours alors que la norme kényane est de 14 jours. L'analyse a révélé que 55 % du temps était consacré à des attentes de validation managériale sur des dossiers < 50 000 KES (≈ 375 USD). La solution : délégation automatique avec règles de décision (montant < seuil = paiement automatique sans validation), suppression de 3 niveaux d'approbation redondants, et RPA pour la saisie des données entre systèmes. Résultat en 12 mois : délai moyen de 7 jours, satisfaction client +28 points NPS, économies de 1,2 M$ sur les coûts de traitement.",
+    "resultats": "Délai sinistres 21 → 7 jours · NPS +28 points · Économies 1,2 M$/an · 3 niveaux approbation supprimés · 55 % du temps d'attente éliminé",
+    "source": "Jubilee Insurance Annual Report 2023 / UiPath Jubilee Case Study 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité cartographie des processus — benchmark assureurs CIMA/UEMOA",
+    "colonnes": ["Organisation", "Processus sinistres cartographiés", "Processus souscription documentés", "Process mining déployé", "KPIs délais par processus", "Programme amélioration continue"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "Partiel", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La cartographie des processus est le point de départ obligatoire de toute transformation digitale dans le secteur assurance UEMOA. Sans cartographie formalisée, les projets d'automatisation (RPA, IA) sont construits sur des processus défectueux et reproduisent les inefficacités à grande vitesse. Le secteur assurance UEMOA souffre d'une complexité processuelle héritée (IARD, vie, réassurance avec des flux différents) et d'une culture de documentation faible.",
+    "maturity_max_description": "Tous les processus critiques (souscription, sinistre, KYC, réassurance) cartographiés en BPMN avec propriétaires désignés. Process mining déployé sur le core insurance system pour détecter les écarts en continu. KPIs de délai par processus mesurés et benchmarkés vs leaders africains. Programme Lean Insurance actif avec amélioration continue institutionnalisée.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune cartographie. Processus informels. Aucune documentation. Chaque agence traite différemment.",
+      "score_21_to_40": "Quelques procédures écrites. Documentation partielle non à jour. Pas d'outil de modélisation.",
+      "score_41_to_60": "Processus critiques cartographiés en BPMN. Propriétaires désignés. Délais mesurés.",
+      "score_61_to_80": "Tous processus majeurs cartographiés. Process mining déployé. KPIs actifs. Programme amélioration.",
+      "score_81_to_100": "Process mining continu. Benchmarking vs leaders. Lean Insurance institutionnalisé. Sinistres < 7 jours."
+    },
+    "prompt_injection_context": "Cette compagnie d'assurance est évaluée sur la maturité de sa cartographie des processus dans le contexte CIMA/UEMOA. Analyse le niveau de documentation des processus sinistres et souscription, l'utilisation d'outils de modélisation et de process mining, et l'existence d'un programme d'amélioration continue.",
+    "key_questions_for_llm": [
+      "Les processus de souscription et de gestion des sinistres sont-ils formellement cartographiés (BPMN ou équivalent) avec des propriétaires désignés ?",
+      "Le délai moyen de traitement par type de sinistre est-il mesuré et suivi régulièrement ?",
+      "Un outil de process mining ou d'analyse des flux de travail est-il utilisé pour identifier les goulots d'étranglement ?",
+      "Un programme d'amélioration continue des processus (Lean, Six Sigma ou équivalent) est-il actif ?",
+      "La documentation des processus est-elle conforme aux exigences d'inspection de la CIMA ?"
+    ]
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "axe": "MARKETING",
+  "sous_axe": "Marketing digital",
+  "secteur": "industrie",
+  "description": "Marketing digital B2B dans l'industrie ivoirienne : présence en ligne, content marketing technique, génération de leads export et fidélisation des donneurs d'ordre multinationaux.",
+  "maturite_niveaux": {
+    "initial": "Pas de présence digitale structurée. Prospection uniquement par bouche-à-oreille et salons physiques. Aucune fiche produit numérique ni certification accessible en ligne.",
+    "en_developpement": "Site vitrine basique, présence LinkedIn entreprise. Quelques fiches produits PDF en ligne. Pas de stratégie SEO ni de suivi des leads.",
+    "structure": "Site optimisé SEO, LinkedIn actif avec publications régulières, fiches techniques téléchargeables, CRM simple pour suivi prospects. Participation aux salons digitaux sectoriels.",
+    "avance": "Plateforme marketing automation (HubSpot/ActiveCampaign), scoring des leads, content marketing technique structuré (CoA, certifications, études de cas), campagnes ciblées sur les acheteurs multinationaux en CI.",
+    "optimise": "Account-Based Marketing (ABM) pour grands comptes, portail documentaire automatisé, data analytics sur les parcours acheteurs, présence APEX-CI et portails export digitaux, ROI marketing mesurable par segment."
+  },
+  "questions_diagnostic": [
+    {
+      "id": "MARKETING_marketing_digital_Q1",
+      "question": "Votre entreprise dispose-t-elle d'un site web avec fiches produits techniques téléchargeables (CoA, fiches sécurité, certifications ISO) ?",
+      "type": "choix_unique",
+      "options": ["Non, pas de site ou site obsolète", "Site vitrine sans documentation technique", "Site avec quelques documents PDF", "Site structuré avec catalogue numérique complet", "Portail produits interactif avec accès sécurisé clients"],
+      "poids": 20
+    },
+    {
+      "id": "MARKETING_marketing_digital_Q2",
+      "question": "Utilisez-vous LinkedIn ou d'autres canaux digitaux pour prospecter les acheteurs industriels (multinationales en CI : Nestlé, Unilever, Barry Callebaut, Cargill) ?",
+      "type": "choix_unique",
+      "options": ["Non", "Profil personnel LinkedIn seulement", "Page entreprise LinkedIn avec publications occasionnelles", "Stratégie LinkedIn active avec publications hebdomadaires et outreach", "ABM LinkedIn avec ciblage précis des décideurs achat"],
+      "poids": 20
+    },
+    {
+      "id": "MARKETING_marketing_digital_Q3",
+      "question": "Disposez-vous d'un CRM pour gérer vos leads et prospects industriels ?",
+      "type": "choix_unique",
+      "options": ["Non, gestion sur Excel/papier", "CRM basique (contacts uniquement)", "CRM avec pipeline commercial", "CRM intégré avec marketing automation", "CRM complet avec scoring, nurturing et analytics ROI"],
+      "poids": 20
+    },
+    {
+      "id": "MARKETING_marketing_digital_Q4",
+      "question": "Votre entreprise est-elle inscrite et active sur les portails export/industriels : APEX-CI, Conseil Café-Cacao CI, FIRCA CI ou plateformes B2B internationales ?",
+      "type": "choix_multiple",
+      "options": ["APEX-CI portail exportateurs", "Conseil Café-Cacao CI base fournisseurs", "FIRCA CI annuaire filière", "Alibaba/TradeIndia profil acheteurs B2B", "Aucune présence sur ces portails"],
+      "poids": 20
+    },
+    {
+      "id": "MARKETING_marketing_digital_Q5",
+      "question": "Mesurez-vous le retour sur investissement de vos actions marketing digital (coût par lead, taux de conversion, CA généré par canal) ?",
+      "type": "choix_unique",
+      "options": ["Non, aucune mesure", "Mesure partielle (visites site seulement)", "Quelques KPIs suivis (leads générés)", "Dashboard marketing avec KPIs clés", "ROI complet par canal avec attribution multi-touch"],
+      "poids": 20
+    }
+  ],
+  "pratiques_recommandees": [
+    {
+      "titre": "Content marketing technique B2B",
+      "description": "Produire des contenus à valeur ajoutée pour les acheteurs industriels : études de cas traçabilité EUDR, guides certifications ISO 9001/22000, fiches comparatives matières premières CI. Format privilégié : PDF téléchargeables, vidéos courtes processus qualité.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Optimisation SEO pour mots-clés export CI",
+      "description": "Cibler les requêtes Google des acheteurs multinationaux : 'fournisseur cacao certifié Côte d'Ivoire', 'anacarde EUDR traçable', 'emballages industriels Abidjan ISO'. Créer des landing pages spécifiques par filière avec documentation téléchargeable.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "LinkedIn Sales Navigator pour ABM grands comptes",
+      "description": "Identifier et engager les décideurs achat de Nestlé CI, Unilever CI, Barry Callebaut, Cargill, Bolloré Logistics CI via LinkedIn Sales Navigator. Personnaliser les approches par filière (cacao, anacarde, palmier) et par problématique (EUDR, qualité, coût).",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "très fort"
+    },
+    {
+      "titre": "Présence APEX-CI et portails sectoriels",
+      "description": "S'inscrire et optimiser le profil sur le portail APEX-CI (Agence pour la Promotion des Exportations de Côte d'Ivoire), Conseil Café-Cacao CI base fournisseurs certifiés, FIRCA CI annuaire agro-industrie. Ces portails sont consultés par les acheteurs institutionnels et les partenaires techniques.",
+      "priorite": "moyenne",
+      "effort": "faible",
+      "impact": "moyen"
+    },
+    {
+      "titre": "Marketing automation et lead nurturing",
+      "description": "Déployer HubSpot ou ActiveCampaign (à partir de 500 $/mois) pour automatiser le nurturing : séquences email post-téléchargement de fiche technique, alertes commerciales sur nouvelles certifications, newsletter mensuelle filière. Adapter les contenus en français pour les acheteurs UEMOA et en anglais pour les acheteurs anglophone-africains.",
+      "priorite": "moyenne",
+      "effort": "élevé",
+      "impact": "fort"
+    },
+    {
+      "titre": "Participation aux salons digitaux et webinars sectoriels",
+      "description": "Participer aux éditions digitales du SARA (Salon International de l'Agriculture et des Ressources Animales), SIAL Afrique, Africa CEO Forum. Organiser des webinars techniques sur des thématiques EUDR, qualité filière cacao CI pour générer des leads qualifiés export.",
+      "priorite": "moyenne",
+      "effort": "moyen",
+      "impact": "moyen"
+    }
+  ],
+  "outils_solutions": [
+    {
+      "categorie": "CRM et marketing automation",
+      "solutions": [
+        {
+          "nom": "HubSpot CRM",
+          "description": "CRM + marketing automation, version gratuite disponible, plan Starter 50 $/mois. Adapté PME industrielles CI avec interface française.",
+          "pertinence_locale": "haute",
+          "cout_estime": "0-500 $/mois selon fonctionnalités"
+        },
+        {
+          "nom": "Zoho CRM",
+          "description": "Alternative économique à HubSpot, très utilisée en Afrique francophone. Plan Standard 14 $/utilisateur/mois. Support en français.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "14-40 $/utilisateur/mois"
+        },
+        {
+          "nom": "Odoo CRM",
+          "description": "Module CRM intégré à Odoo ERP (déjà déployé dans les industries CI). Synergie forte avec modules Manufacturing et Inventory.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Inclus dans licence Odoo ou module additionnel"
+        }
+      ]
+    },
+    {
+      "categorie": "Présence digitale et SEO",
+      "solutions": [
+        {
+          "nom": "WordPress + Yoast SEO",
+          "description": "CMS site web avec optimisation SEO intégrée. Standard de facto pour sites industriels PME. Hébergeable chez OrangeBusiness CI ou Cloudways.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "200 000 - 1 500 000 FCFA création + 50 000 FCFA/mois hébergement"
+        },
+        {
+          "nom": "Google Business Profile",
+          "description": "Fiche Google gratuite pour visibilité locale Abidjan/CI. Essentiel pour être trouvé par les acheteurs locaux via Google Maps.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Gratuit"
+        }
+      ]
+    },
+    {
+      "categorie": "Prospection B2B",
+      "solutions": [
+        {
+          "nom": "LinkedIn Sales Navigator",
+          "description": "Outil de prospection LinkedIn avancé pour cibler les décideurs achat des multinationales en CI. 99 $/mois/utilisateur.",
+          "pertinence_locale": "haute",
+          "cout_estime": "99 $/mois/utilisateur"
+        },
+        {
+          "nom": "APEX-CI portail exportateurs",
+          "description": "Portail officiel CI pour référencement exportateurs. Gratuit pour les entreprises ivoiriennes exportatrices. Consulté par les acheteurs institutionnels.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Gratuit (adhésion APEX-CI)"
+        }
+      ]
+    }
+  ],
+  "indicateurs_cles": [
+    {
+      "nom": "Nombre de leads qualifiés générés par mois",
+      "description": "Prospects industriels identifiés via les canaux digitaux avec potentiel de commande réel",
+      "unite": "leads/mois",
+      "cible_sectorielle": "10-30 leads qualifiés/mois selon taille"
+    },
+    {
+      "nom": "Taux de conversion lead → client",
+      "description": "Pourcentage de leads digitaux convertis en clients actifs",
+      "unite": "%",
+      "cible_sectorielle": "15-25% en B2B industriel"
+    },
+    {
+      "nom": "Trafic organique site web",
+      "description": "Visiteurs mensuels via recherche naturelle Google (hors publicité payante)",
+      "unite": "visiteurs/mois",
+      "cible_sectorielle": "+20% par trimestre"
+    },
+    {
+      "nom": "Engagement LinkedIn",
+      "description": "Taux d'engagement moyen sur les publications LinkedIn entreprise",
+      "unite": "%",
+      "cible_sectorielle": "3-5% (supérieur à la moyenne B2B mondiale de 2%)"
+    },
+    {
+      "nom": "CA attribuable aux canaux digitaux",
+      "description": "Chiffre d'affaires généré par des clients acquis ou influencés via les canaux marketing digital",
+      "unite": "FCFA et % du CA total",
+      "cible_sectorielle": "15-30% du CA selon maturité"
+    }
+  ],
+  "reglementations_normes": [
+    {
+      "nom": "APDP CI Loi 2013-450",
+      "description": "Protection des données personnelles en CI. Les bases de données marketing (emails, contacts) doivent être déclarées à l'APDP CI. Consentement obligatoire pour les emails commerciaux.",
+      "organisme": "APDP CI",
+      "obligatoire": true
+    },
+    {
+      "nom": "ARTCI CI régulation communications électroniques",
+      "description": "L'ARTCI CI régule les communications commerciales électroniques. Respect des règles anti-spam pour les campagnes email et SMS marketing.",
+      "organisme": "ARTCI CI",
+      "obligatoire": true
+    },
+    {
+      "nom": "APEX-CI réglementation exportateurs",
+      "description": "Inscription APEX-CI pour les entreprises exportatrices CI. Conditions d'utilisation du label 'Exportateur agréé CI' dans les communications marketing.",
+      "organisme": "APEX-CI",
+      "obligatoire": false
+    }
+  ],
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau de maturité marketing digital entre industries ivoiriennes représentatives",
+    "lignes": [
+      {
+        "organisation": "SIFCA CI (agroalimentaire)",
+        "site_web": "Site corporate multilingue",
+        "linkedin": "Page active, +5 000 abonnés",
+        "crm": "Salesforce groupe",
+        "portails_export": "APEX-CI + portails groupe",
+        "niveau_global": "Avancé"
+      },
+      {
+        "organisation": "TRITURAF CI (huile palme)",
+        "site_web": "Site produits avec fiches techniques",
+        "linkedin": "Page avec publications irrégulières",
+        "crm": "Odoo CRM",
+        "portails_export": "APEX-CI inscrit",
+        "niveau_global": "Structuré"
+      },
+      {
+        "organisation": "PME emballages industriels Abidjan",
+        "site_web": "Site vitrine basique",
+        "linkedin": "Profil personnel dirigeant",
+        "crm": "Excel",
+        "portails_export": "Non inscrit",
+        "niveau_global": "En développement"
+      },
+      {
+        "organisation": "CIPA CI (anacarde)",
+        "site_web": "Site avec certification EUDR documentée",
+        "linkedin": "Page active avec contenu EUDR",
+        "crm": "HubSpot Starter",
+        "portails_export": "APEX-CI + Conseil Café-Cacao",
+        "niveau_global": "Avancé"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "COGIT CI — Génération de leads B2B export via LinkedIn et content marketing EUDR",
+    "contexte": "COGIT CI, fabricant ivoirien d'emballages industriels (cartons, sachets, étiquettes) basé à Yopougon — Abidjan, 180 employés, CA 4,2 Mds FCFA. En 2023, 90% du CA provenait du marché local CI. COGIT souhaitait accéder aux marchés export régionaux (Ghana, Sénégal, Burkina) et aux donneurs d'ordre multinationaux présents en CI nécessitant des emballages conformes à leurs standards qualité.",
+    "probleme": "Absence totale de présence digitale structurée : site web obsolète (2019), aucune fiche technique téléchargeable, pas de page LinkedIn entreprise. Les prospects export ne pouvaient pas trouver COGIT en ligne ni télécharger la documentation nécessaire à leurs processus d'homologation fournisseur.",
+    "solution": "Déploiement d'une stratégie marketing digital en 3 phases sur 8 mois : (1) Refonte site web WordPress avec catalogue complet (fiches techniques, certifications ISO 9001 CI, CoA matériaux), optimisation SEO mots-clés export — 2,8 M FCFA ; (2) Création page LinkedIn entreprise + LinkedIn Sales Navigator pour cibler les directeurs achats de Nestlé CI, Unilever CI, Coca-Cola CI, Olam CI — 1,2 M FCFA/an ; (3) Déploiement Zoho CRM + séquences email nurturing post-téléchargement documentation — 850 000 FCFA/an.",
+    "resultats": "En 8 mois : trafic organique site web +340% (450 → 1 980 visiteurs/mois). Leads qualifiés export : 0 → 22/mois. 4 nouveaux contrats multinationaux signés (Nestlé CI, Unilever CI, Olam CI, Bolloré Logistics CI) — CA additionnel 1,1 Md FCFA/an. Inscription APEX-CI avec label exportateur : 2 contrats UEMOA supplémentaires Ghana et Sénégal. ROI marketing digital : 8,7x en première année. Investissement total : 4,85 M FCFA pour 1,1 Md FCFA CA additionnel."
+  },
+  "ai_context": {
+    "focus_llm": "Évaluer la capacité de l'entreprise industrielle ivoirienne à générer des opportunités commerciales B2B via les canaux digitaux. Insister sur le contenu technique (fiches CoA, certifications EUDR/ISO accessibles en ligne) comme différenciateur clé pour les acheteurs multinationaux. La présence sur APEX-CI est un signal fort de maturité export CI.",
+    "pieges_a_eviter": [
+      "Ne pas recommander des outils de marketing grand public (Instagram, TikTok) inadaptés au B2B industriel",
+      "Éviter de sous-estimer l'importance du contenu technique : en B2B industriel, la documentation (CoA, certifications, fiches sécurité) est aussi importante que la publicité",
+      "Ne pas ignorer les portails institutionnels CI (APEX-CI, Conseil Café-Cacao) qui sont des canaux de génération de leads spécifiques à la CI",
+      "Respecter l'APDP CI pour toutes les bases de données contacts marketing"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune présence digitale. Pas de site web fonctionnel, aucun profil LinkedIn entreprise, pas de documentation technique en ligne. Prospection 100% par réseau physique.",
+      "score_21_to_40": "Présence digitale minimale : site vitrine basique sans fiches techniques, page LinkedIn sans stratégie. Aucun CRM, aucune mesure de performance marketing.",
+      "score_41_to_60": "Présence digitale structurée : site avec catalogue technique, LinkedIn actif (1-2 posts/semaine), CRM basique opérationnel. Inscription APEX-CI. Pas de marketing automation.",
+      "score_61_to_80": "Marketing digital actif : SEO optimisé, content marketing technique régulier, LinkedIn Sales Navigator pour prospection grands comptes, CRM avec pipeline commercial, mesure KPIs clés.",
+      "score_81_to_100": "Marketing digital avancé : ABM multinationales CI avec ROI mesuré, marketing automation complet, présence multi-portails export (APEX-CI, Conseil Café-Cacao, FIRCA), analytics parcours acheteur, CA digital traçable >25% du CA total."
+    }
+  }
+}

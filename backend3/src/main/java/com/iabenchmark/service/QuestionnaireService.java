@@ -12,6 +12,7 @@ import com.iabenchmark.repository.QuestionnaireRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
@@ -20,6 +21,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -27,7 +29,14 @@ import java.util.concurrent.ConcurrentHashMap;
 public class QuestionnaireService {
     private final QuestionnaireRepository questionnaireRepository;
     private final ObjectMapper objectMapper = new ObjectMapper();
-    private final RestTemplate restTemplate = new RestTemplate();
+    private final RestTemplate restTemplate;
+
+    private static RestTemplate buildRestTemplate() {
+        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
+        factory.setConnectTimeout(10_000);
+        factory.setReadTimeout(240_000);
+        return new RestTemplate(factory);
+    }
     // Tracks questionnaire IDs currently being regenerated to avoid duplicate background jobs
     private final Set<Long> regeneratingNow = ConcurrentHashMap.newKeySet();
 
@@ -36,6 +45,7 @@ public class QuestionnaireService {
 
     public QuestionnaireService(QuestionnaireRepository questionnaireRepository) {
         this.questionnaireRepository = questionnaireRepository;
+        this.restTemplate = buildRestTemplate();
     }
 
     public List<QuestionnaireResponse> getAllQuestionnaires() {
@@ -50,9 +60,14 @@ public class QuestionnaireService {
                 .stream()
                 .map(q -> {
                     boolean needsOptions = q.getQuestions().stream()
-                            .anyMatch(question -> question.getOptionsJson() == null
-                                    || question.getOptionsJson().isBlank()
-                                    || question.getOptionsJson().equals("[]"));
+                            .anyMatch(question -> {
+                                String opts = question.getOptionsJson();
+                                if (opts == null || opts.isBlank() || opts.equals("[]")) return true;
+                                // Detect generic fallback options stored verbatim
+                                return opts.contains("Aucun dispositif ou outil en place")
+                                    || opts.contains("Premiers essais isolés, sans processus établi")
+                                    || opts.contains("Pratiques partiellement formalisées, adoption en cours");
+                            });
                     if (needsOptions && regeneratingNow.add(q.getId())) {
                         final Long qId = q.getId();
                         Thread t = new Thread(() -> {
@@ -78,17 +93,17 @@ public class QuestionnaireService {
     public QuestionnaireResponse createQuestionnaire(QuestionnaireRequest request) {
         Questionnaire questionnaire = new Questionnaire();
         applyRequest(questionnaire, request);
-        return toResponse(questionnaireRepository.save(questionnaire));
+        return toResponse(questionnaireRepository.save(Objects.requireNonNull(questionnaire)));
     }
 
     public QuestionnaireResponse updateQuestionnaire(Long id, QuestionnaireRequest request) {
         Questionnaire questionnaire = findQuestionnaire(id);
         applyRequest(questionnaire, request);
-        return toResponse(questionnaireRepository.save(questionnaire));
+        return toResponse(questionnaireRepository.save(Objects.requireNonNull(questionnaire)));
     }
 
     public void deleteQuestionnaire(Long id) {
-        questionnaireRepository.delete(findQuestionnaire(id));
+        questionnaireRepository.delete(Objects.requireNonNull(findQuestionnaire(id)));
     }
 
     @Transactional
@@ -113,11 +128,12 @@ public class QuestionnaireService {
                 Map.of("questions", qPayload),
                 (Class<Map<String, Object>>) (Class<?>) Map.class);
 
-        if (!response.getStatusCode().is2xxSuccessful() || response.getBody() == null) {
+        Map<String, Object> body = response.getBody();
+        if (!response.getStatusCode().is2xxSuccessful() || body == null) {
             throw new RuntimeException("AI service returned non-2xx response");
         }
 
-        List<Map<String, Object>> updatedQuestions = (List<Map<String, Object>>) response.getBody().get("questions");
+        List<Map<String, Object>> updatedQuestions = (List<Map<String, Object>>) body.get("questions");
         if (updatedQuestions == null || updatedQuestions.size() != questions.size()) {
             throw new RuntimeException("AI service returned unexpected number of questions");
         }
@@ -135,7 +151,7 @@ public class QuestionnaireService {
     }
 
     private Questionnaire findQuestionnaire(Long id) {
-        return questionnaireRepository.findById(id)
+        return questionnaireRepository.findById(Objects.requireNonNull(id))
                 .orElseThrow(() -> new EntityNotFoundException("Questionnaire not found with id: " + id));
     }
 

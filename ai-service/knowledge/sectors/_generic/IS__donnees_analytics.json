@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "axis": "INFORMATION_SYSTEM",
+    "sub_axis": "Données & Analytics",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Data Mesh — décentralisation de la gouvernance des données",
+      "description": "Le Data Mesh distribue la propriété des données aux domaines métier (finance, marketing, ops) qui les exposent comme produits via APIs standardisées, remplaçant le data warehouse centralisé monolithique.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "35 % des grandes organisations en cours d'adoption (Gartner 2024)",
+      "source": "Gartner Data Management Trends 2024",
+      "year": "2024"
+    },
+    {
+      "title": "IA générative pour l'analyse de données (Text-to-SQL, NL Analytics)",
+      "description": "Les outils NL Analytics (Tableau Pulse, Power BI Copilot) permettent aux utilisateurs métier d'interroger les données en langage naturel sans connaissances SQL, démocratisant l'analytics.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "60 % des outils BI intégreront du GenAI d'ici 2026 (Gartner)",
+      "source": "Gartner BI & Analytics Magic Quadrant 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Real-time analytics — décision à la milliseconde",
+      "description": "Les architectures de streaming (Apache Kafka, Flink) permettent l'analyse en temps réel des événements (transaction, clic, capteur) pour des décisions instantanées (fraude, personnalisation, alerte).",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "48 % des projets data sont temps réel (Confluent 2024)",
+      "source": "Confluent Data Streaming Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Data Quality & Observability — confiance dans les données",
+      "description": "Les organisations investissent dans la qualité et l'observabilité des données (Monte Carlo, Great Expectations) car des données erronées dans les modèles ML produisent des décisions catastrophiques.",
+      "impact_level": "Élevé",
+      "horizon": "6-18 mois",
+      "adoption_rate": "55 % des équipes data ont une initiative Data Quality (TDWI 2024)",
+      "source": "TDWI Data Quality Report 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Data Warehouse Cloud",
+      "category": "Stockage et requêtage analytique",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne en Afrique",
+      "leading_vendors": ["Snowflake", "Google BigQuery", "AWS Redshift", "Azure Synapse", "Databricks"]
+    },
+    {
+      "name": "Business Intelligence & Dataviz",
+      "category": "Visualisation et reporting",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne",
+      "leading_vendors": ["Power BI", "Tableau", "Qlik Sense", "Looker", "Metabase (open-source)"]
+    },
+    {
+      "name": "Plateformes MLOps",
+      "category": "Machine Learning en production",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["MLflow", "AWS SageMaker", "Azure ML", "Google Vertex AI", "DataRobot"]
+    },
+    {
+      "name": "Data Catalog & Gouvernance",
+      "category": "Gouvernance des données",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["Collibra", "Alation", "Atlan", "AWS Glue Data Catalog", "Microsoft Purview"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Data warehouse déployé, reporting BI mensuel automatisé, équipe data analytics dédiée",
+        "differentiator": "Premier acteur sectoriel à déployer Power BI en self-service pour les équipes métier",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Safaricom",
+        "country": "Kenya",
+        "key_practice": "Data lake unifié pour M-Pesa — 50M transactions/jour analysées, modèles ML en production",
+        "differentiator": "Scoring de crédit M-Shwari basé sur les données comportementales M-Pesa : décision en 3 secondes",
+        "source": "Safaricom Technology Report 2023"
+      },
+      {
+        "organisation": "Jumia",
+        "country": "Pan-Afrique",
+        "key_practice": "Moteur de recommandation ML sur 10M+ produits, analytics comportemental cross-pays",
+        "differentiator": "Personnalisation des offres en temps réel sur 11 marchés africains via un data lake centralisé",
+        "source": "Jumia Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Google",
+        "country": "USA",
+        "key_practice": "Data Mesh interne — 1,5 milliard de datasets, BigQuery 10 Mds requêtes/jour, 100 % décisions data-driven",
+        "differentiator": "Chaque décision produit Google est basée sur des A/B tests avec significativité statistique",
+        "source": "Google Cloud Report 2023 / MIT CSAIL"
+      },
+      {
+        "organisation": "Amazon",
+        "country": "USA",
+        "key_practice": "Data Flywheel — chaque interaction enrichit les modèles, 35 % du CA via recommandation IA",
+        "differentiator": "50 000 data scientists et ML engineers, AWS Lake Formation gérant des exaoctets",
+        "source": "Amazon Annual Report 2023 / McKinsey 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Données en silos dans des fichiers Excel et systèmes non connectés. Aucun reporting automatisé. Décisions basées sur l'intuition.",
+    "level_2_developing": "Quelques rapports automatisés depuis les systèmes opérationnels. Pas de data warehouse. Qualité des données non maîtrisée.",
+    "level_3_defined": "Data warehouse déployé. Reporting BI mensuel automatisé. Équipe data dédiée. Dashboards accessibles aux décideurs.",
+    "level_4_managed": "BI self-service pour les métiers. Quelques modèles ML en production. Data Catalog en cours. Reporting réglementaire automatisé.",
+    "level_5_optimizing": "Data Mesh ou data platform unifiée. ML en production sur 10+ cas d'usage. Analytics temps réel. Data Quality framework. Gouvernance des données mature."
+  },
+
+  "regulations": [
+    {
+      "name": "Loi n°2013-450 — Protection des données personnelles",
+      "issuing_body": "République de Côte d'Ivoire / ARTCI",
+      "scope": "Toute organisation collectant et traitant des données personnelles en CI",
+      "key_requirement": "Déclaration ARTCI, consentement, finalité limitée, durée de conservation définie, droit d'accès",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.artci.ci"
+    },
+    {
+      "name": "Directives BCEAO sur le reporting statistique",
+      "issuing_body": "BCEAO",
+      "scope": "Institutions financières de la zone UEMOA",
+      "key_requirement": "Reporting mensuel automatisé à la BCEAO, formats standardisés, délais stricts",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "RGPD — Règlement Général sur la Protection des Données",
+      "issuing_body": "Union Européenne",
+      "scope": "Organisations traitant des données de résidents européens",
+      "key_requirement": "Minimisation des données, Privacy by Design, DPO obligatoire, DPIA pour traitements à risque",
+      "compliance_deadline": "En vigueur depuis 2018",
+      "source_url": "https://gdpr.eu"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Silos de données — impossibilité d'une vue unifiée",
+      "description": "Des systèmes non connectés (ERP, CRM, comptabilité, opérations) rendent impossible la création d'une vue unifiée de la performance organisationnelle et client.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Déployer un data warehouse ou data lake comme source de vérité unique, alimenté par tous les systèmes via ETL/ELT."
+    },
+    {
+      "title": "Données de mauvaise qualité — décisions erronées",
+      "description": "Des données dupliquées, incomplètes ou incohérentes dans les systèmes source produisent des analyses incorrectes et des décisions contreproductives. 'Garbage in, garbage out'.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Mettre en place un programme Data Quality avec métriques de qualité mesurées et propriétaires de données désignés."
+    },
+    {
+      "title": "Biais dans les modèles ML — discrimination algorithmique",
+      "description": "Des modèles ML entraînés sur des données historiquement biaisées peuvent perpétuer et amplifier des discriminations (genre, géographie, ethnie) dans les décisions automatisées.",
+      "severity": "Élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Auditer les modèles ML pour les biais, maintenir une supervision humaine sur les décisions à fort impact, documenter les limitations."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Personnalisation et recommandation IA pour augmenter les revenus",
+      "description": "Les moteurs de recommandation ML génèrent en moyenne 20-35 % de revenus additionnels (Amazon : 35 % du CA, Netflix : 80 % des visionnages via algorithme).",
+      "impact_level": "Très élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3 — data warehouse opérationnel"
+    },
+    {
+      "title": "Scoring prédictif pour réduire les risques",
+      "description": "Les modèles ML de scoring de risque (crédit, fraude, churn) réduisent les pertes de 30-60 % vs méthodes actuarielles classiques.",
+      "impact_level": "Très élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Automatisation du reporting réglementaire",
+      "description": "L'automatisation des rapports réglementaires (BCEAO, CIMA, ARTCI) réduit les délais de 80 % et élimine les erreurs manuelles, réduisant les risques de sanctions.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Salesforce",
+      "target": "Tableau Software",
+      "amount": "15,7 Mds$",
+      "date": "2019",
+      "strategic_rationale": "Intégrer la visualisation de données avancée et le BI self-service au CRM Salesforce",
+      "source": "Salesforce Press Release 2019"
+    },
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Divers investisseurs (Snowflake Ventures, etc.)",
+      "target": "Databricks",
+      "amount": "1,6 Mds$ (Series H)",
+      "date": "2023",
+      "strategic_rationale": "Accélérer la plateforme Data+AI unifiée (Lakehouse) pour concurrencer Snowflake sur l'analytique et le ML",
+      "source": "Databricks Press Release 2023"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Google",
+    "pays": "USA",
+    "technologie": "Data Mesh & BigQuery — 10 milliards de requêtes analytiques par jour",
+    "description": "Google a inventé MapReduce, BigTable et Dremel (ancêtre de BigQuery), définissant les standards du traitement de données à grande échelle. En interne, chaque décision produit est data-driven : A/B tests permanents sur 200+ dimensions, modèles ML mis à jour en temps réel. BigQuery traite 10 Mds de requêtes/jour pour des clients dans 200 pays. Le Data Catalog unifié recense 1,5 milliard de datasets actifs. 100 % des décisions produit sont basées sur des données avec significativité statistique.",
+    "resultats": "10 Mds requêtes/jour · 99 % des décisions basées sur données · BigQuery utilisé par 40 000 entreprises · 1,5 Md de datasets dans le catalog",
+    "source": "Google Cloud Report 2023 / MIT CSAIL Data Engineering Research",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité données & analytics — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "Data Warehouse / Lake déployé", "BI self-service accessible", "ML en production", "Data Quality framework", "Reporting réglementaire automatisé"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "Partiel", "✗", "Partiel", "✓"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["Partiel", "✗", "✗", "✗", "Partiel"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La maturité data & analytics est le prérequis de toute décision intelligente. Les organisations data-driven surperforment leurs concurrents de 23 % (McKinsey 2024). En Afrique de l'Ouest, la majorité des organisations restent au niveau 1-2, créant un avantage compétitif majeur pour les pionniers.",
+    "maturity_max_description": "Data platform unifiée (warehouse + lake + streaming). BI self-service déployé pour tous les métiers. 10+ modèles ML en production. Data Quality framework avec métriques mesurées. Data Catalog complet. Reporting réglementaire 100 % automatisé. Analytics temps réel sur les flux critiques.",
+    "scoring_rubric": {
+      "score_1_to_20": "Données en silos Excel. Aucun reporting automatisé. Décisions sur intuition. Aucune équipe data.",
+      "score_21_to_40": "Rapports automatisés depuis systèmes. Pas de DWH. Qualité données non maîtrisée.",
+      "score_41_to_60": "Data warehouse déployé. BI mensuel automatisé. Équipe data dédiée. Dashboards pour décideurs.",
+      "score_61_to_80": "BI self-service. ML en production. Data Catalog. Reporting réglementaire automatisé.",
+      "score_81_to_100": "Data Mesh / platform unifiée. ML 10+ cas. Analytics temps réel. Data Quality. Gouvernance mature."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur sa maturité données et analytics. Analyse l'existence d'un data warehouse ou data lake, la disponibilité du BI self-service pour les équipes métier, le déploiement de modèles ML en production, la qualité de la gouvernance des données et l'automatisation du reporting réglementaire.",
+    "key_questions_for_llm": [
+      "L'organisation dispose-t-elle d'un data warehouse ou data lake comme source de vérité unifiée ?",
+      "Un outil BI self-service est-il accessible aux équipes métier pour l'analyse en autonomie ?",
+      "Des modèles de machine learning sont-ils déployés en production sur des cas d'usage métier ?",
+      "Un framework de qualité des données est-il en place avec des métriques mesurées ?",
+      "Le reporting réglementaire est-il automatisé ou toujours produit manuellement ?"
+    ]
+  }
+}

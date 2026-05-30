@@ -1,0 +1,284 @@
+{
+  "secteur": "industrie",
+  "axe": "PROCESS",
+  "sous_axe": "automatisation",
+  "label": "Automatisation des processus industriels",
+  "description": "Capacité des entreprises industrielles à automatiser leurs lignes de production et processus de support : automatisation PLC/SCADA, robotisation (bras robotisés, AGV), automatisation administrative (ERP, workflows), et intégration OT/IT pour réduire les erreurs humaines et améliorer la cadence de production en Côte d'Ivoire.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Automatisation CI : coût main-d'œuvre bas (SMIG CI 75 000 FCFA/mois) vs investissement robot — ROI plus long qu'en Europe",
+      "Automatisation électrique CI : CIE CI délestages fréquents — automatisation requiert onduleurs et groupes électrogènes stables",
+      "Industries agroalimentaires CI : automatisation dosage, remplissage, ensachage — erreurs humaines coûteuses (hors-spec, rebuts)",
+      "SAP PP / Odoo Manufacturing CI : automatisation orders de fabrication, BOM, planification MRP",
+      "Robots CI : soudage, palettisation, emballage — investissements 10-30 M FCFA par poste — viable grandes industries CI uniquement",
+      "AGV (Automated Guided Vehicles) CI : manutention automatisée usines CI — rares, quelques pilotes SIFCA CI / SITAB CI"
+    ],
+    "acteurs_cles": [
+      "Siemens CI — PLCs S7, SCADA WinCC, automatisation lignes industrielles CI",
+      "Schneider Electric CI — automatisation Modicon, EcoStruxure — présence bureau Abidjan",
+      "ABB Robotics (via distributeurs CI) — robots soudage, palettisation, emballage CI",
+      "FANUC CI (via distributeurs Afrique de l'Ouest) — robots industriels",
+      "INP-HB Yamoussoukro — formations automatisme, génie industriel CI",
+      "CIE CI — fiabilité alimentation électrique : critique pour automatisation usines CI"
+    ],
+    "reglementation_locale": [
+      "Code du Travail CI Loi 2015-532 : impact social automatisation — obligation information/consultation IRP (représentants du personnel)",
+      "APDP CI Loi 2013-450 : automatisation biométrie ouvriers CI (pointage, contrôle accès) — déclaration APDP",
+      "CIE CI : contrat puissance souscrite — automatisation augmente consommation, nécessite révision contrat",
+      "ISO 13849 / IEC 62443 : sécurité machines automatisées et cybersécurité systèmes OT industriels",
+      "ARTCI CI : réglementation réseaux OT industriels CI — fréquences radio AGV, communication sans fil",
+      "CNSS CI : déclarations sociales automatisation — impact sur effectifs déclarés"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Production 100% manuelle. Aucun automate ni PLC. Dosage, pesage, remplissage manuel. Aucune automatisation administrative. Dépendance totale aux opérateurs. Variations qualité importantes.",
+      "indicateurs": [
+        "0 PLC ni automate — production entièrement manuelle",
+        "Dosage et pesage manuels — variations lot > 5%",
+        "Planification production sur tableau blanc ou cahier",
+        "0 automatisation administrative — ordres de fabrication papier",
+        "Vitesse production contrainte par la cadence humaine — TRS non mesuré"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Quelques PLCs sur équipements critiques (sans supervision). Doseuses semi-automatiques. ERP partiel avec saisie manuelle. Aucun robot. Automatisation partielle et non intégrée.",
+      "indicateurs": [
+        "2-3 PLCs sur équipements critiques — pas de réseau ni supervision SCADA",
+        "Doseuses semi-automatiques sur 1-2 postes",
+        "ERP avec saisie manuelle des ordres de fabrication",
+        "0 robot industriel — 0 AGV",
+        "Automatisation non intégrée — îlots automatisés isolés"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "SCADA déployé sur lignes principales. MES avec ordres de fabrication automatisés. Lignes dosage/remplissage/ensachage automatisées. Tableaux de bord production temps réel. Planification MRP automatique.",
+      "indicateurs": [
+        "SCADA : supervision 80%+ équipements production — alarmes automatiques",
+        "MES : ordres de fabrication auto-générés depuis MRP — 0 saisie manuelle",
+        "Lignes dosage/remplissage/ensachage automatisées sur 1+ ligne principale",
+        "Planification MRP automatique : besoins matières calculés en temps réel",
+        "TRS automatiquement calculé depuis données SCADA/MES"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "Automatisation avancée : robots palettisation/emballage sur lignes clés. SCADA multi-sites. MES intégré ERP SAP. AGV manutention pilote. Intégration OT/IT complète. TRS > 78%. Zéro double saisie.",
+      "indicateurs": [
+        "Robots palettisation ou emballage sur 1+ ligne — économie 3-5 opérateurs/poste",
+        "SCADA multi-sites CI supervisé depuis Abidjan",
+        "Intégration OT/IT : SCADA → MES → ERP SAP — données flux en temps réel",
+        "AGV manutention pilote ou déployé sur 1+ zone",
+        "TRS > 78% grâce à automatisation — zéro double saisie production"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Usine hautement automatisée. Cobots (robots collaboratifs) aux côtés d'opérateurs. IA contrôle qualité vision artificielle. Automatisation adaptative (changements de série autonomes). Référence automatisation industrielle CI.",
+      "indicateurs": [
+        "Cobots (UR, FANUC CRX) : travail homme-robot sans barrière — 3+ postes",
+        "Vision artificielle contrôle qualité : 100% produits inspectés à cadence ligne",
+        "Changements de série automatisés : < 15 min (SMED digital)",
+        "IA optimisation cadence : auto-ajustement paramètres recette en temps réel",
+        "Référence automatisation CI — publication INP-HB CI, FIPA CI"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Quel niveau d'automatisation de votre ligne de production principale ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "100% manuelle — aucun automate"},
+        {"valeur": 2, "label": "Quelques PLCs isolés — pas de supervision centralisée"},
+        {"valeur": 3, "label": "SCADA + MES : supervision et ordres auto sur lignes principales"},
+        {"valeur": 4, "label": "Robots + SCADA multi-sites + intégration OT/IT complète"},
+        {"valeur": 5, "label": "Cobots + vision IA + changements série auto — usine hautement automatisée"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Votre planification de production (MRP) est-elle automatisée ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — tableau blanc ou cahier"},
+        {"valeur": 2, "label": "Excel planification — saisie manuelle ordres fabrication"},
+        {"valeur": 3, "label": "MES/ERP : MRP automatique, ordres fabrication auto-générés"},
+        {"valeur": 4, "label": "MRP temps réel intégré ERP SAP — zéro double saisie"},
+        {"valeur": 5, "label": "IA ordonnancement : optimisation cadences et stocks en temps réel"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Utilisez-vous des robots industriels (palettisation, emballage, soudage) sur vos lignes ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — 0 robot"},
+        {"valeur": 2, "label": "Doseuses ou ensacheuses semi-automatiques uniquement"},
+        {"valeur": 3, "label": "1 robot palettisation ou emballage sur ligne principale"},
+        {"valeur": 4, "label": "Multi-robots intégrés SCADA — palettisation + emballage + manutention AGV"},
+        {"valeur": 5, "label": "Cobots + vision IA + robots collaboratifs — ligne hautement automatisée"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Votre intégration OT/IT (SCADA vers ERP) est-elle opérationnelle ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — 0 connexion équipements et système informatique"},
+        {"valeur": 2, "label": "Export données SCADA manuel vers Excel — 0 intégration automatique"},
+        {"valeur": 3, "label": "SCADA → MES : données production automatiques — partielle"},
+        {"valeur": 4, "label": "OT/IT complet : SCADA → MES → ERP SAP en temps réel"},
+        {"valeur": 5, "label": "Data lake industriel : OT + MES + ERP + IoT — source unique de vérité"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "Automatisation ligne principale",
+      "MRP automatisé",
+      "Robots industriels déployés",
+      "Intégration OT/IT",
+      "TRS grâce à automatisation"
+    ],
+    "lignes": [
+      {
+        "organisation": "PMI CI (< 50 employés)",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "100% manuel, cahier planification, 0 robot, 0 OT/IT, TRS non mesuré"
+      },
+      {
+        "organisation": "Industrie moyenne CI (50-200 employés)",
+        "scores": [2, 2, 1, 1, 2],
+        "note_globale": 2,
+        "commentaire": "Quelques PLCs isolés, Excel planification, 0 robot, 0 intégration OT/IT"
+      },
+      {
+        "organisation": "SUCAF CI",
+        "scores": [4, 4, 3, 3, 4],
+        "note_globale": 4,
+        "commentaire": "SCADA complet, MRP SAP auto, robots palettisation sucre, OT/IT partiel, TRS 79%"
+      },
+      {
+        "organisation": "SIFCA CI",
+        "scores": [5, 5, 4, 5, 5],
+        "note_globale": 5,
+        "commentaire": "Haute automatisation, MRP SAP temps réel, robots+AGV pilotes, OT/IT complet, TRS > 85%"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "Schneider Electric CI — automatisation industrielle EcoStruxure CI",
+      "part_de_marche_estimee": "Leader automatisation industries CI",
+      "forces": ["Bureau Abidjan CI", "PLCs Modicon CI", "SCADA EcoStruxure", "Service maintenance CI", "Financement locatif possible"],
+      "faiblesses": ["Coût élevé PMI CI", "Techniciens CI peu nombreux", "Dépendance pièces détachées importées"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "ABB Robotics (Afrique Australe/Afrique de l'Ouest) — robots industriels Afrique",
+      "part_de_marche_estimee": "Leader robots industriels Afrique",
+      "forces": ["Robots soudage, palettisation, emballage", "SAV Afrique de l'Ouest", "Formations intégrateurs locaux", "Financement leasing"],
+      "faiblesses": ["Support CI via Accra Ghana — délais SAV 3-7 jours", "Coût initial 15-25 M FCFA/robot"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "Siemens Digital Industries — automatisation Industrie 4.0",
+      "part_de_marche_estimee": "Leader mondial automatisation industrielle",
+      "forces": ["PLC S7 (référence mondiale)", "SCADA WinCC", "OT/IT intégration TIA Portal", "Robot KUKA (groupe Siemens)"],
+      "faiblesses": ["Coût élevé", "Support CI limité", "Complexité implémentation"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Schneider Electric Modicon M340/M580 — PLCs industriels CI",
+      "usage": "Automatisation lignes production CI : contrôle moteurs, doseuses, convoyeurs, sécurité",
+      "niveau_cible": "3+",
+      "cout_estime": "500 000–3 000 000 FCFA par poste selon complexité",
+      "disponibilite_ci": "Natif CI — Schneider Electric bureau Abidjan, distributeurs CI"
+    },
+    {
+      "nom": "Odoo Manufacturing CI — MRP et ordres fabrication automatisés",
+      "usage": "MRP automatique, ordres fabrication auto-générés, BOM, planification capacité",
+      "niveau_cible": "3+",
+      "cout_estime": "800 000–2 500 000 FCFA/an (partenaires Odoo CI Abidjan)",
+      "disponibilite_ci": "International — partenaires Odoo CI disponibles"
+    },
+    {
+      "nom": "FANUC LR Mate / UR Cobot — robots industriels CI",
+      "usage": "Palettisation, emballage, pick-and-place — accessible PME CI (UR cobots < 15 M FCFA)",
+      "niveau_cible": "4",
+      "cout_estime": "UR e-Series cobot : 8 000 000–15 000 000 FCFA. FANUC LR Mate : 12 000 000–25 000 000 FCFA",
+      "disponibilite_ci": "International — importé CI via distributeurs ABB Afrique (Accra Ghana → Abidjan)"
+    },
+    {
+      "nom": "Siemens TIA Portal — intégration OT/IT PLC/SCADA/ERP",
+      "usage": "Programmation PLCs + SCADA WinCC + connexion ERP SAP — intégration OT/IT complète",
+      "niveau_cible": "4",
+      "cout_estime": "Licences TIA Portal 2 000 000–5 000 000 FCFA + ingénierie",
+      "disponibilite_ci": "International — distributeurs Siemens CI (SOTELCI Abidjan)"
+    },
+    {
+      "nom": "Cognex DataMan / In-Sight — vision artificielle contrôle qualité",
+      "usage": "Inspection 100% produits à cadence ligne : codes-barres, défauts, remplissage — 0 contrôleur humain",
+      "niveau_cible": "4-5",
+      "cout_estime": "1 500 000–5 000 000 FCFA par poste d'inspection",
+      "disponibilite_ci": "International — importé CI, intégrateurs vision Abidjan disponibles"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "SITAB CI (Société Ivoirienne de Tabac) — automatisation ligne conditionnement : TRS +22 points",
+    "organisation": "SITAB CI (filiale British American Tobacco, Abidjan — industrie tabac CI)",
+    "contexte": "SITAB CI : usine conditionnement cigarettes Abidjan, 3 lignes production. Ligne L2 : conditionnement manuel 60% — opérateurs dosage cellophane + mise en carton + palettisation. TRS L2 : 61%. Problème : variabilité qualité conditionnement (paquets mal fermés, erreurs de comptage), taux rebuts 4,2%, palettisation physiquement éprouvante.",
+    "probleme": "TRS 61% (objectif BAT groupe 83%). Rebuts 4,2% sur ligne L2. 2 opérateurs palettisation : problèmes TMS (troubles musculosquelettiques) — 18 jours absences/an. Variation conditionnement manuelle : 12% hors-spec paquets (fermeture cellophane).",
+    "solution_deployee": "Robot palettisation FANUC M-20iD installé fin L2 (18 M FCFA — financement leasing BAT CI). Ensacheuse cellophane automatique B&H (12 M FCFA). SCADA Siemens WinCC intégré : supervision L2 + alertes automatiques. OT/IT : SCADA → SAP PP BAT CI — ordres fabrication automatiques. Formation 2 opérateurs palettisation reconvertis en techniciens maintenance (FDFP CI).",
+    "resultats": "TRS L2 : 61% → 83% (+22 points) en 4 mois. Rebuts cellophane : 4,2% → 0,6% (-86%). TMS opérateurs palettisation : 0 (poste supprimé, 2 reconversions techniciens). Cadence ligne : +34%. ROI robot : 18 M FCFA amorti en 11 mois (économie rebuts + production supplémentaire). SCADA WinCC : 0 rapport mensuel manuel — automatique en 2h. OEE L2 : 61% → 83% — benchmark BAT groupe (objectif atteint).",
+    "enseignements": [
+      "En industrie CI, le robot de palettisation est souvent le premier robot — ROI < 12 mois grâce aux économies de rebuts et aux gains de cadence, même avec SMIG CI bas",
+      "La reconversion des opérateurs déplacés par le robot en techniciens maintenance est gagnant-gagnant : l'entreprise CI gagne des techniciens qualifiés et évite les conflits sociaux",
+      "L'intégration OT/IT (SCADA → SAP) élimine les rapports manuels mensuels : c'est 3 jours de travail ingénieur récupérés chaque mois"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "automatisation industrielle CI", "PLC automate", "SCADA supervision", "MES ordres fabrication",
+      "MRP automatique", "robot palettisation CI", "cobot", "AGV manutention",
+      "vision artificielle qualité", "intégration OT IT CI", "TRS automatisation",
+      "Schneider Electric CI", "Siemens CI", "FANUC CI", "ABB Robotics CI"
+    ],
+    "signaux_niveau_avance": [
+      "SCADA déployé sur lignes principales",
+      "MRP automatique intégré ERP",
+      "1+ robot industriel déployé",
+      "Intégration OT/IT SCADA → ERP opérationnelle",
+      "TRS > 75% grâce à automatisation"
+    ],
+    "pieges_frequents": [
+      "Doseuses semi-automatiques ≠ automatisation industrielle — c'est de l'aide à la main, pas de l'automation",
+      "PLCs achetés mais non programmés ni intégrés = boîtes dans un coin — l'automatisation requiert l'ingénierie",
+      "SCADA installé mais opérateurs qui n'y regardent pas = dashbord décoratif — sans alertes configurées, le SCADA ne sert à rien",
+      "Robot palettisation déclaré alors qu'il est en panne depuis 6 mois = faux niveau 4"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "100% manuel. 0 PLC. Dosage main. Planification cahier. TRS non mesuré.",
+      "score_21_to_40": "Quelques PLCs isolés. Doseuses semi-auto. Excel planification. 0 robot. 0 OT/IT.",
+      "score_41_to_60": "SCADA lignes principales. MRP auto. Lignes clés automatisées. TRS calculé automatique.",
+      "score_61_to_80": "Robots + SCADA multi-sites + OT/IT ERP intégré. TRS > 78%. MRP temps réel.",
+      "score_81_to_100": "Cobots + vision IA + changements série auto. OEE > 85%. Référence automatisation CI."
+    }
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "axis": "PROCESS",
+    "sub_axis": "Agilité",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Transformation agile des banques africaines — réponse à la vitesse des fintechs",
+      "description": "Les fintechs déploient de nouvelles fonctionnalités en 2-4 semaines. Les banques UEMOA avec des cycles de livraison de 6-18 mois ne peuvent pas répondre aux évolutions du marché. La transformation agile devient une nécessité de survie compétitive.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "25 % des grandes banques africaines ont initié une transformation agile (McKinsey Africa 2024)",
+      "source": "McKinsey Agile Banking Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Squads produit bancaires — réorganisation autour des parcours clients",
+      "description": "Les banques leaders réorganisent leurs équipes en squads pluridisciplinaires alignées sur les parcours clients (squad Crédit Digital, squad Onboarding, squad Mobile Banking) plutôt que sur des silos fonctionnels (IT / Métier / Opérations).",
+      "impact_level": "Élevé",
+      "horizon": "24-36 mois",
+      "adoption_rate": "18 % des banques africaines ont déployé le modèle squads (Deloitte Africa 2024)",
+      "source": "Deloitte Agile Banking Transformation Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "DevOps / CI-CD bancaire — déploiements continus sécurisés",
+      "description": "Les banques innovantes déploient des pipelines CI/CD permettant des mises en production hebdomadaires vs les fenêtres de maintenance mensuelles classiques. Cette capacité est essentielle pour itérer rapidement sur les applications mobiles bancaires.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "20 % des banques africaines ont un pipeline CI/CD opérationnel pour leurs canaux digitaux (Thoughtworks Africa 2024)",
+      "source": "Thoughtworks State of DevOps Banking Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Time-to-Market bancaire — KPI de performance de l'innovation",
+      "description": "Le Time-to-Market (délai entre idée et mise en production) est devenu un KPI de direction dans les banques africaines les plus performantes. Les meilleurs atteignent 6-8 semaines. La moyenne UEMOA est de 8-18 mois.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "40 % des banques africaines mesurent leur TTM (KPMG Africa 2024)",
+      "source": "KPMG Africa Digital Banking Benchmark 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Outils Agile / Scrum",
+      "category": "Gestion de projet agile",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Jira (Atlassian)", "Azure DevOps", "Monday.com", "Asana", "ClickUp"]
+    },
+    {
+      "name": "Pipeline CI/CD Bancaire",
+      "category": "Déploiement continu sécurisé",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Jenkins", "GitLab CI/CD", "GitHub Actions", "CircleCI", "Azure DevOps Pipelines"]
+    },
+    {
+      "name": "Plateforme de collaboration digitale",
+      "category": "Collaboration des squads distribués",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["Microsoft Teams", "Confluence (Atlassian)", "Slack", "Miro (design thinking)", "Notion"]
+    },
+    {
+      "name": "OKR Management",
+      "category": "Alignement stratégique agile",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Workboard", "Betterworks", "Lattice", "Perdoo", "Asana Goals"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Société Générale Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Méthodologie agile appliquée aux projets IT (Scrum, Kanban), squads Digital partiellement déployées, pipeline CI/CD pour l'application mobile",
+        "differentiator": "Bénéficie de la transformation agile Société Générale Groupe (déployée dans 60 pays) — accès aux squads patterns et pratiques DevOps groupe",
+        "source": "SGCI Rapport Annuel 2023 / SG Group Digital Report 2023"
+      },
+      {
+        "organisation": "Bridge Bank Group CI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Méthodologie Scrum appliquée aux projets de développement, squads produit émergentes, TTM app mobile de 4 mois en 2023",
+        "differentiator": "Banque ivoirienne indépendante la plus agile — capacité à déployer des nouvelles fonctionnalités mobiles en < 6 semaines",
+        "source": "Bridge Bank Group Rapport Annuel 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Ecobank Agile@Scale : transformation agile sur 15 domaines métier, squads par parcours client (Onboarding, Crédit, Paiements), TTM moyen 8 semaines",
+        "differentiator": "Première grande banque panafricaine à documenter et publier son programme Agile@Scale avec des résultats mesurables par filiale",
+        "source": "Ecobank Annual Report 2023 / Ecobank Innovation Report"
+      },
+      {
+        "organisation": "Equity Bank",
+        "country": "Kenya",
+        "key_practice": "Squads produit organisées autour des 7 segments clients, CI/CD sur Equitel et Equity Mobile App, TTM de 3-6 semaines",
+        "differentiator": "Vitesse d'itération comparable aux fintechs kenyanes — déploiements mobiles hebdomadaires sur 8 millions d'utilisateurs",
+        "source": "Equity Bank Annual Report 2023 / Thoughtworks Africa Case Study"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "ING Group",
+        "country": "Pays-Bas",
+        "key_practice": "Modèle squads et tribus déployé en 2015, 350 squads autonomes, TTM de 2-4 semaines, 99 % des équipes IT en agile",
+        "differentiator": "ING est le modèle de référence mondial de la transformation agile bancaire — le cas d'école McKinsey citant 'agile bank of the future'",
+        "source": "ING Annual Report 2023 / McKinsey ING Agile Model Case Study"
+      },
+      {
+        "organisation": "DBS Bank",
+        "country": "Singapour",
+        "key_practice": "22 000 employés formés à l'agile, TTM de 3-5 semaines, 500+ déploiements en production par semaine",
+        "differentiator": "DBS a atteint la vitesse de déploiement d'une fintech avec la sécurité d'une grande banque — 500+ releases/semaine vs 12/an en 2015",
+        "source": "DBS Annual Report 2023 / Harvard Business School DBS Case Study"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Méthode cascade (waterfall) exclusive. Projets IT de 12-24 mois. Pas de culture agile. Cloisonnement total IT / Métier. TTM non mesuré. Pas de déploiement continu.",
+    "level_2_developing": "Quelques projets en Scrum sans cohérence d'ensemble. Rétrospectives irrégulières. IT et Métier encore silotés. TTM > 6 mois. Pas de pipeline CI/CD. Formation agile informelle.",
+    "level_3_defined": "Scrum ou Kanban appliqués sur les projets digitaux. Squads pilotes sur 1-2 domaines. TTM < 3 mois pour les nouvelles fonctionnalités. Pipeline CI/CD pour l'app mobile. Formations agile structurées.",
+    "level_4_managed": "Agile@Scale sur les domaines critiques (digital, crédit, canaux). Squads pluridisciplinaires sur 5+ parcours. TTM < 6 semaines. DevOps CI/CD opérationnel. OKR utilisés pour l'alignement. TTM mesuré et publié.",
+    "level_5_optimizing": "Agile institutionnalisé dans toute la banque. Squads autonomes 100 % pluridisciplinaires. TTM < 2 semaines. 100+ déploiements/semaine. Culture test-and-learn. OKR alignant la stratégie sur les squads."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction BCEAO sur la gouvernance des projets SI bancaires",
+      "issuing_body": "BCEAO",
+      "scope": "Banques conduisant des projets de transformation SI significatifs",
+      "key_requirement": "Documentation du processus de gouvernance des projets SI, tests de non-régression obligatoires avant mise en production des systèmes critiques",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Transformation agile sans gouvernance bancaire — risque réglementaire accru",
+      "description": "Une transformation agile mal encadrée dans une banque peut entraîner des déploiements en production sans les validations de conformité, sécurité et contrôle interne exigées par la BCEAO, créant des risques réglementaires importants.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Intégrer systématiquement la conformité, la sécurité et le contrôle interne dans la Definition of Done de chaque squad, avec des guildes transversales Conformité et Sécurité qui participent aux sprints."
+    },
+    {
+      "title": "Résistance au changement — management intermédiaire frein à l'agile",
+      "description": "Dans les banques UEMOA, le management intermédiaire perçoit souvent l'agile comme une menace à son rôle de coordination. Cette résistance ralentit ou bloque la transformation, créant des structures hybrides inefficaces.",
+      "severity": "Élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Repositionner les managers intermédiaires comme coaches et facilitateurs des squads dès le démarrage de la transformation, avec des formations et des nouveaux KPIs alignés sur les résultats des squads."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "TTM bancaire de 6 mois à 6 semaines — accélération de la mise sur le marché",
+      "description": "Réduire le TTM de 6 mois à 6 semaines permet aux banques UEMOA de répondre aussi rapidement que les fintechs aux évolutions du marché (nouvelles offres, promotions, corrections réglementaires) et d'itérer sur les produits digitaux basés sur les retours clients.",
+      "impact_level": "Très élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Squads crédit et onboarding — livraisons rapides sur les processus clés",
+      "description": "Deux squads dédiées (Crédit Digital et Onboarding Client) peuvent transformer les deux processus les plus critiques pour la compétitivité bancaire en 6-12 mois, avec des itérations bimensuelles sur les parcours clients.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-12 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Partenariat conseil",
+      "acquirer_or_investor": "Ecobank",
+      "target": "McKinsey & Company — programme Agile@Scale bancaire panafricain",
+      "amount": "Programme pluriannuel (multi-M$)",
+      "date": "2021-2023",
+      "strategic_rationale": "Transformer les 15 domaines métier clés d'Ecobank en opérant selon le modèle agile squads/tribus, en visant un TTM < 8 semaines pour toutes les innovations digitales",
+      "source": "McKinsey Agile Banking Africa Case Study 2023"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "ING Group",
+    "pays": "Pays-Bas",
+    "technologie": "Transformation Agile@Scale — modèle squads et tribus bancaires",
+    "description": "ING a lancé en 2015 sa transformation agile radicale, supprimant la hiérarchie traditionnelle pour créer 350 squads pluridisciplinaires organisées en 13 tribus (Mobile Banking, Hyperpersonalisation, Crédit, etc.). Chaque squad est autonome : produit, tech, conformité, design dans la même équipe. Résultats en 2023 : TTM de 2-4 semaines (vs 9 mois en 2014), NPS passé de 22 à 71, satisfaction employés +40 %, 30 % de réduction des coûts IT. ING est cité dans 200+ études de cas académiques comme modèle de référence de la transformation agile bancaire.",
+    "resultats": "TTM 9 mois → 3 semaines · NPS 22 → 71 · Satisfaction employés +40 % · Coûts IT -30 % · 350 squads autonomes",
+    "source": "ING Annual Report 2023 / McKinsey ING Agile Case Study / Harvard Business Review ING",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité agilité — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "Scrum/Kanban déployé", "Squads pluridisciplinaires actives", "Pipeline CI/CD opérationnel", "TTM < 3 mois mesuré", "OKR alignement stratégique"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'agilité est le facteur discriminant entre les banques qui survivront à la disruption fintech et celles qui seront reléguées au rôle d'infrastructures de back-office. Une banque UEMOA qui déploie une nouvelle fonctionnalité en 12 mois ne peut pas concurrencer Wave qui itère chaque semaine. Le premier défi est culturel : convaincre les leaders bancaires que l'agile n'est pas une méthode IT mais un modèle opérationnel.",
+    "maturity_max_description": "Agile institutionnalisé dans toute la banque avec squads pluridisciplinaires autonomes. TTM < 2 semaines pour les nouvelles fonctionnalités. Pipeline CI/CD avec 100+ déploiements/semaine. OKR alignant la stratégie sur les squads. Culture test-and-learn. Conformité et sécurité intégrées dans chaque sprint (Definition of Done).",
+    "scoring_rubric": {
+      "score_1_to_20": "Waterfall exclusif. Projets 12-24 mois. Pas de culture agile. Silos IT/Métier. TTM non mesuré.",
+      "score_21_to_40": "Quelques projets Scrum. TTM > 6 mois. Pas de CI/CD. Formation agile informelle. Silos persistants.",
+      "score_41_to_60": "Scrum sur projets digitaux. Squads pilotes. TTM < 3 mois. CI/CD app mobile. Formations structurées.",
+      "score_61_to_80": "Agile@Scale domaines critiques. 5+ squads actives. TTM < 6 semaines. DevOps opérationnel. OKR utilisés.",
+      "score_81_to_100": "Agile institutionnalisé. 100+ déploiements/semaine. TTM < 2 semaines. Squads autonomes. Culture test-and-learn."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur sa maturité en agilité dans le contexte bancaire UEMOA. Analyse l'adoption des méthodologies agile (Scrum, Kanban), la mise en place de squads pluridisciplinaires, l'existence d'un pipeline CI/CD et le Time-to-Market mesuré pour les nouvelles fonctionnalités digitales.",
+    "key_questions_for_llm": [
+      "Les méthodologies agile (Scrum, Kanban ou SAFe) sont-elles appliquées sur les projets de développement digital et IT de la banque ?",
+      "Des squads pluridisciplinaires (IT + Métier + Conformité) sont-elles organisées autour des parcours clients clés (crédit, onboarding, paiements) ?",
+      "Un pipeline CI/CD est-il opérationnel permettant des déploiements fréquents (hebdomadaires ou bimensuels) sur les applications bancaires digitales ?",
+      "Le Time-to-Market est-il mesuré et communiqué à la direction comme KPI de performance de la transformation digitale ?",
+      "La conformité et la sécurité sont-elles intégrées dans les sprints agile (Definition of Done) plutôt que vérifiées uniquement en fin de projet ?"
+    ]
+  }
+}

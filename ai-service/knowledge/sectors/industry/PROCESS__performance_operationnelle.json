@@ -1,0 +1,284 @@
+{
+  "secteur": "industrie",
+  "axe": "PROCESS",
+  "sous_axe": "performance_operationnelle",
+  "label": "Performance opérationnelle industrielle",
+  "description": "Capacité des entreprises industrielles à mesurer, suivre et améliorer leurs indicateurs de performance opérationnelle : OEE/TRS, taux de rebuts, consommation énergie CIE CI, rendement matières, MTTR/MTBF maintenance, et déploiement de systèmes de mesure en temps réel (MES, IoT capteurs) dans le contexte industriel CI.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Coûts énergie CIE CI : électricité industrielle CI parmi les plus chères d'Afrique de l'Ouest — 90-120 FCFA/kWh industries CI",
+      "TRS moyen PMI CI estimé : 45-55% (vs 65-75% industries comparables Europe) — gisement d'amélioration majeur",
+      "Taux rebuts CI : 4-8% agroalimentaire CI (vs < 1% industrie alimentaire Europe) — coût qualité élevé",
+      "Maintenance CI : 80% maintenance corrective (réactive) vs 20% préventive — coût 2-3× plus élevé",
+      "MTBF (Mean Time Between Failures) CI : non mesuré dans 90% des PMI CI — gestion équipements à l'aveugle",
+      "Rendement matières CI : cacao (beurre, poudre), anacarde (amandes, CNSL) — optimisation recettes critiques pour marges"
+    ],
+    "acteurs_cles": [
+      "CIE CI — Compagnie Ivoirienne d'Électricité : coût énergie industrielle CI, compteurs intelligents",
+      "ANASUR CI / ANDE CI — Agence Nationale pour l'Environnement CI : indicateurs énergie industries",
+      "Schneider Electric CI — EcoStruxure mesure énergie, CMMS maintenance prédictive CI",
+      "Siemens CI — SCADA WinCC, CMMS SIMATIC Notifier, mesure OEE CI",
+      "INP-HB Yamoussoukro — formations ingénieurs maintenance CI, lean manufacturing",
+      "CODINORM CI / Bureau Veritas CI — audits performance industrielle CI"
+    ],
+    "reglementation_locale": [
+      "CIE CI contrat puissance souscrite : facturation pointe/dépointe — gestion facteur de puissance obligatoire",
+      "ANDE CI Loi 96-766 : Code de l'Environnement CI — rejets industriels mesurés et déclarés",
+      "ISO 50001:2018 : management énergie industrielle — exigé par donneurs d'ordre CSR UEMOA",
+      "ISO 9001:2015 Art. 9.1 : surveillance et mesure performance — indicateurs documentés obligatoires",
+      "OHSAS 18001 / ISO 45001 : sécurité industrielle CI — TF (taux de fréquence) accidents mesuré",
+      "APEX-CI certifications : performance environnementale mesurée (GHG, eau) pour certifications premium CI"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Aucun indicateur de performance mesuré. Production évaluée qualitativement ('on produit bien cette semaine'). Énergie non mesurée par ligne. Rebuts estimés à l'œil. Maintenance 100% corrective. Aucun tableau de bord.",
+      "indicateurs": [
+        "0 TRS/OEE mesuré — estimation qualitative uniquement",
+        "Taux rebuts : estimé à l'œil — non mesuré ni tracé",
+        "Énergie CI : facture globale CIE CI — aucune mesure par ligne",
+        "Maintenance 100% corrective — aucun plan préventif",
+        "0 tableau de bord performance — aucun KPI suivi"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Quelques KPIs mesurés manuellement (production journalière, rebuts pesés). TRS calculé mensuellement depuis Excel. Énergie mesurée globalement. Maintenance préventive sur 1-2 équipements critiques. Tableau de bord Excel mensuel.",
+      "indicateurs": [
+        "TRS calculé mensuel Excel — données collectées manuellement",
+        "Taux rebuts pesé quotidiennement — registre papier",
+        "Énergie : facture CIE CI globale — pas de sous-comptage par ligne",
+        "Maintenance préventive sur 1-2 équipements — plan Excel non systématique",
+        "Tableau de bord Excel mensuel direction — 3-5 KPIs"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "TRS automatiquement calculé depuis SCADA/MES. Rebuts tracés par code défaut. Sous-comptage énergie CIE CI par ligne. CMMS pour maintenance préventive planifiée. Dashboard Power BI hebdomadaire. MTBF/MTTR mesurés.",
+      "indicateurs": [
+        "TRS automatique SCADA/MES : disponibilité, performance, qualité — hebdomadaire",
+        "Rebuts par code défaut : analyse Pareto mensuelle — 80% causes identifiées",
+        "Sous-comptage énergie CIE CI par ligne : kWh/tonne produite suivi",
+        "CMMS : 80%+ équipements avec plan maintenance préventive",
+        "MTBF et MTTR mesurés : équipements critiques — base de données pannes"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "OEE temps réel avec alertes automatiques. Maintenance prédictive IoT sur équipements critiques. Énergie optimisée (facteur puissance, heures creuses). Rendement matières optimisé via données MES. OEE > 78%. Zéro défaut qualité sur lignes critiques.",
+      "indicateurs": [
+        "OEE temps réel : alertes SMS/Teams si OEE < 70% sur 30 min",
+        "Maintenance prédictive IoT : capteurs vibrations/température 50%+ équipements",
+        "Énergie CI : kWh/tonne -15% vs baseline grâce optimisation heures creuses CIE CI",
+        "Rendement matières : optimisation recettes depuis données MES — pertes < 2%",
+        "OEE > 78% — benchmark sectoriel CI atteint"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Excellence opérationnelle totale. OEE > 85%. IA optimisation recettes en temps réel. Jumeau numérique performance. Zéro panne non anticipée. Certification ISO 50001 énergie. Référence performance industrielle UEMOA.",
+      "indicateurs": [
+        "OEE > 85% — classe mondiale industries comparables",
+        "IA optimisation recettes temps réel : rendement matières maximisé en continu",
+        "0 panne > 4h non anticipée sur 12 mois (maintenance prédictive IA)",
+        "ISO 50001 énergie obtenu : -20%+ consommation kWh/tonne vs baseline",
+        "Référence performance CI — publication CODINORM CI / INP-HB CI"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Mesurez-vous votre OEE/TRS de façon automatisée et régulière ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — évaluation qualitative uniquement"},
+        {"valeur": 2, "label": "TRS calculé mensuellement manuellement depuis Excel"},
+        {"valeur": 3, "label": "TRS automatique depuis SCADA/MES — hebdomadaire"},
+        {"valeur": 4, "label": "OEE temps réel avec alertes automatiques si < seuil"},
+        {"valeur": 5, "label": "OEE > 85% — IA optimisation continue, 0 panne non anticipée"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Suivez-vous la consommation énergétique par ligne de production (kWh/tonne) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — facture CIE CI globale uniquement"},
+        {"valeur": 2, "label": "Facture CIE CI globale — estimation par ligne approximative"},
+        {"valeur": 3, "label": "Sous-comptage par ligne : kWh/tonne suivi hebdomadaire"},
+        {"valeur": 4, "label": "Énergie optimisée : heures creuses CIE CI, facteur puissance, -15% kWh/tonne"},
+        {"valeur": 5, "label": "ISO 50001 obtenu — -20%+ kWh/tonne, IA optimisation énergétique"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Disposez-vous d'un CMMS (système de gestion de maintenance) avec plan préventif ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — maintenance 100% corrective"},
+        {"valeur": 2, "label": "Plan maintenance Excel sur 1-2 équipements critiques"},
+        {"valeur": 3, "label": "CMMS : 80%+ équipements avec plan préventif, MTBF/MTTR mesurés"},
+        {"valeur": 4, "label": "CMMS + capteurs IoT prédictifs sur équipements critiques"},
+        {"valeur": 5, "label": "Maintenance prédictive IA : 0 panne > 4h non anticipée sur 12 mois"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Mesurez-vous et analysez-vous votre taux de rebuts par code défaut ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — rebuts estimés à l'œil"},
+        {"valeur": 2, "label": "Rebuts pesés quotidiennement — registre papier"},
+        {"valeur": 3, "label": "Rebuts par code défaut — analyse Pareto mensuelle"},
+        {"valeur": 4, "label": "Rebuts temps réel MES — alertes dépassement seuil, 5S digital"},
+        {"valeur": 5, "label": "Vision artificielle 100% inspection — 0 défaut non détecté, rebuts < 0,3%"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "OEE/TRS automatisé",
+      "Mesure énergie par ligne",
+      "CMMS maintenance préventive",
+      "Rebuts par code défaut",
+      "Maintenance prédictive IoT"
+    ],
+    "lignes": [
+      {
+        "organisation": "PMI CI (< 50 employés)",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "TRS estimé, énergie globale, corrective uniquement, rebuts à l'œil, 0 IoT"
+      },
+      {
+        "organisation": "Industrie moyenne CI (50-200 employés)",
+        "scores": [2, 2, 2, 2, 1],
+        "note_globale": 2,
+        "commentaire": "TRS Excel mensuel, facture globale, Excel maintenance 2 équipements, rebuts pesés"
+      },
+      {
+        "organisation": "SUCAF CI",
+        "scores": [4, 3, 4, 3, 3],
+        "note_globale": 3,
+        "commentaire": "OEE temps réel, sous-comptage partiel, CMMS MAXIMO, Pareto rebuts, capteurs vibrations"
+      },
+      {
+        "organisation": "SIFCA CI",
+        "scores": [5, 5, 5, 5, 5],
+        "note_globale": 5,
+        "commentaire": "OEE > 85%, ISO 50001, CMMS prédictif IA, vision artificielle inspection, 0 panne 12 mois"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "Schneider Electric CI — EcoStruxure Performance Advisor CI",
+      "part_de_marche_estimee": "Leader mesure performance et énergie industrie CI",
+      "forces": ["Compteurs énergie PM série CI", "EcoStruxure dashboard énergie", "CMMS intégré CI", "Formations maintenance CI"],
+      "faiblesses": ["Coût élevé comptage CI", "Solutions propriétaires Schneider uniquement"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "IBM Maximo (via partenaires Afrique) — CMMS industries Afrique",
+      "part_de_marche_estimee": "Leader CMMS grandes industries Afrique",
+      "forces": ["CMMS complet : préventif + prédictif", "Intégration SAP/ERP", "MTBF/MTTR analytics", "Mobile CMMS tablettes"],
+      "faiblesses": ["Coût très élevé", "Présence CI via Accra Ghana", "Complexité implémentation"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "Siemens Opcenter Analytics — OEE et performance industrielle",
+      "part_de_marche_estimee": "Leader mondial analytics performance industrielle",
+      "forces": ["OEE temps réel", "Benchmarking global", "IA optimisation", "Intégration MES/ERP"],
+      "faiblesses": ["Inaccessible PMI CI", "Déploiement complexe", "Coût USD élevé"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Odoo Maintenance CI — CMMS open source",
+      "usage": "Gestion maintenance préventive et corrective, MTBF/MTTR, demandes d'intervention mobiles",
+      "niveau_cible": "3+",
+      "cout_estime": "Inclus Odoo Manufacturing CI (800 000–2 500 000 FCFA/an)",
+      "disponibilite_ci": "International — partenaires Odoo CI disponibles"
+    },
+    {
+      "nom": "Schneider Electric PM8000 — compteurs énergie industriels CI",
+      "usage": "Sous-comptage énergie par ligne : kWh/tonne, facteur de puissance, heures creuses CIE CI",
+      "niveau_cible": "3+",
+      "cout_estime": "150 000–400 000 FCFA/compteur — installation incluse",
+      "disponibilite_ci": "Natif CI — Schneider Electric bureau Abidjan"
+    },
+    {
+      "nom": "Schaeffler FAG SmartCheck — capteurs vibrations maintenance prédictive",
+      "usage": "Surveillance vibrations roulements moteurs CI : alerte avant panne, MTBF amélioré",
+      "niveau_cible": "3+",
+      "cout_estime": "200 000–500 000 FCFA/capteur selon modèle",
+      "disponibilite_ci": "International — importé CI via distributeurs équipements industriels Abidjan"
+    },
+    {
+      "nom": "Microsoft Power BI — dashboard OEE et KPIs production CI",
+      "usage": "Tableau de bord OEE temps réel, TRS, rebuts, énergie — alertes automatiques",
+      "niveau_cible": "3+",
+      "cout_estime": "Inclus M365 Business (8 USD/user/mois standalone)",
+      "disponibilite_ci": "International — cloud Microsoft accessible CI"
+    },
+    {
+      "nom": "Bureau Veritas CI — audit ISO 50001 management énergie",
+      "usage": "Certification ISO 50001 : management énergie industrie CI — exigé CSR donneurs d'ordre multinationaux",
+      "niveau_cible": "4-5",
+      "cout_estime": "3 000 000–7 000 000 FCFA certification + renouvellement annuel",
+      "disponibilite_ci": "International — bureau Bureau Veritas Abidjan CI"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "Société Ivoirienne de Cacao (SIC-CACAO CI) — OEE temps réel + CMMS : performance broyerie cacao Abidjan",
+    "organisation": "SIC-CACAO CI (Société Ivoirienne de Cacao, filiale Barry Callebaut, Abidjan Port-Bouët — 65 000 tonnes broyerie/an)",
+    "contexte": "SIC-CACAO CI : broyerie cacao (liqueur, beurre, poudre) pour export. TRS 2021 : 63%, rebuts cacao hors-spec 2,8%, consommation énergie 380 kWh/tonne (benchmark international 280 kWh/tonne). Maintenance 75% corrective. 0 CMMS. 0 sous-comptage énergie par ligne.",
+    "probleme": "TRS 63% = 28 M FCFA/semaine de production manquée (capacité non utilisée). Rebuts 2,8% sur 65 000 t/an = 1 820 tonnes × 1 500 FCFA/kg = 2,73 Mds FCFA/an perdus. Énergie : 380 kWh/t vs benchmark 280 kWh/t = 100 kWh × 65 000 t × 90 FCFA/kWh = 585 M FCFA/an gaspillés. Maintenance corrective : 4 arrêts majeurs/an, 6-18h chacun.",
+    "solution_deployee": "SCADA Siemens WinCC : OEE automatique temps réel, alertes TRS < 70%. CMMS IBM Maximo : 85 équipements avec plan préventif, MTBF/MTTR. Capteurs Schaeffler FAG SmartCheck sur 12 broyeurs critiques. Compteurs Schneider Electric PM8000 × 6 lignes. Power BI dashboard direction quotidien. Formation 8 techniciens maintenance CI (FDFP CI 75%).",
+    "resultats": "TRS : 63% → 80% (+17 points). Rebuts : 2,8% → 0,7% (-75%). Énergie : 380 → 298 kWh/tonne (-22%) — économie 470 M FCFA/an. Arrêts majeurs : 4/an → 1/an (maintenance prédictive Schaeffler FAG). Coût maintenance corrective : -48%. Total économies annuelles : TRS (production) + rebuts + énergie = 3,8 Mds FCFA/an. Coût implémentation : 285 M FCFA — ROI < 3 semaines d'économies.",
+    "enseignements": [
+      "Les 3 leviers économiques du TRS, des rebuts et de l'énergie doivent être attaqués simultanément — chacun seul est rentable, les 3 ensemble transforment la profitabilité de l'usine CI",
+      "Le sous-comptage énergie CI par ligne révèle des écarts de 30-40% entre lignes identiques — sans mesure, on perd des centaines de millions de FCFA en énergie gaspillée",
+      "8 techniciens maintenance formés en prédictif CMMS = ROI en 45 jours : 1 arrêt majeur évité = 6h × 4,5 M FCFA/h production = 27 M FCFA récupérés"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "OEE TRS temps réel CI", "rebuts taux qualité industrie CI", "énergie kWh tonne CI",
+      "CMMS maintenance préventive CI", "MTBF MTTR CI", "maintenance prédictive IoT CI",
+      "CIE CI consommation énergie", "ISO 50001 énergie CI", "Schaeffler FAG CI",
+      "Schneider Electric énergie CI", "sous-comptage par ligne", "performance opérationnelle industrie CI"
+    ],
+    "signaux_niveau_avance": [
+      "OEE automatique depuis SCADA/MES",
+      "CMMS avec 80%+ équipements en préventif",
+      "Sous-comptage énergie par ligne CI",
+      "Capteurs IoT maintenance prédictive",
+      "MTBF/MTTR mesurés et suivis"
+    ],
+    "pieges_frequents": [
+      "TRS estimé = 80% par le responsable production CI sans mesure = biais humain systématique — les SCADA révèlent toujours 10-15 points de moins",
+      "Maintenance 'préventive' = vidange tous les 6 mois sans données MTBF = calendrier arbitraire — la vraie préventive se base sur le MTBF mesuré",
+      "Rebuts pesés mais non codifiés = on sait qu'on perd, pas pourquoi — sans code défaut, on ne peut pas corriger",
+      "Énergie mesurée mais non analysée = facture CIE CI vue comme coût fixe — sans benchmark kWh/tonne, les inefficacités sont invisibles"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "TRS estimé à l'œil. Rebuts à l'œil. Énergie facture globale. Maintenance 100% corrective. 0 KPI.",
+      "score_21_to_40": "TRS Excel mensuel. Rebuts pesés. Énergie globale. Préventif 2 équipements. Tableau bord mensuel.",
+      "score_41_to_60": "TRS auto SCADA. Rebuts code défaut Pareto. Sous-comptage énergie. CMMS 80%. MTBF/MTTR.",
+      "score_61_to_80": "OEE temps réel alertes. Prédictif IoT 50%+ équipements. Énergie -15%. OEE > 78%.",
+      "score_81_to_100": "OEE > 85%. IA optimisation recettes. ISO 50001. 0 panne 4h+. Vision IA inspection. Référence CI."
+    }
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "meta": {
+    "axis": "PROCESS",
+    "sub_axis": "Cartographie des processus",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Process Mining — découverte automatique des processus réels",
+      "description": "Le process mining (Celonis, UiPath Process Mining) analyse les logs systèmes pour reconstruire automatiquement les processus tels qu'ils sont exécutés réellement, révélant écarts et goulots d'étranglement invisibles.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "45 % des grandes entreprises mondiales (Gartner 2024)",
+      "source": "Gartner Process Mining Market Guide 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Digital Twin des processus opérationnels",
+      "description": "Les jumeaux numériques des processus permettent de simuler des changements avant déploiement, réduisant les risques de transformation et accélérant l'optimisation.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "25 % des industriels et financiers (IDC 2024)",
+      "source": "IDC Digital Twin Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "BPMN 2.0 comme standard universel de documentation",
+      "description": "La Business Process Model and Notation (BPMN 2.0) s'impose comme le langage commun IT/Métier pour documenter, partager et automatiser les processus à l'échelle internationale.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "70 % des DSI (OMG / Gartner 2024)",
+      "source": "Object Management Group BPMN Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Low-code BPM — cartographie accessible aux métiers",
+      "description": "Les plateformes BPM low-code permettent aux équipes métier de cartographier et optimiser leurs propres processus sans dépendre de la DSI, accélérant les cycles d'amélioration.",
+      "impact_level": "Moyen",
+      "horizon": "6-12 mois",
+      "adoption_rate": "55 % des projets BPM (Forrester 2024)",
+      "source": "Forrester Low-Code BPM Wave 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Process Mining",
+      "category": "Découverte et analyse processus",
+      "maturity_stage": "Croissance rapide",
+      "adoption_in_sector": "Faible en Afrique, élevée en Europe",
+      "leading_vendors": ["Celonis", "UiPath Process Mining", "SAP Signavio", "IBM Process Mining"]
+    },
+    {
+      "name": "Plateformes BPM (Business Process Management)",
+      "category": "Modélisation et orchestration",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne",
+      "leading_vendors": ["Bizagi", "Camunda", "Appian", "Pega", "IBM BPM"]
+    },
+    {
+      "name": "Outils de modélisation BPMN",
+      "category": "Documentation processus",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne",
+      "leading_vendors": ["Lucidchart", "draw.io", "Signavio", "ARIS (Software AG)"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Cartographie BPMN des processus clés, revue annuelle et certification ISO 9001",
+        "differentiator": "Premier acteur sectoriel à déployer un outil BPM unifié inter-départements",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Attijariwafa Bank",
+        "country": "Maroc",
+        "key_practice": "BPM centralisé sur 26 pays avec processus standardisés et revue qualité semestrielle",
+        "differentiator": "Process mining déployé sur les processus crédit pour réduire le TAT de 40 %",
+        "source": "Attijariwafa Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Toyota",
+        "country": "Japon",
+        "key_practice": "Toyota Production System — Value Stream Mapping & Kaizen, 10M suggestions employés/an",
+        "differentiator": "A3 report comme outil universel de cartographie et résolution de problème",
+        "source": "Toyota Production System / MIT Lean Enterprise Research 2023"
+      },
+      {
+        "organisation": "ING Group",
+        "country": "Pays-Bas",
+        "key_practice": "Process mining Celonis sur 40+ pays pour cartographier en temps réel tous les processus bancaires",
+        "differentiator": "Réduction de 35 % du TAT crédit via optimisation processus data-driven",
+        "source": "ING Annual Report 2023 / Celonis Case Study"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune cartographie formelle. Les processus sont dans la tête des opérateurs. Aucune documentation. Dépendance aux individus.",
+    "level_2_developing": "Quelques processus clés documentés en Word/Excel. Pas de standard BPMN. Pas de revue régulière.",
+    "level_3_defined": "Processus clés cartographiés en BPMN. Outil BPM déployé. Revue annuelle planifiée. Certification qualité en cours.",
+    "level_4_managed": "BPM complet couvrant tous les processus critiques. Process mining utilisé pour identifier les écarts. Indicateurs de performance processus suivis.",
+    "level_5_optimizing": "Process mining en temps réel. Digital twin des processus. Amélioration continue mesurée (Kaizen). Certification ISO 9001 ou équivalent. BPMN 2.0 universel."
+  },
+
+  "regulations": [
+    {
+      "name": "ISO 9001:2015 — Systèmes de management de la qualité",
+      "issuing_body": "Organisation Internationale de Normalisation (ISO)",
+      "scope": "Toute organisation souhaitant certifier son système de management qualité",
+      "key_requirement": "Cartographie des processus, approche processus, amélioration continue, audit interne annuel",
+      "compliance_deadline": "Sur demande (certification volontaire)",
+      "source_url": "https://www.iso.org/iso-9001-quality-management.html"
+    },
+    {
+      "name": "ISO 15504 / CMMI — Maturité des processus logiciels",
+      "issuing_body": "CMMI Institute / ISO",
+      "scope": "Organisations développant des logiciels ou systèmes",
+      "key_requirement": "Évaluation et amélioration de la maturité des processus de développement",
+      "compliance_deadline": "Sur demande",
+      "source_url": "https://cmmiinstitute.com"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Processus non documentés — dépendance aux individus",
+      "description": "Sans cartographie formelle, le départ d'un collaborateur clé peut paralyser une activité entière. Les processus implicites sont impossibles à automatiser.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Programme de documentation systématique des processus clés avec outil BPM et propriétaire de processus désigné."
+    },
+    {
+      "title": "Écart entre processus théorique et pratique réelle",
+      "description": "Les processus documentés divergent souvent de la réalité opérationnelle. Sans process mining, ces écarts ne sont pas détectés et génèrent des inefficacités cachées.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Déployer un outil de process mining sur les systèmes cœur pour découvrir les processus réels."
+    },
+    {
+      "title": "Silos organisationnels bloquant l'optimisation transverse",
+      "description": "Les processus traversant plusieurs départements sont souvent non cartographiés car aucun département ne se sent responsable de l'ensemble.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Nommer un Process Owner transverse pour chaque processus clé inter-départements."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Automatisation accélérée via processus bien cartographiés",
+      "description": "Un processus bien documenté en BPMN peut être automatisé 3× plus rapidement via RPA ou workflow digital. La cartographie est le prérequis de l'automatisation.",
+      "impact_level": "Très élevé",
+      "time_to_value": "3-12 mois post-cartographie",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Certification qualité comme levier commercial",
+      "description": "La certification ISO 9001 est un prérequis pour répondre à des appels d'offres publics et privés dans de nombreux secteurs. Elle renforce la crédibilité auprès des partenaires internationaux.",
+      "impact_level": "Élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Réduction des coûts via élimination des gaspillages",
+      "description": "La cartographie lean révèle en moyenne 30-40 % d'activités sans valeur ajoutée dans les processus non optimisés.",
+      "impact_level": "Élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "SAP",
+      "target": "Signavio",
+      "amount": "1 Md$ (estimé)",
+      "date": "2021",
+      "strategic_rationale": "Intégrer le process mining et la modélisation BPMN dans la suite SAP pour offrir une vision complète des processus métier",
+      "source": "SAP Press Release 2021"
+    },
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "UiPath",
+      "target": "ProcessGold",
+      "amount": "Non divulgué",
+      "date": "2019",
+      "strategic_rationale": "Combiner la RPA UiPath avec le process mining pour automatiser les processus identifiés comme prioritaires",
+      "source": "UiPath Press Release 2019"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Toyota",
+    "pays": "Japon",
+    "technologie": "Toyota Production System — Value Stream Mapping & Kaizen continu",
+    "description": "Toyota a inventé le Value Stream Mapping (VSM) dans les années 1950, documentant chaque étape de la chaîne de valeur pour éliminer les gaspillages (Muda). Chaque processus est capturé dans un A3 report : état actuel, état cible, plan d'action. La méthode Kaizen mobilise 10 millions d'idées d'amélioration par an proposées par les employés. Le TPS est désormais la référence mondiale de l'optimisation des processus, adopté par 85 % des multinationales industrielles.",
+    "resultats": "Productivité ×3 vs concurrents · Défauts -99 % · 10M suggestions employés/an · TPS adopté par 85 % des multinationales · Référence mondiale lean",
+    "source": "Toyota Production System / MIT Lean Enterprise Research 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité cartographie processus — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "BPM / process mapping déployé", "BPMN documenté", "Process Mining utilisé", "Revue processus annuelle", "Certification qualité"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "Partiel", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "La cartographie des processus est le fondement de toute transformation digitale. Sans documentation formelle des processus existants, l'automatisation, la certification qualité et l'amélioration continue sont impossibles à mettre en œuvre efficacement.",
+    "maturity_max_description": "Tous les processus critiques sont cartographiés en BPMN 2.0 avec propriétaire désigné. Process mining en temps réel pour détecter les écarts. Revue qualité semestrielle. Certification ISO 9001 active. Amélioration continue mesurée (Kaizen digitalisé).",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune cartographie. Processus implicites. Dépendance totale aux individus. Aucun outil BPM.",
+      "score_21_to_40": "Quelques processus documentés en Word/Excel. Pas de standard. Pas de revue systématique.",
+      "score_41_to_60": "Processus clés en BPMN. Outil BPM déployé. Revue annuelle planifiée. Certification en cours.",
+      "score_61_to_80": "BPM complet. Process mining utilisé. KPIs processus suivis. Propriétaires désignés.",
+      "score_81_to_100": "Process mining temps réel. Digital twin. Kaizen digitalisé. ISO 9001 certifié. BPMN 2.0 universel."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur la maturité de sa cartographie des processus. Analyse le niveau de documentation (BPMN vs informel), l'utilisation d'outils BPM, l'existence de process mining, la fréquence des revues qualité et la certification associée.",
+    "key_questions_for_llm": [
+      "Les processus clés sont-ils documentés formellement en BPMN ou dans un outil BPM dédié ?",
+      "Un processus de revue et d'amélioration régulière (au moins annuelle) est-il en place ?",
+      "L'organisation utilise-t-elle le process mining pour analyser ses processus réels ?",
+      "Chaque processus critique dispose-t-il d'un propriétaire (Process Owner) désigné ?",
+      "L'organisation est-elle certifiée ISO 9001 ou suit-elle un référentiel qualité équivalent ?"
+    ]
+  }
+}

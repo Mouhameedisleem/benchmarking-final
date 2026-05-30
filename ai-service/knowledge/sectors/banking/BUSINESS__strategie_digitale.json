@@ -1,0 +1,275 @@
+{
+  "meta": {
+    "axis": "BUSINESS",
+    "sub_axis": "Stratégie digitale",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Open Banking BCEAO — ouverture réglementaire et nouveaux modèles",
+      "description": "La BCEAO encadre progressivement l'Open Banking en UEMOA, obligeant les banques à exposer des APIs standardisées aux fintechs agréées. Cela crée un écosystème où les banques deviennent des plateformes plutôt que de simples fournisseurs de services.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "30 % des banques UEMOA ont initié des projets Open Banking (BCEAO 2024)",
+      "source": "BCEAO Digital Finance Policy Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Disruption fintech & mobile money — la banque sans banque",
+      "description": "Wave, Orange Money, MTN MoMo capturent les segments non-bankés avec des offres 100 % mobiles, sans agence. Les banques traditionnelles perdent des parts sur les paiements, les transferts et le micro-crédit.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "65 % des adultes en CI utilisent le mobile money vs 25 % qui ont un compte bancaire (GSMA 2024)",
+      "source": "GSMA Mobile Money West Africa 2024 / BCEAO Rapport Annuel",
+      "year": "2024"
+    },
+    {
+      "title": "Stratégie bank-as-a-platform — la banque comme infrastructure",
+      "description": "Les banques leaders transforment leur modèle en plateforme en exposant leurs services (paiement, KYC, crédit) via des APIs à des partenaires non-bancaires (e-commerce, agri-tech, santé).",
+      "impact_level": "Élevé",
+      "horizon": "24-36 mois",
+      "adoption_rate": "40 % des banques africaines pilotent un modèle BaaS (Banking-as-a-Service) (McKinsey Africa 2024)",
+      "source": "McKinsey Global Banking Annual Review Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Consolidation bancaire et transformation digitale post-fusion",
+      "description": "La réglementation BCEAO sur la capitalisation minimale (10 Mds FCFA) accélère les fusions-acquisitions. Les banques résultantes doivent harmoniser leurs SI tout en accélérant leur transformation digitale.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "8 fusions bancaires majeures en UEMOA depuis 2021 (BCEAO 2024)",
+      "source": "BCEAO Rapport Stabilité Financière UEMOA 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Core Banking System Cloud-Native",
+      "category": "Système bancaire central",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible (migration en cours)",
+      "leading_vendors": ["Temenos Transact", "Oracle FLEXCUBE", "Infosys Finacle", "Mambu (cloud-native)", "Thought Machine Vault"]
+    },
+    {
+      "name": "Banking-as-a-Service (BaaS) Platform",
+      "category": "Plateforme bancaire ouverte",
+      "maturity_stage": "Émergence en Afrique",
+      "adoption_in_sector": "Très faible",
+      "leading_vendors": ["Treezor", "Solarisbank", "Swan", "Railsbank", "ClearBank"]
+    },
+    {
+      "name": "Digital Onboarding & eKYC",
+      "category": "Acquisition client digitale",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible à moyenne",
+      "leading_vendors": ["Onfido", "Jumio", "Smile Identity (Afrique)", "Trulioo", "Sumsub"]
+    },
+    {
+      "name": "Mobile Banking Super App",
+      "category": "Canal digital principal",
+      "maturity_stage": "Mature (global) / Croissance (UEMOA)",
+      "adoption_in_sector": "Faible à moyenne en CI",
+      "leading_vendors": ["Temenos Infinity", "Backbase", "Technisys", "nCino", "Finastra"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Société Générale Côte d'Ivoire (SGCI)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Application mobile NSIA/SG avec 150 000+ utilisateurs actifs, onboarding digital partiel, partenariat Orange Money",
+        "differentiator": "Première banque ivoirienne à proposer l'ouverture de compte en ligne avec vérification d'identité digitale",
+        "source": "SGCI Rapport Annuel 2023 / APBEF-CI"
+      },
+      {
+        "organisation": "Coris Bank International CI",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Coris Money : wallet mobile intégré à l'offre bancaire, interopérable avec Orange Money et MTN MoMo",
+        "differentiator": "Stratégie phygital agressive : 60 % des agences équipées d'agents digitaux pour l'onboarding en zone rurale",
+        "source": "Coris Bank Rapport Annuel 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank Transnational Incorporated",
+        "country": "Pan-Afrique / UEMOA",
+        "key_practice": "Super App Ecobank Mobile sur 33 pays, EcobankPay QR, partenariat Wave pour l'interopérabilité",
+        "differentiator": "Seule banque africaine avec une stratégie digitale unifiée sur 33 marchés simultanément — one platform, many markets",
+        "source": "Ecobank Annual Report 2023 / Ecobank Digital Strategy Deck"
+      },
+      {
+        "organisation": "Attijariwafa Bank",
+        "country": "Maroc / Afrique de l'Ouest",
+        "key_practice": "Wafacash : réseau de 8 000 points de contact digitaux, banking agent en zones rurales UEMOA",
+        "differentiator": "Migration core banking Temenos T24 terminée sur 12 pays africains — socle unifié pour l'innovation",
+        "source": "Attijariwafa Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "DBS Bank",
+        "country": "Singapour",
+        "key_practice": "digibank : banque 100 % mobile sans agence lancée en Inde et Indonésie — 4M clients en 3 ans",
+        "differentiator": "Première grande banque à déclarer vouloir être 'une entreprise tech avec une licence bancaire', pas une banque qui fait de la tech",
+        "source": "DBS Annual Report 2023 / Harvard Business Review DBS Case 2023"
+      },
+      {
+        "organisation": "ING Group",
+        "country": "Pays-Bas",
+        "key_practice": "Think Forward Strategy : banque universelle avec expérience 100 % digitale en Europe, Agile à l'échelle sur 50 000 personnes",
+        "differentiator": "0 % de revenus issus des frais bancaires classiques — modèle freemium bancaire pionnier",
+        "source": "ING Annual Report 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Stratégie digitale absente ou déclarative. Aucun investissement dédié. Canaux numériques inexistants. Réponse réactive aux fintechs. Aucune roadmap digitale bancaire.",
+    "level_2_developing": "Site web et application mobile basiques. Quelques services en ligne (consultation de solde). Pas de stratégie Open Banking. Digitalisation comme projet IT, pas comme priorité stratégique.",
+    "level_3_defined": "Roadmap digitale bancaire formalisée. Application mobile transactionnelle. CDO ou responsable digital nommé. Partenariats mobile money initiés. Budget digital dédié.",
+    "level_4_managed": "Stratégie bank-as-a-platform en cours. APIs ouvertes aux partenaires agréés. Onboarding digital > 30 %. Revenus digitaux mesurés. Partenariats fintech formalisés.",
+    "level_5_optimizing": "Banque plateforme opérationnelle. BaaS actif avec partenaires. Open Banking BCEAO conforme. Revenus digitaux > 30 % du PNB. Super app avec services non-bancaires intégrés."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction BCEAO n°008-05-2015 sur la monnaie électronique",
+      "issuing_body": "BCEAO",
+      "scope": "Banques et établissements de monnaie électronique en zone UEMOA",
+      "key_requirement": "Agrément EME, capital minimum, protection des fonds, interopérabilité, reporting mensuel",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Loi bancaire UEMOA — Loi uniforme portant réglementation bancaire",
+      "issuing_body": "BCEAO / Conseil des Ministres UEMOA",
+      "scope": "Toutes les banques et établissements financiers en zone UEMOA",
+      "key_requirement": "Agrément BCEAO, capital minimum 10 Mds FCFA, ratios prudentiels (solvabilité, liquidité), gouvernance",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Instruction BCEAO sur l'interopérabilité des systèmes de paiement",
+      "issuing_body": "BCEAO / GIM-UEMOA",
+      "scope": "Tous les opérateurs de paiement en zone UEMOA",
+      "key_requirement": "Interconnexion obligatoire des systèmes de paiement mobile et bancaire via la plateforme GIM-UEMOA",
+      "compliance_deadline": "En vigueur (2022)",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Désintermédiation par les fintechs mobiles — perte de revenus de commissions",
+      "description": "Orange Money, Wave et MTN MoMo captent les flux de paiement et de transfert traditionnellement rémunérateurs pour les banques. Chaque transaction mobile est une commission perdue pour la banque.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Développer une stratégie de partenariat (pas de compétition frontale) avec les opérateurs mobile money : interopérabilité, co-distribution, services complémentaires."
+    },
+    {
+      "title": "Legacy core banking — frein à l'innovation et coût croissant",
+      "description": "Les banques UEMOA opèrent souvent sur des core banking vieux de 15-20 ans (DELTA, EVOLAN). Ces systèmes ne peuvent pas supporter la vitesse d'innovation requise par les clients digitaux.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Planifier une migration progressive vers un core banking cloud-native en mode strangler pattern, en commençant par les nouvelles offres digitales."
+    },
+    {
+      "title": "Conformité BCEAO — risque de sanctions sur les services digitaux",
+      "description": "L'expansion rapide des services digitaux (e-KYC, monnaie électronique, crédit digital) sans validation préalable de la BCEAO expose les banques à des sanctions et à la suspension de services.",
+      "severity": "Élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Engager proactivement la BCEAO via le regulatory sandbox disponible, documenter la conformité de chaque innovation digitale avant son lancement."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Bancarisation des non-bankés via le mobile — 15M d'adultes en CI",
+      "description": "Seulement 25 % des adultes en Côte d'Ivoire ont un compte bancaire, mais 65 % utilisent le mobile money. Une offre de compte digital simplifié (sans agence, ouverture en 5 min) adresse un marché de 15M de clients potentiels.",
+      "impact_level": "Très élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Micro-crédit digital basé sur les données mobile money",
+      "description": "Les données comportementales des utilisateurs mobile money permettent un scoring crédit alternatif pour des clients sans historique bancaire. Le marché du micro-crédit digital en UEMOA est estimé à 2,5 Mds USD.",
+      "impact_level": "Très élevé",
+      "time_to_value": "18-36 mois",
+      "prerequisite_maturity": "Niveau 4"
+    },
+    {
+      "title": "Banking-as-a-Service — monétiser le bilan bancaire",
+      "description": "Exposer les services bancaires (compte, paiement, crédit, KYC) via des APIs à des partenaires non-bancaires (e-commerce, agri-plateformes) crée de nouveaux revenus sans réseau agences additionnel.",
+      "impact_level": "Élevé",
+      "time_to_value": "24-36 mois",
+      "prerequisite_maturity": "Niveau 4"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Ecobank Transnational",
+      "target": "Accion Microfinance Bank Nigeria",
+      "amount": "N/A",
+      "date": "2022",
+      "strategic_rationale": "Intégrer les capacités de microfinance digitale pour adresser les segments non-bankés en Afrique de l'Ouest",
+      "source": "Ecobank Press Release 2022"
+    },
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "IFC, DEG, FMO",
+      "target": "Coris Bank International",
+      "amount": "60 M$ (dette senior)",
+      "date": "2023",
+      "strategic_rationale": "Financer l'expansion digitale et le renforcement des fonds propres de la banque panafricaine burkinabè",
+      "source": "IFC Press Release 2023"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "DBS Bank",
+    "pays": "Singapour",
+    "technologie": "digibank — banque 100 % mobile sans agence, 4 millions de clients en 3 ans",
+    "description": "DBS a lancé digibank en Inde en 2016 : ouverture de compte en 90 secondes via biométrie, aucune agence, IA pour le service client, investissement et crédit via l'application. En 3 ans, digibank a atteint 4M de clients avec un coût par client 4× inférieur à la banque traditionnelle. DBS a ensuite répliqué le modèle en Indonésie et à Taïwan. La banque a été désignée 'Meilleure banque digitale au monde' par Global Finance 6 années consécutives. 82 % des transactions DBS se font aujourd'hui sans intervention humaine.",
+    "resultats": "4M clients en 3 ans · Compte ouvert en 90 secondes · Coût par client -75 % vs agence · 82 % transactions digitales · #1 banque digitale mondiale 6 ans consécutifs",
+    "source": "DBS Annual Report 2023 / Global Finance Best Digital Bank Award 2024",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité stratégie digitale — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "Roadmap digitale formalisée", "App mobile transactionnelle", "Onboarding digital > 30 %", "Partenariats fintech actifs", "Revenus digitaux mesurés"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✓", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "Partiel", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Le secteur bancaire UEMOA est à un tournant. La pression des fintechs mobiles (Wave, Orange Money) et la réglementation BCEAO en évolution forcent une transformation rapide. Les banques qui ne définissent pas une stratégie digitale claire d'ici 2026 risquent de perdre leur pertinence sur les segments de paiement et de micro-crédit, qui représentent 40-60 % de leur PNB.",
+    "maturity_max_description": "Stratégie bank-as-a-platform documentée et exécutée. Roadmap digitale à 3 ans validée par le CA. CDO au COMEX. Application mobile avec 80 %+ de transactions digitales. Onboarding 100 % digital conforme eKYC BCEAO. Open Banking APIs exposées aux partenaires agréés. Revenus digitaux > 30 % du PNB. Partenariats fintech/mobile money formalisés.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune stratégie digitale. Canaux uniquement physiques. Pas de roadmap. Réaction aux fintechs.",
+      "score_21_to_40": "App mobile basique. Site web. Pas de stratégie Open Banking. Budget IT sans vision digitale.",
+      "score_41_to_60": "Roadmap digitale formalisée. App transactionnelle. CDO nommé. Partenariats mobile money initiés.",
+      "score_61_to_80": "Bank-as-a-platform en cours. APIs ouvertes. Onboarding digital > 30 %. Revenus digitaux mesurés.",
+      "score_81_to_100": "Banque plateforme. BaaS actif. Open Banking conforme BCEAO. Revenus digitaux > 30 % PNB. Super App."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur la maturité de sa stratégie digitale dans le contexte bancaire UEMOA. Analyse l'existence d'une roadmap digitale formalisée, la maturité de l'application mobile, le niveau d'onboarding digital, les partenariats avec les acteurs mobile money (Wave, Orange Money, MTN MoMo) et la mesure des revenus digitaux dans le PNB.",
+    "key_questions_for_llm": [
+      "La banque dispose-t-elle d'une roadmap digitale formalisée validée par le Conseil d'Administration ?",
+      "Un CDO (Chief Digital Officer) ou responsable de la transformation digitale est-il membre du COMEX ?",
+      "L'application mobile permet-elle de réaliser des transactions complètes (virement, paiement, crédit) sans passage en agence ?",
+      "Des partenariats formalisés avec les opérateurs mobile money (Orange Money, MTN MoMo, Wave) sont-ils actifs ?",
+      "Quelle est la part des revenus digitaux dans le PNB (Produit Net Bancaire) et est-elle mesurée et publiée ?"
+    ]
+  }
+}

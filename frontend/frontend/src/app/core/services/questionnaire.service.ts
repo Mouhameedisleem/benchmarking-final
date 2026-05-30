@@ -27,10 +27,12 @@ export class QuestionnaireService {
     METIER:                 'METIER',
     PROCESSUS:              'PROCESSUS',
     SI:                     'SI',
-    CANAUX_DISTRIBUTION:    'CANAUX_DISTRIBUTION',
-    MARKETING_COMMUNICATION:'MARKETING_COMMUNICATION',
-    RH_CULTURE_DIGITALE:    'RH_CULTURE_DIGITALE',
-    OFFRES_DIGITALES:       'OFFRES_DIGITALES',
+    CANAUX_DISTRIBUTION:             'CANAUX_DISTRIBUTION',
+    MARKETING_COMMUNICATION:         'MARKETING_COMMUNICATION',
+    RH_CULTURE_DIGITALE:             'RH_CULTURE_DIGITALE',
+    OFFRES_DIGITALES:                'OFFRES_DIGITALES',
+    MODELE_OPERATIONNEL_INNOVATION:  'MODELE_OPERATIONNEL_INNOVATION',
+    IT_DATA:                         'IT_DATA',
   };
 
   constructor(private http: HttpClient) {}
@@ -186,10 +188,12 @@ export class QuestionnaireService {
       METIER:                  'CANAUX',
       PROCESSUS:               'AUTOMATISATION',
       SI:                      'SOCLE_IT',
-      CANAUX_DISTRIBUTION:     'CANAUX',
-      MARKETING_COMMUNICATION: 'MARKETING',
-      RH_CULTURE_DIGITALE:     'RH',
-      OFFRES_DIGITALES:        'OFFRES',
+      CANAUX_DISTRIBUTION:            'CANAUX',
+      MARKETING_COMMUNICATION:        'MARKETING',
+      RH_CULTURE_DIGITALE:            'RH',
+      OFFRES_DIGITALES:               'OFFRES',
+      MODELE_OPERATIONNEL_INNOVATION: 'MODELE_OPERATIONNEL',
+      IT_DATA:                        'IT_DATA',
     };
     return defaults[axis] || 'CANAUX';
   }

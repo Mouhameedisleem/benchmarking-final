@@ -1,0 +1,57 @@
+{
+  "meta": { "axis": "INFORMATION_SYSTEM", "sub_axis": "Intégration & API", "sector": "assurance", "language": "fr", "version": "1.0", "last_updated": "2026-05" },
+  "trends": [
+    { "title": "API ouvertes assurance — connecter le PAS aux partenaires (bancassurance, insurtechs, e-commerce)", "description": "L'Open Insurance (par analogie avec l'Open Banking) permet aux assureurs d'exposer des API pour que des tiers (banques, fintech, e-commerce) intègrent des produits d'assurance dans leurs parcours. En UEMOA, la bancassurance digitale et l'embedded insurance reposent entièrement sur des API.", "impact_level": "Très élevé", "horizon": "24-36 mois", "adoption_rate": "10 % des assureurs africains ont des API ouvertes aux partenaires (Swiss Re 2024)", "source": "Swiss Re Open Insurance Africa 2024", "year": "2024" },
+    { "title": "Intégration mobile money — paiement des primes et règlement des sinistres par MTN/Orange", "description": "L'intégration des API mobile money (MTN MoMo API, Orange Money API) est la priorité n°1 des assureurs UEMOA cherchant à digitaliser le paiement des primes et le règlement des sinistres. Les assurés paient souvent en espèces via des agents — l'intégration mobile money élimine ce frein.", "impact_level": "Très élevé", "horizon": "6-18 mois", "adoption_rate": "30 % des assureurs UEMOA acceptent le paiement par mobile money (FANAF 2024)", "source": "FANAF Digital Payment Report 2024", "year": "2024" }
+  ],
+  "key_technologies": [
+    { "name": "API Management pour l'assurance (passerelle API)", "category": "Exposition et gestion des API", "maturity_stage": "Mature", "adoption_in_sector": "Faible en UEMOA", "leading_vendors": ["AWS API Gateway", "Azure APIM", "Kong Gateway", "Apigee Google", "MuleSoft Anypoint"] },
+    { "name": "Intégration mobile money (MTN MoMo, Orange Money)", "category": "Paiement des primes et sinistres", "maturity_stage": "Mature en UEMOA", "adoption_in_sector": "Croissance rapide", "leading_vendors": ["MTN MoMo API", "Orange Money API", "Wave API", "Moov Money API", "CinetPay (agrégateur CI)"] },
+    { "name": "Middleware d'intégration PAS — connecter les systèmes legacy aux API modernes", "category": "Modernisation sans migration complète", "maturity_stage": "Mature", "adoption_in_sector": "Faible en UEMOA", "leading_vendors": ["MuleSoft", "IBM App Connect", "Boomi", "Azure Integration Services", "WSO2"] }
+  ],
+  "market_leaders": {
+    "national": [{ "organisation": "NSIA Assurances CI", "country": "Côte d'Ivoire", "key_practice": "API intégrée avec MTN MoMo et Orange Money pour le paiement des primes auto et vie. Connexion API avec SGBCI pour la bancassurance. Portal développeurs ouvert aux courtiers digitaux.", "differentiator": "NSIA est le premier assureur ivoirien à avoir ouvert un portail développeurs permettant aux courtiers digitaux de souscrire des polices via API en temps réel", "source": "NSIA IT Architecture Report 2023" }],
+    "regional": [{ "organisation": "Britam Kenya", "country": "Kenya", "key_practice": "Britam API Hub — 15 API exposées aux partenaires (banques, M-Pesa, e-commerce). Intégration M-Pesa pour paiement primes et sinistres. Middleware WSO2 pour connecter le PAS legacy aux API modernes.", "differentiator": "Britam génère 18 % de ses nouvelles polices via des partenaires qui consomment ses API — modèle Insurance as a Service le plus avancé au Kenya", "source": "Britam Annual Report 2023" }],
+    "international": [{ "organisation": "Lemonade (USA)", "country": "USA", "key_practice": "Architecture 100 % API-first. Lemonade for Business (B2B) expose des API d'assurance à des partenaires (Toyota, Amazon). Intégration en 48h pour les partenaires grâce à une documentation API exhaustive.", "differentiator": "Lemonade a construit son modèle Embedded Insurance sur une architecture API-first qui permet à n'importe quelle plateforme d'intégrer une assurance en 48h", "source": "Lemonade Annual Report 2023 / Lemonade for Business Documentation" }]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Systèmes fermés. Aucune API. Paiements uniquement en espèces ou chèque. Aucune intégration partenaire.",
+    "level_2_developing": "Quelques fichiers d'échange (CSV, email) avec les partenaires. Paiement mobile money accepté en agence mais sans API. Pas de web services.",
+    "level_3_defined": "API mobile money intégrée (paiement primes). Web services avec 1-2 partenaires bancassurance. Middleware basique.",
+    "level_4_managed": "API Hub avec 5+ API exposées. Intégration mobile money complète (prime + sinistre). API bancassurance avec 3+ banques. Documentation développeurs.",
+    "level_5_optimizing": "Open Insurance — API ouvertes aux tiers. Portail développeurs. Intégration temps réel. Middleware event-driven. Insurance as a Service actif."
+  },
+  "regulations": [{ "name": "Règlement BCEAO sur les systèmes de paiement — interopérabilité mobile money", "issuing_body": "BCEAO / GIM-UEMOA", "scope": "Toutes les entreprises utilisant les APIs mobile money pour collecter des paiements en UEMOA", "key_requirement": "Les paiements via mobile money doivent passer par des interfaces homologuées par la BCEAO. Les assureurs collectant des primes par mobile money doivent obtenir l'accord de la CIMA sur les modalités.", "compliance_deadline": "En vigueur", "source_url": "https://www.bceao.int" }],
+  "risks": [{ "title": "Dépendance aux API des opérateurs télécoms — risque de rupture de service", "description": "Si un assureur dépend à 40-50 % de MTN MoMo pour la collecte de primes, une panne de l'API MTN (qui arrive régulièrement en UEMOA) peut bloquer la collecte de primes pendant 24-48h, créant des risques de déchéance de polices.", "severity": "Élevé", "likelihood": "Élevée", "mitigation": "Diversifier les intégrations (MTN + Orange + Wave + CinetPay comme agrégateur). Mécanisme de collecte alternatif en cas de panne. Buffer de cache pour les transactions en attente." }],
+  "opportunities": [{ "title": "CinetPay comme agrégateur — une API pour accéder à tous les opérateurs UEMOA", "description": "CinetPay est un agrégateur de paiement ivoirien qui connecte via une seule API : MTN MoMo, Orange Money, Wave, Moov, Visa et Mastercard. Pour un assureur, une seule intégration CinetPay remplace 5 intégrations séparées et réduit le coût de développement de 70 %.", "impact_level": "Élevé", "time_to_value": "3-6 mois", "prerequisite_maturity": "Niveau 2" }],
+  "ma_and_fundraising": [],
+  "zoom_case_study": { "entreprise": "Britam Kenya — 15 APIs ouvertes, 18 % des polices via partenaires", "pays": "Kenya", "technologie": "Britam API Hub (WSO2) + intégration M-Pesa + portail développeurs", "description": "Britam Kenya a développé entre 2021 et 2023 un API Hub complet pour transformer sa distribution assurance. L'architecture : WSO2 API Manager comme passerelle centralisée exposant 15 API (souscription, tarification, sinistres, état police, paiement). Intégration M-Pesa pour le paiement des primes (directement depuis l'application bancaire ou le menu M-Pesa). Portail développeurs avec documentation Swagger complète et sandbox de test. En 2023 : 12 partenaires actifs (3 banques, 5 courtiers digitaux, 2 e-commerce, 2 fintech), 18 % des nouvelles polices souscrites via API partenaires, délai d'intégration réduit de 6 mois à 3 semaines grâce au portail développeurs.", "resultats": "15 APIs exposées · 12 partenaires actifs · 18 % polices via API · Délai intégration 6 mois → 3 semaines · M-Pesa intégré · Portail développeurs", "source": "Britam Annual Report 2023 / WSO2 Britam Case Study 2023", "annee": "2023" },
+  "comparatif_organisations": {
+    "titre": "Maturité intégration & API — benchmark assureurs CIMA/UEMOA",
+    "colonnes": ["Organisation", "API mobile money paiement primes", "API mobile money règlement sinistres", "Portail développeurs/partenaires", "Bancassurance via API", "Middleware d'intégration PAS"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "Partiel"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "L'intégration API est le levier de croissance le plus rapide pour les assureurs UEMOA. La distribution par mobile money (MTN, Orange, Wave) touche des populations que les agents physiques n'atteignent jamais. Un assureur qui intègre les API mobile money pour la collecte des primes peut multiplier sa base de clients par 3 à 5 en ciblant les zones périurbaines et rurales. L'Open Insurance (API ouvertes aux banques, fintech, e-commerce) est la prochaine étape.",
+    "maturity_max_description": "Open Insurance opérationnel avec 10+ API exposées sur un portail développeurs avec documentation complète. Intégration mobile money complète (paiement primes ET règlement sinistres via MTN, Orange, Wave). Bancassurance digitale via API avec 3+ banques partenaires. Middleware event-driven pour la synchronisation temps réel entre systèmes. Insurance as a Service actif avec des partenaires non-assurance.",
+    "scoring_rubric": {
+      "score_1_to_20": "Systèmes fermés. Aucune API. Paiements uniquement en espèces.",
+      "score_21_to_40": "Fichiers d'échange. Mobile money en agence sans API. Pas de web services.",
+      "score_41_to_60": "API mobile money paiement primes. Web services 1-2 partenaires bancassurance.",
+      "score_61_to_80": "API Hub 5+ APIs. Mobile money paiement + sinistres. Documentation partenaires.",
+      "score_81_to_100": "Open Insurance. 10+ APIs. Portail développeurs. Event-driven. Insurance as a Service."
+    },
+    "prompt_injection_context": "Cette compagnie d'assurance est évaluée sur sa maturité en intégration et API dans le contexte CIMA/UEMOA. Analyse le niveau d'intégration mobile money (paiement primes et sinistres), l'existence d'API ouvertes aux partenaires, la présence d'un middleware d'intégration du PAS, et le niveau de bancassurance digitale.",
+    "key_questions_for_llm": [
+      "Le paiement des primes par mobile money (MTN MoMo, Orange Money, Wave) est-il disponible via une intégration API directe ?",
+      "Le règlement des sinistres par mobile money est-il également possible, permettant un virement direct sur le compte de l'assuré ?",
+      "Des API sont-elles exposées aux partenaires (banques, courtiers digitaux, e-commerce) pour la souscription ou la tarification ?",
+      "Un portail développeurs avec documentation et sandbox est-il disponible pour les partenaires techniques ?",
+      "Un middleware d'intégration (MuleSoft, WSO2 ou équivalent) est-il en place pour connecter le PAS legacy aux API modernes ?"
+    ]
+  }
+}

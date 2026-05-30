@@ -1,0 +1,300 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "OFFRES",
+    "sous_axe": "offres_digitales",
+    "version": "1.0",
+    "langue": "fr",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "Les offres digitales dans le BTP CI émergent progressivement : au-delà de la construction traditionnelle, les entreprises BTP innovantes proposent de nouvelles offres numériquement augmentées — modélisation BIM as-a-service, visites virtuelles 360° pour les promoteurs, maquettes numériques jumelles pour les gestionnaires d'infrastructure, MPaaS (Maintenance Préventive as-a-Service) avec IoT, PropTech immobilière. Ces offres digitales créent de nouveaux revenus récurrents et différencient les entreprises BTP CI sur les marchés compétitifs face à des acteurs régionaux et internationaux.",
+    "chiffres_cles": [
+      "Marché FM (Facility Management) CI : estimé à 350 Mds FCFA/an, quasi-non capturé par des offres structurées",
+      "PropTech CI : marché en croissance de 35%/an (plateformes immobilières, visites virtuelles, services digitaux)",
+      "BIM as-a-service : < 5 prestataires certifiés en CI (opportunité pour pionniers)",
+      "MPaaS IoT en CI : modèle pionnier (SETIMA CI) avec 45 immeubles sous contrat IoT",
+      "Offres conseil digital BTP CI : rares mais demandées par les PME BTP cherchant à se digitaliser"
+    ],
+    "specificites_locales": [
+      "BNETD CI : obligation BIM progressive pour les projets publics > 5 Mds FCFA (BIM as-a-service opportunité)",
+      "Loi CI n°2018-570 VEFA : plateforme de suivi chantier comme service aux acquéreurs (PropTech CI)",
+      "Schneider Electric EcoStruxure CI : partenaire référent pour les offres MPaaS BTP CI (IoT bâtiment)",
+      "ARTCI CI : cadre réglementaire pour les services IoT et les offres de surveillance connectée",
+      "OHADA / APDP CI : encadrement juridique des offres SaaS B2B dans le secteur BTP CI"
+    ]
+  },
+  "definition_axe": {
+    "titre": "Offres digitales dans le BTP",
+    "description": "Capacité de l'entreprise BTP à développer et commercialiser des offres numériquement augmentées ou entièrement digitales, allant au-delà de la construction physique traditionnelle. Les offres digitales BTP CI comprennent : le BIM as-a-service (modélisation pour tiers), les services de maintenance digitale (MPaaS IoT), les plateformes PropTech (suivi chantier VEFA, visites virtuelles), les offres de conseil en transformation digitale BTP CI pour les PME, et les jumeaux numériques pour les gestionnaires d'infrastructure.",
+    "perimetre": [
+      "BIM as-a-service : modélisation Revit pour maîtres d'ouvrage et PME BTP sans compétence interne BIM",
+      "MPaaS (Maintenance Préventive as-a-Service) : contrats IoT récurrents pour la gestion de bâtiments",
+      "PropTech CI : plateformes de suivi chantier VEFA, services digitaux acquéreurs (portail, visites 360°)",
+      "Drone surveillance as-a-service : survols réguliers chantiers tiers avec rapports automatiques",
+      "Conseil digital BTP CI : accompagnement à la transformation numérique des PME BTP CI",
+      "Jumeau numérique infrastructure : livraison BIM as-built + plateforme de gestion lifecycle"
+    ],
+    "technologies_cles": [
+      "Autodesk Revit + BIM 360 — BIM as-a-service : modélisation et coordination pour clients tiers",
+      "Schneider Electric EcoStruxure — MPaaS IoT bâtiment (HVAC, énergie, sécurité connectés)",
+      "Matterport CI — Service de visite virtuelle 360° pour promoteurs immobiliers CI (B2B)",
+      "DJI Enterprise + Pix4D — Drone surveillance as-a-service (rapports hebdomadaires automatisés)",
+      "Procore / Fieldwire SaaS — Plateforme gestion chantier proposée en marque blanche aux PME BTP CI",
+      "SmartRock / Hilti Jaibot — IoT capteurs béton pour services de contrôle qualité digitaux"
+    ]
+  },
+  "enjeux_specifiques": {
+    "enjeux": [
+      {
+        "titre": "BIM as-a-service pour les PME BTP CI sans compétence interne",
+        "description": "85% des entreprises BTP CI (classes D-E) n'ont ni les compétences ni le budget pour déployer le BIM en interne. Mais les marchés BNETD CI exigeant le BIM les excluent. Une offre BIM as-a-service (modélisation et coordination BIM facturée à la prestation ou à l'abonnement) permet à ces PME d'accéder au BIM sans investissement lourd, tout en créant des revenus récurrents pour le prestataire.",
+        "impact": "Nouveau marché adressable : 2 800 entreprises CNBTP CI potentiellement clientes, revenus récurrents"
+      },
+      {
+        "titre": "MPaaS IoT comme modèle de revenus récurrents en FM",
+        "description": "Le Facility Management (FM) numérique en Côte d'Ivoire est un marché de 350 Mds FCFA/an quasi-non capturé. Les entreprises BTP CI qui déploient des capteurs IoT dans les bâtiments qu'elles ont construits et proposent des contrats de maintenance préventive mensuels (MPaaS) transforment leur modèle économique de projet (revenus ponctuels) à service (revenus récurrents).",
+        "impact": "Revenus récurrents représentant 60-70% du CA vs. 5-10% sans MPaaS, valorisation entreprise multipliée"
+      },
+      {
+        "titre": "Drone surveillance as-a-service pour les PME BTP CI",
+        "description": "Les PME BTP CI ne peuvent pas s'offrir leur propre pilote de drone et leur matériel (coût 3-6 M FCFA). Un service de drone surveillance mutualisé (1 équipe drone desservant 5-10 chantiers simultanément) avec rapports photographiques hebdomadaires automatisés crée une offre accessible et différenciante pour les chantiers de 50-500 M FCFA.",
+        "impact": "Nouveau flux de revenus pour les entreprises BTP CI pionnières, accessibilité drone pour les PME CI"
+      }
+    ]
+  },
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Inexistant",
+      "description": "Offre strictement limitée à la construction physique traditionnelle. Aucune offre digitale ou de service numérique. Les prestations numériques (BIM, visites virtuelles, maintenance connectée) sont soit absentes soit sous-traitées sans valeur ajoutée.",
+      "signes_distinctifs": [
+        "Catalogue de services : uniquement construction physique (gros œuvre, second œuvre, finitions)",
+        "BIM inexistant en interne, jamais proposé comme service aux clients",
+        "Maintenance bâtiment proposée de manière purement réactive (après panne), non connectée",
+        "Aucune offre de service récurrent, revenus 100% de projet",
+        "Drone non utilisé, visites virtuelles non proposées aux clients"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Quelques services annexes digitaux proposés ponctuellement : visites Matterport 360° pour les promoteurs clients, plans BIM réalisés avec sous-traitant BIM. Premiers contrats de maintenance annuels mais sans IoT. Aucune offre structurée ni tarification définie.",
+      "signes_distinctifs": [
+        "Visites Matterport réalisées pour clients promoteurs (sous-traitées à un prestataire CI)",
+        "BIM sur certains projets avec sous-traitant BIM externe (pas de compétence interne)",
+        "Contrats de maintenance annuels sans IoT : inspection visuelle + intervention sur demande",
+        "Revenus services < 5% du CA total",
+        "Aucune tarification packagée des services digitaux"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Offres digitales packagées et tarifiées. Capacité BIM interne permettant de proposer du BIM as-a-service. Contrats MPaaS avec IoT sur quelques bâtiments. Offre drone surveillance proposée aux clients sur les grands chantiers. Revenus services récurrents > 20% du CA.",
+      "signes_distinctifs": [
+        "Catalogue offres digitales documenté : BIM as-a-service, visite 360°, MPaaS, drone surveillance",
+        "Équipe BIM interne (2-3 ingénieurs certifiés) permettant le BIM as-a-service pour clients PME",
+        "MPaaS IoT : 5-15 bâtiments sous contrat récurrent IoT (capteurs HVAC, énergie, sécurité)",
+        "Drone surveillance as-a-service : 1-2 équipes drone pour les chantiers clients",
+        "Revenus récurrents (MPaaS, abonnements) : 20-30% du CA total"
+      ]
+    },
+    "niveau_4": {
+      "label": "Optimisé",
+      "description": "Offres digitales BTP CI matures avec réputation de marché. MPaaS avec 30-50 bâtiments connectés. BIM as-a-service reconnu par BNETD CI. Plateforme PropTech propre pour les acquéreurs VEFA. Revenus récurrents > 40% du CA. Partenariats technologiques (Schneider Electric, Autodesk).",
+      "signes_distinctifs": [
+        "MPaaS scalable : 30-50 bâtiments sous contrat, plateforme IoT propre ou whitelabel EcoStruxure",
+        "BIM as-a-service : référencé par BNETD CI comme prestataire BIM agréé (marché public BIM CI)",
+        "Plateforme PropTech propre : portail acquéreurs VEFA marque blanche pour 5-10 promoteurs clients",
+        "Revenus récurrents : 40-60% du CA total (transformation modèle économique en cours)",
+        "Certifications : partenaire Autodesk Platinum CI, partenaire Schneider Electric EcoStruxure CI"
+      ]
+    },
+    "niveau_5": {
+      "label": "Différenciant",
+      "description": "Leader des offres digitales BTP CI, référence sectorielle UEMOA. Plateforme SaaS BTP propre commercialisée en UEMOA. Jumeau numérique infrastructure proposé aux gestionnaires CI. Participation à l'écosystème digital BTP CI (CNBTP CI, BNETD CI, startups). Revenus digitaux > 60% du CA.",
+      "signes_distinctifs": [
+        "Plateforme SaaS BTP CI commercialisée en UEMOA : 20+ clients BTP en Côte d'Ivoire, Sénégal, Burkina Faso",
+        "Jumeaux numériques infrastructure : offre lifecycle pour routes, barrages, bâtiments publics CI",
+        "Marché UEMOA : offres digitales BTP exportées dans la sous-région (Sénégal, Bénin, Mali)",
+        "Revenus digitaux > 60% du CA : transformation complète du modèle économique BTP",
+        "Référence EdTech / TechBTP CI : partenariats avec universités, CNBTP CI, BNETD CI pour l'écosystème"
+      ]
+    }
+  },
+  "indicateurs_cles": {
+    "indicateurs": [
+      {
+        "nom": "Part des revenus digitaux / récurrents dans le CA total",
+        "definition": "Pourcentage du chiffre d'affaires provenant des offres digitales (MPaaS, BIM as-a-service, PropTech, drone) et des contrats récurrents (abonnements, maintenance IoT)",
+        "unite": "%",
+        "cible_sectorielle": "> 25% de revenus digitaux/récurrents pour une entreprise BTP CI engagée dans la transformation",
+        "frequence_mesure": "Trimestrielle"
+      },
+      {
+        "nom": "Nombre de bâtiments sous contrat MPaaS IoT",
+        "definition": "Nombre de bâtiments ou d'installations gérés sous contrat de maintenance préventive avec capteurs IoT",
+        "unite": "bâtiments",
+        "cible_sectorielle": "> 20 bâtiments sous contrat MPaaS IoT (seuil de viabilité économique modèle)",
+        "frequence_mesure": "Trimestrielle"
+      },
+      {
+        "nom": "NPS clients offres digitales BTP CI",
+        "definition": "Net Promoter Score des clients ayant souscrit aux offres digitales (BIM as-a-service, MPaaS, PropTech)",
+        "unite": "score /100",
+        "cible_sectorielle": "NPS > 55/100 pour les offres digitales BTP CI",
+        "frequence_mesure": "Annuelle"
+      },
+      {
+        "nom": "Nombre de clients PME BTP CI en BIM as-a-service",
+        "definition": "Nombre d'entreprises BTP CI clientes abonnées ou sous contrat pour des services BIM externalisés",
+        "unite": "clients",
+        "cible_sectorielle": "> 10 clients PME BTP CI en BIM as-a-service (viabilité du modèle)",
+        "frequence_mesure": "Trimestrielle"
+      },
+      {
+        "nom": "Taux de renouvellement des contrats récurrents",
+        "definition": "Pourcentage des contrats MPaaS et d'abonnements renouvelés à l'échéance",
+        "unite": "%",
+        "cible_sectorielle": "> 85% de taux de renouvellement des contrats récurrents BTP CI",
+        "frequence_mesure": "Annuelle"
+      }
+    ]
+  },
+  "bonnes_pratiques": {
+    "pratiques": [
+      {
+        "titre": "Lancer une offre BIM as-a-service pour les PME BTP CI",
+        "description": "Packager l'offre en 3 formules : Basique (plan d'exécution BIM 2D→3D, devis à la surface), Standard (maquette Revit complète avec coordination structure/fluides, sur abonnement annuel pour les chantiers récurrents du client), Premium (BIM 4D/5D + suivi chantier connecté BIM 360 inclus). Cibler en priorité les PME BTP CI de classe C qui soumissionnent sur des marchés BNETD CI imposant le BIM. Prix indicatif BIM as-a-service CI : 500 000-2 M FCFA/projet selon complexité.",
+        "benefice": "Nouveau flux de revenus stable, différenciation concurrentielle, accès aux marchés BIM avec les PME clientes"
+      },
+      {
+        "titre": "Développer le MPaaS IoT à partir du parc bâti existant des clients",
+        "description": "Proposer aux clients actuels (promoteurs immobiliers, propriétaires de bâtiments commerciaux CI) un contrat MPaaS IoT sur les bâtiments déjà construits : installation de capteurs Schneider EcoStruxure (HVAC, énergie, sécurité), abonnement mensuel incluant monitoring 24/7, alertes, et interventions préventives garanties en < 4h. Commencer avec 5 bâtiments pilotes, mesurer les économies d'énergie (15-25% typiquement), puis démultiplier.",
+        "benefice": "Revenus récurrents mensuels stables, fidélisation des clients existants, modèle valorisable pour les investisseurs"
+      },
+      {
+        "titre": "Offre drone surveillance hebdomadaire mutualisée pour chantiers CI",
+        "description": "Créer une offre drone surveillance hebdomadaire facturée aux maîtres d'ouvrage ou entreprises BTP CI : 1 vol/semaine, rapport PDF automatique avec orthophotos et mesures d'avancement, livré le lundi matin. Tarification : 200 000-500 000 FCFA/mois selon la taille du chantier. 1 équipe drone (pilote ARTCI + logiciel Pix4D) peut couvrir 5-8 chantiers/semaine. Le service est finançable sur le budget de contrôle du maître d'ouvrage.",
+        "benefice": "Nouveau flux de revenus, service différenciant vs. concurrents sans drone, économies d'échelle sur le matériel"
+      },
+      {
+        "titre": "Partenariat Schneider Electric CI pour le MPaaS EcoStruxure",
+        "description": "Devenir intégrateur certifié Schneider Electric EcoStruxure CI pour accéder à la plateforme IoT bâtiment de référence mondiale : capteurs standardisés, tableaux de bord cloud prêts à l'emploi, support technique Schneider Electric. Le partenariat apporte la crédibilité technologique et les certifications nécessaires pour convaincre les grands clients CI (banques, hotels, bâtiments institutionnels). Coût certification intégrateur Schneider CI : formation + équipement pilote (~10 M FCFA investissement initial).",
+        "benefice": "Crédibilité technologique internationale, accès au réseau clients Schneider CI, support technique expert"
+      }
+    ]
+  },
+  "ecueils_frequents": {
+    "ecueils": [
+      {
+        "titre": "Proposer des offres digitales sans masse critique de bâtiments",
+        "description": "Le MPaaS IoT n'est économiquement viable qu'à partir d'un seuil minimal de bâtiments sous contrat (typiquement 15-20 bâtiments pour rentabiliser l'équipe technique). Démarrer avec 2-3 bâtiments pilotes crée des coûts supérieurs aux revenus.",
+        "solution": "Commencer avec des bâtiments appartenant à un même client (5-10 immeubles d'un même propriétaire), puis élargir progressivement à d'autres clients. Atteindre 15+ bâtiments avant de considérer le modèle comme viable."
+      },
+      {
+        "titre": "Sous-estimer le support client pour les offres IoT",
+        "description": "Les offres MPaaS IoT génèrent des alertes et des incidents 24/7. Sans équipe de support technique disponible hors des heures ouvrables, les clients se retrouvent avec des alertes non traitées la nuit — ce qui annule le bénéfice du monitoring préventif.",
+        "solution": "Définir les SLA (Service Level Agreements) réalistes dès le départ : délai d'intervention en heures ouvrables vs. 24/7. Mettre en place un service d'astreinte téléphonique avec escalade pour les alertes critiques."
+      },
+      {
+        "titre": "BIM as-a-service sans adaptation au contexte CI",
+        "description": "Les maquettes BIM doivent respecter les normes locales CI (BNETD CI, CNBTP CI, LBTP CI) et intégrer des matériaux disponibles en CI (pas de spécifications franco-françaises inadaptées). Un BIM as-a-service générique sans adaptation CI risque de produire des livrables non conformes aux exigences locales.",
+        "solution": "Constituer une bibliothèque de composants BIM spécifiques CI (matériaux locaux, normes BNETD CI, classifications CNBTP CI) avant de lancer l'offre commerciale"
+      }
+    ]
+  },
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau de développement d'offres digitales BTP entre organisations représentatives",
+    "lignes": [
+      {
+        "organisation": "SETIMA CI",
+        "profil": "Société FM digitale, pionnière MPaaS IoT en Côte d'Ivoire",
+        "niveau_maturite": 4,
+        "points_forts": "45 immeubles sous contrat MPaaS IoT EcoStruxure, revenus récurrents 68% du CA, partenaire Schneider Electric CI, NPS FM 64/100, modèle MPaaS réplicable en UEMOA",
+        "points_faibles": "Marché FM CI encore peu structuré (clients réticents aux abonnements IoT), coût d'équipement IoT initial frein pour les PME clients",
+        "initiatives_notables": "Offre MPaaS IoT 'Zéro Panne' : garantie de disponibilité des équipements CVC à 99% ou remboursement — proposition différenciante unique en CI"
+      },
+      {
+        "organisation": "BNETD CI",
+        "profil": "MOA délégué État CI, BIM imposé sur projets > 5 Mds FCFA",
+        "niveau_maturite": 3,
+        "points_forts": "Offre de conseil BIM pour les administrations CI, plateforme GEOPROJET CI comme service aux entreprises BTP CI, offre formation BIM en partenariat INPHB CI",
+        "points_faibles": "BNETD CI est une agence publique, pas une entreprise commerciale — modèle économique des offres digitales limité",
+        "initiatives_notables": "BNETD CI BIM Academy (2024) : formation et certification BIM pour les entreprises BTP CI — 120 ingénieurs formés en année 1"
+      },
+      {
+        "organisation": "SATCI CI",
+        "profil": "Promoteur immobilier CI, offres PropTech émergentes",
+        "niveau_maturite": 3,
+        "points_forts": "Offre portail client VEFA (marque blanche proposée à 2 promoteurs partenaires CI), visites Matterport 360° comme service commercial différenciant, contrats de maintenance bâtiment annuels (sans IoT)",
+        "points_faibles": "Pas encore de MPaaS IoT, drone surveillance non proposé, BIM as-a-service non formalisé comme offre commerciale",
+        "initiatives_notables": "Portail client VEFA marque blanche : SATCI CI vend l'accès à sa plateforme portail à 2 petits promoteurs CI partenaires (première étape d'une offre SaaS PropTech CI)"
+      },
+      {
+        "organisation": "PME BTP CI (constructeur local)",
+        "profil": "Petite entreprise BTP CI 20-100 employés",
+        "niveau_maturite": 1,
+        "points_forts": "Connaissance du terrain CI et des besoins locaux",
+        "points_faibles": "Aucune offre digitale, CA 100% projet construction physique, aucun revenu récurrent, pas de compétence BIM ni IoT interne",
+        "initiatives_notables": "Aucune initiative digitale offre identifiée — focus sur la survie et les marchés SIGMAP DGMP CI traditionnels"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "SETIMA CI — Lancement et scale-up de l'offre MPaaS IoT EcoStruxure sur 45 immeubles Abidjan",
+    "contexte": "SETIMA CI (Société d'Études et de Travaux Immobiliers et de Maintenance de Côte d'Ivoire) est partie d'un modèle de maintenance réactive traditionnel (interventions sur appel, CA 100% de projet) pour transformer son offre vers le MPaaS IoT. En 2020, SETIMA CI a signé son premier contrat MPaaS IoT pilote sur 5 immeubles avec Schneider Electric EcoStruxure comme partenaire technologique. En 2024, le modèle est déployé sur 45 immeubles avec 68% du CA en revenus récurrents.",
+    "probleme": "Modèle économique de départ : CA 100% de projet (maintenance réactive après panne), revenus aléatoires et difficiles à prévoir. Faible valorisation de l'entreprise (PE ratio bas pour une entreprise de service manuel). Clients insatisfaits des pannes non anticipées (HVAC, ascenseurs, sécurité). 5% du CA en maintenance préventive (sans IoT, visites trimestrielles uniquement).",
+    "solution_deployee": "Partenariat Schneider Electric EcoStruxure CI (certification intégrateur) + déploiement pilote sur 5 immeubles propriétaire unique (Groupe Immobilier ABC CI) : capteurs IoT EcoStruxure (thermostats, compteurs énergie, détecteurs sécurité), plateforme cloud monitoring 24/7, alertes prédictives, interventions préventives garanties. Abonnement mensuel par immeuble : 500 000-1 500 000 FCFA/mois selon superficie et équipements. Extension progressive sur 3 ans : 5 → 15 → 30 → 45 immeubles. Recrutement 2 techniciens IoT (formation Schneider Electric CI).",
+    "resultats": {
+      "immeubles_mpaas": "5 immeubles pilote (2020) → 45 immeubles sous contrat MPaaS IoT (2024)",
+      "revenus_recurrents": "5% → 68% du CA en revenus récurrents MPaaS IoT",
+      "ca_croissance": "CA global SETIMA CI : +42% en 3 ans (sans recrutement proportionnel — modèle scalable)",
+      "anomalies_detection": "Délai détection anomalie équipements : ∞ (après panne) → 15 min (alerte IoT temps réel)",
+      "pannes_majeures": "Pannes majeures bâtiments clients : -58% en 18 mois post-déploiement IoT",
+      "energie_clients": "Économies énergie clients CI : -18 à -24% par immeuble (CIE factures avant/après)",
+      "nps_clients_fm": "NPS FM clients SETIMA CI : 28 → 64/100"
+    },
+    "enseignements": "La première résistance des clients CI était le modèle d'abonnement mensuel ('pourquoi payer si rien ne s'est cassé ?'). La démonstration des économies d'énergie CIE (-18 à -24%) et la garantie 'Zéro Panne' ont converti les clients réticents — l'offre est perçue comme un investissement ROI positif, pas une dépense."
+  },
+  "ai_context": {
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune offre digitale. CA 100% construction physique traditionnelle. BIM inexistant. Aucun service récurrent. Maintenance purement réactive. Aucun service PropTech ni IoT proposé aux clients.",
+      "score_21_to_40": "Quelques services annexes digitaux ponctuels (visite Matterport sous-traitée, BIM sur demande avec prestataire externe). Premiers contrats maintenance annuels sans IoT. Revenus services < 5% CA.",
+      "score_41_to_60": "Offres digitales packagées et tarifiées. BIM as-a-service interne. MPaaS IoT sur 5-15 bâtiments. Drone surveillance proposé aux clients. Revenus récurrents > 20% CA. Partenariat technologique IoT.",
+      "score_61_to_80": "Offres digitales matures : MPaaS 30-50 bâtiments, BIM as-a-service référencé BNETD CI, PropTech plateforme propre. Revenus récurrents > 40% CA. Partenaire certifié Schneider Electric / Autodesk CI.",
+      "score_81_to_100": "Leader offres digitales BTP CI. Plateforme SaaS BTP exportée UEMOA. Jumeaux numériques infrastructure. Revenus digitaux > 60% CA. Référence sectorielle. Partenariats académiques et institutionnels."
+    },
+    "questions_cles_diagnostic": [
+      "Proposez-vous des services numériques ou des contrats récurrents (maintenance IoT, BIM as-a-service, PropTech) à vos clients, au-delà de la construction physique ?",
+      "Quelle est la part de vos revenus récurrents (abonnements, contrats de maintenance) dans votre CA total ?",
+      "Avez-vous une offre BIM as-a-service pour les PME BTP CI sans compétence BIM interne ?",
+      "Proposez-vous de la surveillance drone à vos clients maîtres d'ouvrage comme service autonome ?",
+      "Avez-vous déployé des capteurs IoT dans des bâtiments sous contrat de maintenance préventive ?"
+    ],
+    "pieges_evaluation": [
+      "Ne pas confondre la capacité BIM interne (pour les propres projets) avec une offre BIM as-a-service commercialisée auprès de clients tiers",
+      "Vérifier que les 'contrats de maintenance' mentionnés incluent réellement de l'IoT et du monitoring préventif vs. de simples visites périodiques sans capteurs",
+      "Distinguer les offres digitales des filiales de groupes internationaux (héritées du groupe) des offres développées localement par des entreprises CI"
+    ]
+  },
+  "ressources": {
+    "references_reglementaires": [
+      "BNETD CI — Exigences BIM pour les marchés d'infrastructure CI (opportunité BIM as-a-service)",
+      "ARTCI CI — Réglementation offres IoT et services connectés en Côte d'Ivoire",
+      "APDP CI Loi 2013-450 — Données collectées par les capteurs IoT MPaaS (déclaration obligatoire)",
+      "OHADA — Cadre juridique contrats de services récurrents BTP CI (abonnements MPaaS)"
+    ],
+    "outils_recommandes": [
+      "Schneider Electric EcoStruxure — Plateforme IoT MPaaS bâtiment (partenariat intégrateur CI disponible)",
+      "Autodesk BIM 360 — BIM as-a-service (modélisation et coordination pour clients tiers)",
+      "DJI Enterprise + Pix4D — Drone surveillance as-a-service (rapports automatisés)",
+      "Matterport CI — Service visites virtuelles 360° B2B pour promoteurs immobiliers CI",
+      "SmartRock / Hilti — IoT capteurs béton pour services de contrôle qualité digitaux"
+    ],
+    "formations_certifications": [
+      "Schneider Electric EcoStruxure Integrator CI — Certification intégrateur IoT bâtiment",
+      "Autodesk Authorized Reseller CI — Partenariat et certification BIM as-a-service",
+      "ARTCI CI — Formation réglementation drones professionnels CI (pilote certifié)",
+      "CNBTP CI — Formation offres innovantes BTP CI et nouveaux modèles économiques"
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "meta": { "axis": "RH_CULTURE_DIGITALE", "sub_axis": "Culture Digitale", "sector": "assurance", "language": "fr", "version": "1.0", "last_updated": "2026-05" },
+  "trends": [
+    { "title": "Transformation culturelle des assureurs — du commercial terrain au conseiller digital", "description": "Les agents d'assurance UEMOA, formés à la vente en face-à-face, doivent se reconvertir en conseillers capables d'utiliser les outils digitaux (CRM mobile, signature électronique, devis en ligne). Cette transformation culturelle est le principal frein à la digitalisation — 70 % des projets digitaux échouent pour des raisons culturelles, pas techniques.", "impact_level": "Très élevé", "horizon": "12-36 mois", "adoption_rate": "25 % des assureurs africains ont un programme de transformation culturelle digitale formalisé (EY 2024)", "source": "EY Africa Insurance People & Culture 2024", "year": "2024" },
+    { "title": "Chief Digital Officer assurance — leadership de la transformation", "description": "La nomination d'un CDO (Chief Digital Officer) ou d'un Directeur de la Transformation Digitale est corrélée à une accélération de 2× des projets de digitalisation dans les assureurs africains. Ce rôle transcende les silos IT, commercial et opérations pour piloter une vision digitale cohérente.", "impact_level": "Élevé", "horizon": "12-24 mois", "adoption_rate": "20 % des assureurs CIMA ont un CDO ou équivalent au COMEX (FANAF 2024)", "source": "FANAF Leadership Digital Survey 2024", "year": "2024" }
+  ],
+  "key_technologies": [
+    { "name": "LMS (Learning Management System) pour la formation digitale des agents", "category": "Développement des compétences digitales", "maturity_stage": "Mature", "adoption_in_sector": "Faible en UEMOA", "leading_vendors": ["Docebo", "TalentLMS", "Cornerstone Insurance", "SAP SuccessFactors Learning", "Moodle (open source)"] },
+    { "name": "Digital adoption platform (DAP) — formation in-app des collaborateurs", "category": "Conduite du changement", "maturity_stage": "Croissance", "adoption_in_sector": "Très faible en UEMOA", "leading_vendors": ["WalkMe", "Pendo", "Whatfix", "UserGuiding", "Appcues"] }
+  ],
+  "market_leaders": {
+    "national": [{ "organisation": "NSIA Groupe", "country": "Côte d'Ivoire / Pan-UEMOA", "key_practice": "Programme 'NSIA Digital Academy' : 40h de formation digitale par an pour tous les collaborateurs. CDO nommé au COMEX depuis 2021. Culture de l'experimentation avec un budget innovation de 2 % du CA.", "differentiator": "NSIA est le seul assureur ivoirien à avoir institutionnalisé une 'Digital Academy' interne formant 100 % de ses collaborateurs aux outils digitaux — 850 personnes formées en 2023", "source": "NSIA Groupe Rapport RH 2023" }],
+    "regional": [{ "organisation": "Sanlam Pan Africa", "country": "Afrique du Sud / Pan-Afrique", "key_practice": "Programme 'Sanlam Future Fit' : parcours de développement digital pour les 8 000 collaborateurs africains. Leadership digital avec CDO Groupe. Mesure de l'index de culture digitale trimestriellement.", "differentiator": "Sanlam mesure le 'Digital Culture Index' de chacune de ses 15 filiales africaines trimestriellement et lie 20 % des bonus des dirigeants à l'amélioration de cet index", "source": "Sanlam Annual Report 2023" }],
+    "international": [{ "organisation": "AXA Group", "country": "France / Mondial", "key_practice": "AXA One Learning : 160 000 collaborateurs formés aux compétences digitales (IA, data, agile). Budget formation digital 500 M€/an. CDO dans chaque pays. 'AXA Plug and Play' pour la culture startup interne.", "differentiator": "AXA a formé 160 000 collaborateurs aux compétences numériques en 5 ans — le plus grand programme de formation digitale du secteur assurance mondial — réduisant la résistance au changement de 45 %", "source": "AXA Annual Report 2023 / AXA One Learning Platform 2024" }]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Aucune formation digitale. Résistance forte au changement. Pas de CDO. Culture papier dominante. Digitale perçu comme une menace par les agents.",
+    "level_2_developing": "Quelques formations digitales ponctuelles. Sensibilisation à la transformation. Pas de CDO mais un référent IT. Culture mixte.",
+    "level_3_defined": "Programme de formation digitale annuel. CDO ou Directeur IT stratégique. Charte de transformation digitale. Mesure basique de la maturité digitale RH.",
+    "level_4_managed": "Digital Academy interne. Formation digitale > 20h/an/collaborateur. CDO au COMEX. Ambassadeurs digitaux par département. Mesure trimestrielle.",
+    "level_5_optimizing": "Culture digitale institutionnalisée. Formation continue. Innovation ouverte. Digital dans toutes les évaluations de performance. CDO stratégique."
+  },
+  "regulations": [{ "name": "Accord professionnel FANAF sur la formation continue des agents d'assurance", "issuing_body": "FANAF (Fédération des Sociétés d'Assurances de Droit National Africaines)", "scope": "Agents et courtiers d'assurance des États membres CIMA", "key_requirement": "La FANAF recommande un minimum de 20h de formation continue annuelle pour les agents d'assurance afin de maintenir leur certification professionnelle. La formation aux outils digitaux est intégrée dans les programmes de formation depuis 2022.", "compliance_deadline": "Recommandation professionnelle 2022", "source_url": "https://www.fanaf.org" }],
+  "risks": [{ "title": "Résistance des agents terrain — dédigitalisation de la relation client", "description": "Les agents d'assurance traditionnels peuvent saboter la transformation digitale en détournant les clients des canaux digitaux vers les agences physiques pour préserver leur commissionnement. Ce phénomène de 'channel conflict' a bloqué la transformation digitale de plusieurs assureurs UEMOA.", "severity": "Élevé", "likelihood": "Élevée", "mitigation": "Adapter le modèle de commissionnement pour valoriser l'utilisation des outils digitaux par les agents (prime si le client souscrit via l'application introduite par l'agent). Former les agents à être des 'digital enablers' plutôt que de les concurrencer." }],
+  "opportunities": [{ "title": "Agent digital assurance — hybridation du modèle de distribution", "description": "L'agent digital est un agent physique équipé d'une tablette et d'une application CRM mobile qui lui permet de souscrire des polices, enregistrer des sinistres et gérer son portefeuille clients depuis le terrain. Ce modèle hybride combine la relation humaine (qui reste essentielle en UEMOA) avec l'efficacité du digital.", "impact_level": "Très élevé", "time_to_value": "6-12 mois", "prerequisite_maturity": "Niveau 3" }],
+  "ma_and_fundraising": [],
+  "zoom_case_study": { "entreprise": "NSIA Digital Academy — 850 collaborateurs formés, CDO au COMEX depuis 2021", "pays": "Côte d'Ivoire / Pan-UEMOA", "technologie": "LMS Moodle customisé + parcours de formation blended learning (présentiel + e-learning)", "description": "NSIA Groupe a lancé en 2021 sa 'Digital Academy' — la première académie de formation digitale d'un assureur ivoirien. Le programme : 40 heures de formation par an par collaborateur (20h e-learning sur le LMS + 20h ateliers pratiques), couvrant les thèmes : outils CRM et gestion de polices, signature électronique et dématérialisation, analyse de données avec Excel avancé et Power BI, sécurité informatique et protection des données. Chaque département a nommé un 'Digital Champion' chargé d'animer la transformation dans son équipe. Le CDO, nommé au COMEX en 2021, dispose d'un budget de transformation de 2 % du chiffre d'affaires groupe. En 2023 : 850 collaborateurs formés (100 % des effectifs CI + filiales UEMOA), taux d'adoption des outils CRM passé de 45 % à 92 %, résistance au changement mesurée par enquête interne réduite de 62 % à 28 %.", "resultats": "850 collaborateurs formés · Adoption CRM 45 % → 92 % · Résistance changement -55 % · 100 % effectifs certifiés · CDO COMEX · Budget innovation 2 % CA", "source": "NSIA Groupe Rapport RH 2023 / FANAF Africa HR Insurance Awards 2023", "annee": "2023" },
+  "comparatif_organisations": {
+    "titre": "Maturité culture digitale — benchmark assureurs CIMA/UEMOA",
+    "colonnes": ["Organisation", "CDO ou équivalent au COMEX", "Programme formation digitale structuré", "> 20h formation digitale/an/collab.", "Ambassadeurs digitaux par dept.", "Index culture digitale mesuré"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "La culture digitale est le socle de toute transformation digitale réussie dans l'assurance. En UEMOA, la résistance au changement est amplifiée par le modèle de commissionnement des agents (basé sur le volume de primes, pas sur les canaux utilisés) et par la crainte de l'obsolescence chez les collaborateurs seniors. Les assureurs qui réussissent leur transformation culturelle avant leur transformation technologique réussissent 2× mieux leurs projets digitaux.",
+    "maturity_max_description": "CDO au COMEX avec budget de transformation dédié. Digital Academy interne avec > 40h de formation digitale par an par collaborateur. Ambassadeurs digitaux dans chaque département. Culture de l'expérimentation et du droit à l'erreur. Index de culture digitale mesuré et piloté trimestriellement. Modèle de commissionnement des agents adapté pour valoriser l'utilisation des outils digitaux.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune formation digitale. Résistance forte. Pas de CDO. Culture papier dominante.",
+      "score_21_to_40": "Formations ponctuelles. Sensibilisation. Référent IT mais pas CDO. Culture mixte.",
+      "score_41_to_60": "Programme formation annuel. CDO ou Directeur IT stratégique. Charte transformation.",
+      "score_61_to_80": "Digital Academy. > 20h/an. CDO COMEX. Ambassadeurs par dept. Mesure trimestrielle.",
+      "score_81_to_100": "Culture digitale institutionnalisée. Formation continue. Innovation ouverte. Digital dans KPIs performance."
+    },
+    "prompt_injection_context": "Cette compagnie d'assurance est évaluée sur sa maturité en culture digitale dans le contexte CIMA/UEMOA. Analyse la présence d'un CDO au COMEX, l'existence d'un programme de formation digitale structuré, le nombre d'heures de formation par collaborateur, les ambassadeurs digitaux et la mesure de la culture digitale.",
+    "key_questions_for_llm": [
+      "Un Chief Digital Officer (CDO) ou Directeur de la Transformation Digitale est-il nommé et présent au COMEX de direction ?",
+      "Un programme de formation digitale structuré (LMS, e-learning, ateliers) est-il déployé pour l'ensemble des collaborateurs ?",
+      "Les collaborateurs bénéficient-ils d'au moins 20 heures de formation aux outils et compétences digitales par an ?",
+      "Des ambassadeurs ou champions digitaux sont-ils nommés dans chaque département pour animer la transformation culturelle ?",
+      "La maturité de la culture digitale est-elle mesurée régulièrement (enquête, index) et utilisée pour piloter les actions de transformation ?"
+    ]
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "meta": {
+    "axis": "BUSINESS",
+    "sub_axis": "Stratégie digitale",
+    "sector": "assurance",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Insurtech comme levier de disruption — les assureurs traditionnels ripostent par des stratégies digitales formalisées",
+      "description": "Face à l'émergence des insurtechs (Casava, Yabeza, Bima), les assureurs CIMA accélèrent leurs feuilles de route digitales. La pénétration de l'assurance en Afrique subsaharienne stagne à 1,2 % du PIB — la digitalisation est le principal levier de croissance identifié par FANAF.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "35 % des assureurs CIMA disposent d'une stratégie digitale formalisée (FANAF 2024)",
+      "source": "FANAF Rapport Annuel 2024 / Swiss Re Africa Insurance Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Micro-assurance digitale — atteindre les 90 % non-assurés via le mobile",
+      "description": "Avec un taux de pénétration de l'assurance inférieur à 1,5 % en Côte d'Ivoire, la micro-assurance mobile (MTN Insurance, Orange Assurance) ouvre un marché de 15 millions de personnes non-assurées. Les produits paramétriques et les primes à partir de 500 FCFA/mois deviennent le cœur des stratégies de croissance.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "12 assureurs actifs en micro-assurance mobile en UEMOA (CIMA 2024)",
+      "source": "CIMA Rapport sur la Micro-assurance 2024 / IFC Africa Insurance Market 2024",
+      "year": "2024"
+    },
+    {
+      "title": "IA pour la tarification dynamique et la détection de fraude",
+      "description": "L'IA permet aux assureurs de personnaliser les primes en temps réel (télématique auto, données santé) et de détecter la fraude à la souscription et au sinistre. En UEMOA, la fraude représente 8-15 % des sinistres déclarés selon la CIMA.",
+      "impact_level": "Élevé",
+      "horizon": "24-36 mois",
+      "adoption_rate": "20 % des grands assureurs africains ont déployé une solution IA anti-fraude (McKinsey Africa 2024)",
+      "source": "McKinsey Africa Insurance Digital Transformation 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Chief Digital Officer dans les compagnies d'assurance CIMA — gouvernance de la transformation",
+      "description": "Les assureurs leaders en Afrique de l'Ouest nomment des CDO avec mandat COMEX pour piloter leur transformation. NSIA Group et Allianz Africa ont structuré cette gouvernance dès 2022, créant un avantage compétitif mesurable en time-to-market produits.",
+      "impact_level": "Élevé",
+      "horizon": "6-18 mois",
+      "adoption_rate": "25 % des compagnies membres FANAF ont un CDO ou équivalent (FANAF 2024)",
+      "source": "FANAF Benchmark Gouvernance Digitale 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Core Insurance System (PAS — Système de Gestion de Polices)",
+      "category": "Transformation du système d'information assurance",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA (nombreux systèmes legacy)",
+      "leading_vendors": ["Guidewire InsuranceSuite", "Duck Creek Technologies", "Majesco", "EbixExchange", "SICS (solutions africaines)"]
+    },
+    {
+      "name": "Télématique et IoT pour l'assurance auto et santé",
+      "category": "Tarification dynamique",
+      "maturity_stage": "Émergence en Afrique",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["LexisNexis Telematics", "Cambridge Mobile Telematics", "Octo Telematics", "Wejo"]
+    },
+    {
+      "name": "Plateforme de micro-assurance mobile",
+      "category": "Distribution et inclusion",
+      "maturity_stage": "Croissance en Afrique",
+      "adoption_in_sector": "Moyenne — MTN, Orange déjà actifs",
+      "leading_vendors": ["MicroEnsure", "BIMA", "Turaco", "MTN Insurance", "Orange Assurance"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "NSIA Groupe",
+        "country": "Côte d'Ivoire / Pan-UEMOA",
+        "key_practice": "Stratégie digitale 2022-2025 avec 3 axes : digitalisation de la souscription, self-service sinistres, micro-assurance mobile. CDO nommé en 2022. Application NSIA Connect avec 150 000 utilisateurs actifs.",
+        "differentiator": "Premier assureur ivoirien à avoir intégré un CDO au COMEX et à avoir lancé un produit 100 % digital (souscription, paiement, sinistre) en 2023",
+        "source": "NSIA Groupe Rapport Annuel 2023"
+      },
+      {
+        "organisation": "GA Assurances (Groupama Africa)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Plateforme e-assurance avec souscription auto en ligne, partenariat avec les concessionnaires digitaux, API ouverte aux courtiers.",
+        "differentiator": "Intégration avec les plateformes de vente automobile digitales — 30 % des nouvelles polices auto souscrites en ligne en 2023",
+        "source": "GA Assurances Rapport Activité 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Sanlam Pan Africa",
+        "country": "Afrique du Sud / Pan-Afrique",
+        "key_practice": "Stratégie 'Digital at Scale' — plateforme unifiée dans 10 pays africains, IA pour tarification vie, partenariat avec MTN pour distribution mobile",
+        "differentiator": "Sanlam a réduit son délai de souscription de 15 jours à 2 heures grâce à l'e-KYC et la signature électronique — référence en Afrique subsaharienne",
+        "source": "Sanlam Annual Report 2023"
+      },
+      {
+        "organisation": "Allianz Africa",
+        "country": "Pan-Afrique",
+        "key_practice": "Programme Allianz Digital Factory Africa — équipes agiles dédiées, partenariats insurtechs, lancement Allianz Direct Afrique",
+        "differentiator": "Allianz a investi 50 M$ dans sa transformation digitale africaine 2021-2024, avec des résultats mesurables : coût de souscription réduit de 40 %",
+        "source": "Allianz Annual Report 2023 / Allianz Africa Press Releases"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Lemonade (USA)",
+        "country": "USA",
+        "key_practice": "Assureur 100 % IA-first — souscription en 90 secondes, règlement sinistres en 3 secondes via IA, NPS 70+, modèle B-Corp",
+        "differentiator": "Lemonade a prouvé qu'une compagnie d'assurance peut fonctionner sans agents humains pour 80 % des transactions — référence mondiale en disruption insurtech",
+        "source": "Lemonade Annual Report 2023 / Forbes Fintech 2024"
+      },
+      {
+        "organisation": "AXA Group",
+        "country": "France / Mondial",
+        "key_practice": "Ambition Kairos — investissement de 3 Mds€ en transformation digitale 2021-2025, IA pour prévention des risques, plateforme AXA Direct",
+        "differentiator": "AXA génère 35 % de ses nouvelles polices via les canaux digitaux en 2023, avec un NPS digital de +52 vs +21 pour les canaux traditionnels",
+        "source": "AXA Annual Report 2023 / AXA Investor Day 2023"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Aucune stratégie digitale. Les produits sont vendus uniquement via des agents et courtiers physiques. Aucun produit digital. Systèmes legacy non connectés. Direction sans vision digitale.",
+    "level_2_developing": "Quelques initiatives digitales isolées (site web basique, formulaires PDF). Pas de CDO. Budget digital < 2 % de l'OPEX. Pas de feuille de route formalisée.",
+    "level_3_defined": "Stratégie digitale documentée avec 2-3 axes prioritaires. CDO ou responsable digital désigné. Budget dédié. Premiers produits en ligne (devis, souscription partielle). KPIs digitaux définis.",
+    "level_4_managed": "CDO au COMEX. Feuille de route sur 3 ans. Budget digital > 8 % OPEX. Souscription 100 % digitale pour 2-3 produits phares. Partenariats insurtechs actifs. OKRs trimestriels.",
+    "level_5_optimizing": "Stratégie digitale intégrée au plan d'entreprise. Micro-assurance mobile active. IA déployée en tarification et anti-fraude. > 30 % des polices souscrites en ligne. Écosystème partenaires API ouvert."
+  },
+
+  "regulations": [
+    {
+      "name": "Code des Assurances des États membres de la CIMA",
+      "issuing_body": "CIMA (Conférence Interafricaine des Marchés d'Assurance)",
+      "scope": "14 États membres dont Côte d'Ivoire, Sénégal, Burkina Faso, Mali, Bénin, Togo, Niger, Cameroun",
+      "key_requirement": "Agrément obligatoire, provisionnement technique réglementé, délais de règlement sinistres imposés (30 jours pour IARD). La digitalisation des processus est autorisée sous contrôle CIMA.",
+      "compliance_deadline": "En vigueur — révision en cours pour intégrer le digital",
+      "source_url": "https://www.cima-afrique.org"
+    },
+    {
+      "name": "Instruction CIMA sur la micro-assurance",
+      "issuing_body": "CIMA",
+      "scope": "Produits d'assurance à primes inférieures à un seuil CIMA — distribution mobile autorisée",
+      "key_requirement": "Produits simplifiés, prime mensuelle plafonnée, distribution via opérateurs mobile money autorisée, agrément spécifique micro-assureur",
+      "compliance_deadline": "En vigueur depuis 2012, renforcé en 2019",
+      "source_url": "https://www.cima-afrique.org"
+    },
+    {
+      "name": "Loi n° 2013-546 du 30 juillet 2013 — Transactions électroniques (Côte d'Ivoire)",
+      "issuing_body": "Gouvernement de Côte d'Ivoire / ARTCI",
+      "scope": "Toutes les transactions digitales en Côte d'Ivoire, dont la souscription d'assurance en ligne",
+      "key_requirement": "Signature électronique reconnue comme équivalente à la signature manuscrite pour les contrats d'assurance. Valeur probatoire des documents dématérialisés.",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.artci.ci"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Résistance des réseaux d'agents et courtiers à la digitalisation",
+      "description": "Les réseaux de distribution traditionnels (agents généraux, courtiers) représentent 70-80 % du chiffre d'affaires des assureurs CIMA. La digitalisation directe peut créer des conflits de canal et une résistance organisationnelle forte.",
+      "severity": "Élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Stratégie de digitalisation des agents (outils digitaux pour agents) avant le direct-to-consumer, formation et incentives digitaux pour les intermédiaires."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Marché non-assuré de 15 millions de personnes en Côte d'Ivoire",
+      "description": "Avec un taux de pénétration de 1,4 % seulement, la Côte d'Ivoire a un potentiel de marché considérable. La micro-assurance mobile (primes dès 500 FCFA/mois) peut tripler la base de clients assurés d'un assureur en 3 ans.",
+      "impact_level": "Très élevé",
+      "time_to_value": "18-36 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Sanlam",
+      "target": "SAHAM Group (30 pays africains)",
+      "amount": "1,05 Mds$",
+      "date": "2018",
+      "strategic_rationale": "Consolidation panafricaine — Sanlam devient le premier assureur africain par actifs",
+      "source": "Sanlam Press Release 2018"
+    },
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Turaco (insurtech Africa)",
+      "target": "Extension micro-assurance",
+      "amount": "10 M$",
+      "date": "2023",
+      "strategic_rationale": "Micro-assurance santé et vie via mobile money — 500 000 clients dans 3 pays africains",
+      "source": "Turaco Press Release 2023"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Lemonade — L'assureur IA-first qui règle les sinistres en 3 secondes",
+    "pays": "USA (référence mondiale insurtech)",
+    "technologie": "IA, NLP, chatbot Maya — souscription et sinistres 100 % automatisés",
+    "description": "Lemonade a lancé en 2016 un modèle d'assurance radicalement différent : souscription en 90 secondes via chatbot, règlement de sinistres en 3 secondes par IA (record mondial), prime à partir de 5$/mois. L'IA 'Jim' analyse les vidéos de sinistres, croise les données et déclenche le paiement sans intervention humaine pour 30 % des cas. En 2023, Lemonade gère 1,8 million de clients avec un ratio sinistres-primes de 64 % (vs 73 % pour l'industrie). Son NPS de +72 est le plus élevé du secteur assurance. Leçon pour les assureurs UEMOA : même avec des moyens limités, une interface digitale simple et un règlement rapide des sinistres transforme radicalement l'expérience client.",
+    "resultats": "1,8 M clients · Sinistre réglé en 3 secondes · NPS +72 · Ratio S/P 64 % · 90 secondes pour souscrire · Modèle B-Corp",
+    "source": "Lemonade Annual Report 2023 / Forbes Insurtech 2024",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité stratégie digitale — benchmark assureurs CIMA/UEMOA",
+    "colonnes": ["Organisation", "Stratégie digitale formalisée", "CDO au COMEX", "Produits 100 % digitaux", "Micro-assurance mobile", "Partenariat insurtech actif"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["✓", "Partiel", "Partiel", "✗", "Partiel"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Le secteur assurance UEMOA est caractérisé par une très faible pénétration (1-1,5 % du PIB vs 7-8 % en Europe) et une domination des réseaux traditionnels d'agents. La digitalisation est à la fois une opportunité de croissance (atteindre les 90 % non-assurés) et une nécessité compétitive face aux insurtechs mobiles. Les assureurs sans stratégie digitale formalisée perdent déjà des parts de marché sur le segment jeune urbain au profit des solutions mobile-first.",
+    "maturity_max_description": "Stratégie digitale intégrée au plan d'entreprise avec CDO au COMEX. Portefeuille de micro-assurance mobile actif (partenariat opérateur télécom). Souscription 100 % digitale pour les produits phares (auto, santé, vie). IA déployée en anti-fraude et tarification. > 30 % des nouvelles polices souscrites en ligne. Écosystème d'API ouvertes aux partenaires (courtiers, bancassurance, insurtechs).",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune stratégie digitale. Distribution 100 % physique. Aucun produit digital. Systèmes legacy fermés.",
+      "score_21_to_40": "Site web présent mais sans souscription en ligne. Pas de CDO. Quelques formulaires PDF. Pas de partenariat digital.",
+      "score_41_to_60": "Stratégie digitale documentée. Devis en ligne. 1-2 produits souscriptibles en ligne. CDO nommé. Budget digital alloué.",
+      "score_61_to_80": "CDO au COMEX. Souscription digitale pour produits phares. Micro-assurance mobile pilote. Partenariat insurtech actif. KPIs digitaux trimestriels.",
+      "score_81_to_100": "> 30 % polices en ligne. Micro-assurance mobile à grande échelle. IA anti-fraude et tarification. API ouvertes. NPS digital > 50."
+    },
+    "prompt_injection_context": "Cette compagnie d'assurance est évaluée sur sa maturité de stratégie digitale dans le contexte CIMA/UEMOA. Analyse son niveau d'ambition digitale, la présence d'un CDO, le degré de digitalisation de la souscription, l'existence de produits de micro-assurance mobile, et les partenariats avec les insurtechs.",
+    "key_questions_for_llm": [
+      "La compagnie dispose-t-elle d'une stratégie digitale formalisée avec des objectifs mesurables sur 3 ans ?",
+      "Un CDO ou directeur digital siège-t-il au comité de direction avec un budget dédié ?",
+      "Les produits phares (auto, santé, vie) peuvent-ils être souscrits intégralement en ligne sans agent ?",
+      "Un produit de micro-assurance mobile est-il disponible en partenariat avec un opérateur télécom ou mobile money ?",
+      "La compagnie a-t-elle des partenariats actifs avec des insurtechs ou des plateformes digitales de distribution ?"
+    ]
+  }
+}

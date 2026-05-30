@@ -1,0 +1,284 @@
+{
+  "secteur": "industrie",
+  "axe": "BUSINESS",
+  "sous_axe": "orientation_client",
+  "label": "Orientation client dans l'industrie",
+  "description": "Capacité des entreprises industrielles à intégrer la voix du client dans leurs processus de production et d'innovation : portails B2B, configurateurs de commandes, traçabilité produit partagée avec les clients, service après-vente digitalisé, et co-développement produit avec les donneurs d'ordre, dans le contexte industriel de Côte d'Ivoire.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Industries CI : principalement B2B — clients sont donneurs d'ordre (multinationales cacao, distributeurs UEMOA, État CI)",
+      "Donneurs d'ordre multinationaux (Barry Callebaut, Cargill, Nestlé CI) : exigent portails fournisseurs numériques, EDI, traçabilité lot",
+      "Exportateurs CI : APEX-CI exige documents d'exportation numériques — certificats origine, phytosanitaires, CoA (Certificate of Analysis)",
+      "Industrie agroalimentaire CI : GMS (Grande et Moyenne Surface) Abidjan (Carrefour CI, Sococé, Prosuma) — EDI commandes, délais livraison garantis",
+      "PMI CI : relation client encore informelle — commandes par téléphone, bon de commande papier, factures Word",
+      "Zones Export CI : ZES Jacqueville — clients internationaux exigent conformité ISO et traçabilité digitale dès l'appel d'offres"
+    ],
+    "acteurs_cles": [
+      "APEX-CI — Agence de Promotion des Exportations : portail export CI, certificats numériques, traçabilité",
+      "CCI-CI — Chambre de Commerce et d'Industrie CI : B2B digital, dématérialisation commerce",
+      "Barry Callebaut / Cargill CI — donneurs d'ordre cacao CI : exigences traçabilité EUDR fournisseurs",
+      "Carrefour CI / Prosuma CI — GMS : EDI fournisseurs, délais livraison, qualité numérique",
+      "BCEAO — réglementation facturation électronique UEMOA (en cours)",
+      "DGI CI — e-facture CI : loi 2022-974 facturation électronique obligatoire industries CI"
+    ],
+    "reglementation_locale": [
+      "DGI CI Loi 2022-974 : facturation électronique obligatoire CI pour entreprises CA > 100 M FCFA — échéance progressive",
+      "APEX-CI : certificats phytosanitaires et d'origine numériques — obligatoires exportations produits CI",
+      "EUDR Règlement EU 2023/1115 : traçabilité géospatiale cacao CI — donneurs d'ordre multinationales l'imposent",
+      "ISO 9001:2015 : exigences revue client, traçabilité, mesure satisfaction — auditées par donneurs d'ordre",
+      "Loi CI 2017-771 : valeur juridique documents commerciaux numériques CI — contrats, bons de commande",
+      "UEMOA BCEAO : projet facture électronique UEMOA — harmonisation en cours"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Relation client 100% informelle. Commandes par téléphone ou visite physique. Factures Word imprimées. Aucun portail client ni espace partenaire. Pas de suivi satisfaction ni de gestion des réclamations.",
+      "indicateurs": [
+        "Commandes : téléphone ou visite — aucun outil numérique",
+        "Factures : Word ou Excel imprimées — envoi courrier ou WhatsApp",
+        "0 portail client ni espace partenaire numérique",
+        "Réclamations : verbales — aucun suivi formalisé",
+        "0 indicateur satisfaction client suivi"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Email utilisé pour commandes et factures. Quelques clients sur portail fournisseur (donneur d'ordre qui impose). Satisfaction évaluée annuellement par questionnaire papier. Réclamations gérées par email sans ticketing.",
+      "indicateurs": [
+        "Commandes par email — BdC PDF joint",
+        "Quelques clients sur portail donneur d'ordre imposé (Barry Callebaut, Cargill CI)",
+        "Satisfaction client : enquête annuelle papier ou email — non systématique",
+        "Réclamations email — délai traitement non mesuré",
+        "Factures PDF email — aucune facture électronique DGI CI"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Portail B2B pour commandes et suivi livraisons. Factures électroniques DGI CI conformes. Traçabilité lot partagée avec clients clés. Ticketing réclamations avec SLA. NPS ou CSAT mesuré trimestriellement.",
+      "indicateurs": [
+        "Portail B2B : 60%+ commandes en ligne, suivi statut livraison",
+        "Factures électroniques DGI CI conformes — Loi 2022-974",
+        "Traçabilité lot numérique partagée avec 3+ clients donneurs d'ordre",
+        "Ticketing réclamations : SLA 48h, taux résolution J+5 > 80%",
+        "NPS ou CSAT mesuré trimestriellement — score > 40/100"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "Portail B2B self-service complet : commandes, suivi, CoA, traçabilité EUDR. EDI avec donneurs d'ordre GMS et multinationales. Co-développement produit via espace projet client. NPS > 60. Satisfaction intégrée processus qualité ISO 9001.",
+      "indicateurs": [
+        "EDI intégré ERP avec 3+ donneurs d'ordre (Barry Callebaut, Carrefour CI) : commandes auto",
+        "CoA (Certificate of Analysis) disponible en ligne par lot — accès client immédiat",
+        "Traçabilité EUDR partagée : portail client avec géolocalisation parcelles fournisseurs",
+        "Co-développement produit : espace projet client partagé (Teams ou Procore)",
+        "NPS > 60, CSAT > 85% — intégré revue de direction ISO 9001"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Expérience client industrielle de niveau international. Portail client IA : configurateur produit, prédiction livraison, alerte proactive qualité. Plateforme open data traçabilité EUDR. NPS > 75. Référence orientation client B2B industriel CI.",
+      "indicateurs": [
+        "Configurateur produit en ligne : spécifications techniques, délai livraison IA — devis < 2h",
+        "Alerte proactive qualité : notification client si lot hors-spec avant livraison",
+        "Open data EUDR : portail public traçabilité cacao CI — certification internationale",
+        "NPS > 75 — benchmark industries alimentaires internationales",
+        "Référence orientation client B2B CI — publication APEX-CI / CCI-CI"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Comment vos clients passent-ils leurs commandes auprès de votre entreprise ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Téléphone ou visite physique uniquement"},
+        {"valeur": 2, "label": "Email avec bon de commande PDF"},
+        {"valeur": 3, "label": "Portail B2B en ligne : 60%+ commandes numériques"},
+        {"valeur": 4, "label": "EDI intégré à votre ERP avec les donneurs d'ordre clés"},
+        {"valeur": 5, "label": "Configurateur produit IA en ligne — devis + commande < 2h"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Partagez-vous la traçabilité de vos produits (numéro de lot, CoA) avec vos clients numériquement ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — aucune traçabilité partagée"},
+        {"valeur": 2, "label": "CoA envoyé par email sur demande — délai 2-5 jours"},
+        {"valeur": 3, "label": "Traçabilité lot numérique partagée avec clients clés en ligne"},
+        {"valeur": 4, "label": "Portail client : CoA et traçabilité EUDR disponibles en temps réel"},
+        {"valeur": 5, "label": "Open data EUDR : traçabilité géospatiale publique certifiée internationale"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Êtes-vous conformes à la facturation électronique DGI CI (Loi 2022-974) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — factures papier ou Word uniquement"},
+        {"valeur": 2, "label": "Factures PDF email — pas encore conformes DGI CI"},
+        {"valeur": 3, "label": "Factures électroniques DGI CI conformes — déployées"},
+        {"valeur": 4, "label": "e-facture intégrée ERP + EDI donneurs d'ordre — 0 papier"},
+        {"valeur": 5, "label": "Facturation électronique UEMOA + EDI international + open data"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Mesurez-vous la satisfaction de vos clients industriels (NPS, CSAT) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — aucune mesure satisfaction"},
+        {"valeur": 2, "label": "Enquête annuelle informelle — résultats non exploités"},
+        {"valeur": 3, "label": "NPS ou CSAT trimestriel — score > 40, intégré revue direction"},
+        {"valeur": 4, "label": "NPS > 60, CSAT > 85% — intégré ISO 9001 et KPIs direction"},
+        {"valeur": 5, "label": "NPS > 75 — benchmark international, alerte proactive insatisfaction"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "Portail B2B commandes",
+      "Traçabilité lot partagée",
+      "Facturation électronique DGI CI",
+      "EDI donneurs d'ordre",
+      "NPS/CSAT mesuré"
+    ],
+    "lignes": [
+      {
+        "organisation": "PMI CI (< 50 employés)",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "Commandes téléphone, 0 traçabilité, factures papier, 0 EDI, 0 satisfaction mesurée"
+      },
+      {
+        "organisation": "Industrie moyenne CI (50-200 employés)",
+        "scores": [2, 2, 2, 1, 2],
+        "note_globale": 2,
+        "commentaire": "Email BdC, CoA sur demande, PDF email, portail donneur d'ordre imposé, enquête annuelle"
+      },
+      {
+        "organisation": "SUCAF CI",
+        "scores": [3, 3, 3, 3, 3],
+        "note_globale": 3,
+        "commentaire": "Portail distributeurs GMS CI, traçabilité lot, e-facture CI, EDI Carrefour CI partiel"
+      },
+      {
+        "organisation": "SIFCA CI",
+        "scores": [5, 5, 4, 5, 4],
+        "note_globale": 5,
+        "commentaire": "Portail B2B full, EUDR traçabilité partagée, e-facture intégrée, EDI Barry Callebaut/Cargill, NPS > 65"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "APEX-CI — traçabilité export et portails numériques industries CI",
+      "part_de_marche_estimee": "Plateforme export référence CI",
+      "forces": ["Certificats numériques export", "Guichet unique exportateurs CI", "Conformité EUDR cacao CI", "Formation exportateurs"],
+      "faiblesses": ["Orienté export — pas de portail B2B domestique", "Adoption lente PMI CI"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "Tradeling Africa (marketplace B2B industrielle Afrique)",
+      "part_de_marche_estimee": "Marketplace B2B industrielle Afrique émergente",
+      "forces": ["Commandes B2B en ligne", "EDI intégrable", "Réseau acheteurs UEMOA", "Traçabilité lot"],
+      "faiblesses": ["Présence CI limitée", "Adoption industriels CI encore faible"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "SAP Business Network (Ariba) — réseau fournisseurs B2B",
+      "part_de_marche_estimee": "Leader mondial réseau fournisseurs B2B",
+      "forces": ["EDI universel avec donneurs d'ordre internationaux", "Catalogue produits", "Portail fournisseur self-service", "Intégration SAP ERP native"],
+      "faiblesses": ["Coût élevé (15+ M FCFA/an)", "Complexité implémentation PMI CI", "En anglais"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Odoo CI — portail B2B client et e-commerce industriel",
+      "usage": "Portail client commandes, suivi livraisons, CoA téléchargeable, réclamations ticketing",
+      "niveau_cible": "3+",
+      "cout_estime": "800 000–2 500 000 FCFA/an (partenaires Odoo CI Abidjan)",
+      "disponibilite_ci": "International — partenaires Odoo CI disponibles"
+    },
+    {
+      "nom": "DGI CI e-facture — facturation électronique CI",
+      "usage": "Conformité Loi 2022-974 DGI CI : factures électroniques intégrées ERP, archivage fiscal",
+      "niveau_cible": "3+",
+      "cout_estime": "Variable selon éditeur certifié DGI CI (intégration ERP : 500 000–2 000 000 FCFA)",
+      "disponibilite_ci": "Natif CI — liste éditeurs certifiés DGI CI disponible"
+    },
+    {
+      "nom": "APEX-CI portail exportateurs — traçabilité et certificats",
+      "usage": "Certificats phytosanitaires et origine numériques, traçabilité lots export CI",
+      "niveau_cible": "3+",
+      "cout_estime": "Cotisation APEX-CI exportateurs CI",
+      "disponibilite_ci": "Natif CI — APEX-CI Abidjan Plateau"
+    },
+    {
+      "nom": "EDI (EDIFACT / XML) — intégration donneurs d'ordre",
+      "usage": "Commandes automatiques Barry Callebaut, Cargill, GMS CI — intégration ERP sans ressaisie",
+      "niveau_cible": "4",
+      "cout_estime": "1 500 000–4 000 000 FCFA implémentation EDI (prestataire CI spécialisé)",
+      "disponibilite_ci": "International — intégrateurs EDI disponibles CI"
+    },
+    {
+      "nom": "Freshdesk / Zoho Desk CI — ticketing réclamations clients",
+      "usage": "Gestion réclamations clients industriels : SLA, escalade, reporting satisfaction",
+      "niveau_cible": "3+",
+      "cout_estime": "100 000–400 000 FCFA/an (SaaS, paiement Mobile Money CI possible)",
+      "disponibilite_ci": "International — cloud SaaS accessible CI"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "Société Ivoirienne de Conditionnement (SIC CI) — portail B2B clients GMS Abidjan",
+    "organisation": "SIC CI (Société Ivoirienne de Conditionnement, Abidjan — industrie emballage et conditionnement alimentaire CI)",
+    "contexte": "SIC CI : fournisseur emballages (cartons, sachets, films plastique) pour industries alimentaires CI (SUCAF, Nestlé CI, Unilever CI). Commandes par téléphone et bon de commande papier. 38 clients actifs dont 12 GMS Abidjan. Problème : 12% des commandes avec erreurs (quantités, délais), délai livraison imprévisible = rupture stocks clients.",
+    "probleme": "Erreurs commandes 12% → litiges et retours → coût estimé 85 M FCFA/an. Délai moyen confirmation commande : 48h. CoA : envoyé par email sur demande, délai 3-5 jours. Facturation : Word imprimé → délai paiement 45-60 jours. DGI CI : non-conformité facturation électronique (amende potentielle).",
+    "solution_deployee": "Portail B2B Odoo CI : commandes en ligne 24h/24, catalogue produits avec spécifications techniques, suivi statut livraison temps réel. CoA par lot disponible en ligne immédiatement. e-facture DGI CI intégrée Odoo → envoi automatique. Ticketing réclamations Freshdesk CI : SLA 24h.",
+    "resultats": "Commandes en ligne : 0% → 68% en 6 mois. Erreurs commandes : 12% → 1,8% (-85%). Délai confirmation commande : 48h → 2h (-96%). CoA : délai 3-5 jours → instantané (portail). Délai paiement : 45-60j → 28j (e-facture DGI CI intégrée). Litiges : -72%. NPS clients GMS : 22 → 58/100. DGI CI : conformité Loi 2022-974 atteinte — 0 risque amende. Coût portail B2B Odoo CI : 1,2 M FCFA/an — ROI positif dès mois 4.",
+    "enseignements": [
+      "Le portail B2B industriel CI n'est pas un luxe mais une exigence des GMS et donneurs d'ordre — sans lui, les erreurs de commandes coûtent plus que le portail",
+      "La conformité DGI CI e-facture est un déclencheur efficace : la contrainte légale force la digitalisation de la relation client tout en réduisant les délais de paiement",
+      "La disponibilité immédiate du CoA en ligne a supprimé 3-5 jours de délai et 90% des emails de relance — un gain majeur pour les clients sous certification ISO"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "portail B2B industriel", "EDI commandes", "traçabilité lot partagée", "CoA en ligne",
+      "EUDR traçabilité cacao CI", "APEX-CI export", "e-facture DGI CI", "Loi 2022-974",
+      "NPS client industriel", "CSAT B2B", "donneur d'ordre multinationale CI",
+      "Barry Callebaut", "Cargill CI", "GMS Abidjan", "ticketing réclamations clients"
+    ],
+    "signaux_niveau_avance": [
+      "EDI intégré ERP avec donneurs d'ordre clés",
+      "CoA et traçabilité lot disponibles en ligne temps réel",
+      "Factures électroniques DGI CI conformes",
+      "NPS > 60 mesuré trimestriellement",
+      "Traçabilité EUDR partagée avec acheteurs cacao CI"
+    ],
+    "pieges_frequents": [
+      "Portail imposé par donneur d'ordre ≠ stratégie orientation client — utiliser le portail d'un client n'est pas une compétence propre",
+      "CoA envoyé par email ≠ traçabilité numérique — c'est du papier numérisé, pas de la traçabilité",
+      "Factures PDF email ≠ factures électroniques DGI CI — la loi exige un format certifié, pas un PDF",
+      "Satisfaction mesurée = enquête annuelle mise au placard — sans KPI trimestriel et action, c'est décoratif"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Commandes téléphone, factures papier, 0 traçabilité partagée, 0 portail, 0 satisfaction mesurée.",
+      "score_21_to_40": "Email BdC, CoA sur demande, PDF email, portail donneur imposé, enquête annuelle informelle.",
+      "score_41_to_60": "Portail B2B 60%+ commandes, e-facture DGI CI, traçabilité lot partagée, ticketing SLA, NPS > 40.",
+      "score_61_to_80": "EDI ERP donneurs d'ordre, CoA temps réel, EUDR portail partagé, co-développement digital, NPS > 60.",
+      "score_81_to_100": "Configurateur IA, open data EUDR certifié, alerte proactive qualité, NPS > 75, référence B2B CI."
+    }
+  }
+}

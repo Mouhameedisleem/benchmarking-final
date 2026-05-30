@@ -1,0 +1,245 @@
+{
+  "meta": {
+    "axis": "IT_DATA",
+    "sub_axis": "Socle IT",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Modernisation du core banking — migration vers Temenos T24 nouvelle génération ou SaaS",
+      "description": "Les banques UEMOA opèrent majoritairement sur Temenos T24 (version 2010-2016) ou FLEXCUBE, des systèmes vieillissants avec des coûts de maintenance élevés. La migration vers Temenos Infinity (SaaS) ou Mambu (cloud-native) est la priorité SI des banques africaines leaders pour 2025-2030.",
+      "impact_level": "Très élevé",
+      "horizon": "36-60 mois",
+      "adoption_rate": "20 % des banques africaines ont démarré une migration core banking (Fintech Africa 2024)",
+      "source": "Fintech Africa Core Banking Migration Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Architecture microservices bancaire — découplage du monolithe legacy",
+      "description": "Plutôt qu'une migration core banking complète (risquée et coûteuse), les banques adoptent une stratégie de découplage progressif : extraire les fonctionnalités les plus critiques (paiements, onboarding) du monolithe via des microservices, tout en maintenant le core banking legacy en place.",
+      "impact_level": "Élevé",
+      "horizon": "24-48 mois",
+      "adoption_rate": "15 % des banques africaines ont adopté une architecture microservices partielle (Gartner Africa 2024)",
+      "source": "Gartner Banking Architecture Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Cybersécurité du socle IT — PCI-DSS v4.0 et SWIFT Customer Security Programme",
+      "description": "Les banques UEMOA connectées au réseau SWIFT (paiements internationaux) doivent se conformer au Customer Security Programme (CSP) SWIFT avec certification annuelle obligatoire depuis 2023. PCI-DSS v4.0 est obligatoire depuis mars 2025 pour les banques émettant des cartes.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "100 % des banques UEMOA connectées à SWIFT soumises au CSP SWIFT",
+      "source": "SWIFT CSP Compliance Report 2024 / PCI Security Standards Council",
+      "year": "2024"
+    },
+    {
+      "title": "DevSecOps bancaire — sécurité intégrée dans le cycle de développement",
+      "description": "Les banques qui développent des applications mobiles et des APIs doivent intégrer la sécurité dès la conception (Security by Design) plutôt qu'en phase de tests. Le DevSecOps réduit les vulnérabilités de 60 % et accélère les mises en production sécurisées.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "10 % des banques africaines ont adopté le DevSecOps (Thoughtworks Africa 2024)",
+      "source": "Thoughtworks DevSecOps Banking Africa 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Core Banking System",
+      "category": "Plateforme centrale bancaire",
+      "maturity_stage": "Mature (modernisation en cours)",
+      "adoption_in_sector": "Temenos T24 dominant en UEMOA",
+      "leading_vendors": ["Temenos T24 / Infinity (dominant UEMOA)", "Oracle FLEXCUBE Universal Banking", "Finastra Fusion Essence", "Mambu (cloud-native)", "Thought Machine Vault (SaaS)"]
+    },
+    {
+      "name": "Architecture microservices / API Gateway",
+      "category": "Modernisation progressive SI bancaire",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Kong API Gateway", "AWS API Gateway + Lambda", "Azure API Management", "MuleSoft Anypoint", "Red Hat OpenShift (microservices)"]
+    },
+    {
+      "name": "Plateforme DevSecOps",
+      "category": "Développement sécurisé continu",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["GitLab CI/CD + Security", "GitHub Advanced Security", "SonarQube (SAST)", "Veracode", "Snyk (Open Source Security)"]
+    },
+    {
+      "name": "Monitoring et Observabilité SI",
+      "category": "Supervision de l'infrastructure bancaire",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible en UEMOA",
+      "leading_vendors": ["Datadog for Banking", "Dynatrace Financial Services", "New Relic", "Elastic Observability", "Grafana + Prometheus"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "BICICI (BNP Paribas CI)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Core banking Temenos T24 maintenu aux dernières versions via le programme BNP Paribas groupe, architecture mutualisée BNP Paribas Africa, conformité SWIFT CSP certifiée annuellement",
+        "differentiator": "Adossée à l'infrastructure IT BNP Paribas mondiale — mise à jour core banking synchronisée avec le groupe, standards cybersécurité DORA applicables en CI",
+        "source": "BICICI Rapport Annuel 2023 / BNP Paribas Technology Report"
+      },
+      {
+        "organisation": "Société Générale Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Infrastructure IT mutualisée SG Afrique (Casablanca data center), Temenos T24 maintenu, conformité SWIFT CSP et PCI-DSS, NOC centralisé SG pour la CI",
+        "differentiator": "Seule banque ivoirienne avec un NOC (Network Operations Center) centralisé SG Group supervisants 24/7 l'infrastructure SI — incidents détectés en < 5 minutes",
+        "source": "SGCI Rapport Annuel 2023 / SG Africa Technology Report"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Ecobank Technology Centre (ETC) Accra : infrastructure centralisée gérant 33 filiales, Temenos T24 migrant vers SaaS, conformité SWIFT CSP et PCI-DSS certifiées groupe",
+        "differentiator": "Seule banque africaine avec un Technology Centre centralisé gérant 100 % de l'infrastructure de 33 pays — économies d'échelle et standardisation uniques dans le secteur",
+        "source": "Ecobank Technology Report 2023 / Ecobank Annual Report 2023"
+      },
+      {
+        "organisation": "Attijariwafa Bank",
+        "country": "Maroc / Afrique de l'Ouest",
+        "key_practice": "Migration core banking Temenos vers SaaS en cours, architecture microservices déployée pour les canaux digitaux, conformité SWIFT CSP et PCI-DSS dans 24 filiales",
+        "differentiator": "Premier groupe bancaire africain francophone à déployer Azure OpenAI Services pour les modèles de risque crédit — intégration IA dans le socle IT",
+        "source": "Attijariwafa Bank Digital Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "DBS Bank",
+        "country": "Singapour",
+        "key_practice": "99 % des workloads cloud, architecture microservices complète, 500+ déploiements en production/semaine, DevSecOps intégré dans 100 % des équipes de développement",
+        "differentiator": "DBS a réalisé en 10 ans ce que personne ne pensait possible pour une grande banque : passer d'un monolithe legacy à une architecture cloud-native microservices avec 500+ déploiements/semaine",
+        "source": "DBS Annual Report 2023 / DBS Technology Strategy 2023"
+      },
+      {
+        "organisation": "Goldman Sachs",
+        "country": "USA",
+        "key_practice": "GS Engineering Platform : plateforme open-source interne gérant 1 million de lignes de code/semaine, 10 000 développeurs, architecture microservices native depuis 2018",
+        "differentiator": "Goldman Sachs s'est déclaré entreprise technologique en 2020 : ses 10 000 développeurs en font l'une des plus grandes organisations tech au monde — modèle de référence en architecture SI financière",
+        "source": "Goldman Sachs Annual Report 2023 / Goldman Sachs Engineering Blog"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Core banking legacy vieillissant (version > 10 ans). Pas de monitoring SI. Non-conformité SWIFT CSP. PCI-DSS non certifié. Infrastructure non documentée. Incidents fréquents et longs à résoudre.",
+    "level_2_developing": "Core banking maintenu (versions récentes partielles). Monitoring basique. SWIFT CSP partiellement conforme. PCI-DSS en cours. Pas de DevSecOps. Incidents traités réactivement.",
+    "level_3_defined": "Core banking à jour (< 5 ans). Monitoring NOC 8/5. Conformité SWIFT CSP certifiée. PCI-DSS v4.0 conforme. Gestion des patchs structurée. Architecture documentée.",
+    "level_4_managed": "Monitoring NOC 24/7. SWIFT CSP + PCI-DSS certifiés. Premiers microservices déployés pour les canaux digitaux. DevSecOps initié. SLA mesurés. Architecture SI documentée et gouvernée.",
+    "level_5_optimizing": "Architecture microservices (canaux digitaux découplés du core banking). DevSecOps 100 % des équipes. Monitoring proactif AIOps. Migration core banking SaaS en cours. 99,99 % disponibilité cible."
+  },
+
+  "regulations": [
+    {
+      "name": "SWIFT Customer Security Programme (CSP)",
+      "issuing_body": "SWIFT",
+      "scope": "Toutes les banques connectées au réseau SWIFT",
+      "key_requirement": "Certification annuelle SWIFT CSP (auto-évaluation + attestation), 31 contrôles de sécurité obligatoires et 11 conseillés, mise à jour annuelle du CSCF (Customer Security Controls Framework)",
+      "compliance_deadline": "Certification annuelle — dernier délai décembre chaque année",
+      "source_url": "https://www.swift.com/myswift/customer-security-programme-csp"
+    },
+    {
+      "name": "PCI-DSS v4.0 — Sécurité des données des titulaires de cartes",
+      "issuing_body": "PCI Security Standards Council",
+      "scope": "Banques émettant, acquérant ou traitant des transactions par cartes de paiement",
+      "key_requirement": "12 exigences de sécurité organisées en 6 objectifs, certification annuelle par un QSA (Qualified Security Assessor), délai de conformité v4.0 : mars 2025",
+      "compliance_deadline": "Mars 2025 (v4.0 obligatoire)",
+      "source_url": "https://www.pcisecuritystandards.org"
+    },
+    {
+      "name": "Instruction BCEAO sur la sécurité et la résilience des systèmes d'information",
+      "issuing_body": "BCEAO",
+      "scope": "Toutes les banques UEMOA",
+      "key_requirement": "Documentation de l'architecture SI, plan de gestion des vulnérabilités, tests de pénétration annuels, rapport incident cybersécurité dans les 24h à la BCEAO",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Core banking legacy non maintenu — vulnérabilités critiques et obsolescence fonctionnelle",
+      "description": "Un core banking en version 2012-2016 non mis à jour depuis 3+ ans cumule des vulnérabilités connues (CVE non patchées) et des limitations fonctionnelles qui empêchent l'intégration des nouvelles APIs et des canaux digitaux.",
+      "severity": "Très élevé",
+      "likelihood": "Élevée en UEMOA",
+      "mitigation": "Planifier immédiatement la mise à jour vers la dernière version du core banking existant (avant d'envisager une migration complète), identifier et patcher toutes les CVE critiques dans les 30 jours."
+    },
+    {
+      "title": "Non-conformité SWIFT CSP — suspension de l'accès au réseau SWIFT",
+      "description": "Une banque non certifiée SWIFT CSP risque la suspension de son accès au réseau SWIFT, paralysant tous ses paiements internationaux. La suspension est décidée par SWIFT de manière unilatérale après un contrôle.",
+      "severity": "Critique",
+      "likelihood": "Faible si suivi actif, critique si ignorée",
+      "mitigation": "Démarrer immédiatement le processus de certification SWIFT CSP si non certifié, prioriser les 31 contrôles obligatoires et documenter l'auto-évaluation avant le délai annuel."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Architecture microservices progressive — innover sans migrer le core banking",
+      "description": "Extraire les fonctionnalités critiques (onboarding, paiements, notifications) du core banking en microservices indépendants permet d'innover rapidement sur les canaux digitaux sans attendre une migration core banking de 3-5 ans — stratégie Strangler Fig Pattern.",
+      "impact_level": "Très élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Investissement infrastructure centralisée",
+      "acquirer_or_investor": "Ecobank Group",
+      "target": "Ecobank Technology Centre (ETC) — datacenter groupe Accra",
+      "amount": "Investissement interne groupe estimé 50-80 M$",
+      "date": "2015-2023 (expansion continue)",
+      "strategic_rationale": "Centraliser 100 % de l'infrastructure IT de 33 filiales africaines dans un datacenter groupe unique pour réaliser des économies d'échelle et standardiser la gouvernance IT",
+      "source": "Ecobank Technology Report 2023 / Ecobank Annual Report 2023"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "DBS Bank",
+    "pays": "Singapour",
+    "technologie": "Modernisation du socle IT — de monolithe legacy à architecture cloud-native en 10 ans",
+    "description": "En 2009, DBS Bank avait un socle IT classique : core banking mainframe vieillissant, silos applicatifs, processus de déploiement de 6 mois. En 10 ans (2009-2019), DBS a modernisé intégralement son socle : migration vers une architecture microservices, déploiement cloud AWS, DevSecOps intégré dans toutes les équipes, 500+ déploiements en production par semaine. Le core banking legacy a été progressivement encapsulé par des APIs (Strangler Fig Pattern) puis remplacé fonctionnalité par fonctionnalité. En 2023 : 99,99 % de disponibilité, coûts IT réduits de 40 %, 250 millions de transactions/jour sans incident majeur. DBS est la référence mondiale de la modernisation IT bancaire réussie.",
+    "resultats": "99,99 % disponibilité · 500+ déploiements/semaine · Coûts IT -40 % · 250M transactions/jour · 10 ans de modernisation progressive · Référence mondiale",
+    "source": "DBS Annual Report 2023 / AWS DBS Case Study / Harvard Business School DBS Technology Strategy",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité socle IT — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "Core banking < 5 ans ou dernière version", "Conformité SWIFT CSP certifiée", "PCI-DSS v4.0 conforme", "Monitoring NOC 24/7", "Microservices déployés (canaux digitaux)"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "Partiel", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Le socle IT bancaire en UEMOA est le frein silencieux de la transformation digitale. On ne peut pas construire une app mobile performante sur un core banking de 2012. La priorité immédiate est de mettre à jour le core banking existant (pas migrer, juste patcher) et d'obtenir la certification SWIFT CSP — ces deux actions ont un ROI direct et immédiat. La migration vers une architecture microservices vient ensuite, progressivement.",
+    "maturity_max_description": "Core banking maintenu à la dernière version ou SaaS. Architecture microservices déployée pour les canaux digitaux (Strangler Fig Pattern). Conformité SWIFT CSP et PCI-DSS v4.0 certifiées. Monitoring NOC 24/7 avec détection proactive via AIOps. DevSecOps intégré dans 100 % des équipes de développement. 99,99 % de disponibilité cible. Migration SaaS core banking planifiée.",
+    "scoring_rubric": {
+      "score_1_to_20": "Core banking > 10 ans non maintenu. Pas de monitoring. SWIFT CSP non certifié. PCI-DSS non conforme. Incidents fréquents.",
+      "score_21_to_40": "Core banking partiellement maintenu. Monitoring basique. SWIFT CSP partiel. PCI-DSS en cours. Réactif.",
+      "score_41_to_60": "Core banking à jour < 5 ans. Monitoring NOC 8/5. SWIFT CSP certifié. PCI-DSS v4.0 conforme. Patchs structurés.",
+      "score_61_to_80": "Monitoring NOC 24/7. SWIFT CSP + PCI-DSS certifiés. Premiers microservices. DevSecOps initié. SLA mesurés.",
+      "score_81_to_100": "Architecture microservices digitale. DevSecOps 100 %. AIOps. 99,99 % disponibilité. Migration SaaS planifiée."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur la maturité de son socle IT dans le contexte bancaire UEMOA. Analyse l'état de maintenance du core banking, la conformité aux certifications obligatoires (SWIFT CSP, PCI-DSS v4.0), la disponibilité d'un NOC 24/7 et l'avancement vers une architecture microservices.",
+    "key_questions_for_llm": [
+      "Le core banking est-il maintenu à une version récente (< 5 ans) avec les patches de sécurité appliqués régulièrement, ou s'agit-il d'une version ancienne non maintenue ?",
+      "La certification SWIFT CSP (Customer Security Programme) est-elle obtenue et renouvelée annuellement pour maintenir l'accès au réseau SWIFT pour les paiements internationaux ?",
+      "La banque est-elle conforme à PCI-DSS v4.0 (obligatoire depuis mars 2025) pour la sécurité des données de titulaires de cartes de paiement ?",
+      "Un NOC (Network Operations Center) supervise-t-il l'infrastructure bancaire 24h/24, 7j/7 avec des alertes automatiques sur les incidents et des SLA de disponibilité mesurés ?",
+      "Une architecture microservices est-elle en place ou en cours de déploiement pour découpler progressivement les canaux digitaux du core banking legacy et accélérer les innovations ?"
+    ]
+  }
+}

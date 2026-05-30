@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "axis": "CANAUX",
+    "sub_axis": "Canaux & Expérience client",
+    "sector": "banque",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Application mobile bancaire — principal canal d'interaction en UEMOA",
+      "description": "L'application mobile est désormais le premier canal de contact bancaire en Afrique de l'Ouest. 65 % des millennials africains bancarisés effectuent toutes leurs opérations via mobile. Les banques sans app mobile performante perdent des clients au profit des super-apps et fintechs.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "65 % des clients bancaires africains urbains utilisent l'app mobile comme canal principal (GSMA 2024)",
+      "source": "GSMA Mobile Money & Banking Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "WhatsApp Banking — canal conversationnel dominant en Afrique de l'Ouest",
+      "description": "WhatsApp est l'application la plus utilisée en Côte d'Ivoire (90 % de pénétration). Les banques déploient des chatbots WhatsApp pour les consultations de solde, virements simples, alertes transactions et service client — sans coût d'acquisition d'une app dédiée.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "25 % des banques africaines ont un service WhatsApp Banking opérationnel (Statista Africa 2024)",
+      "source": "Statista Africa Banking Channels 2024",
+      "year": "2024"
+    },
+    {
+      "title": "USSD Banking — canal critique pour les clients non-smartphone",
+      "description": "50 % de la population adulte ivoirienne utilise encore des téléphones non-smartphones. L'USSD Banking (codes *#) reste le canal bancaire digital le plus inclusif, permettant les consultations et virements sans internet sur tout téléphone mobile basique.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "40 % des transactions digitales africaines passent encore par USSD (GSMA 2024)",
+      "source": "GSMA Mobile Economy Sub-Saharan Africa 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Omnicanal bancaire — expérience unifiée agence + digital + mobile",
+      "description": "Les clients bancarisés africains utilisent en moyenne 2,7 canaux différents selon les usages (agence pour le conseil, mobile pour les transactions, WhatsApp pour le support). Les banques qui unifient l'expérience sur tous ces canaux via un CRM central ont un NPS 30 % supérieur.",
+      "impact_level": "Très élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "30 % des banques africaines ont une stratégie omnicanale documentée (Deloitte Africa 2024)",
+      "source": "Deloitte Africa Omnichannel Banking 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Plateforme Application Mobile Bancaire",
+      "category": "Canal digital principal",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne en UEMOA",
+      "leading_vendors": ["Backbase Engagement Banking", "Temenos Infinity", "Finastra Digital Banking", "Mambu + Thought Machine", "nCino Mobile"]
+    },
+    {
+      "name": "WhatsApp Business API / Chatbot Bancaire",
+      "category": "Canal conversationnel",
+      "maturity_stage": "Croissance en Afrique",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Infobip (WhatsApp Banking)", "Twilio", "Kasisto KAI Banking", "IBM Watson Assistant", "Avaamo Financial"]
+    },
+    {
+      "name": "Plateforme Omnicanale Bancaire",
+      "category": "Unification des canaux",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Très faible en UEMOA",
+      "leading_vendors": ["Salesforce Financial Services Cloud", "Backbase Omnichannel", "Oracle Banking Digital Experience", "Adobe Experience Cloud FSI", "Genesys Cloud CX Banking"]
+    },
+    {
+      "name": "ATM / DAB Next Generation",
+      "category": "Réseau physique self-service",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne en CI",
+      "leading_vendors": ["NCR Atleos", "Diebold Nixdorf", "Hyosung (ATMs Afrique)", "GRG Banking (Asie/Afrique)", "Nautilus Hyosung"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Wave (néobanque CI/Sénégal)",
+        "country": "Côte d'Ivoire / Sénégal",
+        "key_practice": "App mobile uniquement, UX ultra-simple (5 taps max pour tout), USSD de secours, ouverture de compte en 3 minutes",
+        "differentiator": "Référence UX absolue en Afrique de l'Ouest — les clients comparent toutes les apps bancaires à Wave. NPS estimé > 70 en CI",
+        "source": "Wave Financial Report 2023 / Quartz Africa Wave Analysis"
+      },
+      {
+        "organisation": "Société Générale Côte d'Ivoire",
+        "country": "Côte d'Ivoire",
+        "key_practice": "App SGCI Mobile (iOS + Android), WhatsApp Banking pour les questions courantes, réseau de 45 agences + 120 DAB, internet banking corporate",
+        "differentiator": "Premier réseau bancaire ivoirien à déployer le WhatsApp Banking — 15 000+ clients actifs sur le canal WhatsApp en 2023",
+        "source": "SGCI Rapport Annuel 2023 / APBEF-CI Digital Banking Awards 2023"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "Ecobank",
+        "country": "Pan-Afrique",
+        "key_practice": "Ecobank Mobile App (33 pays, 1 seule app), Ecobank Online (internet banking), WhatsApp Banking déployé dans 15 pays, USSD dans 28 pays",
+        "differentiator": "Seule app bancaire africaine unifiée sur 33 marchés — un client peut gérer ses comptes dans 33 pays depuis une seule application",
+        "source": "Ecobank Annual Report 2023 / Ecobank Digital Banking Report"
+      },
+      {
+        "organisation": "Equity Bank Kenya",
+        "country": "Kenya / Afrique de l'Est",
+        "key_practice": "Equity Mobile App (8M utilisateurs actifs), Equitel (opérateur MVNO propriétaire), USSD *247#, 1 500+ agents banking",
+        "differentiator": "Equity Bank possède son propre opérateur MVNO (Equitel) — canal unique intégrant banque et téléphonie sans dépendance aux opérateurs tiers",
+        "source": "Equity Bank Annual Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "DBS Bank",
+        "country": "Singapour",
+        "key_practice": "digibank by DBS : app mobile uniquement, 0 agence en Inde, 8M clients, NPS > 60, 93 % des transactions sur digital",
+        "differentiator": "DBS a prouvé qu'une banque peut servir des millions de clients avec 0 agence physique — modèle digital-first pur validé à grande échelle",
+        "source": "DBS Annual Report 2023 / digibank India Report"
+      },
+      {
+        "organisation": "Nubank",
+        "country": "Brésil",
+        "key_practice": "App Nubank : 100 % mobile, NPS de 87 (record mondial bancaire), 100M clients, 0 agence, support client 100 % via chat in-app",
+        "differentiator": "NPS de 87 — le plus haut jamais mesuré dans le secteur bancaire mondial. Preuve que l'expérience client digitale peut surpasser l'agence physique",
+        "source": "Nubank Annual Report 2023 / Bain & Company NPS Banking Global 2024"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Canal unique : agence physique. Pas d'app mobile. Pas d'internet banking. USSD absent. DAB limité. Le client doit se déplacer en agence pour toute opération.",
+    "level_2_developing": "Internet banking basique (consultation solde + relevé). App mobile rudimentaire avec fonctions limitées. USSD disponible pour consultation solde. 1-2 canaux digitaux sans cohérence.",
+    "level_3_defined": "App mobile complète (consultation, virement, paiement factures). Internet banking corporate. USSD complet. WhatsApp Banking ou chatbot basique. Cohérence partielle des canaux.",
+    "level_4_managed": "App mobile performante (> 4/5 stores). WhatsApp Banking opérationnel. Omnicanal partiel (CRM unifié). NPS canal digital mesuré. USSD sur tous les opérateurs. Agences transformées en espaces conseil.",
+    "level_5_optimizing": "Expérience omnicanale unifiée (même parcours agence + mobile + WhatsApp). App mobile NPS > 50. Personnalisation IA par canal. Video banking. Agences hub conseil. 80 %+ transactions sur digital."
+  },
+
+  "regulations": [
+    {
+      "name": "Instruction BCEAO sur les services bancaires par voie électronique",
+      "issuing_body": "BCEAO",
+      "scope": "Banques proposant des services bancaires via canaux digitaux",
+      "key_requirement": "Authentification forte obligatoire pour les transactions digitales sensibles (virement > seuil), information client sur les risques des canaux digitaux, logs de transactions conservés",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.bceao.int"
+    },
+    {
+      "name": "Loi sur la cybersécurité CI 2013 — transactions électroniques",
+      "issuing_body": "République de Côte d'Ivoire",
+      "scope": "Tous les prestataires de services digitaux en CI",
+      "key_requirement": "Sécurisation des transactions électroniques, protection des données personnelles des utilisateurs, disponibilité du service conforme aux engagements",
+      "compliance_deadline": "En vigueur",
+      "source_url": "https://www.gouv.ci"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "App mobile sous-performante — fuite clients vers Wave et Orange Money",
+      "description": "Une application mobile bancaire avec des notes stores < 3,5/5, des crashs fréquents ou un UX complexe pousse directement les clients vers Wave (noté 4,7/5 en CI). Le churn numérique est silencieux mais irréversible : un client qui adopte Wave ne revient généralement pas.",
+      "severity": "Très élevé",
+      "likelihood": "Très élevée en UEMOA",
+      "mitigation": "Prioriser l'UX mobile comme investissement stratégique #1 : tests utilisateurs réguliers, revues hebdomadaires des notes stores, NPS digital mesuré mensuellement."
+    },
+    {
+      "title": "Incident canal digital majeur — atteinte à la réputation et migration clients",
+      "description": "Une panne de l'application mobile ou de l'internet banking de plus de 4 heures génère des publications virales sur les réseaux sociaux en Côte d'Ivoire. La réputation de fiabilité est le premier critère de choix bancaire après les tarifs.",
+      "severity": "Élevé",
+      "likelihood": "Moyenne",
+      "mitigation": "Garantir un SLA de disponibilité > 99,9 % pour les canaux digitaux, un plan de communication de crise digitale activable en < 30 minutes et un canal alternatif (USSD) toujours disponible."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "WhatsApp Banking — 0 développement app, 90 % de couverture instantanée",
+      "description": "Déployer WhatsApp Banking permet d'atteindre instantanément 90 % des clients ivoiriens smartphone sans coût de développement d'une nouvelle app. Les cas d'usage prioritaires : consultation solde, alerte transaction, service client, et virements simples.",
+      "impact_level": "Très élevé",
+      "time_to_value": "3-6 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Agent banking réseau — 10 000 agents partenaires pour couvrir les zones rurales",
+      "description": "Le modèle d'agent banking (commerces de proximité équipés d'un terminal POS bancaire) permet d'étendre la couverture bancaire sans coût d'agence. En CI, les supérettes et pharmacies peuvent devenir des points de service bancaire couvrant les 16 régions.",
+      "impact_level": "Élevé",
+      "time_to_value": "12-24 mois",
+      "prerequisite_maturity": "Niveau 3"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Levée de fonds",
+      "acquirer_or_investor": "Investisseurs internationaux (Founders Fund, Sequoia)",
+      "target": "Wave Mobile Finance",
+      "amount": "200 M$ (Series A 2021)",
+      "date": "2021",
+      "strategic_rationale": "Financer l'expansion de Wave en Côte d'Ivoire et Sénégal — modèle canal mobile ultra-simple qui a capturé 40 % du marché des paiements sénégalais en 2 ans",
+      "source": "Wave Press Release 2021 / Crunchbase"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "DBS Bank — digibank India",
+    "pays": "Singapour / Inde",
+    "technologie": "digibank — banque 100 % mobile sans agence, 4 millions de clients en 18 mois",
+    "description": "DBS a lancé digibank en Inde en 2016 : une banque 100 % mobile, sans agence physique, avec une ouverture de compte en < 90 secondes via Aadhaar biométrique indien. En 18 mois, 4 millions de clients avaient rejoint digibank. Le coût de service par client est 8× inférieur à une banque traditionnelle. L'app est notée 4,8/5 sur le Play Store. En 2023, digibank India gère 12 millions de clients. Ce modèle a prouvé qu'une grande banque peut lancer une néobanque compétitive en 18 mois. DBS a repliqué ce modèle en Indonésie, Chine et Taiwan.",
+    "resultats": "4M clients en 18 mois · Ouverture compte < 90s · Coût service 8× inférieur · App 4,8/5 · 12M clients en 2023 · 4 marchés répliqués",
+    "source": "DBS digibank Annual Report 2023 / Harvard Business School DBS Case Study / AWS DBS Case Study",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité canaux & expérience client — benchmark banques UEMOA",
+    "colonnes": ["Organisation", "App mobile (note > 4/5 stores)", "WhatsApp Banking actif", "USSD sur tous opérateurs CI", "Omnicanal CRM unifié", "NPS canal digital mesuré"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✗", "✓", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "Les canaux digitaux sont le champ de bataille principal entre les banques UEMOA et les fintechs. Wave a une app notée 4,7/5 et une ouverture de compte en 3 minutes. La plupart des banques ivoiriennes ont des apps notées 2,5-3,5/5 avec des délais d'ouverture de 15 jours. Ce fossé d'expérience digitale est la principale cause de migration des clients vers les fintechs. Le WhatsApp Banking est l'opportunité la plus rapide à déployer.",
+    "maturity_max_description": "Application mobile notée > 4,5/5 sur les stores. WhatsApp Banking opérationnel 24/7. USSD disponible sur tous les opérateurs CI. Expérience omnicanale unifiée via CRM central. NPS canal digital > 50 mesuré mensuellement. 80 %+ des transactions sur canaux digitaux. Agences transformées en espaces conseil.",
+    "scoring_rubric": {
+      "score_1_to_20": "Agence physique uniquement. Pas d'app. Pas d'internet banking. Pas d'USSD. Client se déplace pour tout.",
+      "score_21_to_40": "Internet banking basique. App rudimentaire. USSD consultation solde. Pas de WhatsApp. 2 canaux non cohérents.",
+      "score_41_to_60": "App mobile complète. Internet banking. USSD complet. WhatsApp basique. Cohérence partielle.",
+      "score_61_to_80": "App > 4/5 stores. WhatsApp Banking. Omnicanal partiel CRM. NPS digital mesuré. Agences hub conseil.",
+      "score_81_to_100": "Omnicanal unifié. App NPS > 50. Personnalisation IA. Video banking. 80 %+ digital."
+    },
+    "prompt_injection_context": "Cette banque est évaluée sur la maturité de ses canaux digitaux et l'expérience client dans le contexte bancaire UEMOA. Analyse la performance de l'application mobile (note stores, fonctionnalités), la disponibilité du WhatsApp Banking et de l'USSD, la cohérence omnicanale et la proportion de transactions digitales.",
+    "key_questions_for_llm": [
+      "L'application mobile bancaire est-elle disponible sur iOS et Android avec une note supérieure à 4/5 sur les stores, et quelles fonctionnalités principales offre-t-elle (consultation, virement, paiement) ?",
+      "Un service WhatsApp Banking est-il disponible pour les clients, permettant au minimum la consultation de solde et le service client conversationnel ?",
+      "Un service USSD (*code#) est-il disponible sur tous les opérateurs mobile ivoiriens (Orange, MTN, Moov, Wave) pour les clients sans smartphone ?",
+      "L'expérience client est-elle cohérente sur tous les canaux (agence + mobile + internet banking + WhatsApp) grâce à un CRM central unifié ?",
+      "Quelle est la proportion des transactions bancaires réalisées via les canaux digitaux par rapport aux agences physiques ?"
+    ]
+  }
+}

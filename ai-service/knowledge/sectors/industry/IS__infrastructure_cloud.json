@@ -1,0 +1,284 @@
+{
+  "secteur": "industrie",
+  "axe": "INFORMATION_SYSTEM",
+  "sous_axe": "infrastructure_cloud",
+  "label": "Infrastructure IT/OT et cloud industriel",
+  "description": "Capacité des entreprises industrielles à disposer d'une infrastructure IT/OT robuste : réseaux industriels (Ethernet/IP, Profibus, OPC-UA), continuité électrique (groupes électrogènes, UPS industriels), connectivité usine (Wi-Fi industriel, 4G privée), cloud industriel (Azure IoT Hub, AWS IoT, Microsoft 365) et PCP MENA CI conformité données État CI.",
+
+  "contexte_sectoriel": {
+    "enjeux_specifiques": [
+      "Réseaux OT industriels CI : Profibus, Modbus, Ethernet/IP — héritage équipements 15-20 ans sans connectivité réseau moderne",
+      "CIE CI délestages : 2-6h/jour zones industrielles périphériques Abidjan — UPS industriels et groupes électrogènes obligatoires",
+      "Wi-Fi industriel CI : interférences fréquentes en zone usine (métaux, moteurs) — AP industriels (Cisco, Ubiquiti) nécessaires",
+      "4G privée ARTCI CI : réseau 4G dédié usine (CBRS ou bande industrielle) — alternative Wi-Fi pour usines grandes surfaces",
+      "OPC-UA : standard protocole communication OT moderne — passerelle équipements anciens vers cloud IoT CI",
+      "Cybersécurité OT : réseau IT et OT souvent non segmentés dans PMI CI — risque ransomware production"
+    ],
+    "acteurs_cles": [
+      "CIE CI — alimentation électrique industrielle : contrats puissance souscrite, délestages, raccordement",
+      "Orange CI / MTN CI — réseaux 4G/5G entreprise : SIM industrielles M2M pour IoT CI",
+      "Cisco CI / Ubiquiti CI — réseaux Wi-Fi industriels : AP résistants températures, poussière",
+      "Schneider Electric CI — onduleurs industriels Smart-UPS, groupes électrogènes",
+      "ARTCI CI — réglementation réseaux privés 4G industriels CI",
+      "Microsoft CI / AWS CI — cloud IoT industriel : Azure IoT Hub, AWS IoT Greengrass"
+    ],
+    "reglementation_locale": [
+      "CIE CI contrat fourniture électrique : puissance souscrite, raccordement HTA industries CI — mise à jour si automatisation",
+      "ARTCI CI : réglementation réseaux privés Wi-Fi et 4G industriels CI — fréquences autorisées",
+      "APDP CI Loi 2013-450 : données opérateurs usine (biométrie, pointage) stockées en cloud — conformité transfert",
+      "PCP MENA CI (Microsoft) : hébergement données projets État CI — applicable industries fournisseurs État",
+      "ISO IEC 62443 : cybersécurité systèmes OT industriels — segmentation IT/OT requise",
+      "Douanes CI : importation équipements réseau industriels — droits douane 5-15% (routeurs, switches industriels)"
+    ]
+  },
+
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Isolé",
+      "description": "Infrastructure IT minimale. Aucun réseau OT. PC bureau standard sans lien avec les équipements de production. Alimentation électrique sans protection (0 onduleur). Données usine sur clé USB. Aucun cloud.",
+      "indicateurs": [
+        "0 réseau OT — PLCs non connectés entre eux ni au SI",
+        "PC bureau standard : pas de poste opérateur SCADA",
+        "0 onduleur ni groupe électrogène — coupures CIE CI = arrêts",
+        "Données production sur clé USB ou papier",
+        "0 cloud — tout en local sur 1 PC sans sauvegarde"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Réseau IT bureau basique (switch non managé). Quelques PLCs avec port Ethernet non connectés. Onduleur sur serveur bureau. Wi-Fi domestique en usine (débit insuffisant). NAS local sans sauvegarde automatique.",
+      "indicateurs": [
+        "Switch non managé bureau — réseau IT basique",
+        "PLCs avec port Ethernet non raccordés au réseau",
+        "Onduleur APC standard sur serveur bureau uniquement",
+        "Wi-Fi domestique (Livebox Orange CI) en usine — couverture insuffisante",
+        "NAS local bureau — aucune sauvegarde automatique ni accès distant"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Réseau OT segmenté (VLAN production/IT). Wi-Fi industriel AP Cisco/Ubiquiti en usine. Onduleurs industriels + groupe électrogène usine. Cloud Microsoft 365 déployé. Passerelle OPC-UA pour données PLCs. MDM tablettes opérateurs.",
+      "indicateurs": [
+        "VLAN production / IT / bureautique — segmentation de base",
+        "Wi-Fi industriel AP Cisco/Ubiquiti : couverture 100% atelier",
+        "UPS industriels + groupe électrogène 50+ kVA usine",
+        "Cloud M365 déployé : SharePoint GED, Teams communication",
+        "Passerelle OPC-UA : PLCs → MES/SCADA — données temps réel"
+      ]
+    },
+    "niveau_4": {
+      "label": "Avancé",
+      "description": "Infrastructure OT/IT convergée et sécurisée. Réseau Ethernet/IP industriel certifié ISO IEC 62443. Azure IoT Hub ou AWS IoT intégré. 4G M2M SIM Orange CI pour capteurs distants. Sauvegarde cloud automatique avec RTO < 4h. DMZ OT/IT.",
+      "indicateurs": [
+        "Réseau industriel Ethernet/IP avec firewall DMZ OT/IT",
+        "Azure IoT Hub ou AWS IoT : 50+ capteurs connectés, données cloud",
+        "4G M2M SIM Orange CI : capteurs distants (tanks, entrepôts CI)",
+        "Sauvegarde cloud automatique : RTO < 4h, RPO < 1h",
+        "ISO IEC 62443 : audit segmentation OT/IT réalisé, recommandations appliquées"
+      ]
+    },
+    "niveau_5": {
+      "label": "Innovant",
+      "description": "Infrastructure industrielle 4.0 de référence. Edge computing usine (MEC). 5G privée ARTCI CI pilote. OT/IT convergence totale avec zero-trust. SLA IT 99,9%. Cloud souverain CI conforme PCP MENA. Référence infrastructure CI.",
+      "indicateurs": [
+        "Edge computing MEC : traitement données local < 5ms latence pour contrôle temps réel",
+        "5G privée usine ARTCI CI pilote (disponibilité 2025-2026 CI)",
+        "Zero-trust OT/IT : authentification multi-facteur opérateurs usine",
+        "SLA infrastructure : 99,9% uptime — 0 arrêt production IT en 12 mois",
+        "Référence infrastructure industrielle CI — publication ARTCI CI / INP-HB CI"
+      ]
+    }
+  },
+
+  "questions_diagnostic": [
+    {
+      "id": "q1",
+      "question": "Votre réseau OT (production) est-il segmenté de votre réseau IT (bureautique) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — 0 réseau OT, tout sur le même réseau ou rien"},
+        {"valeur": 2, "label": "Même réseau IT pour bureautique et production — 0 segmentation"},
+        {"valeur": 3, "label": "VLAN production / IT séparés — segmentation de base"},
+        {"valeur": 4, "label": "DMZ OT/IT avec firewall industriel — ISO IEC 62443 partiellement appliqué"},
+        {"valeur": 5, "label": "Zero-trust OT/IT, Edge computing, audit ISO IEC 62443 complet"}
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Comment protégez-vous votre production contre les coupures CIE CI ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Pas de protection — coupures CIE CI = arrêts production"},
+        {"valeur": 2, "label": "Onduleur standard sur serveur bureau uniquement"},
+        {"valeur": 3, "label": "UPS industriels + groupe électrogène usine"},
+        {"valeur": 4, "label": "UPS + GE + sauvegarde cloud automatique RTO < 4h"},
+        {"valeur": 5, "label": "Infrastructure redondante : RTO < 1h, 0 arrêt production IT 12 mois"}
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Utilisez-vous un cloud industriel (Azure IoT, AWS IoT) pour vos données de production ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "Non — 0 cloud, données locales uniquement"},
+        {"valeur": 2, "label": "Cloud M365 bureautique — 0 données production en cloud"},
+        {"valeur": 3, "label": "Cloud M365 + passerelle OPC-UA vers SCADA/MES"},
+        {"valeur": 4, "label": "Azure IoT Hub ou AWS IoT : 50+ capteurs, données cloud"},
+        {"valeur": 5, "label": "Edge + cloud souverain CI PCP MENA : traitement local + sync cloud"}
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Votre Wi-Fi en usine est-il industriel (AP résistants, couverture totale atelier) ?",
+      "type": "single_choice",
+      "options": [
+        {"valeur": 1, "label": "0 Wi-Fi en usine — clé USB uniquement"},
+        {"valeur": 2, "label": "Wi-Fi domestique (Livebox CI) — couverture partielle, instable"},
+        {"valeur": 3, "label": "AP Wi-Fi industriels Cisco/Ubiquiti — couverture 100% atelier"},
+        {"valeur": 4, "label": "Wi-Fi industriel + 4G M2M SIM CI pour capteurs distants"},
+        {"valeur": 5, "label": "5G privée usine ARTCI CI pilote — latence < 5ms, couverture totale"}
+      ]
+    }
+  ],
+
+  "comparatif_organisations": {
+    "criteres": [
+      "Segmentation réseau OT/IT",
+      "Continuité électrique CIE CI",
+      "Cloud industriel IoT déployé",
+      "Wi-Fi industriel usine",
+      "Sauvegarde cloud automatique"
+    ],
+    "lignes": [
+      {
+        "organisation": "PMI CI (< 50 employés)",
+        "scores": [1, 1, 1, 1, 1],
+        "note_globale": 1,
+        "commentaire": "0 réseau OT, 0 UPS, 0 cloud, 0 Wi-Fi industriel, données clé USB"
+      },
+      {
+        "organisation": "Industrie moyenne CI (50-200 employés)",
+        "scores": [2, 2, 2, 2, 2],
+        "note_globale": 2,
+        "commentaire": "Même réseau IT/OT, onduleur bureau, M365 bureautique, Wi-Fi domestique"
+      },
+      {
+        "organisation": "SUCAF CI",
+        "scores": [3, 4, 3, 3, 3],
+        "note_globale": 3,
+        "commentaire": "VLAN segmenté, UPS+GE, OPC-UA vers SCADA, AP industriels, sauvegarde auto partielle"
+      },
+      {
+        "organisation": "SIFCA CI",
+        "scores": [5, 5, 5, 4, 5],
+        "note_globale": 5,
+        "commentaire": "Zero-trust OT/IT, redondance totale, Azure IoT Hub 200+ capteurs, Wi-Fi 4G, SLA 99,9%"
+      }
+    ]
+  },
+
+  "market_leaders": [
+    {
+      "scope": "National (CI)",
+      "nom": "Orange Business CI — connectivité industrielle M2M et réseau privé",
+      "part_de_marche_estimee": "Leader connectivité industrielle CI",
+      "forces": ["SIM M2M IoT CI (4G, NB-IoT)", "Réseau privé 4G entreprise CI", "SLA entreprise disponible", "Couverture 88% territoire CI"],
+      "faiblesses": ["Coût SIM M2M élevé (20 000–80 000 FCFA/mois selon débit)", "Zone industrielle périphérique Abidjan : couverture variable"]
+    },
+    {
+      "scope": "Régional (Afrique francophone)",
+      "nom": "Cisco Systems (via distributeurs Afrique de l'Ouest) — réseau OT industriel",
+      "part_de_marche_estimee": "Leader équipements réseau industriel Afrique",
+      "forces": ["Switches industriels IE série CI", "AP Wi-Fi industriels Catalyst CI", "Segmentation OT/IT", "Formation ingénieurs CI"],
+      "faiblesses": ["Coût élevé vs switches non industriels", "SAV via Accra Ghana pour CI"]
+    },
+    {
+      "scope": "International (Global)",
+      "nom": "Microsoft Azure IoT Hub — cloud industriel mondial",
+      "part_de_marche_estimee": "Leader mondial cloud IoT industriel",
+      "forces": ["PCP MENA CI conformité", "Intégration M365 native", "Azure IoT Edge computing", "Connecteurs SCADA natifs"],
+      "faiblesses": ["Coût USD — change FCFA", "Latence Europe → CI (150-200ms)", "Expertise locale CI limitée"]
+    }
+  ],
+
+  "outils_recommandes": [
+    {
+      "nom": "Cisco IE3400 / Ubiquiti UniFi — switches/AP Wi-Fi industriels CI",
+      "usage": "Réseau Wi-Fi industriel usine CI : résistance température, poussière, couverture complète atelier",
+      "niveau_cible": "3+",
+      "cout_estime": "300 000–800 000 FCFA par AP industriel (vs 50 000 FCFA domestique)",
+      "disponibilite_ci": "International — distributeurs Cisco CI (SATCOM CI, COFICOM CI)"
+    },
+    {
+      "nom": "Schneider Electric Smart-UPS 3000VA / Generac CI — continuité électrique",
+      "usage": "Onduleurs industriels + groupe électrogène CI : protection coupures CIE CI usine",
+      "niveau_cible": "3+",
+      "cout_estime": "UPS 3kVA : 300 000–600 000 FCFA. GE 50 kVA : 3 000 000–7 000 000 FCFA",
+      "disponibilite_ci": "Natif CI — Schneider Electric bureau Abidjan, revendeurs CI"
+    },
+    {
+      "nom": "OPC-UA Gateway (Kepware, ProSoft CI) — passerelle OT vers cloud",
+      "usage": "Connecter PLCs anciens (Modbus, Profibus) vers SCADA/MES/cloud — OPC-UA standard universel",
+      "niveau_cible": "3+",
+      "cout_estime": "500 000–2 000 000 FCFA selon nombre tags PLCs",
+      "disponibilite_ci": "International — intégrateurs OT/IT disponibles CI"
+    },
+    {
+      "nom": "Azure IoT Hub — cloud IoT industriel CI",
+      "usage": "Collecte données capteurs IoT CI, Edge computing, analytics cloud, jumeaux numériques",
+      "niveau_cible": "4",
+      "cout_estime": "50 000–500 000 FCFA/mois selon volume données et appareils",
+      "disponibilite_ci": "International — cloud Azure accessible CI, partenaires Microsoft CI"
+    },
+    {
+      "nom": "Orange CI SIM M2M IoT — connectivité capteurs distants CI",
+      "usage": "SIM industrielles IoT : capteurs distants (tanks, entrepôts CI), GPS traceurs, compteurs énergie",
+      "niveau_cible": "3+",
+      "cout_estime": "20 000–80 000 FCFA/mois par SIM selon débit",
+      "disponibilite_ci": "Natif CI — Orange Business CI Abidjan"
+    }
+  ],
+
+  "zoom_cas_usage": {
+    "titre": "SITACI CI (Société Ivoirienne de Transformation Agro-Industrielle) — infrastructure OT/IT convergée : zéro arrêt production IT en 18 mois",
+    "organisation": "SITACI CI (transformation anacarde et cacao, Abidjan Zone Industrielle PK24 — 18 000 t/an)",
+    "contexte": "SITACI CI : 2021, extension capacité production — déploiement SCADA Siemens WinCC sur 4 lignes. Infrastructure existante : Wi-Fi domestique Livebox Orange CI, réseau IT/OT non segmenté, 0 onduleur usine. Délestages CIE CI zone PK24 : 3-4h/jour. Résultat : SCADA en erreur 6-8h/semaine (perte connexion lors délestages), données production perdues.",
+    "probleme": "SCADA hors service 6-8h/semaine → opérateurs retour papier. Données production perdues sur coupures CIE CI : 3 semaines de données perdues en 6 mois. Wi-Fi domestique : 42% des tablettes opérateurs déconnectées en atelier. Réseau IT/OT non segmenté : incident ransomware bureautique en 2021 a propagé sur SCADA.",
+    "solution_deployee": "VLAN segmenté OT/IT/bureautique (Cisco IE3400 switches industriels). AP Wi-Fi industriels Ubiquiti UniFi U6 Pro × 8 (couverture complète usine 4 500 m²). UPS industriels Schneider Smart-UPS 5000VA × 4 lignes + groupe électrogène 80 kVA. Passerelle OPC-UA Kepware : PLCs Siemens S7 → Azure IoT Hub. Sauvegarde cloud Azure : données production toutes les 15 min — RTO < 2h.",
+    "resultats": "SCADA hors service : 6-8h/semaine → 0h (UPS 30 min + GE 80 kVA). Données production perdues : 0 en 18 mois. Wi-Fi tablettes : 42% déconnexions → 2%. Incident cybersécurité : 0 depuis segmentation OT/IT (vs 1/an avant). Sauvegarde cloud Azure : 3 récupérations testées — RTO moyen 1h45. Économie arrêts SCADA : 7h/semaine × 52 semaines × coût horaire production = 285 M FCFA/an. Coût infrastructure : 42 M FCFA — ROI < 11 semaines.",
+    "enseignements": [
+      "La segmentation OT/IT est la première priorité de sécurité industrielle CI — un ransomware bureautique ne doit jamais atteindre le SCADA production",
+      "Le groupe électrogène 80 kVA est l'investissement le plus rentable d'une usine CI : 3-4h de délestage CIE CI/jour × coût production/h = ROI en quelques semaines",
+      "L'OPC-UA comme passerelle PLCs anciens vers cloud est moins coûteux que de remplacer les PLCs : 500 000 FCFA de gateway vs 2 M FCFA de nouveau PLC"
+    ]
+  },
+
+  "ai_context": {
+    "mots_cles_scoring": [
+      "réseau OT industriel CI", "segmentation IT OT VLAN", "Wi-Fi industriel usine CI",
+      "onduleur industriel UPS CI", "groupe électrogène usine CI", "CIE CI délestages",
+      "OPC-UA passerelle PLCs", "Azure IoT Hub CI", "AWS IoT CI", "cloud industriel",
+      "ISO IEC 62443 cybersécurité OT", "4G M2M SIM Orange CI", "edge computing usine CI"
+    ],
+    "signaux_niveau_avance": [
+      "VLAN OT/IT segmenté avec firewall",
+      "UPS industriels + groupe électrogène usine CI",
+      "Passerelle OPC-UA PLCs vers cloud",
+      "Wi-Fi industriel AP dédiés couverture totale",
+      "Azure/AWS IoT 50+ capteurs connectés"
+    ],
+    "pieges_frequents": [
+      "Wi-Fi domestique en usine CI ≠ infrastructure industrielle — les interférences métalliques et moteurs déconnectent régulièrement les appareils",
+      "Onduleur sur PC bureau ≠ continuité électrique usine CI — les automates et serveurs SCADA doivent être sur UPS industriels",
+      "Réseau IT/OT non segmenté = risque ransomware total — la production est aussi vulnérable que la bureautique",
+      "OPC-UA mentionné sans passerelle configurée ≠ intégration — sans mapping des tags PLCs, c'est un logiciel installé inutile"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "0 réseau OT. PC standard. 0 UPS. Wi-Fi absent. Données clé USB. 0 cloud.",
+      "score_21_to_40": "Même réseau IT/OT. Onduleur bureau. Wi-Fi domestique. NAS local. 0 cloud industriel.",
+      "score_41_to_60": "VLAN segmenté. UPS+GE usine. Wi-Fi industriel. OPC-UA vers SCADA. M365 cloud.",
+      "score_61_to_80": "DMZ OT/IT. Azure IoT Hub 50+ capteurs. 4G M2M CI. Sauvegarde RTO < 4h.",
+      "score_81_to_100": "Edge computing. Zero-trust. 5G privée pilote. SLA 99,9%. Cloud souverain CI. Référence CI."
+    }
+  }
+}

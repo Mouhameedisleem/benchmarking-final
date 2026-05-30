@@ -1,0 +1,234 @@
+{
+  "axe": "MODELE_OP",
+  "sous_axe": "Simplification",
+  "secteur": "industrie",
+  "description": "Simplification des processus opérationnels dans l'industrie ivoirienne : suppression des lourdeurs administratives internes, automatisation des workflows récurrents, dématérialisation des formulaires terrain et réduction des délais de traitement.",
+  "maturite_niveaux": {
+    "initial": "Processus opérationnels très lourds et entièrement sur papier. Multiples tampons et validations manuelles. Les ordres de fabrication, bons de travail et rapports de production prennent plusieurs jours à traiter. Duplication massive des saisies.",
+    "en_developpement": "Quelques formulaires numérisés en PDF. Emails utilisés pour les approbations mais sans workflow structuré. Réduction partielle du papier sur certains processus.",
+    "structure": "Workflows d'approbation digitaux pour les processus clés (ordres de fabrication, ordres de travail maintenance). Formulaires numériques en atelier. Signature électronique pour les documents internes.",
+    "avance": "Automatisation des workflows récurrents (generation automatique des ordres de fabrication depuis le MRP, création automatique des ordres de travail CMMS). Processus administratifs dématérialisés à >80%. Délais de traitement réduits de >60%.",
+    "optimise": "Processus opérationnels entièrement digitaux et auto-apprenants. Intelligence artificielle pour optimiser les flux de production et anticiper les goulots. Zéro papier en atelier. Délais de traitement opérationnel <1 heure pour tous les processus courants."
+  },
+  "questions_diagnostic": [
+    {
+      "id": "MODELE_OP_simplification_Q1",
+      "question": "Comment sont gérés vos ordres de fabrication (lancement, suivi, clôture) ?",
+      "type": "choix_unique",
+      "options": ["Papier avec signatures multiples (3+ jours de cycle)", "Excel avec validation email (1-2 jours)", "ERP avec workflow digital mais saisies partiellement manuelles", "ERP avec génération automatique depuis MRP et validation mobile", "ERP/MES intégrés : ordres générés, lancés, suivis et clôturés automatiquement"],
+      "poids": 25
+    },
+    {
+      "id": "MODELE_OP_simplification_Q2",
+      "question": "Les rapports de production journaliers (quantités produites, taux de rebut, consommation matières) sont-ils saisis automatiquement depuis les équipements ou encore en saisie manuelle ?",
+      "type": "choix_unique",
+      "options": ["Saisie manuelle sur papier puis retranscription Excel", "Saisie manuelle dans un formulaire digital (tablette/PC)", "Collecte semi-automatique (capteurs pour certains paramètres)", "Collecte automatique depuis MES/SCADA pour >70% des données", "Collecte 100% automatique depuis capteurs IoT et automates, zéro saisie manuelle"],
+      "poids": 20
+    },
+    {
+      "id": "MODELE_OP_simplification_Q3",
+      "question": "Combien d'étapes de validation/approbation (tampons, signatures) sont nécessaires pour lancer une commande de matières premières auprès d'un fournisseur habituel ?",
+      "type": "choix_unique",
+      "options": [">5 étapes (>5 jours de délai)", "3-5 étapes (2-3 jours)", "2-3 étapes (1 jour)", "1-2 étapes avec workflow digital (<4 heures)", "Génération automatique depuis le MRP avec approbation unique (<1 heure)"],
+      "poids": 20
+    },
+    {
+      "id": "MODELE_OP_simplification_Q4",
+      "question": "Vos processus de contrôle qualité en ligne (enregistrement des non-conformités, déclenchement des actions correctives) sont-ils digitalisés ?",
+      "type": "choix_unique",
+      "options": ["Feuilles de contrôle papier", "Formulaires PDF remplis sur PC bureau après production", "Saisie mobile en temps réel depuis la ligne", "Système qualité digital intégré MES avec alertes automatiques sur dépassement", "IA d'inspection visuelle automatique avec déclenchement automatique des actions correctives"],
+      "poids": 20
+    },
+    {
+      "id": "MODELE_OP_simplification_Q5",
+      "question": "Les processus administratifs liés aux expéditions (bons de livraison, bordereaux douaniers, facturation) sont-ils automatisés depuis votre ERP ?",
+      "type": "choix_unique",
+      "options": ["Entièrement manuels, feuilles papier", "Templates Word/Excel remplis à la main", "Générés depuis ERP mais avec vérifications manuelles multiples", "Générés automatiquement depuis ERP avec validation minimale", "Entièrement automatiques depuis ERP vers GUCE CI et clients EDI"],
+      "poids": 15
+    }
+  ],
+  "pratiques_recommandees": [
+    {
+      "titre": "MRP automatique — génération des ordres depuis la demande",
+      "description": "Activer le MRP (Material Requirements Planning) dans Odoo Manufacturing ou SAP PP pour générer automatiquement les ordres de fabrication et les réapprovisionnements matières depuis le carnet de commandes. Elimine la planification manuelle hebdomadaire sur Excel. Gain estimé : 8-12 heures/semaine pour le planificateur de production. Prérequis : maîtrise des nomenclatures (BoM) et des délais fournisseurs dans l'ERP.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "très fort"
+    },
+    {
+      "titre": "Dématérialisation des rapports de production (collecte IoT/SCADA)",
+      "description": "Remplacer les feuilles de relevé papier par la collecte automatique depuis les compteurs de production, capteurs de température/humidité et automates. Pour les équipements anciens sans interface numérique, déployer des compteurs IoT additionnels (capteurs clamp-on vibration, compteurs d'impulsions). Coût par capteur additionnel : 50 000-150 000 FCFA. ROI : élimination de 2-3 ETP de saisie de données + données plus fiables pour le MES.",
+      "priorite": "haute",
+      "effort": "élevé",
+      "impact": "très fort"
+    },
+    {
+      "titre": "Workflow digital pour les approbations achats",
+      "description": "Configurer les workflows d'approbation dans l'ERP (Odoo Purchase) : réapprovisionnements récurrents fournisseurs homologués → approbation unique responsable achats via mobile, sans paper trail. Seuils définis : <500 000 FCFA = auto-approuvé sur fournisseur habituel, 500 000-2 M FCFA = approbation DAF mobile, >2 M FCFA = approbation DG. Réduction délai moyen approbation achat : 3 jours → 4 heures.",
+      "priorite": "haute",
+      "effort": "faible",
+      "impact": "fort"
+    },
+    {
+      "titre": "Contrôle qualité mobile en ligne de production",
+      "description": "Équiper les contrôleurs qualité de tablettes industrielles avec formulaires de contrôle (Odoo Quality ou application dédiée) : enregistrement des non-conformités en temps réel depuis la ligne, photos des défauts, déclenchement automatique de l'alerte dans le MES et la chaîne de traitement. Réduit le délai de détection → décision corrective de 2-4 heures à <15 minutes.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Signature électronique pour les documents industriels",
+      "description": "Déployer la signature électronique (DocuSign, Yousign, ou module natif Odoo) pour les documents nécessitant une approbation formelle : bons de commande, contrats fournisseurs, procédures qualité ISO. Valide juridiquement en CI (Loi 2013-546 sur les transactions électroniques CI). Économie papier et temps de circulation physique des documents.",
+      "priorite": "moyenne",
+      "effort": "faible",
+      "impact": "moyen"
+    }
+  ],
+  "outils_solutions": [
+    {
+      "categorie": "ERP et MRP industriel",
+      "solutions": [
+        {
+          "nom": "Odoo Manufacturing MRP",
+          "description": "Module MRP intégré Odoo. Génération automatique ordres de fabrication, réapprovisionnements, suivi des lots et numéros de série. Standard pour les PME industrielles CI.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Inclus dans Odoo Enterprise"
+        },
+        {
+          "nom": "SAP Business One Manufacturing",
+          "description": "ERP SAP adapté aux PME avec module fabrication. Alternatives recommandées si déjà en écosystème SAP.",
+          "pertinence_locale": "moyenne",
+          "cout_estime": "Variable selon contrat SAP"
+        }
+      ]
+    },
+    {
+      "categorie": "Collecte données IoT terrain",
+      "solutions": [
+        {
+          "nom": "Capteurs IoT industriels clamp-on",
+          "description": "Capteurs additionnels pour équipements existants sans interface numérique : capteurs de vibration clamp-on, compteurs d'impulsions, capteurs de température sans fil Zigbee/LoRa. Intégration Azure IoT Hub ou OPC-UA.",
+          "pertinence_locale": "haute",
+          "cout_estime": "50 000-200 000 FCFA par point de mesure"
+        }
+      ]
+    },
+    {
+      "categorie": "Workflow et signature électronique",
+      "solutions": [
+        {
+          "nom": "Yousign",
+          "description": "Solution de signature électronique européenne conforme eIDAS. Valable juridiquement en CI. Interface simple, prix abordable pour les PME industrielles CI.",
+          "pertinence_locale": "haute",
+          "cout_estime": "30-90 €/mois selon volume"
+        },
+        {
+          "nom": "Module approbations Odoo",
+          "description": "Workflow d'approbation intégré dans Odoo pour les achats, dépenses, congés. Si Odoo déjà déployé, c'est la solution sans coût supplémentaire.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Inclus dans Odoo"
+        }
+      ]
+    }
+  ],
+  "indicateurs_cles": [
+    {
+      "nom": "Délai moyen de traitement d'un ordre de fabrication",
+      "description": "Temps entre la création et le lancement effectif d'un ordre de fabrication (cycle administratif)",
+      "unite": "heures",
+      "cible_sectorielle": "<2 heures (vs. 1-3 jours sans automatisation)"
+    },
+    {
+      "nom": "Taux de saisie automatique des données de production",
+      "description": "Pourcentage des données de production (quantités, paramètres process) collectées automatiquement sans saisie manuelle",
+      "unite": "%",
+      "cible_sectorielle": ">70% à terme 18 mois"
+    },
+    {
+      "nom": "Nombre de processus 'zéro papier' en atelier",
+      "description": "Processus opérationnels complètement dématérialisés (ordres de fabrication, contrôle qualité, maintenance)",
+      "unite": "processus",
+      "cible_sectorielle": ">80% des processus opérationnels critiques"
+    },
+    {
+      "nom": "Délai d'approbation commandes fournisseurs",
+      "description": "Délai moyen entre la génération d'un besoin d'achat et l'approbation finale",
+      "unite": "heures",
+      "cible_sectorielle": "<4 heures pour commandes standard"
+    }
+  ],
+  "reglementations_normes": [
+    {
+      "nom": "Loi CI 2013-546 sur les transactions électroniques",
+      "description": "Valide juridiquement la signature électronique et les documents numériques en CI. Permet la dématérialisation complète des documents contractuels et opérationnels.",
+      "organisme": "Ministère des TIC CI / ARTCI CI",
+      "obligatoire": false
+    },
+    {
+      "nom": "ISO 9001 et ISO 22000 — maîtrise documentaire",
+      "description": "Les normes ISO exigent une traçabilité complète des processus et des décisions. La dématérialisation doit maintenir ou améliorer cette traçabilité : versionning des procédures, signatures électroniques, historiques d'approbation.",
+      "organisme": "CODINORM CI / ISO",
+      "obligatoire": false
+    }
+  ],
+  "comparatif_organisations": {
+    "description": "Comparaison de la simplification des processus opérationnels dans les industries ivoiriennes",
+    "lignes": [
+      {
+        "organisation": "SITAB CI (tabac)",
+        "ordres_fabrication": "ERP automatique depuis MRP",
+        "rapports_production": "Collecte SCADA automatique",
+        "approbations_achats": "Workflow digital <2h",
+        "qualite_ligne": "Mobile temps réel",
+        "niveau_global": "Avancé"
+      },
+      {
+        "organisation": "BIJF CI (jus de fruits)",
+        "ordres_fabrication": "ERP Odoo avec validation mobile",
+        "rapports_production": "MES semi-automatique",
+        "approbations_achats": "Email structuré (~1j)",
+        "qualite_ligne": "Tablette en ligne",
+        "niveau_global": "Structuré"
+      },
+      {
+        "organisation": "PME savonnerie Abidjan",
+        "ordres_fabrication": "Papier (3-5 jours)",
+        "rapports_production": "Feuille papier manuelle",
+        "approbations_achats": "Tampon physique",
+        "qualite_ligne": "Feuille contrôle papier",
+        "niveau_global": "Initial"
+      },
+      {
+        "organisation": "SUCAF CI (sucrerie)",
+        "ordres_fabrication": "SAP PP automatique",
+        "rapports_production": "IoT 100% automatique",
+        "approbations_achats": "SAP workflow <30 min",
+        "qualite_ligne": "Système qualité SAP intégré",
+        "niveau_global": "Optimisé"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "AGEROUTE CI — Dématérialisation des rapports terrain et bons de travaux : délai 14j→2,5j",
+    "contexte": "Bien que l'AGEROUTE CI soit une entité publique, son modèle de simplification opérationnelle est référencé dans le secteur industrie BTP/infrastructures CI. L'exemple pertinent ici est une industrie chimique CI (anonymisée) de taille comparable. CICO CI (Chimie Industrielle CI), Port-Bouët — Abidjan, 230 employés, production de peintures et revêtements industriels. Les rapports de production et contrôles qualité nécessitaient un circuit papier de 14 jours avant consolidation en reporting mensuel.",
+    "probleme": "Circuit papier : opérateur remplit feuille → chef d'équipe signe → bureau saisit Excel → responsable qualité vérifie → DPQ valide → DAF archive. 14 jours de délai, 35% d'erreurs de retranscription, 3 ETP dédiés à la saisie de données.",
+    "solution": "Dématérialisation complète du circuit en 4 mois : (1) Formulaires mobiles Odoo sur tablettes industrielles IP54 — opérateurs remplissent directement depuis la ligne de production ; (2) Workflow de validation digital : chaque étape notifiée par WhatsApp Business CI au responsable suivant, délai maximum 2 heures par étape sinon escalade automatique ; (3) Collecte automatique des données SCADA (température, viscosité, dosages) pour éliminer 60% des saisies manuelles. Investissement : 6,8 M FCFA.",
+    "resultats": "Délai de traitement rapports production : 14 jours → 2,5 jours. Erreurs de retranscription : 35% → 2,1%. ETP saisie de données libérés : 3 → 0,5 (réaffectés au contrôle qualité analytique). Données disponibles pour le reporting : J+0 (temps réel) vs. J+14. Satisfaction opérateurs : +3,2 points sur l'enquête interne (les tablettes sont perçues comme une valorisation du poste). Conformité ISO 9001 audit externe : toutes les non-conformités documentaires précédentes levées."
+  },
+  "ai_context": {
+    "focus_llm": "Évaluer la capacité de l'industrie ivoirienne à éliminer les lourdeurs administratives qui ralentissent les opérations de production. Insister sur le fait que la simplification des processus n'est pas synonyme de perte de contrôle : au contraire, les workflows digitaux offrent une meilleure traçabilité que le papier. Le calcul du ROI est généralement très favorable dans l'industrie CI en raison des nombreuses saisies manuelles encore présentes.",
+    "pieges_a_eviter": [
+      "Ne pas recommander une dématérialisation totale sans considérer les prérequis (connectivité Wi-Fi atelier, formation des opérateurs)",
+      "Ne pas ignorer la Loi CI 2013-546 : la signature électronique est légalement valide en CI, ce qui lève le principal frein juridique à la dématérialisation",
+      "Éviter de promettre un passage immédiat au 'zéro papier' : une approche progressive par processus prioritaires est plus réaliste et acceptée culturellement",
+      "Ne pas négliger la collecte IoT comme levier de simplification : instrumenter les équipements est souvent plus efficace que de digitaliser la saisie manuelle"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Processus entièrement papier. Circuits d'approbation physiques longs (>1 semaine). Aucune automatisation. Saisies multiples du même champ dans différents systèmes.",
+      "score_21_to_40": "Quelques formulaires numérisés. Emails pour approbations sans workflow. Saisie dans ERP mais double saisie avec papier en parallèle. Délais réduits partiellement.",
+      "score_41_to_60": "Workflows digitaux pour les processus principaux. MRP partiellement automatisé. Formulaires mobiles en atelier. Délais de traitement <1 jour pour les processus clés.",
+      "score_61_to_80": "MRP automatique opérationnel. Collecte IoT/SCADA pour la majorité des données. Workflows d'approbation <4h. Qualité en ligne dématérialisée. Taux de saisie manuelle <30%.",
+      "score_81_to_100": "Processus opérationnels entièrement automatisés. Zéro papier en atelier. Collecte données 100% automatique. Délais administratifs <1h pour tous les processus courants. IA pour optimisation des flux."
+    }
+  }
+}

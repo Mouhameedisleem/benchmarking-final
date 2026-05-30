@@ -1,0 +1,57 @@
+{
+  "meta": { "axis": "CANAUX", "sub_axis": "Selfcare Client", "sector": "assurance", "language": "fr", "version": "1.0", "last_updated": "2026-05" },
+  "trends": [
+    { "title": "Portail assuré en ligne — accès 24/7 aux polices, quittances et attestations", "description": "Le portail self-service permet aux assurés de télécharger leurs attestations (auto, habitation), consulter leurs quittances, gérer leurs coordonnées et effectuer des modifications de contrat sans passer par un agent. En UEMOA, l'attestation auto électronique est une priorité réglementaire (CIMA 2024).", "impact_level": "Très élevé", "horizon": "12-24 mois", "adoption_rate": "20 % des assureurs CIMA proposent un portail assuré fonctionnel (FANAF 2024)", "source": "FANAF Self-Service Insurance Report 2024", "year": "2024" },
+    { "title": "Chatbot IA assurance — FAQ sinistres et souscription automatisée", "description": "Les chatbots IA permettent de répondre à 70-80 % des questions fréquentes des assurés (état de sinistre, renouvellement, modification d'adresse) sans intervention humaine. En langues locales (français et éventuellement dioula ou yoruba), ils élargissent l'accès au self-service.", "impact_level": "Élevé", "horizon": "12-24 mois", "adoption_rate": "10 % des assureurs africains ont déployé un chatbot IA opérationnel (EY 2024)", "source": "EY Africa Insurance Digital 2024", "year": "2024" }
+  ],
+  "key_technologies": [
+    { "name": "Portail assuré en ligne (web + mobile)", "category": "Self-service client", "maturity_stage": "Mature", "adoption_in_sector": "Faible en UEMOA", "leading_vendors": ["Guidewire CustomerEngage", "Majesco Customer360", "OutSystems Insurance Portal", "Appian Insurance Self-Service", "Custom Angular/React"] },
+    { "name": "Chatbot IA assurance (NLP francophone)", "category": "Automatisation du service client", "maturity_stage": "Croissance", "adoption_in_sector": "Très faible en UEMOA", "leading_vendors": ["IBM Watson Assistant", "Google Dialogflow CX", "Microsoft Bot Framework", "Botpress", "Rasa Open Source"] },
+    { "name": "Attestation et documents électroniques sécurisés", "category": "Dématérialisation documentaire", "maturity_stage": "Mature", "adoption_in_sector": "Faible en UEMOA — cadre réglementaire en évolution", "leading_vendors": ["DocuSign", "Adobe Sign", "Yousign", "Primoris (solutions africaines)", "CIMA eAttestation framework"] }
+  ],
+  "market_leaders": {
+    "national": [{ "organisation": "SUNU Assurances", "country": "Côte d'Ivoire / Pan-UEMOA", "key_practice": "Portail 'MySUNU' : téléchargement attestations auto, consultation quittances, demande de modification de contrat. Chatbot WhatsApp pour FAQ sinistres. Paiement prime en ligne via CinetPay.", "differentiator": "SUNU a été le premier assureur UEMOA à permettre le téléchargement d'attestations auto électroniques conformes CIMA — éliminant le déplacement en agence pour les renouvellements", "source": "SUNU Assurances Rapport Digital 2023" }],
+    "regional": [{ "organisation": "Jubilee Insurance Kenya", "country": "Kenya", "key_practice": "Portail Jubilee Online : souscription en ligne, renouvellement auto, déclaration sinistre, chat en direct avec agent. 48 % des transactions clients traitées en self-service. Chatbot 'Jubi' avec 92 % de satisfaction.", "differentiator": "Jubilee Insurance Kenya a atteint 48 % de self-service en 2023 — taux le plus élevé d'Afrique de l'Est — réduisant le coût de service client de 42 % vs le canal agence", "source": "Jubilee Insurance Annual Report 2023" }],
+    "international": [{ "organisation": "Generali Group", "country": "Italie / Mondial", "key_practice": "Portail 'MyGenerali' dans 20 pays. Chatbot IA multilingue. 72 % des transactions en self-service. Attestations 100 % électroniques. Renouvellement automatique avec consentement digital.", "differentiator": "Generali a digitalisé 72 % de ses transactions clients via MyGenerali — un des taux de self-service les plus élevés du secteur en dehors des pure players numériques", "source": "Generali Annual Report 2023" }]
+  },
+  "maturity_levels": {
+    "level_1_initial": "Aucun self-service. Toutes les opérations nécessitent un déplacement en agence. Documents uniquement papier. Aucune dématérialisation.",
+    "level_2_developing": "Site web avec FAQ. Formulaire de contact email. Quelques documents téléchargeables. Pas de portail authentifié.",
+    "level_3_defined": "Portail assuré basique : consultation police, téléchargement attestations, paiement prime en ligne. Chatbot FAQ basique.",
+    "level_4_managed": "Portail complet : modification contrat, déclaration sinistre, suivi état sinistre, chatbot IA intégré. Self-service 30-50 % des transactions.",
+    "level_5_optimizing": "Self-service > 60 %. Chatbot IA multilingue. Souscription 100 % en ligne. Documents entièrement électroniques. Personnalisation IA."
+  },
+  "regulations": [{ "name": "Projet CIMA d'attestation électronique d'assurance auto", "issuing_body": "CIMA / Ministères des Transports des États membres", "scope": "Assureurs auto CIMA", "key_requirement": "Le projet CIMA d'attestation électronique (en cours d'implémentation dans plusieurs États membres) vise à permettre aux assurés de présenter leur attestation d'assurance auto sur leur smartphone lors des contrôles routiers. Les assureurs doivent émettre des attestations avec QR code vérifiable.", "compliance_deadline": "Déploiement progressif 2024-2026", "source_url": "https://www.cima-afrique.org" }],
+  "risks": [{ "title": "Fraude documentaire — falsification des attestations électroniques", "description": "La dématérialisation des attestations d'assurance auto crée un risque de falsification si les mesures de sécurité ne sont pas robustes (QR code non vérifiable, signature électronique insuffisante). Des attestations falsifiées en circulation aggravent le problème de sous-assurance et exposent les assureurs à des responsabilités.", "severity": "Élevé", "likelihood": "Élevée", "mitigation": "QR code avec vérification en temps réel sur une base de données centralisée CIMA. Signature électronique qualifiée. Horodatage et traçabilité. Intégration avec les fichiers de police routière." }],
+  "opportunities": [{ "title": "Renouvellement automatique digital — réduire le taux de déchéance de 30 %", "description": "En UEMOA, 25-35 % des polices auto arrivent à échéance sans renouvellement par oubli. Un système de renouvellement automatique avec notification SMS/WhatsApp J-30, J-15, J-7 et paiement en un clic via mobile money peut réduire ce taux de déchéance de 30 %, augmentant mécaniquement le volume de primes.", "impact_level": "Très élevé", "time_to_value": "6-12 mois", "prerequisite_maturity": "Niveau 3" }],
+  "ma_and_fundraising": [],
+  "zoom_case_study": { "entreprise": "Jubilee Insurance Kenya — 48 % de self-service, chatbot 'Jubi' à 92 % de satisfaction", "pays": "Kenya", "technologie": "Portail web + application mobile + chatbot IA Dialogflow + intégration M-Pesa", "description": "Jubilee Insurance Kenya a lancé en 2021 sa transformation self-service avec trois piliers : (1) Portail Jubilee Online avec authentification biométrique, souscription et renouvellement en ligne, déclaration sinistre avec upload de documents, suivi état sinistre en temps réel ; (2) Chatbot 'Jubi' (Google Dialogflow) capable de répondre à 850 types de questions fréquentes en anglais et swahili, avec escalade automatique vers un agent humain pour les cas complexes ; (3) Intégration M-Pesa pour le paiement des primes directement depuis le portail ou le chatbot. En 2023 : 48 % des transactions traitées en self-service (renouvellements, paiements, attestations, modifications), taux de satisfaction chatbot 92 %, délai moyen de réponse réduit de 48h à 2 minutes pour les questions FAQ.", "resultats": "48 % transactions en self-service · Chatbot 92 % satisfaction · 850 types de questions gérées · Délai réponse 48h → 2 min · Coût service client -42 % · M-Pesa intégré", "source": "Jubilee Insurance Annual Report 2023 / Google Cloud Jubilee Case Study 2023", "annee": "2023" },
+  "comparatif_organisations": {
+    "titre": "Maturité selfcare client — benchmark assureurs CIMA/UEMOA",
+    "colonnes": ["Organisation", "Portail assuré authentifié", "Attestations téléchargeables", "Chatbot IA opérationnel", "Modification contrat en ligne", "Self-service > 30 % transactions"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "Partiel", "✗", "✗", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+  "ai_context": {
+    "static_analysis": "Le selfcare est une priorité à double effet pour les assureurs UEMOA : il réduit les coûts de service client (un contact self-service coûte 10 fois moins qu'un contact en agence) et améliore la satisfaction des assurés urbains qui ne veulent plus se déplacer. L'attestation auto électronique conforme CIMA est l'élément déclencheur pour de nombreux assurés — c'est la fonctionnalité la plus attendue en 2024-2025.",
+    "maturity_max_description": "Portail assuré complet avec authentification sécurisée, souscription, renouvellement, modification de contrat, déclaration sinistre et suivi en temps réel. Attestations électroniques avec QR code CIMA. Chatbot IA francophone capable de gérer 80 % des demandes sans intervention humaine. Self-service > 60 % des transactions. Renouvellement automatique avec notification multi-canal.",
+    "scoring_rubric": {
+      "score_1_to_20": "Aucun self-service. Documents papier uniquement. Déplacement obligatoire en agence.",
+      "score_21_to_40": "Site web institutionnel avec FAQ. Quelques documents téléchargeables. Pas de portail authentifié.",
+      "score_41_to_60": "Portail assuré basique. Attestations téléchargeables. Paiement en ligne. Chatbot FAQ.",
+      "score_61_to_80": "Portail complet. Déclaration sinistre. Chatbot IA. Self-service 30-50 % des transactions.",
+      "score_81_to_100": "Self-service > 60 %. Chatbot IA avancé. Souscription 100 % en ligne. Documents électroniques."
+    },
+    "prompt_injection_context": "Cette compagnie d'assurance est évaluée sur sa maturité en selfcare client dans le contexte CIMA/UEMOA. Analyse la présence d'un portail assuré authentifié, la disponibilité des attestations électroniques, le déploiement d'un chatbot IA, la possibilité de modifier un contrat en ligne et le taux de self-service.",
+    "key_questions_for_llm": [
+      "Les assurés peuvent-ils accéder à un portail en ligne sécurisé pour consulter leurs polices, télécharger leurs attestations et quittances ?",
+      "Les attestations d'assurance (notamment auto) sont-elles disponibles en format électronique avec QR code vérifiable ?",
+      "Un chatbot ou assistant virtuel est-il disponible pour répondre aux questions fréquentes des assurés, y compris l'état de leurs sinistres ?",
+      "Les assurés peuvent-ils effectuer des modifications de contrat (changement d'adresse, ajout de conducteur, modification de garanties) entièrement en ligne ?",
+      "Quel est le taux de transactions traitées en self-service (sans intervention d'un agent) — renouvellements, paiements, déclarations ?"
+    ]
+  }
+}

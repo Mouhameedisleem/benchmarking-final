@@ -1,0 +1,229 @@
+{
+  "axe": "RH",
+  "sous_axe": "Agilité",
+  "secteur": "industrie",
+  "description": "Agilité organisationnelle dans l'industrie ivoirienne : capacité à adapter rapidement la production et les équipes aux variations de la demande, aux incidents techniques et aux évolutions réglementaires (EUDR, DGI CI), tout en maintenant les performances.",
+  "maturite_niveaux": {
+    "initial": "Organisation rigide et hiérarchique. Les décisions de production remontent systématiquement à la direction générale. Aucune capacité d'adaptation rapide. Les perturbations (panne, variation de commande) paralysent la production plusieurs jours.",
+    "en_developpement": "Quelques délégations informelles de décisions opérationnelles. Réunions de crise réactives sans processus structuré. Adaptation aux changements lente (1-2 semaines).",
+    "structure": "Processus de prise de décision opérationnelle définis. Équipes de production avec autonomie sur les aléas courants. Réunions de production quotidiennes. Gestion de crise documentée pour les pannes majeures.",
+    "avance": "Méthodes Lean/Agile adaptées à la production industrielle (sprints d'amélioration, Kanban de production digital). Équipes pluridisciplinaires capables de reconfigurer rapidement les lignes. SMED (changements de série rapides) systématisé.",
+    "optimise": "Organisation apprenante. S&OP (Sales & Operations Planning) digitalisé et fréquent (hebdomadaire). Simulation de scénarios de production. Capacité à répondre en <48h aux évolutions réglementaires majeures (nouveaux critères EUDR, changement normes CODINORM CI)."
+  },
+  "questions_diagnostic": [
+    {
+      "id": "RH_agilite_Q1",
+      "question": "En cas de panne majeure d'une ligne de production, combien de temps votre équipe met-elle à mobiliser les décisions nécessaires (arbitrage arrêt/maintenance/réallocation) ?",
+      "type": "choix_unique",
+      "options": [">1 jour (remontée DG obligatoire)", "4-8 heures (réunion de crise convoquée)", "1-4 heures (chef d'atelier a délégation limitée)", "<1 heure (chef de production a délégation complète et process défini)", "<30 min (cellule de crise digitale avec process et outils en place)"],
+      "poids": 25
+    },
+    {
+      "id": "RH_agilite_Q2",
+      "question": "Réalisez-vous des cycles d'amélioration continue structurés (Kaizen, sprints Lean, PDCA) avec des résultats mesurables publiés aux équipes ?",
+      "type": "choix_unique",
+      "options": ["Non, amélioration uniquement lors de crises", "Initiatives ponctuelles non formalisées", "Chantiers Kaizen trimestriels avec rapport de clôture", "Cycles d'amélioration continue mensuels avec KPIs publiés", "Système d'amélioration continue permanent (suggestions terrain intégrées, PDCA digitaux, benchmark UEMOA)"],
+      "poids": 20
+    },
+    {
+      "id": "RH_agilite_Q3",
+      "question": "Vos équipes de production peuvent-elles être reconfigurées rapidement pour répondre à un pic de commandes inattendu (ex: commande export urgente) ?",
+      "type": "choix_unique",
+      "options": ["Non, reconfiguration impossible à court terme", "Oui mais nécessite 1 semaine et des négociations RH complexes", "Oui sous 3-5 jours avec heures supplémentaires", "Oui sous 24-48h (polyvalence des opérateurs et planning digital flexible)", "Oui sous 4-8h (polyvalence certifiée, planning prédictif, pool de remplaçants Mobile Money CI)"],
+      "poids": 20
+    },
+    {
+      "id": "RH_agilite_Q4",
+      "question": "Lorsqu'une réglementation impacte votre industrie (nouveau critère EUDR, norme CODINORM CI, directive APDP CI), en combien de temps votre organisation peut-elle adapter ses processus ?",
+      "type": "choix_unique",
+      "options": [">3 mois (analyse + décision + déploiement)", "1-3 mois avec mobilisation exceptionnelle", "2-4 semaines avec task force dédiée", "<2 semaines (procédures d'adaptation documentées et équipes formées)", "<1 semaine (veille réglementaire digitalisée + processus d'adaptation pré-défini)"],
+      "poids": 20
+    },
+    {
+      "id": "RH_agilite_Q5",
+      "question": "Disposez-vous d'un processus S&OP (Sales & Operations Planning) digitalisé pour aligner production, approvisionnements et ventes sur un horizon de 3-6 mois ?",
+      "type": "choix_unique",
+      "options": ["Non, pas de planification formalisée", "Réunion de planification mensuelle informelle", "S&OP mensuel avec tableau Excel partagé", "S&OP hebdomadaire avec tableau de bord ERP partagé (demande vs. capacité)", "S&OP digitalisé temps réel avec simulation de scénarios et alertes automatiques"],
+      "poids": 15
+    }
+  ],
+  "pratiques_recommandees": [
+    {
+      "titre": "Polyvalence opérateurs et matrice de compétences digitale",
+      "description": "Constituer une matrice de compétences digitale dans le SIRH (Odoo HR ou Excel avancé) : pour chaque opérateur, ses postes maîtrisés (certifiés), en apprentissage et non maîtrisés. Objectif : 70% des opérateurs polyvalents sur au moins 2 postes. Permet de reconfigurer les lignes en <4h sur pic de commande ou panne. En contexte CI, la polyvalence est aussi une protection contre le turn-over élevé des opérateurs non qualifiés.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "Cellule de crise digitale pour incidents production",
+      "description": "Définir un processus de gestion de crise avec niveaux d'escalade clairs et outils digitaux : niveau 1 (chef d'équipe autonome <30 min), niveau 2 (chef de production via Teams/WhatsApp + dashboard), niveau 3 (DG + équipe crise). Documenter les scénarios types : panne SCADA, rupture matière première, incident qualité. Tests de simulation trimestriels.",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "fort"
+    },
+    {
+      "titre": "S&OP hebdomadaire digitalisé",
+      "description": "Instaurer une réunion S&OP hebdomadaire de 45 minutes pilotée par un tableau de bord ERP (Odoo MRP ou SAP PP) montrant : carnet de commandes vs. capacité de production, niveaux de stocks matières premières, disponibilité équipements (CMMS). Réduit les ruptures et les surcharges de production. Particulièrement critique pour les industries CI tributaires des récoltes saisonnières (cacao, anacarde).",
+      "priorite": "haute",
+      "effort": "moyen",
+      "impact": "très fort"
+    },
+    {
+      "titre": "Veille réglementaire digitalisée (EUDR, APDP CI, CODINORM CI)",
+      "description": "Mettre en place une veille réglementaire automatisée via Google Alerts ou un outil de veille (Mention, Feedly) sur les mots-clés : EUDR + Côte d'Ivoire, APDP CI, CODINORM CI + industrie, DGI CI facturation. Désigner un responsable veille réglementaire avec budget de formation dédié. L'EUDR en particulier évolue fréquemment (dates, critères) — une réaction rapide est compétitive.",
+      "priorite": "haute",
+      "effort": "faible",
+      "impact": "fort"
+    },
+    {
+      "titre": "Chantiers Kaizen mensuels avec résultats publiés",
+      "description": "Organiser des chantiers Kaizen mensuels de 2-3 jours sur un périmètre limité (une ligne, un processus). Documenter les résultats (gains mesurés) et les afficher sur le tableau de bord atelier et l'intranet. La publication des résultats renforce la culture d'amélioration et légitime les efforts des équipes terrain. Liaison avec le programme de suggestions digitales pour alimenter les chantiers.",
+      "priorite": "moyenne",
+      "effort": "moyen",
+      "impact": "fort"
+    }
+  ],
+  "outils_solutions": [
+    {
+      "categorie": "Planification et S&OP",
+      "solutions": [
+        {
+          "nom": "Odoo MRP / Manufacturing",
+          "description": "Module de planification de production Odoo intégré ERP. MPS (Master Production Schedule), ordres de fabrication, gestion des capacités. Adapté PME/ETI industrielles CI.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Inclus dans Odoo Enterprise ou module additionnel"
+        },
+        {
+          "nom": "SAP IBP (Integrated Business Planning)",
+          "description": "Solution S&OP avancée du groupe SAP pour les grandes industries. Simulations de scénarios, collaboration supply chain. Pertinent pour SIFCA CI, SUCAF CI.",
+          "pertinence_locale": "moyenne (grandes industries)",
+          "cout_estime": "Variable selon contrat groupe SAP"
+        }
+      ]
+    },
+    {
+      "categorie": "Gestion de la polyvalence",
+      "solutions": [
+        {
+          "nom": "Modules habilitations SIRH (Odoo HR, Sage)",
+          "description": "Gestion de la matrice de compétences et de la polyvalence dans le SIRH. Alertes automatiques sur les besoins de formation pour maintenir la polyvalence cible.",
+          "pertinence_locale": "très haute",
+          "cout_estime": "Inclus dans SIRH ou module additionnel mineur"
+        },
+        {
+          "nom": "Applications mobiles planning équipes",
+          "description": "Applications mobiles type Deputy, Workforce.com pour la gestion dynamique des plannings avec notifications aux opérateurs via WhatsApp ou SMS. Adaptées au contexte CI (mobile-first).",
+          "pertinence_locale": "haute",
+          "cout_estime": "3-5 $/employé/mois"
+        }
+      ]
+    }
+  ],
+  "indicateurs_cles": [
+    {
+      "nom": "Délai moyen de décision opérationnelle en situation de crise",
+      "description": "Temps entre la détection d'un incident majeur (panne, qualité hors norme) et la décision d'action corrective",
+      "unite": "heures",
+      "cible_sectorielle": "<1 heure"
+    },
+    {
+      "nom": "Taux de polyvalence des opérateurs",
+      "description": "Pourcentage des opérateurs maîtrisant au moins 2 postes de production",
+      "unite": "%",
+      "cible_sectorielle": ">65%"
+    },
+    {
+      "nom": "Délai d'adaptation aux nouvelles réglementations",
+      "description": "Temps entre la publication d'une nouvelle réglementation impactante et l'adaptation effective des processus",
+      "unite": "semaines",
+      "cible_sectorielle": "<3 semaines"
+    },
+    {
+      "nom": "Nombre de chantiers Kaizen réalisés",
+      "description": "Chantiers d'amélioration continue complétés avec résultats mesurés",
+      "unite": "chantiers/trimestre",
+      "cible_sectorielle": "3-6 par trimestre selon taille"
+    },
+    {
+      "nom": "Précision du S&OP",
+      "description": "Écart entre la production planifiée en S&OP et la production réelle (coefficient de variation)",
+      "unite": "%",
+      "cible_sectorielle": "<10% d'écart"
+    }
+  ],
+  "reglementations_normes": [
+    {
+      "nom": "EUDR Règlement EU 2023/1115",
+      "description": "L'EUDR introduit des obligations de diligence raisonnée avec des délais courts pour les modifications de critères. L'agilité organisationnelle est nécessaire pour adapter rapidement les processus de traçabilité lors des mises à jour du règlement.",
+      "organisme": "Union Européenne",
+      "obligatoire": true
+    },
+    {
+      "nom": "Code du Travail CI Loi 2015-532",
+      "description": "La flexibilité opérationnelle doit respecter les droits des travailleurs CI : heures supplémentaires encadrées, repos compensateur, délais de prévenance pour les changements d'horaires. La polyvalence et la mobilité interne sont encadrées.",
+      "organisme": "Ministère de l'Emploi CI",
+      "obligatoire": true
+    }
+  ],
+  "comparatif_organisations": {
+    "description": "Comparaison de l'agilité organisationnelle dans les industries ivoiriennes",
+    "lignes": [
+      {
+        "organisation": "BIJF CI (jus de fruits)",
+        "sop_digital": "S&OP hebdomadaire ERP",
+        "polyvalence": "72% opérateurs polyvalents",
+        "delai_crise": "<45 min",
+        "kaizen": "8 chantiers/an",
+        "niveau_global": "Avancé"
+      },
+      {
+        "organisation": "CIPA CI (anacarde)",
+        "sop_digital": "Odoo MRP mensuel",
+        "polyvalence": "55% opérateurs polyvalents",
+        "delai_crise": "<2h",
+        "kaizen": "4 chantiers/an",
+        "niveau_global": "Structuré"
+      },
+      {
+        "organisation": "PME textile Abidjan",
+        "sop_digital": "Non",
+        "polyvalence": "Faible, non mesuré",
+        "delai_crise": ">1 jour",
+        "kaizen": "Non",
+        "niveau_global": "Initial"
+      },
+      {
+        "organisation": "SUCAF CI (sucrerie)",
+        "sop_digital": "SAP IBP hebdomadaire",
+        "polyvalence": "81% opérateurs polyvalents",
+        "delai_crise": "<20 min",
+        "kaizen": "15+ chantiers/an",
+        "niveau_global": "Optimisé"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "BIJF CI — S&OP digitalisé et polyvalence : réponse à un pic export de +180% en 72 heures",
+    "contexte": "BIJF CI (Brasserie Ivoirienne de Jus de Fruits), Abidjan, 3 lignes d'embouteillage, 320 opérateurs. En mars 2024, BIJF reçoit une commande urgente d'un distributeur malien : 1,2 M de bouteilles de jus mangue en 5 jours (vs. capacité normale 450 000/semaine). Défi : +167% de volume demandé sur une semaine.",
+    "probleme": "Sans outil de planification dynamique, ce type de commande nécessitait 2-3 semaines d'organisation : recrutement temporaires, approvisionnements d'urgence, avenants aux contrats de travail. La commande aurait été refusée.",
+    "solution": "Grâce au S&OP hebdomadaire digitalisé (Odoo MRP) et à la matrice de polyvalence actualisée, le directeur de production a pu en 4 heures : (1) Simuler les 3 scénarios dans Odoo (heures sup, 3x8, recours intérimaires) ; (2) Identifier les 28 opérateurs polyvalents disponibles pour heures supplémentaires via la matrice SIRH ; (3) Commander les matières premières mangue en urgence via Orange Money Business CI (2 fournisseurs Korhogo en 1 heure) ; (4) Planifier le passage en 3x8 en conformité Code du Travail CI. Decision finale : acceptation de la commande sous 6 heures.",
+    "resultats": "Commande honorée en 5 jours : 1,18 M de bouteilles livrées. CA exceptionnel : 890 M FCFA. Marge nette : 185 M FCFA. Zéro non-conformité Code du Travail CI (heures sup dans les limites légales, repos compensateur planifié). Relation commerciale avec le distributeur malien pérennisée : contrat annuel 4,2 Mds FCFA signé 6 semaines plus tard. Avant le S&OP digitalisé, BIJF aurait refusé cette commande par incapacité à simuler et planifier rapidement."
+  },
+  "ai_context": {
+    "focus_llm": "Évaluer la capacité de l'entreprise industrielle ivoirienne à reconfigurer rapidement ses ressources humaines et sa production face aux aléas : pics de commandes export, pannes, évolutions réglementaires (EUDR), perturbations supply chain. Insister sur la polyvalence des opérateurs comme levier clé d'agilité en contexte CI (turn-over élevé, non-bancarisation complique le recrutement rapide d'intérimaires).",
+    "pieges_a_eviter": [
+      "Ne pas confondre agilité organisationnelle avec les méthodes Agile logicielles (Scrum) — l'agilité industrielle CI repose sur Lean, S&OP et polyvalence",
+      "Ne pas ignorer les contraintes du Code du Travail CI lors des recommandations de flexibilité : les heures supplémentaires sont encadrées et doivent être rémunérées",
+      "Éviter de recommander le recrutement d'intérimaires comme principale réponse à la flexibilité en CI : le marché de l'intérim industriel qualifié est limité à Abidjan",
+      "Ne pas négliger la saisonnalité des matières premières CI (cacao récolte oct-mars, anacarde mars-juin) dans les recommandations S&OP"
+    ],
+    "scoring_rubric": {
+      "score_1_to_20": "Organisation rigide. Toutes les décisions opérationnelles remontent à la DG. Aucun S&OP. Polyvalence nulle. Délai de réaction aux crises >1 jour. Pas d'amélioration continue.",
+      "score_21_to_40": "Quelques délégations informelles. Réunions de crise réactives sans processus. S&OP mensuel informel sur Excel. Polyvalence faible et non documentée.",
+      "score_41_to_60": "Processus de crise documentés. S&OP mensuel sur ERP. Matrice de polyvalence établie. Kaizen trimestriels. Délai de décision opérationnelle <2h.",
+      "score_61_to_80": "S&OP hebdomadaire digitalisé. Polyvalence >60% opérateurs. Veille réglementaire structurée. Chantiers Kaizen mensuels avec résultats publiés. Délai de décision en crise <45 min.",
+      "score_81_to_100": "Agilité opérationnelle avancée. S&OP avec simulation de scénarios. Polyvalence >75%. Adaptation réglementaire <2 semaines. Organisation apprenante avec indicateurs d'agilité mesurés et améliorés continuellement."
+    }
+  }
+}

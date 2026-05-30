@@ -1,0 +1,245 @@
+{
+  "meta": {
+    "axis": "PROCESS",
+    "sub_axis": "Agilité",
+    "sector": "_generic",
+    "language": "fr",
+    "version": "1.0",
+    "last_updated": "2026-05"
+  },
+
+  "trends": [
+    {
+      "title": "Agilité à l'échelle — SAFe, LeSS et Spotify Model",
+      "description": "Les organisations abandonnent Scrum au niveau équipe pour des frameworks d'agilité à l'échelle (SAFe, LeSS, Spotify Model) qui alignent des centaines d'équipes agiles autour d'objectifs communs.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "72 % des grandes organisations utilisent un framework agile à l'échelle (State of Agile 2024)",
+      "source": "Digital.ai State of Agile Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "DevOps et CI/CD comme standard de livraison",
+      "description": "L'intégration continue (CI) et le déploiement continu (CD) permettent de livrer des nouvelles fonctionnalités en production plusieurs fois par jour, réduisant le time-to-market de semaines à heures.",
+      "impact_level": "Très élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "83 % des équipes IT adoptent DevOps (DORA Report 2024)",
+      "source": "DORA (DevOps Research & Assessment) Report 2024",
+      "year": "2024"
+    },
+    {
+      "title": "OKRs — alignement stratégie et équipes agiles",
+      "description": "Les Objectives & Key Results remplacent les objectifs annuels par des cycles trimestriels, alignant les équipes agiles sur les priorités stratégiques tout en préservant leur autonomie d'exécution.",
+      "impact_level": "Élevé",
+      "horizon": "Immédiat",
+      "adoption_rate": "75 % des entreprises Fortune 500 utilisent les OKRs (Workboard 2024)",
+      "source": "Workboard OKR Survey 2024",
+      "year": "2024"
+    },
+    {
+      "title": "Platform Engineering — accélérer les équipes produit",
+      "description": "Les équipes Platform Engineering construisent des plateformes internes (IDP) que les squads produit utilisent en self-service, réduisant les dépendances et accélérant les livraisons.",
+      "impact_level": "Élevé",
+      "horizon": "12-24 mois",
+      "adoption_rate": "80 % des grandes organisations auront une équipe Platform Engineering d'ici 2026 (Gartner)",
+      "source": "Gartner Platform Engineering Trends 2024",
+      "year": "2024"
+    }
+  ],
+
+  "key_technologies": [
+    {
+      "name": "Outils de gestion agile (ALM)",
+      "category": "Pilotage agile",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne",
+      "leading_vendors": ["Jira (Atlassian)", "Azure DevOps", "Linear", "Shortcut", "Monday.com"]
+    },
+    {
+      "name": "CI/CD Pipelines",
+      "category": "Livraison continue",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Faible à moyenne en Afrique",
+      "leading_vendors": ["GitHub Actions", "GitLab CI", "Jenkins", "CircleCI", "Azure Pipelines"]
+    },
+    {
+      "name": "Plateformes OKR",
+      "category": "Alignement stratégique",
+      "maturity_stage": "Croissance",
+      "adoption_in_sector": "Faible",
+      "leading_vendors": ["Workboard", "Betterworks", "Lattice", "15Five", "Perdoo"]
+    },
+    {
+      "name": "Outils de collaboration agile",
+      "category": "Travail d'équipe distribuée",
+      "maturity_stage": "Mature",
+      "adoption_in_sector": "Moyenne",
+      "leading_vendors": ["Miro", "Confluence", "Notion", "Coda"]
+    }
+  ],
+
+  "market_leaders": {
+    "national": [
+      {
+        "organisation": "Leader sectoriel national (référence générique)",
+        "country": "Côte d'Ivoire",
+        "key_practice": "Équipes produit cross-fonctionnelles avec sprints bi-hebdomadaires et backlog partagé",
+        "differentiator": "Premier acteur sectoriel à déployer Jira et des rituels agiles formels",
+        "source": "Benchmark sectoriel Hsys 2024"
+      }
+    ],
+    "regional": [
+      {
+        "organisation": "MTN Group",
+        "country": "Afrique du Sud",
+        "key_practice": "Transformation agile sur 21 pays avec squads produit autonomes et OKRs trimestriels",
+        "differentiator": "Time-to-market réduit de 6 mois à 6 semaines pour les nouvelles fonctionnalités MoMo",
+        "source": "MTN Technology Report 2023"
+      }
+    ],
+    "international": [
+      {
+        "organisation": "Spotify",
+        "country": "Suède",
+        "key_practice": "Squads/Tribes/Chapters/Guilds — 5 000 ingénieurs en autonomie totale",
+        "differentiator": "1 000+ déploiements/jour, time-to-market ×4, modèle copié par 30+ entreprises mondiales",
+        "source": "Spotify Engineering Culture 2022 / McKinsey 2023"
+      },
+      {
+        "organisation": "ING Group",
+        "country": "Pays-Bas",
+        "key_practice": "350 Squads autonomes, 0 hiérarchie traditionnelle, OKRs trimestriels cascadés",
+        "differentiator": "Time-to-market 6 mois → 3 semaines, satisfaction employé +40 %",
+        "source": "ING Agile Transformation 2023 / McKinsey"
+      }
+    ]
+  },
+
+  "maturity_levels": {
+    "level_1_initial": "Développement en cascade (waterfall). Cycles de livraison > 6 mois. Aucun rituel agile. Silos IT/Métier imperméables.",
+    "level_2_developing": "Scrum adopté dans quelques équipes. Sprints formels mais sans cadence régulière. Product Owner nommé mais sans mandat réel.",
+    "level_3_defined": "Équipes agiles formalisées avec rituel hebdomadaire. DevOps en cours. Time-to-market < 3 mois. Backlog priorisé régulièrement.",
+    "level_4_managed": "Agilité à l'échelle (SAFe ou Spotify). CI/CD déployé. OKRs trimestriels. Product Owners avec mandat complet. Time-to-market < 6 semaines.",
+    "level_5_optimizing": "Livraison continue en production. 100+ déploiements/semaine. Squads autonomes. Platform Engineering actif. OKRs liés à la stratégie globale."
+  },
+
+  "regulations": [
+    {
+      "name": "ISO/IEC 29110 — Ingénierie logicielle pour très petites entités",
+      "issuing_body": "ISO / IEC",
+      "scope": "Équipes de développement logiciel de petite taille",
+      "key_requirement": "Processus de gestion de projet et d'ingénierie logicielle adaptés aux petites équipes agiles",
+      "compliance_deadline": "Sur demande",
+      "source_url": "https://www.iso.org/standard/62711.html"
+    }
+  ],
+
+  "risks": [
+    {
+      "title": "Agile theater — agilité de façade sans changement réel",
+      "description": "Adopter les rituels agiles (stand-up, sprint) sans changer la gouvernance, les budgets annuels et les approbations hiérarchiques génère une pseudo-agilité inefficace.",
+      "severity": "Élevé",
+      "likelihood": "Très élevée",
+      "mitigation": "Transformer la gouvernance budgétaire (financement par produit, pas par projet) et autonomiser réellement les Product Owners."
+    },
+    {
+      "title": "Dépendances inter-équipes non gérées",
+      "description": "Dans un contexte multi-équipes, les dépendances non maîtrisées annulent les gains d'agilité individuels. Une équipe rapide bloquée par une dépendance lente perd son avantage.",
+      "severity": "Élevé",
+      "likelihood": "Élevée",
+      "mitigation": "Adopter un framework d'agilité à l'échelle (SAFe PI Planning, LeSS) pour synchroniser les équipes interdépendantes."
+    },
+    {
+      "title": "Turnover élevé des Scrum Masters et Agile Coaches",
+      "description": "Les profils Agile Coach sont rares et très mobiles. La perte d'un Agile Coach expérimenté peut faire régresser une organisation de plusieurs niveaux de maturité.",
+      "severity": "Moyen",
+      "likelihood": "Élevée",
+      "mitigation": "Internaliser les compétences agile (formation certifiante interne) et ne pas dépendre de consultants externes."
+    }
+  ],
+
+  "opportunities": [
+    {
+      "title": "Réduction drastique du time-to-market",
+      "description": "Le passage d'un cycle waterfall (6-12 mois) à un cycle agile (2-6 semaines) permet de répondre aux opportunités marché 5-10× plus rapidement.",
+      "impact_level": "Très élevé",
+      "time_to_value": "6-18 mois",
+      "prerequisite_maturity": "Niveau 3"
+    },
+    {
+      "title": "Amélioration de la satisfaction des équipes IT",
+      "description": "Les équipes agiles autonomes affichent un eNPS 20-40 points supérieur aux équipes waterfall, réduisant le turnover et les coûts de recrutement.",
+      "impact_level": "Élevé",
+      "time_to_value": "3-12 mois",
+      "prerequisite_maturity": "Niveau 2"
+    },
+    {
+      "title": "Livraison de valeur incrémentale et validation marché rapide",
+      "description": "Les MVPs livrés en sprints permettent de tester des hypothèses marché à faible coût avant d'investir massivement dans des fonctionnalités non validées.",
+      "impact_level": "Élevé",
+      "time_to_value": "3-6 mois",
+      "prerequisite_maturity": "Niveau 2"
+    }
+  ],
+
+  "ma_and_fundraising": [
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Atlassian",
+      "target": "Loom",
+      "amount": "975 M$",
+      "date": "2023",
+      "strategic_rationale": "Intégrer la communication vidéo asynchrone dans la suite agile Jira/Confluence pour les équipes distribuées",
+      "source": "Atlassian Press Release 2023"
+    },
+    {
+      "type": "Acquisition",
+      "acquirer_or_investor": "Microsoft",
+      "target": "GitHub",
+      "amount": "7,5 Mds$",
+      "date": "2018",
+      "strategic_rationale": "Positionner Microsoft comme plateforme centrale du développement logiciel agile mondial",
+      "source": "Microsoft Press Release 2018"
+    }
+  ],
+
+  "zoom_case_study": {
+    "entreprise": "Spotify",
+    "pays": "Suède",
+    "technologie": "Squads & Tribes — modèle agile à l'échelle devenu référence mondiale",
+    "description": "Spotify a inventé en 2012 le modèle Squads/Tribes/Chapters/Guilds, permettant à 5 000 ingénieurs de travailler de façon autonome. Chaque Squad (6-12 pers.) possède son produit de bout en bout, déploie en production indépendamment et définit ses propres OKRs. Les Chapters maintiennent l'excellence technique transverse (sécurité, data, UX). Ce modèle est aujourd'hui adopté par ING, BBVA, Microsoft et 30+ grandes entreprises mondiales.",
+    "resultats": "1 000+ déploiements/jour · Time-to-market ×4 · 100M utilisateurs actifs · Modèle copié par 30+ entreprises mondiales · Référence agile citée dans 500+ publications",
+    "source": "Spotify Engineering Culture 2022 / McKinsey Agile at Scale 2023",
+    "annee": "2023"
+  },
+
+  "comparatif_organisations": {
+    "titre": "Maturité agilité organisationnelle — benchmark sectoriel (référence générique)",
+    "colonnes": ["Organisation", "Équipes agiles formalisées", "Rituels réguliers (sprints)", "DevOps / CI-CD", "Product Owner avec mandat", "Time-to-market < 6 semaines"],
+    "lignes": [
+      {"organisation": "Leader du marché",     "valeurs": ["✓", "✓", "✓", "✓", "✓"]},
+      {"organisation": "Acteur intermédiaire", "valeurs": ["Partiel", "✓", "✗", "Partiel", "✗"]},
+      {"organisation": "Acteur traditionnel",  "valeurs": ["✗", "✗", "✗", "✗", "✗"]}
+    ]
+  },
+
+  "ai_context": {
+    "static_analysis": "L'agilité organisationnelle est le multiplicateur de vitesse de toute transformation digitale. Une organisation agile livre de la valeur 4 à 10 fois plus vite qu'une organisation waterfall, s'adaptant en continu aux évolutions du marché.",
+    "maturity_max_description": "Livraison continue en production avec 100+ déploiements/semaine. Squads autonomes cross-fonctionnelles. OKRs trimestriels cascadés. Platform Engineering actif. Agilité à l'échelle (SAFe ou Spotify). Time-to-market < 2 semaines.",
+    "scoring_rubric": {
+      "score_1_to_20": "Développement waterfall pur. Cycles > 6 mois. Aucun rituel agile. Silos IT/Métier.",
+      "score_21_to_40": "Scrum dans quelques équipes. Sprints sans cadence régulière. Product Owner sans mandat réel.",
+      "score_41_to_60": "Équipes agiles formalisées. Rituels hebdomadaires. DevOps en cours. Time-to-market < 3 mois.",
+      "score_61_to_80": "Agilité à l'échelle. CI/CD déployé. OKRs trimestriels. Time-to-market < 6 semaines.",
+      "score_81_to_100": "Livraison continue. Squads autonomes. Platform Engineering. Time-to-market < 2 semaines."
+    },
+    "prompt_injection_context": "Cette organisation est évaluée sur sa maturité agile. Analyse l'existence d'équipes agiles formelles, la régularité des rituels (sprints, retrospectives), le déploiement DevOps/CI-CD, l'autonomie des Product Owners et la rapidité de mise en marché.",
+    "key_questions_for_llm": [
+      "Les équipes de développement sont-elles organisées en squads agiles cross-fonctionnelles ?",
+      "Des sprints réguliers avec rituels formels (planning, stand-up, rétro) sont-ils pratiqués ?",
+      "Un pipeline CI/CD est-il en place pour automatiser les déploiements en production ?",
+      "Les Product Owners disposent-ils d'un mandat réel pour prioriser le backlog et prendre des décisions ?",
+      "Quel est le time-to-market moyen pour une nouvelle fonctionnalité de la conception à la production ?"
+    ]
+  }
+}

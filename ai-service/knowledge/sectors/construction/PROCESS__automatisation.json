@@ -1,0 +1,310 @@
+{
+  "meta": {
+    "secteur": "btp",
+    "axe": "PROCESS",
+    "sous_axe": "automatisation",
+    "version": "1.0",
+    "langue": "fr",
+    "contexte_geographique": "Côte d'Ivoire / UEMOA"
+  },
+  "contexte_sectoriel": {
+    "description": "L'automatisation des processus BTP en Côte d'Ivoire est embryonnaire : moins de 3% des entreprises BTP CI utilisent des workflows automatisés au-delà d'Excel. Les opportunités d'automatisation sont pourtant considérables — génération automatique de métrés depuis le BIM, alertes automatiques de retard de planning, génération de situations de travaux depuis l'ERP, relances automatiques fournisseurs. Le PND CI 2021-2025 et les exigences BNETD CI/SIGMAP poussent à plus de rigueur et d'automatisation dans la gestion des marchés publics.",
+    "chiffres_cles": [
+      "< 3% des entreprises BTP CI utilisent des workflows automatisés",
+      "60-80% des tâches répétitives BTP (métrés, situations, reporting) sont automatisables",
+      "Gains de productivité estimés : 25-40% sur tâches administratives BTP par automatisation",
+      "85% des PME BTP CI utilisent encore Excel comme principal outil de gestion",
+      "Délai moyen génération situation mensuelle manuelle : 5-8 jours vs 4-6 heures avec ERP"
+    ],
+    "specificites_locales": [
+      "SIGMAP DGMP CI : API disponible pour intégration ERP, peu utilisée par les entreprises CI",
+      "BIM CI : < 5% de pénétration mais les 20 premiers groupes BTP l'adoptent progressivement",
+      "Connectivité chantier : réseau 4G Orange CI / MTN CI couvre 78% zones urbaines BTP (fiabilité variable)",
+      "ARTCI : réglementation drones CI permet automatisation surveillance chantier aérien",
+      "CNBTP CI agrément : les conditions incluent capacités de reporting (incitation indirecte à l'automatisation)"
+    ]
+  },
+  "definition_axe": {
+    "titre": "Automatisation des processus opérationnels BTP",
+    "description": "Capacité de l'entreprise BTP à automatiser les tâches répétitives et à fort volume : génération automatique de métrés depuis maquette BIM, calcul automatique de situations de travaux, alertes automatiques sur dépassements planning/budget, relances fournisseurs et sous-traitants, génération de rapports chantier périodiques, soumission automatisée SIGMAP. L'automatisation libère les ingénieurs et chefs de chantier pour des tâches à valeur ajoutée.",
+    "perimetre": [
+      "Automatisation métrés et quantitatifs depuis maquette BIM (Revit QTO)",
+      "Génération automatique situations de travaux mensuelles depuis ERP chantier",
+      "Alertes automatiques : dépassement planning (délais), dépassement budget, jalons manqués",
+      "Workflow approbation automatisé : devis sous-traitants, ordres de service, bons de livraison",
+      "Reporting automatique maître d'ouvrage : avancement physique et financier hebdomadaire/mensuel",
+      "Automatisation soumission SIGMAP : constitution dossier depuis bibliothèque documentaire"
+    ],
+    "technologies_cles": [
+      "Autodesk Revit QTO / Navisworks — extraction automatique métrés depuis maquette BIM",
+      "SAP S/4HANA Construction / Oracle Primavera — ERP avec workflows automatisés chantier",
+      "Power Automate / Zapier — automatisation flux documentaires BTP (approbations, relances)",
+      "Procore Workflows — automatisation processus chantier (RFI, submittal, change orders)",
+      "Drones DJI + logiciel Pix4D — surveillance aérienne automatisée chantier, rapports hebdomadaires",
+      "Python / RPA UiPath — automatisation SIGMAP (extraction données, génération dossiers)"
+    ]
+  },
+  "enjeux_specifiques": {
+    "enjeux": [
+      {
+        "titre": "Automatisation des métrés et du chiffrage",
+        "description": "Les métrés BTP (quantitatifs de travaux) sont réalisés manuellement en CI, prenant 3-8 jours pour un bâtiment de taille moyenne. L'extraction automatique depuis une maquette BIM (Revit QTO, ArchiCAD BIM) peut réduire ce délai à 2-4 heures avec une fiabilité supérieure. Avantage compétitif direct dans les réponses AO.",
+        "impact": "Réduction délai chiffrage 80%, amélioration précision métrés, capacité à répondre à plus d'AO"
+      },
+      {
+        "titre": "Automatisation des situations de travaux et décomptes",
+        "description": "La génération manuelle des situations mensuelles (états d'avancement financier) prend 5-8 jours aux équipes administratives CI. L'automatisation depuis l'ERP (avancement physique → décompte automatique → PDF → soumission maître d'ouvrage) réduit ce délai à quelques heures et accélère le recouvrement.",
+        "impact": "Trésorerie améliorée, délai encaissement situations réduit de 15-20 jours"
+      },
+      {
+        "titre": "Surveillance automatisée des chantiers par drones",
+        "description": "Les drones (sous réglementation ARTCI CI) permettent la surveillance aérienne hebdomadaire des chantiers : mesure automatique d'avancement, détection de désordres, orthophotographie de chantier. Comparé à la surveillance manuelle, les drones couvrent un chantier 10 fois plus vite avec mesures quantifiées.",
+        "impact": "Détection précoce des retards, preuve photographique datée, rapport automatique hebdomadaire"
+      }
+    ]
+  },
+  "niveaux_maturite": {
+    "niveau_1": {
+      "label": "Inexistant",
+      "description": "Aucune automatisation. Tous les processus BTP sont manuels : métrés sur papier, situations calculées à la main, reporting Word tapé manuellement. Aucune alerte automatique. Transmissions par email non structuré ou papier.",
+      "signes_distinctifs": [
+        "Métrés réalisés manuellement sur plans papier ou PDF non structuré",
+        "Situations de travaux calculées sur tableur Excel non interconnecté",
+        "Alertes planning transmises verbalement lors des réunions de chantier",
+        "Aucun workflow approbation : signature physique sur les bons de commande",
+        "Reporting maître d'ouvrage rédigé manuellement chaque mois"
+      ]
+    },
+    "niveau_2": {
+      "label": "Émergent",
+      "description": "Premières formules Excel automatisant partiellement les calculs. Quelques modèles de documents pré-remplis. Alertes manuelles par email standardisé. Pas encore de workflow automatisé ni d'intégration entre outils.",
+      "signes_distinctifs": [
+        "Excel avancé avec formules et TCD pour suivi coûts et avancement",
+        "Modèles de situations de travaux pré-structurés (saisie manuelle réduite)",
+        "Alertes email manuelles mais standardisées pour les retards",
+        "Bibliothèque documentaire AO partiellement automatisée (champs pré-remplis)",
+        "Aucune intégration entre les outils (chaque outil est une île)"
+      ]
+    },
+    "niveau_3": {
+      "label": "Structuré",
+      "description": "Premiers workflows automatisés dans un logiciel chantier (Procore, Fieldwire). Alertes automatiques sur jalons planifiés. Génération semi-automatique des situations de travaux depuis données ERP. Premiers métrés depuis BIM sur les chantiers BIM-ready.",
+      "signes_distinctifs": [
+        "Logiciel chantier avec workflows approbation automatisés (RFI, bons de commande)",
+        "Alertes automatiques : dépassement jalons planning, budget atteint à 80%",
+        "Situations de travaux générées semi-automatiquement depuis suivi avancement ERP",
+        "BIM QTO sur chantiers BIM : métrés automatiques pour les 2-3 chantiers pilotes",
+        "Reporting automatique hebdomadaire envoyé par email au maître d'ouvrage"
+      ]
+    },
+    "niveau_4": {
+      "label": "Optimisé",
+      "description": "ERP chantier avec automatisation complète du cycle administratif (commandes, réceptions, situations, facturation). BIM 5D pour le contrôle automatique des coûts. Drones sur les grands chantiers pour l'avancement automatisé. Workflow SIGMAP semi-automatisé.",
+      "signes_distinctifs": [
+        "ERP intégré : commande → réception → situation → facture en workflow automatisé",
+        "BIM 5D : lien Revit ↔ ERP pour contrôle coûts automatique par lot de travaux",
+        "Drones hebdomadaires : rapport avancement automatique avec orthophotos et mesures",
+        "Workflow SIGMAP : génération automatique des pièces administratives depuis base documentaire",
+        "IA planification : détection automatique des conflits de ressources et suggestions de réordonnancement"
+      ]
+    },
+    "niveau_5": {
+      "label": "Différenciant",
+      "description": "Automatisation de bout en bout avec IA prédictive. Le jumeau numérique du chantier (BIM + IoT + drones) alimente automatiquement tous les processus de reporting, facturation et contrôle qualité. Automatisation SIGMAP complète. Robots de construction sur sites pilotes.",
+      "signes_distinctifs": [
+        "Jumeau numérique temps réel : mise à jour automatique BIM depuis mesures terrain (drones, capteurs IoT)",
+        "IA prédictive : anticipation retards et dépassements budgétaires 2-4 semaines à l'avance",
+        "Automatisation complète cycle administratif : de la commande au paiement sous-traitant sans intervention manuelle",
+        "Soumission SIGMAP entièrement automatisée depuis bibliothèque documentaire intelligente",
+        "Pilote robots topographie et inspection qualité sur chantiers innovants"
+      ]
+    }
+  },
+  "indicateurs_cles": {
+    "indicateurs": [
+      {
+        "nom": "Taux d'automatisation des métrés",
+        "definition": "Part des métrés réalisés via extraction automatique BIM sur total métrés réalisés",
+        "unite": "%",
+        "cible_sectorielle": "> 50% des métrés via BIM QTO pour les entreprises BIM-équipées",
+        "frequence_mesure": "Par projet"
+      },
+      {
+        "nom": "Délai génération situation mensuelle de travaux",
+        "definition": "Temps entre fin de mois et émission de la situation de travaux au maître d'ouvrage",
+        "unite": "jours",
+        "cible_sectorielle": "< 2 jours (vs 5-8 jours en processus manuel)",
+        "frequence_mesure": "Mensuelle"
+      },
+      {
+        "nom": "Taux d'alertes planning automatisées",
+        "definition": "Pourcentage des dépassements de jalons détectés automatiquement avant l'échéance (alerte préventive)",
+        "unite": "%",
+        "cible_sectorielle": "> 80% des risques de retard détectés en avance automatiquement",
+        "frequence_mesure": "Hebdomadaire"
+      },
+      {
+        "nom": "Temps économisé par automatisation administrative",
+        "definition": "Heures/semaine économisées par les équipes administratives et de chantier grâce à l'automatisation",
+        "unite": "heures/semaine",
+        "cible_sectorielle": "> 15 heures/semaine économisées sur un chantier > 500 M FCFA",
+        "frequence_mesure": "Trimestrielle"
+      },
+      {
+        "nom": "Couverture drones chantiers",
+        "definition": "Part des chantiers > 200 M FCFA bénéficiant de survols automatisés (fréquence hebdomadaire minimum)",
+        "unite": "%",
+        "cible_sectorielle": "> 70% des grands chantiers avec surveillance drone hebdomadaire",
+        "frequence_mesure": "Mensuelle"
+      }
+    ]
+  },
+  "bonnes_pratiques": {
+    "pratiques": [
+      {
+        "titre": "Commencer par l'automatisation des métrés BIM",
+        "description": "L'automatisation des métrés (Revit QTO, ArchiCAD Schedule) offre le meilleur ROI initial : gain de temps immédiat (80%), réduction des erreurs de chiffrage (fréquentes en CI), avantage concurrentiel dans les AO. Former 2-3 ingénieurs BIM CI sur l'extraction QTO avant de déployer plus largement.",
+        "benefice": "ROI en 3-6 mois, précision métrés +40%, capacité à répondre à 2x plus d'AO"
+      },
+      {
+        "titre": "Automatiser les alertes planning avec MS Project ou Primavera",
+        "description": "Configurer des alertes automatiques (email ou notification) sur les jalons critiques (chemin critique) avec seuil d'alerte à J-7 et J-3. Inclure l'équipe maître d'ouvrage dans les destinataires pour une communication transparente. Format standardisé BNETD CI si projet public.",
+        "benefice": "Détection précoce des retards, réduction des dépassements délais de 30-40%"
+      },
+      {
+        "titre": "Intégrer drones ARTCI pour la surveillance automatique",
+        "description": "Obtenir l'autorisation de vol ARTCI CI (obligatoire) et mettre en place un protocole de vol hebdomadaire avec drone DJI Phantom/Matrice. Logiciel Pix4D ou DJI Terra pour l'orthophotographie automatique et le calcul de volumes (terrassement). Rapport PDF automatique envoyé au maître d'ouvrage.",
+        "benefice": "Avancement mesuré objectivement, réduction visites physiques maître d'ouvrage, preuves photographiques"
+      },
+      {
+        "titre": "Power Automate pour les workflows d'approbation documentaire",
+        "description": "Utiliser Microsoft Power Automate (disponible avec Microsoft 365, souvent déjà utilisé en CI) pour automatiser les workflows d'approbation : bons de commande, ordres de service, PV de réception. Intégration SharePoint pour l'archivage automatique. Coût marginal si Microsoft 365 déjà déployé.",
+        "benefice": "Réduction délai approbation 5-7 jours → 4-8 heures, traçabilité complète"
+      },
+      {
+        "titre": "Construire une bibliothèque documentaire SIGMAP automatisée",
+        "description": "Centraliser tous les documents récurrents SIGMAP (agrément CNBTP CI à jour, attestation DGTCP CI, certificat CNSS CI, références travaux, CV cadres) dans une GED avec alertes d'expiration automatiques. Génération semi-automatique du dossier AO type depuis cette bibliothèque.",
+        "benefice": "Délai constitution dossier AO réduit de 70%, zéro risque d'AO incomplet ou document expiré"
+      }
+    ]
+  },
+  "ecueils_frequents": {
+    "ecueils": [
+      {
+        "titre": "Automatiser sans avoir d'abord cartographié les processus",
+        "description": "Mettre en place des automatisations sur des processus informels et non standardisés génère des automatisations de chaos. Les erreurs se propagent plus vite et touchent plus de personnes.",
+        "solution": "Cartographier (BPMN) et standardiser les processus avant toute automatisation (voir sous-axe cartographie_processus)"
+      },
+      {
+        "titre": "Drones sans autorisation ARTCI",
+        "description": "L'utilisation de drones sur les chantiers CI sans autorisation ARTCI expose l'entreprise à des sanctions légales et à la saisie du matériel. Zones interdites : aérodromes (FHB, Bouaké, Man), zones militaires, centre-ville Abidjan.",
+        "solution": "Obtenir systématiquement l'autorisation ARTCI préalable, documenter les zones de vol autorisées"
+      },
+      {
+        "titre": "ERP sur-dimensionné abandonné après 12 mois",
+        "description": "Les PME BTP CI qui investissent dans SAP ou Oracle Primavera sans accompagnement suffisant (coût FCFA, formation, support) abandonnent ces outils après quelques mois faute de maîtrise.",
+        "solution": "Commencer par des outils Cloud SaaS simples (Procore, Fieldwire, Buildertrend) avant de migrer vers un ERP complet"
+      },
+      {
+        "titre": "Négliger la connectivité sur les chantiers CI",
+        "description": "Les automatisations qui nécessitent une connectivité Internet permanente (synchronisation temps réel) ne fonctionnent pas sur les chantiers CI en zones peu couvertes (axe Abidjan-Bouaké hors voies principales, zones rurales, chantiers miniers).",
+        "solution": "Privilégier les outils fonctionnant en mode offline avec synchronisation différée"
+      }
+    ]
+  },
+  "comparatif_organisations": {
+    "description": "Comparaison du niveau d'automatisation des processus BTP entre organisations représentatives en Côte d'Ivoire",
+    "lignes": [
+      {
+        "organisation": "COLAS CI",
+        "profil": "Filiale Bouygues Construction, leader travaux routiers CI",
+        "niveau_maturite": 4,
+        "points_forts": "ERP SAP S/4HANA avec workflows automatisés, BIM 5D sur projets > 500 M FCFA, drones surveillance chantier, situations générées automatiquement",
+        "points_faibles": "Automatisation concentrée sur grands chantiers, PME sous-traitantes pas intégrées aux workflows",
+        "initiatives_notables": "Drone programme : 8 drones actifs sur 12 chantiers CI, rapports avancement automatisés hebdomadaires"
+      },
+      {
+        "organisation": "AGEROUTE CI",
+        "profil": "Agence étatique gestion routes CI, inspections et suivi entretien",
+        "niveau_maturite": 3,
+        "points_forts": "Application mobile inspection routes automatisée, alertes entretien programmé, rapport automatique DGMP CI",
+        "points_faibles": "Pas d'intégration ERP complet, workflows approbation partiels",
+        "initiatives_notables": "Système GIS automatisé : cartographie réseau routier CI avec alertes de dégradation géolocalisées"
+      },
+      {
+        "organisation": "SATCI CI",
+        "profil": "Promoteur immobilier CI, logements résidentiels VEFA",
+        "niveau_maturite": 3,
+        "points_forts": "Workflow VEFA automatisé (signature contrats, suivi financement BHCI), alertes clients automatiques sur avancement",
+        "points_faibles": "Métrés encore manuels, pas de BIM QTO, surveillance chantier sans drones",
+        "initiatives_notables": "Portail client automatisé : notifications push avancement construction, jalons de paiement automatiques"
+      },
+      {
+        "organisation": "PME BTP CI classe D-E (< 50 employés)",
+        "profil": "Petite entreprise BTP locale, marchés locaux sous 100 M FCFA",
+        "niveau_maturite": 1,
+        "points_forts": "Quelques formules Excel, flexibilité et réactivité sans processus rigides",
+        "points_faibles": "Aucune automatisation, tout est manuel, dépendance aux personnes clés",
+        "initiatives_notables": "Usage croissant de WhatsApp Business pour la coordination chantier (non automatisé mais collaboratif)"
+      }
+    ]
+  },
+  "zoom_cas_usage": {
+    "titre": "AGEROUTE CI — Automatisation de la surveillance et du reporting d'entretien routier",
+    "contexte": "AGEROUTE CI gère 6 500 km de routes nationales et 7 200 km de routes régionales en Côte d'Ivoire. Le processus traditionnel de surveillance de l'état des routes mobilisait 120 agents itinérants réalisant des inspections visuelles mensuelles avec des formulaires papier. Les rapports d'état des routes prenaient 3-4 semaines à consolider au niveau central, retardant les décisions de maintenance. En 2022, AGEROUTE CI a lancé un programme d'automatisation de la surveillance et du reporting routier.",
+    "probleme": "Inspection visuelle : 1 300 km/mois/agent, subjectivité de l'évaluation, formulaires papier perdus ou incomplets. Délai rapport national : 3-4 semaines. Détection dégradations : réactive (après signalement usagers). Budget entretien mal alloué (zones sous-inspectées vs. sur-inspectées). Taux de routes en bon état : 52% (objectif PND CI : 70%).",
+    "solution_deployee": "Application mobile Android (offline-first) pour 120 agents terrain : grille de notation standardisée avec photos géolocalisées, synchronisation 4G à portée réseau. Drones DJI Matrice 300 (autorisation ARTCI CI) sur 8 axes prioritaires : orthophotographies mensuelles avec mesure automatique ornières et fissures (logiciel RoadBotics). Dashboard central Power BI : consolidation automatique en 24h. Alertes automatiques pour dégradations critiques (IRI > seuil). Rapport mensuel DGMP CI généré automatiquement.",
+    "resultats": {
+      "delai_rapport_national": "3-4 semaines → 24 heures (-96%)",
+      "couverture_inspection": "1 300 km/mois/agent → 2 100 km/mois/agent (+62% productivité)",
+      "detection_precoce": "Dégradations détectées en moyenne 6 semaines avant signalement usagers",
+      "precision_notation": "Variabilité inter-agents réduite de 38% grâce à la grille standardisée + photos",
+      "budget_entretien": "Allocation budget entretien optimisée : -22% coût total pour même niveau de service",
+      "taux_routes_bon_etat": "52% → 61% en 18 mois (progression vers objectif PND CI 70%)"
+    },
+    "enseignements": "L'automatisation drone sur 8 axes prioritaires (soit 15% du réseau) couvre les routes à plus fort trafic avec un ROI immédiat. La connectivité 4G reste le principal obstacle technique — 23% des zones inspectées sans couverture suffisante pour la synchronisation temps réel."
+  },
+  "ai_context": {
+    "scoring_rubric": {
+      "score_1_to_20": "Aucune automatisation. Tous les processus BTP sont manuels : métrés papier, situations Word/Excel non interconnectés, alertes verbales, reporting tapé manuellement. Dépendance totale aux personnes clés.",
+      "score_21_to_40": "Premières automatisations Excel (formules, TCD). Modèles documents standardisés. Alertes email manuelles standardisées. Pas de workflows ni d'intégration entre outils. Aucun BIM QTO, aucun drone.",
+      "score_41_to_60": "Workflows automatisés dans logiciel chantier (Procore, Fieldwire). Alertes automatiques jalons planning. Situations semi-automatiques depuis ERP. Premiers métrés BIM QTO. Reporting automatique maître d'ouvrage.",
+      "score_61_to_80": "ERP chantier intégré avec cycle administratif automatisé. BIM 5D pour contrôle coûts automatique. Drones sur grands chantiers avec rapports automatisés (autorisation ARTCI). Workflow SIGMAP semi-automatisé.",
+      "score_81_to_100": "Automatisation bout en bout avec IA prédictive. Jumeau numérique alimentant automatiquement tous les processus. Anticipation retards 2-4 semaines. Soumission SIGMAP entièrement automatisée. Robotique sur chantiers pilotes."
+    },
+    "questions_cles_diagnostic": [
+      "Vos métrés sont-ils réalisés manuellement, depuis Excel ou via extraction automatique BIM ?",
+      "En combien de jours produisez-vous votre situation mensuelle de travaux ?",
+      "Avez-vous des alertes automatiques pour les dépassements de jalons planning ou de budget ?",
+      "Utilisez-vous des drones pour la surveillance de vos chantiers ? (avec autorisation ARTCI ?)",
+      "Votre constitution de dossier AO pour SIGMAP est-elle partiellement automatisée ?"
+    ],
+    "pieges_evaluation": [
+      "Ne pas confondre utilisation d'Excel avancé (formules) et automatisation réelle via workflows intégrés",
+      "Vérifier que les drones mentionnés ont bien l'autorisation ARTCI (sinon risque réglementaire non-conforme)",
+      "Distinguer l'automatisation sur les grands chantiers (souvent niveau 3-4) de la réalité sur l'ensemble du portefeuille incluant les petits chantiers"
+    ]
+  },
+  "ressources": {
+    "references_reglementaires": [
+      "ARTCI CI — Réglementation usage drones (autorisation préalable, zones interdites)",
+      "SIGMAP DGMP CI — API intégration ERP disponible pour automatisation",
+      "Loi CI 2017-771 — Documents et signatures électroniques générés automatiquement",
+      "APDP CI Loi 2013-450 — Données collectées automatiquement sur chantier (géolocalisation, biométrie)"
+    ],
+    "outils_recommandes": [
+      "Autodesk Revit QTO / Navisworks — métrés automatiques BIM",
+      "Procore / Fieldwire — workflows automatisés gestion chantier cloud",
+      "Power Automate (Microsoft 365) — automatisation flux documentaires approbation",
+      "DJI Matrice 300 + Pix4D / RoadBotics — drones surveillance chantier automatisée",
+      "Oracle Primavera P6 / MS Project — alertes automatiques planning chemin critique",
+      "SAP S/4HANA Construction — ERP avec cycle administratif automatisé"
+    ],
+    "formations_certifications": [
+      "Formation ARTCI CI — Utilisation drones professionnels (certification pilote)",
+      "Autodesk Certified Professional — Revit BIM QTO automatisation métrés",
+      "Procore Certification — Workflows automatisés gestion chantier",
+      "Formation Power Automate — automatisation flux documentaires entreprise BTP"
+    ]
+  }
+}

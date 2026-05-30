@@ -6,6 +6,8 @@ public class RecommendationResponse {
     private String title;
     private String description;
     private String bestPractice;
+    private String source;
+    private String sourceUrl;
 
     public RecommendationResponse() {}
 
@@ -28,4 +30,8 @@ public class RecommendationResponse {
     public void setDescription(String description) { this.description = description; }
     public String getBestPractice() { return bestPractice; }
     public void setBestPractice(String bestPractice) { this.bestPractice = bestPractice; }
+    public String getSource() { return source; }
+    public void setSource(String source) { this.source = source; }
+    public String getSourceUrl() { return sourceUrl; }
+    public void setSourceUrl(String sourceUrl) { this.sourceUrl = sourceUrl; }
 }
