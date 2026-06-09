@@ -77,7 +77,8 @@ public class EmailService {
                                       List<RecommendationResponse> recommendations,
                                       BenchmarkResponse benchmark,
                                       Long evaluationId,
-                                      byte[] pdfBytes) {
+                                      byte[] pdfBytes,
+                                      byte[] pptBytes) {
         try {
             MimeMessage message = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
@@ -305,9 +306,16 @@ public class EmailService {
                 </div>
                 """;
 
-            String pdfNote = (pdfBytes != null && pdfBytes.length > 0)
-                    ? "Votre rapport PDF complet est joint à cet email."
-                    : "Connectez-vous sur la plateforme pour télécharger votre rapport PDF complet.";
+            boolean hasPdf = pdfBytes != null && pdfBytes.length > 0;
+            boolean hasPpt = pptBytes != null && pptBytes.length > 0;
+            String pdfNote;
+            if (hasPdf && hasPpt) {
+                pdfNote = "Votre rapport PDF et votre présentation PowerPoint sont joints à cet email.";
+            } else if (hasPdf) {
+                pdfNote = "Votre rapport PDF complet est joint à cet email.";
+            } else {
+                pdfNote = "Connectez-vous sur la plateforme pour télécharger votre rapport PDF complet.";
+            }
             html = html.formatted(
                     companyName,
                     globalScore, maturity, axesHtml.toString(),
@@ -318,13 +326,155 @@ public class EmailService {
                     evaluationId,
                     pdfNote);
             helper.setText(Objects.requireNonNull(html), true);
-            if (pdfBytes != null && pdfBytes.length > 0) {
-                String filename = "rapport-evaluation-" + companyName.replaceAll("[^a-zA-Z0-9]", "_") + ".pdf";
-                helper.addAttachment(filename, new ByteArrayResource(pdfBytes), "application/pdf");
+            if (hasPdf) {
+                String pdfFilename = "rapport-evaluation-" + companyName.replaceAll("[^a-zA-Z0-9]", "_") + ".pdf";
+                helper.addAttachment(pdfFilename, new ByteArrayResource(Objects.requireNonNull(pdfBytes)), "application/pdf");
+            }
+            if (hasPpt) {
+                String pptFilename = "presentation-" + companyName.replaceAll("[^a-zA-Z0-9]", "_") + ".pptx";
+                helper.addAttachment(pptFilename, new ByteArrayResource(Objects.requireNonNull(pptBytes)),
+                        "application/vnd.openxmlformats-officedocument.presentationml.presentation");
             }
             mailSender.send(message);
         } catch (MessagingException e) {
             throw new RuntimeException("Échec de l'envoi de l'email de résultats : " + e.getMessage(), e);
+        }
+    }
+
+    public void sendActionPlan(String toEmail, String companyName,
+                               List<com.iabenchmark.dto.ActionPlanResponse> tasks,
+                               Long evaluationId) {
+        try {
+            MimeMessage message = mailSender.createMimeMessage();
+            MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
+            helper.setFrom(Objects.requireNonNull(fromAddress));
+            helper.setTo(Objects.requireNonNull(toEmail));
+            helper.setSubject("Votre plan d'action de transformation digitale — " + companyName);
+
+            // ── Group tasks by phase ────────────────────────────────────────────
+            String[] phases = {"Phase 1 - Court terme", "Phase 2 - Moyen terme", "Phase 3 - Long terme"};
+            StringBuilder phasesHtml = new StringBuilder();
+            for (String phase : phases) {
+                List<com.iabenchmark.dto.ActionPlanResponse> phaseTasks = tasks.stream()
+                        .filter(t -> phase.equals(t.getPhase()))
+                        .sorted(java.util.Comparator.comparing(t ->
+                                "HAUTE".equals(t.getPriority()) ? 0 : "MOYENNE".equals(t.getPriority()) ? 1 : 2))
+                        .toList();
+                if (phaseTasks.isEmpty()) continue;
+
+                String phaseColor = phase.contains("Court") ? "#dc2626" : phase.contains("Moyen") ? "#d97706" : "#16a34a";
+                phasesHtml.append("<div style=\"margin-bottom:28px;\">")
+                    .append("<div style=\"display:flex;align-items:center;gap:10px;margin-bottom:14px;\">")
+                    .append("<div style=\"width:4px;height:24px;background:").append(phaseColor).append(";border-radius:2px;\"></div>")
+                    .append("<h3 style=\"color:#0f2242;font-size:15px;margin:0;font-weight:700;\">").append(phase).append("</h3>")
+                    .append("<span style=\"background:").append(phaseColor).append("22;color:").append(phaseColor)
+                    .append(";font-size:11px;font-weight:600;padding:2px 10px;border-radius:20px;\">")
+                    .append(phaseTasks.size()).append(" action").append(phaseTasks.size() > 1 ? "s" : "").append("</span>")
+                    .append("</div>");
+
+                for (com.iabenchmark.dto.ActionPlanResponse task : phaseTasks) {
+                    String pColor = "HAUTE".equals(task.getPriority()) ? "#dc2626"
+                            : "MOYENNE".equals(task.getPriority()) ? "#d97706" : "#16a34a";
+                    String axeShort = task.getAxe() != null ? switch (task.getAxe()) {
+                        case "METIER" -> "Métier";
+                        case "PROCESSUS" -> "Processus";
+                        case "SI" -> "SI";
+                        case "CANAUX_DISTRIBUTION" -> "Canaux & UX";
+                        case "MARKETING_COMMUNICATION" -> "Marketing";
+                        case "RH_CULTURE_DIGITALE" -> "RH & Culture";
+                        case "OFFRES_DIGITALES" -> "Offres";
+                        case "MODELE_OPERATIONNEL_INNOVATION" -> "Modèle Op.";
+                        case "IT_DATA" -> "IT & Data";
+                        default -> task.getAxe();
+                    } : "";
+                    String deadlineStr = task.getDeadline() != null ? task.getDeadline().toString() : "—";
+                    String respStr = task.getResponsible() != null && !task.getResponsible().isBlank()
+                            ? task.getResponsible() : "—";
+
+                    phasesHtml.append("<div style=\"background:#fff;border:1px solid #e2e8f0;border-left:4px solid ")
+                        .append(pColor).append(";border-radius:0 8px 8px 0;padding:14px 16px;margin-bottom:10px;\">")
+                        .append("<div style=\"display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px;\">")
+                        .append("<span style=\"font-weight:700;color:#0f2242;font-size:14px;\">").append(task.getTitle()).append("</span>")
+                        .append("<div style=\"display:flex;gap:6px;flex-shrink:0;\">")
+                        .append("<span style=\"background:").append(pColor).append(";color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;\">")
+                        .append(task.getPriority()).append("</span>")
+                        .append("<span style=\"background:#e8f0fe;color:#1768e5;font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;\">")
+                        .append(axeShort).append("</span>")
+                        .append("</div></div>");
+                    if (task.getDescription() != null && !task.getDescription().isBlank()) {
+                        phasesHtml.append("<p style=\"color:#4b5563;font-size:13px;margin:0 0 8px;line-height:1.6;\">")
+                            .append(task.getDescription()).append("</p>");
+                    }
+                    phasesHtml.append("<div style=\"display:flex;gap:16px;flex-wrap:wrap;\">")
+                        .append("<span style=\"color:#6b7280;font-size:12px;\">&#128100; ").append(respStr).append("</span>")
+                        .append("<span style=\"color:#6b7280;font-size:12px;\">&#128197; ").append(deadlineStr).append("</span>")
+                        .append("</div></div>");
+                }
+                phasesHtml.append("</div>");
+            }
+
+            long haute = tasks.stream().filter(t -> "HAUTE".equals(t.getPriority())).count();
+            long moyenne = tasks.stream().filter(t -> "MOYENNE".equals(t.getPriority())).count();
+            long basse = tasks.stream().filter(t -> "BASSE".equals(t.getPriority())).count();
+
+            String html = """
+                <div style="font-family:'Segoe UI',Arial,sans-serif;max-width:640px;margin:0 auto;background:#f8faff;border-radius:16px;overflow:hidden;">
+                  <div style="background:linear-gradient(135deg,#0f2242 0%%,#1768e5 100%%);padding:36px 40px;text-align:center;">
+                    <h1 style="color:#fff;margin:0;font-size:26px;font-weight:800;">IA Benchmark</h1>
+                    <p style="color:rgba(255,255,255,0.75);margin:8px 0 0;font-size:14px;">Plan d'action de transformation digitale</p>
+                  </div>
+                  <div style="padding:40px;">
+                    <h2 style="color:#0f2242;font-size:20px;margin:0 0 8px;">Bonjour, %s !</h2>
+                    <p style="color:#4b5563;line-height:1.7;margin:0 0 28px;">
+                      Votre consultant a finalisé et vous transmet votre <strong>plan d'action personnalisé</strong>
+                      issu de l'évaluation de maturité digitale. Ce plan détaille les actions prioritaires
+                      à mener pour atteindre vos objectifs de transformation.
+                    </p>
+
+                    <!-- KPIs -->
+                    <div style="display:flex;gap:12px;margin-bottom:28px;flex-wrap:wrap;">
+                      <div style="flex:1;min-width:120px;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:16px;text-align:center;">
+                        <div style="font-size:28px;font-weight:900;color:#0f2242;">%d</div>
+                        <div style="color:#6b7280;font-size:12px;margin-top:4px;">Actions au total</div>
+                      </div>
+                      <div style="flex:1;min-width:120px;background:#fff;border:1px solid #fee2e2;border-radius:10px;padding:16px;text-align:center;">
+                        <div style="font-size:28px;font-weight:900;color:#dc2626;">%d</div>
+                        <div style="color:#6b7280;font-size:12px;margin-top:4px;">Priorité HAUTE</div>
+                      </div>
+                      <div style="flex:1;min-width:120px;background:#fff;border:1px solid #fef3c7;border-radius:10px;padding:16px;text-align:center;">
+                        <div style="font-size:28px;font-weight:900;color:#d97706;">%d</div>
+                        <div style="color:#6b7280;font-size:12px;margin-top:4px;">Priorité MOYENNE</div>
+                      </div>
+                      <div style="flex:1;min-width:120px;background:#fff;border:1px solid #dcfce7;border-radius:10px;padding:16px;text-align:center;">
+                        <div style="font-size:28px;font-weight:900;color:#16a34a;">%d</div>
+                        <div style="color:#6b7280;font-size:12px;margin-top:4px;">Priorité BASSE</div>
+                      </div>
+                    </div>
+
+                    <!-- Action plan -->
+                    <div style="background:#f8faff;border-radius:12px;padding:24px;margin-bottom:28px;">
+                      <h3 style="color:#0f2242;font-size:16px;margin:0 0 20px;">&#9989; Actions planifiées</h3>
+                      %s
+                    </div>
+
+                    <!-- CTA -->
+                    <div style="text-align:center;margin:28px 0;">
+                      <a href="http://localhost:4200/results/%d"
+                         style="display:inline-block;background:linear-gradient(135deg,#0f2242 0%%,#1768e5 100%%);color:#fff;text-decoration:none;padding:14px 32px;border-radius:30px;font-size:15px;font-weight:700;">
+                        Consulter mes résultats en ligne
+                      </a>
+                    </div>
+                  </div>
+                  <div style="background:#f1f5f9;padding:20px 40px;text-align:center;">
+                    <p style="color:#9ca3af;font-size:12px;margin:0;">© 2025 IA Benchmark — Ne pas répondre à cet email</p>
+                  </div>
+                </div>
+                """.formatted(companyName, tasks.size(), haute, moyenne, basse, phasesHtml.toString(), evaluationId);
+
+            helper.setText(Objects.requireNonNull(html), true);
+            mailSender.send(message);
+        } catch (MessagingException e) {
+            throw new RuntimeException("Échec de l'envoi du plan d'action : " + e.getMessage(), e);
         }
     }
 

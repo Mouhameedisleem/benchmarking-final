@@ -24,6 +24,8 @@ import java.util.Objects;
 @Service
 public class AiService {
 
+    private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(AiService.class);
+
     private final EvaluationRepository evaluationRepository;
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper = new ObjectMapper();
@@ -288,17 +290,23 @@ public class AiService {
         }
 
         try {
+            log.info("Calling FastAPI benchmark for evaluation {}", evaluationId);
             @SuppressWarnings("unchecked")
             ResponseEntity<Map<String, Object>> response = restTemplate.postForEntity(
                 aiServiceUrl + "/api/ai/benchmark", payload, (Class<Map<String, Object>>)(Class<?>)Map.class);
 
             Map<String, Object> benchBody = response.getBody();
+            log.info("FastAPI benchmark responded with status={} bodyNull={}", response.getStatusCode(), benchBody == null);
             if (!response.getStatusCode().is2xxSuccessful() || benchBody == null) {
-                throw new RuntimeException("AI service returned non-2xx response");
+                throw new RuntimeException("AI service returned non-2xx or empty response: " + response.getStatusCode());
             }
-            return parseBenchmarkResponse(benchBody, evaluation);
+            log.info("Parsing benchmark response for evaluation {}", evaluationId);
+            BenchmarkResponse parsed = parseBenchmarkResponse(benchBody, evaluation);
+            log.info("Benchmark parsed successfully for evaluation {}", evaluationId);
+            return parsed;
         } catch (Exception e) {
-            throw new RuntimeException("AI benchmark service unavailable: " + e.getMessage());
+            log.error("getBenchmark failed for evaluation {}: {} — {}", evaluationId, e.getClass().getSimpleName(), e.getMessage(), e);
+            throw new RuntimeException("AI benchmark service unavailable: " + e.getMessage(), e);
         }
     }
 

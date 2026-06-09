@@ -25,6 +25,10 @@ export class ActionPlanComponent implements OnInit {
   editingTask: ActionPlanTask | null = null;
   editForm: ActionPlanRequest = {};
 
+  sending = false;
+  sendSuccess = '';
+  sendError = '';
+
   readonly AXES = ['METIER', 'PROCESSUS', 'SI', 'CANAUX_DISTRIBUTION',
                    'MARKETING_COMMUNICATION', 'RH_CULTURE_DIGITALE', 'OFFRES_DIGITALES',
                    'MODELE_OPERATIONNEL_INNOVATION', 'IT_DATA'];
@@ -124,6 +128,19 @@ export class ActionPlanComponent implements OnInit {
     if (!confirm('Supprimer cette tâche ?')) return;
     this.actionPlanService.delete(task.id).subscribe(() => {
       this.tasks = this.tasks.filter(t => t.id !== task.id);
+    });
+  }
+
+  // ── Send to client ──────────────────────────────────────────────────────────
+
+  sendToClient(): void {
+    if (!confirm('Envoyer le plan d\'action par email au client ?')) return;
+    this.sending = true;
+    this.sendSuccess = '';
+    this.sendError = '';
+    this.http.post<any>(`${environment.apiUrl}/action-plans/${this.evaluationId}/send`, {}).subscribe({
+      next: (res) => { this.sending = false; this.sendSuccess = res.message; },
+      error: (err) => { this.sending = false; this.sendError = err?.error?.message || 'Erreur lors de l\'envoi.'; }
     });
   }
 

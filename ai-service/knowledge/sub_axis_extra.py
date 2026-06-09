@@ -8,9 +8,9 @@ Import only this module; never import sector_loader directly from other layers.
 from __future__ import annotations
 
 try:
-    from knowledge.sector_loader import load_sub_axis, warmup_cache, clear_cache
+    from knowledge.sector_loader import load_sub_axis, load_sub_axis_fuzzy, warmup_cache, clear_cache
 except ImportError:
-    from sector_loader import load_sub_axis, warmup_cache, clear_cache  # type: ignore[no-redef]
+    from sector_loader import load_sub_axis, load_sub_axis_fuzzy, warmup_cache, clear_cache  # type: ignore[no-redef]
 
 
 def _normalize_sector_json(raw: dict) -> dict:
@@ -116,19 +116,31 @@ def _normalize_sector_json(raw: dict) -> dict:
 
 def get_sub_axis_extra(axis: str, sub_axis: str, sector: str = "") -> dict:
     """
-    Return enrichment data (zoom case study, comparatif, trends, risks …)
-    for a given axis / sub-axis pair, sector-aware with _generic fallback.
-
-    Args:
-        axis:     e.g. "BUSINESS", "INFORMATION_SYSTEM"
-        sub_axis: e.g. "Stratégie digitale", "Cybersécurité"
-        sector:   e.g. "banque", "sante", "retail" (case-insensitive, optional)
-
-    Returns:
-        dict — empty dict when no data is found, never raises.
+    Return enrichment data for a (axis, sub_axis) pair — exact key match only.
+    Use get_sub_axis_extra_fuzzy for AI-generated sub-axis names.
     """
     raw = load_sub_axis(axis, sub_axis, sector)
     return _normalize_sector_json(raw)
 
 
-__all__ = ["get_sub_axis_extra", "warmup_cache", "clear_cache"]
+def get_sub_axis_extra_fuzzy(axis: str, sub_axis: str, sector: str = "") -> dict:
+    """
+    Return enrichment data using fuzzy keyword matching.
+
+    Designed for AI-generated sub-axis names that don't exactly match
+    the static KB keys. Falls back to best keyword-overlap match.
+
+    Args:
+        axis:     e.g. "BUSINESS", "CANAUX_DISTRIBUTION"
+        sub_axis: e.g. "Expérience assuré digitale", "Stratégie InsurTech"
+        sector:   e.g. "insurance", "sante", "retail" (case-insensitive)
+
+    Returns:
+        dict with zoom_case_study, cadre_juridique, leaders, trends, etc.
+        Empty dict when no match found — never raises.
+    """
+    raw = load_sub_axis_fuzzy(axis, sub_axis, sector)
+    return _normalize_sector_json(raw)
+
+
+__all__ = ["get_sub_axis_extra", "get_sub_axis_extra_fuzzy", "warmup_cache", "clear_cache"]

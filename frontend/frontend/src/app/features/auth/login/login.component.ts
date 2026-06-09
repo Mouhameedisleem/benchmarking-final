@@ -135,7 +135,7 @@ import { AuthService } from '../../../core/services/auth.service';
                 <input type="checkbox" [(ngModel)]="rememberMe" name="remember">
                 <span>Se souvenir de moi</span>
               </label>
-              <a href="#" class="forgot-link">Mot de passe oublié ?</a>
+              <a routerLink="/forgot-password" class="forgot-link">Mot de passe oublié ?</a>
             </div>
 
             <!-- Erreur -->

@@ -14,6 +14,8 @@ from __future__ import annotations
 
 import json
 import logging
+import re
+import unicodedata
 from functools import lru_cache
 from pathlib import Path
 
@@ -162,6 +164,74 @@ def load_sub_axis(axis: str, sub_axis: str, sector: str = "") -> dict:
     # 3. Nothing found
     log.debug("No knowledge file found for '%s' (sector=%s)", key, sector)
     return {}
+
+
+def _normalize_words(text: str) -> set[str]:
+    """Normalize text to a set of lowercase accent-free words (len > 2)."""
+    nfkd = unicodedata.normalize("NFKD", text)
+    no_accent = "".join(c for c in nfkd if not unicodedata.combining(c))
+    words = re.split(r"[\s\-_&/().,;:+]+", no_accent.lower())
+    return {w for w in words if len(w) > 2}
+
+
+def load_sub_axis_fuzzy(axis: str, sub_axis: str, sector: str = "") -> dict:
+    """
+    Like load_sub_axis but with fuzzy keyword-overlap matching.
+
+    If the exact key "AXIS::sub_axis" is not in _SUB_AXIS_FILE_MAP (which
+    happens for AI-generated sector-specific sub-axis names), the function
+    scores every known key for the same axis by word overlap and returns
+    the best-matching sector JSON file.
+
+    Priority:
+      1. Exact key match  (delegates to load_sub_axis)
+      2. Best fuzzy match → sectors/{sector}/{file}.json
+      3. Best fuzzy match → sectors/_generic/{file}.json
+      4. {} (safe empty dict — never raises)
+    """
+    # Step 1 — exact match (fast path)
+    result = load_sub_axis(axis, sub_axis, sector)
+    if result:
+        log.debug("Fuzzy: exact hit for '%s::%s'", axis, sub_axis)
+        return result
+
+    # Step 2 — fuzzy: score all keys for this axis
+    sub_words = _normalize_words(sub_axis)
+    if not sub_words:
+        return {}
+
+    best_filename: str | None = None
+    best_score = 0
+
+    for key, filename in _SUB_AXIS_FILE_MAP.items():
+        key_axis, _, key_sub = key.partition("::")
+        if key_axis != axis:
+            continue
+        score = len(sub_words & _normalize_words(key_sub))
+        if score > best_score:
+            best_score = score
+            best_filename = filename
+
+    if not best_filename or best_score == 0:
+        log.debug("Fuzzy: no match found for '%s::%s'", axis, sub_axis)
+        return {}
+
+    log.debug(
+        "Fuzzy: best match for '%s::%s' → %s (score=%d)",
+        axis, sub_axis, best_filename, best_score,
+    )
+
+    # Step 3 — load the best-matching file with sector priority
+    sector_clean = sector.lower().strip()
+    resolved = _resolve_alias(sector_clean) if sector_clean else ""
+
+    if resolved and resolved != "_generic":
+        data = _load_json_file(_file_path(resolved, best_filename))
+        if data is not None:
+            return data
+
+    data = _load_json_file(_file_path("_generic", best_filename))
+    return data if data is not None else {}
 
 
 def list_available_sectors() -> list[str]:

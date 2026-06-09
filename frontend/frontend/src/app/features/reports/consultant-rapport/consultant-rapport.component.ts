@@ -237,16 +237,16 @@ interface CompanyView {
                         </span>
                       </td>
                       <td class="text-center py-2">
-                        <span class="fw-bold" [style.color]="scoreColor(a.answerValue ?? 0)">
-                          {{ a.answerValue ?? 0 }}/5
+                        <span class="fw-bold" [style.color]="scoreColor(a.answerValue)">
+                          {{ a.answerValue }}/5
                         </span>
                       </td>
                       <td class="text-center py-2">
                         <span class="badge rounded-pill px-2"
-                              [style.background]="scoreColor(a.answerValue ?? 0) + '20'"
-                              [style.color]="scoreColor(a.answerValue ?? 0)"
+                              [style.background]="scoreColor(a.answerValue) + '20'"
+                              [style.color]="scoreColor(a.answerValue)"
                               style="font-size:11px;">
-                          {{ (a.normalizedScore ?? 0) | number:'1.0-0' }}
+                          {{ a.normalizedScore | number:'1.0-0' }}
                         </span>
                       </td>
                       <td class="py-2 pe-4">

@@ -89,10 +89,10 @@ public class Evaluation {
     @Column(nullable = false)
     private boolean validated = false;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "LONGTEXT")
     private String recommendationsJson;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "LONGTEXT")
     private String benchmarkJson;
 
     private LocalDateTime createdAt;

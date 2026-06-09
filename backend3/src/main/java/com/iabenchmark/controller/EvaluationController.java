@@ -40,6 +40,7 @@ import java.util.Objects;
 @RestController
 @RequestMapping("/api/evaluations")
 public class EvaluationController {
+    private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(EvaluationController.class);
     private final EvaluationService evaluationService;
     private final RecommendationService recommendationService;
     private final AiService aiService;
@@ -79,11 +80,14 @@ public class EvaluationController {
             if (ev != null && ev.isPendingReview()) {
                 String companyName = ev.getCompany().getName();
                 String message = companyName + " vient de soumettre son évaluation";
+                // Notifie le consultant assigné si présent
                 if (ev.getCompany().getConsultant() != null) {
                     notificationSseService.notifyUser(Objects.requireNonNull(ev.getCompany().getConsultant().getId()), message, "EVALUATION_SUBMITTED");
-                } else {
-                    notificationSseService.notifyAllConsultantsAndAdmins(message, "EVALUATION_SUBMITTED");
                 }
+                // Notifie toujours tous les admins connectés
+                userRepository.findByRole(com.iabenchmark.model.Role.ADMIN).forEach(admin ->
+                    notificationSseService.notifyUser(Objects.requireNonNull(admin.getId()), message, "EVALUATION_SUBMITTED")
+                );
             }
         } catch (Exception ignored) {}
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
@@ -381,7 +385,9 @@ public class EvaluationController {
             bench = aiService.getBenchmark(id, consultantPrompt);
             aiService.storeBenchmark(evaluation, bench);
         } catch (Exception e) {
-            return ResponseEntity.status(503).build();
+            log.error("regenerate-benchmark failed for evaluation {}: {}", id, e.getMessage(), e);
+            return ResponseEntity.status(503)
+                    .body(null);
         }
         return ResponseEntity.ok(bench);
     }
@@ -390,7 +396,10 @@ public class EvaluationController {
     @PreAuthorize("hasAnyRole('ADMIN', 'CONSULTANT')")
     public ResponseEntity<Map<String, String>> validateAndSendResults(
             @PathVariable Long id,
-            @RequestBody List<RecommendationResponse> finalRecommendations) {
+            @RequestBody com.iabenchmark.dto.ValidateRequest request) {
+        List<RecommendationResponse> finalRecommendations =
+                request.getRecommendations() != null ? request.getRecommendations() : List.of();
+
         Evaluation evaluation = evaluationRepository.findById(Objects.requireNonNull(id))
                 .orElseThrow(() -> new EntityNotFoundException("Evaluation not found: " + id));
 
@@ -402,14 +411,21 @@ public class EvaluationController {
         try { actionPlanService.generateFromRecommendations(id, finalRecommendations); } catch (Exception ignored) {}
 
         String companyEmail = evaluation.getCompany().getEmail();
-        String companyName = evaluation.getCompany().getName();
+        String companyName  = evaluation.getCompany().getName();
         String emailStatus;
         if (companyEmail != null && !companyEmail.isBlank()) {
             try {
                 BenchmarkResponse benchmark = aiService.getStoredBenchmark(evaluation);
                 byte[] pdfBytes = null;
                 try { pdfBytes = pdfReportService.generateReport(id); } catch (Exception ignored) {}
-                emailService.sendEvaluationResults(companyEmail, companyName, evaluation, finalRecommendations, benchmark, id, pdfBytes);
+                // Decode PPT from base64 if provided by the frontend
+                byte[] pptBytes = null;
+                if (request.getPptBase64() != null && !request.getPptBase64().isBlank()) {
+                    try { pptBytes = java.util.Base64.getDecoder().decode(request.getPptBase64()); }
+                    catch (Exception ignored) {}
+                }
+                emailService.sendEvaluationResults(companyEmail, companyName, evaluation,
+                        finalRecommendations, benchmark, id, pdfBytes, pptBytes);
                 emailStatus = "Résultats envoyés à " + companyEmail;
             } catch (Exception e) {
                 emailStatus = "Validation enregistrée. Erreur d'envoi email : " + e.getMessage();

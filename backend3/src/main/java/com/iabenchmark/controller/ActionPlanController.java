@@ -57,6 +57,17 @@ public class ActionPlanController {
         return ResponseEntity.noContent().build();
     }
 
+    @PostMapping("/{evaluationId}/send")
+    @PreAuthorize("hasAnyRole('ADMIN', 'CONSULTANT')")
+    public ResponseEntity<Map<String, String>> sendToClient(@PathVariable Long evaluationId) {
+        try {
+            String msg = actionPlanService.sendToClient(evaluationId);
+            return ResponseEntity.ok(Map.of("message", msg));
+        } catch (IllegalStateException e) {
+            return ResponseEntity.badRequest().body(Map.of("message", e.getMessage()));
+        }
+    }
+
     @GetMapping("/{evaluationId}/export")
     @PreAuthorize("hasAnyRole('ADMIN', 'CONSULTANT')")
     public ResponseEntity<byte[]> exportExcel(@PathVariable Long evaluationId) {

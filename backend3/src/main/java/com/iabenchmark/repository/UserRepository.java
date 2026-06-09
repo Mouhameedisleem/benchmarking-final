@@ -1,5 +1,6 @@
 package com.iabenchmark.repository;
 
+import com.iabenchmark.model.Role;
 import com.iabenchmark.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
@@ -12,4 +13,5 @@ public interface UserRepository extends JpaRepository<User, Long> {
     boolean existsByCompanyId(Long companyId);
     Optional<User> findFirstByCompanyIdOrderByCreatedAtAsc(Long companyId);
     List<User> findByCompanyId(Long companyId);
+    List<User> findByRole(Role role);
 }

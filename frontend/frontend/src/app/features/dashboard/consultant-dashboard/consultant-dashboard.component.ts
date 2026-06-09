@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router, NavigationEnd } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { forkJoin } from 'rxjs';
+import { forkJoin, Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators';
 import { AuthService } from '../../../core/services/auth.service';
 import { User } from '../../../core/models/user.model';
 import { environment } from '../../../../environments/environment';
@@ -411,7 +412,7 @@ interface DonutSegment {
     </div>
   `
 })
-export class ConsultantDashboardComponent implements OnInit {
+export class ConsultantDashboardComponent implements OnInit, OnDestroy {
   currentUser: User | null = null;
   allEvals: EvalSummary[] = [];
   pendingEvals: PendingEval[] = [];
@@ -430,12 +431,21 @@ export class ConsultantDashboardComponent implements OnInit {
     { level: 'OPTIMISE',      label: 'Optimisé',       color: '#22c55e' },
   ];
 
-  constructor(private authService: AuthService, private http: HttpClient) {}
+  private routerSub!: Subscription;
+
+  constructor(private authService: AuthService, private http: HttpClient, private router: Router) {}
 
   ngOnInit() {
     this.currentUser = this.authService.getCurrentUser();
     this.load();
+    // Reload data each time the user navigates back to this page
+    this.routerSub = this.router.events.pipe(
+      filter(e => e instanceof NavigationEnd),
+      filter(e => (e as NavigationEnd).urlAfterRedirects === '/consultant/dashboard')
+    ).subscribe(() => { this.loading = true; this.load(); });
   }
+
+  ngOnDestroy() { this.routerSub?.unsubscribe(); }
 
   reload() { this.loading = true; this.load(); }
 

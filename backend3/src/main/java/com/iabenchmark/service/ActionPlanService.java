@@ -24,11 +24,29 @@ public class ActionPlanService {
 
     private final ActionPlanRepository actionPlanRepository;
     private final EvaluationRepository evaluationRepository;
+    private final EmailService emailService;
 
     public ActionPlanService(ActionPlanRepository actionPlanRepository,
-                             EvaluationRepository evaluationRepository) {
+                             EvaluationRepository evaluationRepository,
+                             EmailService emailService) {
         this.actionPlanRepository = actionPlanRepository;
         this.evaluationRepository = evaluationRepository;
+        this.emailService = emailService;
+    }
+
+    public String sendToClient(Long evaluationId) {
+        Evaluation evaluation = evaluationRepository.findById(Objects.requireNonNull(evaluationId))
+                .orElseThrow(() -> new EntityNotFoundException("Evaluation not found: " + evaluationId));
+        String companyEmail = evaluation.getCompany().getEmail();
+        if (companyEmail == null || companyEmail.isBlank()) {
+            throw new IllegalStateException("Aucun email configuré pour cette entreprise.");
+        }
+        List<ActionPlanResponse> tasks = getByEvaluation(evaluationId);
+        if (tasks.isEmpty()) {
+            throw new IllegalStateException("Aucune action disponible dans le plan d'action.");
+        }
+        emailService.sendActionPlan(companyEmail, evaluation.getCompany().getName(), tasks, evaluationId);
+        return "Plan d'action envoyé à " + companyEmail;
     }
 
     public List<ActionPlanResponse> generateFromRecommendations(Long evaluationId,

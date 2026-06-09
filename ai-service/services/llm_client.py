@@ -92,7 +92,7 @@ PROVIDER_CHAINS: dict[TaskType, list[ProviderEndpoint]] = {
 
     # ─── 1. QUESTIONNAIRE — phi4-mini local (primary) → Groq 70B → Groq 8B fallback
     TaskType.QUESTIONNAIRE: [
-        ProviderEndpoint("ollama:phi4-mini",           _OLLAMA,     "OLLAMA_API_KEY",     "phi4-mini",                                  4096, 180.0),
+        ProviderEndpoint("ollama:phi4-mini",           _OLLAMA,     "OLLAMA_API_KEY",     "phi4-mini",                                  4096, 8.0),
         ProviderEndpoint("groq:llama3.3-70b",          _GROQ,       "GROQ_API_KEY",       "llama-3.3-70b-versatile",                    4096, 90.0),
         ProviderEndpoint("groq:llama3.1-8b",           _GROQ,       "GROQ_API_KEY",       "llama-3.1-8b-instant",                       3072, 60.0),
     ],
@@ -100,29 +100,33 @@ PROVIDER_CHAINS: dict[TaskType, list[ProviderEndpoint]] = {
     # ─── 2. SCORING — Ollama phi4-mini (local) → Groq 70B fallback ──────────
     # Goal: Raisonnement, nuance FR (analyse réponses + synthèse)
     TaskType.SCORING: [
-        ProviderEndpoint("ollama:phi4-mini",           _OLLAMA,     "OLLAMA_API_KEY",     "phi4-mini",                                  3072, 180.0),
+        ProviderEndpoint("ollama:phi4-mini",           _OLLAMA,     "OLLAMA_API_KEY",     "phi4-mini",                                  3072, 8.0),
         ProviderEndpoint("groq:llama3.3-70b",          _GROQ,       "GROQ_API_KEY",       "llama-3.3-70b-versatile",                    4096, 90.0),
+        ProviderEndpoint("groq:llama3.1-8b",           _GROQ,       "GROQ_API_KEY",       "llama-3.1-8b-instant",                       3072, 60.0),
     ],
 
-    # ─── 3. RECOMMENDATIONS — Ollama phi4-mini (local) → Groq 70B fallback ──
+    # ─── 3. RECOMMENDATIONS — Ollama phi4-mini (local) → Groq 70B → Groq 8B fallback
     # Goal: Raisonnement structuré + recommandations stratégiques
     TaskType.RECOMMENDATIONS: [
-        ProviderEndpoint("ollama:phi4-mini",           _OLLAMA,     "OLLAMA_API_KEY",     "phi4-mini",                                  3072, 180.0),
+        ProviderEndpoint("ollama:phi4-mini",           _OLLAMA,     "OLLAMA_API_KEY",     "phi4-mini",                                  3072, 8.0),
         ProviderEndpoint("groq:llama3.3-70b",          _GROQ,       "GROQ_API_KEY",       "llama-3.3-70b-versatile",                    4096, 90.0),
+        ProviderEndpoint("groq:llama3.1-8b",           _GROQ,       "GROQ_API_KEY",       "llama-3.1-8b-instant",                       3072, 60.0),
     ],
 
-    # ─── 4. BENCHMARKING — Ollama phi4-mini (local) → Groq 70B fallback ─────
+    # ─── 4. BENCHMARKING — Ollama phi4-mini (local) → Groq 70B → Groq 8B fallback
     # Goal: Analyse sectorielle, longue génération
     TaskType.BENCHMARKING: [
-        ProviderEndpoint("ollama:phi4-mini",           _OLLAMA,     "OLLAMA_API_KEY",     "phi4-mini",                                  4096, 240.0),
+        ProviderEndpoint("ollama:phi4-mini",           _OLLAMA,     "OLLAMA_API_KEY",     "phi4-mini",                                  4096, 8.0),
         ProviderEndpoint("groq:llama3.3-70b",          _GROQ,       "GROQ_API_KEY",       "llama-3.3-70b-versatile",                    4096, 90.0),
+        ProviderEndpoint("groq:llama3.1-8b",           _GROQ,       "GROQ_API_KEY",       "llama-3.1-8b-instant",                       4096, 60.0),
     ],
 
     # ─── 5. CONSULTANT_REVIEW — Ollama phi4-mini (local) → Groq 70B fallback
     # Goal: Suivi d'instruction, qualité (custom prompt du consultant)
     TaskType.CONSULTANT_REVIEW: [
-        ProviderEndpoint("ollama:phi4-mini",           _OLLAMA,     "OLLAMA_API_KEY",     "phi4-mini",                                  3072, 180.0),
+        ProviderEndpoint("ollama:phi4-mini",           _OLLAMA,     "OLLAMA_API_KEY",     "phi4-mini",                                  3072, 8.0),
         ProviderEndpoint("groq:llama3.3-70b",          _GROQ,       "GROQ_API_KEY",       "llama-3.3-70b-versatile",                    4096, 90.0),
+        ProviderEndpoint("groq:llama3.1-8b",           _GROQ,       "GROQ_API_KEY",       "llama-3.1-8b-instant",                       3072, 60.0),
     ],
 }
 
@@ -245,11 +249,9 @@ async def _call_one_provider(ep: ProviderEndpoint, messages: list, temperature: 
     if asks_json and ep.json_mode:
         payload["response_format"] = {"type": "json_object"}
 
-    headers = {
-        "Authorization": f"Bearer {ep.key}",
-        "Content-Type":  "application/json",
-        **ep.extra_headers,
-    }
+    headers: dict[str, str] = {"Content-Type": "application/json", **ep.extra_headers}
+    if ep.key:
+        headers["Authorization"] = f"Bearer {ep.key}"
 
     last_exc: Exception | None = None
     for attempt in range(_MAX_RETRIES):
@@ -296,6 +298,9 @@ async def _call_one_provider(ep: ProviderEndpoint, messages: list, temperature: 
             logger.debug("[%s] OK — %d tokens out (attempt=%d)", ep.name, len(content.split()), attempt + 1)
             return content
 
+        except asyncio.CancelledError:
+            # Server is shutting down / hot-reload — propagate immediately, don't retry
+            raise
         except RuntimeError:
             raise
         except (httpx.TimeoutException, httpx.ConnectError) as exc:

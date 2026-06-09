@@ -187,38 +187,6 @@ import { User } from '../../../core/models/user.model';
           </div>
         </div>
 
-        <!-- Référentiels -->
-        <div class="col-md-6 col-lg-3">
-          <div class="card border-0 shadow-sm h-100 rounded-4" style="border-left:4px solid #6366f1 !important;">
-            <div class="card-body p-4">
-              <div class="d-flex align-items-center mb-3">
-                <div class="rounded-3 d-flex align-items-center justify-content-center me-3"
-                     style="width:48px;height:48px;background:#ede9fe;">
-                  <i class="fas fa-brain fs-5" style="color:#6366f1;"></i>
-                </div>
-                <div>
-                  <div class="fw-bold">Référentiels & Questions</div>
-                  <div class="text-muted small">Base de connaissance IA</div>
-                </div>
-              </div>
-              <ul class="list-unstyled text-muted small mb-3">
-                <li><i class="fas fa-check text-success me-2"></i>7 frameworks internationaux</li>
-                <li><i class="fas fa-check text-success me-2"></i>Gartner, McKinsey, ISO, COBIT…</li>
-                <li><i class="fas fa-check text-success me-2"></i>Base de questions administrable</li>
-              </ul>
-              <div class="d-flex gap-2">
-                <a routerLink="/consultant/frameworks" class="btn btn-sm rounded-pill px-3"
-                   style="background:#6366f1;color:#fff;">
-                  <i class="fas fa-eye me-1"></i>Référentiels
-                </a>
-                <a routerLink="/questions" class="btn btn-outline-secondary btn-sm rounded-pill px-3">
-                  <i class="fas fa-question-circle me-1"></i>Questions
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   `,

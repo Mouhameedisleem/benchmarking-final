@@ -788,7 +788,7 @@ interface SubAxisBenchmark {
 
                 <!-- Tendances + Leaders -->
                 <div class="row g-3 mb-3">
-                  <div class="col-md-6" *ngIf="sab.tendances?.length">
+                  <div class="col-md-6" *ngIf="sab.tendances.length">
                     <div class="rounded-3 p-3 h-100" style="background:#fafafa;">
                       <div class="fw-semibold small mb-2" style="color:#374151;">
                         <i class="fas fa-chart-line me-1" style="color:#6366f1;"></i>Tendances digitales
@@ -801,7 +801,7 @@ interface SubAxisBenchmark {
                     </div>
                   </div>
 
-                  <div class="col-md-6" *ngIf="sab.leadersNationaux?.length || sab.leadersInternationaux?.length">
+                  <div class="col-md-6" *ngIf="sab.leadersNationaux.length || sab.leadersInternationaux.length">
                     <div class="rounded-3 p-3 h-100" style="background:#fafafa;">
                       <div class="fw-semibold small mb-2" style="color:#374151;">
                         <i class="fas fa-trophy me-1" style="color:#f59e0b;"></i>Leaders de référence
@@ -857,7 +857,7 @@ interface SubAxisBenchmark {
 
                 <!-- Cadre juridique + M&A -->
                 <div class="row g-3 mb-3">
-                  <div class="col-md-6" *ngIf="sab.cadreJuridique?.length">
+                  <div class="col-md-6" *ngIf="sab.cadreJuridique.length">
                     <div class="rounded-3 p-3 h-100" style="background:#fafafa;">
                       <div class="fw-semibold small mb-2" style="color:#374151;">
                         <i class="fas fa-balance-scale me-1" style="color:#0891b2;"></i>Cadre juridique
@@ -879,7 +879,7 @@ interface SubAxisBenchmark {
                     </div>
                   </div>
 
-                  <div class="col-md-6" *ngIf="sab.maLeveesFonds?.length">
+                  <div class="col-md-6" *ngIf="sab.maLeveesFonds.length">
                     <div class="rounded-3 p-3 h-100" style="background:#fafafa;">
                       <div class="fw-semibold small mb-2" style="color:#374151;">
                         <i class="fas fa-coins me-1" style="color:#10b981;"></i>M&amp;A &amp; Levées de fonds
@@ -1239,13 +1239,15 @@ export class ConsultantReviewComponent implements OnInit {
 
   removeRec(i: number) { this.recommendations.splice(i, 1); }
 
-  validate() {
+  async validate(): Promise<void> {
     this.validateError = '';
     this.validateSuccess = '';
     const hasEditing = this.recommendations.some(r => r.editing);
     if (hasEditing) { this.validateError = 'Fermez d\'abord les recommandations en cours de modification.'; return; }
     this.validating = true;
-    const payload = this.recommendations.map(({ editing: _, ...r }) => r);
+    const recommendations = this.recommendations.map(({ editing: _, ...r }) => r);
+    const pptBase64 = await this.getPptBase64();
+    const payload = { recommendations, pptBase64 };
     this.http.post<any>(`${environment.apiUrl}/evaluations/${this.evaluationId}/validate`, payload).subscribe({
       next: (res) => {
         this.validating = false;
@@ -1337,9 +1339,7 @@ export class ConsultantReviewComponent implements OnInit {
     });
   }
 
-  async downloadPpt(): Promise<void> {
-    this.pptDownloading = true;
-    try {
+  private async buildPptx(): Promise<any> {
       const PptxGenJS = (await import('pptxgenjs')).default;
       const pptx = new (PptxGenJS as any)();
       pptx.layout = 'LAYOUT_WIDE'; // 13.33" × 7.5"
@@ -1502,6 +1502,158 @@ export class ConsultantReviewComponent implements OnInit {
         });
       }
 
+      // ── SLIDES : ANALYSE PAR SOUS-AXES ─────────────────────────────
+      if (this.groupedSubAxisBenchmarks.length) {
+        // Section divider slide
+        const sdiv = pptx.addSlide();
+        sdiv.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: '100%', h: '100%', fill: { color: '0f172a' } });
+        sdiv.addText('Analyse par sous-axes', { x: 0.5, y: 2.8, w: 12.3, h: 1.2, color: WHT, fontSize: 36, bold: true, align: 'center', fontFace: 'Arial' });
+        sdiv.addText('Benchmarking détaillé par axe stratégique', { x: 0.5, y: 4.1, w: 12.3, h: 0.5, color: BLU2, fontSize: 16, align: 'center', fontFace: 'Arial' });
+
+        for (const group of this.groupedSubAxisBenchmarks) {
+          const axHex = this.getAxisColor(group.axis).replace('#', '');
+          // Axis header slide
+          const sh = pptx.addSlide();
+          sh.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: '100%', h: '100%', fill: { color: LIT } });
+          sh.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: 0.18, h: '100%', fill: { color: axHex } });
+          sh.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: '100%', h: 0.75, fill: { color: BLU } });
+          sh.addText('IA Benchmark', { x: 0.3, y: 0.13, w: 3.5, h: 0.5, color: WHT, fontSize: 13, bold: true, fontFace: 'Arial' });
+          sh.addText('Analyse sous-axes', { x: 3.8, y: 0.13, w: 9.3, h: 0.5, color: WHT, fontSize: 12, align: 'right', fontFace: 'Arial' });
+          sh.addText(this.getAxisLabel(group.axis), { x: 0.5, y: 2.5, w: 12.3, h: 1.2, color: axHex, fontSize: 34, bold: true, align: 'center', fontFace: 'Arial' });
+          sh.addText(`${group.items.length} sous-axe${group.items.length > 1 ? 's' : ''} analysé${group.items.length > 1 ? 's' : ''}`, { x: 0.5, y: 3.8, w: 12.3, h: 0.5, color: GRY, fontSize: 14, align: 'center', fontFace: 'Arial' });
+
+          // ── Sub-axis content cards (2 per slide) ────────────────────
+          for (let gi = 0; gi < group.items.length; gi += 2) {
+            const chunk = group.items.slice(gi, gi + 2);
+            const sc = pptx.addSlide();
+            addHeader(sc, this.getAxisLabel(group.axis));
+
+            chunk.forEach((sab, ci) => {
+              const cardX = ci === 0 ? 0.3 : 6.8;
+              const cardW = 6.05, cardY = 0.95, cardH = 6.3;
+              const scoreBarW = (sab.companyScore / 100) * (cardW - 0.6);
+
+              sc.addShape(pptx.ShapeType.rect, { x: cardX, y: cardY, w: cardW, h: cardH, fill: { color: WHT }, line: { color: BDR, width: 0.75 } });
+              sc.addShape(pptx.ShapeType.rect, { x: cardX, y: cardY, w: 0.1, h: cardH, fill: { color: axHex } });
+              sc.addText(sab.subAxis, { x: cardX + 0.2, y: cardY + 0.12, w: cardW - 0.9, h: 0.38, color: DRK, fontSize: 11, bold: true, fontFace: 'Arial' });
+              sc.addText(`${Math.round(sab.companyScore)}/100`, { x: cardX + cardW - 0.75, y: cardY + 0.12, w: 0.65, h: 0.38, color: axHex, fontSize: 11, bold: true, align: 'right', fontFace: 'Arial' });
+              sc.addShape(pptx.ShapeType.rect, { x: cardX + 0.2, y: cardY + 0.58, w: cardW - 0.6, h: 0.18, fill: { color: 'f1f5f9' }, line: { color: 'f1f5f9' } });
+              sc.addShape(pptx.ShapeType.rect, { x: cardX + 0.2, y: cardY + 0.58, w: Math.max(0.08, scoreBarW), h: 0.18, fill: { color: axHex }, line: { color: axHex } });
+              const analyse = (sab.analysePersonnalisee || '').slice(0, 280);
+              sc.addShape(pptx.ShapeType.rect, { x: cardX + 0.2, y: cardY + 0.88, w: cardW - 0.4, h: 1.6, fill: { color: 'eff6ff' }, line: { color: 'bfdbfe', width: 0.5 } });
+              sc.addText(analyse, { x: cardX + 0.32, y: cardY + 0.95, w: cardW - 0.62, h: 1.45, color: '1e40af', fontSize: 8.5, fontFace: 'Arial' });
+              const leaders = [...(sab.leadersNationaux || []), ...(sab.leadersRegionaux || []), ...(sab.leadersInternationaux || [])].slice(0, 2);
+              if (leaders.length) {
+                sc.addText('Leaders de référence', { x: cardX + 0.2, y: cardY + 2.6, w: cardW - 0.4, h: 0.28, color: DRK, fontSize: 9, bold: true, fontFace: 'Arial' });
+                leaders.forEach((l: any, li: number) => {
+                  const ly = cardY + 2.92 + li * 0.75;
+                  sc.addShape(pptx.ShapeType.rect, { x: cardX + 0.2, y: ly, w: cardW - 0.4, h: 0.68, fill: { color: LIT }, line: { color: BDR, width: 0.5 } });
+                  sc.addText(`${l.entreprise || ''} · ${l.pays || ''}`, { x: cardX + 0.3, y: ly + 0.04, w: cardW - 0.6, h: 0.22, color: DRK, fontSize: 8.5, bold: true, fontFace: 'Arial' });
+                  sc.addText((l.pratique || '').slice(0, 120), { x: cardX + 0.3, y: ly + 0.28, w: cardW - 0.6, h: 0.35, color: GRY, fontSize: 8, fontFace: 'Arial' });
+                });
+              }
+            });
+          }
+
+          // ── ZOOM dédié — 1 slide par sous-axe (style Hsys) ──────────
+          for (const sab of group.items) {
+            const cs = sab.zoomCaseStudy;
+            if (!cs?.entreprise) continue;
+
+            const sz = pptx.addSlide();
+            // Header
+            sz.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: '100%', h: 0.75, fill: { color: BLU } });
+            sz.addText('IA Benchmark', { x: 0.3, y: 0.13, w: 3.5, h: 0.5, color: WHT, fontSize: 13, bold: true, fontFace: 'Arial' });
+            sz.addText('ZOOM — Maturité maximale', { x: 3.8, y: 0.13, w: 9.3, h: 0.5, color: WHT, fontSize: 12, align: 'right', fontFace: 'Arial' });
+
+            // Left dark panel
+            sz.addShape(pptx.ShapeType.rect, { x: 0, y: 0.75, w: 3.8, h: 6.75, fill: { color: '0f172a' } });
+            sz.addShape(pptx.ShapeType.rect, { x: 0.3, y: 1.1, w: 1.1, h: 0.32, fill: { color: BLU } });
+            sz.addText('ZOOM', { x: 0.3, y: 1.1, w: 1.1, h: 0.32, color: WHT, fontSize: 10, bold: true, align: 'center', valign: 'middle', fontFace: 'Arial' });
+            sz.addText('Maturité\nmaximale', { x: 0.3, y: 1.6, w: 3.2, h: 1.0, color: WHT, fontSize: 24, bold: true, fontFace: 'Arial' });
+            sz.addShape(pptx.ShapeType.rect, { x: 0.3, y: 2.75, w: 3.1, h: 0.04, fill: { color: BLU } });
+            sz.addText(cs.entreprise, { x: 0.3, y: 2.95, w: 3.2, h: 0.55, color: WHT, fontSize: 18, bold: true, fontFace: 'Arial' });
+            sz.addShape(pptx.ShapeType.rect, { x: 0.3, y: 3.6, w: 0.9, h: 0.3, fill: { color: BLU } });
+            sz.addText(cs.pays || '', { x: 0.3, y: 3.6, w: 0.9, h: 0.3, color: WHT, fontSize: 9, bold: true, align: 'center', valign: 'middle', fontFace: 'Arial' });
+            if (cs.annee) {
+              sz.addShape(pptx.ShapeType.rect, { x: 1.35, y: 3.6, w: 0.8, h: 0.3, fill: { color: '1e293b' }, line: { color: BLU, width: 1 } });
+              sz.addText(String(cs.annee), { x: 1.35, y: 3.6, w: 0.8, h: 0.3, color: BLU2, fontSize: 9, bold: true, align: 'center', valign: 'middle', fontFace: 'Arial' });
+            }
+            sz.addText(cs.source || '', { x: 0.3, y: 7.0, w: 3.2, h: 0.35, color: '64748b', fontSize: 8, italic: true, fontFace: 'Arial' });
+
+            // Right light panel
+            sz.addShape(pptx.ShapeType.rect, { x: 3.8, y: 0.75, w: 9.53, h: 6.75, fill: { color: LIT } });
+            // Sub-axis badge
+            sz.addShape(pptx.ShapeType.rect, { x: 4.1, y: 0.95, w: 5.5, h: 0.32, fill: { color: axHex + '18' }, line: { color: axHex + '40', width: 0.5 } });
+            sz.addText(sab.subAxis, { x: 4.1, y: 0.95, w: 5.5, h: 0.32, color: axHex, fontSize: 9.5, bold: true, valign: 'middle', fontFace: 'Arial' });
+            sz.addText(`${this.getAxisLabel(group.axis)}`, { x: 9.75, y: 0.95, w: 3.3, h: 0.32, color: GRY, fontSize: 9, align: 'right', valign: 'middle', fontFace: 'Arial' });
+            sz.addShape(pptx.ShapeType.rect, { x: 4.1, y: 1.38, w: 9.0, h: 0.03, fill: { color: BDR } });
+
+            // Technologie
+            sz.addText('Technologie utilisée', { x: 4.1, y: 1.55, w: 9.0, h: 0.3, color: DRK, fontSize: 10, bold: true, fontFace: 'Arial' });
+            sz.addShape(pptx.ShapeType.rect, { x: 4.1, y: 1.88, w: 9.0, h: 0.4, fill: { color: 'e0e7ff' }, line: { color: 'c7d2fe', width: 0.5 } });
+            sz.addText(cs.technologie || '', { x: 4.2, y: 1.88, w: 8.8, h: 0.4, color: '3730a3', fontSize: 9.5, bold: true, valign: 'middle', fontFace: 'Arial' });
+
+            // Description
+            sz.addText('Description', { x: 4.1, y: 2.42, w: 9.0, h: 0.3, color: DRK, fontSize: 10, bold: true, fontFace: 'Arial' });
+            sz.addText((cs.description || '').slice(0, 400), { x: 4.1, y: 2.75, w: 9.0, h: 1.55, color: GRY, fontSize: 9, fontFace: 'Arial' });
+
+            // Résultats
+            sz.addShape(pptx.ShapeType.rect, { x: 4.1, y: 4.42, w: 9.0, h: 1.55, fill: { color: '0f172a' } });
+            sz.addShape(pptx.ShapeType.rect, { x: 4.1, y: 4.42, w: 0.06, h: 1.55, fill: { color: BLU } });
+            sz.addText('Résultats mesurés', { x: 4.3, y: 4.5, w: 8.6, h: 0.3, color: WHT, fontSize: 9.5, bold: true, fontFace: 'Arial' });
+            sz.addText(cs.resultats || 'Données non disponibles', { x: 4.3, y: 4.85, w: 8.6, h: 1.0, color: 'cbd5e1', fontSize: 9, fontFace: 'Arial' });
+          }
+
+          // ── Cadre légal dédié — 1 slide par sous-axe (style Hsys) ───
+          for (const sab of group.items) {
+            const lois = (sab.cadreJuridique || []).slice(0, 6);
+            if (!lois.length) continue;
+
+            const sl = pptx.addSlide();
+            // Header
+            sl.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: '100%', h: 0.75, fill: { color: BLU } });
+            sl.addText('IA Benchmark', { x: 0.3, y: 0.13, w: 3.5, h: 0.5, color: WHT, fontSize: 13, bold: true, fontFace: 'Arial' });
+            sl.addText('Cadre légal & réglementaire', { x: 3.8, y: 0.13, w: 9.3, h: 0.5, color: WHT, fontSize: 12, align: 'right', fontFace: 'Arial' });
+
+            // Sub-axis + axis info
+            sl.addText(sab.subAxis, { x: 0.4, y: 0.88, w: 9.0, h: 0.4, color: DRK, fontSize: 14, bold: true, fontFace: 'Arial' });
+            sl.addText(this.getAxisLabel(group.axis), { x: 9.5, y: 0.88, w: 3.5, h: 0.4, color: GRY, fontSize: 11, align: 'right', fontFace: 'Arial' });
+            sl.addShape(pptx.ShapeType.rect, { x: 0.4, y: 1.33, w: 12.5, h: 0.03, fill: { color: BDR } });
+
+            // Timeline
+            const tlY = 1.48, tlX = 0.8, tlW = 11.8;
+            sl.addShape(pptx.ShapeType.rect, { x: tlX, y: tlY + 0.22, w: tlW, h: 0.04, fill: { color: BLU } });
+            const step = tlW / Math.max(lois.length, 1);
+            lois.forEach((loi: any, li: number) => {
+              const dotX = tlX + step * li + step / 2;
+              sl.addShape(pptx.ShapeType.ellipse, { x: dotX - 0.14, y: tlY + 0.08, w: 0.28, h: 0.28, fill: { color: BLU }, line: { color: WHT, width: 1.5 } });
+              const dateStr = (loi.texte || '').slice(0, 20);
+              sl.addText(dateStr, { x: dotX - 0.8, y: tlY + 0.42, w: 1.6, h: 0.25, color: DRK, fontSize: 7.5, align: 'center', fontFace: 'Arial' });
+            });
+
+            // Law cards — 2 per row, max 4 cards
+            const lawsToShow = lois.slice(0, 4);
+            lawsToShow.forEach((loi: any, li: number) => {
+              const col = li % 2, row = Math.floor(li / 2);
+              const cx = 0.4 + col * 6.4;
+              const cy = 2.0 + row * 2.55;
+              const impactColor = loi.impact === 'Obligation' ? 'dc2626'
+                : loi.impact === 'Opportunité' ? '16a34a' : '0891b2';
+              const impactBg = loi.impact === 'Obligation' ? 'fef2f2'
+                : loi.impact === 'Opportunité' ? 'f0fdf4' : 'ecfeff';
+
+              sl.addShape(pptx.ShapeType.rect, { x: cx, y: cy, w: 6.1, h: 2.35, fill: { color: WHT }, line: { color: BDR, width: 0.75 } });
+              sl.addShape(pptx.ShapeType.rect, { x: cx, y: cy, w: 6.1, h: 0.4, fill: { color: DRK } });
+              sl.addText(loi.texte || '', { x: cx + 0.15, y: cy + 0.04, w: 4.5, h: 0.32, color: WHT, fontSize: 9, bold: true, fontFace: 'Arial' });
+              sl.addShape(pptx.ShapeType.rect, { x: cx + 4.75, y: cy + 0.05, w: 1.2, h: 0.3, fill: { color: impactBg } });
+              sl.addText(loi.impact || '', { x: cx + 4.75, y: cy + 0.05, w: 1.2, h: 0.3, color: impactColor, fontSize: 8, bold: true, align: 'center', valign: 'middle', fontFace: 'Arial' });
+              sl.addText(loi.description || '', { x: cx + 0.15, y: cy + 0.5, w: 5.8, h: 1.75, color: GRY, fontSize: 8.5, fontFace: 'Arial' });
+            });
+          }
+        }
+      }
+
       // ── SLIDE FINALE ────────────────────────────────────────────────
       const sf = pptx.addSlide();
       sf.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: '100%', h: '100%', fill: { color: BLU } });
@@ -1511,13 +1663,28 @@ export class ConsultantReviewComponent implements OnInit {
         x: 0.5, y: 7.0, w: 12.3, h: 0.35, color: '7ca8e0', fontSize: 9.5, align: 'center', fontFace: 'Arial'
       });
 
+      return pptx;
+  }
+
+  async downloadPpt(): Promise<void> {
+    this.pptDownloading = true;
+    try {
+      const pptx = await this.buildPptx();
       const fileName = `rapport-${this.companyName.replace(/[^a-zA-Z0-9]/g, '-')}-${new Date().toISOString().slice(0, 10)}.pptx`;
       await pptx.writeFile({ fileName });
-
     } catch (err) {
       console.error('PPT generation error:', err);
     } finally {
       this.pptDownloading = false;
+    }
+  }
+
+  private async getPptBase64(): Promise<string> {
+    try {
+      const pptx = await this.buildPptx();
+      return await pptx.write('base64') as string;
+    } catch {
+      return '';
     }
   }
 

@@ -58,507 +58,66 @@ def _resolve_sector(sector: str) -> str:
     return "default"
 
 
-# ── Sector-specific sub_axis catalog ─────────────────────────────────────────
-# Each (sector_key, axis) → ordered list of unique, sector-specific sub_axes.
-# Questions will be allocated exactly ONE sub_axis per slot — no repetition possible.
+# ── Standardized sub-axis catalog (identical for all sectors) ────────────────
+# Aligned with sector_loader.py _SUB_AXIS_FILE_MAP knowledge-base keys.
+# Questions are sector-specific in content but all sectors share the same sub-axis names.
 
+_STANDARD_SUB_AXES: dict[str, list[str]] = {
+    "BUSINESS": [
+        "Stratégie digitale",
+        "Orientation client",
+        "Innovation",
+        "Modèle économique digital",
+    ],
+    "PROCESS": [
+        "Cartographie des processus",
+        "Automatisation",
+        "Agilité",
+        "Performance opérationnelle",
+    ],
+    "INFORMATION_SYSTEM": [
+        "Infrastructure & Cloud",
+        "Cybersécurité",
+        "Données & Analytics",
+        "Intégration & API",
+    ],
+    "CANAUX_DISTRIBUTION": [
+        "Canaux de distribution & expérience client",
+        "Selfcare client",
+    ],
+    "MARKETING_COMMUNICATION": [
+        "Marketing & communication digitale",
+    ],
+    "RH_CULTURE_DIGITALE": [
+        "Culture digitale",
+        "Poste de travail du banquier",
+        "Collaboratif & digital working",
+        "Digitalisation de la fonction RH",
+        "Agilité",
+    ],
+    "OFFRES_DIGITALES": [
+        "Offres digitales",
+        "Open banking (BaaS, BaaP)",
+    ],
+    "MODELE_OPERATIONNEL_INNOVATION": [
+        "Simplification & automatisation des processus",
+        "Gouvernance de la transformation digitale",
+        "Développement de l'innovation",
+    ],
+    "IT_DATA": [
+        "Socle IT",
+        "Data",
+    ],
+}
+
+# All sector keys resolve to the same standardized catalog.
 _SECTOR_SUB_AXES: dict[str, dict[str, list[str]]] = {
-
-    "education": {
-        "BUSINESS": [
-            "Stratégie pédagogique numérique",
-            "Modèle économique EdTech",
-            "Expérience apprenant (UX pédagogique)",
-            "Partenariats université-entreprise",
-            "Internationalisation & campus virtuel",
-            "Innovation pédagogique (MOOC, microlearning)",
-        ],
-        "PROCESS": [
-            "Gestion des inscriptions & admissions en ligne",
-            "Évaluation & certification numérique",
-            "Suivi de la progression des apprenants",
-            "Planification des cours & emplois du temps",
-            "Processus d'accréditation & conformité réglementaire",
-        ],
-        "INFORMATION_SYSTEM": [
-            "LMS & plateformes e-learning",
-            "Protection des données étudiants (RGPD/APDP)",
-            "Infrastructure réseau campus & connectivité",
-            "ERP académique & gestion administrative",
-            "Cybersécurité des systèmes académiques",
-        ],
-        "CANAUX_DISTRIBUTION": [
-            "Portail étudiant & application mobile",
-            "Streaming & enregistrement de cours",
-            "Distribution de contenus pédagogiques en ligne",
-        ],
-        "MARKETING_COMMUNICATION": [
-            "Acquisition d'étudiants via le digital",
-            "Réputation digitale & réseaux sociaux",
-            "Engagement alumni & anciens diplômés",
-        ],
-        "RH_CULTURE_DIGITALE": [
-            "Formation des enseignants aux outils numériques",
-            "Leadership digital de la direction académique",
-            "Culture d'innovation pédagogique",
-        ],
-        "OFFRES_DIGITALES": [
-            "Offres de formation en ligne (MOOC, SPOC)",
-            "Micro-certifications & badges numériques",
-            "Tutorat IA & personnalisation de l'apprentissage",
-        ],
-        "MODELE_OPERATIONNEL_INNOVATION": [
-            "Automatisation administrative & gestion des notes",
-            "Gouvernance de la transformation numérique",
-        ],
-        "IT_DATA": [
-            "Analytics de l'apprentissage (Learning Analytics)",
-            "Infrastructure cloud & SaaS académique",
-        ],
-    },
-
-    "banking": {
-        "BUSINESS": [
-            "Digitalisation des offres bancaires",
-            "Open Banking & APIs partenaires",
-            "Inclusion financière digitale",
-            "Modèle économique BaaS & Fintech",
-            "Innovation produits financiers numériques",
-        ],
-        "PROCESS": [
-            "Conformité DORA/DSP2/NIS2",
-            "KYC & onboarding client 100% digital",
-            "Scoring crédit automatisé par IA",
-            "Paiements instantanés & virement SEPA",
-            "Gestion des réclamations digitale",
-        ],
-        "INFORMATION_SYSTEM": [
-            "Cybersécurité bancaire (DORA)",
-            "Architecture microservices & cloud bancaire",
-            "Données clients & RGPD bancaire",
-            "API Management & interopérabilité",
-            "Surveillance des transactions en temps réel",
-        ],
-        "CANAUX_DISTRIBUTION": [
-            "Application mobile banking",
-            "Internet Banking & espace client en ligne",
-            "Agences digitalisées & self-banking",
-        ],
-        "MARKETING_COMMUNICATION": [
-            "CRM bancaire & personnalisation des offres",
-            "Acquisition client digitale (SEA, social)",
-            "Fidélisation & programmes de récompenses digitaux",
-        ],
-        "RH_CULTURE_DIGITALE": [
-            "Formation des conseillers aux outils digitaux",
-            "Recrutement de profils Tech/Data banking",
-            "Culture data-driven & agilité bancaire",
-        ],
-        "OFFRES_DIGITALES": [
-            "Crédit instantané & BNPL",
-            "Épargne & investissement en ligne",
-            "Assurance & bancassurance digitale",
-        ],
-        "MODELE_OPERATIONNEL_INNOVATION": [
-            "RPA & automatisation des opérations bancaires",
-            "Lab d'innovation & partenariats Fintech",
-        ],
-        "IT_DATA": [
-            "Data Lake bancaire & analytics décisionnel",
-            "Gouvernance des données (qualité, RGPD bancaire)",
-        ],
-    },
-
-    "healthcare": {
-        "BUSINESS": [
-            "Stratégie de santé numérique",
-            "Télémédecine & téléconsultation",
-            "Expérience patient digitale",
-            "Partenariats MedTech & Healthtech",
-            "Parcours patient digitalisé",
-        ],
-        "PROCESS": [
-            "Dossier Patient Informatisé (DPI)",
-            "Gestion des rendez-vous & planification en ligne",
-            "Conformité HDS & RGPD santé",
-            "Codification & facturation numérique",
-            "Coordination inter-services digitale",
-        ],
-        "INFORMATION_SYSTEM": [
-            "Cybersécurité des données de santé",
-            "Interopérabilité (FHIR, HL7)",
-            "Équipements médicaux connectés (IoMT)",
-            "IA diagnostique & aide à la décision clinique",
-            "Infrastructure cloud HDS certifié",
-        ],
-        "CANAUX_DISTRIBUTION": [
-            "Application patient & portail santé",
-            "Dispositifs de télésurveillance à distance",
-        ],
-        "MARKETING_COMMUNICATION": [
-            "Communication santé digitale & e-réputation",
-            "Acquisition & fidélisation patients",
-        ],
-        "RH_CULTURE_DIGITALE": [
-            "Formation des soignants aux outils numériques",
-            "Compétences data & IA médicale",
-        ],
-        "OFFRES_DIGITALES": [
-            "Objets connectés de santé (wearables)",
-            "Médecine prédictive & prévention digitale",
-        ],
-        "MODELE_OPERATIONNEL_INNOVATION": [
-            "Automatisation administrative hospitalière",
-            "Gouvernance numérique de l'établissement de santé",
-        ],
-        "IT_DATA": [
-            "Analytics cliniques & recherche médicale",
-            "Gestion des identités & accès (IAM santé)",
-        ],
-    },
-
-    "retail": {
-        "BUSINESS": [
-            "Stratégie omnicanale (online + offline)",
-            "Personnalisation & recommandation IA",
-            "Modèle marketplace & e-commerce",
-            "Click & Collect / BOPIS",
-            "Social commerce & live shopping",
-        ],
-        "PROCESS": [
-            "Gestion des stocks & prévision par IA",
-            "Chaîne d'approvisionnement digitale",
-            "Gestion des retours (reverse logistics)",
-            "Livraison last-mile & quick commerce",
-            "Paiements digitaux & Buy Now Pay Later",
-        ],
-        "INFORMATION_SYSTEM": [
-            "Plateforme e-commerce & ERP",
-            "CRM & gestion des données clients",
-            "Sécurité des paiements (PCI-DSS)",
-            "PIM & gestion des catalogues produits",
-        ],
-        "CANAUX_DISTRIBUTION": [
-            "Application mobile e-commerce",
-            "Site web & optimisation SEO/SEA",
-            "Réseaux sociaux & marketing d'influence",
-        ],
-        "MARKETING_COMMUNICATION": [
-            "Marketing automation & campagnes email",
-            "Attribution multi-canal & ROI marketing",
-            "Programme de fidélité digitale",
-        ],
-        "RH_CULTURE_DIGITALE": [
-            "Formation des équipes retail aux outils digitaux",
-            "Culture d'innovation & test & learn",
-        ],
-        "OFFRES_DIGITALES": [
-            "Abonnements & services numériques",
-            "Réalité augmentée & essayage virtuel",
-        ],
-        "MODELE_OPERATIONNEL_INNOVATION": [
-            "Automatisation entrepôts & robotique logistique",
-            "Gestion fournisseurs digitale & EDI",
-        ],
-        "IT_DATA": [
-            "Analytics clients & personnalisation en temps réel",
-            "Infrastructure cloud scalable & résiliente",
-        ],
-    },
-
-    "industry": {
-        "BUSINESS": [
-            "Stratégie Industrie 4.0",
-            "Jumeau numérique (Digital Twin)",
-            "Modèle économique produit-service (servitisation)",
-            "Supply chain digitale & résilience",
-            "Décarbonation & usine verte numérique",
-        ],
-        "PROCESS": [
-            "Maintenance prédictive par IA/IoT",
-            "Automatisation & robotique collaborative",
-            "Traçabilité produit (RFID, blockchain)",
-            "Lean manufacturing digital & MES",
-            "Gestion de la qualité numérique",
-        ],
-        "INFORMATION_SYSTEM": [
-            "Cybersécurité OT/IT industrielle (IEC 62443)",
-            "IoT industriel & capteurs connectés",
-            "Cloud industriel & edge computing",
-            "SCADA & supervision en temps réel",
-            "ERP industriel & intégration MES-ERP",
-        ],
-        "CANAUX_DISTRIBUTION": [
-            "Portail fournisseurs & clients B2B",
-            "E-commerce industriel & configurateur",
-        ],
-        "MARKETING_COMMUNICATION": [
-            "Marketing digital B2B & inbound",
-            "Communication RSE & durabilité digitale",
-        ],
-        "RH_CULTURE_DIGITALE": [
-            "Formation Industrie 4.0 des opérateurs",
-            "Compétences data & IA industrielle",
-        ],
-        "OFFRES_DIGITALES": [
-            "Maintenance as-a-service & monitoring IoT",
-            "Marketplace pièces détachées & spare parts",
-        ],
-        "MODELE_OPERATIONNEL_INNOVATION": [
-            "R&D digitale & innovation produit",
-            "Automatisation administrative industrielle",
-        ],
-        "IT_DATA": [
-            "Data Lake industriel & analytics de production",
-            "Gouvernance des données de fabrication",
-        ],
-    },
-
-    "tech": {
-        "BUSINESS": [
-            "Stratégie produit & product-market fit",
-            "Modèle SaaS & économie d'abonnement",
-            "API Economy & écosystème partenaires",
-            "Expansion internationale & go-to-market",
-            "Customer Success & réduction du churn",
-        ],
-        "PROCESS": [
-            "Développement agile & DevOps",
-            "CI/CD & déploiement continu (GitOps)",
-            "Gestion des incidents & SLA (SRE)",
-            "MLOps & déploiement de modèles IA",
-            "Conformité RGPD & SecDevOps",
-        ],
-        "INFORMATION_SYSTEM": [
-            "Architecture microservices & cloud-native",
-            "Cybersécurité & modèle Zero Trust",
-            "Observabilité & monitoring (Prometheus, Grafana)",
-            "Gestion des identités & IAM",
-            "Infrastructure multi-cloud & résilience",
-        ],
-        "CANAUX_DISTRIBUTION": [
-            "Marketplace & distribution digitale",
-            "App Store & distribution mobile",
-            "API publique & documentation développeurs",
-        ],
-        "MARKETING_COMMUNICATION": [
-            "Growth hacking & acquisition PLG",
-            "Content marketing & SEO technique",
-            "Developer Relations (DevRel)",
-        ],
-        "RH_CULTURE_DIGITALE": [
-            "Recrutement tech & employer branding",
-            "Culture engineering & qualité logicielle",
-            "Remote-first & outils collaboratifs async",
-        ],
-        "OFFRES_DIGITALES": [
-            "Produits IA & LLM-powered features",
-            "Plateformes low-code/no-code",
-            "Données & analytics as-a-service",
-        ],
-        "MODELE_OPERATIONNEL_INNOVATION": [
-            "Innovation ouverte & hackathons internes",
-            "Brevets & propriété intellectuelle",
-        ],
-        "IT_DATA": [
-            "Data engineering & pipelines ETL/ELT",
-            "Feature store & MLOps en production",
-        ],
-    },
-
-    "insurance": {
-        "BUSINESS": [
-            "Stratégie InsurTech & digitalisation",
-            "Tarification dynamique & comportementale",
-            "Expérience assuré digitale",
-            "Partenariats InsurTech & API assurance",
-            "Nouveaux modèles d'assurance (paramétrique, usage)",
-        ],
-        "PROCESS": [
-            "Souscription en ligne & onboarding digital",
-            "Gestion des sinistres automatisée (IA)",
-            "Conformité IFRS 17 & Solvabilité II",
-            "Lutte contre la fraude par IA/ML",
-            "Relation courtiers & distribution digitale",
-        ],
-        "INFORMATION_SYSTEM": [
-            "Core insurance & modernisation SI legacy",
-            "Cybersécurité & données assurés (RGPD)",
-            "IoT & objets connectés (télématique, santé)",
-            "Cloud & architecture modulaire assurance",
-        ],
-        "CANAUX_DISTRIBUTION": [
-            "Application mobile assurée",
-            "Comparateurs & distribution en ligne",
-            "Canaux digitaux de self-service",
-        ],
-        "MARKETING_COMMUNICATION": [
-            "Marketing personnalisé & CRM assuré",
-            "Communication réglementaire digitale",
-            "Acquisition & fidélisation en ligne",
-        ],
-        "RH_CULTURE_DIGITALE": [
-            "Formation des agents aux outils digitaux",
-            "Recrutement data scientists & actuaires digitaux",
-        ],
-        "OFFRES_DIGITALES": [
-            "Assurance paramétrique & micro-assurance",
-            "Objets connectés & télématique assurance",
-        ],
-        "MODELE_OPERATIONNEL_INNOVATION": [
-            "RPA & automatisation des processus assurance",
-            "Lab innovation assurance & partenariats",
-        ],
-        "IT_DATA": [
-            "Actuariat digital & modèles prédictifs",
-            "Lac de données assurance",
-        ],
-    },
-
-    "transport": {
-        "BUSINESS": [
-            "Stratégie de mobilité digitale (MaaS)",
-            "Optimisation des routes par IA",
-            "Expérience passager ou expéditeur digitale",
-            "Partenariats mobilité & écosystème",
-            "Flotte électrique & transition énergétique",
-        ],
-        "PROCESS": [
-            "Traçabilité temps réel des expéditions",
-            "Gestion digitale des transports (TMS)",
-            "Maintenance prédictive des véhicules/flottes",
-            "Conformité réglementaire & sécurité des transports",
-            "Planification des tournées & last-mile",
-        ],
-        "INFORMATION_SYSTEM": [
-            "IoT & capteurs connectés (véhicules, entrepôts)",
-            "Systèmes de gestion d'entrepôts (WMS)",
-            "Cybersécurité des systèmes embarqués",
-            "Intégration multimodale & interopérabilité",
-        ],
-        "CANAUX_DISTRIBUTION": [
-            "Application client tracking & suivi",
-            "Portail partenaires & expéditeurs",
-        ],
-        "MARKETING_COMMUNICATION": [
-            "Communication client proactive & alertes",
-            "Marketing digital B2B transport",
-        ],
-        "RH_CULTURE_DIGITALE": [
-            "Formation conducteurs & logisticiens aux outils",
-            "Culture sécurité & digital transport",
-        ],
-        "OFFRES_DIGITALES": [
-            "Tracking en temps réel as-a-service",
-            "Marketplace fret & bourse de transport",
-        ],
-        "MODELE_OPERATIONNEL_INNOVATION": [
-            "Automatisation entrepôts & robotique logistique",
-            "Véhicules autonomes & drones livraison",
-        ],
-        "IT_DATA": [
-            "Analytics géospatiales & optimisation routes",
-            "Data Lake logistique",
-        ],
-    },
-
-    "energy": {
-        "BUSINESS": [
-            "Stratégie de transition énergétique numérique",
-            "Smart Grid & réseau intelligent",
-            "Modèle économique ENR & stockage",
-            "Partenariats énergie & écosystème",
-            "Efficience énergétique & décarbonation",
-        ],
-        "PROCESS": [
-            "Gestion des actifs énergétiques (EAM)",
-            "Maintenance prédictive des infrastructures",
-            "Conformité réglementaire énergie (NERC CIP)",
-            "Planification de la production & équilibrage",
-        ],
-        "INFORMATION_SYSTEM": [
-            "Cybersécurité OT/IT (IEC 62443, NERC)",
-            "SCADA & supervision réseau électrique",
-            "Compteurs intelligents & IoT énergie",
-            "Cloud & gestion des données énergie",
-        ],
-        "CANAUX_DISTRIBUTION": [
-            "Portail client énergie en ligne",
-            "Application mobile consommation & facturation",
-        ],
-        "MARKETING_COMMUNICATION": [
-            "Communication client énergie digitale",
-            "Marketing durabilité & RSE",
-        ],
-        "RH_CULTURE_DIGITALE": [
-            "Formation techniciens aux outils digitaux",
-            "Compétences data énergie & smart grid",
-        ],
-        "OFFRES_DIGITALES": [
-            "Offres flexibilité & effacement énergétique",
-            "Plateformes de trading d'énergie",
-        ],
-        "MODELE_OPERATIONNEL_INNOVATION": [
-            "Jumeaux numériques d'actifs énergétiques",
-            "Innovation stockage & hydrogène vert",
-        ],
-        "IT_DATA": [
-            "Analytics énergétiques & prédiction consommation",
-            "Gouvernance données énergie",
-        ],
-    },
-
-    "default": {
-        "BUSINESS": [
-            "Stratégie de transformation digitale",
-            "Expérience client & parcours digital",
-            "Modèle économique numérique",
-            "Innovation & veille technologique sectorielle",
-            "Partenariats & écosystème digital",
-        ],
-        "PROCESS": [
-            "Automatisation des processus opérationnels",
-            "Gestion de projet & agilité",
-            "Dématérialisation documentaire",
-            "Gestion de la qualité numérique",
-            "Continuité d'activité (PRA/PCA)",
-        ],
-        "INFORMATION_SYSTEM": [
-            "Infrastructure SI & cloud",
-            "Cybersécurité & gestion des risques",
-            "Intégration & APIs",
-            "Données & analytics décisionnels",
-            "Accessibilité & performance des systèmes",
-        ],
-        "CANAUX_DISTRIBUTION": [
-            "Canaux digitaux & présence en ligne",
-            "Application mobile clients",
-            "Omnicanalité (physique + digital)",
-        ],
-        "MARKETING_COMMUNICATION": [
-            "Marketing digital & SEO/SEA",
-            "CRM & personnalisation des communications",
-            "Réseaux sociaux & e-réputation",
-        ],
-        "RH_CULTURE_DIGITALE": [
-            "Formation digitale des collaborateurs",
-            "Leadership & sponsorship de la transformation",
-            "Recrutement de compétences numériques",
-        ],
-        "OFFRES_DIGITALES": [
-            "Produits & services numériques",
-            "Offres data-driven & IA",
-            "Plateformes & API partenaires",
-        ],
-        "MODELE_OPERATIONNEL_INNOVATION": [
-            "Automatisation end-to-end des processus",
-            "Gouvernance & conformité digitale",
-        ],
-        "IT_DATA": [
-            "Socle IT & infrastructure résiliente",
-            "Gouvernance des données (qualité, sécurité)",
-        ],
-    },
+    sector: dict(_STANDARD_SUB_AXES)
+    for sector in [
+        "education", "banking", "healthcare", "retail", "industry",
+        "tech", "insurance", "transport", "energy", "construction",
+        "hospitality", "media", "agriculture", "default",
+    ]
 }
 
 # Axis distribution — for num_questions per axis
@@ -767,21 +326,21 @@ FORMAT JSON (reproduis EXACTEMENT cette structure) :
         """Returns a rich, sector-specific example to guide the LLM."""
         examples = {
             "education": """EXEMPLE ÉDUCATION (à adapter, ne pas copier) :
-sub_axis: "LMS & plateformes e-learning"
-question: "Votre LMS intègre-t-il des analytics d'apprentissage en temps réel ?"
+sub_axis: "Culture digitale"
+question: "Vos enseignants sont-ils formés et certifiés sur les outils pédagogiques numériques ?"
 options:
-  1. "Aucun LMS, cours distribués par email ou clé USB"
-  2. "Moodle installé, utilisé pour dépôt de fichiers uniquement, <20% enseignants actifs"
-  3. "Moodle 3.x avec quiz en ligne, rapports basiques, 50% cours digitalisés"
-  4. "Canvas ou Brightspace, analytics par cohorte, 80%+ cours actifs, SCORM intégré"
-  5. "LMS IA-driven (360Learning, Docebo), recommandations adaptatives, Learning Analytics dashboards temps réel"
-weight: 5, source_framework: 'WEF DTI'""",
+  1. "Aucune formation au numérique, usage des outils limité à la messagerie"
+  2. "Formations ponctuelles sans plan structuré, <20% enseignants autonomes"
+  3. "Plan annuel de formation, 50% enseignants certifiés sur LMS, Moodle ou Teams"
+  4. "Programme certifiant continu, 80%+ enseignants formés, ambassadeurs numériques identifiés"
+  5. "Culture d'innovation pédagogique ancrée, certifications reconnues (TICE, DELF numérique), KPIs publiés"
+weight: 4, source_framework: 'WEF DTI'""",
 
             "banking": """EXEMPLE BANQUE (à adapter, ne pas copier) :
-sub_axis: "KYC & onboarding client 100% digital"
-question: "Votre processus KYC est-il entièrement digitalisé et conforme DSP2 ?"
+sub_axis: "Canaux de distribution & expérience client"
+question: "Votre processus d'onboarding client est-il entièrement digital et sans friction ?"
 options:
-  1. "KYC 100% papier, signature manuscrite, délai 10+ jours"
+  1. "Onboarding 100% papier, signature manuscrite, délai 10+ jours"
   2. "Formulaires PDF scannés, vérification manuelle, délai 3-5 jours"
   3. "E-signature déployée, vérification identité semi-automatique, délai <48h"
   4. "KYC digital complet, OCR + liveness check, conformité DSP2, délai <4h"
@@ -789,8 +348,8 @@ options:
 weight: 5, source_framework: 'ISO 27001'""",
 
             "healthcare": """EXEMPLE SANTÉ (à adapter, ne pas copier) :
-sub_axis: "Dossier Patient Informatisé (DPI)"
-question: "Votre DPI est-il interopérable avec les établissements partenaires ?"
+sub_axis: "Données & Analytics"
+question: "Vos données patients sont-elles interopérables et exploitées pour la décision clinique ?"
 options:
   1. "Dossiers patients 100% papier, aucun système informatisé"
   2. "Logiciel médical local, non connecté, exports manuels en PDF"
@@ -800,8 +359,8 @@ options:
 weight: 5, source_framework: 'ISO 27001'""",
 
             "retail": """EXEMPLE RETAIL (à adapter, ne pas copier) :
-sub_axis: "Personnalisation & recommandation IA"
-question: "Votre moteur de recommandation personnalise-t-il les offres en temps réel ?"
+sub_axis: "Marketing & communication digitale"
+question: "Votre stratégie marketing digital personnalise-t-elle les offres en temps réel ?"
 options:
   1. "Aucune personnalisation, promotions identiques pour tous les clients"
   2. "Segmentation manuelle par âge/zone, emails promotionnels non ciblés"
@@ -811,7 +370,7 @@ options:
 weight: 4, source_framework: 'McKinsey DQ'""",
 
             "industry": """EXEMPLE INDUSTRIE (à adapter, ne pas copier) :
-sub_axis: "Maintenance prédictive par IA/IoT"
+sub_axis: "Automatisation"
 question: "Vos équipements critiques sont-ils équipés de capteurs IoT pour la maintenance prédictive ?"
 options:
   1. "Maintenance 100% curative, aucun capteur, arrêts non planifiés fréquents"

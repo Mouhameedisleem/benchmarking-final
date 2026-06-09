@@ -9,6 +9,8 @@ import json
 import os
 from services.llm_client import call_llm as call_groq, extract_json, TaskType
 from knowledge.sub_axis_data import get_sub_axis_data, format_sub_axis_for_prompt
+from knowledge.sub_axis_extra import get_sub_axis_extra_fuzzy
+from knowledge.country_context import get_country_context
 
 
 # ── Verifiable source URL mapping ─────────────────────────────────────────────
@@ -862,6 +864,7 @@ FORMAT JSON OBLIGATOIRE :
         nat_avg = float(sd["nat"])
 
         # Pre-load KB data so both LLM calls can use it
+        country_kb = get_country_context(country, sector)   # non-empty for Maroc/Tunisie/Algérie/France/Allemagne
         sas_data: list[tuple[str, str, float, dict]] = []
         for sas in sub_axis_scores:
             axis     = str(sas.get("axis", "")).upper()
@@ -870,7 +873,37 @@ FORMAT JSON OBLIGATOIRE :
             if not axis or not sub_axis:
                 continue
             kb_prefix = _AXIS_TO_KB_PREFIX.get(axis, axis)
+
+            # Step 1 — exact match (banking KB, fast path)
             kb = get_sub_axis_data(kb_prefix, sub_axis, sector=sector) or {}
+
+            # Step 2 — fuzzy sector JSON if critical fields are missing
+            # This handles AI-generated sub-axis names for non-banking sectors
+            # (insurance, health, education, retail, etc.)
+            missing_fields = (
+                not kb.get("zoom_case_study")
+                or not kb.get("cadre_juridique")
+                or not kb.get("tendances")
+                or not kb.get("leaders_nationaux")
+            )
+            if missing_fields:
+                sector_kb = get_sub_axis_extra_fuzzy(kb_prefix, sub_axis, sector=sector)
+                if sector_kb:
+                    kb = {**sector_kb, **kb}
+
+            # Step 3 — country-specific override for Maroc, Tunisie, Algérie, France, Allemagne
+            # Replaces CIMA/UEMOA-centric cadre_juridique and leaders_nationaux with
+            # country-accurate data. Preserves sector trends and other KB fields.
+            if country_kb:
+                if country_kb.get("cadre_juridique"):
+                    kb["cadre_juridique"] = country_kb["cadre_juridique"]
+                if country_kb.get("leaders_nationaux"):
+                    kb["leaders_nationaux"] = country_kb["leaders_nationaux"]
+                if country_kb.get("zoom_case_study") and not kb.get("zoom_case_study", {}).get("entreprise"):
+                    kb["zoom_case_study"] = country_kb["zoom_case_study"]
+                if country_kb.get("analyse_statique"):
+                    kb["analyse_statique"] = country_kb["analyse_statique"]
+
             sas_data.append((axis, sub_axis, score, kb))
 
         sub_axis_names = [sa for _, sa, _, _ in sas_data]
@@ -991,31 +1024,54 @@ FORMAT JSON OBLIGATOIRE :
         axes_block = "\n".join(lines)
         prompt = f"""Tu es expert en transformation digitale pour le secteur {sector} en {country}.
 
-Pour chaque sous-axe ci-dessous, rédige une analyse personnalisée de 2-3 phrases pour {name_label}.
+Pour chaque sous-axe ci-dessous, rédige une analyse personnalisée et UNIQUE de 2-3 phrases pour {name_label}.
 
 RÈGLES STRICTES :
-- Cite des pratiques, outils, réglementations ou standards CONCRETS liés à CE sous-axe spécifique
-- Mentionne l'écart précis par rapport à la moyenne sectorielle et ses implications concrètes
-- Propose 1-2 actions prioritaires spécifiques à ce sous-axe (pas "engager un plan de transformation")
-- INTERDIT : formules génériques comme "niveau basique", "plan de transformation structuré", "cibler les écarts identifiés"
-- Adapte au secteur {sector} et au contexte {country}
+- Chaque analyse doit être DIFFÉRENTE des autres, même si les scores sont identiques
+- Cite des pratiques, outils, réglementations ou technologies CONCRETS propres à CE sous-axe
+- Mentionne l'écart précis par rapport à la moyenne sectorielle et ses implications opérationnelles
+- Propose 1-2 actions prioritaires SPÉCIFIQUES à ce sous-axe (ex: "implémenter un CRM sectoriel", "adopter l'e-souscription")
+- INTERDIT : formules génériques comme "consolider les acquis", "cibler les écarts", "plan de transformation structuré"
+- Les clés JSON doivent être EXACTEMENT les noms des sous-axes fournis
+- Adapte chaque analyse au contexte KB fourni pour ce sous-axe
 
 SOUS-AXES À ANALYSER :
 {axes_block}
 
-Réponds UNIQUEMENT en JSON :
-{{"Nom exact du sous-axe": "Analyse personnalisée 2-3 phrases...", ...}}"""
+Réponds UNIQUEMENT en JSON valide avec les noms de sous-axes comme clés :
+{{"Nom exact du sous-axe": "Analyse unique et spécifique 2-3 phrases...", ...}}"""
 
+        sub_axis_names = [sa for _, sa, _, _ in sas_data[:20]]
         try:
             raw = await call_groq(
                 messages=[
                     {"role": "system", "content": "Expert benchmarking digital. Réponds UNIQUEMENT en JSON valide."},
                     {"role": "user", "content": prompt},
                 ],
-                temperature=0.5,
+                temperature=0.65,
                 task=TaskType.BENCHMARKING,
             )
-            return extract_json(raw)
+            raw_dict = extract_json(raw)
+            if not isinstance(raw_dict, dict):
+                return {}
+            # Fuzzy key matching: LLM sometimes returns slightly different key names
+            matched: dict = {}
+            for sa in sub_axis_names:
+                if sa in raw_dict:
+                    matched[sa] = raw_dict[sa]
+                    continue
+                sa_norm = sa.lower().strip()
+                for k, v in raw_dict.items():
+                    if k.lower().strip() == sa_norm:
+                        matched[sa] = v
+                        break
+                if sa not in matched:
+                    # Partial match fallback: check if sub-axis name is contained in key
+                    for k, v in raw_dict.items():
+                        if sa_norm in k.lower() or k.lower() in sa_norm:
+                            matched[sa] = v
+                            break
+            return matched
         except Exception:
             return {}
 
@@ -1121,9 +1177,23 @@ Réponds UNIQUEMENT en JSON :
             excerpt = kb["maturite_maximale"][:120].rstrip()
             excellence = f" L'excellence dans ce domaine implique : {excerpt}…"
 
+        # Specific context from KB to make each sub-axis analysis unique
+        specific_context = ""
+        tendances = kb.get("tendances", [])
+        analyse_statique = kb.get("analyse_statique", "")
+        if tendances:
+            t = tendances[0]
+            titre = t.get("titre", "")
+            desc  = t.get("description", "")[:110]
+            if titre:
+                specific_context = f" La tendance clé sur ce sous-axe est « {titre} » : {desc}…"
+        elif analyse_statique:
+            specific_context = f" {analyse_statique[:160].rstrip()}…"
+
         return (
             f"{name_part}{country_part} affiche {level} sur le sous-axe « {sub_axis} »"
             f" avec un score de {score:.0f}/100.{gap_part}"
+            f"{specific_context}"
             f" La priorité est de {action}.{excellence}"
         )
 
