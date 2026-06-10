@@ -874,21 +874,45 @@ FORMAT JSON OBLIGATOIRE :
                 continue
             kb_prefix = _AXIS_TO_KB_PREFIX.get(axis, axis)
 
-            # Step 1 — exact match (banking KB, fast path)
+            # Step 1 — banking KB (base data, always loaded)
             kb = get_sub_axis_data(kb_prefix, sub_axis, sector=sector) or {}
 
-            # Step 2 — fuzzy sector JSON if critical fields are missing
-            # This handles AI-generated sub-axis names for non-banking sectors
-            # (insurance, health, education, retail, etc.)
-            missing_fields = (
-                not kb.get("zoom_case_study")
-                or not kb.get("cadre_juridique")
-                or not kb.get("tendances")
-                or not kb.get("leaders_nationaux")
+            # Step 2 — sector-specific JSON KB
+            # For NON-banking sectors: always load and PRIORITIZE sector JSON to avoid
+            # showing banking/UEMOA leaders and regulations for unrelated sectors.
+            # For banking/insurance: only load if critical fields are missing.
+            resolved_sector = _resolve_sector(sector)
+            _BANKING_LIKE = {"banking", "insurance", "default"}
+            _SECTOR_CONTENT_FIELDS = (
+                "leaders_nationaux", "leaders_regionaux", "cadre_juridique",
+                "tendances", "zoom_case_study", "ma_levees_fonds",
             )
-            if missing_fields:
-                sector_kb = get_sub_axis_extra_fuzzy(kb_prefix, sub_axis, sector=sector)
+            sector_kb = get_sub_axis_extra_fuzzy(kb_prefix, sub_axis, sector=sector)
+
+            if resolved_sector not in _BANKING_LIKE:
+                # Non-banking sector: ALWAYS remove banking/UEMOA content from kb,
+                # then fill from sector JSON if available.
+                # This prevents BNI Côte d'Ivoire / BCEAO / Ecobank data from showing
+                # up for education, healthcare, retail, industry, tech, energy, etc.
+                for _field in _SECTOR_CONTENT_FIELDS:
+                    if sector_kb and sector_kb.get(_field):
+                        kb[_field] = sector_kb[_field]
+                    else:
+                        kb.pop(_field, None)   # clear banking fallback
+                # Merge additional non-content fields from sector JSON
                 if sector_kb:
+                    for _k, _v in sector_kb.items():
+                        if _k not in kb:
+                            kb[_k] = _v
+            elif sector_kb:
+                # Banking/insurance: sector JSON fills only missing fields
+                missing_fields = (
+                    not kb.get("zoom_case_study")
+                    or not kb.get("cadre_juridique")
+                    or not kb.get("tendances")
+                    or not kb.get("leaders_nationaux")
+                )
+                if missing_fields:
                     kb = {**sector_kb, **kb}
 
             # Step 3 — country-specific override for Maroc, Tunisie, Algérie, France, Allemagne
@@ -944,7 +968,7 @@ FORMAT JSON OBLIGATOIRE :
                 "leaders_nationaux":      leaders_nat,
                 "leaders_regionaux":      leaders_reg,
                 "leaders_internationaux": kb.get("leaders_internationaux", []),
-                "analyse_personnalisee":  analyse,
+                "analyse_personnalisee":  analyse if isinstance(analyse, str) else str(analyse),
                 "zoom_case_study":        self._select_zoom_by_score(
                     kb, score,
                     national_leader=nat_entry,
@@ -1071,6 +1095,29 @@ Réponds UNIQUEMENT en JSON valide avec les noms de sous-axes comme clés :
                         if sa_norm in k.lower() or k.lower() in sa_norm:
                             matched[sa] = v
                             break
+
+            # Normalize: ensure every value is a plain string.
+            # llama-3.1-8b sometimes returns structured dicts instead of strings.
+            for sa in list(matched.keys()):
+                val = matched[sa]
+                if isinstance(val, dict):
+                    parts = []
+                    if val.get("Analyse"):
+                        parts.append(str(val["Analyse"]))
+                    if val.get("Ecart par rapport à la moyenne"):
+                        parts.append(f"Écart : {val['Ecart par rapport à la moyenne']}.")
+                    if val.get("Implications opérationnelles"):
+                        parts.append(str(val["Implications opérationnelles"]))
+                    actions = val.get("Actions prioritaires")
+                    if actions:
+                        if isinstance(actions, list):
+                            parts.append("Actions prioritaires : " + " ; ".join(str(a) for a in actions) + ".")
+                        else:
+                            parts.append(str(actions))
+                    matched[sa] = " ".join(parts) if parts else str(val)
+                elif not isinstance(val, str):
+                    matched[sa] = str(val)
+
             return matched
         except Exception:
             return {}
