@@ -38,3 +38,6 @@ dist/
 # OS
 .DS_Store
 Thumbs.db
+
+# Sensitive config — never commit real credentials
+backend3/src/main/resources/application.properties

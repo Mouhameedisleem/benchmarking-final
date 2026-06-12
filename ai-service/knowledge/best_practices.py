@@ -753,6 +753,28 @@ BEST_PRACTICES: dict[str, dict[str, list[dict]]] = {
 SECTOR_BEST_PRACTICES: dict[str, list[dict]] = {
     "finance": [
         {
+            "axis": "BUSINESS",
+            "title": "Définir une stratégie de transformation digitale financière",
+            "actions": [
+                "Établir une roadmap de digitalisation des produits financiers sur 3 ans",
+                "Intégrer des partenariats avec des fintechs pour accélérer l'innovation",
+                "Adopter un modèle open finance pour monétiser les données clients via des APIs",
+                "Mesurer le ROI digital par ligne de produit (crédit, épargne, assurance)"
+            ],
+            "source": "McKinsey Global Banking Annual Review 2024"
+        },
+        {
+            "axis": "PROCESS",
+            "title": "Automatiser les processus financiers et de conformité réglementaire",
+            "actions": [
+                "Déployer un moteur de règles pour l'automatisation du KYC/AML (Comply Advantage, Actico)",
+                "Robotiser le traitement des opérations de back-office (rapprochements, virements, reporting)",
+                "Mettre en place un workflow digital pour l'instruction des crédits (scoring automatisé)",
+                "Automatiser la production des reportings réglementaires (IFRS 9, Bâle III)"
+            ],
+            "source": "Deloitte — Finance Automation Report 2024, BIS Basel Framework"
+        },
+        {
             "axis": "INFORMATION_SYSTEM",
             "title": "Sécuriser les paiements et prévenir la fraude par l'IA",
             "actions": [
@@ -762,9 +784,64 @@ SECTOR_BEST_PRACTICES: dict[str, list[dict]] = {
                 "Tester régulièrement les scénarios de fraude (red team financier)"
             ],
             "source": "SWIFT CSP, PCI DSS v4, Visa/Mastercard Fraud Guidelines"
-        }
+        },
+        {
+            "axis": "CANAUX_DISTRIBUTION",
+            "title": "Déployer une expérience client financière omnicanale",
+            "actions": [
+                "Lancer une application mobile de gestion financière personnelle (PFM)",
+                "Intégrer un chatbot financier pour le conseil et le support client 24h/24",
+                "Proposer une souscription 100% digitale pour tous les produits (crédit, assurance, épargne)",
+                "Mesurer le NPS digital et le taux d'adoption des canaux digitaux mensuellement"
+            ],
+            "source": "Forrester — Digital Banking Experience Report 2024"
+        },
+        {
+            "axis": "OFFRES_DIGITALES",
+            "title": "Développer des produits financiers digitaux innovants",
+            "actions": [
+                "Lancer des produits d'épargne et d'investissement 100% digitaux (robo-advisor)",
+                "Proposer des micro-assurances paramétriques basées sur des données comportementales",
+                "Créer des offres de financement instantané (Buy Now Pay Later, crédit en ligne)",
+                "Intégrer des APIs financières pour permettre l'intégration dans des super-apps"
+            ],
+            "source": "WEF — Future of Financial Services 2024, CGAP FinTech Report"
+        },
+        {
+            "axis": "RH_CULTURE_DIGITALE",
+            "title": "Développer les compétences digitales et data des équipes financières",
+            "actions": [
+                "Former les conseillers financiers à l'utilisation des outils CRM et d'analytique client",
+                "Lancer un programme de culture data pour les équipes risques et conformité",
+                "Recruter des profils data scientists et ingénieurs IA au sein des équipes métier",
+                "Créer un lab d'innovation interne (fintech lab) pour tester de nouveaux modèles"
+            ],
+            "source": "Deloitte — Banking Workforce of the Future 2024"
+        },
     ],
     "sante": [
+        {
+            "axis": "BUSINESS",
+            "title": "Définir une stratégie de santé numérique centrée sur le patient",
+            "actions": [
+                "Élaborer un plan stratégique de transformation numérique aligné sur la politique nationale de santé",
+                "Déployer le dossier patient informatisé (DPI) interopérable dans toutes les unités de soin",
+                "Nouer des partenariats avec des healthtech pour l'innovation en télémédecine et IA diagnostique",
+                "Mesurer les indicateurs de qualité des soins digitaux (taux de réadmission, satisfaction patient)"
+            ],
+            "source": "OMS — Stratégie mondiale pour la santé numérique 2020-2025"
+        },
+        {
+            "axis": "PROCESS",
+            "title": "Digitaliser les parcours de soins et les processus cliniques",
+            "actions": [
+                "Mettre en place un système de prise de rendez-vous en ligne et de rappels automatisés",
+                "Déployer des workflows cliniques digitaux pour réduire les erreurs médicales",
+                "Automatiser la gestion des stocks pharmaceutiques et des équipements médicaux",
+                "Intégrer un système de gestion de la qualité (accréditation HAS / normes ISO 15189)"
+            ],
+            "source": "HAS — Guide de la transformation numérique en santé 2024"
+        },
         {
             "axis": "INFORMATION_SYSTEM",
             "title": "Mettre en conformité le SI de santé avec HDS et PGSSI-S",
@@ -775,9 +852,64 @@ SECTOR_BEST_PRACTICES: dict[str, list[dict]] = {
                 "Auditer les accès aux données patients trimestriellement"
             ],
             "source": "ANS — Agence du Numérique en Santé, PGSSI-S"
-        }
+        },
+        {
+            "axis": "CANAUX_DISTRIBUTION",
+            "title": "Déployer des services de télémédecine et un portail patient digital",
+            "actions": [
+                "Lancer une plateforme de téléconsultation certifiée (Doctolib, Medici, ou solution interne)",
+                "Créer un portail patient avec accès aux résultats d'analyses, ordonnances et historique médical",
+                "Mettre en place une application mobile de suivi des patients chroniques (diabète, hypertension)",
+                "Intégrer des dispositifs connectés (IoT santé) pour le monitoring à distance des patients"
+            ],
+            "source": "GSMA mHealth Report 2023, Commission Européenne — eHealth Action Plan"
+        },
+        {
+            "axis": "OFFRES_DIGITALES",
+            "title": "Développer des services de santé digitaux et de prévention connectée",
+            "actions": [
+                "Lancer des programmes de prévention digitale (coaching santé, bien-être, nutrition en ligne)",
+                "Proposer des parcours de soins hybrides (présentiel + téléconsultation) pour les pathologies chroniques",
+                "Intégrer l'IA diagnostique pour l'aide à la décision clinique (radiologie, dermatologie)",
+                "Créer des services de santé personnalisés basés sur les données génomiques et comportementales"
+            ],
+            "source": "McKinsey — The Future of Healthcare 2024, WEF Health and Healthcare Report"
+        },
+        {
+            "axis": "RH_CULTURE_DIGITALE",
+            "title": "Renforcer les compétences numériques du personnel soignant et administratif",
+            "actions": [
+                "Former 100% du personnel soignant aux outils du DPI et aux bonnes pratiques numériques",
+                "Lancer un programme de sensibilisation à la cybersécurité des données patients",
+                "Créer une filière de référents numériques (infirmiers, médecins) dans chaque service",
+                "Intégrer les compétences numériques dans les évaluations annuelles du personnel médical"
+            ],
+            "source": "OMS — Digital Health Workforce Competencies Framework 2023"
+        },
     ],
     "industrie": [
+        {
+            "axis": "BUSINESS",
+            "title": "Définir une stratégie Industrie 4.0 et transition vers le manufacturing digital",
+            "actions": [
+                "Réaliser un audit de maturité Industrie 4.0 et définir une feuille de route sur 3 ans",
+                "Identifier les processus de production prioritaires à digitaliser (gains > 20%)",
+                "Nouer des partenariats avec des équipementiers et intégrateurs IoT industriels",
+                "Mesurer le ROI de la transformation industrielle (OEE, coût unitaire, délais de production)"
+            ],
+            "source": "WEF — Advanced Manufacturing 2024, Gartner Manufacturing Industry Insights"
+        },
+        {
+            "axis": "PROCESS",
+            "title": "Déployer l'automatisation industrielle et le Lean digital",
+            "actions": [
+                "Implémenter un MES (Manufacturing Execution System) pour piloter la production en temps réel",
+                "Déployer des robots collaboratifs (cobots) sur les lignes de production à forte valeur ajoutée",
+                "Mettre en place la maintenance prédictive via des capteurs IoT et l'analyse ML",
+                "Intégrer les principes Lean avec des outils digitaux (VSM digital, Kaizen boards virtuels)"
+            ],
+            "source": "IFR — World Robotics Report 2024, McKinsey Industry 4.0 Pulse Survey"
+        },
         {
             "axis": "INFORMATION_SYSTEM",
             "title": "Sécuriser les systèmes OT/SCADA (cybersécurité industrielle)",
@@ -788,7 +920,40 @@ SECTOR_BEST_PRACTICES: dict[str, list[dict]] = {
                 "Appliquer les recommandations IEC 62443 pour les systèmes industriels"
             ],
             "source": "IEC 62443, ANSSI Guide Sécurité Systèmes Industriels"
-        }
+        },
+        {
+            "axis": "CANAUX_DISTRIBUTION",
+            "title": "Digitaliser les canaux de vente B2B et la relation client industrielle",
+            "actions": [
+                "Déployer un portail client B2B avec suivi des commandes, stocks et livraisons en temps réel",
+                "Lancer un catalogue produit digital avec configurateur en ligne (CPQ)",
+                "Intégrer un CRM industriel (Salesforce Manufacturing, SAP CX) pour la gestion des comptes clés",
+                "Mettre en place l'EDI (Electronic Data Interchange) pour l'automatisation des commandes clients"
+            ],
+            "source": "Gartner — Digital Commerce for Manufacturing 2024"
+        },
+        {
+            "axis": "OFFRES_DIGITALES",
+            "title": "Développer des offres de services digitaux industriels (servitisation)",
+            "actions": [
+                "Lancer des offres de maintenance-as-a-service (MaaS) basées sur des capteurs IoT",
+                "Proposer des jumeaux numériques (digital twins) pour la simulation et l'optimisation client",
+                "Créer des offres de monitoring en temps réel des équipements installés chez les clients",
+                "Développer des plateformes de données industrielles partagées avec les partenaires de la supply chain"
+            ],
+            "source": "IDC — Manufacturing Digital Services 2024, WEF Advanced Manufacturing White Paper"
+        },
+        {
+            "axis": "RH_CULTURE_DIGITALE",
+            "title": "Développer les compétences Industrie 4.0 des opérateurs et techniciens",
+            "actions": [
+                "Former les opérateurs à l'utilisation des interfaces homme-machine digitales (HMI, tablettes industrielles)",
+                "Lancer un programme de montée en compétences sur la data et l'IoT pour les techniciens de maintenance",
+                "Créer des parcours de formation en réalité augmentée (AR) pour l'assistance à la maintenance",
+                "Intégrer les compétences numériques dans les référentiels métier et les grilles de rémunération"
+            ],
+            "source": "WEF — Future of Jobs in Manufacturing 2023, Siemens Digital Skills Framework"
+        },
     ],
     "banque": [
         {
@@ -834,7 +999,108 @@ SECTOR_BEST_PRACTICES: dict[str, list[dict]] = {
                 "Former les agents de terrain à l'évangélisation des services digitaux"
             ],
             "source": "Alliance for Financial Inclusion (AFI), CGAP Financial Inclusion Report 2024"
-        }
+        },
+        {
+            "axis": "PROCESS",
+            "title": "Automatiser les processus bancaires et la conformité réglementaire",
+            "actions": [
+                "Robotiser le traitement des opérations de back-office (RPA : rapprochements, virements, KYC)",
+                "Déployer un workflow digital pour l'instruction et l'octroi de crédit (scoring automatisé)",
+                "Automatiser la production des reportings BCEAO (SYSCOA, ratio de solvabilité, liquidité)",
+                "Mettre en place un moteur de règles AML/CTF pour la détection automatique des transactions suspectes"
+            ],
+            "source": "BCEAO Instruction n°008-05-2015, Accenture Banking Operations Report 2024"
+        },
+        {
+            "axis": "RH_CULTURE_DIGITALE",
+            "title": "Développer la culture digitale et les compétences data des équipes bancaires",
+            "actions": [
+                "Former 100% des conseillers clientèle aux outils CRM et aux techniques de vente digitale",
+                "Lancer un programme de culture data pour les équipes risques, conformité et marketing",
+                "Créer un parcours de certification interne (digital banking) reconnu et valorisé",
+                "Mettre en place des indicateurs de maturité digitale dans les évaluations annuelles"
+            ],
+            "source": "Deloitte — Banking Talent & Culture Report 2024, EBA Digital Finance Guidelines"
+        },
+    ],
+    "education": [
+        {
+            "axis": "BUSINESS",
+            "title": "Définir une stratégie d'apprentissage hybride (blended learning)",
+            "actions": [
+                "Cartographier les parcours pédagogiques et identifier les modules digitalisables",
+                "Adopter un modèle hybride : 60% présentiel + 40% e-learning asynchrone",
+                "Nouer des partenariats avec des plateformes EdTech (Coursera, edX, Google Classroom)",
+                "Mesurer le taux de complétion et l'engagement étudiant par module digital"
+            ],
+            "source": "UNESCO — Rapport sur l'éducation numérique mondiale 2023"
+        },
+        {
+            "axis": "PROCESS",
+            "title": "Digitaliser les processus administratifs et pédagogiques",
+            "actions": [
+                "Mettre en place un ERP éducatif (Classe365, Blackbaud) pour la gestion des inscriptions et résultats",
+                "Automatiser les processus d'accréditation et de suivi de conformité réglementaire",
+                "Déployer un workflow numérique pour la gestion des examens, corrections et bulletins",
+                "Intégrer un portail étudiant self-service (absences, notes, emplois du temps)"
+            ],
+            "source": "OCDE — Digital Education Outlook 2023"
+        },
+        {
+            "axis": "INFORMATION_SYSTEM",
+            "title": "Déployer un LMS sécurisé et conforme RGPD pour la protection des données étudiants",
+            "actions": [
+                "Adopter un LMS certifié (Moodle, Canvas, Blackboard) avec hébergement souverain ou HDS",
+                "Mettre en place une politique de protection des données étudiants (RGPD / loi nationale)",
+                "Intégrer xAPI et LRS (Learning Record Store) pour tracer les parcours apprenants",
+                "Réaliser un audit de sécurité annuel des accès aux données pédagogiques sensibles"
+            ],
+            "source": "ANS — Cadre de référence numérique éducatif, RGPD Education 2023"
+        },
+        {
+            "axis": "CANAUX_DISTRIBUTION",
+            "title": "Développer des canaux d'accès à l'apprentissage multimodaux",
+            "actions": [
+                "Lancer une application mobile d'apprentissage accessible hors-connexion (offline-first)",
+                "Déployer des classes virtuelles synchrones (Zoom Education, Microsoft Teams for Education)",
+                "Créer un portail de ressources éducatives libres (REL) accessible 24h/24",
+                "Mettre en place un système de tutorat digital et de support étudiant en ligne"
+            ],
+            "source": "GSMA Mobile Learning Report 2023, UNESCO REL"
+        },
+        {
+            "axis": "OFFRES_DIGITALES",
+            "title": "Développer des offres de formation digitale certifiantes et à distance",
+            "actions": [
+                "Lancer des micro-certifications digitales (badges numériques, certificats en ligne)",
+                "Créer des MOOCs sectoriels en partenariat avec des entreprises locales",
+                "Proposer des formations courtes (upskilling) en IA, data et cybersécurité",
+                "Intégrer la reconnaissance des acquis d'expérience (RAE) dans les parcours digitaux"
+            ],
+            "source": "WEF Future of Jobs Report 2023, Coursera Industry Skills Report 2024"
+        },
+        {
+            "axis": "RH_CULTURE_DIGITALE",
+            "title": "Renforcer les compétences numériques des enseignants et du personnel",
+            "actions": [
+                "Lancer un programme de certification numérique pour les enseignants (CUEN, TICE)",
+                "Former 100% du corps enseignant aux outils LMS et à la pédagogie inversée",
+                "Créer une communauté de pratique EdTech interne pour le partage de ressources",
+                "Intégrer des indicateurs de maturité digitale dans les évaluations annuelles du personnel"
+            ],
+            "source": "DigComp 2.2 — Cadre européen des compétences numériques pour les éducateurs"
+        },
+        {
+            "axis": "CANAUX_DISTRIBUTION",
+            "title": "Déployer un portail étudiant omnicanal et une application mobile d'apprentissage",
+            "actions": [
+                "Lancer un portail étudiant self-service (inscriptions, notes, emplois du temps, absences) accessible 24h/24",
+                "Développer une application mobile d'apprentissage offline-first pour les zones à faible connectivité",
+                "Mettre en place des classes virtuelles synchrones (Microsoft Teams for Education, Zoom Education)",
+                "Intégrer un chatbot pédagogique pour le support étudiant et la FAQ automatisée"
+            ],
+            "source": "GSMA Mobile Learning Report 2023, Microsoft Education Transformation Framework"
+        },
     ],
 }
 

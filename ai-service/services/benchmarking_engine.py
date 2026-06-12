@@ -884,8 +884,8 @@ FORMAT JSON OBLIGATOIRE :
             resolved_sector = _resolve_sector(sector)
             _BANKING_LIKE = {"banking", "insurance", "default"}
             _SECTOR_CONTENT_FIELDS = (
-                "leaders_nationaux", "leaders_regionaux", "cadre_juridique",
-                "tendances", "zoom_case_study", "ma_levees_fonds",
+                "leaders_nationaux", "leaders_regionaux", "leaders_internationaux",
+                "cadre_juridique", "tendances", "zoom_case_study", "ma_levees_fonds",
             )
             sector_kb = get_sub_axis_extra_fuzzy(kb_prefix, sub_axis, sector=sector)
 
@@ -942,8 +942,10 @@ FORMAT JSON OBLIGATOIRE :
             nat_entry = llm_sa.get("national")
             reg_entry = llm_sa.get("regional")
 
-            leaders_nat = ([nat_entry] if nat_entry else []) + kb.get("leaders_nationaux", [])
-            leaders_reg = ([reg_entry] if reg_entry else []) + kb.get("leaders_regionaux", [])
+            kb_nat      = kb.get("leaders_nationaux", [])
+            kb_reg      = kb.get("leaders_regionaux", [])
+            leaders_nat = kb_nat if kb_nat else ([nat_entry] if nat_entry else [])
+            leaders_reg = kb_reg if kb_reg else ([reg_entry] if reg_entry else [])
 
             analyse = (
                 llm_analyses.get(sub_axis)
@@ -980,6 +982,13 @@ FORMAT JSON OBLIGATOIRE :
             })
         return result
 
+    # Banking-vocabulary sub-axis names that confuse the LLM when sector != banking.
+    # Mapped to neutral names used only inside the prompt; originals restored via reverse_map.
+    _SA_NAME_OVERRIDES = {
+        "Open banking (BaaS, BaaP)":    "Plateformes digitales & API",
+        "Poste de travail du banquier": "Poste de travail digital",
+    }
+
     async def _generate_sub_axis_leaders(
         self,
         sub_axes: list[str],
@@ -990,7 +999,17 @@ FORMAT JSON OBLIGATOIRE :
         """LLM call — generates 1 national + 1 regional leader per sub-axis for this country+sector."""
         if not sub_axes:
             return {}
-        axes_json = ", ".join(f'"{sa}"' for sa in sub_axes[:20])
+
+        # For non-banking sectors, replace banking-vocabulary sub-axis names
+        # so the LLM is not confused into returning banking companies.
+        if sector not in ("banking", "banque", "insurance"):
+            display   = [self._SA_NAME_OVERRIDES.get(sa, sa) for sa in sub_axes[:20]]
+            rev_map   = {self._SA_NAME_OVERRIDES.get(sa, sa): sa for sa in sub_axes[:20]}
+        else:
+            display   = list(sub_axes[:20])
+            rev_map   = {}
+
+        axes_json = ", ".join(f'"{sa}"' for sa in display)
         prompt = (
             f"Secteur: {sector} | Pays: {country} | Région: {region}\n\n"
             f"Pour chaque sous-axe, fournis UN leader national (opérant en {country}) "
@@ -1005,13 +1024,20 @@ FORMAT JSON OBLIGATOIRE :
         try:
             raw = await call_groq(
                 messages=[
-                    {"role": "system", "content": "Expert benchmarking sectoriel. Réponds UNIQUEMENT en JSON valide."},
+                    {"role": "system", "content": (
+                        f"Expert benchmarking sectoriel. Réponds UNIQUEMENT en JSON valide. "
+                        f"Secteur cible : {sector}. "
+                        f"Génère UNIQUEMENT des leaders du secteur {sector}. "
+                        f"N'utilise JAMAIS de banques ou institutions financières sauf si sector=banking."
+                    )},
                     {"role": "user", "content": prompt},
                 ],
                 temperature=0.3,
                 task=TaskType.BENCHMARKING,
             )
-            return extract_json(raw)
+            raw_result = extract_json(raw)
+            # Restore original sub-axis names from sanitized keys
+            return {rev_map.get(k, k): v for k, v in raw_result.items()}
         except Exception:
             return {}
 
